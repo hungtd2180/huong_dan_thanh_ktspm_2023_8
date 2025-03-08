@@ -1,0 +1,592 @@
+1
+00:00:00,580 --> 00:00:05,860
+Vì vậy, như bạn có thể đoán, điều đầu tiên bạn nên làm với tư cách là một kiến trúc sư là xác định các yêu cầu.
+
+2
+00:00:05,890 --> 00:00:11,080
+Những yêu cầu này rất quan trọng đối với công việc của bạn và chúng quyết định kiến trúc sẽ trông như thế nào
+
+3
+00:00:11,080 --> 00:00:11,620
+giống.
+
+4
+00:00:11,710 --> 00:00:13,600
+Được thôi, chúng ta hãy làm điều đó.
+
+5
+00:00:13,630 --> 00:00:16,700
+Có lẽ bạn còn nhớ có hai loại yêu cầu.
+
+6
+00:00:16,720 --> 00:00:20,320
+Yêu cầu chức năng và yêu cầu phi chức năng.
+
+7
+00:00:20,680 --> 00:00:26,290
+Các yêu cầu chức năng nêu rõ hệ thống phải làm gì trong khi các yêu cầu phi chức năng xác định
+
+8
+00:00:26,290 --> 00:00:28,270
+hệ thống cần xử lý những gì.
+
+9
+00:00:28,450 --> 00:00:30,880
+Hiện nay, các yêu cầu chức năng đã được xác định rõ ràng.
+
+10
+00:00:30,880 --> 00:00:36,100
+Trong trường hợp này, có vẻ như các nhà phân tích hệ thống đã làm tốt công việc của mình và khá rõ ràng về hệ thống.
+
+11
+00:00:36,100 --> 00:00:36,800
+nên làm.
+
+12
+00:00:36,850 --> 00:00:40,510
+Chúng ta hãy tóm tắt các yêu cầu chức năng trong một danh sách ngắn có dấu đầu dòng.
+
+13
+00:00:40,540 --> 00:00:49,630
+Một Nhận các cập nhật trạng thái từ các thiết bị IoT để lưu trữ các cập nhật này để sử dụng trong tương lai và ba, cho phép
+
+14
+00:00:49,630 --> 00:00:53,710
+người dùng cuối truy vấn các bản cập nhật và cung cấp cho họ thông tin có liên quan.
+
+15
+00:00:54,490 --> 00:00:56,020
+Cho đến giờ thì mọi việc vẫn ổn.
+
+16
+00:00:56,050 --> 00:01:00,140
+Bây giờ chúng ta hãy đến với phần thú vị hơn - các yêu cầu phi chức năng.
+
+17
+00:01:00,770 --> 00:01:06,260
+Bây giờ, trước khi chúng ta tiếp tục, tôi muốn bạn dành chút thời gian và suy nghĩ xem những điều gì có liên quan, không có chức năng?
+
+18
+00:01:06,260 --> 00:01:07,680
+yêu cầu cho hệ thống này là gì?
+
+19
+00:01:07,700 --> 00:01:11,930
+Những điều chúng ta cần biết với tư cách là kiến trúc sư để có thể ảnh hưởng đến kiến trúc.
+
+20
+00:01:12,140 --> 00:01:14,750
+Vậy nên tôi sẽ cho bạn vài giây để suy nghĩ về điều đó.
+
+21
+00:01:14,780 --> 00:01:19,850
+Tôi thậm chí sẽ bật một số bản nhạc thư giãn cho bạn và tôi muốn bạn viết ra những câu hỏi bạn cần hỏi.
+
+22
+00:01:19,850 --> 00:01:23,060
+khách hàng để tìm ra các yêu cầu không liên quan đến chức năng.
+
+23
+00:01:23,180 --> 00:01:27,100
+Bạn có thể thoải mái tạm dừng bài giảng và dành nhiều thời gian tùy ý.
+
+24
+00:01:27,110 --> 00:01:30,320
+Viết ra các câu hỏi rồi nhấn tiếp tục.
+
+25
+00:01:42,160 --> 00:01:43,080
+Được rồi, tốt lắm.
+
+26
+00:01:43,090 --> 00:01:44,140
+Chào mừng trở lại.
+
+27
+00:01:44,290 --> 00:01:47,130
+Vậy chúng ta cần hỏi khách hàng những câu hỏi gì?
+
+28
+00:01:47,140 --> 00:01:53,440
+Vâng, trước hết và quan trọng nhất, vì hệ thống sẽ nhận được tin nhắn từ Iot
+
+29
+00:01:53,440 --> 00:01:57,760
+thiết bị, chúng ta nên mong đợi sẽ có rất nhiều tin nhắn.
+
+30
+00:01:57,910 --> 00:02:03,460
+Bây giờ, số lượng tin nhắn có tác động lớn đến thiết kế hệ thống và nó sẽ giúp chúng ta biết những điều này
+
+31
+00:02:03,460 --> 00:02:05,440
+các yếu tố phi chức năng quan trọng.
+
+32
+00:02:06,490 --> 00:02:07,280
+Tải trọng.
+
+33
+00:02:07,300 --> 00:02:09,729
+Chúng ta có thể mong đợi có bao nhiêu tin nhắn cùng lúc?
+
+34
+00:02:09,940 --> 00:02:11,220
+Khối lượng dữ liệu.
+
+35
+00:02:11,230 --> 00:02:14,680
+Có bao nhiêu tin nhắn cần được lưu trữ trong kho dữ liệu của hệ thống.
+
+36
+00:02:15,070 --> 00:02:18,910
+Những yếu tố này được diễn dịch thành hai câu hỏi chúng ta cần phải hỏi.
+
+37
+00:02:18,970 --> 00:02:23,950
+Đầu tiên, hệ thống có thể mong đợi có bao nhiêu tin nhắn đồng thời trong thời gian cao điểm?
+
+38
+00:02:24,040 --> 00:02:28,950
+Và thứ hai, tổng số tin nhắn dự kiến mỗi tháng là bao nhiêu?
+
+39
+00:02:29,020 --> 00:02:35,290
+Ngoài việc làm cho các phép tính của chúng ta chính xác hơn, chúng ta cũng nên hỏi kích thước trung bình của
+
+40
+00:02:35,290 --> 00:02:36,050
+một tin nhắn?
+
+41
+00:02:36,070 --> 00:02:40,690
+Bây giờ chúng ta có thể cho rằng khách hàng sẽ cần một chút thời gian để tìm ra câu trả lời cho những câu hỏi này.
+
+42
+00:02:40,690 --> 00:02:47,710
+Vì vậy, hãy bỏ qua một vài ngày và sau đó chúng ta sẽ nhận được phản hồi, đó là Max Concurrent messages,
+
+43
+00:02:47,740 --> 00:02:52,750
+Tổng số tin nhắn là 500 tin nhắn mỗi tháng, 15 triệu.
+
+44
+00:02:53,500 --> 00:02:56,560
+Kích thước tin nhắn trung bình là 300 byte.
+
+45
+00:02:57,040 --> 00:02:58,120
+Được rồi, tốt lắm.
+
+46
+00:02:58,150 --> 00:03:00,220
+Bây giờ chúng ta đã có thứ để làm rồi.
+
+47
+00:03:00,490 --> 00:03:02,830
+Chúng ta hãy mở máy tính và tính toán nhé.
+
+48
+00:03:03,730 --> 00:03:11,320
+15 triệu tin nhắn mỗi tháng với kích thước trung bình là 300 byte cho mỗi tin nhắn cung cấp cho chúng tôi khoảng 4500MB mỗi
+
+49
+00:03:11,320 --> 00:03:11,890
+tháng.
+
+50
+00:03:11,920 --> 00:03:18,070
+Hãy nhân con số này với 12 để có được con số hàng năm và chúng ta sẽ có 54GB mỗi năm.
+
+51
+00:03:18,100 --> 00:03:25,240
+Điều này rất tốt vì dung lượng lưu trữ 54GB hiện nay không phải là nhiều và hầu như mọi cơ sở dữ liệu đều có thể xử lý dễ dàng.
+
+52
+00:03:25,600 --> 00:03:32,140
+Và bằng cách đó chúng tôi tính toán được khối lượng dữ liệu cho các nhu cầu không chức năng, là 54GB mỗi năm.
+
+53
+00:03:32,260 --> 00:03:39,550
+Bây giờ hãy lưu ý rằng tôi cho rằng chính sách lưu giữ ở đây là vô hạn, nghĩa là dữ liệu không bao giờ được lưu trữ hoặc xóa
+
+54
+00:03:39,550 --> 00:03:41,260
+trong ứng dụng dữ liệu chuyên sâu.
+
+55
+00:03:41,260 --> 00:03:44,560
+Thông thường thì không như vậy và dữ liệu có thể hết hạn.
+
+56
+00:03:44,590 --> 00:03:46,990
+Trong ứng dụng của chúng tôi thì không phải như vậy.
+
+57
+00:03:47,170 --> 00:03:51,370
+Vì vậy, yêu cầu không hoạt động về khối lượng dữ liệu có vẻ như không phải là vấn đề.
+
+58
+00:03:51,670 --> 00:03:56,980
+Tuy nhiên, tải trọng lại là một câu chuyện hoàn toàn khác khi có tới 500 tin nhắn cùng lúc.
+
+59
+00:03:56,980 --> 00:03:58,900
+Đây là một hệ thống khá bận rộn.
+
+60
+00:03:58,900 --> 00:04:01,660
+Chúng ta sẽ phải tìm cách ứng phó với con số này.
+
+61
+00:04:01,660 --> 00:04:05,450
+Vì một ứng dụng web thông thường sẽ gặp khó khăn khi chịu tải như thế này.
+
+62
+00:04:05,480 --> 00:04:11,270
+Tất nhiên chúng ta luôn có thể mở rộng quy mô và thêm hàng chục máy chủ, nhưng điều đó không phải lúc nào cũng khả thi.
+
+63
+00:04:11,270 --> 00:04:17,000
+Chúng tôi sẽ ưu tiên thiết kế hệ thống sao cho phần mềm có thể hoạt động bình thường trong
+
+64
+00:04:17,000 --> 00:04:17,870
+một gánh nặng như vậy.
+
+65
+00:04:18,980 --> 00:04:24,080
+Vì vậy, yêu cầu tải không chức năng được đặt ra là 500 tin nhắn đồng thời.
+
+66
+00:04:24,530 --> 00:04:25,640
+Như chúng ta sẽ thấy sau.
+
+67
+00:04:25,640 --> 00:04:29,480
+Con số này có thể cao hơn một chút, nhưng chúng ta sẽ tạm thời giữ nguyên như vậy.
+
+68
+00:04:29,720 --> 00:04:35,810
+Được rồi, điều tiếp theo chúng ta cần biết là hệ thống có khả năng chịu đựng tình trạng mất tin nhắn không?
+
+69
+00:04:35,840 --> 00:04:41,720
+Nói cách khác, nếu không phải mọi tin nhắn đều được nhận và một số bị mất do sự cố mạng hoặc các lý do khác
+
+70
+00:04:41,720 --> 00:04:43,700
+lỗi, đó có phải là vấn đề không?
+
+71
+00:04:44,030 --> 00:04:47,030
+Bây giờ, bản năng đầu tiên luôn là trả lời.
+
+72
+00:04:47,030 --> 00:04:50,360
+Chắc chắn là chúng ta không thể bỏ lỡ bất kỳ tin nhắn nào, nhưng hãy cùng suy nghĩ về điều đó.
+
+73
+00:04:50,360 --> 00:04:52,610
+Hệ thống này nhận được cập nhật trạng thái.
+
+74
+00:04:52,640 --> 00:04:55,460
+Mỗi thiết bị gửi bản cập nhật sau mỗi vài giây.
+
+75
+00:04:55,460 --> 00:04:57,950
+Điều gì thực sự xảy ra khi tin nhắn bị mất?
+
+76
+00:04:57,980 --> 00:04:59,330
+Thực ra thì không nhiều lắm.
+
+77
+00:04:59,360 --> 00:05:04,610
+Vài giây sau, một tin nhắn khác sẽ đến với bản cập nhật mới, dù sao thì nó cũng sẽ làm cho bản cập nhật trước đó
+
+78
+00:05:04,610 --> 00:05:05,690
+tin nhắn đã lỗi thời.
+
+79
+00:05:05,690 --> 00:05:10,160
+Vì vậy, khi nghĩ về điều này, hệ thống khá khoan dung với tình trạng mất tin nhắn.
+
+80
+00:05:10,190 --> 00:05:11,330
+Không có hại gì cả.
+
+81
+00:05:11,330 --> 00:05:15,140
+Nếu tin nhắn bị mất thì khả năng là người dùng sẽ không cảm thấy điều đó.
+
+82
+00:05:15,170 --> 00:05:20,600
+Bây giờ, tất nhiên, chúng ta không nói ở đây về một thảm họa toàn hệ thống làm mất hết mọi tin nhắn, nhưng
+
+83
+00:05:20,600 --> 00:05:26,360
+trong một số trường hợp hiếm hoi có thể dẫn đến mất mát duy nhất cho mỗi 1000 tin nhắn nhận được thành công.
+
+84
+00:05:26,720 --> 00:05:31,400
+Vì vậy, yêu cầu không chức năng mất tin nhắn có thể được định nghĩa là 99%.
+
+85
+00:05:31,430 --> 00:05:38,380
+Lưu ý rằng trong loại yêu cầu không chức năng này, có sự khác biệt rất lớn giữa 100% và 99%.
+
+86
+00:05:38,390 --> 00:05:43,880
+Có vẻ như nó chỉ là một sự khác biệt nhỏ, chỉ là một chữ số, nhưng thực ra nó tạo nên tất cả sự khác biệt,
+
+87
+00:05:43,880 --> 00:05:45,170
+như chúng ta sẽ thấy sau.
+
+88
+00:05:45,650 --> 00:05:46,310
+Được rồi.
+
+89
+00:05:46,310 --> 00:05:54,470
+Tiếp theo, câu hỏi tiếp theo chúng ta cần hỏi là hệ thống sẽ có bao nhiêu người dùng và bao nhiêu người dùng đồng thời
+
+90
+00:05:54,470 --> 00:05:56,000
+người dùng chúng ta nên mong đợi điều gì?
+
+91
+00:05:56,030 --> 00:06:01,190
+Những câu hỏi này tương tự như những câu hỏi đầu tiên được hỏi về các thông điệp và chúng có cùng mục đích
+
+92
+00:06:01,190 --> 00:06:01,700
+mục đích.
+
+93
+00:06:01,700 --> 00:06:05,330
+Chúng giúp chúng tôi đánh giá khối lượng dữ liệu và tải dự kiến của hệ thống.
+
+94
+00:06:05,330 --> 00:06:10,970
+Tuy nhiên, chúng ta có thể mong đợi số lượng sẽ thấp hơn nhiều so với số lượng tin nhắn, vì có
+
+95
+00:06:10,970 --> 00:06:16,970
+nhiều thiết bị hơn nhiều so với người dùng và người dùng không truy vấn hệ thống sau mỗi vài giây và các con số
+
+96
+00:06:16,970 --> 00:06:19,400
+chúng tôi nhận được phản ánh từ khách hàng như vậy.
+
+97
+00:06:19,490 --> 00:06:25,700
+Khách hàng mong đợi hệ thống sẽ có tổng cộng 2 triệu người dùng sau ba năm nữa với số lượng không quá
+
+98
+00:06:25,700 --> 00:06:27,320
+40 người dùng đồng thời.
+
+99
+00:06:27,350 --> 00:06:31,130
+Bây giờ điều quan trọng là phải hiểu ý nghĩa của người dùng đồng thời.
+
+100
+00:06:31,310 --> 00:06:37,580
+Nó không có nghĩa là có bao nhiêu người dùng hiện đang sử dụng hệ thống, mà là có bao nhiêu người dùng đang tích cực sử dụng hệ thống.
+
+101
+00:06:37,580 --> 00:06:38,990
+truy cập vào máy chủ.
+
+102
+00:06:39,170 --> 00:06:41,060
+Sự phân biệt này rất quan trọng.
+
+103
+00:06:41,060 --> 00:06:47,000
+Khi người dùng nhìn vào bảng điều khiển, họ sử dụng hệ thống nhưng không truy cập vào máy chủ.
+
+104
+00:06:47,030 --> 00:06:53,270
+Bảng điều khiển đã có trên màn hình của người dùng nên máy chủ không cần phải làm gì khi tính toán tải.
+
+105
+00:06:53,270 --> 00:06:59,780
+Chúng tôi chỉ quan tâm đến công việc thực tế mà máy chủ đang thực hiện, vì vậy chúng tôi định nghĩa người dùng đồng thời là một số
+
+106
+00:06:59,780 --> 00:07:03,410
+của những người dùng thực sự truy cập vào máy chủ cùng một lúc.
+
+107
+00:07:04,280 --> 00:07:10,310
+Và vì hầu hết người dùng sẽ không chỉ ngồi bên máy tính hoặc điện thoại và làm việc trên máy chủ trong thời gian rảnh rỗi,
+
+108
+00:07:10,310 --> 00:07:14,000
+chúng ta có thể thoải mái cho rằng số lượng người dùng đồng thời khá thấp.
+
+109
+00:07:14,000 --> 00:07:20,330
+Và đó là lý do tại sao số lượng người dùng đồng thời chỉ là 40 và điều đó làm cho tải không hoạt động
+
+110
+00:07:20,330 --> 00:07:22,670
+yêu cầu phải là 540.
+
+111
+00:07:22,700 --> 00:07:26,810
+Tức là có 500 tin nhắn đồng thời cộng với 40 hành động của người dùng.
+
+112
+00:07:27,260 --> 00:07:32,330
+Câu hỏi cuối cùng chúng ta cần hỏi là SLA cần thiết cho hệ thống này là gì?
+
+113
+00:07:32,330 --> 00:07:37,390
+Hay nói cách khác, thời gian ngừng hoạt động tối đa được phép của hệ thống này là bao lâu?
+
+114
+00:07:37,400 --> 00:07:43,060
+Hiện nay, theo bản năng, hầu hết khách hàng sẽ nói rằng họ mong đợi thời gian hoạt động 100%.
+
+115
+00:07:43,070 --> 00:07:45,440
+Vấn đề là điều này không thể thực hiện được.
+
+116
+00:07:45,440 --> 00:07:52,670
+Ngay cả những trung tâm dữ liệu lớn nhất và tinh vi nhất trên thế giới cũng không cam kết thời gian hoạt động 100%
+
+117
+00:07:52,670 --> 00:07:55,730
+là một phần của thế giới phần mềm và chúng ta nên chấp nhận điều đó.
+
+118
+00:07:55,730 --> 00:07:58,250
+Vì vậy, chúng ta cần có một con số thực tế hơn.
+
+119
+00:07:58,430 --> 00:08:03,230
+Bây giờ, điều quan trọng cần lưu ý là SLA không chỉ bao gồm phần mềm.
+
+120
+00:08:03,570 --> 00:08:09,270
+Có rất nhiều yếu tố ảnh hưởng đến nó, chẳng hạn như phần cứng, mạng, máy chủ cơ sở dữ liệu, ảo hóa
+
+121
+00:08:09,270 --> 00:08:10,470
+động cơ và nhiều hơn nữa.
+
+122
+00:08:10,500 --> 00:08:15,930
+Thông thường, bạn, kiến trúc sư, sẽ không kiểm soát được những yếu tố này và bạn phải làm rõ điều này với
+
+123
+00:08:15,930 --> 00:08:16,560
+khách hàng.
+
+124
+00:08:16,590 --> 00:08:20,550
+Tôi nhớ một khách hàng của tôi luôn nói về SLA cao, anh ấy yêu cầu.
+
+125
+00:08:20,580 --> 00:08:26,460
+Sau đó, tôi đã yêu cầu họp với nhóm cơ sở dữ liệu để tìm hiểu SLA, cam kết với tôi là gì.
+
+126
+00:08:26,460 --> 00:08:27,550
+Và sự ngạc nhiên của anh ấy.
+
+127
+00:08:27,570 --> 00:08:33,090
+Nhóm không những không thể cam kết bất kỳ SLA nào mà họ thậm chí còn không biết SLA là gì.
+
+128
+00:08:33,120 --> 00:08:36,510
+Hãy nhớ điều này khi thảo luận về số liệu SLA với khách hàng.
+
+129
+00:08:36,659 --> 00:08:44,190
+Những gì tôi thường làm là xác định ba cấp độ SLA, bạc, vàng và bạch kim và hỏi khách hàng cấp độ nào
+
+130
+00:08:44,190 --> 00:08:50,340
+mức độ anh ta yêu cầu cho phần mềm mức bạch kim, đó là mức mà hầu hết khách hàng lựa chọn, quyết định
+
+131
+00:08:50,340 --> 00:08:56,560
+rằng hệ thống phải hoàn toàn không có trạng thái, dễ dàng mở rộng quy mô và sử dụng chức năng ghi nhật ký và giám sát mở rộng.
+
+132
+00:08:56,580 --> 00:09:02,340
+Không có ích gì khi thảo luận về các con số thời gian hoạt động cụ thể như 97% so với 99%.
+
+133
+00:09:02,370 --> 00:09:06,340
+Có rất nhiều yếu tố khác khiến con số này trở nên vô nghĩa.
+
+134
+00:09:06,790 --> 00:09:11,260
+Tôi thực sự khuyên bạn nên áp dụng phương pháp Ba cấp độ và sử dụng nó với khách hàng của bạn.
+
+135
+00:09:11,260 --> 00:09:16,300
+Bạn phải quyết định những gì được bao gồm trong mỗi cấp độ và tác động của chúng đến thời gian phát triển.
+
+136
+00:09:16,300 --> 00:09:16,960
+và chi phí.
+
+137
+00:09:16,960 --> 00:09:19,750
+Nhưng hãy đảm bảo rằng bạn đã có định nghĩa này.
+
+138
+00:09:19,960 --> 00:09:26,770
+Vì vậy, trong trường hợp của chúng tôi, vì hệ thống hiển thị các cập nhật trạng thái trực tiếp, nên khách hàng đã định nghĩa nó là hệ thống bạch kim,
+
+139
+00:09:26,770 --> 00:09:31,360
+điều này có nghĩa là nó phải có đầy đủ các đặc điểm của một hệ thống đáng tin cậy và dự phòng.
+
+140
+00:09:31,900 --> 00:09:37,170
+Để kết luận, sau đây là các yêu cầu phi chức năng được xác định cho hệ thống này.
+
+141
+00:09:37,180 --> 00:09:42,190
+Chúng tôi đã thực hiện đúng quy trình để tìm ra chúng và hiện chúng đã được ghi chép đầy đủ.
+
+142
+00:09:42,220 --> 00:09:46,450
+Tôi muốn nhấn mạnh lại tầm quan trọng của các yêu cầu chính xác và không mang tính chức năng.
+
+143
+00:09:46,480 --> 00:09:48,330
+Như chúng ta sẽ thấy ở phần sau của phần này.
+
+144
+00:09:48,340 --> 00:09:53,680
+Những yêu cầu này có ảnh hưởng lớn đến kiến trúc và cần được thảo luận và ghi chép lại một cách kỹ lưỡng.
+
+145
+00:09:53,710 --> 00:09:59,110
+Việc sửa đổi các yêu cầu không liên quan đến chức năng sau khi dự án đã bắt đầu luôn là một ý tưởng tồi.
+
+146
+00:09:59,620 --> 00:10:00,550
+Được rồi, tốt lắm.
+
+147
+00:10:00,550 --> 00:10:02,700
+Vậy là chúng ta đã có những yêu cầu của dự án.
+
+148
+00:10:02,710 --> 00:10:04,360
+Chúng ta hãy tiếp tục.
+

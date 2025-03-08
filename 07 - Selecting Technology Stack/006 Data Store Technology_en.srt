@@ -1,0 +1,468 @@
+1
+00:00:00,260 --> 00:00:05,180
+Selecting the datastore technology is one of the more important decisions you will make in the project
+
+2
+00:00:05,180 --> 00:00:05,660
+design.
+
+3
+00:00:05,689 --> 00:00:10,610
+After all, this is where your precious data is going to be stored for the use of the application.
+
+4
+00:00:10,760 --> 00:00:12,320
+So how do we do that?
+
+5
+00:00:12,470 --> 00:00:17,360
+First, let's make an introduction with the two types of datastore exist today.
+
+6
+00:00:17,450 --> 00:00:23,540
+Note that we are not talking here about DataStore products such as SQL Server or MongoDB, but about
+
+7
+00:00:23,540 --> 00:00:29,630
+two concepts of data stores, and those concepts are SQL and NoSQL.
+
+8
+00:00:29,780 --> 00:00:34,400
+Now you have probably have heard about those two concepts, but just to ensure we are all on the same
+
+9
+00:00:34,400 --> 00:00:37,070
+page, let's explain what each type is.
+
+10
+00:00:37,580 --> 00:00:42,140
+SQL databases or relational databases are the more traditional databases.
+
+11
+00:00:42,140 --> 00:00:46,040
+They have been around for almost 40 years and have served the industry well.
+
+12
+00:00:46,070 --> 00:00:51,570
+The most popular relational databases are Microsoft, SQL Server, Oracle and MySQL.
+
+13
+00:00:51,590 --> 00:00:54,710
+Relational databases have some common characteristics.
+
+14
+00:00:54,950 --> 00:00:57,050
+They store the data in tables.
+
+15
+00:00:57,050 --> 00:01:03,360
+Each table stores a specific type of entity and each table has a concrete set of columns which represent
+
+16
+00:01:03,360 --> 00:01:05,430
+the various properties of the entities.
+
+17
+00:01:05,459 --> 00:01:11,610
+For example, the following table demonstrates how a very simplified order entity will be represented
+
+18
+00:01:11,610 --> 00:01:13,410
+in a relational database.
+
+19
+00:01:13,890 --> 00:01:19,420
+Tables can have relationships with each other, hence the relational in the database name.
+
+20
+00:01:19,440 --> 00:01:25,980
+For example, if I have an order table, it will probably have also an order items table which will
+
+21
+00:01:25,980 --> 00:01:27,630
+contain the items in the order.
+
+22
+00:01:27,660 --> 00:01:32,640
+Each row in the order items table relates to a specific order in the orders table.
+
+23
+00:01:32,670 --> 00:01:36,660
+This relationship is done with the order ID field of the order item.
+
+24
+00:01:37,050 --> 00:01:41,460
+Another characteristic of relational database is transactions.
+
+25
+00:01:41,490 --> 00:01:47,670
+A transaction represents an atomic set of actions that either executes all the actions or executes none
+
+26
+00:01:47,700 --> 00:01:48,210
+of them.
+
+27
+00:01:48,240 --> 00:01:52,570
+There is no way that only part of the actions in the transaction will be executed.
+
+28
+00:01:52,620 --> 00:01:58,810
+For example, if the customer placed an item in the order, the items stock must be decreased by one.
+
+29
+00:01:58,830 --> 00:02:02,760
+It should never happen that the item was placed, but the stock was not updated.
+
+30
+00:02:02,790 --> 00:02:04,350
+This is a transaction.
+
+31
+00:02:04,560 --> 00:02:09,509
+Transactions are defined with the acid acronym, which stands for Atomicity.
+
+32
+00:02:09,539 --> 00:02:13,440
+Consistency, Isolation and Durability.
+
+33
+00:02:13,470 --> 00:02:17,490
+Only a database that supports all these can claim to support transactions.
+
+34
+00:02:18,150 --> 00:02:23,070
+Transactions are one of the most important capabilities of relational database, and naturally they
+
+35
+00:02:23,070 --> 00:02:24,060
+are widely used.
+
+36
+00:02:24,090 --> 00:02:29,040
+Of course, there are a lot to talk about transactions in relational databases, but that will be out
+
+37
+00:02:29,040 --> 00:02:30,390
+of scope of this course.
+
+38
+00:02:30,840 --> 00:02:34,690
+The last characteristic we will talk about is the querying language.
+
+39
+00:02:34,710 --> 00:02:38,870
+All the relational databases enable querying data using the SQL Language.
+
+40
+00:02:38,880 --> 00:02:46,020
+SQL, which stands for Structured Query Language is a very mature language that was introduced by IBM
+
+41
+00:02:46,050 --> 00:02:47,520
+more than 40 years ago.
+
+42
+00:02:47,550 --> 00:02:52,860
+It allows querying and modifying data in an easy to understand language and is considered the de facto
+
+43
+00:02:52,860 --> 00:02:56,310
+standard for accessing data in relational databases.
+
+44
+00:02:56,340 --> 00:03:02,640
+For example, here is an SQL snippet that demonstrates querying the orders table for orders that were
+
+45
+00:03:02,640 --> 00:03:05,790
+generated since January 1st, 2018.
+
+46
+00:03:06,420 --> 00:03:09,480
+And now let's look at NoSQL database.
+
+47
+00:03:09,510 --> 00:03:14,860
+As their name suggests, NoSQL databases try to be the opposite of SQL databases.
+
+48
+00:03:14,880 --> 00:03:19,570
+One of the most significant limitations of SQL databases are performance and size.
+
+49
+00:03:19,590 --> 00:03:25,410
+Since relational databases maintain schema for each record and enforce transactions, the performance
+
+50
+00:03:25,410 --> 00:03:28,350
+degrade as the database is getting larger and larger.
+
+51
+00:03:28,380 --> 00:03:31,320
+This is the problem that NoSQL movement is trying to solve.
+
+52
+00:03:31,350 --> 00:03:35,310
+The greatest strength of NoSQL is a scale and performance.
+
+53
+00:03:35,340 --> 00:03:40,110
+NoSQL databases can become really huge and they are often distributed on many servers.
+
+54
+00:03:40,110 --> 00:03:47,760
+For example, Baidu, the Chinese search engine stores more than 300TB on MongoDB, one of the most
+
+55
+00:03:47,760 --> 00:03:49,320
+popular NoSQL databases.
+
+56
+00:03:49,320 --> 00:03:53,940
+And it's not uncommon to look at NoSQL databases with billions of entities.
+
+57
+00:03:54,930 --> 00:04:01,020
+These trends dictate the capabilities of NoSQL databases and the differences between them and traditional
+
+58
+00:04:01,020 --> 00:04:02,190
+SQL databases.
+
+59
+00:04:02,340 --> 00:04:06,450
+First of all, NoSQL databases are in general schemaless.
+
+60
+00:04:06,480 --> 00:04:12,150
+What that means is that while SQL databases stores the data in a well defined table with well defined
+
+61
+00:04:12,180 --> 00:04:15,540
+columns, which defines an actual schema for the entities.
+
+62
+00:04:15,570 --> 00:04:18,360
+NoSQL databases do not force any schema.
+
+63
+00:04:18,390 --> 00:04:23,220
+They construct completely different entities with completely different fields in the same table.
+
+64
+00:04:23,580 --> 00:04:30,150
+Usually these entities are stored as Json documents, and since Json is a fully flexible format, you
+
+65
+00:04:30,150 --> 00:04:32,610
+are not limited to a specific field or size.
+
+66
+00:04:32,640 --> 00:04:33,540
+This is great.
+
+67
+00:04:33,540 --> 00:04:39,270
+If your application is going to store semi structured or unstructured data which does not have a concrete
+
+68
+00:04:39,270 --> 00:04:39,720
+schema.
+
+69
+00:04:39,810 --> 00:04:44,130
+In this case, the flexibility offered by NoSQL database is a great advantage.
+
+70
+00:04:44,430 --> 00:04:47,470
+Next, let's talk about transactions.
+
+71
+00:04:47,490 --> 00:04:53,850
+We explained what a transaction is in relational databases and why it's so important with NoSQL databases.
+
+72
+00:04:53,880 --> 00:04:55,780
+Transaction support is varied.
+
+73
+00:04:55,800 --> 00:04:59,970
+Most databases support a concept called eventual consistency, which.
+
+74
+00:05:00,050 --> 00:05:05,230
+Means that the database guarantees that the action will be performed, but it will not guarantee when
+
+75
+00:05:05,230 --> 00:05:06,970
+exactly it will be performed.
+
+76
+00:05:07,030 --> 00:05:12,520
+Of course, we are not talking here about minutes and usually not about seconds, but it won't be immediate.
+
+77
+00:05:12,550 --> 00:05:17,500
+This means the code must be able to cope with temporary inconsistencies in the data.
+
+78
+00:05:17,710 --> 00:05:19,660
+Now, this might sound strange.
+
+79
+00:05:19,660 --> 00:05:22,630
+Why wouldn't NoSQL database support acid transactions?
+
+80
+00:05:23,170 --> 00:05:27,370
+The answer lies in the NoSQL mission statement, size and performance.
+
+81
+00:05:27,490 --> 00:05:32,530
+As we mentioned before, transactions are what block relational database from reaching the level of
+
+82
+00:05:32,530 --> 00:05:36,270
+performance required today by huge data consumers and creators.
+
+83
+00:05:36,280 --> 00:05:40,280
+And that's why NoSQL databases support only part of the definition.
+
+84
+00:05:40,300 --> 00:05:45,550
+Each database select its own version of transaction support, and it's important to look closely at
+
+85
+00:05:45,550 --> 00:05:48,970
+the transaction support of the NoSQL database you are going to work with.
+
+86
+00:05:49,390 --> 00:05:52,000
+Lastly, let's talk about querying.
+
+87
+00:05:52,270 --> 00:05:54,910
+Relational databases allow access to their data.
+
+88
+00:05:54,910 --> 00:06:00,050
+Using the SQL language is a universal language and can be used on any relational database.
+
+89
+00:06:00,050 --> 00:06:04,460
+On the other hand, there is no standard for accessing data in NoSQL database.
+
+90
+00:06:04,490 --> 00:06:09,020
+Each database has its own language and driver and requires its own learning curve.
+
+91
+00:06:09,050 --> 00:06:13,520
+To be frank, this is quite frustrating and I hope it will be changed somewhere in the future.
+
+92
+00:06:13,520 --> 00:06:15,410
+But for now that's a deal.
+
+93
+00:06:15,890 --> 00:06:17,300
+So let's summarize.
+
+94
+00:06:17,330 --> 00:06:23,240
+If your system is not going to be huge and by huge, I mean at least ten of terabytes and the data is
+
+95
+00:06:23,240 --> 00:06:24,170
+mostly structured.
+
+96
+00:06:24,170 --> 00:06:28,700
+And if data consistency is important to you, go for traditional SQL databases.
+
+97
+00:06:28,730 --> 00:06:30,920
+It doesn't really matter which of them you will take.
+
+98
+00:06:30,950 --> 00:06:32,480
+They are all doing a very good work.
+
+99
+00:06:32,510 --> 00:06:36,290
+Just make sure it's compatible with your development platform and off you go.
+
+100
+00:06:36,320 --> 00:06:42,550
+If, on the other hand, you are planning to have a huge unstructured data store opt for the NoSQL database,
+
+101
+00:06:42,560 --> 00:06:48,170
+MongoDB is the most popular NoSQL database at this time with support from every major software vendor.
+
+102
+00:06:48,170 --> 00:06:49,790
+So it's a natural choice.
+
+103
+00:06:49,850 --> 00:06:52,040
+As usual, keep this table as reference.
+
+104
+00:06:52,040 --> 00:06:55,310
+I'm sure it will be of use on a system you will work on.
+
+105
+00:06:55,430 --> 00:06:57,350
+Oh, and one more thing.
+
+106
+00:06:57,380 --> 00:07:03,620
+Lately the line between SQL and NoSQL databases has started to blur, and we are seeing various capabilities
+
+107
+00:07:03,620 --> 00:07:05,690
+leak from one type to the other.
+
+108
+00:07:05,690 --> 00:07:11,810
+For example, traditionally NoSQL databases were great at querying Json documents, whereas SQL databases,
+
+109
+00:07:11,810 --> 00:07:13,970
+to put it bluntly, just sucked.
+
+110
+00:07:14,000 --> 00:07:20,030
+However, we can find today great Json querying capabilities in databases such as SQL Server and Postgres.
+
+111
+00:07:20,360 --> 00:07:25,970
+Actually, I have a client which decided to drop MongoDB in favour of SQL Server because he really liked
+
+112
+00:07:25,970 --> 00:07:30,170
+the combination it offered of full transaction support and Json query.
+
+113
+00:07:30,200 --> 00:07:33,290
+Another example is the aforementioned transaction support.
+
+114
+00:07:33,320 --> 00:07:39,320
+MongoDB has added full acid support a few months ago, which was a great breakthrough for the NoSQL
+
+115
+00:07:39,320 --> 00:07:39,920
+database.
+
+116
+00:07:39,950 --> 00:07:45,530
+They claim it won't impact performance and it will be very interesting to see whether other NoSQL vendors
+
+117
+00:07:45,530 --> 00:07:46,820
+will adopt this attitude.
+

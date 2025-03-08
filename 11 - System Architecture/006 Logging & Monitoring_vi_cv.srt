@@ -1,0 +1,288 @@
+1
+00:00:00,410 --> 00:00:02,850
+Hệ thống phần mềm là những thứ phức tạp.
+
+2
+00:00:02,870 --> 00:00:07,400
+Có rất nhiều bộ phận chuyển động và do đó, rất nhiều thứ có thể xảy ra sai sót.
+
+3
+00:00:07,520 --> 00:00:10,310
+Và tôi đảm bảo với bạn rằng mọi chuyện sẽ không ổn.
+
+4
+00:00:10,340 --> 00:00:13,190
+Đây là một trong những tiên đề của thế giới phần mềm.
+
+5
+00:00:13,310 --> 00:00:17,270
+Câu hỏi thực sự ở đây là điều gì sẽ xảy ra khi có điều gì đó không ổn?
+
+6
+00:00:17,300 --> 00:00:21,920
+Đôi khi câu trả lời cho điều đó chính là điều tạo nên sự khác biệt giữa một kiến trúc tốt, dễ bảo trì
+
+7
+00:00:21,920 --> 00:00:25,190
+hệ thống và hệ thống thiếu cái nhìn tổng thể.
+
+8
+00:00:25,310 --> 00:00:29,090
+Một kiến trúc tốt sẽ luôn bao gồm các công cụ ghi nhật ký và giám sát.
+
+9
+00:00:29,120 --> 00:00:35,180
+Đây là nền tảng của các hệ thống có thể bảo trì và giúp việc tìm kiếm và khắc phục sự cố trở nên đơn giản hơn nhiều
+
+10
+00:00:35,180 --> 00:00:36,020
+và nhanh hơn.
+
+11
+00:00:36,050 --> 00:00:42,080
+Mục tiêu ở đây là khi có vấn đề, chỉ cần lướt qua nhật ký hệ thống là chúng ta có thể biết ngay lập tức
+
+12
+00:00:42,080 --> 00:00:46,970
+nguồn gốc của vấn đề và sẽ cung cấp cho chúng tôi càng nhiều thông tin càng tốt liên quan đến
+
+13
+00:00:46,970 --> 00:00:47,590
+vấn đề.
+
+14
+00:00:47,600 --> 00:00:53,180
+Ngoài ra, việc giám sát sẽ cho phép chúng ta xem trạng thái hiện tại của hệ thống và nhận thấy các vấn đề
+
+15
+00:00:53,210 --> 00:00:57,650
+các xu hướng như mức tiêu thụ bộ nhớ cao hoặc các ngoại lệ trên mức trung bình đều được tính.
+
+16
+00:00:57,830 --> 00:01:02,820
+Bây giờ, chúng ta đã nói một chút về việc ghi nhật ký và giám sát trong phần kiến trúc thành phần phần mềm,
+
+17
+00:01:02,820 --> 00:01:07,920
+và tôi muốn bổ sung thêm hai chủ đề rất quan trọng trong một hệ thống hoàn chỉnh.
+
+18
+00:01:08,160 --> 00:01:10,860
+Đầu tiên là dịch vụ ghi nhật ký trung tâm.
+
+19
+00:01:10,920 --> 00:01:16,740
+Vì hầu hết các hệ thống bao gồm nhiều hơn một dịch vụ được phát triển bởi các nhóm riêng biệt, thường
+
+20
+00:01:16,740 --> 00:01:19,440
+Mỗi nhóm sử dụng cơ chế ghi nhật ký riêng của mình.
+
+21
+00:01:19,440 --> 00:01:25,500
+Vấn đề là mỗi dịch vụ đều có định dạng nhật ký, dữ liệu nhật ký và vị trí nhật ký riêng.
+
+22
+00:01:25,530 --> 00:01:29,830
+Một dịch vụ có thể lưu nhật ký của mình trong hệ thống tệp dưới dạng tệp có định dạng cố định.
+
+23
+00:01:29,850 --> 00:01:35,100
+Dịch vụ còn lại sẽ lưu trữ các bản ghi nhật ký trong cơ sở dữ liệu quan hệ, trong khi dịch vụ thứ ba sẽ lưu trữ Json
+
+24
+00:01:35,100 --> 00:01:37,050
+tài liệu trong cơ sở dữ liệu NoSQL.
+
+25
+00:01:37,080 --> 00:01:42,030
+Mỗi cách đều là một cách tiếp cận hợp lý, nhưng rất khó để hiểu được chuyện quái quỷ gì đang diễn ra
+
+26
+00:01:42,030 --> 00:01:46,950
+trên hệ thống khi các nhà phát triển phải xem xét nhiều nguồn với nhiều định dạng để đọc
+
+27
+00:01:46,950 --> 00:01:47,640
+các khúc gỗ.
+
+28
+00:01:48,060 --> 00:01:54,000
+Cách tiếp cận được ưa chuộng là tạo một dịch vụ ghi nhật ký trung tâm mà tất cả các dịch vụ khác đều ghi vào đó.
+
+29
+00:01:54,030 --> 00:01:59,400
+Dịch vụ trung tâm này sẽ lưu trữ nhật ký trong một kho lưu trữ trung tâm, tốt nhất là một cơ sở dữ liệu để cải thiện
+
+30
+00:01:59,400 --> 00:02:04,740
+truy vấn và phân tích, do đó tạo ra một điểm xem duy nhất cho dữ liệu nhật ký.
+
+31
+00:02:05,040 --> 00:02:10,949
+Có nhiều phương pháp khác nhau mà dịch vụ có thể nhận được, nhật ký, nó có thể hiển thị API cho các dịch vụ khác
+
+32
+00:02:10,949 --> 00:02:16,050
+để sử dụng hoặc có thể theo dõi các thư mục cụ thể để tìm tệp nhật ký và sau đó thu thập chúng.
+
+33
+00:02:16,080 --> 00:02:18,930
+Các công cụ như Logstash có thể làm được điều đó.
+
+34
+00:02:18,960 --> 00:02:25,050
+Nó theo dõi một thư mục và khi một tập tin được thêm vào hoặc sửa đổi, nó sẽ thu thập và lưu trữ tập tin đó trong kho dữ liệu.
+
+35
+00:02:25,260 --> 00:02:27,570
+Thực ra, cách tiếp cận bạn áp dụng không thực sự quan trọng.
+
+36
+00:02:27,600 --> 00:02:29,220
+Kết quả cuối cùng phải giống nhau.
+
+37
+00:02:29,220 --> 00:02:35,340
+Các bản ghi của toàn bộ hệ thống phải có thể truy cập được từ một điểm trung tâm và phải có mặt dưới dạng một bản duy nhất
+
+38
+00:02:35,340 --> 00:02:36,120
+định dạng.
+
+39
+00:02:36,990 --> 00:02:39,450
+Chủ đề thứ hai là ID tương quan.
+
+40
+00:02:41,250 --> 00:02:46,830
+Khi hệ thống của chúng tôi có nhiều dịch vụ, chúng tôi sẽ có rất nhiều luồng kinh doanh bao gồm nhiều hơn một
+
+41
+00:02:46,830 --> 00:02:47,550
+dịch vụ.
+
+42
+00:02:47,820 --> 00:02:53,490
+Chúng ta đã thấy một số ví dụ trước đây trong khóa học này, ví dụ, một dịch vụ tư vấn đầu tư
+
+43
+00:02:53,490 --> 00:02:55,830
+gọi là cổ phiếu, báo giá, dịch vụ.
+
+44
+00:02:56,040 --> 00:02:59,370
+Ở đây chúng ta có hai dịch vụ tham gia vào một luồng duy nhất.
+
+45
+00:02:59,400 --> 00:03:05,700
+Một trong những thách thức trong luồng như vậy là phải hiểu được bản ghi nhật ký nào thuộc về luồng nào.
+
+46
+00:03:06,000 --> 00:03:10,770
+Ví dụ, giả sử người dùng thứ nhất yêu cầu được giới thiệu.
+
+47
+00:03:10,890 --> 00:03:17,640
+Dịch vụ đề xuất gọi đến dịch vụ chứng khoán để lấy dữ liệu và sau đó xảy ra lỗi trong dịch vụ chứng khoán.
+
+48
+00:03:17,910 --> 00:03:22,740
+Cả hai dịch vụ đều thực hiện ghi nhật ký, do đó chúng tôi có tài liệu ghi chép đầy đủ về những gì đã xảy ra.
+
+49
+00:03:22,740 --> 00:03:28,740
+Trong trường hợp này, chúng tôi có một bản ghi được viết bởi dịch vụ đề xuất cho biết những gì người dùng đã yêu cầu
+
+50
+00:03:28,740 --> 00:03:31,800
+và nhật ký trong dịch vụ chứng khoán ghi lại lỗi.
+
+51
+00:03:31,830 --> 00:03:33,540
+Cho đến giờ thì mọi việc vẫn ổn.
+
+52
+00:03:33,690 --> 00:03:40,440
+Nhưng điều gì sẽ xảy ra nếu song song với yêu cầu của người dùng, chúng ta có một yêu cầu khác được khởi tạo bởi người dùng?
+
+53
+00:03:40,440 --> 00:03:40,980
+hai.
+
+54
+00:03:41,010 --> 00:03:44,970
+Giả sử trong trường hợp này không có lỗi nào được đưa vào dịch vụ chứng khoán.
+
+55
+00:03:45,000 --> 00:03:51,240
+Hiện tại chúng ta có bốn bản ghi nhật ký, hai bản ghi về dịch vụ khuyến nghị và hai bản ghi về cổ phiếu.
+
+56
+00:03:51,270 --> 00:03:53,160
+Một trong số chúng ghi lại lỗi.
+
+57
+00:03:53,190 --> 00:03:56,730
+Làm thế nào chúng ta có thể tìm ra bản ghi nào thuộc về luồng nào?
+
+58
+00:03:57,060 --> 00:03:59,650
+Không rõ lỗi này có phải do người dùng thứ nhất gây ra hay không.
+
+59
+00:03:59,650 --> 00:04:04,980
+Yêu cầu S, vì không có gì trong dữ liệu quy lỗi cho một yêu cầu cụ thể của
+
+60
+00:04:04,980 --> 00:04:06,390
+dịch vụ giới thiệu.
+
+61
+00:04:06,630 --> 00:04:09,330
+Giải pháp cho vấn đề này là ID tương quan.
+
+62
+00:04:09,990 --> 00:04:15,930
+ID tương quan là một mã định danh được gán cho một luồng ở đầu luồng đó và được truyền từ
+
+63
+00:04:15,930 --> 00:04:16,920
+dịch vụ này đến dịch vụ khác.
+
+64
+00:04:16,950 --> 00:04:22,200
+Nó được bao gồm trong mọi bản ghi nhật ký và cho phép chúng tôi theo dõi luồng từ đầu đến cuối.
+
+65
+00:04:22,350 --> 00:04:26,520
+Bản thân ID tương quan có thể là bất kỳ mã định danh nào bạn muốn sử dụng.
+
+66
+00:04:26,550 --> 00:04:28,350
+Tốt là sự lựa chọn phổ biến.
+
+67
+00:04:28,380 --> 00:04:33,390
+Điều quan trọng duy nhất là đảm bảo nó được tạo ra ở đầu luồng và được bao gồm
+
+68
+00:04:33,390 --> 00:04:35,010
+trong mọi bản ghi nhật ký.
+
+69
+00:04:35,190 --> 00:04:41,130
+Sử dụng ID tương quan, chúng ta có thể dễ dàng theo dõi toàn bộ luồng và hiểu chính xác những gì đã xảy ra trong
+
+70
+00:04:41,130 --> 00:04:43,530
+dòng chảy và quan trọng hơn là tại sao.
+
+71
+00:04:44,010 --> 00:04:49,650
+Tóm lại, hãy sử dụng nhật ký trung tâm và ID tương quan để giúp hệ thống dễ bảo trì, đặc biệt là
+
+72
+00:04:49,650 --> 00:04:53,430
+khi hệ thống có nhiều dịch vụ được sử dụng bởi nhiều luồng kinh doanh khác nhau.
+

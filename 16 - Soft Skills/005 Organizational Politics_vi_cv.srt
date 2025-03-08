@@ -1,0 +1,128 @@
+1
+00:00:00,170 --> 00:00:02,380
+Và đây là tin xấu.
+
+2
+00:00:02,390 --> 00:00:05,400
+Bạn phải quen thuộc với chính trị tổ chức.
+
+3
+00:00:05,420 --> 00:00:10,310
+Đúng vậy, tất cả chúng ta đều chỉ muốn giải quyết các mô hình kiến trúc, công nghệ, v.v.
+
+4
+00:00:10,310 --> 00:00:16,100
+Nhưng nhiều lần để trở thành một kiến trúc sư thực sự thành công và để lại dấu ấn, bạn sẽ phải
+
+5
+00:00:16,100 --> 00:00:20,450
+hiểu rõ về chính trị tổ chức thay vì những lời giải thích dài dòng.
+
+6
+00:00:20,450 --> 00:00:22,820
+Chúng ta hãy đi thẳng vào một ví dụ thực tế.
+
+7
+00:00:23,120 --> 00:00:29,330
+Trong số những khách hàng tôi từng làm việc, có một CIO không thể chịu nổi ý tưởng về dịch vụ vi mô.
+
+8
+00:00:29,330 --> 00:00:35,810
+Ông thực sự sợ hãi khái niệm này và tuyên bố rằng đó là một mô hình mới, chưa được kiểm chứng và chưa trưởng thành.
+
+9
+00:00:35,810 --> 00:00:40,790
+sẽ biến mất theo thời gian và tất cả chúng ta sẽ quay lại với các ứng dụng ba tầng cũ tốt trong tương lai gần
+
+10
+00:00:40,790 --> 00:00:41,510
+tương lai.
+
+11
+00:00:41,600 --> 00:00:47,870
+Rõ ràng là tôi không thể không đồng ý hơn, nhưng bất kể tôi nói với anh ấy về nghiên cứu trường hợp nào, tôi đã để anh ấy đọc
+
+12
+00:00:47,870 --> 00:00:49,610
+những bài viết tôi đã trình bày cho anh ấy.
+
+13
+00:00:49,610 --> 00:00:51,710
+Anh ấy không di chuyển và đứng im.
+
+14
+00:00:51,710 --> 00:00:55,610
+Theo ông, tổ chức của chúng tôi không có dịch vụ siêu nhỏ nào cả.
+
+15
+00:00:55,610 --> 00:01:01,310
+Vì vậy, tôi đã có một số cuộc thảo luận thông thường với một số nhà quản lý khác trong tổ chức và phát hiện ra một điều thú vị.
+
+16
+00:01:01,320 --> 00:01:07,500
+CIO sẽ được thay thế trong khoảng hai tháng nữa bởi một người quản lý khác hiện đang là quản lý dự án.
+
+17
+00:01:07,500 --> 00:01:09,840
+Vậy tôi đã làm gì với thông tin này?
+
+18
+00:01:09,840 --> 00:01:10,920
+Khá đơn giản.
+
+19
+00:01:10,950 --> 00:01:13,530
+Tôi đã kết bạn với người quản lý dự án này.
+
+20
+00:01:13,530 --> 00:01:18,000
+Chúng tôi đã có một số cuộc thảo luận rất thân thiện và tìm được một số điểm chung.
+
+21
+00:01:18,030 --> 00:01:22,740
+Hóa ra chúng tôi học chung trường trung học ở cùng thành phố và nhìn chung đã có khoảng thời gian vui vẻ.
+
+22
+00:01:22,740 --> 00:01:27,840
+Sau một thời gian, cuộc trò chuyện của chúng tôi trở nên chuyên nghiệp hơn và chúng tôi bắt đầu thảo luận về công việc tương lai của anh ấy.
+
+23
+00:01:27,840 --> 00:01:33,900
+Sau đó, tôi cho anh ấy biết về mô hình dịch vụ vi mô và đảm bảo với anh ấy rằng đó là một mô hình tốt, hiệu quả và đã được thử nghiệm.
+
+24
+00:01:33,900 --> 00:01:34,590
+mẫu.
+
+25
+00:01:34,590 --> 00:01:40,590
+Chỉ cần ba cuộc thảo luận như vậy là anh ấy đã trở thành người hâm mộ mô hình dịch vụ vi mô.
+
+26
+00:01:40,590 --> 00:01:45,360
+Và bạn nghĩ quyết định đầu tiên mà ông ấy đưa ra ngay sau khi ngồi vào ghế CEO là gì?
+
+27
+00:01:45,390 --> 00:01:50,790
+Tất nhiên là phải phê duyệt mô hình dịch vụ vi mô cho dự án cụ thể mà tôi đã làm.
+
+28
+00:01:50,790 --> 00:01:57,810
+Vì vậy, như bạn có thể thấy, việc nhận thức được chính trị tổ chức có thể khá hữu ích, nhưng bạn phải,
+
+29
+00:01:57,810 --> 00:02:01,020
+bằng mọi giá, đừng tham gia vào chính trị.
+
+30
+00:02:01,020 --> 00:02:02,490
+Bạn nên biết chuyện gì đang xảy ra.
+
+31
+00:02:02,520 --> 00:02:08,400
+Bạn nên quen biết những người có liên quan, nhưng đừng bao giờ tham gia vào các hoạt động chính trị.
+
+32
+00:02:08,400 --> 00:02:14,400
+Nó có thể mang lại cho bạn một số lợi thế trong ngắn hạn, nhưng về lâu dài nó sẽ gây tổn hại cho bạn, thậm chí là tổn hại rất nặng nề.
+

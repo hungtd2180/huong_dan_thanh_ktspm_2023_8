@@ -1,0 +1,200 @@
+1
+00:00:00,200 --> 00:00:04,370
+Public speaking is one of the most important skills of every professional.
+
+2
+00:00:04,400 --> 00:00:10,130
+Speaking at conferences, meetups, large meetings and such is a crucial skill for everyone who wants
+
+3
+00:00:10,130 --> 00:00:13,170
+to get promoted or seek new, better job.
+
+4
+00:00:13,190 --> 00:00:19,970
+But we are not talking here about every professional but rather about architects and architects specifically
+
+5
+00:00:19,970 --> 00:00:22,820
+must be able to speak in front of a large audience.
+
+6
+00:00:22,850 --> 00:00:29,420
+Remember, architects usually have no formal authority over developers, system analyzers or project
+
+7
+00:00:29,420 --> 00:00:30,050
+managers.
+
+8
+00:00:30,080 --> 00:00:34,940
+If an architect wants to influence, she should utilize her speaking skills.
+
+9
+00:00:34,970 --> 00:00:38,690
+In addition, architects are going to take part in many meetings.
+
+10
+00:00:38,690 --> 00:00:42,940
+Some of them are critical to the project's success, and their input is crucial.
+
+11
+00:00:42,950 --> 00:00:48,530
+So as an architect, you have to be able to stand in front of an audience and deliver a convincing,
+
+12
+00:00:48,530 --> 00:00:49,640
+effective speech.
+
+13
+00:00:49,670 --> 00:00:52,490
+Now, this is not a course about public speaking.
+
+14
+00:00:52,490 --> 00:00:57,680
+There are a lot of such courses out there, but I do want to highlight some of the more important aspects
+
+15
+00:00:57,680 --> 00:01:01,970
+of public speaking that will help you deliver an engaging and effective speech.
+
+16
+00:01:01,980 --> 00:01:03,030
+So let's go.
+
+17
+00:01:03,240 --> 00:01:06,000
+First, define a clear goal.
+
+18
+00:01:06,030 --> 00:01:10,430
+When you are going to talk in front of an audience, you must have a clear goal in place.
+
+19
+00:01:10,440 --> 00:01:11,820
+Why are you doing this?
+
+20
+00:01:11,850 --> 00:01:14,310
+Do you want to get approval for the architecture?
+
+21
+00:01:14,340 --> 00:01:16,240
+Do you want to improve your image?
+
+22
+00:01:16,260 --> 00:01:17,670
+Do you want to get a raise?
+
+23
+00:01:17,700 --> 00:01:22,800
+Whatever the reason is, you must define it and be laser focused on it while speaking.
+
+24
+00:01:22,800 --> 00:01:26,100
+This will help you improve your speech and make it more effective.
+
+25
+00:01:26,130 --> 00:01:28,530
+Second, know your audience.
+
+26
+00:01:28,560 --> 00:01:33,160
+You should always know who you are going to talk to and adapt your talk accordingly.
+
+27
+00:01:33,180 --> 00:01:38,670
+For example, if you are going to talk to business analysts, it probably a good idea to avoid a long
+
+28
+00:01:38,670 --> 00:01:39,800
+technical discussions.
+
+29
+00:01:39,810 --> 00:01:42,780
+They won't understand it and it will get them bored.
+
+30
+00:01:42,930 --> 00:01:48,420
+Third, be confident or if you are terrified, pretend to be confident.
+
+31
+00:01:48,450 --> 00:01:52,700
+People tend to respect and believe someone who is confident about what he has to say.
+
+32
+00:01:52,710 --> 00:01:58,980
+If your talk is full, with whom and a, it won't look good and people will lose you.
+
+33
+00:01:59,010 --> 00:02:02,910
+You have to let them know or think that you know what you are talking about.
+
+34
+00:02:02,940 --> 00:02:06,420
+Fourth, don't read ever.
+
+35
+00:02:06,450 --> 00:02:11,039
+One of the biggest mistakes public speakers do is to read from a slide.
+
+36
+00:02:11,070 --> 00:02:13,650
+Your audience is a smart, grown up people.
+
+37
+00:02:13,650 --> 00:02:14,850
+They know how to read.
+
+38
+00:02:14,850 --> 00:02:15,780
+Thank you very much.
+
+39
+00:02:15,810 --> 00:02:20,180
+The accompanying slides should be used to make a point and to visualize concepts.
+
+40
+00:02:20,190 --> 00:02:24,390
+Under no circumstances should they contain the content itself.
+
+41
+00:02:24,660 --> 00:02:27,150
+Fifth, maintain eye contact.
+
+42
+00:02:27,150 --> 00:02:30,480
+Always look at your audience and make sure to look at everyone.
+
+43
+00:02:30,480 --> 00:02:36,060
+One of the common mistakes of public speakers is to focus on a single attendee and look only at him
+
+44
+00:02:36,060 --> 00:02:36,900
+along the talk.
+
+45
+00:02:36,930 --> 00:02:42,420
+This will make the poor attendee feel uncomfortable and make the rest of your audience feel like you
+
+46
+00:02:42,420 --> 00:02:43,500
+don't talk to them.
+
+47
+00:02:44,130 --> 00:02:47,610
+Okay, so these were some highlights about public speaking.
+
+48
+00:02:47,610 --> 00:02:52,410
+And again, I would highly recommend looking at some resources and reading some books about it.
+
+49
+00:02:52,410 --> 00:02:57,360
+It's one of the most important skills and architects should have and you should be an expert in that
+
+50
+00:02:57,360 --> 00:02:57,990
+field.
+

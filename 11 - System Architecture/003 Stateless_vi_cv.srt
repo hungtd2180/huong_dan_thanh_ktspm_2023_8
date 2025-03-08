@@ -1,0 +1,400 @@
+1
+00:00:00,780 --> 00:00:05,590
+Mô hình kiến trúc của trạng thái có lẽ là một trong những mô hình quan trọng nhất trong kiến trúc phần mềm.
+
+2
+00:00:05,910 --> 00:00:11,730
+Trên thực tế, nếu tôi phải chỉ ra một mô hình mà bạn phải triển khai, thì có lẽ đó sẽ là
+
+3
+00:00:11,730 --> 00:00:12,480
+Họa tiết Stickles.
+
+4
+00:00:13,080 --> 00:00:14,610
+Vậy vật nhỏ này là gì?
+
+5
+00:00:15,300 --> 00:00:16,530
+Thay vào đó là kiến trúc.
+
+6
+00:00:16,860 --> 00:00:22,440
+Trạng thái ứng dụng chỉ được thông báo ở hai nơi, kho dữ liệu và giao diện người dùng, nếu có
+
+7
+00:00:22,440 --> 00:00:22,920
+là bất kỳ.
+
+8
+00:00:23,280 --> 00:00:25,780
+Không có trạng thái nào được nêu trong mã ứng dụng.
+
+9
+00:00:26,310 --> 00:00:32,790
+Bây giờ, nếu bạn không chắc trạng thái là gì, bạn có thể nghĩ đơn giản là dữ liệu ứng dụng là tạm thời
+
+10
+00:00:32,790 --> 00:00:35,520
+hoặc liên tục để làm cho nó rõ ràng hơn.
+
+11
+00:00:35,700 --> 00:00:38,190
+Chúng ta hãy lấy một ví dụ trong ví dụ của chúng ta.
+
+12
+00:00:38,190 --> 00:00:42,490
+Ứng dụng của chúng tôi có cơ chế giao diện tương tự như hầu hết các ứng dụng khác hiện có.
+
+13
+00:00:43,020 --> 00:00:47,520
+Ứng dụng bao gồm giao diện người dùng, dịch vụ đăng nhập và cơ sở dữ liệu.
+
+14
+00:00:48,270 --> 00:00:50,760
+Người dùng nhập tên người dùng và mật khẩu.
+
+15
+00:00:51,030 --> 00:00:57,350
+Chúng được gửi đến bộ phận khóa để kiểm tra xem người dùng đó có tồn tại trong cơ sở dữ liệu hay không.
+
+16
+00:00:57,360 --> 00:01:03,840
+Nếu vậy, dữ liệu người dùng được lấy từ cơ sở dữ liệu và được lưu trữ trong một biến trong dịch vụ để
+
+17
+00:01:03,840 --> 00:01:07,010
+rằng trong những yêu cầu tương lai, ứng dụng sẽ có thể xác định được anh ta.
+
+18
+00:01:08,010 --> 00:01:13,980
+Trong ví dụ này, trạng thái mà trong trường hợp này là thông tin chi tiết của người dùng được lưu trữ trong mã ứng dụng,
+
+19
+00:01:14,280 --> 00:01:17,500
+do đó làm cho nó có trạng thái thay vì không có trạng thái.
+
+20
+00:01:18,150 --> 00:01:22,470
+Vậy thì, vấn đề tại sao trạng thái của bạn lại được coi là một điều tồi tệ là gì?
+
+21
+00:01:23,220 --> 00:01:27,930
+Để hiểu điều đó, chúng ta nên thảo luận hai khái niệm khác mà chúng ta đã đề cập trước đó nhưng đáng để xem xét.
+
+22
+00:01:27,930 --> 00:01:28,710
+nhắc lại lần nữa.
+
+23
+00:01:29,400 --> 00:01:31,140
+Đầu tiên là khả năng mở rộng.
+
+24
+00:01:31,650 --> 00:01:37,440
+Như bạn có thể nhớ, khả năng mở rộng là khả năng của hệ thống để phát triển và thu hẹp khi cần thiết khi
+
+25
+00:01:37,440 --> 00:01:43,710
+có một đỉnh trong tải của hệ thống là hệ thống có thể mở rộng có thể chỉ cần thêm nhiều tài nguyên hơn và chúng tôi
+
+26
+00:01:43,710 --> 00:01:44,640
+không còn cần thiết nữa.
+
+27
+00:01:44,790 --> 00:01:46,440
+Những tài nguyên này đã bị xóa.
+
+28
+00:01:46,470 --> 00:01:49,080
+Tất cả những điều này không hề làm gián đoạn hoạt động của hệ thống.
+
+29
+00:01:49,710 --> 00:01:55,560
+Như bạn có thể nhớ, chúng tôi đã thảo luận về sự khác biệt giữa mở rộng quy mô và thu hẹp quy mô và kết luận
+
+30
+00:01:55,560 --> 00:01:59,130
+rằng việc mở rộng quy mô gần như luôn được ưu tiên hơn việc mở rộng quy mô.
+
+31
+00:02:00,450 --> 00:02:02,250
+Khái niệm thứ hai là sự dự phòng.
+
+32
+00:02:02,790 --> 00:02:08,550
+Dự phòng có nghĩa là khi tài nguyên của hệ thống ngừng hoạt động là do sự cố hệ thống hoặc
+
+33
+00:02:08,550 --> 00:02:09,810
+vì lỗi phần cứng.
+
+34
+00:02:10,199 --> 00:02:15,720
+Hệ thống sẽ tiếp tục hoạt động bằng cách sử dụng các tài nguyên giống hệt nhau mà nó có và cũng có thể thực hiện
+
+35
+00:02:15,720 --> 00:02:22,770
+tự động mở rộng quy mô sang các tài nguyên khác thay vì tài nguyên bị trục trặc, ví dụ, với một hệ thống
+
+36
+00:02:22,770 --> 00:02:24,230
+với nhiều hơn một máy chủ.
+
+37
+00:02:24,540 --> 00:02:30,540
+Nếu một trong các máy chủ của chúng tôi gặp sự cố về điện và tắt, hệ thống sẽ có thể tiếp tục
+
+38
+00:02:30,540 --> 00:02:36,240
+hoạt động với các máy chủ bổ sung và thậm chí có thể tạo một máy chủ mới và thêm nó vào máy chủ hiện có
+
+39
+00:02:36,240 --> 00:02:36,600
+cái.
+
+40
+00:02:37,290 --> 00:02:42,510
+Hai khái niệm đó là nền tảng của bất kỳ kiến trúc tốt nào và phải được tính đến khi
+
+41
+00:02:42,510 --> 00:02:46,170
+thiết kế hệ thống ngay bây giờ để triển khai khái niệm của nó.
+
+42
+00:02:46,230 --> 00:02:48,330
+Kiến trúc phải trông như thế này.
+
+43
+00:02:51,020 --> 00:02:56,150
+Như bạn có thể thấy, chúng ta có nhiều hơn một phiên bản dịch vụ, con số chính xác không thực sự quan trọng, nhưng
+
+44
+00:02:56,150 --> 00:03:00,600
+cách tốt nhất là sử dụng ít nhất ba trường hợp trước dịch vụ.
+
+45
+00:03:00,830 --> 00:03:06,650
+Có một robot cân bằng tải và có một thiết bị hoặc phần mềm có hai vai trò trong
+
+46
+00:03:06,650 --> 00:03:07,280
+ngành kiến trúc.
+
+47
+00:03:07,910 --> 00:03:11,080
+Đầu tiên, nó phân phối tải giữa các máy chủ.
+
+48
+00:03:11,360 --> 00:03:16,490
+Nếu một trong các máy chủ quá bận, bạn sẽ phải chuyển yêu cầu sang máy chủ khác.
+
+49
+00:03:16,760 --> 00:03:19,930
+Nó sẽ đảm bảo không có máy chủ nào bị sập khi tải quá nhiều.
+
+50
+00:03:20,480 --> 00:03:26,810
+Khả năng này hỗ trợ khả năng mở rộng mà chúng ta cần khi sử dụng robot cho đến khi chúng ta có thể thêm nhiều máy chủ hơn khi cần
+
+51
+00:03:26,810 --> 00:03:29,960
+và chỉ thông báo số dư của máy chủ mới.
+
+52
+00:03:30,530 --> 00:03:36,560
+Thứ hai, nó kiểm tra trạng thái của máy chủ đủ để dừng việc chuyển hướng yêu cầu đến những máy chủ đang trục trặc.
+
+53
+00:03:37,190 --> 00:03:43,100
+Cách thức hoạt động của nó là trung tâm cân bằng tải định kỳ yêu cầu đến các máy chủ của nó được gọi là
+
+54
+00:03:43,360 --> 00:03:46,910
+yêu cầu và mong đợi nhận được phản hồi tích cực.
+
+55
+00:03:47,210 --> 00:03:53,060
+Bất kỳ phản hồi nào khác hoặc không có phản hồi nào cả sẽ chỉ ra rằng có sự cố với máy chủ và họ sẽ
+
+56
+00:03:53,060 --> 00:03:55,120
+dừng chuyển hướng yêu cầu đến máy chủ.
+
+57
+00:03:55,610 --> 00:04:01,160
+Như bạn có thể thấy, sự hỗ trợ mạnh mẽ, sự dự phòng mà chúng ta đã nói đến, robot cũng cho phép ứng dụng
+
+58
+00:04:01,160 --> 00:04:04,810
+tiếp tục đi bộ ngay cả khi một hoặc nhiều máy chủ ngừng hoạt động.
+
+59
+00:04:05,330 --> 00:04:08,240
+Đây chính xác là điều chúng ta muốn đạt được với sự dự phòng.
+
+60
+00:04:09,170 --> 00:04:13,050
+Có rất nhiều thuật toán cân bằng, nhưng về cơ bản thì luôn giống nhau.
+
+61
+00:04:13,370 --> 00:04:16,579
+Phân phối tải và dừng định tuyến đến các máy chủ không hoạt động.
+
+62
+00:04:17,300 --> 00:04:22,430
+Được rồi, vì vậy chúng ta đã tìm hiểu về khả năng mở rộng, dự phòng và cân bằng tải, nhưng nó có liên quan gì đến
+
+63
+00:04:22,430 --> 00:04:23,640
+làm gì với kiến trúc Tetris?
+
+64
+00:04:24,230 --> 00:04:26,840
+Vâng, thực ra thì chúng có liên quan với nhau.
+
+65
+00:04:27,230 --> 00:04:33,110
+Ứng dụng trạng thái nút có trạng thái sẽ gặp rất nhiều khó khăn về khả năng mở rộng và dự phòng.
+
+66
+00:04:33,710 --> 00:04:34,490
+Con đường Lizzi.
+
+67
+00:04:36,250 --> 00:04:41,800
+Hãy nhớ lại kịch bản Logan, chúng ta hãy xem lại nó một lần nữa, nhưng bây giờ từ góc nhìn của một người hoàn chỉnh
+
+68
+00:04:41,800 --> 00:04:48,490
+hệ thống có nhiều máy chủ và cân bằng tải, do đó người dùng đăng nhập vào nhiệm vụ có chứa tên người dùng
+
+69
+00:04:48,490 --> 00:04:53,770
+và mật khẩu được gửi đến bộ cân bằng tải, bộ cân bằng tải này sẽ chuyển hướng đến máy chủ số một.
+
+70
+00:04:54,400 --> 00:05:01,330
+Máy chủ thực hiện quy trình đăng nhập và giữ một biến để xác minh người dùng trong các yêu cầu sau này.
+
+71
+00:05:02,290 --> 00:05:04,710
+Bây giờ người dùng thực hiện một yêu cầu khác.
+
+72
+00:05:04,870 --> 00:05:07,500
+Giả sử anh ta muốn thêm sản phẩm vào giỏ hàng.
+
+73
+00:05:08,050 --> 00:05:11,440
+Yêu cầu chứa mục cần thêm sẽ được gửi đến.
+
+74
+00:05:12,100 --> 00:05:15,610
+Nhưng lần này sự cân bằng cho phép nó chiếm được vị trí thứ hai.
+
+75
+00:05:16,450 --> 00:05:17,650
+Bây giờ hãy xem điều gì xảy ra.
+
+76
+00:05:17,980 --> 00:05:22,660
+Yêu cầu được gửi đến một số Oberto, nhưng máy chủ này không biết người dùng là ai.
+
+77
+00:05:22,930 --> 00:05:25,690
+Dữ liệu chứa thông tin người dùng nằm trên máy chủ số một.
+
+78
+00:05:26,560 --> 00:05:31,810
+Điều sẽ xảy ra trong trường hợp này là người dùng sẽ nhận được thông báo lỗi yêu cầu họ phải đăng nhập vào
+
+79
+00:05:31,810 --> 00:05:35,290
+hệ thống, điều này sẽ khiến anh ấy bối rối vì anh ấy vừa mới làm chính xác như vậy.
+
+80
+00:05:35,830 --> 00:05:39,120
+Và có một điều bạn không muốn làm với người dùng của mình là gây nhầm lẫn.
+
+81
+00:05:40,230 --> 00:05:45,780
+Lý do cho điều đó, Evo, là tòa án có trạng thái, mã ứng dụng chứa trạng thái hoặc dữ liệu,
+
+82
+00:05:46,110 --> 00:05:51,780
+trong trường hợp này là thông tin chi tiết của người dùng, các tài nguyên bổ sung hoặc máy chủ được sử dụng để mở rộng quy mô
+
+83
+00:05:51,780 --> 00:05:57,330
+hoặc sự dư thừa chỉ đơn giản là không biết gì về dữ liệu trong mã và hoạt động như thể nó không tồn tại.
+
+84
+00:05:57,940 --> 00:06:02,880
+Trạng thái đầy đủ của mã khiến ứng dụng khó mở rộng quy mô hơn và làm giảm trải nghiệm của người dùng.
+
+85
+00:06:03,690 --> 00:06:09,570
+Bây giờ, điều gì sẽ xảy ra trong kiến trúc không trạng thái trong trường hợp này khi dữ liệu người dùng sẽ được lưu trong
+
+86
+00:06:09,570 --> 00:06:10,790
+một loại kho dữ liệu nào đó?
+
+87
+00:06:11,040 --> 00:06:16,290
+Nó có thể là cơ sở dữ liệu quan hệ và cơ sở dữ liệu logic, bộ nhớ đệm phân tán, bất cứ thứ gì có thể
+
+88
+00:06:16,290 --> 00:06:17,870
+được truy cập từ tất cả các máy chủ.
+
+89
+00:06:18,360 --> 00:06:24,660
+Sau đó, khi yêu cầu đến máy chủ, nó có thể giải phóng dữ liệu được lưu trữ cho thông tin chi tiết của người dùng
+
+90
+00:06:24,930 --> 00:06:30,480
+và ngay lập tức biết chính xác người dùng là ai, bất kể máy chủ nào thực hiện việc đăng nhập thực tế.
+
+91
+00:06:31,200 --> 00:06:33,780
+Lưu ý rằng điều này cũng tương tự đối với sự dự phòng.
+
+92
+00:06:34,260 --> 00:06:40,500
+Nếu máy chủ thực hiện đăng nhập bị tắt vì bất kỳ lý do gì, yêu cầu tiếp theo sẽ được định tuyến
+
+93
+00:06:40,500 --> 00:06:40,880
+với nó.
+
+94
+00:06:41,040 --> 00:06:44,820
+Và một lần nữa, máy chủ chấp nhận yêu cầu sẽ không biết người dùng là ai.
+
+95
+00:06:45,630 --> 00:06:48,510
+Đây chính là lý do vì sao kiến trúc này lại quan trọng đến vậy.
+
+96
+00:06:48,750 --> 00:06:53,490
+Nó hỗ trợ đầy đủ khả năng mở rộng và dự phòng, giúp ứng dụng của bạn đáng tin cậy hơn nhiều.
+
+97
+00:06:54,660 --> 00:07:01,230
+Để kết luận, hãy luôn làm cho kiến trúc của bạn không có trạng thái, hầu như không có kịch bản nào biện minh cho điều đó
+
+98
+00:07:01,440 --> 00:07:04,350
+kiến trúc có trạng thái và có lẽ bạn sẽ không bao giờ gặp chúng.
+
+99
+00:07:05,340 --> 00:07:10,500
+Đây là cách tốt nhất để hỗ trợ khả năng mở rộng và dự phòng trong hệ thống của bạn và bạn chắc chắn nên
+
+100
+00:07:10,500 --> 00:07:10,920
+sử dụng nó.
+

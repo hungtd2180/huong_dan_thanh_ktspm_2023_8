@@ -1,0 +1,36 @@
+1
+00:00:00,260 --> 00:00:04,400
+A lot of architects believe their job is done once the document is delivered.
+
+2
+00:00:04,460 --> 00:00:06,020
+This is a big mistake.
+
+3
+00:00:06,050 --> 00:00:11,690
+Huge software architecture is a living, breathing creature and it changes all the time.
+
+4
+00:00:11,690 --> 00:00:15,830
+You have to be there for the developers to help them to make sure they are developing according to the
+
+5
+00:00:15,830 --> 00:00:20,900
+architecture and to be part of the dilemmas that are going to be raised and are going to be a lot of
+
+6
+00:00:20,900 --> 00:00:26,000
+dilemmas, arguments and talks, and the architecture will be changed and not only once.
+
+7
+00:00:26,000 --> 00:00:27,530
+So you have to support the team.
+
+8
+00:00:27,530 --> 00:00:32,390
+If you don't want the documents to become a glorified paperweight and remember, you are not done until
+
+9
+00:00:32,390 --> 00:00:36,770
+the system is in production and even then you probably will have a lot to do.
+

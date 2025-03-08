@@ -1,0 +1,604 @@
+1
+00:00:00,360 --> 00:00:06,630
+Before discussing front end technology, let's have a little reminder about what front is so front end
+
+2
+00:00:06,630 --> 00:00:10,530
+is a part of the software that is viewed by an actual user with his own eyes.
+
+3
+00:00:10,920 --> 00:00:15,540
+This is where we will display bottomless text, dropdown list, colors, messages and more.
+
+4
+00:00:16,050 --> 00:00:20,790
+So, naturally, when selecting a floating technology, we would like to select something with robust
+
+5
+00:00:20,790 --> 00:00:23,820
+visual capabilities, but something that will not make us work too hard.
+
+6
+00:00:24,600 --> 00:00:29,430
+But first, let's look back at application types we discussed and see which one of them actually has
+
+7
+00:00:29,430 --> 00:00:30,120
+a front end.
+
+8
+00:00:30,570 --> 00:00:37,920
+So Web apps definitely with defined Web apps as applications that run in the browser and display it
+
+9
+00:00:38,170 --> 00:00:38,790
+to the user.
+
+10
+00:00:38,940 --> 00:00:40,710
+We definitely have a front end here.
+
+11
+00:00:41,430 --> 00:00:45,570
+Web API, not so much client of Web API.
+
+12
+00:00:45,720 --> 00:00:51,150
+Other applications such as mobile apps, which by themselves might have front end, but the Web API
+
+13
+00:00:51,150 --> 00:00:54,700
+application itself does not mobile apps.
+
+14
+00:00:55,350 --> 00:01:00,570
+Yep, that's the whole point, is that it console will.
+
+15
+00:01:00,630 --> 00:01:01,560
+That is complicated.
+
+16
+00:01:01,860 --> 00:01:06,720
+Technically there is a user interface to a console application, but it's not built separately from
+
+17
+00:01:06,720 --> 00:01:07,760
+the console app itself.
+
+18
+00:01:08,130 --> 00:01:13,410
+And let's face it, there isn't going to be heavy investment in any console application user interface.
+
+19
+00:01:13,860 --> 00:01:19,680
+So for the sake of all of our discussion, there is no front end to console service.
+
+20
+00:01:20,220 --> 00:01:24,450
+Not the whole point of service is that it does not have user interface.
+
+21
+00:01:24,450 --> 00:01:30,300
+So no front end for Ubaidi desktop, of course, there is also desktop apps.
+
+22
+00:01:30,300 --> 00:01:31,170
+Varies greatly.
+
+23
+00:01:31,170 --> 00:01:35,480
+Is the common denominator of all of them is that the user can see them and interact with them.
+
+24
+00:01:35,850 --> 00:01:38,040
+So there is a front end to the desktop app.
+
+25
+00:01:38,820 --> 00:01:44,800
+OK, so let's go over the values front and types and see how to select the technology first.
+
+26
+00:01:44,880 --> 00:01:51,270
+Web apps, web apps by definition have Web based front end, which means we are going to use a combination
+
+27
+00:01:51,270 --> 00:01:59,280
+of JavaScript and services is the real question here is which JavaScript framework are we going to use?
+
+28
+00:01:59,820 --> 00:02:04,410
+The most popular frameworks at the time of this recording are angular and react.
+
+29
+00:02:05,160 --> 00:02:10,590
+There are other great candidates such as refugees, but I really want to focus on the most popular ones
+
+30
+00:02:10,590 --> 00:02:11,940
+with the largest communities.
+
+31
+00:02:12,900 --> 00:02:16,560
+So first, let's compare Angiulo and popularity.
+
+32
+00:02:16,950 --> 00:02:20,120
+As you can see on Google Trends, they are quite similar in popularity.
+
+33
+00:02:22,350 --> 00:02:27,120
+Looking at stack overflow dot com, we can see there are more questions regarding ungulates and those
+
+34
+00:02:27,120 --> 00:02:28,050
+regarding the act.
+
+35
+00:02:28,530 --> 00:02:35,940
+But since Angulo is older, it was founded on 2010 as opposed to 2013, the numbers are actually quite
+
+36
+00:02:35,940 --> 00:02:36,320
+close.
+
+37
+00:02:37,480 --> 00:02:38,880
+Let's compare the capabilities.
+
+38
+00:02:39,730 --> 00:02:45,690
+Angular is a full blown framework with a full set of capabilities A14 framework will need, such as
+
+39
+00:02:45,690 --> 00:02:50,370
+data binding state management, routing services and lots more learning.
+
+40
+00:02:50,370 --> 00:02:50,670
+And will.
+
+41
+00:02:50,670 --> 00:02:55,590
+I can take time and it won't come easy even to developers with a lot of experience in Web development.
+
+42
+00:02:56,400 --> 00:03:00,030
+React, on the other hand, is more libraries than a full feature framework.
+
+43
+00:03:00,420 --> 00:03:03,900
+It focuses on the user interface side and is great at it.
+
+44
+00:03:04,290 --> 00:03:07,920
+If other capabilities are needed than separate libraries should be used.
+
+45
+00:03:08,490 --> 00:03:14,010
+On the other side, react learning curve is much shorter and Web developers can get up to speed with
+
+46
+00:03:14,010 --> 00:03:18,510
+it in a matter of days, while angular training can take a few weeks, if not more so.
+
+47
+00:03:18,510 --> 00:03:24,210
+If you are looking for a one stop solution for all your web front needs and you have the time for training,
+
+48
+00:03:24,210 --> 00:03:25,260
+opt for angular.
+
+49
+00:03:25,320 --> 00:03:27,090
+Otherwise go for react.
+
+50
+00:03:28,530 --> 00:03:31,470
+OK, let's talk about mobile apps.
+
+51
+00:03:31,830 --> 00:03:36,240
+When designing mobile app, the first thing we need to do is to decide the development approach we are
+
+52
+00:03:36,240 --> 00:03:36,840
+going to use.
+
+53
+00:03:37,260 --> 00:03:43,920
+There are three main approaches for mobile app development, native hybrid and cross platform.
+
+54
+00:03:44,490 --> 00:03:49,230
+Basically, those approaches represent a trade off between development time versus capabilities and
+
+55
+00:03:49,230 --> 00:03:51,780
+your selection should be based on these factors.
+
+56
+00:03:52,560 --> 00:03:54,240
+Let's discuss these approaches.
+
+57
+00:03:55,560 --> 00:03:56,820
+Native apps as an answer.
+
+58
+00:03:56,820 --> 00:04:00,510
+Just use the native development platform for each mobile platform.
+
+59
+00:04:00,510 --> 00:04:06,240
+For example, native iPhone development can be done using objectivity or the swift language with the
+
+60
+00:04:06,630 --> 00:04:09,330
+development tool and using the iOS SDK.
+
+61
+00:04:09,750 --> 00:04:14,700
+Android apps, on the other hand, are developed mainly with Java using Android studio and the Android
+
+62
+00:04:14,700 --> 00:04:15,270
+SDK.
+
+63
+00:04:15,900 --> 00:04:17,790
+As you can see, AOS is native.
+
+64
+00:04:18,480 --> 00:04:23,730
+Environment is completely different from the Android one and you will have to have developers that expertise
+
+65
+00:04:23,730 --> 00:04:25,530
+in each one of those environments.
+
+66
+00:04:25,890 --> 00:04:31,700
+On the other hand, native of a full access to all the field capabilities, including camera, accelerometer,
+
+67
+00:04:31,710 --> 00:04:37,320
+Bluetooth, filesystem, text and more, you are not limited in any aspect and you can take advantage
+
+68
+00:04:37,320 --> 00:04:38,730
+of any feature you would like.
+
+69
+00:04:39,120 --> 00:04:43,860
+In addition, native apps are very responsive and will offer the best user experience.
+
+70
+00:04:44,430 --> 00:04:51,660
+Hybrid apps of the complete opposite of native apps happy to provide native rubber, usually with tools
+
+71
+00:04:51,660 --> 00:04:52,590
+such as a phone app.
+
+72
+00:04:52,830 --> 00:04:59,520
+And in it you will find a regular webpage complete with JavaScript and see if you can think of it as
+
+73
+00:04:59,520 --> 00:04:59,840
+Iglauer.
+
+74
+00:04:59,920 --> 00:05:05,020
+Fight Browsr with limited phone capabilities, but it's still a webpage and requires Internet connectivity,
+
+75
+00:05:06,070 --> 00:05:11,820
+accessing phone capabilities such as accelerometer or COMILLA can be a challenge without having to endure
+
+76
+00:05:11,860 --> 00:05:12,960
+a lot of limitations.
+
+77
+00:05:12,970 --> 00:05:19,150
+In addition, happy to provide inferior user experience compared to native apps in the graphics, performance
+
+78
+00:05:19,150 --> 00:05:19,840
+is limited.
+
+79
+00:05:20,470 --> 00:05:24,670
+In recent years, a new standard emerged called Progressive Web Apps, or Pittaway.
+
+80
+00:05:25,150 --> 00:05:30,550
+This standard allows up to behave much more like native apps with offline capabilities, improve the
+
+81
+00:05:30,550 --> 00:05:31,750
+hardware access and more.
+
+82
+00:05:32,170 --> 00:05:36,150
+The standard look quite promising and you should definitely keep an eye on it.
+
+83
+00:05:36,550 --> 00:05:38,170
+But it's still not mature enough.
+
+84
+00:05:38,500 --> 00:05:44,950
+Apple added support for Pittaway in iPhone only in U.S. relation with industry, and even in this version,
+
+85
+00:05:44,950 --> 00:05:47,730
+it's still limited and not on par with Android support.
+
+86
+00:05:48,070 --> 00:05:49,840
+So it's definitely worth looking into.
+
+87
+00:05:50,050 --> 00:05:51,790
+But perhaps too early to actually use.
+
+88
+00:05:51,910 --> 00:05:57,760
+The biggest advantage of hybrid lies in the development team is from the native wrapper, which do require
+
+89
+00:05:57,760 --> 00:05:58,570
+a bit of learning.
+
+90
+00:05:58,570 --> 00:06:00,730
+Everything else is the regular web development.
+
+91
+00:06:01,290 --> 00:06:05,500
+If your team knows how to develop web apps, they will know how to develop hybrid apps.
+
+92
+00:06:05,650 --> 00:06:11,740
+It's that easy in the middle between the native and hybrid apps we find across cross platform apps.
+
+93
+00:06:12,220 --> 00:06:14,230
+The cost platform approach works like this.
+
+94
+00:06:15,730 --> 00:06:20,980
+The development is done in a specialized environment not linked directly to any of the mobile platforms,
+
+95
+00:06:21,370 --> 00:06:22,960
+the leading growth platform environments.
+
+96
+00:06:22,960 --> 00:06:28,570
+Today, al-Samarie and React Native in summary, and you will develop in C Sharp using visual studio
+
+97
+00:06:28,570 --> 00:06:29,680
+while in real native.
+
+98
+00:06:29,680 --> 00:06:34,450
+The development is done with JavaScript using one of the many ideas supporting REAC native.
+
+99
+00:06:35,050 --> 00:06:39,970
+After the development is done, you compare the application and the result is the native up for the
+
+100
+00:06:39,970 --> 00:06:40,960
+selected platform.
+
+101
+00:06:41,200 --> 00:06:46,690
+You will be able to compensate for iOS and for Android and get native apps for both of them without
+
+102
+00:06:46,690 --> 00:06:48,910
+writing a single line of Java or objectives.
+
+103
+00:06:50,320 --> 00:06:52,210
+So pros of using this approach are clear.
+
+104
+00:06:52,210 --> 00:06:55,770
+We write the code once and it was on both platforms as native apps.
+
+105
+00:06:55,990 --> 00:06:56,840
+What are the cons?
+
+106
+00:06:57,040 --> 00:06:57,920
+There are a few.
+
+107
+00:06:58,700 --> 00:07:03,640
+First, there is usually a government supporting latent capabilities of the native operating system
+
+108
+00:07:03,640 --> 00:07:07,450
+and the cross platform tools always play catch up with the various mobile platforms.
+
+109
+00:07:07,960 --> 00:07:11,750
+In addition, cross platform apps do not work well with heavy graphics.
+
+110
+00:07:11,770 --> 00:07:14,770
+So if that is your plan, you will have to go to native apps.
+
+111
+00:07:15,700 --> 00:07:20,920
+Last but not least for some scenarios, you will still have to resort to native programming, especially
+
+112
+00:07:20,920 --> 00:07:22,490
+when accessing specific sensors.
+
+113
+00:07:22,840 --> 00:07:25,440
+So in this case, this is not your cost platform.
+
+114
+00:07:26,140 --> 00:07:30,790
+So let us summarize in this table, you can see the differences between the three approaches.
+
+115
+00:07:31,150 --> 00:07:34,890
+Use this table as a reference when selecting technologies for mobile apps.
+
+116
+00:07:35,110 --> 00:07:37,390
+I hope it will help you the way it helped me.
+
+117
+00:07:38,890 --> 00:07:43,080
+And now for the third and left front end up, which is a desktop.
+
+118
+00:07:43,360 --> 00:07:48,940
+Now, let's face it, if you are developing a desktop application which will run on a PC, most chances
+
+119
+00:07:48,940 --> 00:07:50,560
+are you are targeting Windows.
+
+120
+00:07:50,770 --> 00:07:55,050
+So I limit the discussion to Windows based desktops on Windows.
+
+121
+00:07:55,060 --> 00:08:04,600
+We have three options for desktop development windfarms F and you will Frome's is all this technology
+
+122
+00:08:04,600 --> 00:08:07,600
+introduced in 2001 together with dot net introduction.
+
+123
+00:08:07,930 --> 00:08:13,390
+It's similar in concept to older platforms such as the basics and is quite limited in its graphical
+
+124
+00:08:13,420 --> 00:08:14,170
+capabilities.
+
+125
+00:08:14,530 --> 00:08:18,010
+For example, try to implement rounded corners to a button.
+
+126
+00:08:18,010 --> 00:08:20,590
+It's possible, but oh boy, it's so hard.
+
+127
+00:08:21,280 --> 00:08:25,630
+On the other hand, developing in Wohlforth is quite easy and the a learning curve is short.
+
+128
+00:08:26,710 --> 00:08:32,169
+We have introduced in 2006 improved the situation dramatically.
+
+129
+00:08:32,350 --> 00:08:36,909
+It offers full control on the visuals and give complete freedom to visual designers.
+
+130
+00:08:36,909 --> 00:08:43,960
+You literally can do whatever you want, but it's always about it's much more complicated than windfalls.
+
+131
+00:08:44,410 --> 00:08:47,290
+In order to use WP, if you will have to learn new language.
+
+132
+00:08:47,290 --> 00:08:52,270
+Zemel, which similar to the email, functions as a markup language to the user interface.
+
+133
+00:08:52,690 --> 00:08:56,620
+Zemel is a very rich markup language and it's very easy to get lost in it.
+
+134
+00:08:57,010 --> 00:09:03,820
+It's even safe to say that an inexperienced developer can cause more harm than inexperienced, willful
+
+135
+00:09:03,820 --> 00:09:04,420
+developer.
+
+136
+00:09:06,100 --> 00:09:10,180
+Our last contender is GWP or Universal Windows Platform.
+
+137
+00:09:10,720 --> 00:09:17,110
+You WPEC effort done by Microsoft to unify all its screens like PC, Xbox, Windows Phone Service and
+
+138
+00:09:17,110 --> 00:09:19,690
+more to support a single UI platform.
+
+139
+00:09:20,120 --> 00:09:26,200
+The result of this effort is youwe which is quite similar to what was important differences.
+
+140
+00:09:26,800 --> 00:09:32,980
+First, it runs in a sandbox, meaning it does not have full access to all the operating system capabilities
+
+141
+00:09:33,250 --> 00:09:35,040
+similar to hybrid apps in mobile.
+
+142
+00:09:35,680 --> 00:09:39,460
+Second, as mentioned above, it runs on all windows with screen.
+
+143
+00:09:39,790 --> 00:09:43,780
+So if you want to develop an app for Windows and Xbox, that's the way to go.
+
+144
+00:09:44,800 --> 00:09:46,410
+Third, it's much less mature.
+
+145
+00:09:46,540 --> 00:09:51,460
+And so that summarizes the desktop alternatives.
+
+146
+00:09:51,460 --> 00:09:52,300
+In this table.
+
+147
+00:09:52,300 --> 00:09:56,800
+You can see the summary of the three alternatives you talked about with the main differences between
+
+148
+00:09:56,800 --> 00:09:57,010
+them.
+
+149
+00:09:57,310 --> 00:09:58,750
+As usual, you invited.
+
+150
+00:09:58,850 --> 00:10:01,300
+We use this table as a reference for your future system.
+
+151
+00:10:01,410 --> 00:10:05,030
+We walk on and now let's elect data technology.
+

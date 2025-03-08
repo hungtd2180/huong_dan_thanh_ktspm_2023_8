@@ -1,0 +1,80 @@
+1
+00:00:00,170 --> 00:00:03,190
+Desktop applications are the poor boys of the app world.
+
+2
+00:00:03,200 --> 00:00:06,360
+In a world where web APIs and clouds are all the rage.
+
+3
+00:00:06,380 --> 00:00:10,010
+Almost nobody talks about desktop apps and for good reason.
+
+4
+00:00:10,430 --> 00:00:13,580
+Desktop apps are applications that run mainly on the PC.
+
+5
+00:00:13,820 --> 00:00:19,610
+It's important to differentiate it from rich client apps that access Web API and are only a thin visual
+
+6
+00:00:19,610 --> 00:00:21,080
+layer above the data.
+
+7
+00:00:21,110 --> 00:00:26,330
+I'm talking here about an application that has all its resources, including logic and data on the local
+
+8
+00:00:26,330 --> 00:00:26,660
+PC.
+
+9
+00:00:27,560 --> 00:00:33,110
+This application might be using the internet for some arbitrary tasks, such as validating license or
+
+10
+00:00:33,110 --> 00:00:37,430
+sending activity logs, but it will still be fully functional when offline.
+
+11
+00:00:37,820 --> 00:00:42,200
+Another aspect of desktop application is its UI or user interface.
+
+12
+00:00:42,290 --> 00:00:47,240
+Desktop apps are targeted for end users and they will usually have a great user interface.
+
+13
+00:00:47,910 --> 00:00:52,980
+One good example of such an application is Microsoft Word, which works with or without an active Internet
+
+14
+00:00:52,980 --> 00:00:53,440
+connection.
+
+15
+00:00:53,460 --> 00:00:59,070
+Of course, you will lose some capabilities when offline, such as cloud connectivity, but it is still
+
+16
+00:00:59,070 --> 00:01:05,370
+fully functional this way due to massive use of cloud computing and the ubiquity of internet connectivity.
+
+17
+00:01:05,400 --> 00:01:07,830
+Desktop apps popularity is dwindling.
+
+18
+00:01:08,370 --> 00:01:15,930
+You will use desktop apps mainly for user centric actions such as word processing or calculations and
+
+19
+00:01:15,930 --> 00:01:17,090
+heavy gaming.
+
+20
+00:01:17,100 --> 00:01:22,500
+But again, you can spend a lifetime as an architect without designing desktop apps even once.
+

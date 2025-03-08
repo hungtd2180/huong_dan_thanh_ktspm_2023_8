@@ -1,0 +1,376 @@
+1
+00:00:00,290 --> 00:00:04,610
+So we left the previous lecture with four services which look like this.
+
+2
+00:00:04,880 --> 00:00:09,650
+And now we need to decide what kind of messaging is the right one between each of them.
+
+3
+00:00:10,010 --> 00:00:12,080
+Let's begin with the receiver.
+
+4
+00:00:12,920 --> 00:00:17,380
+The receiver, as its name implies, receives the messages from the Iot devices.
+
+5
+00:00:17,390 --> 00:00:23,410
+In this case, the messaging method is actually dictated by the way the various devices send their messages
+
+6
+00:00:23,420 --> 00:00:25,250
+to find out how they do it.
+
+7
+00:00:25,280 --> 00:00:28,310
+We will go back to the client after a few phone calls.
+
+8
+00:00:28,310 --> 00:00:30,560
+She comes back to us with the answer.
+
+9
+00:00:30,590 --> 00:00:35,510
+The devices communicate via Http, using the post verb to send the update.
+
+10
+00:00:35,630 --> 00:00:37,040
+Well, that's great.
+
+11
+00:00:37,070 --> 00:00:43,400
+It means our receiver just became a standard run of the mill web API application with rest API as its
+
+12
+00:00:43,400 --> 00:00:44,210
+interface.
+
+13
+00:00:44,420 --> 00:00:45,170
+Great.
+
+14
+00:00:45,200 --> 00:00:47,180
+Let's move on to the handler.
+
+15
+00:00:48,050 --> 00:00:51,300
+Now here things begin to get a little bit complicated.
+
+16
+00:00:51,320 --> 00:00:57,260
+As you probably remember, the handlers role is to validate and parse the messages received by the receiver.
+
+17
+00:00:57,290 --> 00:01:03,000
+It's only reason for existence is to offload the tasks from the receiver, which should focus on receiving
+
+18
+00:01:03,000 --> 00:01:05,099
+the messages and releasing the requests.
+
+19
+00:01:05,310 --> 00:01:10,380
+After the handler handles the message, it should store it in the data store for later use.
+
+20
+00:01:10,410 --> 00:01:14,460
+Now what is the best messaging method between the receiver and the handler?
+
+21
+00:01:14,730 --> 00:01:18,030
+Well, it looks like the best mechanism here is Q.
+
+22
+00:01:18,300 --> 00:01:23,970
+We obviously want the messages to be processed in the order they were received, which is a classic
+
+23
+00:01:23,970 --> 00:01:28,980
+feature of Q and we like the reliability and scaling such a mechanism offers.
+
+24
+00:01:30,000 --> 00:01:35,580
+If we would use rest API between the receiver and the handler, the receiver will have a lot of work
+
+25
+00:01:35,580 --> 00:01:41,460
+to do since it will wait for each request to the handler until it is done and we'll have to handle errors
+
+26
+00:01:41,460 --> 00:01:42,200
+and glitches.
+
+27
+00:01:42,210 --> 00:01:45,930
+This will hurt the performance which is so important for the receiver.
+
+28
+00:01:46,320 --> 00:01:49,720
+Using Q we basically have a fire and forget mechanism.
+
+29
+00:01:49,740 --> 00:01:53,190
+The receiver puts the message in the queue and forgets about it.
+
+30
+00:01:53,220 --> 00:01:55,830
+This is exactly what we want in this case.
+
+31
+00:01:56,340 --> 00:01:56,970
+Great.
+
+32
+00:01:56,970 --> 00:02:01,110
+So we have a rest API for the receiver and Q for the handler.
+
+33
+00:02:01,230 --> 00:02:02,370
+What about info?
+
+34
+00:02:03,130 --> 00:02:04,630
+Well, that's an easy one.
+
+35
+00:02:04,660 --> 00:02:07,390
+Let's see who is going to access info.
+
+36
+00:02:07,600 --> 00:02:10,340
+The answer is of course, end users.
+
+37
+00:02:10,360 --> 00:02:11,900
+How are they going to do that?
+
+38
+00:02:11,920 --> 00:02:15,070
+Well, obviously via a web browser.
+
+39
+00:02:15,100 --> 00:02:17,260
+How web browsers access servers.
+
+40
+00:02:17,260 --> 00:02:24,460
+Of course, using the Http protocol and the de facto standard for accessing Http servers today is via
+
+41
+00:02:24,460 --> 00:02:25,270
+rest API.
+
+42
+00:02:25,870 --> 00:02:30,010
+So the info will implement rest API similar to the receivers.
+
+43
+00:02:30,160 --> 00:02:33,580
+Last but not least, the logging service.
+
+44
+00:02:34,120 --> 00:02:40,540
+Remember, we need the logs produced by other services to be sent to the logging service for aggregation.
+
+45
+00:02:40,570 --> 00:02:41,860
+How can we do that?
+
+46
+00:02:42,160 --> 00:02:46,540
+Well, instinctively we might think the logging service should expose rest API.
+
+47
+00:02:46,570 --> 00:02:50,600
+So the other services can simply access it sending its log records.
+
+48
+00:02:50,620 --> 00:02:52,360
+But that's not a good idea.
+
+49
+00:02:52,390 --> 00:02:58,060
+Logs tend to be quite massive and we can expect the various services to produce a huge number of log
+
+50
+00:02:58,060 --> 00:02:59,200
+records every hour.
+
+51
+00:02:59,230 --> 00:03:03,810
+Now, if for every such records the services will issue a rest API call.
+
+52
+00:03:03,830 --> 00:03:06,380
+This will hurt the performance badly.
+
+53
+00:03:06,410 --> 00:03:11,750
+We need a solution that will enable us to send large amounts of records to the logging service without
+
+54
+00:03:11,750 --> 00:03:13,220
+impacting the performance.
+
+55
+00:03:13,520 --> 00:03:17,000
+Now, one of the common solutions to this problem is using files.
+
+56
+00:03:17,030 --> 00:03:22,670
+In this solution, the various services write the log records to a file and the logging service pulls
+
+57
+00:03:22,670 --> 00:03:25,040
+these files and aggregates the contents.
+
+58
+00:03:25,280 --> 00:03:29,260
+So this is a very popular solution, but it has two major problems.
+
+59
+00:03:29,270 --> 00:03:32,720
+One, it won't work in the cloud environment.
+
+60
+00:03:32,990 --> 00:03:37,670
+This course is not about cloud applications, but it's still important to be aware of what's possible
+
+61
+00:03:37,670 --> 00:03:39,250
+and not possible in the cloud.
+
+62
+00:03:39,260 --> 00:03:42,980
+And writing to files in a cloud application is a big no no.
+
+63
+00:03:43,190 --> 00:03:48,800
+The second problem is that files have the tendency to get locked, to be scanned and removed by antivirus
+
+64
+00:03:48,800 --> 00:03:52,640
+software or just simply be deleted by careless system admins.
+
+65
+00:03:52,670 --> 00:03:57,710
+In short, file is a highly uncontrolled resource which should better be avoided.
+
+66
+00:03:57,740 --> 00:03:59,570
+Okay, so what's left?
+
+67
+00:03:59,720 --> 00:04:01,910
+There are actually two options left.
+
+68
+00:04:01,940 --> 00:04:07,340
+First, write the logs to a database and let the logging service queries the database and handle the
+
+69
+00:04:07,340 --> 00:04:08,270
+log records.
+
+70
+00:04:08,510 --> 00:04:15,020
+Second option Use the various services will add the records to the queue and the logging service will
+
+71
+00:04:15,020 --> 00:04:17,120
+pull the records from the queue and handle them.
+
+72
+00:04:17,329 --> 00:04:18,540
+Which one is better?
+
+73
+00:04:18,560 --> 00:04:22,010
+Well, in this case my recommendation will be to use a queue.
+
+74
+00:04:22,040 --> 00:04:26,780
+The reason is that using database in this case is actually forcing it to behave like a queue.
+
+75
+00:04:26,810 --> 00:04:32,210
+The database is only a temporary storage for the records, and every record that will be retrieved will
+
+76
+00:04:32,210 --> 00:04:33,800
+have to be deleted immediately.
+
+77
+00:04:33,830 --> 00:04:35,060
+Just like with queue.
+
+78
+00:04:35,360 --> 00:04:40,910
+So instead of reinventing the wheel, let's just use the queue mechanism and get the most effective
+
+79
+00:04:40,910 --> 00:04:41,600
+messaging.
+
+80
+00:04:42,350 --> 00:04:44,060
+So here we are.
+
+81
+00:04:44,210 --> 00:04:49,250
+We have defined the various messaging mechanisms of the system and we now have a full picture of the
+
+82
+00:04:49,250 --> 00:04:50,330
+system's architecture.
+
+83
+00:04:50,360 --> 00:04:54,020
+We map the components and reached the conclusion that we need four of them.
+
+84
+00:04:54,050 --> 00:04:57,350
+We decided what are the messaging methods between these services?
+
+85
+00:04:57,350 --> 00:05:01,670
+And we now understand what are the decision factors for each of the messaging mechanisms.
+
+86
+00:05:01,820 --> 00:05:04,720
+We can now move on to the components drill down.
+
+87
+00:05:04,730 --> 00:05:07,460
+But before we do that, a word of warning.
+
+88
+00:05:07,700 --> 00:05:13,640
+Note that before recommending a client to use queue, you have to make sure the client it knows how
+
+89
+00:05:13,640 --> 00:05:16,270
+to set up, use and maintain the Q engine.
+
+90
+00:05:16,280 --> 00:05:21,980
+If the it has no idea how to use it, then it might be a good idea to go for a less elegant solution,
+
+91
+00:05:21,980 --> 00:05:24,590
+but one that has more chance to succeed.
+
+92
+00:05:25,040 --> 00:05:26,410
+Okay, we are done.
+
+93
+00:05:26,420 --> 00:05:28,590
+Let's drill down into the first service.
+
+94
+00:05:28,610 --> 00:05:29,990
+The logging service.
+

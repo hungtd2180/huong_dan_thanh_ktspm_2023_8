@@ -1,0 +1,88 @@
+1
+00:00:00,200 --> 00:00:03,440
+Webops có lẽ là loại ứng dụng phổ biến nhất hiện nay.
+
+2
+00:00:03,440 --> 00:00:05,270
+Thứ hai, có lẽ chỉ áp dụng cho API web.
+
+3
+00:00:05,750 --> 00:00:11,120
+Ứng dụng web, hay còn gọi là trang web, về cơ bản là cách thức Internet hoạt động kể từ khi ra đời.
+
+4
+00:00:11,510 --> 00:00:12,410
+Với ứng dụng web.
+
+5
+00:00:12,410 --> 00:00:16,370
+Có một máy chủ web, thường là nhiều hơn một, và một trình duyệt web.
+
+6
+00:00:16,670 --> 00:00:22,190
+Hai giao thức này giao tiếp với nhau thông qua giao thức Http, mặc dù các giao thức khác cũng có thể được sử dụng,
+
+7
+00:00:22,220 --> 00:00:26,540
+Trình duyệt gửi yêu cầu Http đến máy chủ để yêu cầu tài nguyên.
+
+8
+00:00:26,690 --> 00:00:32,630
+Tài nguyên trong trường hợp này là một trang HTML được trả về trình duyệt, sau đó trình duyệt sẽ hiển thị
+
+9
+00:00:32,630 --> 00:00:34,010
+dành cho người dùng cuối.
+
+10
+00:00:34,190 --> 00:00:40,160
+Hầu như luôn luôn, trang HTML sẽ sử dụng mã JavaScript để triển khai logic trong trình duyệt và CSS
+
+11
+00:00:40,160 --> 00:00:42,920
+các tập tin để thiết kế hình ảnh cho trang.
+
+12
+00:00:42,920 --> 00:00:49,520
+Ứng dụng web phù hợp nhất với các hệ thống yêu cầu giao diện người dùng để người dùng cuối thực hiện các hành động.
+
+13
+00:00:49,520 --> 00:00:55,460
+Nghĩa là người dùng là người đưa ra yêu cầu thực hiện một việc gì đó như xem thứ tự, lưu dữ liệu tên người dùng
+
+14
+00:00:55,460 --> 00:01:03,300
+và như vậy trên quy mô lớn với số lượng lớn người dùng và nhiều dữ liệu, hành động tập trung ngắn hạn trái ngược với
+
+15
+00:01:03,300 --> 00:01:04,739
+cho các tiến trình chạy lâu dài.
+
+16
+00:01:04,739 --> 00:01:10,350
+Ví dụ, các ứng dụng web không phù hợp với một quy trình cần xử lý hàng tỷ số và tạo ra
+
+17
+00:01:10,350 --> 00:01:11,370
+trí tuệ kinh doanh.
+
+18
+00:01:11,370 --> 00:01:14,370
+Đối với điều này, còn có nhiều loại ứng dụng khác.
+
+19
+00:01:15,170 --> 00:01:20,420
+Như chúng ta đã thảo luận trước đó, các ứng dụng Web hoạt động theo mô hình phản hồi yêu cầu, có lẽ là mô hình quan trọng nhất
+
+20
+00:01:20,420 --> 00:01:21,310
+khía cạnh của chúng.
+
+21
+00:01:21,320 --> 00:01:26,420
+Theo nguyên tắc chung, nếu hệ thống bạn đang làm việc có thể được mô tả như một ứng dụng yêu cầu phản hồi,
+
+22
+00:01:26,420 --> 00:01:28,790
+thì có lẽ bạn đang xem một ứng dụng web.
+

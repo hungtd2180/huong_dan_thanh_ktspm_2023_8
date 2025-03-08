@@ -1,0 +1,320 @@
+1
+00:00:00,260 --> 00:00:03,080
+So what are we going to talk about in this course?
+
+2
+00:00:03,350 --> 00:00:06,540
+Well, we are going to cover a lot of materials.
+
+3
+00:00:06,560 --> 00:00:10,250
+First is the welcome section, which we are in right now.
+
+4
+00:00:10,760 --> 00:00:13,910
+Then we'll talk about the definition of a software architect.
+
+5
+00:00:13,910 --> 00:00:16,880
+As you will see, there are several types of architect.
+
+6
+00:00:16,910 --> 00:00:23,030
+We will describe some of them and then focus on the types that really interest us, the software architect.
+
+7
+00:00:24,080 --> 00:00:29,360
+Then we will discuss what is perhaps the biggest change a software architect should do in order to bring
+
+8
+00:00:29,360 --> 00:00:31,400
+the maximum benefit to their organization.
+
+9
+00:00:31,430 --> 00:00:34,940
+Adopt a business mindset instead of a technological one.
+
+10
+00:00:35,060 --> 00:00:39,770
+We will talk about the meaning of this mindset and why it's so important for the architect.
+
+11
+00:00:40,460 --> 00:00:44,140
+The fourth section in this course outlines the architectural process.
+
+12
+00:00:44,150 --> 00:00:49,910
+What are the actual steps the architect should take in order to build a robust yet practical architecture
+
+13
+00:00:49,910 --> 00:00:52,010
+for the system she is working on?
+
+14
+00:00:52,760 --> 00:00:58,430
+The next sections deep dive into this process and detail the specifics of each step.
+
+15
+00:00:59,180 --> 00:01:04,620
+The working with System Requirements section talks about the importance of fully understanding the system
+
+16
+00:01:04,620 --> 00:01:09,270
+requirements and introduces us to the concept of non-functional requirements.
+
+17
+00:01:09,480 --> 00:01:14,430
+After we have discussed the requirements, we will turn our attention to the application itself.
+
+18
+00:01:16,270 --> 00:01:20,080
+The first thing an architect should do is define the type of the application.
+
+19
+00:01:20,080 --> 00:01:25,240
+And in this section we will explore the various types of mainstream application types and what are the
+
+20
+00:01:25,240 --> 00:01:27,160
+main attributes of each type.
+
+21
+00:01:27,730 --> 00:01:32,320
+After we have decided on the application type, it's time to select the technology stack.
+
+22
+00:01:32,350 --> 00:01:37,720
+In this section, we will discuss the various considerations for selecting technology stack and explore
+
+23
+00:01:37,720 --> 00:01:42,220
+various implementation options for front end, Back end and data store.
+
+24
+00:01:42,550 --> 00:01:47,110
+Having selected the technology stack, it's time to start talking about the architecture.
+
+25
+00:01:47,140 --> 00:01:48,280
+But wait.
+
+26
+00:01:48,310 --> 00:01:53,890
+Before discussing architecture, we need to meet a set of capabilities that will help us design an architecture
+
+27
+00:01:53,890 --> 00:01:56,740
+that fulfills the non-functional requirements.
+
+28
+00:01:56,740 --> 00:02:02,650
+And in order to fully understand the non-functional requirements, we will meet the style highlights.
+
+29
+00:02:02,680 --> 00:02:08,050
+No, they are not a family of weirdos, but a set of non-functional requirements every architect should
+
+30
+00:02:08,050 --> 00:02:12,520
+know about and make sure her architecture is well suited for them.
+
+31
+00:02:13,840 --> 00:02:17,590
+And now it's time to start looking at the components of the applications.
+
+32
+00:02:17,620 --> 00:02:22,780
+Components are the building blocks of almost every application, and they must be designed correctly
+
+33
+00:02:22,780 --> 00:02:26,890
+in order to ensure the application is fast, efficient and easy to maintain.
+
+34
+00:02:27,130 --> 00:02:31,240
+In this section, we will deep dive into the attributes of a well-designed component.
+
+35
+00:02:31,270 --> 00:02:37,120
+Note This is going to be a little bit low level, but it's a must for every architect to be able to
+
+36
+00:02:37,120 --> 00:02:39,310
+look at the code without fainting.
+
+37
+00:02:40,740 --> 00:02:43,560
+The next section is an introduction to design patterns.
+
+38
+00:02:43,560 --> 00:02:48,450
+You probably heard of design patterns already, but even if not, don't worry, we will discuss the
+
+39
+00:02:48,450 --> 00:02:51,540
+idea behind the design patterns and delve into some of them.
+
+40
+00:02:53,080 --> 00:02:58,420
+Having talked about the micro level of the system, it's time to take a step back and look at the macro
+
+41
+00:02:58,420 --> 00:03:00,700
+level as the system as a whole.
+
+42
+00:03:00,730 --> 00:03:06,340
+In order for a system to be reliable, fast, secure and easy to maintain, it's important to take into
+
+43
+00:03:06,340 --> 00:03:09,490
+consideration the various attributes of a well-designed system.
+
+44
+00:03:09,520 --> 00:03:14,050
+We will discuss those attributes and understand how they affect the architecture.
+
+45
+00:03:14,140 --> 00:03:20,410
+Every seasoned architect knows that architectural decisions are rarely made on a pure technical basis.
+
+46
+00:03:20,440 --> 00:03:24,820
+There are always other considerations and constraints that must be taken into account.
+
+47
+00:03:25,030 --> 00:03:29,980
+In the next section, we will explore the most common constraints and see how they might affect the
+
+48
+00:03:29,980 --> 00:03:30,910
+architecture.
+
+49
+00:03:30,910 --> 00:03:33,340
+And then drum, please.
+
+50
+00:03:33,370 --> 00:03:38,860
+We arrive to what is perhaps the most important section in this course, the architecture document.
+
+51
+00:03:39,460 --> 00:03:42,610
+This document is a culmination of the architectural process.
+
+52
+00:03:42,640 --> 00:03:47,890
+It is the product of the requirements technology, stack components, architecture systems, architecture,
+
+53
+00:03:47,890 --> 00:03:53,150
+external considerations, coffee saturated meetings and long silent writing sessions.
+
+54
+00:03:53,780 --> 00:03:58,880
+The document describes the architecture designed for the system and contains everything the developers
+
+55
+00:03:58,880 --> 00:04:02,570
+and team leaders need to know in order to start developing the system.
+
+56
+00:04:02,780 --> 00:04:08,240
+In this section, we will go through the documents, goal, audience and structure and discuss the content
+
+57
+00:04:08,240 --> 00:04:09,950
+of each section in the document.
+
+58
+00:04:09,980 --> 00:04:14,570
+After we have talked about the document, it's time to put everything we talked about to test.
+
+59
+00:04:15,680 --> 00:04:20,690
+In the case study section, we will discuss a system we need to design for a fictional Iot company.
+
+60
+00:04:20,720 --> 00:04:25,310
+We will go together through all the steps we talked about, understand the requirements, decide on
+
+61
+00:04:25,310 --> 00:04:30,770
+the technology stack map and design the various components, and talk about the architecture document
+
+62
+00:04:30,770 --> 00:04:31,640
+structure.
+
+63
+00:04:31,820 --> 00:04:37,070
+At the end of this section, you will find a very special bonus, an architecture document complete
+
+64
+00:04:37,070 --> 00:04:41,450
+with all the sections discussed in this course ready for you to download and use.
+
+65
+00:04:41,480 --> 00:04:46,460
+You can use it as a template for your future documents or as a reference for your own document.
+
+66
+00:04:46,460 --> 00:04:48,500
+But anyway, it's yours to use.
+
+67
+00:04:48,530 --> 00:04:49,490
+Enjoy it.
+
+68
+00:04:51,370 --> 00:04:56,740
+The software architecture is a moving, vibrant world, and there are always new trends and advances.
+
+69
+00:04:56,770 --> 00:05:04,000
+The next section explores some advanced architectural concepts, such as microservices and event sourcing.
+
+70
+00:05:04,030 --> 00:05:06,400
+Don't worry if you don't know what these mean.
+
+71
+00:05:06,400 --> 00:05:07,480
+I'll explain it all.
+
+72
+00:05:09,370 --> 00:05:13,570
+And the last, but not the least of this course section deals with soft skills.
+
+73
+00:05:13,960 --> 00:05:16,360
+A good architect must practice her soft skills.
+
+74
+00:05:16,360 --> 00:05:20,230
+You need to know how to speak to people, how to listen, what to do with criticism.
+
+75
+00:05:20,230 --> 00:05:21,910
+And you will get a lot of this.
+
+76
+00:05:21,910 --> 00:05:24,760
+How to deal with organizational politics and more.
+
+77
+00:05:24,790 --> 00:05:30,370
+The Soft Skills section deals with those topics, and I encourage you to pay close attention to it.
+
+78
+00:05:30,400 --> 00:05:33,850
+This might be exactly what will make you a great architect.
+
+79
+00:05:34,430 --> 00:05:38,790
+And after all this, we will conclude and reflect on what we have learned together.
+
+80
+00:05:38,810 --> 00:05:44,630
+So brace yourself for the fascinating world of software architecture, and let's go.
+

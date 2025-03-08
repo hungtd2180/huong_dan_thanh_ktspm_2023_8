@@ -1,0 +1,156 @@
+1
+00:00:00,350 --> 00:00:01,810
+Hãy tưởng tượng điều này.
+
+2
+00:00:01,819 --> 00:00:07,790
+Bây giờ là 2 giờ sáng. Bạn đang ngủ trên chiếc giường êm ái, thoải mái của mình, mơ về kỳ lân và cầu vồng.
+
+3
+00:00:07,820 --> 00:00:10,400
+Đột nhiên điện thoại reo.
+
+4
+00:00:10,640 --> 00:00:11,500
+Bối rối.
+
+5
+00:00:11,510 --> 00:00:14,630
+Bạn ngồi dậy, mắt mờ đi và trả lời điện thoại.
+
+6
+00:00:14,660 --> 00:00:19,460
+Ông chủ cuồng loạn của bạn đang ở phía bên kia la hét về một vấn đề với phần mềm quan trọng của nhiệm vụ
+
+7
+00:00:19,490 --> 00:00:24,590
+bạn vừa thiết kế và ra lệnh cho bạn đến ngay văn phòng và giúp các nhà phát triển
+
+8
+00:00:24,590 --> 00:00:26,570
+những người không biết chuyện gì đang xảy ra.
+
+9
+00:00:26,750 --> 00:00:30,230
+Từ thời điểm này, có hai cốt truyện thay thế.
+
+10
+00:00:30,260 --> 00:00:35,720
+Lúc đầu bạn vội vã mặc quần áo, quên đánh răng, ăn vội, lái xe như
+
+11
+00:00:35,720 --> 00:00:41,630
+điên rồ, gặp gỡ các nhà phát triển và dành ba hội trường rất căng thẳng để xem xét mã cho đến khi cuối cùng bạn
+
+12
+00:00:41,660 --> 00:00:45,560
+tìm ra thủ phạm, tình cờ lại là một tham số null mà không ai mong đợi.
+
+13
+00:00:45,800 --> 00:00:49,760
+Trong cốt truyện thứ hai, bạn nói với ông chủ của mình: Ồ, hãy nhìn vào nhật ký.
+
+14
+00:00:49,790 --> 00:00:53,060
+Họ đang ở trên ổ đĩa mạng đó và lại ngủ tiếp.
+
+15
+00:00:53,480 --> 00:00:56,990
+Việc ghi nhật ký rất quan trọng, thậm chí rất quan trọng.
+
+16
+00:00:57,020 --> 00:01:03,030
+Trên thực tế, điều này quan trọng đến mức đây là thành phần đầu tiên tôi luôn thiết kế khi làm việc trên một hệ thống mới.
+
+17
+00:01:03,030 --> 00:01:08,850
+Cho dù mã có đơn giản đến đâu hay hệ thống có cấp bách đến đâu, đừng bao giờ bỏ qua việc ghi nhật ký.
+
+18
+00:01:09,330 --> 00:01:14,130
+Một hệ thống tốt sử dụng chức năng ghi nhật ký vì hai mục đích: theo dõi lỗi.
+
+19
+00:01:14,130 --> 00:01:19,560
+Nếu có bất kỳ ngoại lệ nào trong quá trình hoạt động của hệ thống, hệ thống sẽ ghi những ngoại lệ đó vào
+
+20
+00:01:19,560 --> 00:01:24,600
+nhật ký, đầy đủ tất cả các chi tiết có liên quan, theo dõi ngăn xếp thông báo lỗi đầy đủ, các ngoại lệ bên trong,
+
+21
+00:01:24,600 --> 00:01:26,340
+thông tin chi tiết của người dùng, v.v.
+
+22
+00:01:27,090 --> 00:01:31,440
+Bằng cách này, khi có ngoại lệ xảy ra, chúng luôn xảy ra.
+
+23
+00:01:31,470 --> 00:01:35,220
+Cuối cùng bạn sẽ có điểm khởi đầu tuyệt vời để điều tra ngoại lệ.
+
+24
+00:01:35,250 --> 00:01:40,770
+Bạn sẽ biết nơi để tìm thông tin chi tiết và hiểu ngay nguyên nhân gây ra ngoại lệ.
+
+25
+00:01:41,010 --> 00:01:43,410
+Mục đích thứ hai là thu thập dữ liệu.
+
+26
+00:01:43,680 --> 00:01:49,200
+Nhật ký không chỉ được sử dụng cho các trường hợp ngoại lệ mà còn để thu thập và lưu trữ dữ liệu hoạt động trên hệ thống.
+
+27
+00:01:49,200 --> 00:01:54,960
+Ví dụ, khi sử dụng chức năng ghi nhật ký, bạn có thể tìm ra mô hình nào được người dùng truy cập nhiều nhất và mô hình nào
+
+28
+00:01:54,960 --> 00:01:55,910
+ít phổ biến hơn.
+
+29
+00:01:55,920 --> 00:02:01,860
+Bạn có thể lưu trữ dữ liệu hiệu suất và tìm ra phương pháp nào hoạt động kém và phương pháp nào hoạt động cực kỳ hiệu quả.
+
+30
+00:02:01,860 --> 00:02:02,520
+nhanh.
+
+31
+00:02:02,550 --> 00:02:07,710
+Trên thực tế, nếu việc ghi nhật ký thực sự lớn, bạn có thể tái tạo luồng người dùng cụ thể trong suốt
+
+32
+00:02:07,710 --> 00:02:09,960
+hệ thống và hiểu được hành vi của anh ấy.
+
+33
+00:02:09,990 --> 00:02:12,690
+Đây là dữ liệu vô giá cho bất kỳ hệ thống nào.
+
+34
+00:02:12,960 --> 00:02:16,790
+Lưu ý rằng việc bạn sẽ lưu trữ nhật ký ở đâu không thực sự quan trọng.
+
+35
+00:02:16,800 --> 00:02:20,730
+Nó có thể nằm trong các tập tin, trong cơ sở dữ liệu hoặc trong nhật ký sự kiện.
+
+36
+00:02:20,730 --> 00:02:25,110
+Bất kỳ nơi nào cũng tốt miễn là bạn thực sự lưu trữ dữ liệu và có thể truy cập vào đó.
+
+37
+00:02:25,200 --> 00:02:28,230
+Hiện nay trên thị trường có rất nhiều công cụ phân tích nhật ký.
+
+38
+00:02:28,260 --> 00:02:33,660
+Kibana là một trong những công cụ phổ biến nhất và tôi khuyên bạn nên sử dụng bất kỳ công cụ nào bạn muốn miễn là bạn tiếp tục đăng nhập
+
+39
+00:02:33,660 --> 00:02:35,280
+ứng dụng của bạn thật tệ.
+

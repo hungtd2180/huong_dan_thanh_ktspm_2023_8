@@ -1,0 +1,40 @@
+1
+00:00:00,290 --> 00:00:05,120
+Giai đoạn tiếp theo của quá trình kiến trúc là lập bản đồ các thành phần khác nhau của hệ thống.
+
+2
+00:00:05,510 --> 00:00:08,000
+Các thành phần là những bộ phận chuyển động của hệ thống.
+
+3
+00:00:08,000 --> 00:00:13,100
+Chúng đại diện cho nhiều nhiệm vụ khác nhau của hệ thống, cả chức năng lẫn phi chức năng.
+
+4
+00:00:14,030 --> 00:00:16,280
+Bản đồ thành phần có hai mục đích.
+
+5
+00:00:16,309 --> 00:00:19,590
+Nó giúp bạn hiểu hệ thống và các bộ phận khác nhau của nó.
+
+6
+00:00:19,610 --> 00:00:25,190
+Đây là một cách tuyệt vời để truyền đạt cho khách hàng hiểu biết của bạn về hệ thống, do đó đảm bảo rằng bạn
+
+7
+00:00:25,190 --> 00:00:26,570
+không thiếu thứ gì cả.
+
+8
+00:00:26,870 --> 00:00:30,610
+Lưu ý rằng bản đồ thành phần hoàn toàn không mang tính kỹ thuật.
+
+9
+00:00:30,620 --> 00:00:34,690
+Bạn vẫn chưa quyết định được nền tảng, công cụ phát triển và loại cơ sở dữ liệu.
+
+10
+00:00:34,700 --> 00:00:38,570
+Đây chỉ là bản đồ hiển thị các khả năng khác nhau của hệ thống.
+

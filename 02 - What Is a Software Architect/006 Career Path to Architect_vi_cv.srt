@@ -1,0 +1,167 @@
+1
+00:00:00,740 --> 00:00:04,220
+Vậy con đường sự nghiệp của kiến ​​trúc sư phần mềm là gì?
+
+2
+00:00:04,250 --> 00:00:08,060
+Bạn phải trải qua những bước nào để được coi là một kiến ​​trúc sư?
+
+3
+00:00:08,330 --> 00:00:14,510
+Theo kinh nghiệm của bản thân và sau khi nói chuyện với hàng trăm kiến ​​trúc sư, yếu tố chính ở đây là kinh nghiệm.
+
+4
+00:00:14,810 --> 00:00:19,790
+Vì không có bằng cấp chính thức hoặc khóa học nào đủ điều kiện để bạn trở thành kiến ​​trúc sư, nên yếu tố chính là
+
+5
+00:00:19,790 --> 00:00:24,690
+các nhân viên tiềm năng sẽ tìm kiếm kinh nghiệm, tốt nhất là trong lĩnh vực công nghệ.
+
+6
+00:00:24,710 --> 00:00:30,530
+Ngoài ra, bạn càng đảm nhiệm vai trò công nghệ cấp cao nhất thì bạn càng có nhiều cơ hội trở thành kiến ​​trúc sư.
+
+7
+00:00:30,800 --> 00:00:33,300
+Hãy cùng xem một số ví dụ về lộ trình sự nghiệp.
+
+8
+00:00:33,320 --> 00:00:37,070
+Tất cả các ví dụ đều giả định rằng bạn đã bắt đầu với tư cách là nhà phát triển cho khóa học này.
+
+9
+00:00:37,070 --> 00:00:38,930
+Bạn đã làm gì trước đó không quan trọng.
+
+10
+00:00:40,180 --> 00:00:44,380
+Đây là con đường sự nghiệp đầu tiên của chúng ta, đi thẳng từ nhà phát triển đến kiến ​​trúc sư.
+
+11
+00:00:44,380 --> 00:00:48,670
+Đây không phải là con đường phổ biến và thường đòi hỏi phải đáp ứng hai điều kiện.
+
+12
+00:00:49,210 --> 00:00:51,550
+Bạn có nhiều kinh nghiệm làm nhà phát triển.
+
+13
+00:00:51,550 --> 00:00:56,560
+Chắc chắn là không dưới ba năm và công ty của bạn khá nhỏ.
+
+14
+00:00:56,950 --> 00:01:01,600
+Tôi thấy con đường này thường xảy ra ở các công ty khởi nghiệp, nơi người sáng lập kỹ thuật thường hoạt động như
+
+15
+00:01:01,600 --> 00:01:05,920
+một nhà phát triển được thăng chức lên kiến ​​trúc sư khi có nhiều nhà phát triển được tuyển dụng.
+
+16
+00:01:07,590 --> 00:01:09,600
+Con đường tiếp theo là con đường phổ biến nhất.
+
+17
+00:01:09,600 --> 00:01:10,490
+Trong con đường này.
+
+18
+00:01:10,500 --> 00:01:14,910
+Một nhà phát triển được thăng chức lên trưởng nhóm và vai trò tiếp theo của cô ấy là kiến ​​trúc sư.
+
+19
+00:01:14,940 --> 00:01:20,730
+Trong nhiệm kỳ của mình, trưởng nhóm thực hiện sự kết hợp tuyệt vời giữa công việc kỹ thuật và công việc quản lý, cho phép
+
+20
+00:01:20,730 --> 00:01:25,170
+cô ấy có thể áp dụng góc nhìn cấp cao, điều này rất quan trọng đối với một kiến ​​trúc sư.
+
+21
+00:01:25,890 --> 00:01:30,270
+Khi nghĩ về vị trí tiếp theo của mình, trưởng nhóm thường phải lựa chọn giữa con đường quản lý
+
+22
+00:01:30,270 --> 00:01:31,560
+và con đường kỹ thuật.
+
+23
+00:01:31,860 --> 00:01:36,180
+Con đường quản lý sẽ dẫn đến vị trí quản lý dự án và con đường kỹ thuật có thể dẫn đến vị trí
+
+24
+00:01:36,180 --> 00:01:38,820
+kiến trúc sư, mặc dù là vị trí cấp cơ sở.
+
+25
+00:01:39,210 --> 00:01:41,610
+Và một lần nữa, đây là một con đường rất phổ biến.
+
+26
+00:01:41,610 --> 00:01:44,640
+Vì vậy, nếu bạn là một trưởng nhóm, bạn đang đi đúng hướng.
+
+27
+00:01:45,460 --> 00:01:49,510
+Con đường tiếp theo cũng khá phổ biến, nhưng nó dẫn đến vai trò kiến ​​trúc sư cấp cao.
+
+28
+00:01:49,780 --> 00:01:54,760
+Trong con đường này, điểm dừng chân tiếp theo sau trưởng nhóm là quản lý phát triển hoặc CTO.
+
+29
+00:01:54,800 --> 00:01:57,580
+Phụ thuộc vào quy mô công ty và các chức danh mà công ty sử dụng.
+
+30
+00:01:58,270 --> 00:02:02,560
+Sau khi phục vụ ở vị trí này trong một vài năm, điểm dừng chân tiếp theo có thể là một kiến ​​trúc sư.
+
+31
+00:02:02,590 --> 00:02:07,840
+Thông thường, một CTO sẽ trở thành một kiến ​​trúc sư cao cấp và đôi khi là một kiến ​​trúc sư doanh nghiệp.
+
+32
+00:02:08,740 --> 00:02:11,510
+Có một con đường khác, nhưng tôi không thấy nó thường xuyên.
+
+33
+00:02:11,530 --> 00:02:16,450
+Đây là con đường duy nhất không liên quan đến kinh nghiệm kỹ thuật và do đó tôi không thể nói rằng tôi giới thiệu
+
+34
+00:02:16,450 --> 00:02:16,900
+nó.
+
+35
+00:02:17,890 --> 00:02:20,620
+Con đường này bắt đầu với tư cách là một nhà phân tích hệ thống.
+
+36
+00:02:20,740 --> 00:02:25,660
+Một nhà phân tích hệ thống có hiểu biết tuyệt vời về các yêu cầu của hệ thống, đây là một phẩm chất quan trọng
+
+37
+00:02:25,660 --> 00:02:28,810
+của một kiến ​​trúc sư, nhưng anh ta lại thiếu kinh nghiệm kỹ thuật.
+
+38
+00:02:29,320 --> 00:02:34,630
+Một nhà phân tích hệ thống muốn trở thành một kiến ​​trúc sư thường sẽ cần một thời gian đào tạo dài và khó khăn
+
+39
+00:02:34,750 --> 00:02:37,750
+và rất nhiều sự cố vấn từ các kiến ​​trúc sư giàu kinh nghiệm.
+
+40
+00:02:38,480 --> 00:02:41,330
+Vì vậy, đây là con đường sự nghiệp của một kiến ​​trúc sư.
+
+41
+00:02:41,360 --> 00:02:46,220
+Tôi khuyên bạn nên tìm hiểu xem giai đoạn sự nghiệp hiện tại của bạn phù hợp nhất với giai đoạn nào và chuẩn bị cho mình
+
+42
+00:02:46,220 --> 00:02:49,910
+cho các bước tiếp theo giúp bạn trở thành một kiến ​​trúc sư phần mềm xuất sắc.

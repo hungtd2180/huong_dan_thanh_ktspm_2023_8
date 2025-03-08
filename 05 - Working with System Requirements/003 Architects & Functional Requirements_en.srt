@@ -1,0 +1,48 @@
+1
+00:00:00,290 --> 00:00:05,480
+Well, we just say that non-functional requirements are the most important requirements and that the
+
+2
+00:00:05,480 --> 00:00:11,150
+architect should not under any circumstances, design the system without knowing what the non-functional
+
+3
+00:00:11,150 --> 00:00:12,230
+requirements are.
+
+4
+00:00:12,260 --> 00:00:16,520
+But it is equally important to be aware of the functional requirements.
+
+5
+00:00:16,550 --> 00:00:21,440
+Many architects feel they only need to skim over the functional requirements and concentrate on the
+
+6
+00:00:21,470 --> 00:00:22,730
+non-functional ones.
+
+7
+00:00:22,760 --> 00:00:24,350
+That's a mistake too.
+
+8
+00:00:24,710 --> 00:00:27,050
+Remember our definition of the architecture?
+
+9
+00:00:27,080 --> 00:00:30,660
+Remember that a good architecture must improve the business bottom line.
+
+10
+00:00:30,680 --> 00:00:34,160
+That won't be possible if you are not sure what the system should do.
+
+11
+00:00:34,190 --> 00:00:39,650
+So before diving deep into the non-functional requirements, this is a not so gentle reminder that the
+
+12
+00:00:39,650 --> 00:00:43,700
+functional requirements are equally important and you have to be well versed in them.
+

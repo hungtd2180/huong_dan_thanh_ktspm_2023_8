@@ -1,0 +1,228 @@
+1
+00:00:00,170 --> 00:00:04,280
+Phần tiếp theo trong tài liệu kiến trúc là phần yêu cầu.
+
+2
+00:00:04,310 --> 00:00:08,810
+Đây cũng là một phần ngắn, thường không quá một trang hoặc ít hơn.
+
+3
+00:00:08,810 --> 00:00:12,240
+Và đối tượng mục tiêu là toàn thể nhóm và thành viên quản lý.
+
+4
+00:00:12,260 --> 00:00:16,450
+Trong phần này chúng tôi sẽ mô tả các yêu cầu khác nhau của hệ thống.
+
+5
+00:00:16,460 --> 00:00:21,510
+Bây giờ, như bạn có thể nhớ từ các phần trước, có hai loại yêu cầu.
+
+6
+00:00:21,530 --> 00:00:27,620
+Các yêu cầu chức năng mô tả những gì hệ thống nên làm và các yêu cầu phi chức năng
+
+7
+00:00:27,620 --> 00:00:30,230
+mô tả hệ thống cần xử lý những gì.
+
+8
+00:00:30,410 --> 00:00:31,770
+Chỉ là một lời nhắc nhở nhanh thôi.
+
+9
+00:00:31,790 --> 00:00:37,420
+Các yêu cầu không chức năng chỉ rõ hiệu suất cần thiết, tải dự kiến và khối lượng dữ liệu, SLA
+
+10
+00:00:37,430 --> 00:00:38,330
+và nhiều hơn nữa.
+
+11
+00:00:38,360 --> 00:00:44,150
+Lưu ý rằng trái ngược với các yêu cầu chức năng, các yêu cầu này không mô tả hệ thống
+
+12
+00:00:44,150 --> 00:00:49,940
+nên làm, mà đúng hơn là hệ thống được mong đợi sẽ hoạt động trong môi trường nào và với những gì
+
+13
+00:00:49,940 --> 00:00:51,050
+dự kiến sẽ giải quyết.
+
+14
+00:00:51,140 --> 00:00:56,780
+Phần yêu cầu trong tài liệu kiến trúc mô tả ngắn gọn cả hai loại yêu cầu.
+
+15
+00:00:56,810 --> 00:01:01,920
+Lưu ý rằng phần này phải ngắn gọn và các yêu cầu phải được liệt kê dưới dạng dấu đầu dòng.
+
+16
+00:01:01,950 --> 00:01:05,069
+Không quá ba dòng cho mỗi yêu cầu.
+
+17
+00:01:06,030 --> 00:01:10,280
+Bây giờ có thể bạn và tôi đang tự hỏi tại sao chúng ta lại cần phần này?
+
+18
+00:01:10,290 --> 00:01:15,570
+Rốt cuộc, tương tự như phần nền tảng, nhóm nghiên cứu nhận thức rõ về yêu cầu và nên
+
+19
+00:01:15,660 --> 00:01:16,900
+được nhắc nhở về chúng.
+
+20
+00:01:16,920 --> 00:01:20,670
+Vâng, đó là một câu hỏi rất hay và chúng ta hãy thử trả lời nhé.
+
+21
+00:01:21,600 --> 00:01:26,520
+Có hai lý do quan trọng để đưa các yêu cầu vào tài liệu kiến trúc.
+
+22
+00:01:26,640 --> 00:01:32,670
+Đầu tiên, tương tự như phần nền, phần này được đưa vào tài liệu để cho phép người đọc
+
+23
+00:01:32,670 --> 00:01:37,860
+để bình luận về các yêu cầu và đảm bảo mọi người đều biết rõ hệ thống nên làm gì
+
+24
+00:01:37,860 --> 00:01:40,710
+và trong điều kiện nào thì nó có thể hoạt động được.
+
+25
+00:01:40,740 --> 00:01:45,480
+Đây là cơ hội tuyệt vời để bạn xác nhận sự hiểu biết của mình về hệ thống và đảm bảo rằng
+
+26
+00:01:45,480 --> 00:01:49,170
+bất cứ thứ gì bạn thiết kế đều giải quyết được vấn đề thực tế cho khách hàng.
+
+27
+00:01:49,320 --> 00:01:54,270
+Thứ hai, hãy nhớ rằng kiến trúc được thiết kế theo một yêu cầu được xác định rõ ràng.
+
+28
+00:01:54,300 --> 00:01:59,400
+Rất nhiều đặc điểm kiến trúc như dự phòng, nhắn tin, lưu trữ dữ liệu và nhiều hơn nữa,
+
+29
+00:01:59,400 --> 00:02:02,110
+được thiết kế dựa trên yêu cầu cụ thể.
+
+30
+00:02:02,130 --> 00:02:07,350
+Ví dụ, nếu có một yêu cầu không chức năng là một tin nhắn không bao giờ được phép bị mất bất kể
+
+31
+00:02:07,350 --> 00:02:11,550
+Vậy thì có lẽ bạn sẽ sử dụng cơ chế nhắn tin theo hàng đợi.
+
+32
+00:02:11,670 --> 00:02:17,280
+Nếu các yêu cầu thay đổi và đột nhiên có một số dung sai đối với việc mất tin nhắn, kiến trúc
+
+33
+00:02:17,280 --> 00:02:20,970
+có thể thay đổi và chúng tôi sẽ đề xuất sử dụng nhắn tin dựa trên REST API thay thế.
+
+34
+00:02:21,150 --> 00:02:27,120
+Vì lý do này, việc nêu rõ các yêu cầu chính xác, đặc biệt là các yêu cầu không chức năng, là vô cùng quan trọng.
+
+35
+00:02:27,120 --> 00:02:28,740
+những cái trong tài liệu kiến trúc.
+
+36
+00:02:28,770 --> 00:02:34,470
+Bằng cách này, bạn làm rõ những yêu cầu nào quyết định kiến trúc và đảm bảo mọi người
+
+37
+00:02:34,470 --> 00:02:35,370
+biết điều đó.
+
+38
+00:02:35,790 --> 00:02:42,900
+Xin lưu ý rằng phần này không phải là sự thay thế cho tài liệu thiết kế do nhà phân tích hệ thống tạo ra.
+
+39
+00:02:42,930 --> 00:02:48,690
+Nó cung cấp cái nhìn tổng quan ở cấp độ cao về các yêu cầu và chủ yếu là danh sách các điểm cần thảo luận, không phải là danh sách đầy đủ.
+
+40
+00:02:48,690 --> 00:02:49,380
+tài liệu.
+
+41
+00:02:49,410 --> 00:02:54,510
+Do đó, đừng mô tả tất cả các sắc thái và sự phức tạp của từng yêu cầu.
+
+42
+00:02:54,540 --> 00:02:56,790
+Một mô tả ngắn gọn, súc tích là đủ.
+
+43
+00:02:57,060 --> 00:02:59,470
+Vậy phần này được cấu trúc như thế nào?
+
+44
+00:02:59,490 --> 00:03:04,650
+Vâng, trước tiên là các yêu cầu chức năng và cung cấp danh sách các yêu cầu chức năng chính,
+
+45
+00:03:04,650 --> 00:03:06,930
+thường không quá năm yêu cầu.
+
+46
+00:03:06,960 --> 00:03:11,700
+Hãy nhớ sử dụng danh sách có dấu đầu dòng, không quá ba dòng cho mỗi yêu cầu.
+
+47
+00:03:11,730 --> 00:03:16,140
+Ví dụ, đây là danh sách yêu cầu một phần có thể xuất hiện trong tài liệu.
+
+48
+00:03:20,300 --> 00:03:22,460
+Tiếp theo là các yêu cầu phi chức năng.
+
+49
+00:03:22,460 --> 00:03:24,560
+Ngược lại với các yêu cầu chức năng.
+
+50
+00:03:24,560 --> 00:03:28,790
+Việc liệt kê danh sách này phải cực kỳ chính xác và cụ thể là vô cùng quan trọng.
+
+51
+00:03:28,820 --> 00:03:34,370
+Lý do là trong khi các yêu cầu chức năng được ghi chép đầy đủ trong các tài liệu thiết kế khác thì các yêu cầu phi chức năng
+
+52
+00:03:34,370 --> 00:03:39,680
+các yêu cầu thường không được đưa vào bất kỳ tài liệu nào khác ngoài tài liệu kiến trúc.
+
+53
+00:03:39,710 --> 00:03:45,230
+Vì lý do này, hãy đảm bảo danh sách các yêu cầu phi chức năng, mặc dù ngắn gọn và súc tích, nhưng phải chứa
+
+54
+00:03:45,230 --> 00:03:49,250
+tất cả các chi tiết cần thiết để người đọc nắm bắt đầy đủ các yêu cầu.
+
+55
+00:03:49,280 --> 00:03:52,550
+Sau đây là danh sách mẫu các yêu cầu không mang tính chức năng.
+
+56
+00:03:56,730 --> 00:03:59,370
+Vậy là chúng ta đã nói về phần yêu cầu.
+
+57
+00:03:59,370 --> 00:04:01,110
+Chúng ta hãy chuyển sang phần tiếp theo.
+

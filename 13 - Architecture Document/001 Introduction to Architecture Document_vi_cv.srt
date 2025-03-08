@@ -1,0 +1,76 @@
+1
+00:00:01,340 --> 00:00:03,830
+Chào mừng đến với phần tài liệu kiến trúc.
+
+2
+00:00:04,010 --> 00:00:09,050
+Trong phần này, chúng ta sẽ khám phá sản phẩm quan trọng nhất của công trình kiến trúc, đó là kiến trúc.
+
+3
+00:00:09,050 --> 00:00:09,830
+tài liệu.
+
+4
+00:00:10,070 --> 00:00:15,290
+Trong tài liệu này, kiến trúc sư mô tả kiến trúc được thiết kế cũng như các
+
+5
+00:00:15,290 --> 00:00:17,640
+yêu cầu chức năng và phi chức năng.
+
+6
+00:00:17,660 --> 00:00:20,090
+Công nghệ và nhiều hơn thế nữa.
+
+7
+00:00:20,360 --> 00:00:25,340
+Trên thực tế, tài liệu kiến trúc bao gồm hầu hết các khái niệm và thông tin được thảo luận trong tài liệu này.
+
+8
+00:00:25,340 --> 00:00:26,630
+khóa học cho đến bây giờ.
+
+9
+00:00:27,020 --> 00:00:31,580
+Tài liệu kiến trúc là nền tảng của quá trình phát triển ứng dụng và không có quá trình phát triển nào nên
+
+10
+00:00:31,580 --> 00:00:36,470
+bắt đầu trước khi tài liệu kiến trúc được tạo ra và các nhà phát triển nắm bắt đầy đủ nội dung của nó.
+
+11
+00:00:36,650 --> 00:00:41,510
+Trong phần này, chúng ta sẽ đi sâu vào tài liệu này, hiểu mục tiêu của nó là gì, ai là người
+
+12
+00:00:41,510 --> 00:00:44,120
+đối tượng khán giả và cấu trúc của nó như thế nào.
+
+13
+00:00:44,300 --> 00:00:50,150
+Hãy nhớ rằng khóa học này có một phần thưởng rất đặc biệt, một kiến trúc hoàn chỉnh, sẵn sàng sử dụng
+
+14
+00:00:50,150 --> 00:00:53,750
+tài liệu mà bạn có thể tải xuống và sử dụng làm mẫu cho kiến trúc của mình.
+
+15
+00:00:53,780 --> 00:00:59,210
+Bạn có thể tìm thấy tài liệu này trong các nguồn tài nguyên của phần tiếp theo, nơi chúng ta sẽ thảo luận về một nghiên cứu điển hình cho
+
+16
+00:00:59,210 --> 00:01:00,570
+quá trình kiến trúc.
+
+17
+00:01:00,570 --> 00:01:05,880
+Vì vậy, hãy nhớ rằng, ngay cả khi bạn cảm thấy mình không hiểu đầy đủ vai trò của từng phần trong tài liệu,
+
+18
+00:01:05,910 --> 00:01:09,540
+bạn sẽ có thể thấy toàn bộ nội dung của nó trong tài liệu thực tế.
+
+19
+00:01:09,570 --> 00:01:10,470
+Chúng ta đi thôi.
+

@@ -1,0 +1,168 @@
+1
+00:00:00,740 --> 00:00:04,220
+So what is the career path for software architect?
+
+2
+00:00:04,250 --> 00:00:08,060
+What are the steps you must go through in order to be considered an architect?
+
+3
+00:00:08,330 --> 00:00:14,510
+From my own experience, and after talking with hundreds of architects, the main factor here is experience.
+
+4
+00:00:14,810 --> 00:00:19,790
+Since there is no formal degree or a course that qualifies you as an architect, the main factor is
+
+5
+00:00:19,790 --> 00:00:24,690
+potential employees will look for is experience, preferably in the technological field.
+
+6
+00:00:24,710 --> 00:00:30,530
+In addition, the most senior technological role you have had, the more chance you have to be an architect.
+
+7
+00:00:30,800 --> 00:00:33,300
+Let's look at some career path examples.
+
+8
+00:00:33,320 --> 00:00:37,070
+All of the examples assume you've begun as a developer for this course.
+
+9
+00:00:37,070 --> 00:00:38,930
+It doesn't matter what you did before.
+
+10
+00:00:40,180 --> 00:00:44,380
+So here is our first career path, going straight from developer to an architect.
+
+11
+00:00:44,380 --> 00:00:48,670
+This is not a very common path and it usually requires two condition to meet.
+
+12
+00:00:49,210 --> 00:00:51,550
+You have a lot of experience as a developer.
+
+13
+00:00:51,550 --> 00:00:56,560
+Definitely no less than three years and your company is quite small.
+
+14
+00:00:56,950 --> 00:01:01,600
+I see this path happens a lot in startup companies where the technical founder often functioning as
+
+15
+00:01:01,600 --> 00:01:05,920
+a developer gets promoted to an architect when more developers are hired.
+
+16
+00:01:07,590 --> 00:01:09,600
+The next path is the most common one.
+
+17
+00:01:09,600 --> 00:01:10,490
+In this path.
+
+18
+00:01:10,500 --> 00:01:14,910
+A developer gets promoted to a team leader and her next role is an architect.
+
+19
+00:01:14,940 --> 00:01:20,730
+During her tenure, the team leader does a great mix of technical work and managerial work, which allows
+
+20
+00:01:20,730 --> 00:01:25,170
+her to adopt a high level perspective which is so important for an architect.
+
+21
+00:01:25,890 --> 00:01:30,270
+When thinking of her next position, the team leader usually has to choose between a managerial path
+
+22
+00:01:30,270 --> 00:01:31,560
+and a technical path.
+
+23
+00:01:31,860 --> 00:01:36,180
+The managerial path will lead to a project manager position, and the technical path can lead to an
+
+24
+00:01:36,180 --> 00:01:38,820
+architect position, albeit a junior one.
+
+25
+00:01:39,210 --> 00:01:41,610
+And again, this is a very common path.
+
+26
+00:01:41,610 --> 00:01:44,640
+So if you are a team leader, you are on the right path.
+
+27
+00:01:45,460 --> 00:01:49,510
+The next bus is also quite common, but it leads to a senior architect role.
+
+28
+00:01:49,780 --> 00:01:54,760
+In this path, the next stop after team leader is development manager or a CTO.
+
+29
+00:01:54,800 --> 00:01:57,580
+Depends on the company size and the titles it uses.
+
+30
+00:01:58,270 --> 00:02:02,560
+After serving in this position for a few years, the next stop can be an architect.
+
+31
+00:02:02,590 --> 00:02:07,840
+Usually a CTO will become a senior architect and sometimes an enterprise architect.
+
+32
+00:02:08,740 --> 00:02:11,510
+There is another path, but I don't see it quite often.
+
+33
+00:02:11,530 --> 00:02:16,450
+This is the only path that does not involve technical experience and therefore I cannot say I recommend
+
+34
+00:02:16,450 --> 00:02:16,900
+it.
+
+35
+00:02:17,890 --> 00:02:20,620
+This path begins as a system analyst.
+
+36
+00:02:20,740 --> 00:02:25,660
+A system analyst has an excellent understanding of the system's requirements, which is a crucial quality
+
+37
+00:02:25,660 --> 00:02:28,810
+of an architect, but he lacks technical experience.
+
+38
+00:02:29,320 --> 00:02:34,630
+A system analyst that would like to become an architect will usually need a long and hard training period
+
+39
+00:02:34,750 --> 00:02:37,750
+and a lot of mentoring from experienced architects.
+
+40
+00:02:38,480 --> 00:02:41,330
+So these are the career path for an architect.
+
+41
+00:02:41,360 --> 00:02:46,220
+I recommend you to find out which one best describes your current career phase and prepare yourself
+
+42
+00:02:46,220 --> 00:02:49,910
+for the next steps that will lead you to be an exceptional software architect.
+

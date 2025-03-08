@@ -1,0 +1,260 @@
+1
+00:00:00,350 --> 00:00:04,160
+Phần tiếp theo trong tài liệu kiến trúc của chúng tôi là tổng quan về kiến trúc.
+
+2
+00:00:04,280 --> 00:00:08,660
+Phần này thường khá dài và có thể lên tới mười trang.
+
+3
+00:00:08,690 --> 00:00:12,170
+Đối tượng là nhóm phát triển và trưởng nhóm QA.
+
+4
+00:00:12,380 --> 00:00:17,210
+Phần tổng quan về kiến trúc cung cấp góc nhìn tổng quan về kiến trúc hệ thống.
+
+5
+00:00:17,240 --> 00:00:23,150
+Mục tiêu của nó là trình bày kiến trúc cho nhóm và giải thích cấu trúc cũng như logic của kiến trúc đó.
+
+6
+00:00:23,270 --> 00:00:28,610
+Phần này không đi sâu vào chi tiết của bất kỳ thành phần nào trong kiến trúc.
+
+7
+00:00:28,640 --> 00:00:33,890
+Phần này được lưu lại cho phần tiếp theo, nhưng nó đặt nền tảng cho kiến trúc và cung cấp
+
+8
+00:00:33,890 --> 00:00:37,130
+bối cảnh mà các thành phần khác nhau sẽ hoạt động.
+
+9
+00:00:37,310 --> 00:00:39,740
+Phần này thường có ba phần.
+
+10
+00:00:39,770 --> 00:00:44,000
+Phần đầu tiên của phần này cung cấp mô tả chung về kiến trúc được thiết kế.
+
+11
+00:00:44,030 --> 00:00:49,670
+Phần này đặt nền tảng cho kiến trúc bằng cách mô tả loại kiến trúc và lý do đằng sau nó
+
+12
+00:00:49,670 --> 00:00:53,250
+và các yêu cầu phi chức năng chính, ví dụ.
+
+13
+00:00:53,270 --> 00:00:59,060
+Phần này sẽ giải thích rằng hệ thống sẽ là, ví dụ, một hệ thống dựa trên web và sẽ phác thảo
+
+14
+00:00:59,060 --> 00:01:00,780
+lý do cho sự lựa chọn này.
+
+15
+00:01:01,020 --> 00:01:07,290
+Nó sẽ mô tả mô hình kiến trúc chính được sử dụng như microservices, rest API, stateless và
+
+16
+00:01:07,290 --> 00:01:08,100
+sớm.
+
+17
+00:01:08,250 --> 00:01:13,950
+Ngoài ra, có thể nêu trong phần này rằng ứng dụng này phải có hiệu suất trung bình là
+
+18
+00:01:13,950 --> 00:01:15,750
+50 yêu cầu mỗi giây.
+
+19
+00:01:15,780 --> 00:01:20,760
+Rõ ràng là phần này đặt nền tảng cho phần còn lại của kiến trúc sẽ được
+
+20
+00:01:20,760 --> 00:01:22,080
+được xây dựng trên đó.
+
+21
+00:01:22,530 --> 00:01:25,770
+Phần thứ hai là sơ đồ kiến trúc cấp cao.
+
+22
+00:01:25,800 --> 00:01:31,650
+Sơ đồ này mô tả các khái niệm chung về kiến trúc sử dụng các dịch vụ, kho dữ liệu khác nhau
+
+23
+00:01:31,650 --> 00:01:37,110
+và tương tác để người đọc có thể hiểu được các thành phần khác nhau của kiến trúc
+
+24
+00:01:37,140 --> 00:01:40,030
+và trách nhiệm của mỗi người là gì.
+
+25
+00:01:40,050 --> 00:01:45,450
+Như đã đề cập trước đó, không có một tiêu chuẩn chính thức nào để hình dung các khái niệm kiến trúc,
+
+26
+00:01:45,450 --> 00:01:47,730
+và tôi sử dụng PowerPoint cho mục đích đó.
+
+27
+00:01:48,240 --> 00:01:53,970
+Chúng ta hãy xem một sơ đồ kiến trúc điển hình được lấy gần giống như một trong những kiến trúc gần đây
+
+28
+00:01:53,970 --> 00:01:55,890
+tài liệu tôi đang làm.
+
+29
+00:01:56,070 --> 00:02:02,910
+Như bạn có thể thấy, sơ đồ này chứa ba loại phần tử dịch vụ được mô tả dưới dạng hình chữ nhật màu đen,
+
+30
+00:02:02,910 --> 00:02:08,550
+tương tác được hiển thị dưới dạng mũi tên và kho dữ liệu được biểu diễn dưới dạng hình trụ.
+
+31
+00:02:08,639 --> 00:02:11,700
+Sơ đồ cho thấy các bộ phận khác nhau của kiến trúc.
+
+32
+00:02:11,730 --> 00:02:18,150
+Nó hiển thị các dịch vụ cùng nhau lắp ráp hệ thống, vai trò của từng dịch vụ, vị trí của chúng
+
+33
+00:02:18,150 --> 00:02:20,940
+dữ liệu của họ và sự tương tác giữa họ.
+
+34
+00:02:21,060 --> 00:02:24,480
+Đừng lo lắng nếu bạn không quen thuộc với mọi thuật ngữ trong sơ đồ này.
+
+35
+00:02:24,480 --> 00:02:28,770
+Ví dụ, chúng tôi không thảo luận về giao thức Mqtt.
+
+36
+00:02:28,800 --> 00:02:35,250
+Đây là một giao thức chuyên biệt được sử dụng rộng rãi bởi các thiết bị IoT nhưng ít phổ biến hơn trong các thiết bị truyền thống hơn.
+
+37
+00:02:35,250 --> 00:02:36,240
+ứng dụng.
+
+38
+00:02:36,840 --> 00:02:42,240
+Khi nhóm nhìn thấy sơ đồ này, các nhà phát triển sẽ hiểu được những thành phần nào có liên quan
+
+39
+00:02:42,240 --> 00:02:44,550
+trong hệ thống và lý do tại sao chúng ở đó.
+
+40
+00:02:44,820 --> 00:02:50,070
+Điều này sẽ cực kỳ hữu ích sau này khi chúng ta đi sâu vào từng thành phần và các nhà phát triển sẽ
+
+41
+00:02:50,070 --> 00:02:54,150
+đã quen thuộc với thành phần và vai trò của nó trong kế hoạch lớn.
+
+42
+00:02:54,660 --> 00:03:00,510
+Điều quan trọng cần lưu ý là sơ đồ này là sơ đồ logic, không đề cập đến máy chủ, mạng,
+
+43
+00:03:00,510 --> 00:03:03,960
+công tắc, ổ đĩa mạng, bộ cân bằng tải, v.v.
+
+44
+00:03:03,990 --> 00:03:10,170
+Đây là sơ đồ logic nghiêm ngặt hiển thị các thành phần logic của kiến trúc không trộn lẫn vật lý
+
+45
+00:03:10,170 --> 00:03:12,060
+phần cứng có kiến trúc logic.
+
+46
+00:03:13,050 --> 00:03:18,510
+Phần thứ ba và cũng là phần cuối cùng của phần tổng quan là hướng dẫn sử dụng sơ đồ.
+
+47
+00:03:18,540 --> 00:03:23,760
+Trong phần này, bạn sẽ mô tả các phần khác nhau của sơ đồ và vai trò bằng lời nói.
+
+48
+00:03:24,210 --> 00:03:29,040
+Phần này sẽ trình bày sơ đồ và giải thích từng thành phần trong đó.
+
+49
+00:03:29,070 --> 00:03:35,880
+Nó mô tả bằng những từ ngữ đơn giản vai trò chính xác của thành phần là gì, chức năng của nó là gì và
+
+50
+00:03:35,880 --> 00:03:39,060
+những tương tác mà nó có với từng thành phần khác.
+
+51
+00:03:39,090 --> 00:03:44,430
+Ngoài ra, nó còn mô tả dữ liệu được lưu trữ trong kho dữ liệu thành phần, nếu có.
+
+52
+00:03:44,640 --> 00:03:50,730
+Phần này cực kỳ quan trọng vì sơ đồ không thể truyền tải hết được mọi sự phức tạp của kiến trúc.
+
+53
+00:03:50,760 --> 00:03:56,100
+Điều quan trọng là phải bao gồm bất kỳ chi tiết logic nào mà bạn cho là có liên quan, chẳng hạn như các thành phần,
+
+54
+00:03:56,100 --> 00:03:59,580
+tải dự kiến của người dùng, các phần mở rộng trong tương lai và nhiều hơn nữa.
+
+55
+00:03:59,610 --> 00:04:02,970
+Bạn sẽ thấy ví dụ đầy đủ về phần này trong tài liệu kiến trúc.
+
+56
+00:04:02,970 --> 00:04:05,880
+Bạn sẽ học phần tiếp theo của khóa học này.
+
+57
+00:04:05,970 --> 00:04:08,490
+Bây giờ chúng ta hãy nói về công nghệ.
+
+58
+00:04:08,910 --> 00:04:13,350
+Phần chính xác nào trong tài liệu cần mô tả về công nghệ?
+
+59
+00:04:13,380 --> 00:04:19,350
+Nội dung này nằm ở phần tổng quan hay ở phần tiếp theo đi sâu vào các thành phần khác nhau?
+
+60
+00:04:19,440 --> 00:04:23,340
+Vâng, câu trả lời, như bạn có thể mong đợi, là tùy thuộc.
+
+61
+00:04:23,700 --> 00:04:28,800
+Nếu hệ thống có một ngăn xếp công nghệ duy nhất và tất cả các thành phần của nó sẽ được xây dựng bằng cách sử dụng ngăn xếp này.
+
+62
+00:04:28,830 --> 00:04:32,130
+Vậy thì phần tổng quan sẽ là nơi tuyệt vời để viết về nó.
+
+63
+00:04:32,190 --> 00:04:37,440
+Mặt khác, nếu ngăn xếp khác nhau giữa các thành phần khác nhau, nó cần được mô tả
+
+64
+00:04:37,440 --> 00:04:43,650
+theo từng thành phần, vì trong các hệ thống hiện đại thường sử dụng nhiều hơn một ngăn xếp công nghệ.
+
+65
+00:04:43,680 --> 00:04:48,900
+Tôi sẽ mô tả chi tiết phần này ở phần tiếp theo, chúng ta hãy cùng tìm hiểu sâu hơn nhé.
+

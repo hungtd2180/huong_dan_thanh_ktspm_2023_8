@@ -1,0 +1,84 @@
+1
+00:00:00,770 --> 00:00:03,800
+Well, we now have a full system architecture in place.
+
+2
+00:00:03,800 --> 00:00:05,030
+That's great.
+
+3
+00:00:05,060 --> 00:00:09,320
+The next logical step is to put it in writing and create an architecture document.
+
+4
+00:00:09,320 --> 00:00:14,620
+So let's go through the various parts of the document and make sure we know what should go in each section
+
+5
+00:00:14,630 --> 00:00:15,570
+first.
+
+6
+00:00:15,590 --> 00:00:16,550
+Background.
+
+7
+00:00:16,760 --> 00:00:18,780
+Well, we already have the background here.
+
+8
+00:00:18,800 --> 00:00:23,390
+This section describes the IO2 system, its motivation and main functionality.
+
+9
+00:00:23,630 --> 00:00:29,690
+Then the requirements we have well defined requirements, functional and non-functional, and we just
+
+10
+00:00:29,690 --> 00:00:31,700
+need to write them down in this section.
+
+11
+00:00:31,730 --> 00:00:37,280
+Overall architecture is our next section and here we will outline the various services and the messaging
+
+12
+00:00:37,280 --> 00:00:38,000
+between them.
+
+13
+00:00:38,000 --> 00:00:39,920
+We have already covered this.
+
+14
+00:00:40,400 --> 00:00:45,680
+Then we are going to drill down to each service and describe what is the role of the service, what
+
+15
+00:00:45,680 --> 00:00:48,560
+is its technology stack and what is its inner architecture.
+
+16
+00:00:48,680 --> 00:00:54,890
+We have went through all this in the previous lectures and just the executive summary, as you probably
+
+17
+00:00:54,890 --> 00:00:59,900
+remember, the executive summary is the last section we will write, even though it appears at the beginning
+
+18
+00:01:00,000 --> 00:01:00,810
+of the document.
+
+19
+00:01:00,840 --> 00:01:05,010
+Of course, we already have all the knowledge required for the executive summary.
+
+20
+00:01:05,610 --> 00:01:06,390
+Okay, great.
+
+21
+00:01:06,390 --> 00:01:10,230
+It looks like we have everything needed for writing the document.
+

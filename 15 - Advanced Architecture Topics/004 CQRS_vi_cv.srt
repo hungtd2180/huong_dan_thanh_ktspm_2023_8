@@ -1,0 +1,168 @@
+1
+00:00:00,440 --> 00:00:03,440
+Vì vậy, mô hình tiếp theo của chúng ta là người tìm kiếm.
+
+2
+00:00:03,469 --> 00:00:07,850
+Vâng, đó là một cái tên khá buồn cười, nhưng tôi đảm bảo với bạn rằng mô hình này rất hợp lý.
+
+3
+00:00:07,880 --> 00:00:10,250
+Vậy thì người tìm kiếm thực chất là gì?
+
+4
+00:00:10,280 --> 00:00:15,380
+Vâng, Seekers là viết tắt của lệnh, trách nhiệm, phân chia.
+
+5
+00:00:15,410 --> 00:00:22,520
+Điều này thực sự có nghĩa là Trong khi trong các hệ thống truyền thống, cùng một cơ sở dữ liệu được sử dụng để truy xuất
+
+6
+00:00:22,520 --> 00:00:29,150
+và cập nhật dữ liệu trong hệ thống dựa trên người tìm kiếm, chúng được tách thành hai cơ sở dữ liệu khác nhau, nghĩa là
+
+7
+00:00:29,150 --> 00:00:35,390
+chúng tôi có một cơ sở dữ liệu để lưu trữ dữ liệu và một cơ sở dữ liệu để truy xuất dữ liệu và một số loại dịch vụ
+
+8
+00:00:35,390 --> 00:00:36,830
+để đồng bộ giữa chúng.
+
+9
+00:00:37,010 --> 00:00:39,950
+Thoạt đầu, điều đó có vẻ lạ.
+
+10
+00:00:39,950 --> 00:00:41,300
+Tại sao chúng ta lại muốn điều đó?
+
+11
+00:00:41,330 --> 00:00:45,980
+Sẽ hợp lý hơn nhiều khi lấy và cập nhật cùng một dữ liệu từ cùng một cơ sở dữ liệu, phải không?
+
+12
+00:00:46,010 --> 00:00:49,640
+Vâng, đôi khi thì đúng, nhưng đôi khi thì không.
+
+13
+00:00:49,670 --> 00:00:52,550
+Chúng ta hãy cùng xem lại mô hình nguồn sự kiện.
+
+14
+00:00:52,580 --> 00:00:58,220
+Như bạn có thể nhớ, với nguồn sự kiện, chúng ta không giữ trạng thái của một thực thể mà thay vào đó là thêm các sự kiện
+
+15
+00:00:58,220 --> 00:00:59,940
+điều đó đã xảy ra với thực thể.
+
+16
+00:00:59,970 --> 00:01:05,790
+Điều này cho phép chúng tôi theo dõi cực kỳ hiệu quả, mô hình dữ liệu đơn giản và hiệu suất tuyệt vời.
+
+17
+00:01:05,820 --> 00:01:11,910
+Mặt khác, nó làm cho cuộc sống của chúng ta khó khăn hơn liên quan đến việc truy xuất dữ liệu, vì chúng ta không có một
+
+18
+00:01:11,910 --> 00:01:17,550
+quan điểm của thực thể và chúng ta cần phải xem xét các sự kiện của thực thể để thu thập các trạng thái của nó, đây là một quá trình chậm
+
+19
+00:01:17,550 --> 00:01:18,990
+và hành động cồng kềnh.
+
+20
+00:01:19,200 --> 00:01:23,870
+Mẫu này giúp chúng ta giải quyết chính xác vấn đề này với những người tìm kiếm.
+
+21
+00:01:24,030 --> 00:01:30,010
+Chúng tôi có dữ liệu nguồn sự kiện được lưu trữ trong cơ sở dữ liệu thỉnh thoảng, thường là vài giây.
+
+22
+00:01:30,030 --> 00:01:35,550
+Dữ liệu được thu thập và lưu trữ trong cơ sở dữ liệu B, nơi dữ liệu thể hiện trạng thái của thực thể.
+
+23
+00:01:35,580 --> 00:01:41,040
+Lưu ý dữ liệu trong cả hai cơ sở dữ liệu đều đại diện cho cùng một thực thể nhưng ở các định dạng khác nhau.
+
+24
+00:01:41,070 --> 00:01:47,850
+Cơ sở dữ liệu A được sử dụng để cập nhật và thực hiện việc này bằng cách lấy nguồn sự kiện, mang lại hiệu suất tuyệt vời và
+
+25
+00:01:47,850 --> 00:01:52,950
+cơ sở dữ liệu B được sử dụng để truy xuất và chứa toàn bộ trạng thái hiện tại của các thực thể.
+
+26
+00:01:53,340 --> 00:01:55,890
+Vậy là bây giờ chúng ta đã có được điều tốt nhất của cả hai thế giới.
+
+27
+00:01:55,920 --> 00:01:59,460
+Hiệu suất tuyệt vời cho khả năng cập nhật và truy vấn dễ dàng.
+
+28
+00:01:59,490 --> 00:02:02,610
+Tất cả những điều này đều có thể thực hiện được nhờ mô hình truy cập.
+
+29
+00:02:02,850 --> 00:02:07,020
+Được thôi, nếu mọi thứ đều tốt như vậy, tại sao nó lại không phổ biến hơn?
+
+30
+00:02:07,020 --> 00:02:09,810
+Tại sao không phải tất cả các kiến trúc sư đều sử dụng nó thường xuyên?
+
+31
+00:02:09,840 --> 00:02:11,760
+Lý do chính là sự đơn giản.
+
+32
+00:02:11,790 --> 00:02:18,060
+Để triển khai seekers, chúng ta cần hai công cụ đồng bộ hóa cơ sở dữ liệu để thu thập dữ liệu từ
+
+33
+00:02:18,060 --> 00:02:23,640
+cơ sở dữ liệu A để chuyển đổi và lưu trữ nó trong cơ sở dữ liệu B và cơ chế tìm nguồn sự kiện.
+
+34
+00:02:23,640 --> 00:02:27,720
+Việc thực hiện tất cả những điều này có thể khá phức tạp và không phải lúc nào cũng cần thiết.
+
+35
+00:02:27,750 --> 00:02:32,310
+Nếu bạn hài lòng với triển khai cơ sở dữ liệu đơn hiện tại, hãy tiếp tục sử dụng nó.
+
+36
+00:02:32,340 --> 00:02:39,570
+Vì vậy, khi nào là tốt nhất để sử dụng seeker chủ yếu trên các hệ thống có tần suất cập nhật cao yêu cầu gần thực tế
+
+37
+00:02:39,570 --> 00:02:40,920
+khả năng truy vấn thời gian?
+
+38
+00:02:40,950 --> 00:02:42,920
+Hãy suy nghĩ lại về hệ thống đo từ xa.
+
+39
+00:02:42,930 --> 00:02:47,590
+Các hệ thống này thường nhận được rất nhiều dữ liệu và cần xử lý chúng càng nhanh càng tốt.
+
+40
+00:02:47,610 --> 00:02:54,090
+Đây là một ứng cử viên tuyệt vời cho việc triển khai của người tìm kiếm, vì vậy đó là cái nhìn thoáng qua về nguồn sự kiện
+
+41
+00:02:54,090 --> 00:02:55,020
+và những người tìm kiếm.
+
+42
+00:02:55,050 --> 00:03:00,030
+Bạn có thể không bao giờ sử dụng những mẫu này, nhưng luôn nên ghi nhớ chúng.
+

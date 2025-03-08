@@ -1,0 +1,288 @@
+1
+00:00:00,410 --> 00:00:02,850
+Software systems are complex beasts.
+
+2
+00:00:02,870 --> 00:00:07,400
+There are a lot of moving parts and as a result, a lot of things that can go wrong.
+
+3
+00:00:07,520 --> 00:00:10,310
+And let me assure you, things will go wrong.
+
+4
+00:00:10,340 --> 00:00:13,190
+This is one of the axioms of the software world.
+
+5
+00:00:13,310 --> 00:00:17,270
+The real question here is what happens when something goes wrong?
+
+6
+00:00:17,300 --> 00:00:21,920
+Sometimes the answer for that is what makes the difference between a well architected, easy to maintain
+
+7
+00:00:21,920 --> 00:00:25,190
+system and a system that lacks a big picture view.
+
+8
+00:00:25,310 --> 00:00:29,090
+A good architecture will always include logging and monitoring engines.
+
+9
+00:00:29,120 --> 00:00:35,180
+These are the cornerstone of maintainable systems and make finding and fixing problems much simpler
+
+10
+00:00:35,180 --> 00:00:36,020
+and faster.
+
+11
+00:00:36,050 --> 00:00:42,080
+The goal here is that when there is a problem, a quick glance at the system's logs will direct us immediately
+
+12
+00:00:42,080 --> 00:00:46,970
+to the source of the problem and will provide us with as much as possible information regarding the
+
+13
+00:00:46,970 --> 00:00:47,590
+problem.
+
+14
+00:00:47,600 --> 00:00:53,180
+In addition, monitoring will allow us to view the current status of the system and notice problematic
+
+15
+00:00:53,210 --> 00:00:57,650
+trends such as high memory consumption or above average exceptions count.
+
+16
+00:00:57,830 --> 00:01:02,820
+Now, we already talked a bit about logging and monitoring in the software components architecture section,
+
+17
+00:01:02,820 --> 00:01:07,920
+and I want to add to that two topics that are very important in a full blown system.
+
+18
+00:01:08,160 --> 00:01:10,860
+The first is central logging service.
+
+19
+00:01:10,920 --> 00:01:16,740
+Since most systems comprised of more than one service which are developed by separate teams, often
+
+20
+00:01:16,740 --> 00:01:19,440
+each team uses its own logging mechanism.
+
+21
+00:01:19,440 --> 00:01:25,500
+What happens is that every service has its own log format, its own log data and its own log location.
+
+22
+00:01:25,530 --> 00:01:29,830
+One service might keep its log in the file system as a fixed format file.
+
+23
+00:01:29,850 --> 00:01:35,100
+The other will store log records in a relational database, while the third service will store Json
+
+24
+00:01:35,100 --> 00:01:37,050
+documents in a NoSQL database.
+
+25
+00:01:37,080 --> 00:01:42,030
+Each one is a legitimate approach, but it's extremely difficult to understand what the hell is going
+
+26
+00:01:42,030 --> 00:01:46,950
+on with the system when the developers should look at many sources with many formats in order to read
+
+27
+00:01:46,950 --> 00:01:47,640
+the logs.
+
+28
+00:01:48,060 --> 00:01:54,000
+The preferred approach is to create a central logging service that all the other services write to it.
+
+29
+00:01:54,030 --> 00:01:59,400
+This central service will store the logs in a central repository, preferably a database to improve
+
+30
+00:01:59,400 --> 00:02:04,740
+querying and analytics, thus creating a single point of viewing for the logs data.
+
+31
+00:02:05,040 --> 00:02:10,949
+There are various methods the service can get, the logs, it can expose an API for the other services
+
+32
+00:02:10,949 --> 00:02:16,050
+to use, or it can watch specific folders for log files and then collect them.
+
+33
+00:02:16,080 --> 00:02:18,930
+Tools like Logstash do just that.
+
+34
+00:02:18,960 --> 00:02:25,050
+It watches a folder and when a file is added or modified, it collects it and stores it in a data store.
+
+35
+00:02:25,260 --> 00:02:27,570
+It doesn't really matter which approach you will take.
+
+36
+00:02:27,600 --> 00:02:29,220
+The bottom line must be the same.
+
+37
+00:02:29,220 --> 00:02:35,340
+The logs of the entire system must be accessible from a central point and must be present as a single
+
+38
+00:02:35,340 --> 00:02:36,120
+format.
+
+39
+00:02:36,990 --> 00:02:39,450
+The second topic is correlation ID.
+
+40
+00:02:41,250 --> 00:02:46,830
+When our system has many services, we will have a lot of business flows that include more than one
+
+41
+00:02:46,830 --> 00:02:47,550
+service.
+
+42
+00:02:47,820 --> 00:02:53,490
+We saw some examples previously during this course, for example, an investment recommendation service
+
+43
+00:02:53,490 --> 00:02:55,830
+that calls the stock, quote, service.
+
+44
+00:02:56,040 --> 00:02:59,370
+Here we have two services participating in a single flow.
+
+45
+00:02:59,400 --> 00:03:05,700
+One of the challenges in such a flow is to be able to understand which log record belongs to which flow.
+
+46
+00:03:06,000 --> 00:03:10,770
+For example, say user one asks for a recommendation.
+
+47
+00:03:10,890 --> 00:03:17,640
+The recommendation service calls the stock service for data and then an error occurs in the stock service.
+
+48
+00:03:17,910 --> 00:03:22,740
+Both the services implement logging, so we have a good documentation of what exactly happened.
+
+49
+00:03:22,740 --> 00:03:28,740
+In this case, we have a log written by the recommendation service indicates what the user asked for
+
+50
+00:03:28,740 --> 00:03:31,800
+and a log in the stock service documenting the error.
+
+51
+00:03:31,830 --> 00:03:33,540
+So far so good.
+
+52
+00:03:33,690 --> 00:03:40,440
+But what will happen if in parallel with user one request we have another request initialized by user
+
+53
+00:03:40,440 --> 00:03:40,980
+two.
+
+54
+00:03:41,010 --> 00:03:44,970
+Let's say in this case, no error was thrown in the stock service.
+
+55
+00:03:45,000 --> 00:03:51,240
+We now have four log records, two of the recommendation services and the two of the stocks.
+
+56
+00:03:51,270 --> 00:03:53,160
+One of them documents an error.
+
+57
+00:03:53,190 --> 00:03:56,730
+How can we find out which record belongs to which flow?
+
+58
+00:03:57,060 --> 00:03:59,650
+It's not clear that the error belongs to user one.
+
+59
+00:03:59,650 --> 00:04:04,980
+S request, since there is nothing in the data that attributes the error to a specific request of the
+
+60
+00:04:04,980 --> 00:04:06,390
+recommendation service.
+
+61
+00:04:06,630 --> 00:04:09,330
+The solution to this problem is correlation ID.
+
+62
+00:04:09,990 --> 00:04:15,930
+Correlation ID is an identifier that is assigned to a flow at the beginning of it and is passed from
+
+63
+00:04:15,930 --> 00:04:16,920
+service to service.
+
+64
+00:04:16,950 --> 00:04:22,200
+It is included in every log record and enable us to track the flow from start to end.
+
+65
+00:04:22,350 --> 00:04:26,520
+The correlation ID itself can be whatever identifier you will want to use.
+
+66
+00:04:26,550 --> 00:04:28,350
+Good is a popular choice.
+
+67
+00:04:28,380 --> 00:04:33,390
+The only important thing is to make sure it is created at the beginning of the flow and is included
+
+68
+00:04:33,390 --> 00:04:35,010
+in every log record.
+
+69
+00:04:35,190 --> 00:04:41,130
+Using correlation ID, we can easily track a complete flow and understand what exactly happened in the
+
+70
+00:04:41,130 --> 00:04:43,530
+flow and more important, why.
+
+71
+00:04:44,010 --> 00:04:49,650
+So to summarize, use central logging and correlation ID to make the system easy to maintain, especially
+
+72
+00:04:49,650 --> 00:04:53,430
+when the system has many services that are used by different business flows.
+

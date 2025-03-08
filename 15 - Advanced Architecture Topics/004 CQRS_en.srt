@@ -1,0 +1,168 @@
+1
+00:00:00,440 --> 00:00:03,440
+So our next pattern is seekers.
+
+2
+00:00:03,469 --> 00:00:07,850
+Yep, that's quite a funny name, but the pattern is sound, I assure you.
+
+3
+00:00:07,880 --> 00:00:10,250
+So what exactly is seekers?
+
+4
+00:00:10,280 --> 00:00:15,380
+Well, Seekers stands for command Query responsibility Segregation.
+
+5
+00:00:15,410 --> 00:00:22,520
+What it actually means is this While in traditional systems, the same database is used for retrieving
+
+6
+00:00:22,520 --> 00:00:29,150
+and updating data in seekers based system, these are separated to two different databases, meaning
+
+7
+00:00:29,150 --> 00:00:35,390
+we have one database for storing data and one database for retrieving the data and some kind of service
+
+8
+00:00:35,390 --> 00:00:36,830
+to sync between them.
+
+9
+00:00:37,010 --> 00:00:39,950
+Now, on first thought, that might sound strange.
+
+10
+00:00:39,950 --> 00:00:41,300
+Why would we want that?
+
+11
+00:00:41,330 --> 00:00:45,980
+It's much more logical to retrieve and update the same data from the same database, isn't it?
+
+12
+00:00:46,010 --> 00:00:49,640
+Well, sometimes it is, but sometimes not so much.
+
+13
+00:00:49,670 --> 00:00:52,550
+Let's take a look again at the event sourcing pattern.
+
+14
+00:00:52,580 --> 00:00:58,220
+As you probably remember, with event sourcing, we do not keep an entity's state, but rather add events
+
+15
+00:00:58,220 --> 00:00:59,940
+that happened to the entity.
+
+16
+00:00:59,970 --> 00:01:05,790
+This enables us an extremely efficient tracing, simple data model and great performance.
+
+17
+00:01:05,820 --> 00:01:11,910
+On the other hand, it makes our life harder regarding data retrieval, since we do not have a unified
+
+18
+00:01:11,910 --> 00:01:17,550
+view of the entity and we need to go through the entities events to gather its states, which is a slow
+
+19
+00:01:17,550 --> 00:01:18,990
+and cumbersome action.
+
+20
+00:01:19,200 --> 00:01:23,870
+The pattern helps us solve exactly this with seekers.
+
+21
+00:01:24,030 --> 00:01:30,010
+We have the event sourcing data which is stored in database a once in a while, usually a few seconds.
+
+22
+00:01:30,030 --> 00:01:35,550
+The data is gathered and stored in database B where it represents the entity state.
+
+23
+00:01:35,580 --> 00:01:41,040
+Note the data in both databases represent the same entities but in different formats.
+
+24
+00:01:41,070 --> 00:01:47,850
+Database A is used for updates and does so with event sourcing, which gives it great performance and
+
+25
+00:01:47,850 --> 00:01:52,950
+database B is used for retrieval and contains the full current state of the entities.
+
+26
+00:01:53,340 --> 00:01:55,890
+So now we've got the best of two worlds.
+
+27
+00:01:55,920 --> 00:01:59,460
+Great performance for updates and easy querying capabilities.
+
+28
+00:01:59,490 --> 00:02:02,610
+All this is made possible by the access pattern.
+
+29
+00:02:02,850 --> 00:02:07,020
+Okay, so if all is so good, why isn't it more common?
+
+30
+00:02:07,020 --> 00:02:09,810
+Why don't all architects use it all the time?
+
+31
+00:02:09,840 --> 00:02:11,760
+The main reason is simplicity.
+
+32
+00:02:11,790 --> 00:02:18,060
+In order to implement seekers, we need two databases synchronization engine to gather the data from
+
+33
+00:02:18,060 --> 00:02:23,640
+database A to transform it and store it in database B and event sourcing mechanism.
+
+34
+00:02:23,640 --> 00:02:27,720
+Implementing all these can be quite complex and not always necessary.
+
+35
+00:02:27,750 --> 00:02:32,310
+If you are satisfied with the current single database implementation, keep using it.
+
+36
+00:02:32,340 --> 00:02:39,570
+So when is best to use seekers mainly on systems with high frequency updates that require near real
+
+37
+00:02:39,570 --> 00:02:40,920
+time query capabilities?
+
+38
+00:02:40,950 --> 00:02:42,920
+Think again on telemetry systems.
+
+39
+00:02:42,930 --> 00:02:47,590
+These systems usually get a lot of data and need to handle it as quick as possible.
+
+40
+00:02:47,610 --> 00:02:54,090
+This is a great candidate of seekers implementation, so that was a short glimpse of event sourcing
+
+41
+00:02:54,090 --> 00:02:55,020
+and seekers.
+
+42
+00:02:55,050 --> 00:03:00,030
+You may never use these patterns, but it's always a good idea to keep them in mind.
+

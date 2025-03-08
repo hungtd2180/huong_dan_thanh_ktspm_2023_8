@@ -1,0 +1,36 @@
+1
+00:00:00,440 --> 00:00:04,610
+Trong phần này, chúng ta thảo luận về các kỹ năng mềm mà mọi kiến trúc sư phải có.
+
+2
+00:00:04,640 --> 00:00:10,160
+Đây không phải là danh sách độc quyền và có một số kỹ năng bạn có thể muốn khám phá, nhưng đây là
+
+3
+00:00:10,160 --> 00:00:11,660
+những điều quan trọng nhất.
+
+4
+00:00:11,870 --> 00:00:16,720
+Hãy luôn nhớ rằng vào cuối ngày, bạn không làm việc với máy tính và bit và byte.
+
+5
+00:00:16,730 --> 00:00:22,550
+Bạn đang làm việc với mọi người và bạn phải có khả năng làm việc với mọi người vì không quan trọng họ giỏi đến mức nào.
+
+6
+00:00:22,550 --> 00:00:24,410
+bạn sử dụng máy tính và PowerPoint.
+
+7
+00:00:24,410 --> 00:00:27,490
+Nếu bạn không hòa hợp với mọi người, bạn sẽ không có cơ hội nào cả.
+
+8
+00:00:27,500 --> 00:00:33,590
+Vì vậy, hãy nắm bắt những kỹ năng này, thực hành chúng và tôi chắc chắn bạn sẽ thấy chúng cải thiện công việc của bạn như thế nào và tạo ra
+
+9
+00:00:33,590 --> 00:00:35,840
+bạn là một kiến trúc sư giỏi hơn và thành công hơn.
+

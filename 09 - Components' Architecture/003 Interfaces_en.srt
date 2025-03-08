@@ -1,0 +1,208 @@
+1
+00:00:00,200 --> 00:00:05,900
+If you are developing in an object oriented platform such as Java or Dotnet, you are probably familiar
+
+2
+00:00:05,900 --> 00:00:06,980
+with interfaces.
+
+3
+00:00:07,010 --> 00:00:12,290
+If not, then there are probably some concepts similar to interfaces in your preferred language, such
+
+4
+00:00:12,290 --> 00:00:14,270
+as abstract classes in Python.
+
+5
+00:00:14,510 --> 00:00:17,900
+So anyway, let's bring us all up to speed with interfaces.
+
+6
+00:00:17,990 --> 00:00:23,540
+Basically, an interface is a contract that declares the signatures of an implementation.
+
+7
+00:00:23,630 --> 00:00:30,110
+The interface states that given a piece of code that should do a specific task, its methods will look
+
+8
+00:00:30,140 --> 00:00:31,520
+in a specific way.
+
+9
+00:00:32,060 --> 00:00:36,900
+For instance, let's think about a code that performs some basic math calculations.
+
+10
+00:00:36,920 --> 00:00:42,320
+For the sake of simplicity, let's assume it will only deal with a very basic for math operations.
+
+11
+00:00:42,350 --> 00:00:45,800
+What would we expect the code method signature to look like?
+
+12
+00:00:45,830 --> 00:00:47,750
+Probably something like that.
+
+13
+00:00:48,110 --> 00:00:52,970
+Note that I'm using Dotnet to demonstrate the code, but it will look similar in other languages.
+
+14
+00:00:53,060 --> 00:00:58,790
+As you can see, the interface defines the methods and the signature, but does not include any definition.
+
+15
+00:00:59,030 --> 00:01:03,120
+Now what's the point of interfaces and why are they so important?
+
+16
+00:01:03,150 --> 00:01:09,840
+The answer is simple Using interface allows us to make our code loosely coupled, meaning we do not
+
+17
+00:01:09,870 --> 00:01:11,940
+tie one class to other.
+
+18
+00:01:11,970 --> 00:01:14,220
+Let's use an example to make it clearer.
+
+19
+00:01:14,370 --> 00:01:19,980
+Continuing with our calculator example, let's assume we have a class named calculator and a main class
+
+20
+00:01:19,980 --> 00:01:23,340
+referencing and using it without using interfaces.
+
+21
+00:01:23,370 --> 00:01:25,470
+Our code will look like this.
+
+22
+00:01:27,360 --> 00:01:31,040
+As you can see, the main class must be familiar with the calculator class.
+
+23
+00:01:31,050 --> 00:01:32,580
+It appears in its code.
+
+24
+00:01:32,610 --> 00:01:37,740
+What will happen if you would like to replace the calculator class with a different, better class?
+
+25
+00:01:37,740 --> 00:01:41,250
+For example with an advanced calculator.
+
+26
+00:01:41,280 --> 00:01:45,620
+We will have to change the code in the main class and recompile it.
+
+27
+00:01:45,630 --> 00:01:49,590
+And that means that the classes are tied and strongly coupled.
+
+28
+00:01:49,800 --> 00:01:53,970
+There is a saying in the software architecture field that goes like this.
+
+29
+00:01:55,190 --> 00:01:56,630
+New is glue.
+
+30
+00:01:56,660 --> 00:02:02,540
+What it means is that whenever you see a new keyword, as in our code here, you know, there is a close
+
+31
+00:02:02,570 --> 00:02:05,750
+tie, a strong coupling between those two classes.
+
+32
+00:02:05,750 --> 00:02:08,210
+And this is something you want to avoid.
+
+33
+00:02:08,419 --> 00:02:14,390
+Strong coupling classes is generally a bad idea and will make your code less modular and much less flexible.
+
+34
+00:02:15,510 --> 00:02:18,710
+Let's see what will happen if we will use interface in our code.
+
+35
+00:02:18,720 --> 00:02:24,600
+In this case, the main class does not knew the calculator class, but rather work with an interface.
+
+36
+00:02:24,630 --> 00:02:29,940
+The interface defines what the calculator can do but gives no hint on what the concrete implementation
+
+37
+00:02:29,940 --> 00:02:31,320
+of the calculator is.
+
+38
+00:02:31,440 --> 00:02:37,170
+The calculator can be implemented by the calculator class we saw earlier or by a completely different
+
+39
+00:02:37,170 --> 00:02:37,710
+class.
+
+40
+00:02:37,740 --> 00:02:44,220
+The main class will have no idea about it whatsoever and that allows us to make our code really modular.
+
+41
+00:02:44,220 --> 00:02:49,830
+We can switch implementations without other code blocks being aware of it, and that's the real strength
+
+42
+00:02:49,830 --> 00:02:50,940
+of interfaces.
+
+43
+00:02:51,210 --> 00:02:54,510
+Now where does implementation come from?
+
+44
+00:02:54,510 --> 00:02:56,940
+After all, there is some implementation here.
+
+45
+00:02:56,970 --> 00:02:59,430
+The code runs and produces results.
+
+46
+00:02:59,520 --> 00:03:04,140
+Well, as you can see, the implementation is returned from the Getinstance method.
+
+47
+00:03:04,170 --> 00:03:10,740
+This method uses a pattern called dependency injection to inject an instance, a concrete implementation
+
+48
+00:03:10,740 --> 00:03:11,760
+to an interface.
+
+49
+00:03:11,760 --> 00:03:13,950
+And this is the topic of the next lecture.
+
+50
+00:03:13,950 --> 00:03:21,370
+And until then, remember new is glue always prefer using interfaces instead of direct reference between
+
+51
+00:03:21,370 --> 00:03:21,940
+classes.
+
+52
+00:03:21,940 --> 00:03:25,840
+It will make your code much more modular and easy to modify and maintain.
+

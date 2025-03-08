@@ -1,0 +1,236 @@
+1
+00:00:00,470 --> 00:00:03,920
+The next advanced pattern we will discuss is event sourcing.
+
+2
+00:00:04,070 --> 00:00:07,440
+But first, let's look at traditional entities management.
+
+3
+00:00:07,460 --> 00:00:13,870
+In traditional applications, entities are stored in the database, usually as a collection of attributes
+
+4
+00:00:13,880 --> 00:00:17,030
+where the application needs to update a specific attribute.
+
+5
+00:00:17,060 --> 00:00:21,200
+It simply accesses this attribute and modify its value.
+
+6
+00:00:21,230 --> 00:00:24,170
+With event sourcing, we handle it differently.
+
+7
+00:00:24,440 --> 00:00:28,700
+When implementing event sourcing, we do not modify attributes of the entity.
+
+8
+00:00:28,730 --> 00:00:32,110
+Rather, we track events related to the entity.
+
+9
+00:00:32,119 --> 00:00:37,850
+Now, you might be having a hard time wrapping your head around this concept, but actually you can
+
+10
+00:00:37,850 --> 00:00:40,340
+see it implemented in a lot of places around you.
+
+11
+00:00:40,340 --> 00:00:43,550
+The best example of event sourcing is your bank account.
+
+12
+00:00:43,580 --> 00:00:45,320
+Think of your bank account statement.
+
+13
+00:00:45,320 --> 00:00:48,440
+It probably looks similar to this now.
+
+14
+00:00:48,440 --> 00:00:50,540
+This is a great example of event sourcing.
+
+15
+00:00:50,540 --> 00:00:54,830
+Note that you don't see here an entity with a few fields with data.
+
+16
+00:00:54,830 --> 00:01:01,200
+What you see here is a list of events that happened to the entity which in this case is the bank account.
+
+17
+00:01:01,230 --> 00:01:03,570
+Note that you don't see the entity itself.
+
+18
+00:01:03,570 --> 00:01:06,320
+The only thing you see here are the events.
+
+19
+00:01:06,330 --> 00:01:08,920
+Now, bank accounts are only one example.
+
+20
+00:01:08,940 --> 00:01:13,770
+Event sourcing is gaining a lot of traction and is implemented in a lot of use cases.
+
+21
+00:01:13,770 --> 00:01:16,740
+So what are the best candidates for using event sourcing?
+
+22
+00:01:16,740 --> 00:01:20,910
+What are the use cases that scream implement me using event sourcing?
+
+23
+00:01:21,030 --> 00:01:24,230
+Well, the obvious case is when history matters.
+
+24
+00:01:24,240 --> 00:01:30,090
+If you care not only about your entity state, but also how did it got there then event sourcing is
+
+25
+00:01:30,090 --> 00:01:31,080
+a natural fit.
+
+26
+00:01:31,110 --> 00:01:36,870
+Using event sourcing, you have a complete view of what happened to a specific entity from the moment
+
+27
+00:01:36,870 --> 00:01:40,580
+it was created and you can gain a lot of insights from it.
+
+28
+00:01:40,590 --> 00:01:44,730
+But event sourcing is useful also for other types of applications.
+
+29
+00:01:44,730 --> 00:01:47,850
+Let's look at the pros and cons of event sourcing.
+
+30
+00:01:47,850 --> 00:01:49,770
+First, the pros.
+
+31
+00:01:50,130 --> 00:01:51,990
+One tracing.
+
+32
+00:01:51,990 --> 00:01:57,120
+We already talked about it using event sourcing, you can track all the events that happened to the
+
+33
+00:01:57,120 --> 00:01:58,680
+entity quite easily.
+
+34
+00:01:58,680 --> 00:02:04,440
+Second data model Using event sourcing, your data model becomes extremely simple.
+
+35
+00:02:04,470 --> 00:02:05,130
+No more.
+
+36
+00:02:05,130 --> 00:02:08,729
+You need to design complex entities with relationships to other entities.
+
+37
+00:02:08,759 --> 00:02:14,670
+All you need to do in order to get the entity state is to go through its events and build an ad hoc
+
+38
+00:02:14,670 --> 00:02:15,570
+state of it.
+
+39
+00:02:15,690 --> 00:02:17,640
+Third performance.
+
+40
+00:02:17,640 --> 00:02:22,920
+In order to change entities state, all you have to do is add a small record to the data store.
+
+41
+00:02:22,950 --> 00:02:23,790
+That's it.
+
+42
+00:02:23,820 --> 00:02:27,990
+No need to update a lot of tables or enforcing constraints and foreign key.
+
+43
+00:02:28,080 --> 00:02:31,080
+A simple insert statement and you are good to go.
+
+44
+00:02:31,200 --> 00:02:33,090
+Fourth reporting.
+
+45
+00:02:33,120 --> 00:02:37,650
+A lot of business reports require a history of entities using event sourcing.
+
+46
+00:02:37,650 --> 00:02:39,150
+This is a real piece of cake.
+
+47
+00:02:39,180 --> 00:02:43,800
+The history is already built in the data and all is left is to retrieve it.
+
+48
+00:02:43,980 --> 00:02:45,990
+Okay, so these are the pros.
+
+49
+00:02:46,020 --> 00:02:52,110
+Now to the cons, the most obvious one is that there is not a single unified view of the entity.
+
+50
+00:02:52,140 --> 00:02:54,300
+You want to see the current state of the entity.
+
+51
+00:02:54,330 --> 00:02:57,600
+Then you need to go through the events and build the current state.
+
+52
+00:02:57,630 --> 00:02:59,760
+This could take time and resources.
+
+53
+00:02:59,790 --> 00:03:03,350
+The second is advantage of event sourcing is storage usage.
+
+54
+00:03:03,360 --> 00:03:08,280
+If an entity has a long history, its events will take a lot of storage space.
+
+55
+00:03:08,280 --> 00:03:13,230
+And when there are a lot of entities with a large history, it might become a problem.
+
+56
+00:03:13,440 --> 00:03:19,650
+So the bottom line is this not all applications should use event sourcing, but if you require a strong
+
+57
+00:03:19,680 --> 00:03:25,260
+traceability of your entities and you lack the idea of a unified data model, definitely take a look
+
+58
+00:03:25,260 --> 00:03:26,370
+at event sourcing.
+
+59
+00:03:26,640 --> 00:03:31,350
+Our next pattern compliments, event sourcing and solves some of its drawbacks.
+

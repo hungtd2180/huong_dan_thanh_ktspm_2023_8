@@ -1,0 +1,28 @@
+1
+00:00:00,680 --> 00:00:05,840
+In previous sections, we discussed the architectural concept of software components and systems and
+
+2
+00:00:05,840 --> 00:00:09,110
+focused on professional considerations scalability, redundancy.
+
+3
+00:00:09,110 --> 00:00:09,890
+ET cetera.
+
+4
+00:00:09,920 --> 00:00:15,580
+However, as architects, we often employ additional considerations when making architectural decisions
+
+5
+00:00:15,590 --> 00:00:20,420
+considerations that have nothing to do with best practices, architecture or software.
+
+6
+00:00:20,720 --> 00:00:26,000
+In this section, we will discuss these considerations and see how they can affect the technology stack
+
+7
+00:00:26,000 --> 00:00:28,130
+and architectural patterns we will use.
+

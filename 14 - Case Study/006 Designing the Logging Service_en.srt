@@ -1,0 +1,544 @@
+1
+00:00:00,260 --> 00:00:04,280
+The logging service is the first service we are going to drill down into.
+
+2
+00:00:04,400 --> 00:00:06,820
+Now, this may sound a little bit strange.
+
+3
+00:00:06,830 --> 00:00:09,860
+After all, it is the most boring service.
+
+4
+00:00:09,890 --> 00:00:12,260
+Let's start with something more interesting.
+
+5
+00:00:12,590 --> 00:00:16,040
+Well, the reason we are starting with this service is twofold.
+
+6
+00:00:16,070 --> 00:00:20,180
+First, we want to emphasize that logging is important.
+
+7
+00:00:20,210 --> 00:00:26,450
+Many developers and sadly architects treat logging as an afterthought, but this is the wrong way to
+
+8
+00:00:26,450 --> 00:00:27,080
+handle it.
+
+9
+00:00:27,110 --> 00:00:32,960
+Logging is one of the cornerstones of every application and therefore should be treated as any other
+
+10
+00:00:32,960 --> 00:00:33,650
+service.
+
+11
+00:00:34,400 --> 00:00:40,340
+Second, we want to build all our services in a way that already includes logging and not adding it
+
+12
+00:00:40,340 --> 00:00:40,910
+later.
+
+13
+00:00:40,940 --> 00:00:46,370
+For that we will need the logging service ready so the services can communicate with it through.
+
+14
+00:00:46,400 --> 00:00:52,100
+In our specific application, the logging service reads from a queue and is not interacting directly
+
+15
+00:00:52,100 --> 00:00:53,120
+with the other services.
+
+16
+00:00:53,120 --> 00:00:56,360
+But still, it's always a good idea to begin with it.
+
+17
+00:00:56,360 --> 00:00:57,800
+So let's go.
+
+18
+00:00:59,380 --> 00:01:03,070
+Here are the steps we need to take for the components drill down.
+
+19
+00:01:03,100 --> 00:01:06,280
+First, decide on the kind of application.
+
+20
+00:01:06,280 --> 00:01:08,860
+Is it Web App service Desktop.
+
+21
+00:01:09,040 --> 00:01:12,430
+Second, decide on the technology stack of the component.
+
+22
+00:01:12,430 --> 00:01:15,190
+And third, design the architecture.
+
+23
+00:01:15,940 --> 00:01:18,820
+Okay, so let's begin with the application type.
+
+24
+00:01:18,970 --> 00:01:23,860
+And for that we need to remind ourselves what the logging service is supposed to do.
+
+25
+00:01:23,890 --> 00:01:31,090
+It should read log records from a queue, perhaps perform some kind of validation, and then store them
+
+26
+00:01:31,090 --> 00:01:32,230
+in the data store.
+
+27
+00:01:32,620 --> 00:01:34,510
+And here is the important thing.
+
+28
+00:01:34,540 --> 00:01:37,720
+The logging service does not wait for any request.
+
+29
+00:01:37,720 --> 00:01:41,720
+It is always on and once in a while it pulls data from the queue.
+
+30
+00:01:41,740 --> 00:01:46,180
+So let's see how this stacks up against the application types we know.
+
+31
+00:01:46,360 --> 00:01:53,140
+So first web apps and web API, they are both off the table since, as we just said, the logging service
+
+32
+00:01:53,140 --> 00:01:59,590
+is not based on a request response model but is always online and initiating its own activities.
+
+33
+00:01:59,600 --> 00:02:02,210
+It's definitely not mobile application.
+
+34
+00:02:02,210 --> 00:02:05,060
+It runs on the server and not on the client.
+
+35
+00:02:05,270 --> 00:02:06,530
+What about console?
+
+36
+00:02:06,560 --> 00:02:08,840
+Well, it looks like a good fit.
+
+37
+00:02:08,870 --> 00:02:14,600
+Console applications are best suited for long running processes while offering limited user interface.
+
+38
+00:02:14,630 --> 00:02:17,670
+This is exactly what we need from our logging service.
+
+39
+00:02:17,690 --> 00:02:21,140
+We don't need any UI and it is a long running process.
+
+40
+00:02:21,140 --> 00:02:23,390
+So this is a great candidate.
+
+41
+00:02:23,420 --> 00:02:25,580
+Next is the service.
+
+42
+00:02:25,780 --> 00:02:29,980
+Remember that services are quite similar to console with two important distinctions.
+
+43
+00:02:29,990 --> 00:02:34,780
+They offer no UI at all and are managed by some kind of service manager.
+
+44
+00:02:34,790 --> 00:02:38,090
+So it looks like the logging service can also be a service.
+
+45
+00:02:38,870 --> 00:02:44,300
+Last is desktop application, which of course is not relevant for the logging service since it runs
+
+46
+00:02:44,300 --> 00:02:45,200
+on the server.
+
+47
+00:02:45,410 --> 00:02:48,480
+So we are left with console app and service.
+
+48
+00:02:48,500 --> 00:02:49,790
+Which one is better?
+
+49
+00:02:50,180 --> 00:02:55,480
+Well, actually there is no definite answer and it depends mainly on personal taste.
+
+50
+00:02:55,490 --> 00:03:00,140
+I would prefer to make it a service, but if you design it as a console application, you won't make
+
+51
+00:03:00,140 --> 00:03:00,920
+a mistake.
+
+52
+00:03:01,310 --> 00:03:03,690
+Okay, so we have the application type.
+
+53
+00:03:03,710 --> 00:03:06,110
+Next, the technology stack.
+
+54
+00:03:06,260 --> 00:03:11,810
+As you probably remember when deciding on the tech stack, we first need to define what are the elements
+
+55
+00:03:11,810 --> 00:03:14,690
+in the component that need the stack to be selected.
+
+56
+00:03:14,720 --> 00:03:20,870
+In our service there are two such elements the components code and the data store.
+
+57
+00:03:21,080 --> 00:03:22,550
+Let's begin with the code.
+
+58
+00:03:24,220 --> 00:03:29,260
+Since the logging service is going to be a service, we don't have a lot of requirements from the technology
+
+59
+00:03:29,260 --> 00:03:29,770
+stack.
+
+60
+00:03:29,890 --> 00:03:35,050
+We need the code to be able to access the API and store data in a data store.
+
+61
+00:03:35,080 --> 00:03:38,920
+This is nothing special and any development platform can do that.
+
+62
+00:03:38,950 --> 00:03:42,200
+In addition, there are no special requirements about the performance.
+
+63
+00:03:42,220 --> 00:03:47,230
+Of course we want it to be fast, but there is no specific requirement that limits us here.
+
+64
+00:03:47,410 --> 00:03:52,780
+So now it's time to go to the developers and ask them what platforms they have experience with.
+
+65
+00:03:52,810 --> 00:03:53,770
+Let's do it.
+
+66
+00:03:54,280 --> 00:03:59,680
+Well, it looks like the development team is familiar with the Microsoft stack, meaning Dotnet platform
+
+67
+00:03:59,680 --> 00:04:01,150
+and SQL Server.
+
+68
+00:04:01,330 --> 00:04:02,200
+That's good.
+
+69
+00:04:02,200 --> 00:04:07,210
+Since Dotnet is a general purpose platform that can be used in services as well as web apps.
+
+70
+00:04:07,210 --> 00:04:10,840
+And that might be useful when we will discuss the other services.
+
+71
+00:04:10,930 --> 00:04:16,870
+The only caveat here is that Dotnet is a little bit outdated and new project should use Dotnet core,
+
+72
+00:04:16,870 --> 00:04:20,410
+which is the new cross platform Modular successor of Dotnet.
+
+73
+00:04:20,440 --> 00:04:26,120
+The team is not familiar with Dotnet core, but after a short discussion we agree on an onboarding process
+
+74
+00:04:26,120 --> 00:04:32,270
+and decide together the service will be based on Dotnet core and the database will be SQL Server.
+
+75
+00:04:32,690 --> 00:04:38,330
+Now it should be noted if the team is familiar with, say, Java and MySQL, that's great too.
+
+76
+00:04:38,360 --> 00:04:40,670
+Python and Postgres are also good.
+
+77
+00:04:40,760 --> 00:04:45,890
+Almost any combination will work here as long as the platform supports console, app or service and
+
+78
+00:04:45,890 --> 00:04:47,180
+can access database.
+
+79
+00:04:47,930 --> 00:04:48,290
+Okay.
+
+80
+00:04:48,290 --> 00:04:48,710
+Great.
+
+81
+00:04:48,710 --> 00:04:50,450
+So we have the technology stack.
+
+82
+00:04:50,480 --> 00:04:52,730
+Now let's design the architecture.
+
+83
+00:04:52,940 --> 00:04:58,730
+Remember our discussion about layered architecture, how we said that in most cases this is the go to
+
+84
+00:04:58,730 --> 00:05:00,470
+architecture of every component.
+
+85
+00:05:00,500 --> 00:05:01,130
+Good.
+
+86
+00:05:01,280 --> 00:05:03,170
+Let's see if it fits here.
+
+87
+00:05:03,200 --> 00:05:10,190
+As you probably remember, layered architecture has these three layers user interface or service interface,
+
+88
+00:05:10,220 --> 00:05:14,420
+business logic and data access that writes to the data store.
+
+89
+00:05:14,450 --> 00:05:18,020
+Now, do you think this pattern fits in in this case?
+
+90
+00:05:18,050 --> 00:05:19,940
+Take a few moments to think about it.
+
+91
+00:05:19,940 --> 00:05:23,840
+You can pause the lecture and resume when you reach a conclusion.
+
+92
+00:05:28,380 --> 00:05:28,980
+Okay.
+
+93
+00:05:28,980 --> 00:05:33,720
+So I hope you have an opinion about whether or not the layered architecture is a good fit for the logging
+
+94
+00:05:33,720 --> 00:05:34,290
+service.
+
+95
+00:05:34,290 --> 00:05:36,530
+And here is what I think about it.
+
+96
+00:05:36,540 --> 00:05:38,910
+It fits, but not quite.
+
+97
+00:05:39,150 --> 00:05:43,650
+The main issue here is the first layer the UI or API layer.
+
+98
+00:05:43,680 --> 00:05:46,350
+The logging service has no UI or API.
+
+99
+00:05:46,380 --> 00:05:51,870
+It's a long running process and exposes nothing, no API and no user interface.
+
+100
+00:05:51,900 --> 00:05:54,450
+The rest of the layers are actually quite relevant.
+
+101
+00:05:54,480 --> 00:05:59,220
+We need the business layer to handle the log records and we need the data access layer to access the
+
+102
+00:05:59,220 --> 00:06:00,020
+database.
+
+103
+00:06:00,030 --> 00:06:07,020
+So what we are going to do is tweak the classic layered pattern and modify the top layer to be a polling
+
+104
+00:06:07,020 --> 00:06:07,650
+layer.
+
+105
+00:06:07,800 --> 00:06:12,810
+This layer is responsible for accessing the queue and retrieving the log records to be handled by the
+
+106
+00:06:12,810 --> 00:06:13,650
+business layer.
+
+107
+00:06:13,740 --> 00:06:17,970
+And this is how the updated layers pattern will look like in our case.
+
+108
+00:06:19,450 --> 00:06:21,300
+So how will the component work?
+
+109
+00:06:21,310 --> 00:06:23,200
+What is the flow it implements?
+
+110
+00:06:23,230 --> 00:06:24,220
+Here it is.
+
+111
+00:06:24,370 --> 00:06:28,750
+The polling layer runs a timer which pulls the queue every few seconds.
+
+112
+00:06:28,750 --> 00:06:34,150
+If new records are returned from the queue, the polling layer sends them to the business logic layer.
+
+113
+00:06:34,180 --> 00:06:38,470
+This layer validates them and makes sure no garbage has been sent.
+
+114
+00:06:38,590 --> 00:06:44,090
+If everything is okay, it sends them to the data access layer which saves them to the database.
+
+115
+00:06:44,110 --> 00:06:47,320
+And that's basically is the inner architecture of the logging service.
+
+116
+00:06:47,350 --> 00:06:49,670
+There is another thing I would like to point out.
+
+117
+00:06:49,690 --> 00:06:55,270
+Remember our discussion around dependency injection, how it eliminates dependencies between code components.
+
+118
+00:06:55,300 --> 00:06:55,810
+Good.
+
+119
+00:06:55,810 --> 00:07:00,250
+We are going to use it in the logging service to avoid coupling between the polling layer and the business
+
+120
+00:07:00,250 --> 00:07:04,390
+logic layer and between the business logic layer and the data access layer.
+
+121
+00:07:04,570 --> 00:07:10,750
+Lucky for us, Dotnet core has a great dependency injection mechanism built in using the Microsoft Extensions
+
+122
+00:07:10,750 --> 00:07:14,740
+dependency injection package, and it will do all the heavy lifting for us.
+
+123
+00:07:15,010 --> 00:07:20,840
+Actually, when the dependency injection is so built in, I really have to struggle hard to find reasons
+
+124
+00:07:20,840 --> 00:07:22,230
+why not to use it.
+
+125
+00:07:22,250 --> 00:07:27,350
+And last thing, while the code that handles the polling from the queue and the validation is a vanilla
+
+126
+00:07:27,350 --> 00:07:32,660
+code that uses no external libraries, the data access layer will utilize entity framework to access
+
+127
+00:07:32,660 --> 00:07:34,340
+the database and save the records.
+
+128
+00:07:34,370 --> 00:07:41,180
+This library gives us ORM capabilities, which basically represents database records as full blown objects.
+
+129
+00:07:41,450 --> 00:07:42,440
+Okay, great.
+
+130
+00:07:42,470 --> 00:07:44,690
+We just designed our first service.
+
+131
+00:07:44,720 --> 00:07:49,640
+We now have an architecture for the logging service, complete with its type and technology stack.
+
+132
+00:07:49,790 --> 00:07:54,050
+I hope you enjoyed this experience and feel ready to continue to the next service.
+
+133
+00:07:54,080 --> 00:07:56,870
+It's going to be at least as fun as this one.
+
+134
+00:07:56,900 --> 00:08:02,360
+Remember, if you have any questions or comments, do not hesitate to contact me and I promise I'll
+
+135
+00:08:02,360 --> 00:08:04,260
+get back to you as quickly as possible.
+
+136
+00:08:04,280 --> 00:08:07,070
+So let's continue to our next service.
+

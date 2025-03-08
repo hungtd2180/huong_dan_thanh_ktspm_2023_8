@@ -1,0 +1,212 @@
+1
+00:00:00,140 --> 00:00:04,970
+When selecting the technology stack, there are some considerations that must be taken into account
+
+2
+00:00:04,970 --> 00:00:08,660
+in order to ensure the best platform will be used in these systems.
+
+3
+00:00:08,690 --> 00:00:10,610
+Let's look at these considerations.
+
+4
+00:00:10,820 --> 00:00:13,910
+One can perform the required tasks.
+
+5
+00:00:14,120 --> 00:00:16,910
+Well, this might sound trivial, but it's still important.
+
+6
+00:00:16,910 --> 00:00:18,620
+When looking at a specific platform.
+
+7
+00:00:18,620 --> 00:00:23,060
+We must ensure this platform can actually perform what is required from it.
+
+8
+00:00:23,090 --> 00:00:28,430
+For example, if one of the requirements is to support cross platform deployment, it's important to
+
+9
+00:00:28,430 --> 00:00:31,820
+make sure the technology we are looking at is actually cross platform.
+
+10
+00:00:31,910 --> 00:00:37,700
+Or another example, if the requirements state that the system's user interface must be web based,
+
+11
+00:00:37,730 --> 00:00:41,150
+there is no point in exploring rich clients platforms.
+
+12
+00:00:42,020 --> 00:00:43,580
+Second Community.
+
+13
+00:00:44,030 --> 00:00:48,920
+You always want to make sure there is a large active community which discusses the platform and can
+
+14
+00:00:48,920 --> 00:00:50,450
+provide support when needed.
+
+15
+00:00:50,630 --> 00:00:55,760
+This way you know you won't be left alone in the dark when encountering problems and questions, and
+
+16
+00:00:55,760 --> 00:00:57,680
+you can seek help in this community.
+
+17
+00:00:58,220 --> 00:01:00,870
+The best place to look for this community is in.
+
+18
+00:01:01,620 --> 00:01:02,190
+Com.
+
+19
+00:01:02,220 --> 00:01:06,060
+If you are still not familiar with this amazing site, then time is now.
+
+20
+00:01:06,090 --> 00:01:12,300
+This is the largest developer oriented Q and A site which provides answers to almost any question regarding
+
+21
+00:01:12,300 --> 00:01:14,200
+development in every platform.
+
+22
+00:01:14,220 --> 00:01:19,200
+The most brilliant developers are helping others here, and whatever your problem is, it's probably
+
+23
+00:01:19,200 --> 00:01:21,810
+already has been asked and answered here.
+
+24
+00:01:22,140 --> 00:01:29,860
+So go to Stack Overflow, click tags at the sidebar and look at the technology you are interested in.
+
+25
+00:01:29,880 --> 00:01:32,760
+You will see a number near its name.
+
+26
+00:01:32,910 --> 00:01:36,570
+This number designates the number of questions on this technology.
+
+27
+00:01:36,600 --> 00:01:39,630
+The larger the number, the more active the community.
+
+28
+00:01:40,200 --> 00:01:46,440
+It's always a good idea to actually click the name of the tag and go to the platform's page.
+
+29
+00:01:46,470 --> 00:01:49,740
+There you can see when the last questions were asked.
+
+30
+00:01:49,770 --> 00:01:53,970
+This will give you some idea about how active the community is, not just how big it is.
+
+31
+00:01:54,000 --> 00:01:59,250
+So if you see the last question was asked four days ago, it seems like the community is not very active.
+
+32
+00:01:59,520 --> 00:02:04,260
+This is a very simple and powerful way to find out the community size of the technology you are looking
+
+33
+00:02:04,260 --> 00:02:04,740
+at.
+
+34
+00:02:05,670 --> 00:02:09,690
+Third, popularity also seems a bit superficial.
+
+35
+00:02:09,720 --> 00:02:12,150
+The popularity factor is quite important.
+
+36
+00:02:12,180 --> 00:02:17,370
+Unpopular platforms will usually lead to a small community, which will lead to a lack of support.
+
+37
+00:02:17,490 --> 00:02:22,350
+The best way to test the popularity of everything on the internet is by using Google Trends.
+
+38
+00:02:22,500 --> 00:02:27,120
+So go to Google Trends and type the name of the platform you are interested in.
+
+39
+00:02:27,150 --> 00:02:31,260
+In this example, let's look at Angular and press Enter.
+
+40
+00:02:33,060 --> 00:02:36,150
+I always like to set the search for the past two years.
+
+41
+00:02:36,180 --> 00:02:39,480
+The default one year is often not enough to give perspective.
+
+42
+00:02:40,380 --> 00:02:45,750
+Here we see that the popularity of Angular is quite flat, so there is no decrease in its popularity,
+
+43
+00:02:45,750 --> 00:02:47,370
+but no increase either.
+
+44
+00:02:47,460 --> 00:02:50,700
+Now let's add React, its nemesis to the chart.
+
+45
+00:02:51,180 --> 00:02:56,310
+We see that React is on an upward trend and currently it's on par with Angular.
+
+46
+00:02:56,520 --> 00:02:59,400
+And now let's add a jQuery.
+
+47
+00:02:59,520 --> 00:03:05,340
+Here we see a reverse trend popularity of jQuery is decreasing, and that indicates that perhaps it's
+
+48
+00:03:05,340 --> 00:03:09,090
+not a good idea to base your web UI on it in a modern application.
+
+49
+00:03:10,380 --> 00:03:15,240
+So these are the three factors that must be taken into account when selecting technology stack.
+
+50
+00:03:15,270 --> 00:03:20,100
+There are more factors that relate to the development team and organization and we will discuss them
+
+51
+00:03:20,100 --> 00:03:20,550
+later.
+
+52
+00:03:20,550 --> 00:03:24,090
+But these are the factors that reflect the platform's impact and potential.
+
+53
+00:03:24,330 --> 00:03:28,500
+And now let's go on and discuss the backend and service technology stack.
+

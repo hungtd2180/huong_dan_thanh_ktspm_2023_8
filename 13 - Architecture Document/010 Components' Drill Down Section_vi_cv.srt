@@ -1,0 +1,364 @@
+1
+00:00:00,860 --> 00:00:06,500
+Phần cuối cùng và quan trọng nhất trong tài liệu kiến trúc là phần phân tích chi tiết thành phần.
+
+2
+00:00:06,590 --> 00:00:12,380
+Phần này mô tả các thành phần tham gia vào toàn bộ kiến trúc như được mô tả trong kiến trúc
+
+3
+00:00:12,380 --> 00:00:13,370
+phần tổng quan.
+
+4
+00:00:13,400 --> 00:00:16,170
+Đây là phần dài nhất cho đến nay.
+
+5
+00:00:16,190 --> 00:00:21,500
+Không có giới hạn thực tế nào về độ dài của phần này và tôi đã tạo các tài liệu trong đó có phần này
+
+6
+00:00:21,500 --> 00:00:24,240
+riêng nó đã hơn 100 trang.
+
+7
+00:00:24,260 --> 00:00:26,810
+Đây không phải là độ dài được khuyến nghị.
+
+8
+00:00:26,840 --> 00:00:28,520
+Mười trang cũng đủ.
+
+9
+00:00:28,550 --> 00:00:34,040
+Nó chỉ là chức năng của số lượng thành phần và mức độ chi tiết cần đạt được.
+
+10
+00:00:34,220 --> 00:00:36,770
+Đối tượng của phần này là nhóm phát triển.
+
+11
+00:00:36,770 --> 00:00:41,810
+Nếu người đứng đầu QA cũng muốn xem xét thì cô ấy có thể làm vậy, nhưng điều đó không bắt buộc.
+
+12
+00:00:41,930 --> 00:00:47,930
+Trong một số trường hợp hiếm hoi, một số người quản lý cũng muốn xem xét, nhưng khả năng là
+
+13
+00:00:47,930 --> 00:00:52,640
+Sau khi đọc vài trang, họ sẽ hiểu rằng họ có những việc quan trọng hơn phải làm và sẽ bỏ qua.
+
+14
+00:00:52,940 --> 00:00:55,760
+Vậy nội dung của phần này là gì?
+
+15
+00:00:55,850 --> 00:01:01,170
+Vâng, phần này sẽ trình bày các thành phần khác nhau được mô tả trong phần tổng quan về kiến trúc và mô tả
+
+16
+00:01:01,170 --> 00:01:03,780
+chiều dài của từng thành phần.
+
+17
+00:01:03,810 --> 00:01:06,840
+Tài liệu này cần có bốn tiểu mục.
+
+18
+00:01:07,500 --> 00:01:10,600
+Đầu tiên là vai trò của thành phần trong kiến trúc.
+
+19
+00:01:10,620 --> 00:01:15,390
+Về cơ bản, đây là bản tóm tắt ngắn gọn về mô tả có trong phần tổng quan về kiến trúc.
+
+20
+00:01:15,600 --> 00:01:17,880
+Thứ hai, công nghệ.
+
+21
+00:01:17,910 --> 00:01:24,300
+Phần này sẽ mô tả chi tiết những công nghệ nào sẽ được sử dụng để phát triển thành phần.
+
+22
+00:01:24,720 --> 00:01:30,120
+Phần phụ này trước tiên phải trình bày các bộ phận khác nhau trong thành phần mà công nghệ cần có
+
+23
+00:01:30,120 --> 00:01:30,630
+đã chọn.
+
+24
+00:01:30,630 --> 00:01:34,530
+Ví dụ, lưu trữ dữ liệu ở phần cuối và phần đầu.
+
+25
+00:01:34,680 --> 00:01:38,940
+Và sau đó đối với mỗi công nghệ, cần mô tả công nghệ được chọn.
+
+26
+00:01:38,970 --> 00:01:40,740
+Bây giờ, chúng ta hãy thành thật nhé.
+
+27
+00:01:40,770 --> 00:01:45,250
+Việc lựa chọn công nghệ là một trong những chủ đề nóng nhất trong thế giới phần mềm.
+
+28
+00:01:45,270 --> 00:01:50,910
+Chúng tôi đã thảo luận về các vấn đề bạn có thể gặp phải khi cố gắng quyết định ngăn xếp nào sẽ được
+
+29
+00:01:50,910 --> 00:01:52,030
+được sử dụng trong hệ thống.
+
+30
+00:01:52,050 --> 00:01:58,770
+Vì lý do này, điều cực kỳ quan trọng là phần phụ về công nghệ sẽ cực kỳ chi tiết
+
+31
+00:01:58,770 --> 00:02:02,940
+và quan trọng hơn nữa là phải đưa ra lý do đằng sau sự lựa chọn đó.
+
+32
+00:02:03,510 --> 00:02:09,060
+Ví dụ, khi thảo luận về kho dữ liệu, nếu quyết định là sử dụng cơ sở dữ liệu NoSQL như
+
+33
+00:02:09,060 --> 00:02:12,630
+Mongo, lý do tại sao quyết định này được đưa ra hẳn phải rất rõ ràng.
+
+34
+00:02:12,660 --> 00:02:18,420
+Các lý do như cấu trúc dữ liệu mong đợi, nhà phát triển, kinh nghiệm, hiệu suất và tính dễ phát triển
+
+35
+00:02:18,420 --> 00:02:22,560
+đều là những lý do chính đáng và phải xuất hiện trong phần này.
+
+36
+00:02:22,590 --> 00:02:28,650
+Ngoài ra, thậm chí còn tốt hơn khi so sánh rõ ràng MongoDB với các cơ sở dữ liệu quan hệ khác như SQL
+
+37
+00:02:28,650 --> 00:02:34,740
+Máy chủ và giải thích chi tiết ưu và nhược điểm của từng phương án thay thế và lý do tại sao quyết định đó là
+
+38
+00:02:34,740 --> 00:02:35,280
+làm ra.
+
+39
+00:02:35,520 --> 00:02:40,230
+Bây giờ hãy lưu ý rằng bạn không cần phải đi sâu vào từng thành phần.
+
+40
+00:02:40,230 --> 00:02:44,670
+Nếu bạn thực hiện quy trình này cho thành phần đầu tiên và quyết định có giá trị vì những lý do tương tự.
+
+41
+00:02:44,670 --> 00:02:49,740
+Ngoài ra, đối với các thành phần khác, bạn có thể giới thiệu cho người đọc quy trình lựa chọn được mô tả trong phần đầu tiên
+
+42
+00:02:49,740 --> 00:02:54,060
+thành phần, và không cần phải sao chép và dán cùng một phần nhiều lần.
+
+43
+00:02:55,380 --> 00:02:58,080
+Phần tiếp theo là kiến trúc thành phần.
+
+44
+00:02:58,110 --> 00:03:01,380
+Phần này mô tả kiến trúc bên trong của thành phần.
+
+45
+00:03:01,380 --> 00:03:06,930
+Nó bổ sung cho tổng quan về kiến trúc mô tả bức tranh lớn hơn bằng cách đi sâu vào từng phần
+
+46
+00:03:06,930 --> 00:03:10,290
+thành phần và nêu chi tiết chính xác những gì nó cần làm và làm như thế nào.
+
+47
+00:03:10,560 --> 00:03:15,990
+Hãy nhớ lại tất cả các mẫu kiến trúc mà chúng ta đã thảo luận trước đó, mẫu phản, tiêm phụ thuộc,
+
+48
+00:03:15,990 --> 00:03:17,490
+không quốc tịch và những thứ còn lại?
+
+49
+00:03:17,520 --> 00:03:19,740
+Đây là nơi bạn sẽ sử dụng nó.
+
+50
+00:03:20,040 --> 00:03:23,640
+Bắt đầu bằng cách mô tả API của thành phần nếu có.
+
+51
+00:03:23,670 --> 00:03:27,000
+Đừng ngại trình bày chi tiết các phương pháp thực tế của API.
+
+52
+00:03:27,000 --> 00:03:30,360
+Nó sẽ làm cho quá trình phát triển dễ dàng và nhanh hơn nhiều.
+
+53
+00:03:30,780 --> 00:03:37,410
+Tôi thường bao gồm một bảng mô tả tất cả những gì cần biết về API, vai trò của nó, phản hồi URL
+
+54
+00:03:37,410 --> 00:03:38,850
+mã và bình luận.
+
+55
+00:03:38,940 --> 00:03:44,400
+Nó chứng tỏ là một kỹ thuật tuyệt vời khi làm việc với các nhà phát triển vì họ đã biết cách thành phần
+
+56
+00:03:44,400 --> 00:03:48,450
+phơi bày chính nó và thiết lập bối cảnh cho phần còn lại của kiến trúc.
+
+57
+00:03:48,930 --> 00:03:52,950
+Mô tả chi tiết vai trò của từng lớp cho đến cấp độ phương pháp.
+
+58
+00:03:52,980 --> 00:03:57,810
+Điều này sẽ giúp các nhà phát triển hiểu đầy đủ vai trò của các lớp và những gì nên và không nên
+
+59
+00:03:57,810 --> 00:03:58,710
+ở trong đó.
+
+60
+00:03:59,190 --> 00:04:04,020
+Nếu có những cân nhắc quan trọng nào cần được lưu ý, hãy đề cập ở đây.
+
+61
+00:04:04,020 --> 00:04:09,390
+Ví dụ, nếu lớp nghiệp vụ hoặc BLE nên tận dụng cơ chế tiêm phụ thuộc
+
+62
+00:04:09,390 --> 00:04:10,570
+trong hàm tạo của nó.
+
+63
+00:04:10,590 --> 00:04:12,030
+Hãy đề cập đến điều đó ở đây.
+
+64
+00:04:12,300 --> 00:04:14,010
+Vấn đề cốt lõi ở đây rất đơn giản.
+
+65
+00:04:14,040 --> 00:04:18,720
+Hãy trình bày càng chi tiết càng tốt và sử dụng càng nhiều hình ảnh trực quan càng tốt.
+
+66
+00:04:18,720 --> 00:04:23,310
+Và điều đó sẽ giúp cuộc sống của bạn và nhà phát triển dễ dàng hơn nhiều sau này.
+
+67
+00:04:24,000 --> 00:04:27,330
+Phần cuối cùng là hướng dẫn phát triển.
+
+68
+00:04:27,870 --> 00:04:34,560
+Đây thường là một tiểu mục nhỏ, không quá nửa trang chứa danh sách các phát triển cụ thể được đánh dấu đầu dòng.
+
+69
+00:04:34,560 --> 00:04:35,550
+hướng dẫn.
+
+70
+00:04:35,670 --> 00:04:41,040
+Những hướng dẫn này sẽ chỉ ra những hướng dẫn cụ thể không phải là một phần của kiến trúc nhưng vẫn
+
+71
+00:04:41,040 --> 00:04:42,240
+có liên quan đến các nhà phát triển.
+
+72
+00:04:42,240 --> 00:04:48,960
+Ví dụ, sử dụng thư viện cụ thể cho các tác vụ cụ thể hoặc đảm bảo API được ghi lại trong
+
+73
+00:04:48,960 --> 00:04:52,500
+định dạng giúp các công cụ như swagger có thể sử dụng được.
+
+74
+00:04:52,530 --> 00:04:57,000
+Điều quan trọng là phải giữ cho danh sách này ngắn gọn, súc tích và thực tế.
+
+75
+00:04:57,030 --> 00:04:59,650
+Tránh thảo luận về mô hình và lý thuyết ở đây.
+
+76
+00:04:59,670 --> 00:04:59,940
+Cái này.
+
+77
+00:05:00,280 --> 00:05:00,420
+LÀM.
+
+78
+00:05:00,520 --> 00:05:02,590
+Không liệt kê thêm bất cứ thông tin nào khác.
+
+79
+00:05:02,770 --> 00:05:08,080
+Một lần nữa, giống như tất cả các phần được thảo luận ở đây, bạn sẽ tìm thấy một kiến trúc hoàn chỉnh có đầy đủ chức năng
+
+80
+00:05:08,080 --> 00:05:13,810
+tài liệu ở cuối phần tiếp theo, nơi chúng ta sẽ thảo luận về một nghiên cứu trường hợp thực tế và xây dựng
+
+81
+00:05:13,810 --> 00:05:15,050
+kiến trúc của nó cùng nhau.
+
+82
+00:05:15,070 --> 00:05:19,210
+Bạn sẽ thấy phần này và có thể thấy chính xác nó trông như thế nào.
+
+83
+00:05:20,020 --> 00:05:23,710
+Như vậy là chúng ta đã kết thúc phần tài liệu kiến trúc.
+
+84
+00:05:23,950 --> 00:05:28,960
+Tài liệu này là trung tâm của công trình kiến trúc, mặc dù không phải là điều duy nhất bạn sẽ làm.
+
+85
+00:05:28,990 --> 00:05:30,550
+Điều này cực kỳ quan trọng.
+
+86
+00:05:30,550 --> 00:05:34,960
+Tài liệu này sẽ bao gồm tất cả những hiểu biết thu được trong quá trình xây dựng kiến trúc.
+
+87
+00:05:34,990 --> 00:05:40,180
+Điều này sẽ giúp bạn biện minh cho những quyết định đã đưa ra trước đó trong quá trình này sau này.
+
+88
+00:05:40,660 --> 00:05:43,800
+Luôn cố gắng hiểu được tâm trí của khán giả.
+
+89
+00:05:43,810 --> 00:05:47,440
+Viết bản tóm tắt cho ban quản lý và nêu mục tiêu các thành phần.
+
+90
+00:05:47,440 --> 00:05:49,060
+Tìm hiểu sâu hơn về các nhà phát triển.
+
+91
+00:05:49,090 --> 00:05:54,790
+Bằng cách này, tài liệu sẽ thực sự trở thành nền tảng và nền tảng quan trọng của hệ thống.
+

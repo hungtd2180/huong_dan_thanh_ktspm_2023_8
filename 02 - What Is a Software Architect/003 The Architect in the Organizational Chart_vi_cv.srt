@@ -1,0 +1,131 @@
+1
+00:00:00,260 --> 00:00:05,330
+Sau khi thảo luận về trách nhiệm của kiến ​​trúc sư, chúng ta hãy xem vị trí của cô ấy trong sơ đồ tổ chức.
+
+2
+00:00:05,480 --> 00:00:07,310
+Đây không phải là một cuộc thảo luận lý thuyết.
+
+3
+00:00:07,310 --> 00:00:12,410
+Vị trí của kiến ​​trúc sư trong sơ đồ quyết định trách nhiệm và phạm vi công việc của cô ấy.
+
+4
+00:00:12,710 --> 00:00:17,090
+Trước khi xem xét sơ đồ tổ chức thông thường, tôi muốn nhấn mạnh một điểm.
+
+5
+00:00:17,330 --> 00:00:21,210
+Kiến trúc sư không phải và không nên là một vị trí quản lý.
+
+6
+00:00:21,230 --> 00:00:22,740
+Cô ấy không thuê và sa thải.
+
+7
+00:00:22,760 --> 00:00:28,370
+Cô ấy không quản lý các yêu cầu nghỉ phép và chắc chắn không tiến hành đánh giá hiệu suất hoặc bồi thường
+
+8
+00:00:28,370 --> 00:00:29,480
+đàm phán.
+
+9
+00:00:29,690 --> 00:00:34,700
+Lý do là vì kiến ​​trúc sư là một vai trò chuyên nghiệp và phải giải quyết rất nhiều việc.
+
+10
+00:00:34,730 --> 00:00:38,990
+Không nên trộn lẫn tất cả các trách nhiệm của cô ấy với các nhiệm vụ quản lý.
+
+11
+00:00:39,380 --> 00:00:44,330
+Vì vậy, với điều đó trong tâm trí, chúng ta hãy xem xét hai biểu đồ tổ chức điển hình liên quan đến kiến ​​trúc sư.
+
+12
+00:00:45,460 --> 00:00:50,710
+Biểu đồ đầu tiên minh họa biểu đồ tổ chức với một kiến ​​trúc sư chuyên trách cho từng dự án.
+
+13
+00:00:51,430 --> 00:00:57,280
+Như bạn có thể thấy, kiến ​​trúc sư báo cáo với người quản lý dự án và bản thân cô ấy không có cấp dưới.
+
+14
+00:00:57,370 --> 00:01:02,650
+Đây là một biểu đồ điển hình, mặc dù rất đơn giản, trong đó các kiến ​​trúc sư là những người mới vào nghề.
+
+15
+00:01:03,070 --> 00:01:07,990
+Trong trường hợp này, kiến ​​trúc sư nhìn thấy bức tranh lớn hơn nhưng chỉ là của dự án.
+
+16
+00:01:08,020 --> 00:01:12,980
+Họ không tham gia vào các dự án khác trong tổ chức và đóng góp của họ khá hạn chế.
+
+17
+00:01:13,000 --> 00:01:18,580
+Nhưng hãy nhớ rằng ngay cả trong trường hợp này, họ vẫn có đóng góp to lớn cho dự án.
+
+18
+00:01:18,610 --> 00:01:22,960
+Sự hướng dẫn của họ vô cùng quý giá và họ thực hiện một công việc thực sự quan trọng.
+
+19
+00:01:24,640 --> 00:01:27,380
+Biểu đồ thứ hai minh họa một trường hợp khác.
+
+20
+00:01:27,400 --> 00:01:30,820
+Trong trường hợp này, kiến ​​trúc sư báo cáo trực tiếp với CIO.
+
+21
+00:01:31,000 --> 00:01:36,550
+Điều này thường xảy ra với các kiến ​​trúc sư giàu kinh nghiệm đã chứng minh được giá trị của mình đối với
+
+22
+00:01:36,550 --> 00:01:41,920
+tổ chức và có giá trị gia tăng to lớn ở cấp độ tổ chức chứ không chỉ ở cấp độ dự án
+
+23
+00:01:41,920 --> 00:01:42,520
+
+
+24
+00:01:42,820 --> 00:01:45,460
+Hãy nhớ rằng, chúng ta đã nói về kiến ​​trúc sư doanh nghiệp.
+
+25
+00:01:45,700 --> 00:01:50,920
+Một kiến ​​trúc sư phần mềm ở vị trí này thường cũng xử lý một số khía cạnh của kiến ​​trúc doanh nghiệp,
+
+26
+00:01:50,950 --> 00:01:54,850
+chủ yếu là về mặt kỹ thuật và ít hơn về mặt tổ chức.
+
+27
+00:01:55,660 --> 00:02:01,090
+Khá phổ biến khi thấy cả hai biểu đồ được kết hợp, nghĩa là CIO làm việc với kiến ​​trúc sư cấp cao
+
+28
+00:02:01,090 --> 00:02:03,280
+và mỗi dự án đều có kiến ​​trúc sư riêng.
+
+29
+00:02:03,310 --> 00:02:08,710
+Trong trường hợp này, kiến ​​trúc sư cấp cao sẽ đưa ra quyết định trên toàn tổ chức như kiến ​​trúc toàn cầu
+
+30
+00:02:08,710 --> 00:02:12,350
+các mẫu, nền tảng sẽ được sử dụng trong tổ chức, v.v.
+
+31
+00:02:12,370 --> 00:02:16,930
+Vì kiến ​​trúc sư của dự án sẽ khai thác hướng dẫn này cho các dự án cụ thể mà họ đang thực hiện.
+
+32
+00:02:17,620 --> 00:02:22,060
+Kiến trúc sư cấp cao thường sẽ cung cấp hỗ trợ liên tục cho kiến ​​trúc sư của dự án và sẽ đảm bảo
+
+33
+00:02:22,090 --> 00:02:24,590
+họ tuân thủ hướng dẫn của tổ chức.

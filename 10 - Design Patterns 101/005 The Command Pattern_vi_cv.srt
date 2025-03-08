@@ -1,0 +1,256 @@
+1
+00:00:00,260 --> 00:00:03,260
+Mẫu cuối cùng chúng ta sẽ thảo luận là mẫu lệnh.
+
+2
+00:00:03,290 --> 00:00:07,850
+Mẫu lệnh ít phổ biến hơn các mẫu khác mà chúng ta đã thảo luận, nhưng có những trường hợp
+
+3
+00:00:07,850 --> 00:00:12,080
+sử dụng nó thực sự có thể giúp mã của chúng ta linh hoạt hơn và dễ bảo trì hơn.
+
+4
+00:00:12,260 --> 00:00:18,320
+Về cơ bản, mẫu lệnh là một mẫu trong đó tất cả thông tin của hành động được gói gọn trong
+
+5
+00:00:18,320 --> 00:00:23,780
+một đối tượng, bao gồm các tham số tên hành động và đối tượng mà hành động được thực thi.
+
+6
+00:00:23,960 --> 00:00:28,790
+Tôi biết điều này nghe có vẻ hơi phức tạp và như thường lệ, chúng ta hãy giải thích bằng một ví dụ.
+
+7
+00:00:29,240 --> 00:00:31,930
+Giả sử chúng ta phát triển một cơ chế hoàn tác.
+
+8
+00:00:31,940 --> 00:00:33,140
+Tôi đoán là bạn biết nó có nghĩa là gì.
+
+9
+00:00:33,140 --> 00:00:34,290
+Nhưng trong trường hợp không.
+
+10
+00:00:34,310 --> 00:00:39,800
+Ví dụ, hãy nghĩ đến Microsoft Word, nơi sử dụng các phím điều khiển Z, bạn có thể hoàn tác bất kỳ hành động nào bạn
+
+11
+00:00:39,800 --> 00:00:42,500
+được thực hiện và trở về trạng thái trước đó của tài liệu.
+
+12
+00:00:42,530 --> 00:00:48,050
+Đây chắc chắn là một trong những tính năng hữu ích nhất của bất kỳ phần mềm nào và cả người viết cũng như nhà phát triển
+
+13
+00:00:48,050 --> 00:00:49,610
+trân trọng và sử dụng nhiều.
+
+14
+00:00:49,790 --> 00:00:53,510
+Bây giờ chúng ta hãy cùng suy nghĩ xem cơ chế này có thể được triển khai như thế nào.
+
+15
+00:00:53,960 --> 00:00:59,060
+Cơ chế hoàn tác phải có khả năng thực hiện một lượng lớn các hành động xóa ký tự, thay đổi
+
+16
+00:00:59,060 --> 00:01:02,820
+phông chữ, xóa trang khỏi tài liệu và hàng trăm tính năng khác nữa.
+
+17
+00:01:03,030 --> 00:01:07,080
+Trong một triển khai đơn giản, mã cơ chế hoàn tác sẽ bao gồm các phương thức.
+
+18
+00:01:07,080 --> 00:01:08,340
+Cho tất cả những hành động này.
+
+19
+00:01:08,340 --> 00:01:10,140
+Nó sẽ trông giống thế này.
+
+20
+00:01:12,690 --> 00:01:16,050
+Như bạn có thể đoán, đây không phải là một thiết kế tốt.
+
+21
+00:01:16,080 --> 00:01:21,990
+Thiết kế này thực sự phản ánh mọi chức năng của trình xử lý văn bản và gần như tăng gấp đôi mã của nó.
+
+22
+00:01:22,020 --> 00:01:27,150
+Ngoài ra, khi một chức năng mới được thêm vào phần mềm, một mã mới phải được thêm vào lệnh hoàn tác.
+
+23
+00:01:27,150 --> 00:01:27,930
+cơ chế.
+
+24
+00:01:28,050 --> 00:01:33,510
+Điều này sẽ tạo ra một cơ sở mã khổng lồ, khó bảo trì và không thực sự dễ đọc.
+
+25
+00:01:33,750 --> 00:01:37,860
+Mẫu lệnh sẽ giải quyết được vấn đề trong trường hợp sử dụng mẫu này.
+
+26
+00:01:37,890 --> 00:01:41,160
+Cơ chế hoàn tác chỉ đơn giản là giữ một danh sách các lệnh để thực hiện.
+
+27
+00:01:41,190 --> 00:01:43,560
+Nó không biết những lệnh đó có tác dụng gì.
+
+28
+00:01:43,590 --> 00:01:50,340
+Nó chỉ biết mỗi lệnh có một phương thức có tên là execute sẽ thực hiện bất cứ điều gì cần thiết, vì vậy việc triển khai
+
+29
+00:01:50,340 --> 00:01:51,690
+bây giờ sẽ trông như thế này.
+
+30
+00:01:51,960 --> 00:01:54,390
+Đầu tiên, chúng ta định nghĩa một giao diện.
+
+31
+00:01:54,390 --> 00:01:55,920
+Chúng ta hãy gọi đó là lệnh Tôi.
+
+32
+00:01:55,950 --> 00:01:59,610
+Giao diện này chứa một phương thức thực thi duy nhất.
+
+33
+00:01:59,880 --> 00:02:05,130
+Tiếp theo, chúng ta sẽ định nghĩa nhiều lớp khác nhau, biểu diễn các lệnh cần được thực thi.
+
+34
+00:02:05,130 --> 00:02:07,110
+Ví dụ xóa từ.
+
+35
+00:02:07,140 --> 00:02:09,509
+Các lớp này triển khai giao diện.
+
+36
+00:02:09,780 --> 00:02:13,750
+Các lớp này chứa tất cả thông tin cần thiết để thực hiện lệnh.
+
+37
+00:02:13,770 --> 00:02:19,620
+Ví dụ, trong một lớp xóa một từ, chúng ta có thể cần tham chiếu đến tài liệu có chứa
+
+38
+00:02:19,620 --> 00:02:22,740
+từ và từ cần xóa trong đó.
+
+39
+00:02:22,770 --> 00:02:28,050
+Tất nhiên, trong thực tế, việc triển khai sẽ phức tạp hơn nhiều khi tham chiếu đến bảng điều khiển.
+
+40
+00:02:28,050 --> 00:02:29,220
+vị trí và nhiều hơn nữa.
+
+41
+00:02:29,220 --> 00:02:32,070
+Nhưng để đơn giản, tôi sẽ giữ nguyên như thế này.
+
+42
+00:02:32,340 --> 00:02:35,170
+Bây giờ lớp thực sự nên thực hiện việc xóa.
+
+43
+00:02:35,190 --> 00:02:39,930
+Để thực hiện điều đó, chúng ta sẽ tạo một phương thức có tên là delete để thực hiện việc đó.
+
+44
+00:02:39,960 --> 00:02:44,310
+Việc triển khai thực tế không quá quan trọng, nhưng đủ để nói rằng phương pháp đó tồn tại.
+
+45
+00:02:44,940 --> 00:02:48,090
+Cuối cùng là triển khai giao diện.
+
+46
+00:02:48,090 --> 00:02:53,790
+Hãy nhớ rằng lớp này triển khai giao diện lệnh I và do đó phải triển khai phương thức execute.
+
+47
+00:02:53,820 --> 00:02:58,650
+Phương pháp này chỉ đơn giản gọi phương thức xóa trong mẫu lệnh.
+
+48
+00:02:58,680 --> 00:03:04,740
+Lớp này được gọi là đối tượng lệnh và tài liệu chúng ta đang làm việc được gọi là Người nhận.
+
+49
+00:03:05,740 --> 00:03:08,590
+Bây giờ chúng ta hãy quay lại cơ chế hoàn tác.
+
+50
+00:03:08,890 --> 00:03:13,840
+Cơ chế này giữ một hàng lệnh cho bất kỳ hành động nào được thực hiện trên tài liệu.
+
+51
+00:03:13,840 --> 00:03:16,240
+Một đối tượng lệnh mới được thêm vào hàng đợi.
+
+52
+00:03:16,270 --> 00:03:22,810
+Khi yêu cầu hoàn tác, cơ chế hoàn tác chỉ cần bật lệnh từ hàng đợi và gọi lệnh đó là execute
+
+53
+00:03:22,810 --> 00:03:24,910
+phương pháp trong mẫu lệnh.
+
+54
+00:03:24,940 --> 00:03:27,090
+Cơ chế hoàn tác là một trình kích hoạt.
+
+55
+00:03:27,100 --> 00:03:29,290
+Nó gọi phương thức execute.
+
+56
+00:03:29,320 --> 00:03:34,330
+Lưu ý rằng không có lúc nào cơ chế hoàn tác có ý niệm về lệnh thực tế.
+
+57
+00:03:34,360 --> 00:03:39,700
+Tất cả những gì nó biết là có một đối tượng lệnh với phương thức thực thi xử lý một lệnh cụ thể
+
+58
+00:03:39,730 --> 00:03:43,270
+hoàn tác hành động và đó chính là vẻ đẹp của mẫu lệnh.
+
+59
+00:03:43,300 --> 00:03:47,550
+Sự tách biệt hoàn toàn giữa lệnh gọi và chức năng thực tế của lệnh đó.
+
+60
+00:03:47,560 --> 00:03:50,440
+Người thực hiện không biết lệnh này có tác dụng gì.
+
+61
+00:03:50,470 --> 00:03:52,820
+Tất cả những gì nó biết là nó phải được triệu hồi.
+
+62
+00:03:52,840 --> 00:03:57,220
+Tất cả các thành phần cần thiết để thực hiện lệnh đều được lưu trữ trong đối tượng lệnh.
+
+63
+00:03:57,250 --> 00:04:01,570
+Như đã nói trước đó, mẫu lệnh ít phổ biến hơn các mẫu khác mà chúng ta đã thảo luận.
+
+64
+00:04:01,570 --> 00:04:06,350
+Nhưng khi nó có liên quan, nó sẽ giúp cuộc sống và việc viết mã của bạn dễ dàng hơn nhiều.
+

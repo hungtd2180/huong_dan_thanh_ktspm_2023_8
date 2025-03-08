@@ -1,0 +1,40 @@
+1
+00:00:00,290 --> 00:00:05,120
+The next phase of the architecture process is mapping the various components of the system.
+
+2
+00:00:05,510 --> 00:00:08,000
+The components are the moving parts of the system.
+
+3
+00:00:08,000 --> 00:00:13,100
+They represent the various tasks of the system functional as well as non-functional.
+
+4
+00:00:14,030 --> 00:00:16,280
+The component map serves two goals.
+
+5
+00:00:16,309 --> 00:00:19,590
+It helps you understand the system and its various parts.
+
+6
+00:00:19,610 --> 00:00:25,190
+It's a great way to communicate to the client your understanding of the system, thus making sure you
+
+7
+00:00:25,190 --> 00:00:26,570
+are not missing anything.
+
+8
+00:00:26,870 --> 00:00:30,610
+Note that the component map is completely non-technical.
+
+9
+00:00:30,620 --> 00:00:34,690
+You are yet to decide on the platform, the development tool, the database type.
+
+10
+00:00:34,700 --> 00:00:38,570
+This is just a map that displays the various capabilities of the system.
+

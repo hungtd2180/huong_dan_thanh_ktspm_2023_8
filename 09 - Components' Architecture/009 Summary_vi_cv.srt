@@ -1,0 +1,28 @@
+1
+00:00:00,230 --> 00:00:04,560
+Trong phần này, chúng tôi thảo luận về kiến trúc và các biện pháp tốt nhất cho các thành phần phần mềm.
+
+2
+00:00:04,580 --> 00:00:09,410
+Các khái niệm và kỹ thuật mà chúng tôi đề cập trong phần này là nền tảng của hầu hết mọi phần mềm
+
+3
+00:00:09,410 --> 00:00:12,750
+thành phần, và bạn sẽ thấy mình sử dụng chúng thường xuyên.
+
+4
+00:00:12,770 --> 00:00:17,990
+Sau này trong khóa học này, chúng ta sẽ thảo luận về các mô hình kiến trúc cho các ứng dụng phân tán hoàn chỉnh
+
+5
+00:00:17,990 --> 00:00:21,450
+và nó sẽ bổ sung cho kiến thức bạn đã thu được trong phần này.
+
+6
+00:00:21,470 --> 00:00:24,920
+Trong khi đó, tôi hy vọng bạn đã hiểu những khái niệm chúng ta đã thảo luận.
+
+7
+00:00:24,920 --> 00:00:30,440
+Nếu bạn có bất kỳ câu hỏi hoặc bình luận nào, vui lòng liên hệ với tôi và tôi sẽ sẵn lòng trợ giúp.
+

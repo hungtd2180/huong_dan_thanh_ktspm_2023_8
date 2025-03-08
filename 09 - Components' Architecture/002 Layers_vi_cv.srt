@@ -1,0 +1,432 @@
+1
+00:00:00,200 --> 00:00:06,980
+Những ai còn nhớ bộ phim Shrek đầu tiên, có lẽ còn nhớ những lớp trong Shrek cố gắng giải thích
+
+2
+00:00:06,980 --> 00:00:12,980
+với Donkey rằng bọn yêu tinh giống như mọi sinh vật sống khác đều có nhiều lớp và chúng không phải là cái ác một chiều
+
+3
+00:00:12,980 --> 00:00:13,760
+sinh vật.
+
+4
+00:00:13,790 --> 00:00:19,010
+Đây là một trong những cảnh hài hước nhất trong phim và nó khiến tôi cười mỗi khi xem nó và tôi
+
+5
+00:00:19,010 --> 00:00:20,030
+hãy xem nó thật nhiều.
+
+6
+00:00:20,120 --> 00:00:25,790
+Và điều này cũng đúng với kiến trúc phần mềm vì một thành phần phần mềm tốt cũng giống như cái xấu
+
+7
+00:00:25,820 --> 00:00:28,310
+yêu tinh sẽ luôn có nhiều lớp.
+
+8
+00:00:28,340 --> 00:00:32,450
+Tuy nhiên, vai trò của lớp trong phần mềm khá khác so với trong quái vật.
+
+9
+00:00:32,479 --> 00:00:37,460
+Các lớp trong thành phần phần mềm biểu diễn chức năng ngang của mã trong các lớp.
+
+10
+00:00:37,490 --> 00:00:39,050
+Vậy điều đó có nghĩa là gì?
+
+11
+00:00:39,260 --> 00:00:43,310
+Theo truyền thống, các thành phần phần mềm thực hiện ba hành động cơ bản.
+
+12
+00:00:43,880 --> 00:00:48,350
+Một là hiển thị chức năng của phần mềm thông qua một số loại giao diện.
+
+13
+00:00:48,350 --> 00:00:51,740
+Điều này thường được thực hiện thông qua API hoặc giao diện người dùng.
+
+14
+00:00:51,740 --> 00:00:58,400
+Phụ thuộc vào loại ứng dụng để thực thi logic trên dữ liệu nhận được từ người dùng.
+
+15
+00:00:58,400 --> 00:01:01,380
+Một lần nữa thông qua API hoặc giao diện người dùng.
+
+16
+00:01:01,410 --> 00:01:06,750
+Logic này thường bao gồm xử lý xác thực, tính toán bổ sung, làm giàu và nhiều hơn nữa.
+
+17
+00:01:07,560 --> 00:01:12,640
+Và ba Lưu dữ liệu vào kho dữ liệu và lấy dữ liệu từ kho dữ liệu.
+
+18
+00:01:12,660 --> 00:01:19,440
+Bây giờ ba hành động này thường được biểu diễn dưới dạng các lớp khi mỗi lớp có tên riêng trong phần mềm
+
+19
+00:01:19,440 --> 00:01:20,470
+kiến trúc thành phần.
+
+20
+00:01:20,490 --> 00:01:24,180
+Các lớp này được gọi là giao diện người dùng hoặc UI.
+
+21
+00:01:24,210 --> 00:01:31,770
+Nếu thành phần có giao diện người dùng hoặc giao diện dịch vụ hoặc xem thành phần có hiển thị API kinh doanh không
+
+22
+00:01:31,770 --> 00:01:36,870
+logic hoặc BLE và lớp truy cập dữ liệu hoặc buồn tẻ.
+
+23
+00:01:37,350 --> 00:01:41,810
+Mỗi lớp bao gồm nhiều lớp khác nhau xử lý nhiệm vụ được chỉ định của lớp đó.
+
+24
+00:01:41,820 --> 00:01:47,430
+Ví dụ, lớp mờ sẽ có các lớp xử lý việc mở kết nối tới kho dữ liệu, truy vấn
+
+25
+00:01:47,430 --> 00:01:51,510
+lưu dữ liệu, xử lý dữ liệu, giao dịch và nhiều hơn nữa.
+
+26
+00:01:51,540 --> 00:01:57,840
+Lớp này sẽ có các lớp thực hiện xác thực, làm giàu và tính toán.
+
+27
+00:01:58,590 --> 00:02:06,570
+Lớp C sẽ có các lớp hiển thị API, dịch các tài liệu Json thành các đối tượng cụ thể, xử lý
+
+28
+00:02:06,570 --> 00:02:09,090
+xác thực và ủy quyền và nhiều hơn nữa.
+
+29
+00:02:09,120 --> 00:02:12,870
+Bây giờ bạn có thể hỏi mục đích của lớp này là gì?
+
+30
+00:02:13,110 --> 00:02:16,350
+Tại sao tôi lại muốn tách mã thành các lớp này?
+
+31
+00:02:16,380 --> 00:02:18,810
+Vâng, có một số lý do rất chính đáng cho việc đó.
+
+32
+00:02:18,840 --> 00:02:22,860
+Đầu tiên, nó buộc bạn phải viết code có cấu trúc chặt chẽ và tập trung.
+
+33
+00:02:22,890 --> 00:02:28,410
+Nói chung, viết một phương thức thực hiện nhiều tác vụ là một ý tưởng tồi và chúng ta sẽ thảo luận về nó sau
+
+34
+00:02:28,410 --> 00:02:29,280
+trong phần này.
+
+35
+00:02:29,280 --> 00:02:34,800
+Và bằng cách chia mã thành các lớp được xác định rõ ràng, mã sẽ chỉ xử lý mục tiêu của các lớp đó.
+
+36
+00:02:34,860 --> 00:02:38,250
+Thành phần lớp thứ hai là thành phần mô-đun.
+
+37
+00:02:38,280 --> 00:02:43,470
+Như bạn có thể nhớ lại, chúng ta đã thảo luận về tính mô-đun như một trong những thuộc tính chất lượng quan trọng nhất của phần mềm,
+
+38
+00:02:43,500 --> 00:02:47,880
+và bằng cách triển khai các lớp, thành phần của chúng ta trở thành mô-đun như thế này.
+
+39
+00:02:48,060 --> 00:02:50,760
+Giả sử việc giao tiếp giữa các lớp được thực hiện chính xác.
+
+40
+00:02:50,760 --> 00:02:52,410
+Và chúng ta sẽ nói đến điều này ngay sau đây.
+
+41
+00:02:52,440 --> 00:02:54,990
+Việc thay thế các lớp cực kỳ dễ dàng.
+
+42
+00:02:54,990 --> 00:03:01,260
+Ví dụ, nếu triển khai hiện tại không phù hợp với SQL Server và bạn muốn chuyển sang MongoDB
+
+43
+00:03:01,370 --> 00:03:06,470
+trong một thành phần được phân lớp tốt, bạn sẽ chỉ cần thay thế lớp xỉn màu và không cần thay thế bất kỳ lớp nào khác
+
+44
+00:03:06,470 --> 00:03:09,550
+bị ảnh hưởng, khiến mã của bạn thực sự mang tính mô-đun.
+
+45
+00:03:09,560 --> 00:03:14,660
+Để phát triển một kiến trúc phân lớp tốt, có một số khái niệm cần phải tuân theo.
+
+46
+00:03:14,660 --> 00:03:22,190
+Một luồng mã, nghĩa là một lớp chỉ có thể gọi một lớp nằm ngay bên dưới nó trong mã.
+
+47
+00:03:22,190 --> 00:03:28,790
+Điều này có nghĩa là, ví dụ, mã trong lớp C chỉ có thể gọi một mã trong lớp B,
+
+48
+00:03:28,820 --> 00:03:31,370
+không bao giờ có mã ở lớp mờ.
+
+49
+00:03:31,550 --> 00:03:35,780
+Ngoài ra, một mã không bao giờ có thể gọi một mã khác ở lớp phía trên nó.
+
+50
+00:03:35,780 --> 00:03:41,000
+Ví dụ, mã nhàm chán sẽ không bao giờ gọi mã trong lớp màu xanh.
+
+51
+00:03:41,030 --> 00:03:45,230
+Ý tưởng ở đây là giữ khoảng cách giữa các lớp càng chặt chẽ càng tốt.
+
+52
+00:03:45,230 --> 00:03:50,750
+Nếu bạn cho phép bỏ qua các lớp, điều đó có nghĩa là lớp C, ví dụ, biết về
+
+53
+00:03:50,750 --> 00:03:51,680
+lớp xỉn màu.
+
+54
+00:03:51,680 --> 00:03:58,220
+Và điều đó có nghĩa là nếu bạn thay đổi lớp xỉn màu, nó chắc chắn sẽ ảnh hưởng đến lớp C, khiến
+
+55
+00:03:58,220 --> 00:04:00,320
+toàn bộ thành phần ít mang tính mô-đun hơn.
+
+56
+00:04:01,570 --> 00:04:04,180
+Khớp nối lỏng thứ hai.
+
+57
+00:04:04,360 --> 00:04:08,950
+Chúng ta sẽ nói nhiều hơn về khái niệm này trong bài giảng tiếp theo, nhưng đủ để nói rằng chúng ta cần điều này
+
+58
+00:04:08,950 --> 00:04:14,090
+lớp để giao tiếp với nhau theo cách có tác động tối thiểu khi có thay đổi.
+
+59
+00:04:14,110 --> 00:04:17,290
+Chúng ta hãy xem một ví dụ để giải thích khái niệm này.
+
+60
+00:04:17,890 --> 00:04:21,820
+Giả sử đây là mã trong lớp gọi đến búp bê.
+
+61
+00:04:22,660 --> 00:04:26,770
+Mã cụ thể được viết bằng Dotnet, nhưng nó cũng đúng với bất kỳ ngôn ngữ nào khác.
+
+62
+00:04:26,980 --> 00:04:32,410
+Như bạn có thể thấy, mã tham chiếu trực tiếp đến các lớp búp bê bằng cách sử dụng từ khóa new.
+
+63
+00:04:32,650 --> 00:04:38,080
+Mặc dù dễ thực hiện, việc có tham chiếu trực tiếp giữa các lớp sẽ khiến chúng được kết nối chặt chẽ.
+
+64
+00:04:38,110 --> 00:04:43,270
+Điều này có nghĩa là nếu bạn muốn chuyển sang búp bê khác, chúng ta sẽ phải chạm vào tất cả các mã
+
+65
+00:04:43,270 --> 00:04:45,240
+có tham chiếu đến XBL.
+
+66
+00:04:45,280 --> 00:04:46,720
+Và điều đó thật tệ.
+
+67
+00:04:47,290 --> 00:04:53,050
+Cách tham chiếu đúng các lớp là thông qua việc tiêm phụ thuộc khi lớp gọi tham chiếu
+
+68
+00:04:53,050 --> 00:04:58,760
+chỉ là một giao diện đại diện cho chức năng mong muốn chứ không phải là lớp cụ thể.
+
+69
+00:04:58,780 --> 00:05:04,970
+Sau đó, khi chúng ta chuyển sang triển khai khác, mã sẽ không bị ảnh hưởng vì nó không tham chiếu
+
+70
+00:05:04,970 --> 00:05:06,770
+đầu tiên là con búp bê.
+
+71
+00:05:07,100 --> 00:05:12,230
+Khái niệm này được gọi là dependency injection và chúng ta sẽ thảo luận về nó sau trong phần này.
+
+72
+00:05:13,880 --> 00:05:16,910
+Khái niệm thứ ba là xử lý ngoại lệ giữa các lớp.
+
+73
+00:05:16,940 --> 00:05:22,490
+Bây giờ, trong khi hai khái niệm đầu tiên khá nổi tiếng, khái niệm này còn mơ hồ hơn và không phải tất cả các kiến trúc sư
+
+74
+00:05:22,490 --> 00:05:23,660
+đã quen thuộc với nó.
+
+75
+00:05:23,690 --> 00:05:29,660
+Khái niệm xử lý ngoại lệ nêu rằng mỗi lớp phải ẩn các ngoại lệ bên trong của nó và không để
+
+76
+00:05:29,660 --> 00:05:35,470
+các lớp phía trên để biết về lỗi đó, nhưng hãy để họ thêm thông báo lỗi chung chung không cụ thể.
+
+77
+00:05:35,480 --> 00:05:39,530
+Ví dụ, giả sử búp bê của chúng ta hoạt động với cơ sở dữ liệu MySQL.
+
+78
+00:05:39,530 --> 00:05:45,230
+Hiện nay các ngoại lệ cơ sở dữ liệu có xu hướng rất cụ thể, điều này rất tốt vì nó giúp chúng ta xác định chính xác các vấn đề
+
+79
+00:05:45,230 --> 00:05:46,220
+và sửa chúng.
+
+80
+00:05:46,730 --> 00:05:52,790
+Vấn đề là ngoại lệ này được đưa ra như một lớp ngoại lệ MySQL và nó chứa dữ liệu về
+
+81
+00:05:52,790 --> 00:05:54,530
+hoạt động bên trong của cơ sở dữ liệu.
+
+82
+00:05:54,560 --> 00:05:59,930
+Một trong những khái niệm quan trọng nhất của kiến trúc lớp là mỗi lớp được đóng gói và
+
+83
+00:05:59,930 --> 00:06:02,990
+không tiết lộ thông tin về hoạt động bên trong của nó.
+
+84
+00:06:03,110 --> 00:06:09,290
+Nếu con búp bê ném ra ngoại lệ này, điều đó có nghĩa là con ong sẽ biết con búp bê đang sử dụng MySQL, trong khi
+
+85
+00:06:09,290 --> 00:06:11,630
+nó phải hoàn toàn không biết gì về hoạt động bên trong của nó.
+
+86
+00:06:11,630 --> 00:06:18,470
+Vì vậy, mô hình đúng ở đây là để búp bê phân tích ngoại lệ, ghi nó vào nhật ký và tạo
+
+87
+00:06:18,470 --> 00:06:24,590
+một ngoại lệ khác được gọi là, ví dụ, ngoại lệ dữ liệu với thông báo lỗi chung rằng có
+
+88
+00:06:24,590 --> 00:06:26,510
+có vấn đề khi truy cập kho dữ liệu.
+
+89
+00:06:26,840 --> 00:06:32,540
+Theo cách này, điều duy nhất mà chiếc chuông biết là con búp bê có một số vấn đề với các hành động dữ liệu,
+
+90
+00:06:32,540 --> 00:06:35,360
+cũng ổn vì đó là tất cả những gì nó cần biết về con búp bê.
+
+91
+00:06:36,170 --> 00:06:39,920
+Vậy đây là ba khái niệm tạo nên một thành phần phân lớp tốt.
+
+92
+00:06:40,430 --> 00:06:43,280
+Bây giờ, có một điểm bổ sung mà tôi muốn đề cập.
+
+93
+00:06:44,870 --> 00:06:50,900
+Bạn có thể đã nghe về một khái niệm gọi là ứng dụng đã nhập hoặc ứng dụng ba tầng và
+
+94
+00:06:50,900 --> 00:06:55,190
+Bạn có thắc mắc nó là gì và sự khác biệt giữa tier và layer là gì không?
+
+95
+00:06:55,400 --> 00:07:00,410
+Vâng, có vẻ như những thuật ngữ đó, tầng và lớp thường có thể hoán đổi cho nhau, nhưng chúng không nên như vậy, và
+
+96
+00:07:00,410 --> 00:07:02,690
+thực ra có một sự khác biệt lớn giữa chúng.
+
+97
+00:07:03,050 --> 00:07:06,930
+Lớp là thứ chúng ta đang nói đến, một đoạn mã là một phần của một thành phần.
+
+98
+00:07:06,950 --> 00:07:11,770
+Chúng ta hãy cùng nhắc lại rằng, một thành phần là một tập hợp mã chạy trong một tiến trình duy nhất.
+
+99
+00:07:11,780 --> 00:07:16,280
+Không có mạng lưới liên quan khi các lớp khác nhau trong thành phần giao tiếp với nhau
+
+100
+00:07:16,280 --> 00:07:19,850
+và tất cả đều chia sẻ cùng một tầng tài nguyên điện toán.
+
+101
+00:07:19,880 --> 00:07:22,540
+Mặt khác, là một đoạn mã phân tán.
+
+102
+00:07:22,550 --> 00:07:28,760
+Nó được triển khai độc lập và giao tiếp với các công cụ khác thông qua các giao thức mạng như Http.
+
+103
+00:07:29,120 --> 00:07:34,070
+Vì vậy, khi nói về một ứng dụng ba lớp, điều chúng tôi thực sự muốn nói là ứng dụng có ba
+
+104
+00:07:34,070 --> 00:07:40,010
+các thành phần độc lập được triển khai trên toàn mạng giao tiếp bằng mạng, hoàn toàn
+
+105
+00:07:40,010 --> 00:07:42,890
+khác với các lớp là một phần của cùng một quá trình.
+
+106
+00:07:43,730 --> 00:07:46,770
+Được rồi, như vậy là chúng ta đã kết thúc cuộc thảo luận về các lớp.
+
+107
+00:07:46,790 --> 00:07:51,890
+Hãy nhớ rằng các lớp hầu như luôn là một ý tưởng hay và nó nên là mẫu mặc định của bạn để triển khai
+
+108
+00:07:51,890 --> 00:07:52,760
+thành phần.
+

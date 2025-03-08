@@ -1,0 +1,136 @@
+1
+00:00:00,770 --> 00:00:05,820
+One of the hottest debates in the architect community is the format of the architecture document.
+
+2
+00:00:05,900 --> 00:00:10,820
+There are some standards that are sometimes used when writing the architecture document that define
+
+3
+00:00:10,820 --> 00:00:15,950
+various kinds of charts and diagrams to make the architecture easier to understand and implement.
+
+4
+00:00:16,040 --> 00:00:19,340
+One of the most famous standards is UML.
+
+5
+00:00:19,370 --> 00:00:24,410
+UML is defined as a modeling language that helps visualize the design of a system.
+
+6
+00:00:24,830 --> 00:00:30,680
+It consists of software concepts such as activities, components and interactions, as well as diagrams
+
+7
+00:00:30,680 --> 00:00:35,250
+visualizing the system design such as class diagram and use case diagram.
+
+8
+00:00:35,270 --> 00:00:39,890
+However, I am usually not using UML in my architectural documents.
+
+9
+00:00:39,920 --> 00:00:42,170
+The reason for that is quite simple.
+
+10
+00:00:42,200 --> 00:00:44,210
+Remember the documents Audience.
+
+11
+00:00:44,240 --> 00:00:44,960
+Good.
+
+12
+00:00:45,200 --> 00:00:50,180
+Most of the audience will not be familiar with UML and will have no idea what the meaning of the various
+
+13
+00:00:50,180 --> 00:00:51,380
+diagrams and terms.
+
+14
+00:00:51,380 --> 00:00:56,660
+And if the document contains a lot of this stuff, you will find yourself wasting a lot of time explaining
+
+15
+00:00:56,660 --> 00:00:59,510
+in plain English or whatever your local language is.
+
+16
+00:00:59,540 --> 00:01:02,460
+What did you mean and what should actually be developed?
+
+17
+00:01:02,670 --> 00:01:07,920
+In my experience, after designing hundreds of system, the most effective architecture document is
+
+18
+00:01:07,920 --> 00:01:12,020
+the most simple one, meaning just use plain English.
+
+19
+00:01:12,030 --> 00:01:15,450
+Describe in simple words what the design of the system is.
+
+20
+00:01:15,480 --> 00:01:18,450
+Don't use too many buzzwords all over the document.
+
+21
+00:01:18,480 --> 00:01:21,030
+Try to get into the mind of your readers.
+
+22
+00:01:21,030 --> 00:01:23,280
+Will they understand what you are trying to say?
+
+23
+00:01:23,730 --> 00:01:28,700
+Now, sometimes you will want to visualize various concepts of the design.
+
+24
+00:01:28,710 --> 00:01:31,900
+You will see that in the document we will discuss later in this course.
+
+25
+00:01:31,920 --> 00:01:34,530
+For this, use the software you have in hand.
+
+26
+00:01:34,650 --> 00:01:38,370
+It can be PowerPoint, Visio, Apple keynote, whatever suits you.
+
+27
+00:01:38,400 --> 00:01:44,400
+Just make sure the visualization is clear and concise and of a high quality and not cluttered with unnecessary
+
+28
+00:01:44,400 --> 00:01:45,510
+items and shapes.
+
+29
+00:01:45,720 --> 00:01:51,330
+Now, if your client specifically wants UML diagram is a document, and I had only one such a client
+
+30
+00:01:51,330 --> 00:01:56,730
+in my whole career simply go through some UML tutorials and create the diagrams using tools such as
+
+31
+00:01:56,730 --> 00:01:57,240
+Visio.
+
+32
+00:01:57,270 --> 00:02:01,770
+If you are fluent with PowerPoint, you can quite easily use it also for these diagrams.
+
+33
+00:02:02,280 --> 00:02:07,920
+So to summarize, the architecture document should be simple Use plain English to describe the requirements,
+
+34
+00:02:07,920 --> 00:02:12,300
+concepts and design and use your favorite charting tools for visualizations.
+

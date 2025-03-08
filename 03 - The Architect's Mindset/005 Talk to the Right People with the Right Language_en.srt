@@ -1,0 +1,180 @@
+1
+00:00:00,170 --> 00:00:04,490
+Another important aspect of the architect's job is to know how to speak to different persons in the
+
+2
+00:00:04,490 --> 00:00:05,450
+organization.
+
+3
+00:00:05,630 --> 00:00:07,280
+Here is the rule of thumb.
+
+4
+00:00:07,700 --> 00:00:12,350
+Always keep in mind what is the thing that really matters to the person you are talking to.
+
+5
+00:00:12,380 --> 00:00:16,820
+If you can adapt your language to the best interest of the person you are talking to, you will be able
+
+6
+00:00:16,820 --> 00:00:18,230
+to achieve much more.
+
+7
+00:00:18,500 --> 00:00:23,120
+By the way, this rule is right not only for architects, of course, but for anyone who tries to achieve
+
+8
+00:00:23,120 --> 00:00:24,920
+something from someone.
+
+9
+00:00:24,950 --> 00:00:26,660
+Let's look at some examples.
+
+10
+00:00:26,750 --> 00:00:29,180
+Here is Sophie, the project manager.
+
+11
+00:00:29,600 --> 00:00:31,970
+Sophie cares only for the project success.
+
+12
+00:00:31,970 --> 00:00:36,000
+She doesn't care what technology will be used or how amazing the architecture is.
+
+13
+00:00:36,050 --> 00:00:40,730
+When you talk to her about your plans for the architecture, always emphasize how it will contribute
+
+14
+00:00:40,730 --> 00:00:41,990
+to the project success.
+
+15
+00:00:42,470 --> 00:00:47,540
+Avoid sentences like This is the latest and greatest pattern and we will be the first to test it out.
+
+16
+00:00:47,570 --> 00:00:49,640
+We can write a blog post about it.
+
+17
+00:00:49,970 --> 00:00:55,520
+This sentence will only frighten her and she will immediately imagine how this untested technology will
+
+18
+00:00:55,520 --> 00:00:58,430
+cause delays and compromises down the road.
+
+19
+00:00:58,760 --> 00:01:05,030
+Instead, try something along the lines of this new technology can help us write the code twice as fast
+
+20
+00:01:05,030 --> 00:01:07,580
+so we can cut our schedule and budget accordingly.
+
+21
+00:01:07,970 --> 00:01:13,040
+This is a language a project manager understands, and she will be more than happy to help you, assuming
+
+22
+00:01:13,040 --> 00:01:13,520
+you are right.
+
+23
+00:01:13,520 --> 00:01:14,270
+Of course.
+
+24
+00:01:14,480 --> 00:01:17,390
+Now let's look at Dave, the team leader.
+
+25
+00:01:17,990 --> 00:01:21,200
+Dave is a hard core geek and he just loves programming.
+
+26
+00:01:21,200 --> 00:01:26,270
+He spent at least one hour every night reading through technical blog posts and he always up to date
+
+27
+00:01:26,270 --> 00:01:28,700
+with the recent developments in the software industry.
+
+28
+00:01:29,270 --> 00:01:33,920
+If you want to bring Dave on board and make him a strong proponent of your architecture, talk to him
+
+29
+00:01:33,920 --> 00:01:35,340
+using a technical language.
+
+30
+00:01:35,360 --> 00:01:39,050
+Tell him, Listen, Dave, have you heard of the latest Angular version?
+
+31
+00:01:39,050 --> 00:01:43,370
+We are going to use it or, you know, function as a service are pretty cool.
+
+32
+00:01:43,400 --> 00:01:45,920
+What do you say we will give it a try in this project?
+
+33
+00:01:46,100 --> 00:01:50,420
+Most chances they will be more than happy to work with you when approached this way.
+
+34
+00:01:51,180 --> 00:01:54,030
+The last person we will look at is Shelly the CEO.
+
+35
+00:01:54,240 --> 00:01:59,150
+Shelly is a very business oriented person and she always looks for the financial bottom line.
+
+36
+00:01:59,160 --> 00:02:03,560
+If you want to explain her, what are the advantages of the architecture you are working on?
+
+37
+00:02:03,570 --> 00:02:05,820
+Never mention technical buzzwords.
+
+38
+00:02:05,850 --> 00:02:11,760
+Shelly is the kind of person that when he microservices or caching or even Java, she immediately loses
+
+39
+00:02:11,760 --> 00:02:13,410
+interest and stops listening.
+
+40
+00:02:13,410 --> 00:02:19,050
+However, if you will tell her this, the architecture I've designed will ensure the continuity of the
+
+41
+00:02:19,050 --> 00:02:23,400
+business and will be able to cope with the high loads expected during Black Friday sales.
+
+42
+00:02:23,580 --> 00:02:24,630
+Then you got her.
+
+43
+00:02:24,660 --> 00:02:27,720
+She will listen to you and will appreciate the work you are doing.
+
+44
+00:02:27,870 --> 00:02:32,670
+So to recap, always keep in mind what really matters to the person you are talking to.
+
+45
+00:02:32,700 --> 00:02:38,040
+Try to be in his shoes, not yours, and then show him how your work contributes to his interests.
+

@@ -1,0 +1,184 @@
+1
+00:00:01,290 --> 00:00:06,810
+Khi nói về các yêu cầu của hệ thống, chúng ta thường nghĩ theo hướng hệ thống nên như thế nào
+
+2
+00:00:06,810 --> 00:00:07,200
+LÀM.
+
+3
+00:00:07,230 --> 00:00:10,390
+Chúng tôi mong đợi các yêu cầu sẽ giải quyết được những câu hỏi sau.
+
+4
+00:00:10,410 --> 00:00:12,840
+Luồng kinh doanh của hệ thống là gì?
+
+5
+00:00:12,930 --> 00:00:18,540
+Ví dụ: đăng nhập, lưu trữ ảnh, nhận và xử lý dữ liệu, dữ liệu đo từ xa và nhiều hơn nữa.
+
+6
+00:00:19,320 --> 00:00:21,660
+Hệ thống cần có những dịch vụ kinh doanh nào?
+
+7
+00:00:21,660 --> 00:00:25,650
+Ví dụ, dịch vụ ghi nhật ký truy cập dữ liệu dịch vụ Telemetry.
+
+8
+00:00:25,650 --> 00:00:27,690
+Điều khiển từ xa máy thu.
+
+9
+00:00:28,340 --> 00:00:30,950
+Giao diện người dùng của hệ thống trông như thế nào?
+
+10
+00:00:30,980 --> 00:00:34,280
+Giao diện, hướng dẫn chung, khả năng phản hồi và nhiều hơn nữa.
+
+11
+00:00:35,180 --> 00:00:38,370
+Những yêu cầu này được gọi là yêu cầu chức năng.
+
+12
+00:00:38,390 --> 00:00:44,390
+Bạn có thể xác định những yêu cầu đó từ số dặm nếu chúng trả lời được câu hỏi hệ thống nên làm gì.
+
+13
+00:00:44,420 --> 00:00:46,250
+Đây là những yêu cầu mang tính chức năng.
+
+14
+00:00:46,640 --> 00:00:51,650
+Tất nhiên, các yêu cầu chức năng cực kỳ quan trọng và không nên thiết kế và xây dựng bất kỳ hệ thống nào
+
+15
+00:00:51,650 --> 00:00:52,560
+không có chúng.
+
+16
+00:00:52,580 --> 00:00:58,340
+Tôi đã có niềm vui được làm việc trên một hệ thống không có yêu cầu chức năng cụ thể và tôi đã thề rằng tôi sẽ
+
+17
+00:00:58,340 --> 00:00:59,600
+đừng bao giờ làm thế nữa.
+
+18
+00:00:59,930 --> 00:01:05,690
+Tuy nhiên, đối với kiến trúc sư, những yêu cầu này rất quan trọng nhưng không quan trọng bằng những yêu cầu khác.
+
+19
+00:01:05,690 --> 00:01:06,680
+của các yêu cầu.
+
+20
+00:01:07,230 --> 00:01:12,660
+Những yêu cầu này được gọi là yêu cầu phi chức năng và những yêu cầu này trả lời một cách sơ bộ điều này
+
+21
+00:01:12,660 --> 00:01:15,720
+Câu hỏi Hệ thống cần xử lý những gì?
+
+22
+00:01:16,080 --> 00:01:20,970
+Yêu cầu không chức năng Mô tả các khía cạnh khác nhau của hoạt động hệ thống và không bị ràng buộc
+
+23
+00:01:20,970 --> 00:01:23,250
+với một hành vi hoặc logic cụ thể.
+
+24
+00:01:23,280 --> 00:01:31,950
+Các yêu cầu không chức năng phổ biến nhất là dữ liệu tải hiệu suất, khối lượng, người dùng đồng thời và
+
+25
+00:01:31,950 --> 00:01:32,420
+Thỏa thuận cấp độ dịch vụ
+
+26
+00:01:33,750 --> 00:01:38,400
+Đối với những bạn chưa quen với tất cả các thuật ngữ này, đừng lo lắng, chúng tôi sẽ đề cập đến chúng sau trong bài viết này.
+
+27
+00:01:38,400 --> 00:01:39,090
+phần.
+
+28
+00:01:39,480 --> 00:01:44,040
+Yêu cầu phi chức năng là những yêu cầu thực sự khiến bạn quan tâm với tư cách là một kiến trúc sư.
+
+29
+00:01:44,190 --> 00:01:48,960
+Tôi đã từng có một khách hàng yêu cầu tôi thiết kế kiến trúc cho một hệ thống mà anh ấy đang lập kế hoạch.
+
+30
+00:01:48,990 --> 00:01:51,880
+Thoạt nhìn, hệ thống này trông khá đơn giản.
+
+31
+00:01:51,900 --> 00:01:57,840
+Các dịch vụ nghỉ ngơi đơn giản nhận dữ liệu, thực hiện một số phép tính và lưu trữ kết quả trong cơ sở dữ liệu.
+
+32
+00:01:57,870 --> 00:01:58,840
+Dễ như ăn kẹo.
+
+33
+00:01:58,860 --> 00:02:00,660
+Hoặc ít nhất là tôi nghĩ vậy.
+
+34
+00:02:00,870 --> 00:02:06,570
+Vào cuối cuộc họp yêu cầu của chúng tôi, tôi đã hỏi khách hàng rằng kích thước tối đa của
+
+35
+00:02:06,570 --> 00:02:08,009
+dữ liệu nhận được từ dịch vụ.
+
+36
+00:02:08,430 --> 00:02:15,360
+Anh ấy nhìn tôi với vẻ mặt không biết gì, gọi điện thoại vài lần, trả tiền một ít, rồi quay lại
+
+37
+00:02:15,360 --> 00:02:18,510
+và nói, Vâng, 600MB.
+
+38
+00:02:18,540 --> 00:02:19,170
+Bùm.
+
+39
+00:02:20,250 --> 00:02:25,500
+Không một kiến trúc sư sáng suốt nào lại mong đợi một dịch vụ nghỉ ngơi có thể giải quyết được một yêu cầu lớn như vậy.
+
+40
+00:02:25,530 --> 00:02:30,360
+Chúng tôi phải quay lại bảng vẽ và đưa ra một kiến trúc hoàn toàn khác.
+
+41
+00:02:30,780 --> 00:02:36,690
+Các dịch vụ còn lại đã biến mất và thay vào đó chúng tôi có các tác nhân lắng nghe cơ sở dữ liệu NoSQL và chờ đợi
+
+42
+00:02:36,690 --> 00:02:38,100
+dữ liệu được lưu trữ ở đó.
+
+43
+00:02:38,400 --> 00:02:43,830
+Và đó chỉ là một ví dụ về một kiến trúc bị đảo lộn vì không có chức năng
+
+44
+00:02:43,830 --> 00:02:44,700
+yêu cầu.
+
+45
+00:02:44,970 --> 00:02:49,830
+Bây giờ chúng ta đã hiểu được sự khác biệt giữa hai loại yêu cầu, hãy cùng xem xét kỹ hơn
+
+46
+00:02:49,830 --> 00:02:50,580
+hãy nhìn chúng.
+

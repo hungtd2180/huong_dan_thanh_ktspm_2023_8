@@ -1,0 +1,372 @@
+1
+00:00:00,950 --> 00:00:03,330
+Microservice đang là xu hướng hiện nay.
+
+2
+00:00:03,350 --> 00:00:08,870
+Bạn không thể thảo luận về kiến trúc mà không nhắc đến thuật ngữ này sớm hay muộn, thường là sớm hơn.
+
+3
+00:00:08,900 --> 00:00:11,240
+Nhưng thực chất microservice là gì?
+
+4
+00:00:11,270 --> 00:00:17,870
+Vâng, nói một cách đơn giản, kiến trúc dựa trên dịch vụ vi mô là kiến trúc trong đó các chức năng khác nhau
+
+5
+00:00:17,870 --> 00:00:23,780
+được triển khai như các dịch vụ riêng biệt, kết hợp lỏng lẻo tương tác với nhau bằng cách sử dụng tiêu chuẩn
+
+6
+00:00:23,780 --> 00:00:24,980
+giao thức nhẹ.
+
+7
+00:00:25,130 --> 00:00:30,230
+Để hiểu được động lực của dịch vụ vi mô, chúng ta hãy quay trở lại thời kỳ trước khi có dịch vụ vi mô.
+
+8
+00:00:30,440 --> 00:00:36,980
+Vào thời xa xưa này, các ứng dụng được xây dựng như một khối thống nhất, nghĩa là tất cả các chức năng đều
+
+9
+00:00:36,980 --> 00:00:41,120
+chạy trong một quy trình duy nhất, thường được xây dựng bằng kiến trúc ba lớp.
+
+10
+00:00:41,210 --> 00:00:47,360
+Ví dụ, hãy xem sơ đồ sau đây mô tả một hệ thống HR điển hình được xây dựng như một khối thống nhất.
+
+11
+00:00:47,630 --> 00:00:51,890
+Như bạn có thể thấy, tất cả các mô-đun khác nhau luôn là một phần của cùng một lớp.
+
+12
+00:00:51,920 --> 00:00:56,870
+API Nhân viên và API Lương đều là một phần của cùng một giao diện dịch vụ.
+
+13
+00:00:56,900 --> 00:01:02,820
+Tương tự như vậy, logic kinh doanh kỳ nghỉ và logic kinh doanh lương nằm trong cùng một lớp logic kinh doanh
+
+14
+00:01:02,820 --> 00:01:03,930
+và vân vân.
+
+15
+00:01:04,260 --> 00:01:10,740
+Hệ thống khối đơn đã và vẫn cực kỳ phổ biến và là một cách tuyệt vời để xây dựng các công trình vừa và nhỏ
+
+16
+00:01:10,740 --> 00:01:11,730
+ứng dụng.
+
+17
+00:01:11,730 --> 00:01:15,790
+Nhưng vẫn có một số vấn đề cố hữu với hệ thống đơn khối.
+
+18
+00:01:15,810 --> 00:01:21,960
+Một là vì ứng dụng được thực thi trong một tiến trình duy nhất, do đó nếu có ngoại lệ trong một tiến trình duy nhất
+
+19
+00:01:21,960 --> 00:01:24,990
+thành phần, toàn bộ quá trình sẽ sụp đổ.
+
+20
+00:01:24,990 --> 00:01:29,220
+Mọi lỗi, mọi trường hợp bất thường đều có thể khiến ứng dụng không sử dụng được.
+
+21
+00:01:29,790 --> 00:01:34,530
+Hai Mỗi khi chúng ta cần cập nhật ứng dụng, chúng ta cần cập nhật toàn bộ mã.
+
+22
+00:01:34,530 --> 00:01:41,010
+Chúng ta không thể thay thế chỉ một thành phần duy nhất vì chúng ta chạy trong một tiến trình duy nhất với một tệp thực thi duy nhất.
+
+23
+00:01:41,370 --> 00:01:44,700
+Ba Chúng tôi bị giới hạn ở một nền tảng phát triển.
+
+24
+00:01:44,700 --> 00:01:51,000
+Chúng ta không thể kết hợp Java và PHP trong cùng một quy trình và điều đó có thể gây ra vấn đề, đặc biệt là
+
+25
+00:01:51,000 --> 00:01:56,340
+trong tổ chức của chúng tôi có nhiều nhóm phát triển chuyên môn về các công nghệ khác nhau.
+
+26
+00:01:56,580 --> 00:02:00,260
+Và cuối cùng, tài nguyên tính toán của chúng ta chưa được tối ưu hóa.
+
+27
+00:02:00,270 --> 00:02:06,150
+Nếu ứng dụng của chúng tôi thực hiện một số tính toán nặng đòi hỏi nhiều tài nguyên nhưng cũng thực hiện
+
+28
+00:02:06,150 --> 00:02:11,340
+một số truy vấn nhẹ, chúng ta không thể chỉ định tài nguyên tính toán cho mã cụ thể yêu cầu
+
+29
+00:02:11,340 --> 00:02:11,670
+Nó.
+
+30
+00:02:11,700 --> 00:02:14,820
+Chúng ta phải phân bổ những tài nguyên đó cho toàn bộ ứng dụng.
+
+31
+00:02:14,910 --> 00:02:17,860
+Vậy thì có thể làm gì với tất cả những vấn đề này?
+
+32
+00:02:17,940 --> 00:02:20,640
+Vâng, hãy tham gia vào dịch vụ siêu nhỏ.
+
+33
+00:02:20,850 --> 00:02:24,420
+Kiến trúc vi dịch vụ được cho là có thể giải quyết tất cả những vấn đề này.
+
+34
+00:02:24,450 --> 00:02:29,550
+Hãy nhớ rằng, với các dịch vụ siêu nhỏ, ứng dụng thực chất là một tập hợp các dịch vụ nhỏ, nhẹ và
+
+35
+00:02:29,550 --> 00:02:30,960
+dịch vụ liên kết lỏng lẻo.
+
+36
+00:02:30,960 --> 00:02:33,960
+Mỗi người chỉ thực hiện một và chỉ một nhiệm vụ.
+
+37
+00:02:34,140 --> 00:02:39,870
+Vậy hãy cùng xem kiến trúc này giải quyết các vấn đề được mô tả đầu tiên như thế nào.
+
+38
+00:02:39,900 --> 00:02:45,390
+Vì mỗi dịch vụ chạy trong quy trình riêng của nó và ngoại lệ trong một dịch vụ duy nhất sẽ không làm giảm
+
+39
+00:02:45,390 --> 00:02:50,760
+toàn bộ ứng dụng, chỉ có dịch vụ cụ thể sẽ bị ảnh hưởng và các dịch vụ còn lại sẽ tiếp tục
+
+40
+00:02:50,760 --> 00:02:52,030
+hoạt động như bình thường.
+
+41
+00:02:52,050 --> 00:02:53,610
+Còn bản cập nhật thì sao?
+
+42
+00:02:53,640 --> 00:02:58,550
+Một lần nữa, chúng ta được hưởng lợi từ thực tế là mỗi dịch vụ chạy theo quy trình riêng của nó.
+
+43
+00:02:58,560 --> 00:03:03,450
+Chúng tôi có thể cập nhật từng dịch vụ riêng biệt và không cần phải cập nhật tất cả cùng một lúc.
+
+44
+00:03:03,480 --> 00:03:09,420
+Một tác dụng phụ của việc đó là các bản cập nhật có thể xảy ra thường xuyên hơn nhiều vì tác động của chúng bị hạn chế và
+
+45
+00:03:09,420 --> 00:03:14,220
+việc kiểm tra cần thiết cho mỗi bản cập nhật ít hơn nhiều so với việc kiểm tra toàn bộ ứng dụng.
+
+46
+00:03:14,520 --> 00:03:20,430
+Vấn đề thứ ba cũng được giải quyết ở đây Chúng ta có thể kết hợp và kết hợp các nền tảng phát triển vì các dịch vụ
+
+47
+00:03:20,430 --> 00:03:24,570
+giao tiếp giữa chúng bằng các giao thức không phụ thuộc vào nền tảng như rest.
+
+48
+00:03:24,600 --> 00:03:29,910
+Nhờ đó, mỗi dịch vụ có thể được phát triển bằng cách sử dụng các nền tảng phát triển khác nhau, do đó tối ưu hóa
+
+49
+00:03:29,910 --> 00:03:31,900
+việc thực hiện tổng thể của ứng dụng.
+
+50
+00:03:31,950 --> 00:03:38,540
+Và cuối cùng, vì mỗi dịch vụ chạy theo quy trình riêng nên chúng ta có thể phân bổ tài nguyên cho từng dịch vụ riêng biệt.
+
+51
+00:03:38,550 --> 00:03:44,640
+Ví dụ, chúng ta có thể quyết định rằng một dịch vụ sẽ được phát triển trên bốn máy ảo có 16 lõi
+
+52
+00:03:44,640 --> 00:03:49,440
+mỗi cái, trong khi cái còn lại sẽ chỉ được triển khai trên hai máy ảo có tám lõi.
+
+53
+00:03:49,890 --> 00:03:55,740
+Bây giờ chúng ta hãy quay lại ứng dụng air và xem nó sẽ trông như thế nào nếu được thiết kế bằng các dịch vụ vi mô
+
+54
+00:03:55,740 --> 00:03:56,190
+mẫu.
+
+55
+00:03:56,520 --> 00:04:02,100
+Như bạn có thể thấy, thay vì một quy trình phức tạp, lớn, chúng ta có nhiều dịch vụ nhỏ và nhẹ.
+
+56
+00:04:02,100 --> 00:04:04,410
+Mỗi người tập trung vào một nhiệm vụ duy nhất.
+
+57
+00:04:04,440 --> 00:04:08,750
+Có thể bạn thấy sơ đồ này quen thuộc và đó không phải là sự trùng hợp ngẫu nhiên.
+
+58
+00:04:08,760 --> 00:04:14,820
+Trong nghiên cứu tình huống của chúng tôi, chúng tôi đã thiết kế ứng dụng IO2 để triển khai mô hình dịch vụ vi mô và chúng tôi
+
+59
+00:04:14,820 --> 00:04:17,360
+đã kết thúc với bốn dịch vụ như vậy.
+
+60
+00:04:17,370 --> 00:04:21,000
+Mỗi bên thực hiện một nhiệm vụ riêng và giao tiếp bằng cách nghỉ ngơi.
+
+61
+00:04:21,000 --> 00:04:27,060
+Vì vậy, dịch vụ vi mô là một mô hình tuyệt vời và nên được cân nhắc nghiêm túc cho hầu hết mọi ứng dụng web.
+
+62
+00:04:27,060 --> 00:04:32,670
+Nhưng không phải mọi thứ đều tốt đẹp trong thế giới dịch vụ vi mô và có một số nhược điểm cần được lưu ý.
+
+63
+00:04:32,670 --> 00:04:33,390
+tài khoản.
+
+64
+00:04:33,480 --> 00:04:39,090
+Một hệ thống dựa trên dịch vụ vi mô có thể có rất nhiều dịch vụ, thậm chí lên tới hàng trăm dịch vụ.
+
+65
+00:04:39,090 --> 00:04:44,280
+Ví dụ, Netflix, một trong những công ty dẫn đầu trong thế giới dịch vụ vi mô, sau khi di chuyển dịch vụ phổ biến của mình
+
+66
+00:04:44,280 --> 00:04:50,400
+trang web từ khối đơn đến dịch vụ vi mô, kiến trúc có hơn 700 dịch vụ vi mô.
+
+67
+00:04:50,610 --> 00:04:55,140
+Khi bạn có số lượng lớn các dịch vụ siêu nhỏ như vậy, bạn cần phải giám sát chúng liên tục.
+
+68
+00:04:55,140 --> 00:04:59,910
+Thật không thực tế khi kỳ vọng rằng khi bạn có 700 dịch vụ, mọi thứ sẽ hoạt động.
+
+69
+00:04:59,940 --> 00:05:00,840
+Tìm mọi lúc.
+
+70
+00:05:01,080 --> 00:05:06,900
+Vì vậy, nếu bạn có ý định làm việc trên kiến trúc vi dịch vụ, hãy luôn đưa vào giải pháp giám sát.
+
+71
+00:05:06,930 --> 00:05:12,420
+Ví dụ, Netflix đã phát triển một công cụ có tên là Eureka có thể thực hiện chính xác điều đó.
+
+72
+00:05:12,450 --> 00:05:18,600
+Đây là một công cụ mã nguồn mở và bạn có thể sử dụng nó hoặc bất kỳ công cụ nào khác, nhưng hãy đảm bảo giám sát
+
+73
+00:05:18,600 --> 00:05:20,610
+là một phần không thể thiếu của giải pháp.
+
+74
+00:05:20,910 --> 00:05:23,530
+Vấn đề thứ hai nằm ở chính kiến trúc.
+
+75
+00:05:23,550 --> 00:05:26,310
+Thiết kế hệ thống phân tán là một công việc phức tạp.
+
+76
+00:05:26,340 --> 00:05:31,830
+Hệ thống đơn khối đơn giản hơn nhiều trong việc thiết kế và triển khai, và bạn phải tập trung cao độ vào từng hệ thống.
+
+77
+00:05:31,830 --> 00:05:36,180
+chức năng của dịch vụ để đảm bảo nó tích hợp tốt vào kiến trúc tổng thể.
+
+78
+00:05:36,270 --> 00:05:41,700
+Ví dụ, trong một trong những ứng dụng tôi đã thiết kế cách đây vài năm, nhóm phát triển
+
+79
+00:05:41,700 --> 00:05:47,100
+không quen thuộc với mô hình dịch vụ vi mô, vì vậy chúng tôi đã cùng nhau làm việc để thiết kế mô hình đầu tiên
+
+80
+00:05:47,100 --> 00:05:47,670
+dịch vụ.
+
+81
+00:05:47,700 --> 00:05:54,240
+Kết quả cuối cùng là một dịch vụ tuyệt vời thực hiện chính xác những gì chúng tôi cần, nhưng phải mất nhiều thời gian hơn
+
+82
+00:05:54,240 --> 00:06:00,640
+ba tháng để thiết kế và bản thân dịch vụ chỉ chứa 500 dòng mã, thật nực cười
+
+83
+00:06:00,640 --> 00:06:02,890
+số lượng cho một nhóm phát triển trong ba tháng.
+
+84
+00:06:03,070 --> 00:06:08,380
+Vì vậy, hãy chuẩn bị tinh thần suy nghĩ nhiều về thiết kế ứng dụng dựa trên dịch vụ vi mô.
+
+85
+00:06:09,010 --> 00:06:11,800
+Nhược điểm thứ ba và cũng là nhược điểm cuối cùng là việc thử nghiệm.
+
+86
+00:06:11,830 --> 00:06:16,790
+Việc kiểm thử một ứng dụng dựa trên dịch vụ vi mô khó hơn việc kiểm thử một khối đơn lẻ bằng khối đơn lẻ.
+
+87
+00:06:16,810 --> 00:06:19,870
+Bạn chỉ cần gọi API và thiết lập kết quả mong đợi.
+
+88
+00:06:19,900 --> 00:06:26,260
+Với các dịch vụ siêu nhỏ, một số dịch vụ thường phụ thuộc vào các dịch vụ khác, vì vậy trước tiên bạn phải kiểm tra các dịch vụ phụ thuộc.
+
+89
+00:06:26,260 --> 00:06:29,140
+dịch vụ trước khi thử nghiệm các dịch vụ sử dụng chúng.
+
+90
+00:06:29,650 --> 00:06:32,880
+Trên đây là cái nhìn tổng quan về kiến trúc dịch vụ vi mô.
+
+91
+00:06:32,890 --> 00:06:37,450
+Đây là một mẫu kiến trúc rất phổ biến và nên có trong sổ tay hướng dẫn của bất kỳ kiến trúc sư nào.
+
+92
+00:06:37,480 --> 00:06:42,790
+Trong các tài nguyên cho bài giảng này, bạn có thể tìm thấy tài liệu tham khảo cho một số tài liệu khác về các dịch vụ vi mô
+
+93
+00:06:42,790 --> 00:06:45,070
+mẫu và bạn có thể thoải mái sử dụng chúng.
+

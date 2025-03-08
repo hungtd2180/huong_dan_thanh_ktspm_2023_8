@@ -1,0 +1,172 @@
+1
+00:00:00,140 --> 00:00:03,290
+So what is actually a software architect?
+
+2
+00:00:03,320 --> 00:00:05,000
+What is his objective?
+
+3
+00:00:05,030 --> 00:00:06,950
+What is he actually doing?
+
+4
+00:00:06,980 --> 00:00:08,570
+Who is he working with?
+
+5
+00:00:08,930 --> 00:00:11,120
+Well, all these questions are great.
+
+6
+00:00:11,120 --> 00:00:15,500
+But before we will answer them, let's discuss other types of architect.
+
+7
+00:00:15,530 --> 00:00:19,100
+The word architect in the software world is an overloaded one.
+
+8
+00:00:19,130 --> 00:00:21,350
+There are quite a few types of architects.
+
+9
+00:00:21,350 --> 00:00:28,850
+And let's take a look at the most common ones, which are infrastructure architect, software architect
+
+10
+00:00:28,850 --> 00:00:31,610
+and enterprise architect.
+
+11
+00:00:32,509 --> 00:00:37,520
+There are some more types of architects, but they are more of a niche and we want to talk about them.
+
+12
+00:00:37,730 --> 00:00:40,640
+So let's see what those types of architects are.
+
+13
+00:00:40,670 --> 00:00:43,550
+First, infrastructure architect.
+
+14
+00:00:45,050 --> 00:00:49,970
+The infrastructure architect is responsible for designing the infrastructure of a given system.
+
+15
+00:00:49,970 --> 00:00:56,720
+And by infrastructure I mean all the non software related elements such as servers, virtual machines,
+
+16
+00:00:56,720 --> 00:00:58,760
+network storage, etcetera.
+
+17
+00:00:58,970 --> 00:01:04,970
+He is responsible for all these and also to make sure they work nicely with the system developed.
+
+18
+00:01:05,060 --> 00:01:09,950
+The infrastructure architect should be familiar with the system requirements so he can make sure the
+
+19
+00:01:09,950 --> 00:01:13,280
+infrastructure he designs will support those requirements.
+
+20
+00:01:13,280 --> 00:01:19,970
+For example, if the system is expected to grow by three terabytes annually, the infrastructure architect
+
+21
+00:01:19,970 --> 00:01:24,530
+should make sure the storage for this system will be able to handle this load.
+
+22
+00:01:25,430 --> 00:01:30,270
+The career path for infrastructure architect goes through infrastructure experts.
+
+23
+00:01:30,290 --> 00:01:35,540
+You have to be well versed in infrastructure, design, implementation and configuration in order to
+
+24
+00:01:35,540 --> 00:01:37,880
+become a good infrastructure architect.
+
+25
+00:01:38,270 --> 00:01:40,550
+Next, the software architect.
+
+26
+00:01:40,850 --> 00:01:46,530
+The software architect, sometimes called also solution architect or system architect is responsible
+
+27
+00:01:46,530 --> 00:01:48,360
+for the architecture of the software.
+
+28
+00:01:48,810 --> 00:01:53,760
+Since we will be dealing with a software architect for the rest of this course, I'll skip to the enterprise
+
+29
+00:01:53,760 --> 00:01:54,510
+architect.
+
+30
+00:01:54,930 --> 00:01:59,700
+The enterprise architect works with the top management of the organization to make sure the IT of the
+
+31
+00:01:59,700 --> 00:02:06,600
+organization is an enabler for the business and not a hindrance in many organization's business decisions,
+
+32
+00:02:06,600 --> 00:02:13,050
+such as starting a new sale or entering a new business field is held back by the IT, which needs time
+
+33
+00:02:13,050 --> 00:02:14,730
+to adapt to the new requirements.
+
+34
+00:02:14,760 --> 00:02:20,340
+The enterprise architect usually works with a CEO and CIO of the organization to find out what are the
+
+35
+00:02:20,340 --> 00:02:26,490
+main bottlenecks, what holds back the IT and how it can be streamlined to support business continuity.
+
+36
+00:02:26,520 --> 00:02:31,770
+Since the enterprise architect operates at a very high level in the organization, he has almost no
+
+37
+00:02:31,800 --> 00:02:36,930
+work relations with development oriented roles such as developers and team leaders.
+
+38
+00:02:37,840 --> 00:02:43,240
+In order to become an enterprise architect, one has to be first, a senior software architect or an
+
+39
+00:02:43,240 --> 00:02:44,980
+experienced project manager.
+
+40
+00:02:45,610 --> 00:02:50,500
+As I said earlier, the enterprise architect role is not very technical, and you don't always have
+
+41
+00:02:50,500 --> 00:02:55,960
+to have a practical, hands on experience in order to become one, although it's definitely a plus.
+
+42
+00:02:56,230 --> 00:02:56,860
+Great.
+
+43
+00:02:56,860 --> 00:03:03,310
+So having discussed other types of architects, let's meet our protagonist, the software architect.
+

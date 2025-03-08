@@ -1,0 +1,52 @@
+1
+00:00:00,470 --> 00:00:06,470
+Trong phần này, chúng tôi thảo luận về các mẫu thiết kế mà chúng tôi đã nói đến cho các mẫu, kho lưu trữ nhà máy,
+
+2
+00:00:06,500 --> 00:00:08,630
+mặt tiền và chỉ huy.
+
+3
+00:00:09,260 --> 00:00:13,940
+Những mẫu này, khi được triển khai đúng cách, sẽ giúp bạn thiết kế phần mềm nhất quán hơn,
+
+4
+00:00:13,940 --> 00:00:16,580
+linh hoạt, dễ đọc và dễ bảo trì.
+
+5
+00:00:16,610 --> 00:00:20,120
+Mặt khác, đừng vội vàng áp dụng tất cả các mô hình hiện có.
+
+6
+00:00:20,150 --> 00:00:25,820
+Một trong những sai lầm mà các kiến trúc sư mới vào nghề mắc phải là thiết kế kiến trúc theo hướng mẫu, đây là một
+
+7
+00:00:25,820 --> 00:00:31,530
+kiến trúc cố gắng triển khai càng nhiều mẫu càng tốt thay vì giữ mọi thứ đơn giản.
+
+8
+00:00:31,610 --> 00:00:37,400
+Vì vậy, đừng làm điều đó và chỉ sử dụng các mẫu bạn thực sự cần trong tài liệu nguồn đính kèm
+
+9
+00:00:37,400 --> 00:00:38,210
+đến bài giảng này.
+
+10
+00:00:38,240 --> 00:00:43,280
+Có một số tài nguyên để tìm hiểu thêm về các mẫu thiết kế khác nhau và tôi thực sự khuyên bạn nên
+
+11
+00:00:43,310 --> 00:00:44,330
+đang trải qua chúng.
+
+12
+00:00:44,360 --> 00:00:49,310
+Tôi hy vọng phần này giúp bạn hiểu được những điều cơ bản về các mẫu thiết kế và tôi hy vọng bạn sẽ tìm thấy một
+
+13
+00:00:49,310 --> 00:00:50,390
+giá trị sử dụng chúng.
+

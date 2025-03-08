@@ -1,0 +1,100 @@
+1
+00:00:00,260 --> 00:00:02,690
+Chào mừng đến với phần Kỹ năng mềm.
+
+2
+00:00:02,840 --> 00:00:08,240
+Để trở thành một kiến trúc sư giỏi, không đủ để thành thạo các công nghệ, kiến trúc
+
+3
+00:00:08,240 --> 00:00:10,940
+các mẫu và phương pháp mã hóa tốt nhất.
+
+4
+00:00:11,090 --> 00:00:14,150
+Một kiến trúc sư giỏi phải có kỹ năng mềm tốt.
+
+5
+00:00:14,180 --> 00:00:20,360
+Những kỹ năng mềm này rất cần thiết khi giao tiếp với nhóm dự án từ các nhà phát triển đến dự án
+
+6
+00:00:20,360 --> 00:00:23,180
+quản lý và thậm chí là giám đốc công nghệ và giám đốc điều hành.
+
+7
+00:00:23,600 --> 00:00:25,700
+Chúng ta hãy suy nghĩ về điều này một lát.
+
+8
+00:00:26,240 --> 00:00:30,140
+Kiến trúc sư phần mềm có vị trí rất đặc biệt trong cây tổ chức.
+
+9
+00:00:30,170 --> 00:00:35,720
+Cô ấy có kiến thức rất sâu rộng về ứng dụng và kiến trúc của nó, và cô ấy được kỳ vọng sẽ hướng dẫn
+
+10
+00:00:35,720 --> 00:00:38,390
+nhóm phát triển về việc triển khai thực tế.
+
+11
+00:00:38,390 --> 00:00:41,890
+Nhưng thực tế là cô không có thẩm quyền gì đối với họ.
+
+12
+00:00:41,900 --> 00:00:44,480
+Cô ấy không thể ra lệnh cho cả đội phải làm gì.
+
+13
+00:00:44,510 --> 00:00:46,370
+Cô ấy chỉ có thể giới thiệu thôi.
+
+14
+00:00:46,400 --> 00:00:52,760
+Bây giờ, nếu kiến trúc sư là một người kiêu ngạo, chính trực khiến mọi người khác cảm thấy thấp kém, thì không
+
+15
+00:00:52,760 --> 00:00:54,200
+người ta sẽ muốn làm việc với anh ấy.
+
+16
+00:00:54,200 --> 00:00:57,950
+Và kết quả là không ai muốn triển khai kiến trúc này.
+
+17
+00:00:58,130 --> 00:01:04,379
+Kiến trúc sư phải có khả năng khiến nhóm làm những gì mình muốn mà không cần có thẩm quyền thực sự đối với họ.
+
+18
+00:01:04,410 --> 00:01:10,560
+Điều này được gọi là ảnh hưởng không có thẩm quyền và đây là một trong những thách thức lớn nhất trong phần mềm
+
+19
+00:01:10,560 --> 00:01:11,190
+thế giới.
+
+20
+00:01:11,340 --> 00:01:17,550
+Bạn không muốn bắt các nhà phát triển làm theo những gì bạn yêu cầu vì họ phải làm mà vì họ muốn làm.
+
+21
+00:01:17,580 --> 00:01:23,280
+Trong phần này, chúng ta sẽ khám phá một số kỹ năng mềm sẽ giúp bạn cải thiện đáng kể khả năng giao tiếp của mình
+
+22
+00:01:23,280 --> 00:01:26,460
+kỹ năng làm việc với nhóm và khiến họ muốn làm việc với bạn.
+
+23
+00:01:26,490 --> 00:01:32,250
+Học và tiếp thu những kỹ năng này sẽ giúp bạn trở thành một kiến trúc sư giỏi hơn, một người cực kỳ
+
+24
+00:01:32,250 --> 00:01:38,010
+rất vui khi được làm việc cùng và như một phần thưởng bổ sung, bạn cũng là một người tốt hơn, điều này luôn tốt.
+
+25
+00:01:38,010 --> 00:01:39,480
+Vậy chúng ta đi thôi.
+

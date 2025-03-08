@@ -1,0 +1,152 @@
+1
+00:00:00,200 --> 00:00:05,060
+Thực tế mà nói, cách đi của bạn có thể sẽ bị chỉ trích rất nhiều.
+
+2
+00:00:05,090 --> 00:00:10,550
+Bạn sẽ được hỏi về hầu hết mọi yếu tố thiết kế trong kiến trúc của mình và sẽ được yêu cầu giải thích
+
+3
+00:00:10,550 --> 00:00:11,750
+logic đằng sau nó.
+
+4
+00:00:11,960 --> 00:00:17,390
+Bây giờ, điều tệ nhất khi bị chỉ trích là cảm thấy bị xúc phạm và đáp trả.
+
+5
+00:00:17,570 --> 00:00:23,840
+Làm như vậy sẽ khiến bạn rơi vào thế khó và bị đánh giá là người yếu đuối, thiếu chuyên nghiệp và chưa trưởng thành.
+
+6
+00:00:23,870 --> 00:00:26,570
+Đây không phải là nơi bạn muốn đến.
+
+7
+00:00:26,600 --> 00:00:30,470
+Hãy nhớ rằng có thể có rất nhiều lý do đằng sau lời chỉ trích.
+
+8
+00:00:30,470 --> 00:00:32,570
+Đây có thể là một câu hỏi thực sự.
+
+9
+00:00:32,570 --> 00:00:36,080
+Thực ra, có người muốn đảm bảo kiến trúc được xây dựng chắc chắn.
+
+10
+00:00:36,080 --> 00:00:38,360
+Và cô ấy hỏi tất cả những câu hỏi đúng.
+
+11
+00:00:38,390 --> 00:00:44,660
+Tất nhiên, trong tình huống này bạn phải rất chuyên nghiệp và cung cấp tất cả các sự kiện và logic đằng sau
+
+12
+00:00:44,690 --> 00:00:45,500
+thiết kế của bạn.
+
+13
+00:00:45,680 --> 00:00:50,810
+Cũng nên nhớ rằng, không có gì sai khi nói rằng, Bạn biết không, Đó là một điểm tốt.
+
+14
+00:00:50,810 --> 00:00:51,910
+Tôi không nghĩ tới điều đó.
+
+15
+00:00:51,920 --> 00:00:53,060
+Để tôi kiểm tra lại nhé.
+
+16
+00:00:53,060 --> 00:00:56,090
+Và nếu đúng, tôi sẽ sửa tài liệu kiến trúc.
+
+17
+00:00:56,120 --> 00:01:01,620
+Một phản ứng như vậy sẽ chỉ cải thiện hình ảnh và danh tiếng của bạn với khách hàng và sẽ khiến họ đánh giá cao.
+
+18
+00:01:01,620 --> 00:01:02,610
+bạn thậm chí còn nhiều hơn thế nữa.
+
+19
+00:01:02,640 --> 00:01:08,760
+Bây giờ, bạn sẽ làm gì với một thành viên trong nhóm cố gắng chế giễu bạn và khiến mọi người nghĩ rằng kiến trúc tệ đến mức nào?
+
+20
+00:01:08,760 --> 00:01:09,290
+là?
+
+21
+00:01:09,300 --> 00:01:13,030
+Nhân tiện, có thể có rất nhiều lý do dẫn đến hành vi như vậy.
+
+22
+00:01:13,050 --> 00:01:18,720
+Vài năm trước, tôi có một khách hàng yêu cầu tôi làm kiến trúc sư trưởng của một hệ thống và có một số
+
+23
+00:01:18,720 --> 00:01:21,840
+một người khác cũng là trợ lý của tôi, được thôi, chúng ta hãy gọi là trợ lý.
+
+24
+00:01:21,870 --> 00:01:25,770
+Anh chàng này, tôi sẽ gọi là John, gây cho tôi rất nhiều rắc rối.
+
+25
+00:01:25,770 --> 00:01:31,610
+Anh ta không giúp gì cả, không thực hiện bất kỳ nhiệm vụ nào tôi yêu cầu và luôn đặt câu hỏi về thiết kế.
+
+26
+00:01:31,620 --> 00:01:37,290
+Chỉ vài tháng sau, tôi phát hiện ra John đã hy vọng trở thành kiến trúc sư trưởng của dự án này và đã
+
+27
+00:01:37,290 --> 00:01:39,900
+cực kỳ buồn bã vì không nhận được công việc này.
+
+28
+00:01:39,900 --> 00:01:43,770
+Anh ấy thể hiện sự thất vọng của mình bằng cách liên tục cằn nhằn và chất vấn tôi.
+
+29
+00:01:43,800 --> 00:01:45,810
+Vậy bạn phải làm gì trong trường hợp này?
+
+30
+00:01:45,840 --> 00:01:50,310
+Đầu tiên, đừng cảm thấy bị xúc phạm và đừng bao giờ đáp trả.
+
+31
+00:01:50,340 --> 00:01:55,500
+Dù bạn đúng đến đâu, bạn cũng phải giữ thái độ chuyên nghiệp và luôn là người rộng lượng.
+
+32
+00:01:55,530 --> 00:02:02,970
+Thứ hai, như trước đây, hãy luôn trả lời bằng logic và sự thật, những người tức giận thường không nói nên lời
+
+33
+00:02:02,970 --> 00:02:09,300
+khi đối mặt với logic và sự thật, và cách tốt nhất để xử lý chúng nếu mọi thứ trở nên tồi tệ hơn, hãy tổ chức một cuộc họp
+
+34
+00:02:09,300 --> 00:02:12,030
+với người quản lý và nhẹ nhàng yêu cầu anh ta xử lý vấn đề của bạn.
+
+35
+00:02:12,030 --> 00:02:12,450
+John.
+
+36
+00:02:12,750 --> 00:02:15,120
+Nhưng một lần nữa, đây chỉ là trường hợp ngoại lệ.
+
+37
+00:02:15,210 --> 00:02:20,940
+Không phải tất cả những người đặt câu hỏi về thiết kế của bạn đều làm như vậy để chế giễu, bạn luôn cho rằng những lời chỉ trích là dành cho
+
+38
+00:02:20,940 --> 00:02:24,030
+một mục đích chính đáng và trả lời một cách bình tĩnh và chuyên nghiệp.
+

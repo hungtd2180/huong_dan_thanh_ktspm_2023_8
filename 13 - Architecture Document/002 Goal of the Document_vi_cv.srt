@@ -1,0 +1,88 @@
+1
+00:00:00,530 --> 00:00:03,290
+Vậy mục tiêu của tài liệu kiến trúc là gì?
+
+2
+00:00:03,320 --> 00:00:08,029
+Tại sao chúng ta phải đầu tư nhiều thời gian để cẩn thận soạn thảo một tài liệu toàn diện như vậy?
+
+3
+00:00:08,060 --> 00:00:11,810
+Vâng, đó là một câu hỏi rất hay và chúng ta hãy thử trả lời nhé.
+
+4
+00:00:11,960 --> 00:00:16,880
+Đầu tiên và quan trọng nhất, tài liệu kiến trúc là nền tảng cho những nỗ lực phát triển hệ thống.
+
+5
+00:00:16,880 --> 00:00:19,790
+Nó mô tả những gì cần được phát triển và phát triển như thế nào.
+
+6
+00:00:19,970 --> 00:00:24,770
+Theo nguyên tắc chung, không nên tạo bất kỳ dòng mã nào trước khi nhóm phát triển đọc qua
+
+7
+00:00:24,770 --> 00:00:29,180
+tài liệu kiến trúc và đảm bảo họ hiểu đầy đủ những gì cần phải làm và làm như thế nào.
+
+8
+00:00:29,210 --> 00:00:33,950
+Tài liệu phác thảo ngăn xếp công nghệ và các thành phần và dịch vụ khác nhau tạo nên
+
+9
+00:00:33,950 --> 00:00:36,860
+hệ thống và cách chúng giao tiếp với nhau.
+
+10
+00:00:36,890 --> 00:00:41,210
+Nếu không có kiến thức này, nhóm phát triển sẽ không biết nên phát triển những gì.
+
+11
+00:00:41,240 --> 00:00:46,160
+Khi tuân theo tài liệu, nhóm sẽ có thể phát triển một kế hoạch được cân nhắc kỹ lưỡng và có đầy đủ tài liệu,
+
+12
+00:00:46,160 --> 00:00:49,840
+hệ thống nhanh chóng, an toàn, đáng tin cậy và dễ bảo trì.
+
+13
+00:00:49,850 --> 00:00:53,540
+Điều này không thể thực hiện được nếu không có tài liệu đó.
+
+14
+00:00:53,690 --> 00:00:56,870
+Vì vậy, đây là mục tiêu đầu tiên và cũng là mục tiêu chính của tài liệu này.
+
+15
+00:00:56,870 --> 00:01:01,080
+Nhưng thực tế còn nhiều điều hơn thế nữa mà chúng ta sẽ thấy trong phần này.
+
+16
+00:01:01,110 --> 00:01:04,900
+Tài liệu này cũng mô tả các yêu cầu chức năng và phi chức năng.
+
+17
+00:01:04,920 --> 00:01:11,220
+Trong nhiều trường hợp, đây là lần đầu tiên những yêu cầu như vậy được thể hiện bằng văn bản và đây là
+
+18
+00:01:11,220 --> 00:01:14,190
+Lần đầu tiên khách hàng có thể nhìn thấy nó ở dạng chính thức.
+
+19
+00:01:14,190 --> 00:01:18,840
+Đối với nhóm, đây là cơ hội tuyệt vời để xác nhận các yêu cầu và đảm bảo cùng với
+
+20
+00:01:18,840 --> 00:01:21,810
+khách hàng nhận được những gì họ thực sự muốn.
+
+21
+00:01:21,960 --> 00:01:24,390
+Đây là mục tiêu của tài liệu này.
+
+22
+00:01:24,390 --> 00:01:27,390
+Chúng ta hãy tiếp tục và nói về một số khía cạnh khác của vấn đề này.
+

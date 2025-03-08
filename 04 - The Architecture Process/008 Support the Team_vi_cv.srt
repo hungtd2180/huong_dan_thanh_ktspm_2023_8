@@ -1,0 +1,36 @@
+1
+00:00:00,260 --> 00:00:04,400
+Nhiều kiến trúc sư tin rằng công việc của họ đã hoàn thành khi tài liệu được giao.
+
+2
+00:00:04,460 --> 00:00:06,020
+Đây là một sai lầm lớn.
+
+3
+00:00:06,050 --> 00:00:11,690
+Kiến trúc phần mềm lớn là một thực thể sống động, luôn thay đổi.
+
+4
+00:00:11,690 --> 00:00:15,830
+Bạn phải có mặt để giúp các nhà phát triển đảm bảo rằng họ đang phát triển theo đúng
+
+5
+00:00:15,830 --> 00:00:20,900
+kiến trúc và là một phần của những tình huống khó xử sẽ được nêu ra và sẽ có rất nhiều
+
+6
+00:00:20,900 --> 00:00:26,000
+những tình huống khó xử, tranh luận và đàm phán, và kiến trúc sẽ thay đổi và không chỉ một lần.
+
+7
+00:00:26,000 --> 00:00:27,530
+Vì vậy, bạn phải ủng hộ đội.
+
+8
+00:00:27,530 --> 00:00:32,390
+Nếu bạn không muốn các tài liệu trở thành một vật chặn giấy được tôn vinh và hãy nhớ rằng, bạn chưa hoàn thành cho đến khi
+
+9
+00:00:32,390 --> 00:00:36,770
+hệ thống đang trong quá trình sản xuất và thậm chí khi đó bạn có thể vẫn còn nhiều việc phải làm.
+

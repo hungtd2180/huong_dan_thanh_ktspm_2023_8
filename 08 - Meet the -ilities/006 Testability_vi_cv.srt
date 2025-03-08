@@ -1,0 +1,168 @@
+1
+00:00:00,530 --> 00:00:05,330
+Khả năng kiểm thử là thuộc tính xác định mức độ dễ dàng khi kiểm thử ứng dụng.
+
+2
+00:00:05,360 --> 00:00:10,010
+Bây giờ, khi nói về thử nghiệm, điều quan trọng là phải phân biệt giữa các loại khác nhau
+
+3
+00:00:10,010 --> 00:00:10,910
+của việc thử nghiệm.
+
+4
+00:00:11,270 --> 00:00:14,340
+Loại thử nghiệm quen thuộc nhất là thử nghiệm thủ công.
+
+5
+00:00:14,360 --> 00:00:19,520
+Trong loại này, như bạn có thể mong đợi, người kiểm tra thực tế đang ngồi trước màn hình và kiểm tra nhiều
+
+6
+00:00:19,520 --> 00:00:23,300
+chức năng của hệ thống bằng cách sử dụng giao diện người dùng mà nó cung cấp.
+
+7
+00:00:23,330 --> 00:00:25,910
+Kiểu này không liên quan gì đến khả năng kiểm tra.
+
+8
+00:00:26,000 --> 00:00:31,790
+Các loại thử nghiệm khác liên quan đến mã thực thi mã của ứng dụng chứ không phải một người thực sự
+
+9
+00:00:31,790 --> 00:00:33,260
+thực hiện các chức năng của hệ thống.
+
+10
+00:00:33,290 --> 00:00:37,160
+Điều này xảy ra với thử nghiệm đơn vị và thử nghiệm tích hợp.
+
+11
+00:00:38,680 --> 00:00:39,730
+Với thử nghiệm đơn vị.
+
+12
+00:00:39,730 --> 00:00:42,850
+Một lập trình viên viết mã để kiểm tra mã ứng dụng.
+
+13
+00:00:42,880 --> 00:00:47,590
+Đoạn mã này thực thi các phương thức cụ thể với các tham số và kiểm tra cụ thể.
+
+14
+00:00:47,590 --> 00:00:50,410
+Kết quả trả về từ phương pháp có được mong đợi hay không.
+
+15
+00:00:50,410 --> 00:00:50,920
+Một.
+
+16
+00:00:50,950 --> 00:00:58,240
+Ví dụ, giả sử chúng ta có một phương thức có tên là Add chấp nhận hai tham số là một số nguyên có tên là X và
+
+17
+00:00:58,240 --> 00:00:59,740
+một số nguyên có tên là Y.
+
+18
+00:00:59,860 --> 00:01:03,790
+Phương pháp này sẽ thêm y vào X và trả về kết quả.
+
+19
+00:01:03,960 --> 00:01:06,760
+Một bài kiểm tra đơn vị thông thường sẽ gọi phương thức này và thông qua nó.
+
+20
+00:01:06,760 --> 00:01:09,580
+Hai số đó là năm và chín.
+
+21
+00:01:09,610 --> 00:01:13,390
+Trong trường hợp này, bài kiểm tra đơn vị sẽ mong đợi nhận được số 14.
+
+22
+00:01:13,750 --> 00:01:16,380
+Nếu đúng như vậy, bài kiểm tra được đánh dấu là đã đạt.
+
+23
+00:01:16,390 --> 00:01:19,030
+Nếu không, bài viết sẽ được đánh dấu là không thành công.
+
+24
+00:01:20,140 --> 00:01:23,110
+Kiểm tra tích hợp cũng tương tự như vậy nhưng ở quy mô lớn hơn.
+
+25
+00:01:23,110 --> 00:01:28,030
+Với các thử nghiệm tích hợp, chúng ta không thử nghiệm một phương pháp cụ thể mà là toàn bộ mô-đun hoặc luồng.
+
+26
+00:01:28,060 --> 00:01:33,610
+Chúng tôi thực hiện một phương thức sẽ kích hoạt một chuỗi hành động dẫn đến một kết quả cụ thể.
+
+27
+00:01:33,610 --> 00:01:36,160
+Ví dụ, một bản ghi mới trong cơ sở dữ liệu.
+
+28
+00:01:36,310 --> 00:01:42,950
+Và bây giờ quay lại với khả năng kiểm tra, nghĩa là một hệ thống có thể kiểm tra được là một hệ thống dễ kiểm tra.
+
+29
+00:01:42,950 --> 00:01:50,410
+Sử dụng thử nghiệm đơn vị và thử nghiệm tích hợp và hệ thống dễ thử nghiệm có thể được xác định bằng hai đặc điểm.
+
+30
+00:01:50,420 --> 00:01:55,250
+Một phương pháp và mô hình của nó không phụ thuộc vào các phương pháp hoặc mô hình khác.
+
+31
+00:01:55,250 --> 00:02:00,380
+Và thứ hai, mỗi phương pháp chỉ chịu trách nhiệm cho một và chỉ một hành động.
+
+32
+00:02:00,800 --> 00:02:06,410
+Bằng cách tạo ra các phương pháp độc lập với nhau, chúng tôi giúp bạn dễ dàng kiểm tra từng phương pháp một cách riêng biệt,
+
+33
+00:02:06,410 --> 00:02:12,320
+đó chính xác là những gì chúng tôi đang cố gắng đạt được bằng cách sử dụng các bài kiểm tra đơn vị và đảm bảo mỗi phương pháp đều có trách nhiệm
+
+34
+00:02:12,320 --> 00:02:14,960
+chỉ cần một hành động, rất dễ để kiểm tra.
+
+35
+00:02:15,080 --> 00:02:16,760
+Để kiểm tra hành động cụ thể.
+
+36
+00:02:16,760 --> 00:02:22,280
+Ví dụ, nếu phương thức Add được đề cập ở trên sẽ kiểm tra xem các số đã cho có phải là số dương hay không,
+
+37
+00:02:22,310 --> 00:02:26,170
+chúng ta sẽ gặp vấn đề khi tách biệt hành động Thêm và kiểm tra nó một cách cụ thể.
+
+38
+00:02:26,180 --> 00:02:30,250
+Trong trường hợp này, cách đúng là kiểm tra theo phương pháp riêng biệt.
+
+39
+00:02:30,260 --> 00:02:34,130
+Chúng ta hãy gọi đó là kiểm tra dương tính và thử nghiệm riêng.
+
+40
+00:02:34,160 --> 00:02:38,600
+Kỹ thuật phổ biến nhất để đạt được hai đặc điểm này là sử dụng kỹ thuật tiêm phụ thuộc.
+
+41
+00:02:38,630 --> 00:02:42,170
+Thường được gọi là chết và khái niệm trách nhiệm duy nhất.
+
+42
+00:02:42,200 --> 00:02:44,660
+Chúng ta sẽ thảo luận về hai điều này sau trong khóa học này.
+

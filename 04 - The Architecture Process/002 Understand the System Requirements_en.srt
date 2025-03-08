@@ -1,0 +1,56 @@
+1
+00:00:00,230 --> 00:00:04,520
+The first thing on architecture should do when beginning a work on a new system is to understand the
+
+2
+00:00:04,520 --> 00:00:05,870
+system's requirements.
+
+3
+00:00:06,200 --> 00:00:06,860
+Okay.
+
+4
+00:00:06,860 --> 00:00:11,450
+Well, actually, the first thing is to understand the system's goals, as we discussed earlier in this
+
+5
+00:00:11,450 --> 00:00:12,020
+course.
+
+6
+00:00:12,020 --> 00:00:15,650
+But an actual architectural process begins with the requirements.
+
+7
+00:00:15,770 --> 00:00:19,610
+Remember, the requirements describe what the system should do.
+
+8
+00:00:19,640 --> 00:00:25,970
+They usually begin with high level tasks such as allow end users to view telemetry data and often describe
+
+9
+00:00:25,970 --> 00:00:30,110
+also workflows, logical services and user interface elements.
+
+10
+00:00:30,320 --> 00:00:35,400
+Those requirements are usually defined by the system analyst who works directly with the client.
+
+11
+00:00:35,420 --> 00:00:41,000
+So in most cases, your first work meeting after the obligatory introductory meeting will be with the
+
+12
+00:00:41,000 --> 00:00:42,080
+system analyst.
+
+13
+00:00:42,320 --> 00:00:47,000
+In this meeting you will discuss the requirements of the new system and probably set dates for future
+
+14
+00:00:47,000 --> 00:00:48,680
+meetings on the same subject.
+

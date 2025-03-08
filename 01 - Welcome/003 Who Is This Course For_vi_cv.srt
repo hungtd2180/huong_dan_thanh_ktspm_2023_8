@@ -1,0 +1,63 @@
+1
+00:00:00,170 --> 00:00:02,930
+Vậy đối tượng hoàn hảo cho khóa học này là ai?
+
+2
+00:00:03,050 --> 00:00:07,520
+Để được hưởng lợi nhiều nhất từ ​​khóa học này, bạn phải có một số kiến ​​thức nền về lập trình.
+
+3
+00:00:07,520 --> 00:00:10,940
+Thực sự không quan trọng bạn đang lập trình bằng nền tảng nào.
+
+4
+00:00:10,970 --> 00:00:14,450
+Có thể là Java Dotnet, PHP hoặc bất kỳ nền tảng nào khác.
+
+5
+00:00:14,450 --> 00:00:16,550
+Sẽ không có mã hóa trong khóa học này.
+
+6
+00:00:16,640 --> 00:00:22,310
+Tuy nhiên, khóa học này có thể không phù hợp với các nhà phát triển nói chung, những người mới bắt đầu bước vào
+
+7
+00:00:22,310 --> 00:00:23,480
+thế giới lập trình.
+
+8
+00:00:23,720 --> 00:00:29,750
+Chúng ta sẽ thảo luận về một số nguyên tắc phần mềm nâng cao mà các nhà phát triển mới vào nghề có thể không biết,
+
+9
+00:00:29,750 --> 00:00:35,390
+và điều này có thể khiến họ khó nắm bắt các khái niệm được mô tả trong khóa học này hơn.
+
+10
+00:00:37,450 --> 00:00:40,720
+Ngoài ra, sẽ tốt hơn nếu có một số kinh nghiệm về phần phụ trợ.
+
+11
+00:00:40,720 --> 00:00:46,630
+Hầu hết các vấn đề về kiến ​​trúc đều xuất hiện ở phần cuối, nơi bảo mật hiệu suất, bộ nhớ đệm
+
+12
+00:00:46,630 --> 00:00:49,570
+và các cân nhắc khác cực kỳ quan trọng.
+
+13
+00:00:49,750 --> 00:00:55,780
+Vì vậy, tóm lại, đối tượng hoàn hảo cho khóa học này là người có ba năm kinh nghiệm làm
+
+14
+00:00:55,780 --> 00:00:58,770
+một nhà phát triển có kinh nghiệm phát triển phần cuối.
+
+15
+00:00:58,780 --> 00:01:03,880
+Tuy nhiên, bất kỳ ai có một số kinh nghiệm phát triển sẽ được hưởng lợi từ khóa học này và bạn được
+
+16
+00:01:03,880 --> 00:01:08,350
+mời liên hệ với tôi về bất kỳ câu hỏi nào bạn có về tài liệu khóa học này.

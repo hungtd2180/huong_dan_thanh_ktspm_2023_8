@@ -1,0 +1,92 @@
+1
+00:00:00,320 --> 00:00:05,210
+Khi lựa chọn ngăn xếp công nghệ, một trong những phần quan trọng nhất của việc thiết kế hệ thống,
+
+2
+00:00:05,210 --> 00:00:09,080
+luôn tính đến kiến thức và kỹ năng hiện có của nhóm phát triển.
+
+3
+00:00:09,230 --> 00:00:15,050
+Việc quyết định sử dụng một công nghệ mà nhóm phát triển không quen thuộc có thể gây ra hai vấn đề.
+
+4
+00:00:15,140 --> 00:00:18,380
+Đầu tiên là sự chậm trễ trong việc phát triển dự án.
+
+5
+00:00:18,410 --> 00:00:23,060
+Các nhà phát triển sẽ phải dành thời gian đào tạo để làm quen với công nghệ mới.
+
+6
+00:00:23,090 --> 00:00:27,380
+Điều này sẽ ảnh hưởng đến tiến độ dự án và có thể dẫn đến việc giao hàng trễ.
+
+7
+00:00:27,410 --> 00:00:30,140
+Vấn đề tiềm ẩn thứ hai là chất lượng thấp.
+
+8
+00:00:30,170 --> 00:00:35,060
+Vì hệ thống sẽ là hệ thống đầu tiên mà nhóm phát triển sẽ phát triển trong ngăn xếp công nghệ đã chọn,
+
+9
+00:00:35,090 --> 00:00:40,460
+các nhà phát triển sẽ không có kinh nghiệm với nền tảng này và sẽ không biết cách tránh những cạm bẫy phổ biến,
+
+10
+00:00:40,460 --> 00:00:46,070
+triển khai các biện pháp tốt nhất và tận dụng một số lợi ích tiềm ẩn có trong mọi nền tảng phát triển.
+
+11
+00:00:46,370 --> 00:00:50,900
+Bây giờ, cần lưu ý rằng không phải mọi cuộc di chuyển nền tảng đều được tạo ra như nhau.
+
+12
+00:00:51,050 --> 00:00:57,140
+Ví dụ, đối với nhà phát triển backend, việc di chuyển từ Dotnet sang Java có thể cần một số nỗ lực, nhưng tại
+
+13
+00:00:57,140 --> 00:00:59,480
+Cuối cùng, đây là những nền tảng khá giống nhau.
+
+14
+00:00:59,480 --> 00:01:04,090
+Và nếu nhà phát triển làm tốt với Dotnet, anh ta có thể sẽ trở thành một nhà phát triển Java giỏi.
+
+15
+00:01:04,110 --> 00:01:09,630
+Mặt khác, một nhà phát triển máy tính để bàn Windows di chuyển sang phát triển phần cuối Python sẽ có
+
+16
+00:01:09,630 --> 00:01:12,040
+thật sự rất khó để trở thành một nhà phát triển Python giỏi.
+
+17
+00:01:12,060 --> 00:01:17,400
+Không chỉ phát triển máy tính để bàn về mặt khái niệm rất khác so với phát triển web và đòi hỏi một
+
+18
+00:01:17,400 --> 00:01:18,060
+tư duy.
+
+19
+00:01:18,090 --> 00:01:21,000
+Bản thân các nền tảng này hoàn toàn khác nhau.
+
+20
+00:01:21,030 --> 00:01:26,160
+Họ chuyển từ ngôn ngữ hướng đối tượng có kiểu tĩnh như dotnet sang ngôn ngữ động.
+
+21
+00:01:26,160 --> 00:01:27,990
+Python có thể không dễ học.
+
+22
+00:01:28,140 --> 00:01:33,840
+Tóm lại, khi đánh giá các ngăn xếp công nghệ khác nhau, hãy luôn kiểm tra xem sự phát triển hiện tại là gì
+
+23
+00:01:33,840 --> 00:01:39,000
+kỹ năng của nhóm là gì và cố gắng hiểu tác động của nó đến tiến độ và chất lượng của dự án.
+

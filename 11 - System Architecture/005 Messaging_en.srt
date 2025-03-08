@@ -1,0 +1,884 @@
+1
+00:00:00,330 --> 00:00:02,400
+Let's talk about messaging.
+
+2
+00:00:02,430 --> 00:00:08,730
+The term messaging refers to the means of communication between the various services in the system.
+
+3
+00:00:08,910 --> 00:00:14,700
+In previous sections, we talked about the spider web, the situation where all services are communicating
+
+4
+00:00:14,700 --> 00:00:21,180
+directly with each other, which results in a huge mess of tangled URLs that will crash and burn when
+
+5
+00:00:21,180 --> 00:00:22,470
+a URL changes.
+
+6
+00:00:22,500 --> 00:00:26,520
+This scenario is relevant when the services communicate via rest API.
+
+7
+00:00:27,090 --> 00:00:33,030
+However, there are more ways for services to communicate with each other and it's important to be aware
+
+8
+00:00:33,030 --> 00:00:38,310
+of these ways and to be able to make an educated decision about which messaging platform to choose.
+
+9
+00:00:38,340 --> 00:00:41,280
+Note that the messaging selection is not exclusive.
+
+10
+00:00:41,310 --> 00:00:46,560
+We can often find systems with various messaging methods, each used for different purposes.
+
+11
+00:00:46,590 --> 00:00:50,390
+There is nothing wrong with that, and I actually encourage you to do that.
+
+12
+00:00:50,400 --> 00:00:56,670
+Just make sure to always use the right messaging method for the right task before exploring the various
+
+13
+00:00:56,670 --> 00:00:57,220
+methods.
+
+14
+00:00:57,240 --> 00:00:59,130
+Let's first set the criteria.
+
+15
+00:00:59,130 --> 00:01:02,590
+We will examine them with to make the comparison more useful.
+
+16
+00:01:02,770 --> 00:01:05,379
+The first criterion is of course, performance.
+
+17
+00:01:05,379 --> 00:01:08,650
+We will always prefer a faster method of messaging.
+
+18
+00:01:08,680 --> 00:01:11,080
+Next is message size.
+
+19
+00:01:11,320 --> 00:01:17,320
+Indeed, most systems do not require large messages between services, but sometimes it is useful.
+
+20
+00:01:17,620 --> 00:01:20,020
+Next criterion is the execution model.
+
+21
+00:01:20,050 --> 00:01:25,780
+Some messaging platform requires a request response model which has its limitations, and some enable
+
+22
+00:01:25,780 --> 00:01:27,670
+long running processes to execute.
+
+23
+00:01:28,150 --> 00:01:31,480
+Another important criterion is the feedback and reliability.
+
+24
+00:01:31,480 --> 00:01:37,330
+And by feedback I mean the ability to determine whether the messaging has failed and if it is the ability
+
+25
+00:01:37,330 --> 00:01:39,340
+to perform some corrective action.
+
+26
+00:01:39,370 --> 00:01:44,470
+Not all messaging methods report the status, and this is definitely an important consideration.
+
+27
+00:01:44,740 --> 00:01:47,710
+Feedback is also closely related to reliability.
+
+28
+00:01:47,740 --> 00:01:53,320
+A reliable method will ensure the message will be received even if there was a problem during the process.
+
+29
+00:01:53,350 --> 00:01:58,540
+This is very important for mission critical systems, where the data in the message has to be received
+
+30
+00:01:58,540 --> 00:01:59,710
+no matter what.
+
+31
+00:02:00,130 --> 00:02:03,480
+The last criterion is the complexity of implementation.
+
+32
+00:02:03,490 --> 00:02:08,979
+If a messaging platform requires a lot of development effort, that is something we would like to know
+
+33
+00:02:08,979 --> 00:02:09,820
+beforehand.
+
+34
+00:02:10,449 --> 00:02:15,400
+So let's begin our list with the most common messaging method Rest API.
+
+35
+00:02:16,060 --> 00:02:22,510
+Rest API is a de facto standard for Http based messaging method between services with rest API.
+
+36
+00:02:22,540 --> 00:02:29,710
+The service exposes an API that uses the Http protocol standard, including Http verbs that indicates
+
+37
+00:02:29,710 --> 00:02:31,090
+the type of action to be made.
+
+38
+00:02:31,090 --> 00:02:38,710
+For example, get will mean retrieve entity and post means create new entity and so on.
+
+39
+00:02:40,700 --> 00:02:41,810
+Performance wise.
+
+40
+00:02:41,810 --> 00:02:44,330
+Rest API is usually very fast.
+
+41
+00:02:44,360 --> 00:02:49,910
+Most web servers have excellent performance when dealing with regular Http requests, which is exactly
+
+42
+00:02:49,910 --> 00:02:55,490
+what rest API is, and since it enables direct connection between the services with no intermediate
+
+43
+00:02:55,490 --> 00:02:59,720
+mechanism between them, it's one of the fastest messaging platforms out there.
+
+44
+00:03:00,320 --> 00:03:05,780
+Regarding message size, rest API adheres to the same limitation as the Http protocol.
+
+45
+00:03:05,810 --> 00:03:12,290
+Get operations are usually limited to eight kilobytes, while post or put operations are usually limited
+
+46
+00:03:12,290 --> 00:03:16,720
+to a few dozen megabytes, although it varies between web servers and platform.
+
+47
+00:03:16,730 --> 00:03:22,640
+The execution model of rest API is request response, which means it's great for quick short actions
+
+48
+00:03:22,640 --> 00:03:25,340
+but not suitable for long processes.
+
+49
+00:03:25,670 --> 00:03:27,500
+And what about the feedback?
+
+50
+00:03:27,590 --> 00:03:30,020
+This is where rest API really shines.
+
+51
+00:03:30,020 --> 00:03:35,300
+Since it's a synchronous method, the caller gets immediate feedback on the action via Http response
+
+52
+00:03:35,300 --> 00:03:35,720
+code.
+
+53
+00:03:35,750 --> 00:03:39,360
+If there is a problem with the execution, it will get a 500.
+
+54
+00:03:39,390 --> 00:03:43,230
+If there was a problem with the message it sent, it will get 400.
+
+55
+00:03:43,230 --> 00:03:47,100
+And of course, if everything went just fine, it will get 200.
+
+56
+00:03:47,130 --> 00:03:51,560
+There are lots more response codes, but these are the most common.
+
+57
+00:03:51,570 --> 00:03:56,940
+By getting immediate feedback, the caller can implement an error policy to be executed when there is
+
+58
+00:03:56,940 --> 00:04:00,030
+a problem such as retry logging and more.
+
+59
+00:04:00,690 --> 00:04:06,780
+So while rest API is not a reliable method in the sense that a message will arrive even if there is
+
+60
+00:04:06,780 --> 00:04:09,610
+a problem, the excellent feedback compensates for that.
+
+61
+00:04:09,630 --> 00:04:12,960
+However, we still don't get a fully reliable system.
+
+62
+00:04:14,460 --> 00:04:17,790
+The complexity of Rest API is virtually non-existent.
+
+63
+00:04:18,000 --> 00:04:23,160
+All the modern development languages have specialized libraries which will help you create Rest API
+
+64
+00:04:23,160 --> 00:04:29,400
+and implement other technical parts such as serializing the Json converted to objects and more.
+
+65
+00:04:29,430 --> 00:04:32,620
+For example, in Dotnet we have ASP.Net web API.
+
+66
+00:04:32,730 --> 00:04:37,200
+In Java we have spring in Python, Flask and so on.
+
+67
+00:04:37,230 --> 00:04:39,000
+The bottom line is very simple.
+
+68
+00:04:39,030 --> 00:04:41,820
+Developing rest API is extremely easy.
+
+69
+00:04:42,690 --> 00:04:48,690
+Rest API is extremely useful for traditional web based systems with either user interface that can talk
+
+70
+00:04:48,690 --> 00:04:49,650
+rest and Json.
+
+71
+00:04:49,650 --> 00:04:55,470
+And almost every client technology can do that nowadays or other services that calls its API.
+
+72
+00:04:55,710 --> 00:05:00,690
+If you are designing such a system, rest API should be the first place to look for messaging method.
+
+73
+00:05:02,540 --> 00:05:06,890
+Our next messaging method is http push notifications or pubsub.
+
+74
+00:05:08,060 --> 00:05:13,280
+Push notification basically means that a client subscribes to an event, and when this event occurs,
+
+75
+00:05:13,280 --> 00:05:16,100
+it gets a notification from the server about it.
+
+76
+00:05:16,490 --> 00:05:20,590
+Now, there are many tools that implement this method with various kinds of technologies.
+
+77
+00:05:20,600 --> 00:05:24,230
+Many of them implement Rest API that we discussed earlier.
+
+78
+00:05:24,320 --> 00:05:29,780
+I want to focus this discussion on special kinds of push notifications, those that enable real time
+
+79
+00:05:29,780 --> 00:05:31,850
+communication for web applications.
+
+80
+00:05:32,060 --> 00:05:37,970
+This kind of push notification is implemented by libraries such as SignalR or Socket.io.
+
+81
+00:05:38,240 --> 00:05:44,690
+These libraries use advanced web techniques such as WebSockets to keep an Http client always connected
+
+82
+00:05:44,690 --> 00:05:51,230
+to the browser, thus enabling bidirectional real time communication as opposed to the more traditional
+
+83
+00:05:51,230 --> 00:05:55,610
+request response model where only the client initiates the communication.
+
+84
+00:05:55,940 --> 00:06:01,730
+This method is extremely useful in applications such as chat, where a lot of clients should be notified
+
+85
+00:06:01,730 --> 00:06:04,610
+about events such as user typing a message.
+
+86
+00:06:04,640 --> 00:06:08,010
+So how this method stacks against our criteria.
+
+87
+00:06:08,790 --> 00:06:11,460
+Performance wise, this method is amazing.
+
+88
+00:06:11,460 --> 00:06:16,680
+Using these libraries messages are sent and received blazingly fast and with huge scale.
+
+89
+00:06:16,710 --> 00:06:23,420
+One machine can send more than 10,000 messages per second and usually even more regarding message size.
+
+90
+00:06:23,430 --> 00:06:26,160
+This method is quite limited, although not always.
+
+91
+00:06:26,160 --> 00:06:27,450
+There is a formal limitation.
+
+92
+00:06:27,450 --> 00:06:32,550
+Usually message size will not exceed a few kilobytes in order to achieve the desired performance and
+
+93
+00:06:32,550 --> 00:06:33,210
+scale.
+
+94
+00:06:33,930 --> 00:06:37,650
+The execution model of Http push notifications is quite unique.
+
+95
+00:06:37,680 --> 00:06:43,320
+The usual implementation is that a client method is subscribed to a server event and when it is raised
+
+96
+00:06:43,320 --> 00:06:45,000
+this method is executed.
+
+97
+00:06:45,030 --> 00:06:50,550
+The subscription is maintained usually with open websocket connection or some implementation of long
+
+98
+00:06:50,550 --> 00:06:51,190
+polling.
+
+99
+00:06:51,210 --> 00:06:55,170
+When an event is raised, a method is executed on the client.
+
+100
+00:06:55,260 --> 00:07:00,780
+The server itself does not wait for the method to complete but is already done when the method is executed.
+
+101
+00:07:00,780 --> 00:07:04,350
+So there are no issues such as timeout or busy threads.
+
+102
+00:07:04,710 --> 00:07:08,550
+The feedback and reliability are the biggest drawbacks of this method.
+
+103
+00:07:08,550 --> 00:07:14,820
+These libraries work in a fire and forget mode, and when the message is sent to the subscribers, they
+
+104
+00:07:14,820 --> 00:07:17,430
+have no idea whether it was received or not.
+
+105
+00:07:17,670 --> 00:07:23,520
+This means that if for some reason the message was not received, whether because of network problems
+
+106
+00:07:23,520 --> 00:07:27,030
+or a bug in the client, the server will never know about it.
+
+107
+00:07:27,060 --> 00:07:33,240
+This makes those libraries not useful for applications that require high reliability, which is most
+
+108
+00:07:33,240 --> 00:07:34,820
+of the server side applications.
+
+109
+00:07:34,830 --> 00:07:40,140
+This is the reason these libraries are used mainly for client server applications, where reliability
+
+110
+00:07:40,140 --> 00:07:42,000
+has a much less important role.
+
+111
+00:07:42,000 --> 00:07:47,490
+For example, in a chat app, if a single message is not delivered, it's not a disaster.
+
+112
+00:07:47,490 --> 00:07:53,190
+But if a request to perform some action on a service is not received, the consequences can be much
+
+113
+00:07:53,190 --> 00:07:53,850
+worse.
+
+114
+00:07:54,180 --> 00:08:00,810
+Now there are methods to make Http push notifications more reliable, but they require a complex development
+
+115
+00:08:00,810 --> 00:08:03,810
+which will make the whole thing a lot less attractive.
+
+116
+00:08:03,840 --> 00:08:07,770
+Regarding complexity, it is extremely easy to implement these methods.
+
+117
+00:08:07,800 --> 00:08:11,850
+The various libraries are very easy to use and the client method is very simple.
+
+118
+00:08:11,850 --> 00:08:17,850
+It usually takes no more than 2 or 3 lines of code to implement the server side and another two lines
+
+119
+00:08:17,850 --> 00:08:18,870
+for the client.
+
+120
+00:08:19,080 --> 00:08:21,480
+So where should we use this method?
+
+121
+00:08:22,110 --> 00:08:27,570
+As we said before, it's most useful in scenarios where a lot of clients should be notified fast and
+
+122
+00:08:27,570 --> 00:08:30,210
+we can make a compromise on the reliability.
+
+123
+00:08:30,240 --> 00:08:36,360
+Such an apps are chat applications or monitoring apps that get constant notification, and if one notification
+
+124
+00:08:36,360 --> 00:08:37,860
+is lost, we can live with it.
+
+125
+00:08:38,700 --> 00:08:45,300
+The next messaging method is queue with the queue as a messaging platform, the flow is quite different
+
+126
+00:08:45,300 --> 00:08:46,440
+from the previous method.
+
+127
+00:08:46,440 --> 00:08:52,950
+We discussed with Queue a service that wants to pass a message to another service places the message
+
+128
+00:08:52,950 --> 00:08:56,760
+in a queue engine such as Rabbitmq or MQ series.
+
+129
+00:08:56,940 --> 00:09:03,390
+The other service calls the queue periodically or gets a notification from the queue and then gets the
+
+130
+00:09:03,390 --> 00:09:04,650
+message from the queue.
+
+131
+00:09:05,190 --> 00:09:11,700
+The main advantage of queue is that we can be sure that message will be handled once and only once after
+
+132
+00:09:11,700 --> 00:09:13,320
+the service grabs the message.
+
+133
+00:09:13,320 --> 00:09:15,480
+No other service will get this message.
+
+134
+00:09:15,990 --> 00:09:21,360
+In addition, a queue can ensure the messages are processed in the order they were received, which
+
+135
+00:09:21,360 --> 00:09:23,640
+is not always the case with the rest API.
+
+136
+00:09:23,910 --> 00:09:26,070
+So let's analyze this method.
+
+137
+00:09:27,030 --> 00:09:28,230
+Regarding performance.
+
+138
+00:09:28,230 --> 00:09:34,230
+This is one of the weakest points of the method as opposed to rest API and push notification which implements
+
+139
+00:09:34,230 --> 00:09:36,140
+direct connection between the two services.
+
+140
+00:09:36,150 --> 00:09:41,810
+Here we have an additional stop the queue itself that adds some latency to the messaging process.
+
+141
+00:09:41,820 --> 00:09:47,250
+In addition, if the services use polling to check for new messages in the queue, there is usually
+
+142
+00:09:47,250 --> 00:09:50,820
+a timer that schedules the polling, which adds another delay.
+
+143
+00:09:50,820 --> 00:09:56,940
+If the queue uses message persistence, which means the message is written to the database before transmitting.
+
+144
+00:09:56,970 --> 00:10:00,450
+To improve reliability, then the performance is even worse.
+
+145
+00:10:01,020 --> 00:10:04,290
+Regarding message size, it varies between queue engines.
+
+146
+00:10:04,530 --> 00:10:10,320
+For example, Rabbitmq limits the message size to two gigabytes, although it is highly recommended
+
+147
+00:10:10,320 --> 00:10:12,120
+to use much smaller messages.
+
+148
+00:10:12,150 --> 00:10:15,720
+IBM WebSphere MQ limits the size to 100MB.
+
+149
+00:10:15,720 --> 00:10:21,180
+However, the best practice is to always use smaller messages, and if the content of the message is
+
+150
+00:10:21,180 --> 00:10:28,000
+huge, for example a video file then store it in external data store and have the message itself hold
+
+151
+00:10:28,000 --> 00:10:29,560
+a reference to its location.
+
+152
+00:10:30,780 --> 00:10:36,420
+The execution model for Q, as we already discussed, is pulling the service, expecting the message
+
+153
+00:10:36,420 --> 00:10:39,990
+should periodically poll the queue and check for a new message.
+
+154
+00:10:39,990 --> 00:10:42,960
+And when one is found, retrieve and handle it.
+
+155
+00:10:43,230 --> 00:10:45,630
+And what about feedback and reliability?
+
+156
+00:10:45,660 --> 00:10:48,640
+Well, here the situation is a bit more complicated.
+
+157
+00:10:48,660 --> 00:10:54,690
+The message sender, the one that puts the message in the queue, will have no idea if the target actually
+
+158
+00:10:54,690 --> 00:10:55,350
+got it.
+
+159
+00:10:55,380 --> 00:10:59,700
+All it knows is whether the queue received the message and is ready to pass it on.
+
+160
+00:10:59,880 --> 00:11:05,130
+On the other hand, the queue usually has comprehensive management and monitoring tools to make sure
+
+161
+00:11:05,130 --> 00:11:10,770
+messages are not lost on the way to the other side and has its means to make sure there are no problems
+
+162
+00:11:10,770 --> 00:11:11,610
+along the way.
+
+163
+00:11:11,640 --> 00:11:14,730
+So the feedback to the sender is not very critical.
+
+164
+00:11:14,800 --> 00:11:20,940
+Aside of the actual handoff to the queue, the bottom line is that the queue is one of the most reliable
+
+165
+00:11:20,940 --> 00:11:21,930
+forms of messaging.
+
+166
+00:11:21,930 --> 00:11:27,120
+And if this is your top priority at the expense of performance, you should definitely consider using
+
+167
+00:11:27,120 --> 00:11:27,600
+it.
+
+168
+00:11:27,720 --> 00:11:29,670
+And what about complexity?
+
+169
+00:11:30,790 --> 00:11:34,210
+Well, this is also one of the weak points of Q.
+
+170
+00:11:34,240 --> 00:11:39,340
+In order to use it, we should include in our architecture a Q engine and learn how to use it.
+
+171
+00:11:39,370 --> 00:11:43,450
+We will need to dedicate time for training and setup and complex.
+
+172
+00:11:43,450 --> 00:11:45,780
+Q Engines can be quite difficult to maintain.
+
+173
+00:11:45,790 --> 00:11:48,790
+It's much more complicated than a simple rest API.
+
+174
+00:11:49,000 --> 00:11:51,340
+So when should we use Q's?
+
+175
+00:11:51,820 --> 00:11:58,060
+The typical use case for Q's is a system with a lot of messages flowing around where the order and reliability
+
+176
+00:11:58,060 --> 00:12:01,270
+is top priority and the performance are secondary to them.
+
+177
+00:12:01,420 --> 00:12:05,500
+One common example is a system that processes a huge amount of data.
+
+178
+00:12:05,530 --> 00:12:11,370
+The data is pushed to queue and wait to its turn and then it gets processed and stored in the data store.
+
+179
+00:12:11,380 --> 00:12:16,840
+In such a system, the performance is usually not a top priority because there is no user or service
+
+180
+00:12:16,840 --> 00:12:19,870
+that waits on the other side for the processed data.
+
+181
+00:12:19,900 --> 00:12:23,740
+It is stored for future use, which is not known at the moment.
+
+182
+00:12:23,950 --> 00:12:29,940
+Such a system is a classic example of queue based messaging, since it takes advantage of the queues
+
+183
+00:12:29,950 --> 00:12:35,540
+strength, order and reliability while not affected from its main weakness performance.
+
+184
+00:12:36,800 --> 00:12:41,840
+The last messaging method we will discuss is file based and database based messaging.
+
+185
+00:12:41,870 --> 00:12:47,240
+This cumbersome term is actually quite similar to the method with one important difference.
+
+186
+00:12:47,390 --> 00:12:52,550
+While in the queue method, the message was put in the queue and the queue engine made sure the message
+
+187
+00:12:52,550 --> 00:12:55,130
+will be processed once and only once.
+
+188
+00:12:55,160 --> 00:13:03,080
+In this method the message is placed either as a file in a designated folder or as a record in a database.
+
+189
+00:13:04,100 --> 00:13:09,950
+Once stored, Azure Services periodically pulls the file system of the database and look for new messages.
+
+190
+00:13:09,980 --> 00:13:16,220
+When found, the message is retrieved either by reading the file or by retrieving the data and processed.
+
+191
+00:13:17,150 --> 00:13:22,790
+I won't go through all the criteria of this method since it's quite similar to the queues criteria except
+
+192
+00:13:22,790 --> 00:13:26,290
+the message size, which is not limited in this method as you can see.
+
+193
+00:13:26,300 --> 00:13:30,140
+But I want to highlight the main difference between this method and the queue.
+
+194
+00:13:30,410 --> 00:13:31,550
+Why with queue?
+
+195
+00:13:31,580 --> 00:13:37,500
+There is a guarantee the message will be handled once and only once in this method there is no such
+
+196
+00:13:37,530 --> 00:13:38,250
+guarantee.
+
+197
+00:13:38,370 --> 00:13:44,640
+Now imagine the following scenario In our application we have a service that constantly pulls the file
+
+198
+00:13:44,640 --> 00:13:47,370
+system for new files containing telemetry data.
+
+199
+00:13:47,670 --> 00:13:52,230
+Since we want the system to be redundant, we have three instances of this service.
+
+200
+00:13:52,230 --> 00:13:54,000
+All pull the same folder.
+
+201
+00:13:54,090 --> 00:13:58,140
+Now assume a new file is added to the folder immediately.
+
+202
+00:13:58,170 --> 00:13:59,100
+Three services.
+
+203
+00:13:59,100 --> 00:14:02,430
+Try to open it for read and process its contents.
+
+204
+00:14:02,460 --> 00:14:04,590
+This poses two problems.
+
+205
+00:14:04,710 --> 00:14:11,580
+One the file may be locked by the first service accessing it and the other services will get an exception.
+
+206
+00:14:11,580 --> 00:14:17,610
+This can actually prove itself as a good thing architecture wise, since this way the data won't be
+
+207
+00:14:17,610 --> 00:14:19,110
+processed more than once.
+
+208
+00:14:19,110 --> 00:14:21,780
+And this brings us to the second problem.
+
+209
+00:14:21,930 --> 00:14:27,090
+If the file is accessible, we have three services processing its content and storing the data.
+
+210
+00:14:27,120 --> 00:14:32,970
+Now, this might be tolerable in some scenarios, but in many others it can corrupt data.
+
+211
+00:14:33,000 --> 00:14:38,730
+Imagine a file containing money transfer records if the record will be processed more than once.
+
+212
+00:14:38,730 --> 00:14:41,700
+It can spell a disaster on the account owner.
+
+213
+00:14:41,730 --> 00:14:47,160
+Now, these problems can be solved using complex mechanisms and flags, but it's best to avoid it if
+
+214
+00:14:47,160 --> 00:14:47,790
+possible.
+
+215
+00:14:47,790 --> 00:14:51,570
+Whenever a polling mechanism is required, it's best to use queues.
+
+216
+00:14:52,230 --> 00:14:56,370
+So that concludes our discussion about messaging methods.
+
+217
+00:14:56,370 --> 00:15:01,170
+In this table, I summarized all the aspects of the various methods we discussed to make your choice
+
+218
+00:15:01,170 --> 00:15:02,010
+easier.
+
+219
+00:15:02,040 --> 00:15:06,210
+Remember, always make sure you are using the right messaging method.
+
+220
+00:15:06,240 --> 00:15:09,720
+There is nothing wrong in using more than one method in your system.
+
+221
+00:15:09,720 --> 00:15:12,540
+Just make sure to always use the right one.
+

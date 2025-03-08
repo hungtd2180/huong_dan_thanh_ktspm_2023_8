@@ -1,0 +1,288 @@
+1
+00:00:00,240 --> 00:00:04,950
+Dependency injection complements the interface pattern we discussed in the previous lecture.
+
+2
+00:00:05,220 --> 00:00:10,740
+As a reminder, we talked about interfaces as a better mechanism for communicating between classes in
+
+3
+00:00:10,740 --> 00:00:13,590
+order to make the code more modular and flexible.
+
+4
+00:00:13,710 --> 00:00:19,890
+We finished the lecture with an open ended topic how to inject a concrete implementation into the interface
+
+5
+00:00:19,890 --> 00:00:22,230
+so it can be used by the calling code.
+
+6
+00:00:22,260 --> 00:00:27,270
+And the answer to that question is the topic of this lecture dependency injection.
+
+7
+00:00:28,320 --> 00:00:35,070
+Dependency injection is defined in Wikipedia as a technique whereby one object supplies the dependencies
+
+8
+00:00:35,070 --> 00:00:36,420
+of another object.
+
+9
+00:00:36,450 --> 00:00:42,510
+Now, this might sound a bit complicated and well, academic, but in reality it's quite simple.
+
+10
+00:00:42,780 --> 00:00:46,260
+Let's look again at the example we discussed in the previous lecture.
+
+11
+00:00:46,290 --> 00:00:49,910
+We had a main class that calls the calculator class.
+
+12
+00:00:49,920 --> 00:00:54,630
+In this example, the calculator is a dependency of the main class.
+
+13
+00:00:54,630 --> 00:00:56,520
+The main class depends on it.
+
+14
+00:00:56,550 --> 00:01:02,410
+In order to be able to function correctly using the dependency injection technique, we are able to
+
+15
+00:01:02,410 --> 00:01:08,620
+inject a concrete implementation or a class to the interface representing the dependency without the
+
+16
+00:01:08,620 --> 00:01:11,710
+main class knowing which concrete implementation is used.
+
+17
+00:01:11,830 --> 00:01:17,680
+If you will look closely at the code, we can see the dependency injection happening at the Getinstance
+
+18
+00:01:17,680 --> 00:01:18,340
+line.
+
+19
+00:01:18,550 --> 00:01:24,540
+In this line, the Getinstance returns a class that implements the eye calculator interface.
+
+20
+00:01:24,550 --> 00:01:27,700
+Note that the main class has no idea what class it is.
+
+21
+00:01:27,730 --> 00:01:31,500
+It can be the class we saw previously or a completely different one.
+
+22
+00:01:31,510 --> 00:01:35,620
+The only thing known is that this class implements the required interface.
+
+23
+00:01:35,650 --> 00:01:41,040
+This way we created a middleman between the main class and the calculator class.
+
+24
+00:01:41,050 --> 00:01:47,500
+Or in other words, we eliminated the strong coupling between the two, making our code much more modular
+
+25
+00:01:47,500 --> 00:01:48,580
+and flexible.
+
+26
+00:01:49,500 --> 00:01:55,260
+Now, the real question is, of course, what is happening with this mysterious Getinstance method?
+
+27
+00:01:55,290 --> 00:01:57,700
+Well, the answer is actually quite simple.
+
+28
+00:01:57,720 --> 00:02:04,410
+This method, often referred as factory method, simply executes some logic and decides which class
+
+29
+00:02:04,410 --> 00:02:05,570
+should be injected.
+
+30
+00:02:05,580 --> 00:02:10,229
+An object is then instantiated from the class and returned as an interface.
+
+31
+00:02:10,259 --> 00:02:13,650
+Let's look at some possible implementations of this method.
+
+32
+00:02:14,280 --> 00:02:16,190
+The first implementation is the simplest.
+
+33
+00:02:16,200 --> 00:02:19,380
+It simply returns an instance of the calculator class.
+
+34
+00:02:19,410 --> 00:02:21,450
+This implementation has no logic at all.
+
+35
+00:02:21,450 --> 00:02:25,620
+It always returns the same class, although seems a bit odd.
+
+36
+00:02:25,650 --> 00:02:31,140
+This implementation still carries value since even with only a single class, the use of a dependency
+
+37
+00:02:31,140 --> 00:02:37,950
+injection helps us to create a modular code that is not tied with strong coupling and allows us to switch
+
+38
+00:02:37,950 --> 00:02:41,640
+to another implementation without the calling code being aware of that.
+
+39
+00:02:42,450 --> 00:02:45,390
+Now let's look at another implementation.
+
+40
+00:02:45,420 --> 00:02:50,820
+This implementation is more sophisticated in that the calling code specifies a parameter that helps
+
+41
+00:02:50,820 --> 00:02:53,140
+the method decide which instance to return.
+
+42
+00:02:53,160 --> 00:02:58,020
+In this case, the calling code specifies which type of calculator should be used.
+
+43
+00:02:58,140 --> 00:03:04,230
+As you can see, the method examines the calculator type received, instantiates the correct class and
+
+44
+00:03:04,230 --> 00:03:05,310
+returns it.
+
+45
+00:03:05,370 --> 00:03:09,570
+Note again that the calling code has no idea which implementation it got.
+
+46
+00:03:09,600 --> 00:03:11,880
+It always works with the interface.
+
+47
+00:03:12,540 --> 00:03:18,400
+A very common variation of this example is to define the parameter in a configuration file.
+
+48
+00:03:18,420 --> 00:03:24,660
+This way the factory gets no parameter at all but reads the parameter from a configuration file.
+
+49
+00:03:24,690 --> 00:03:29,850
+This is a very common pattern in data access layer implementations where the database type to be used
+
+50
+00:03:29,850 --> 00:03:36,450
+is stored in the configuration file and the factory method reads it from there and decides which data
+
+51
+00:03:36,450 --> 00:03:38,250
+access layer implementation to return.
+
+52
+00:03:39,550 --> 00:03:44,260
+Up until now, we saw examples of dependency injection using a factory method, but there are actually
+
+53
+00:03:44,260 --> 00:03:45,400
+other types of it.
+
+54
+00:03:46,080 --> 00:03:50,050
+One of the most common types of injection is a constructor injection.
+
+55
+00:03:50,070 --> 00:03:56,400
+Using constructor injection, the class receives instantiated interfaces in its constructor and uses
+
+56
+00:03:56,400 --> 00:03:57,990
+it in the class's methods.
+
+57
+00:03:58,080 --> 00:04:01,560
+Here is an example of such an injection, this time in Dotnet core.
+
+58
+00:04:01,950 --> 00:04:08,400
+As you can see, the class's constructor receives an Ilogger interface as a parameter and can use it
+
+59
+00:04:08,400 --> 00:04:09,150
+immediately.
+
+60
+00:04:09,180 --> 00:04:13,950
+The framework in this case instantiated it for the class and no further action is needed.
+
+61
+00:04:14,250 --> 00:04:19,589
+The main advantage of the constructor injection pattern over the traditional pattern is testability.
+
+62
+00:04:19,740 --> 00:04:23,910
+A class that gets injected in its constructor is much more easy to test.
+
+63
+00:04:23,940 --> 00:04:29,190
+The test method can instantiate the class with mock objects and simply run the test.
+
+64
+00:04:29,220 --> 00:04:31,350
+This example demonstrates that.
+
+65
+00:04:32,070 --> 00:04:38,160
+Note that the test method instantiates the class with a mock logger which does nothing and the tested
+
+66
+00:04:38,160 --> 00:04:41,140
+class has no idea about it from its point of view.
+
+67
+00:04:41,160 --> 00:04:43,950
+This is a normal logger with full functionality.
+
+68
+00:04:45,430 --> 00:04:48,940
+So this concludes our discussion on interfaces and dependency injection.
+
+69
+00:04:48,940 --> 00:04:55,570
+It's not trivial, but once implemented properly, the result is a modular, flexible and easy to maintain
+
+70
+00:04:55,570 --> 00:04:56,650
+and modify code.
+
+71
+00:04:56,680 --> 00:04:57,760
+Give it a try.
+
+72
+00:04:57,790 --> 00:05:03,040
+You may get a bit frustrated at the beginning, but in the end you will see the light, believe me.
+

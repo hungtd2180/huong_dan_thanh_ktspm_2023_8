@@ -1,0 +1,428 @@
+1
+00:00:00,530 --> 00:00:05,450
+Bây giờ đã đến lúc tìm hiểu một trong những từ viết tắt quan trọng nhất trong phát triển và kiến trúc phần mềm
+
+2
+00:00:05,450 --> 00:00:07,190
+thế giới, Chất rắn.
+
+3
+00:00:07,400 --> 00:00:14,120
+Từ viết tắt này, được Bob Martin đặt ra vào năm 2000, đại diện cho năm nguyên tắc thiết kế mã,
+
+4
+00:00:14,120 --> 00:00:19,220
+khi triển khai, hãy làm cho mã dễ hiểu, linh hoạt và dễ bảo trì.
+
+5
+00:00:19,430 --> 00:00:25,820
+Solid là viết tắt của Nguyên tắc đóng mở - Nguyên tắc trách nhiệm đơn lẻ.
+
+6
+00:00:25,850 --> 00:00:32,420
+Nguyên lý thay thế Liskov, Nguyên lý phân tách giao diện và sự phụ thuộc.
+
+7
+00:00:32,420 --> 00:00:33,710
+Nguyên lý đảo ngược.
+
+8
+00:00:34,910 --> 00:00:39,680
+Như chúng ta sẽ thấy trong một phút, tất cả những nguyên tắc này thực sự là lẽ thường tình, và bạn sẽ không tìm thấy
+
+9
+00:00:39,680 --> 00:00:41,300
+có điều gì bất ngờ lớn ở đây không.
+
+10
+00:00:41,330 --> 00:00:46,580
+Tuy nhiên, đôi khi chúng ta có xu hướng quên đi điều hiển nhiên và tốt hơn hết là nên có một lời nhắc nhở chắc chắn.
+
+11
+00:00:46,610 --> 00:00:50,560
+Xem những gì tôi đã làm ở đây để đảm bảo chúng tôi vẫn sẽ thực hiện chúng.
+
+12
+00:00:50,570 --> 00:00:53,060
+Vậy chúng ta hãy cùng tìm hiểu sâu hơn về năm nguyên tắc này.
+
+13
+00:00:53,720 --> 00:00:57,500
+Nguyên tắc trách nhiệm duy nhất nêu ra một điều khá đơn giản.
+
+14
+00:00:57,680 --> 00:01:03,290
+Mỗi lớp, mô-đun hoặc thậm chí phương thức chỉ nên có một và chỉ một trách nhiệm.
+
+15
+00:01:03,320 --> 00:01:07,170
+Hay nói cách khác, đó là một chức năng duy nhất được xác định rõ ràng.
+
+16
+00:01:07,190 --> 00:01:12,050
+Và chức năng này phải được đóng gói đầy đủ trong lớp hoặc mô-đun này.
+
+17
+00:01:12,080 --> 00:01:13,790
+Hãy cùng xem một ví dụ.
+
+18
+00:01:14,000 --> 00:01:17,420
+Giả sử chúng ta có một hệ thống ghi lại mọi hoạt động.
+
+19
+00:01:17,450 --> 00:01:22,040
+Bây giờ, khi ghi vào nhật ký, có hai câu hỏi chính cần phải trả lời.
+
+20
+00:01:22,040 --> 00:01:27,290
+Đầu tiên, những gì cần được viết, bao gồm nội dung của tin nhắn nhật ký và định dạng của nó, đó là
+
+21
+00:01:27,290 --> 00:01:28,890
+thường là Json hoặc XML.
+
+22
+00:01:28,970 --> 00:01:31,950
+Và thứ hai, nên viết ở đâu?
+
+23
+00:01:31,970 --> 00:01:36,000
+Bản ghi nhật ký thường được gửi tới một tệp, một cơ sở dữ liệu hoặc một nhật ký sự kiện.
+
+24
+00:01:36,000 --> 00:01:36,630
+Vân vân.
+
+25
+00:01:36,630 --> 00:01:40,560
+Và điều này cần được xác định và xử lý như một phần của quá trình ghi nhật ký.
+
+26
+00:01:40,650 --> 00:01:46,260
+Nguyên tắc trách nhiệm duy nhất nêu rằng hai câu hỏi này phải được trả lời bằng hai cách riêng biệt
+
+27
+00:01:46,260 --> 00:01:46,950
+lớp học.
+
+28
+00:01:46,950 --> 00:01:52,500
+Một người chịu trách nhiệm soạn thảo tin nhắn và người kia sẽ xử lý việc viết tin nhắn.
+
+29
+00:01:52,530 --> 00:01:57,600
+Vì vậy, thay vì một phương thức duy nhất thực hiện hai nhiệm vụ, chúng ta sẽ có hai lớp.
+
+30
+00:01:57,600 --> 00:02:00,150
+Mỗi người thực hiện những nhiệm vụ đó một cách riêng biệt.
+
+31
+00:02:00,510 --> 00:02:06,060
+Lý do đằng sau nguyên tắc trách nhiệm duy nhất là khi cần thay đổi, nó sẽ ảnh hưởng đến
+
+32
+00:02:06,060 --> 00:02:12,120
+chỉ một mô-đun mã được xác định rõ ràng và chúng ta sẽ không cần phải tìm kiếm những nơi tối nghĩa khác trong mã đó
+
+33
+00:02:12,120 --> 00:02:13,860
+có thể bị ảnh hưởng bởi sự thay đổi.
+
+34
+00:02:14,010 --> 00:02:18,900
+Việc đóng gói này sẽ làm cho mã của chúng ta rất dễ bảo trì và khá linh hoạt.
+
+35
+00:02:19,360 --> 00:02:21,970
+Tiếp theo là nguyên lý đóng mở.
+
+36
+00:02:22,860 --> 00:02:28,730
+Nguyên tắc đóng mở nêu rằng một thực thể phần mềm phải mở để mở rộng nhưng đóng để
+
+37
+00:02:28,730 --> 00:02:29,810
+sự sửa đổi.
+
+38
+00:02:29,930 --> 00:02:36,500
+Điều này có nghĩa là để thay đổi hành vi của một thực thể phần mềm, ví dụ như lớp, chúng ta sẽ không
+
+39
+00:02:36,500 --> 00:02:40,010
+cần phải sửa đổi mã của nó, sau đó biên dịch lại và triển khai lại.
+
+40
+00:02:40,010 --> 00:02:44,120
+Nhưng chúng ta sẽ có cách để mở rộng chức năng của nó mà không cần động tới mã.
+
+41
+00:02:44,300 --> 00:02:49,400
+Nguyên tắc này có liên quan chặt chẽ đến thuộc tính chất lượng khả năng mở rộng mà chúng ta đã nói đến ở phần trước
+
+42
+00:02:49,400 --> 00:02:50,060
+phần.
+
+43
+00:02:50,660 --> 00:02:53,520
+Có nhiều cách để thực hiện nguyên tắc này.
+
+44
+00:02:53,540 --> 00:02:59,840
+Phổ biến nhất trong số chúng là khả năng kế thừa trong các ngôn ngữ hướng đối tượng, hoặc kế thừa
+
+45
+00:02:59,840 --> 00:03:02,240
+một lớp cụ thể hoặc một lớp trừu tượng.
+
+46
+00:03:02,270 --> 00:03:06,620
+Chúng tôi đạt được mục tiêu tương tự là mở rộng chức năng mà không cần sửa đổi mã.
+
+47
+00:03:06,650 --> 00:03:13,010
+Tất nhiên, các loại tiện ích mở rộng khác, chẳng hạn như plug-in, cũng được sử dụng rộng rãi và đáp ứng được nhu cầu mở.
+
+48
+00:03:13,010 --> 00:03:14,030
+nguyên tắc đóng.
+
+49
+00:03:15,080 --> 00:03:21,320
+Lý do đằng sau nguyên tắc này khá rõ ràng. Chúng tôi muốn mã của mình linh hoạt nhất có thể và cho phép
+
+50
+00:03:21,320 --> 00:03:25,800
+cho phép chúng tôi thực hiện thay đổi nhanh chóng mà không cần sửa đổi và biên dịch mã hiện có.
+
+51
+00:03:26,920 --> 00:03:30,610
+Nguyên lý tiếp theo là nguyên lý thay thế Liskov.
+
+52
+00:03:30,730 --> 00:03:35,320
+Nguyên tắc này có vẻ phức tạp hơn một chút so với các nguyên tắc khác, nhưng đừng lo lắng, chúng tôi sẽ
+
+53
+00:03:35,320 --> 00:03:36,160
+giải thích nó.
+
+54
+00:03:36,400 --> 00:03:44,680
+Nguyên tắc này nêu rằng nếu s là một kiểu con của T, thì các đối tượng của kiểu T có thể được thay thế bằng các đối tượng
+
+55
+00:03:44,680 --> 00:03:49,870
+của kiểu S mà không làm thay đổi bất kỳ thuộc tính mong muốn nào của chương trình.
+
+56
+00:03:50,920 --> 00:03:55,770
+Thoạt nhìn, điều này có vẻ tương tự như định nghĩa đa hình trong các ngôn ngữ hướng đối tượng.
+
+57
+00:03:55,780 --> 00:04:02,080
+Hãy nhớ rằng đa hình về cơ bản nêu rằng kiểu có thể được thay thế bằng kiểu con của nó mà không làm hỏng
+
+58
+00:04:02,080 --> 00:04:02,660
+mã.
+
+59
+00:04:02,680 --> 00:04:05,800
+Nhưng có một sự khác biệt cơ bản giữa hai điều này.
+
+60
+00:04:05,830 --> 00:04:11,830
+Nguyên lý thay thế Liskov không nói về mã hóa hay biên dịch, mà nói về cái gì đó được gọi là
+
+61
+00:04:11,830 --> 00:04:13,780
+phân loại hành vi.
+
+62
+00:04:13,990 --> 00:04:16,180
+Chúng ta hãy giải thích bằng một ví dụ.
+
+63
+00:04:16,360 --> 00:04:19,420
+Giả sử chúng ta có một mã cần gửi thư.
+
+64
+00:04:19,450 --> 00:04:25,540
+Mã này gọi một lớp có tên là mail sender và gọi phương thức send của nó, như bạn có thể đoán,
+
+65
+00:04:25,540 --> 00:04:26,900
+gửi thư.
+
+66
+00:04:26,960 --> 00:04:33,020
+Vài tháng sau, các nhà phát triển đưa ra một lớp gửi thư tốt hơn có tên là Advanced Sender,
+
+67
+00:04:33,020 --> 00:04:35,630
+được kế thừa từ người gửi thư gốc.
+
+68
+00:04:36,020 --> 00:04:41,090
+Các nhà phát triển muốn thay thế người gửi thư bằng người gửi nâng cao trong mã của họ.
+
+69
+00:04:41,630 --> 00:04:47,600
+Nguyên lý thay thế Liskov nói rằng khi thực hiện sự thay thế này, hành vi của lệnh gửi
+
+70
+00:04:47,600 --> 00:04:49,550
+phương pháp không nên thay đổi.
+
+71
+00:04:49,580 --> 00:04:54,020
+Nếu phương pháp ban đầu chỉ gửi thư thì phương pháp mới cũng có thể thực hiện tương tự.
+
+72
+00:04:54,050 --> 00:04:59,750
+Không nên có chức năng mới nào mà mã gọi không mong đợi, chẳng hạn như đưa ra các ngoại lệ mới
+
+73
+00:04:59,750 --> 00:05:01,550
+là kết quả của sự thay thế.
+
+74
+00:05:01,580 --> 00:05:07,760
+Ví dụ, nếu phương pháp mới không chỉ gửi thư mà còn tự động gửi một bản sao của thư
+
+75
+00:05:07,790 --> 00:05:13,790
+đến hộp thư lưu trữ trung tâm sẽ phá vỡ nguyên tắc và nên tránh vì nó phá vỡ hành vi
+
+76
+00:05:13,790 --> 00:05:14,960
+của loại ban đầu.
+
+77
+00:05:15,230 --> 00:05:19,940
+Lý do đằng sau nguyên tắc này là để tránh những hành vi ẩn giấu không được mong muốn bởi lời kêu gọi
+
+78
+00:05:19,940 --> 00:05:24,140
+mã, do đó làm cho mã khó gỡ lỗi và bảo trì hơn nhiều.
+
+79
+00:05:26,340 --> 00:05:29,550
+Nguyên tắc tiếp theo là nguyên tắc phân tách giao diện.
+
+80
+00:05:29,580 --> 00:05:36,180
+Nguyên tắc này nêu rằng nhiều giao diện dành riêng cho máy khách sẽ tốt hơn một giao diện chung.
+
+81
+00:05:36,210 --> 00:05:38,730
+Một lần nữa, chúng ta hãy xem một ví dụ.
+
+82
+00:05:39,310 --> 00:05:42,160
+Giả sử chúng ta có một lớp xử lý dữ liệu.
+
+83
+00:05:42,190 --> 00:05:47,200
+Lớp học bắt đầu với hai phương pháp nhỏ là đọc dữ liệu và xác thực dữ liệu.
+
+84
+00:05:47,770 --> 00:05:52,180
+Một giao diện có tên là bộ xử lý dữ liệu đã được tạo ra để xác định hai phương pháp đó.
+
+85
+00:05:52,450 --> 00:05:57,790
+Trong khi làm việc với lớp, các phương thức bổ sung đã được thêm vào để xử lý nhiều tác vụ hơn như giải mã
+
+86
+00:05:57,790 --> 00:06:01,330
+dữ liệu, dữ liệu được mã hóa và gửi dữ liệu tới hệ thống bên ngoài.
+
+87
+00:06:01,900 --> 00:06:04,450
+Phương pháp này cũng đã được thêm vào giao diện.
+
+88
+00:06:04,750 --> 00:06:05,590
+Bây giờ thì sao?
+
+89
+00:06:05,590 --> 00:06:10,930
+Chúng ta có một giao diện phức tạp với năm phương thức phải được một lớp duy nhất triển khai.
+
+90
+00:06:11,140 --> 00:06:13,700
+Hãy nhớ nguyên tắc trách nhiệm duy nhất.
+
+91
+00:06:13,720 --> 00:06:18,130
+Nếu bạn xem xét lớp học, bạn có thể thấy rõ ràng rằng lớp học đã phá vỡ nguyên tắc này.
+
+92
+00:06:18,130 --> 00:06:23,860
+Hiện nay nó xử lý ba tác vụ: xử lý dữ liệu, giải mã, mã hóa và gửi dữ liệu.
+
+93
+00:06:23,890 --> 00:06:28,390
+Các nhà phát triển cũng nhận thấy điều này và quyết định chia lớp thành ba lớp riêng biệt.
+
+94
+00:06:28,390 --> 00:06:30,590
+Tuy nhiên, hiện tại họ đang gặp phải một vấn đề.
+
+95
+00:06:30,610 --> 00:06:35,500
+Giao diện buộc họ phải triển khai tất cả các phương thức đó bằng một lớp duy nhất.
+
+96
+00:06:35,860 --> 00:06:42,110
+Nguyên tắc phân tách giao diện cho biết chúng ta nên tạo nhiều giao diện mỏng và được xác định rõ ràng
+
+97
+00:06:42,110 --> 00:06:44,090
+hơn là một mục đích chung duy nhất.
+
+98
+00:06:44,090 --> 00:06:49,550
+Vì vậy, trong trường hợp của chúng tôi, thay vì một giao diện duy nhất với năm phương pháp, chúng tôi sẽ tốt hơn với ba
+
+99
+00:06:49,550 --> 00:06:51,890
+giao diện với 1 hoặc 2 phương pháp.
+
+100
+00:06:51,920 --> 00:06:57,110
+Theo cách này, mã của chúng ta có thể mang tính mô-đun và linh hoạt, đồng thời vẫn duy trì nguyên tắc trách nhiệm duy nhất.
+
+101
+00:06:58,670 --> 00:07:02,060
+Nguyên tắc cuối cùng là nguyên tắc mà chúng ta đã nói đến trong bài giảng trước.
+
+102
+00:07:02,060 --> 00:07:06,100
+Nguyên lý đảo ngược phụ thuộc, còn gọi là nguyên lý tiêm phụ thuộc.
+
+103
+00:07:06,110 --> 00:07:07,430
+Nếu bạn không nhớ.
+
+104
+00:07:07,460 --> 00:07:10,040
+Quay lại bài giảng trước và xem lại.
+
+105
+00:07:10,580 --> 00:07:12,680
+Và đó là tất cả về từ viết tắt chắc chắn.
+
+106
+00:07:12,740 --> 00:07:17,570
+Một lần nữa, các nguyên tắc ở đây đều là lẽ thường tình, nhưng đó là lời nhắc nhở hữu ích và sẽ giúp bạn giữ
+
+107
+00:07:17,570 --> 00:07:20,390
+Mã rõ ràng, linh hoạt và dễ bảo trì.
+

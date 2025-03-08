@@ -1,0 +1,76 @@
+1
+00:00:00,140 --> 00:00:06,170
+Console applications or command line applications, often called CLI, are applications that run inside
+
+2
+00:00:06,170 --> 00:00:08,150
+the command line of the operating system.
+
+3
+00:00:08,480 --> 00:00:11,450
+These applications have few common characteristics.
+
+4
+00:00:12,110 --> 00:00:13,880
+They don't have any fancy UI.
+
+5
+00:00:14,030 --> 00:00:19,310
+The only thing the end user sees are the lines of text displayed in the command line window.
+
+6
+00:00:20,090 --> 00:00:22,340
+They require some level of technical knowledge.
+
+7
+00:00:22,340 --> 00:00:27,880
+Console applications are triggered by typing a command in clear text, often with some parameters.
+
+8
+00:00:27,890 --> 00:00:33,200
+Normal end users who are accustomed to point and click applications will have a hard time working with
+
+9
+00:00:33,200 --> 00:00:34,430
+these applications.
+
+10
+00:00:35,500 --> 00:00:39,130
+They usually have a very limited interaction with the user, if at all.
+
+11
+00:00:39,130 --> 00:00:44,050
+In most cases, the console application might present some questions to the user in order to configure
+
+12
+00:00:44,050 --> 00:00:46,480
+its behavior, and then we'll start running.
+
+13
+00:00:46,480 --> 00:00:49,900
+This configuration can be set also via command line parameters.
+
+14
+00:00:50,770 --> 00:00:55,720
+They can trigger long running process as well as execute very short focused actions.
+
+15
+00:00:56,450 --> 00:01:01,790
+Console applications are used mainly for executing long running processes that do not interact with
+
+16
+00:01:01,790 --> 00:01:08,390
+the end user and short focused actions, such as exporting data that should be used by specially trained
+
+17
+00:01:08,390 --> 00:01:09,380
+power users.
+
+18
+00:01:09,560 --> 00:01:14,750
+It's important to note that the fact the application is a console application does not change anything
+
+19
+00:01:14,750 --> 00:01:20,420
+to its architecture or the architecture patterns and practices apply also to console applications.
+

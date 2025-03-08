@@ -1,0 +1,136 @@
+1
+00:00:00,170 --> 00:00:02,480
+Welcome to the highlights section.
+
+2
+00:00:02,600 --> 00:00:07,490
+Right now you are probably scratching your head and trying to figure out if there is anything wrong
+
+3
+00:00:07,490 --> 00:00:08,420
+with your video player.
+
+4
+00:00:08,450 --> 00:00:10,220
+Don't worry, there isn't.
+
+5
+00:00:10,730 --> 00:00:15,290
+The highlights are a group of quality attributes that define the application's capabilities.
+
+6
+00:00:15,320 --> 00:00:19,610
+Almost all those quality attributes have a name that ends with ility.
+
+7
+00:00:19,670 --> 00:00:22,190
+Hence the Ilities in the title.
+
+8
+00:00:22,610 --> 00:00:28,430
+Quality attribute is an attribute of the system that describes a specific capability that is not related
+
+9
+00:00:28,430 --> 00:00:30,710
+to a specific functional requirement.
+
+10
+00:00:30,740 --> 00:00:35,030
+If that sounds similar to non-functional requirements, it's not a coincidence.
+
+11
+00:00:35,120 --> 00:00:40,250
+Quality attributes are closely tied to non-functional requirements and they describe what technical
+
+12
+00:00:40,250 --> 00:00:44,390
+capability should be used in order to fulfill the non-functional requirement.
+
+13
+00:00:44,420 --> 00:00:48,680
+For example, let's say we have the following non-functional requirement.
+
+14
+00:00:48,770 --> 00:00:54,020
+The system must work under a heavy load but should not waste money on unused resources.
+
+15
+00:00:54,440 --> 00:01:00,180
+This is one of the most common non-functional requirements, even if not defined with this exact wording.
+
+16
+00:01:00,420 --> 00:01:05,489
+In order to make it work, we will have to implement the scalability quality attribute.
+
+17
+00:01:05,519 --> 00:01:06,420
+Now, don't worry.
+
+18
+00:01:06,420 --> 00:01:09,850
+If you are not familiar with scalability, we will discuss it in a minute.
+
+19
+00:01:09,870 --> 00:01:13,980
+Suffice to say that the system must have the scalability quality attribute.
+
+20
+00:01:14,070 --> 00:01:19,530
+Once the quality attributes are set, the architecture must take them into account and make sure they
+
+21
+00:01:19,530 --> 00:01:20,610
+are implemented.
+
+22
+00:01:20,640 --> 00:01:27,360
+So the relationship between non-functional requirements, quality attributes and architecture is this.
+
+23
+00:01:27,600 --> 00:01:31,470
+Non-functional requirements define what the system should deal with.
+
+24
+00:01:32,130 --> 00:01:39,390
+Quality attributes Map those requirements to technical capabilities and the architecture describes how
+
+25
+00:01:39,390 --> 00:01:42,330
+those capabilities will be designed and implemented.
+
+26
+00:01:42,510 --> 00:01:44,580
+There are a lot of quality attributes.
+
+27
+00:01:44,580 --> 00:01:50,100
+In fact, if you will take a look at the Wikipedia page for quality attributes, you will find dozens
+
+28
+00:01:50,100 --> 00:01:50,820
+of them.
+
+29
+00:01:50,910 --> 00:01:56,520
+In this section, we will discuss the most important and common quality attributes and explain what
+
+30
+00:01:56,520 --> 00:01:59,010
+is their meaning and how they will affect the system.
+
+31
+00:01:59,010 --> 00:01:59,880
+Architecture.
+
+32
+00:02:00,300 --> 00:02:10,289
+The ilities we are going to discuss are scalability, manageability, modularity, extensibility and
+
+33
+00:02:10,289 --> 00:02:11,500
+testability.
+
+34
+00:02:11,520 --> 00:02:14,370
+So let's go and discuss scalability first.
+

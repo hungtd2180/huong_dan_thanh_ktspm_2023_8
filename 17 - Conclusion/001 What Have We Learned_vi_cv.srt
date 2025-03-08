@@ -1,0 +1,240 @@
+1
+00:00:00,380 --> 00:00:01,020
+Ồ.
+
+2
+00:00:01,130 --> 00:00:02,180
+Chúng tôi đã làm được.
+
+3
+00:00:02,210 --> 00:00:05,570
+Chúng ta vừa đến đích của một hành trình rất dài.
+
+4
+00:00:05,600 --> 00:00:11,910
+Bạn bắt đầu hành trình này với tư cách là một nhà phát triển, nhà phân tích hệ thống hoặc trưởng nhóm, và bạn kết thúc với tư cách là một kiến trúc sư.
+
+5
+00:00:11,930 --> 00:00:13,160
+Chúc mừng.
+
+6
+00:00:13,400 --> 00:00:17,000
+Chúng ta hãy cùng xem lại nhanh những gì chúng ta đã học trong khóa học này.
+
+7
+00:00:17,270 --> 00:00:22,760
+Sau phần giới thiệu ngắn gọn trong đó chúng tôi nói về lý do để trở thành một kiến trúc sư, chúng tôi hỏi,
+
+8
+00:00:22,760 --> 00:00:23,960
+một kiến trúc sư phần mềm?
+
+9
+00:00:23,990 --> 00:00:26,430
+Chúng ta đã nói về ba loại kiến trúc sư.
+
+10
+00:00:26,450 --> 00:00:27,920
+Kiến trúc sư cơ sở hạ tầng.
+
+11
+00:00:27,920 --> 00:00:30,830
+Kiến trúc sư phần mềm và kiến trúc sư doanh nghiệp.
+
+12
+00:00:30,860 --> 00:00:36,440
+Chúng tôi cũng đã trao đổi về kiến trúc sư trong cây tổ chức và cô ấy phải có khả năng lập trình.
+
+13
+00:00:36,830 --> 00:00:40,430
+Ở phần tiếp theo, chúng ta sẽ thảo luận về tư duy của kiến trúc sư.
+
+14
+00:00:40,460 --> 00:00:46,460
+Chúng tôi nhấn mạnh rằng một kiến trúc sư phải có định hướng kinh doanh và đảm bảo kiến trúc đóng góp vào
+
+15
+00:00:46,460 --> 00:00:47,900
+lợi nhuận ròng của doanh nghiệp.
+
+16
+00:00:48,050 --> 00:00:53,450
+Sau đó chúng tôi nói về quy trình kiến trúc và phác thảo các bước khác nhau mà một kiến trúc sư nên thực hiện.
+
+17
+00:00:53,450 --> 00:00:57,500
+thực hiện để đảm bảo kiến trúc vững chắc và thành công.
+
+18
+00:00:57,620 --> 00:01:03,960
+Sau đó, chúng tôi khám phá các yêu cầu của hệ thống và thảo luận về sự khác biệt giữa chức năng và không chức năng
+
+19
+00:01:03,960 --> 00:01:04,920
+yêu cầu.
+
+20
+00:01:05,370 --> 00:01:11,550
+Sau khi có các yêu cầu, chúng tôi đã xem xét danh sách các loại ứng dụng khác nhau và xác định loại nào
+
+21
+00:01:11,550 --> 00:01:13,950
+phù hợp nhất cho từng tình huống.
+
+22
+00:01:14,160 --> 00:01:19,920
+Sau khi chọn loại ứng dụng, chúng tôi đã xem xét ngăn xếp công nghệ và thảo luận về các công nghệ khác nhau
+
+23
+00:01:19,920 --> 00:01:26,460
+là những ứng cử viên cho ứng dụng di động và máy tính để bàn, cũng như sự khác biệt giữa
+
+24
+00:01:26,460 --> 00:01:29,190
+cơ sở dữ liệu quan hệ và cơ sở dữ liệu NoSQL.
+
+25
+00:01:29,220 --> 00:01:33,090
+Chúng tôi kết luận bằng cách nhấn mạnh rằng quyết định này phải được đưa ra một cách hợp lý.
+
+26
+00:01:33,120 --> 00:01:40,260
+Vì chủ đề này thường khá nặng nề, nên chúng tôi đã gặp một nhóm các thuộc tính chất lượng được gọi là Tập thể
+
+27
+00:01:40,260 --> 00:01:41,730
+Điểm nổi bật của ngôi sao.
+
+28
+00:01:41,850 --> 00:01:48,330
+Chúng tôi đã nói về khả năng mở rộng, khả năng quản lý, khả năng mô-đun, khả năng mở rộng và khả năng kiểm tra và giải thích
+
+29
+00:01:48,330 --> 00:01:51,180
+tầm quan trọng của chúng trong kiến trúc tổng thể.
+
+30
+00:01:51,210 --> 00:01:54,270
+Và sau đó chúng tôi bắt đầu thảo luận về kiến trúc.
+
+31
+00:01:54,450 --> 00:02:00,690
+Đầu tiên chúng ta nói về kiến trúc thành phần, giải thích thành phần là gì và cách thiết kế thành phần.
+
+32
+00:02:00,720 --> 00:02:06,540
+Chúng tôi cũng đã nói về kiến trúc nhiều lớp, một trong những khái niệm quan trọng nhất trong thế giới kiến trúc,
+
+33
+00:02:06,540 --> 00:02:10,650
+và nó sẽ được sử dụng trong hầu hết mọi ứng dụng bạn thiết kế.
+
+34
+00:02:10,889 --> 00:02:17,070
+Sau đó, chúng tôi học được một chút về các mẫu thiết kế, mặc dù chúng chủ yếu liên quan đến các nhà phát triển.
+
+35
+00:02:17,100 --> 00:02:19,740
+Chúng tôi đã nói về tầm quan trọng của chúng đối với kiến trúc sư.
+
+36
+00:02:20,750 --> 00:02:26,180
+Sau khi hoàn thành kiến trúc thành phần, chúng tôi chuyển sự chú ý của mình sang kiến trúc hệ thống và
+
+37
+00:02:26,180 --> 00:02:32,990
+thảo luận các khái niệm như liên kết lỏng lẻo, bộ nhớ đệm không trạng thái, nhắn tin, ghi nhật ký và giám sát.
+
+38
+00:02:33,080 --> 00:02:39,020
+Chúng tôi tiếp tục phần tiếp theo để thảo luận về nhiều cân nhắc bên ngoài khác nhau mà bạn phải biết, chẳng hạn như
+
+39
+00:02:39,020 --> 00:02:45,410
+như thời hạn và chi phí, và hiểu rằng việc bỏ qua chúng có thể khiến kiến trúc của chúng ta trở nên không liên quan.
+
+40
+00:02:45,530 --> 00:02:50,900
+Và sau đó chúng tôi nói về tài liệu kiến trúc, có lẽ là khía cạnh quan trọng nhất của kiến trúc sư.
+
+41
+00:02:50,900 --> 00:02:51,470
+công việc.
+
+42
+00:02:51,500 --> 00:02:57,560
+Tài liệu này tóm tắt toàn bộ quy trình kiến trúc và cung cấp cho nhóm hướng dẫn toàn diện
+
+43
+00:02:57,560 --> 00:02:59,030
+về hệ thống của họ.
+
+44
+00:02:59,270 --> 00:03:06,410
+Và sau đó chúng tôi đưa tất cả vào thử nghiệm thực tế và thảo luận về một nghiên cứu điển hình thực tế của một công ty IoT
+
+45
+00:03:06,410 --> 00:03:07,770
+cần một hệ thống mới.
+
+46
+00:03:07,790 --> 00:03:13,220
+Chúng ta đã thực hiện tất cả các bước đã thảo luận trước đó và thấy cách áp dụng chúng trong thực tế.
+
+47
+00:03:13,250 --> 00:03:19,190
+Kết quả của bài tập này là một tài liệu kiến trúc thực tế thực tế mà bạn có thể tự do sử dụng trong
+
+48
+00:03:19,190 --> 00:03:20,190
+hệ thống riêng.
+
+49
+00:03:20,220 --> 00:03:26,690
+Tiếp theo, chúng tôi thảo luận về một số chủ đề kiến trúc nâng cao như nguồn sự kiện và dịch vụ vi mô.
+
+50
+00:03:26,700 --> 00:03:30,960
+Bạn không nhất thiết phải sử dụng chúng, nhưng tốt nhất là nên làm quen với chúng.
+
+51
+00:03:30,990 --> 00:03:35,310
+Và cuối cùng chúng ta tìm hiểu về một số kỹ năng mềm mà kiến trúc sư cần có.
+
+52
+00:03:35,340 --> 00:03:39,700
+Chúng tôi thảo luận về việc lắng nghe, ứng phó với lời chỉ trích, nói trước công chúng và nhiều vấn đề khác.
+
+53
+00:03:39,720 --> 00:03:45,110
+Tất cả những kỹ năng này sẽ giúp chúng ta trở thành những kiến trúc sư giỏi hơn và về cơ bản là những con người tốt hơn.
+
+54
+00:03:45,120 --> 00:03:47,820
+Và đây là kết thúc của tất cả.
+
+55
+00:03:48,300 --> 00:03:52,830
+Tôi hy vọng bạn có thời gian tuyệt vời trong khóa học này và học được nhiều điều.
+
+56
+00:03:52,860 --> 00:03:57,690
+Tôi hy vọng bạn cảm thấy sẵn sàng cho thử thách tiếp theo và bạn có tất cả các công cụ cần thiết để trở thành một người tuyệt vời
+
+57
+00:03:57,690 --> 00:03:58,470
+kiến trúc sư.
+
+58
+00:03:58,590 --> 00:04:03,430
+Như thường lệ, đừng ngần ngại liên hệ với tôi nếu bạn có bất kỳ câu hỏi hoặc bình luận nào.
+
+59
+00:04:03,450 --> 00:04:07,200
+Tôi rất mong nhận được phản hồi từ học sinh và hứa sẽ trả lời bạn.
+
+60
+00:04:07,230 --> 00:04:13,290
+Cảm ơn bạn đã đồng hành cùng tôi trong khóa học này và chúc bạn may mắn trong cuộc sống mới với tư cách là một kiến trúc sư phần mềm.
+

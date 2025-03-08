@@ -1,0 +1,288 @@
+1
+00:00:00,240 --> 00:00:04,950
+Kỹ thuật tiêm phụ thuộc bổ sung cho mô hình giao diện mà chúng ta đã thảo luận trong bài giảng trước.
+
+2
+00:00:05,220 --> 00:00:10,740
+Để nhắc lại, chúng ta đã nói về giao diện như một cơ chế tốt hơn để giao tiếp giữa các lớp trong
+
+3
+00:00:10,740 --> 00:00:13,590
+để làm cho mã có tính mô-đun và linh hoạt hơn.
+
+4
+00:00:13,710 --> 00:00:19,890
+Chúng tôi kết thúc bài giảng bằng một chủ đề mở về cách đưa một triển khai cụ thể vào giao diện
+
+5
+00:00:19,890 --> 00:00:22,230
+vì vậy nó có thể được sử dụng bởi mã gọi.
+
+6
+00:00:22,260 --> 00:00:27,270
+Và câu trả lời cho câu hỏi đó chính là chủ đề của bài giảng này về kỹ thuật tiêm phụ thuộc.
+
+7
+00:00:28,320 --> 00:00:35,070
+Tiêm phụ thuộc được định nghĩa trong Wikipedia là một kỹ thuật trong đó một đối tượng cung cấp các phụ thuộc
+
+8
+00:00:35,070 --> 00:00:36,420
+của một vật thể khác.
+
+9
+00:00:36,450 --> 00:00:42,510
+Điều này nghe có vẻ hơi phức tạp và mang tính học thuật, nhưng thực ra lại khá đơn giản.
+
+10
+00:00:42,780 --> 00:00:46,260
+Chúng ta hãy xem lại ví dụ đã thảo luận trong bài giảng trước.
+
+11
+00:00:46,290 --> 00:00:49,910
+Chúng tôi có một lớp chính gọi lớp máy tính.
+
+12
+00:00:49,920 --> 00:00:54,630
+Trong ví dụ này, máy tính là một phần phụ thuộc của lớp chính.
+
+13
+00:00:54,630 --> 00:00:56,520
+Lớp chính phụ thuộc vào nó.
+
+14
+00:00:56,550 --> 00:01:02,410
+Để có thể hoạt động chính xác khi sử dụng kỹ thuật tiêm phụ thuộc, chúng ta có thể
+
+15
+00:01:02,410 --> 00:01:08,620
+chèn một triển khai cụ thể hoặc một lớp vào giao diện biểu diễn sự phụ thuộc mà không có
+
+16
+00:01:08,620 --> 00:01:11,710
+lớp chính biết triển khai cụ thể nào được sử dụng.
+
+17
+00:01:11,830 --> 00:01:17,680
+Nếu bạn xem xét kỹ mã, chúng ta có thể thấy việc tiêm phụ thuộc diễn ra tại Getinstance
+
+18
+00:01:17,680 --> 00:01:18,340
+đường kẻ.
+
+19
+00:01:18,550 --> 00:01:24,540
+Ở dòng này, Getinstance trả về một lớp triển khai giao diện máy tính mắt.
+
+20
+00:01:24,550 --> 00:01:27,700
+Lưu ý rằng lớp chính không biết nó là lớp gì.
+
+21
+00:01:27,730 --> 00:01:31,500
+Đó có thể là lớp chúng ta đã học trước đó hoặc là một lớp hoàn toàn khác.
+
+22
+00:01:31,510 --> 00:01:35,620
+Điều duy nhất được biết là lớp này triển khai giao diện cần thiết.
+
+23
+00:01:35,650 --> 00:01:41,040
+Bằng cách này, chúng ta đã tạo ra một lớp trung gian giữa lớp chính và lớp máy tính.
+
+24
+00:01:41,050 --> 00:01:47,500
+Hay nói cách khác, chúng tôi đã loại bỏ sự kết hợp chặt chẽ giữa hai thứ này, khiến mã của chúng tôi có tính mô-đun hơn nhiều.
+
+25
+00:01:47,500 --> 00:01:48,580
+và linh hoạt.
+
+26
+00:01:49,500 --> 00:01:55,260
+Bây giờ, câu hỏi thực sự là, điều gì đang xảy ra với phương thức Getinstance bí ẩn này?
+
+27
+00:01:55,290 --> 00:01:57,700
+Vâng, câu trả lời thực ra khá đơn giản.
+
+28
+00:01:57,720 --> 00:02:04,410
+Phương pháp này, thường được gọi là phương pháp nhà máy, chỉ thực hiện một số logic và quyết định lớp nào
+
+29
+00:02:04,410 --> 00:02:05,570
+nên được tiêm.
+
+30
+00:02:05,580 --> 00:02:10,229
+Sau đó, một đối tượng được khởi tạo từ lớp và trả về dưới dạng một giao diện.
+
+31
+00:02:10,259 --> 00:02:13,650
+Hãy cùng xem xét một số cách triển khai có thể có của phương pháp này.
+
+32
+00:02:14,280 --> 00:02:16,190
+Cách thực hiện đầu tiên là đơn giản nhất.
+
+33
+00:02:16,200 --> 00:02:19,380
+Nó chỉ trả về một thể hiện của lớp máy tính.
+
+34
+00:02:19,410 --> 00:02:21,450
+Việc triển khai này hoàn toàn không có logic.
+
+35
+00:02:21,450 --> 00:02:25,620
+Nó luôn trả về cùng một lớp, mặc dù có vẻ hơi lạ.
+
+36
+00:02:25,650 --> 00:02:31,140
+Việc triển khai này vẫn có giá trị vì ngay cả khi chỉ có một lớp duy nhất, việc sử dụng một phụ thuộc
+
+37
+00:02:31,140 --> 00:02:37,950
+injection giúp chúng ta tạo ra một mã mô-đun không bị ràng buộc bởi sự kết hợp chặt chẽ và cho phép chúng ta chuyển đổi
+
+38
+00:02:37,950 --> 00:02:41,640
+đến một triển khai khác mà mã gọi không biết điều đó.
+
+39
+00:02:42,450 --> 00:02:45,390
+Bây giờ chúng ta hãy xem xét một cách triển khai khác.
+
+40
+00:02:45,420 --> 00:02:50,820
+Việc triển khai này phức tạp hơn ở chỗ mã gọi chỉ định một tham số giúp
+
+41
+00:02:50,820 --> 00:02:53,140
+phương pháp này quyết định trường hợp nào sẽ trả về.
+
+42
+00:02:53,160 --> 00:02:58,020
+Trong trường hợp này, mã gọi sẽ chỉ rõ loại máy tính nào nên được sử dụng.
+
+43
+00:02:58,140 --> 00:03:04,230
+Như bạn có thể thấy, phương pháp này kiểm tra loại máy tính đã nhận, khởi tạo lớp chính xác và
+
+44
+00:03:04,230 --> 00:03:05,310
+trả lại nó.
+
+45
+00:03:05,370 --> 00:03:09,570
+Xin lưu ý rằng mã gọi không biết nó nhận được triển khai nào.
+
+46
+00:03:09,600 --> 00:03:11,880
+Nó luôn hoạt động với giao diện.
+
+47
+00:03:12,540 --> 00:03:18,400
+Một biến thể rất phổ biến của ví dụ này là xác định tham số trong tệp cấu hình.
+
+48
+00:03:18,420 --> 00:03:24,660
+Theo cách này, nhà máy không nhận được bất kỳ tham số nào mà chỉ đọc tham số từ tệp cấu hình.
+
+49
+00:03:24,690 --> 00:03:29,850
+Đây là một mô hình rất phổ biến trong việc triển khai lớp truy cập dữ liệu, trong đó loại cơ sở dữ liệu được sử dụng
+
+50
+00:03:29,850 --> 00:03:36,450
+được lưu trữ trong tệp cấu hình và phương thức nhà máy đọc nó từ đó và quyết định dữ liệu nào
+
+51
+00:03:36,450 --> 00:03:38,250
+thực hiện lớp truy cập để trả về.
+
+52
+00:03:39,550 --> 00:03:44,260
+Cho đến nay, chúng ta đã thấy các ví dụ về tiêm phụ thuộc sử dụng phương pháp nhà máy, nhưng thực tế có
+
+53
+00:03:44,260 --> 00:03:45,400
+các loại khác.
+
+54
+00:03:46,080 --> 00:03:50,050
+Một trong những loại tiêm phổ biến nhất là tiêm hàm tạo.
+
+55
+00:03:50,070 --> 00:03:56,400
+Sử dụng phương pháp tiêm hàm tạo, lớp nhận được các giao diện được khởi tạo trong hàm tạo của nó và sử dụng
+
+56
+00:03:56,400 --> 00:03:57,990
+nó nằm trong phương thức của lớp.
+
+57
+00:03:58,080 --> 00:04:01,560
+Sau đây là một ví dụ về việc tiêm như vậy, lần này là trong lõi Dotnet.
+
+58
+00:04:01,950 --> 00:04:08,400
+Như bạn có thể thấy, hàm tạo của lớp nhận được giao diện Ilogger làm tham số và có thể sử dụng nó
+
+59
+00:04:08,400 --> 00:04:09,150
+ngay lập tức.
+
+60
+00:04:09,180 --> 00:04:13,950
+Trong trường hợp này, khung đã khởi tạo nó cho lớp và không cần thực hiện thêm hành động nào nữa.
+
+61
+00:04:14,250 --> 00:04:19,589
+Ưu điểm chính của mô hình tiêm hàm tạo so với mô hình truyền thống là khả năng kiểm tra.
+
+62
+00:04:19,740 --> 00:04:23,910
+Một lớp được đưa vào hàm tạo của nó sẽ dễ kiểm tra hơn nhiều.
+
+63
+00:04:23,940 --> 00:04:29,190
+Phương pháp thử nghiệm có thể khởi tạo lớp với các đối tượng giả và chỉ cần chạy thử nghiệm.
+
+64
+00:04:29,220 --> 00:04:31,350
+Ví dụ này chứng minh điều đó.
+
+65
+00:04:32,070 --> 00:04:38,160
+Lưu ý rằng phương pháp kiểm tra khởi tạo lớp với một trình ghi nhật ký giả không làm gì cả và được kiểm tra
+
+66
+00:04:38,160 --> 00:04:41,140
+lớp học không có ý niệm gì về vấn đề này theo quan điểm của mình.
+
+67
+00:04:41,160 --> 00:04:43,950
+Đây là một trình ghi dữ liệu thông thường có đầy đủ chức năng.
+
+68
+00:04:45,430 --> 00:04:48,940
+Vậy là chúng ta đã kết thúc cuộc thảo luận về giao diện và kỹ thuật tiêm phụ thuộc.
+
+69
+00:04:48,940 --> 00:04:55,570
+Nó không phải là điều đơn giản, nhưng một khi được triển khai đúng cách, kết quả sẽ là một mô-đun, linh hoạt và dễ bảo trì.
+
+70
+00:04:55,570 --> 00:04:56,650
+và sửa đổi mã.
+
+71
+00:04:56,680 --> 00:04:57,760
+Hãy thử xem.
+
+72
+00:04:57,790 --> 00:05:03,040
+Có thể lúc đầu bạn sẽ thấy hơi nản lòng, nhưng tin tôi đi, cuối cùng bạn sẽ thấy được ánh sáng thôi.
+

@@ -1,0 +1,240 @@
+1
+00:00:00,380 --> 00:00:01,020
+Wow.
+
+2
+00:00:01,130 --> 00:00:02,180
+We did it.
+
+3
+00:00:02,210 --> 00:00:05,570
+We've just reached the end of a very long journey.
+
+4
+00:00:05,600 --> 00:00:11,910
+You began this journey as a developer or system analyst or team leader, and you end it as an architect.
+
+5
+00:00:11,930 --> 00:00:13,160
+Congratulations.
+
+6
+00:00:13,400 --> 00:00:17,000
+Let's have a quick review of what we learned in this course.
+
+7
+00:00:17,270 --> 00:00:22,760
+After a brief introduction in which we talked about reasons to be an architect, we asked, What is
+
+8
+00:00:22,760 --> 00:00:23,960
+a software architect?
+
+9
+00:00:23,990 --> 00:00:26,430
+We talked about three types of architects.
+
+10
+00:00:26,450 --> 00:00:27,920
+Infrastructure architect.
+
+11
+00:00:27,920 --> 00:00:30,830
+Software Architect and enterprise architect.
+
+12
+00:00:30,860 --> 00:00:36,440
+We also talked about the architect in the organizational tree and that she should be able to code.
+
+13
+00:00:36,830 --> 00:00:40,430
+In the next section, we discussed the architect's mindset.
+
+14
+00:00:40,460 --> 00:00:46,460
+We emphasized an architect must be business oriented and make sure the architecture contributes to the
+
+15
+00:00:46,460 --> 00:00:47,900
+bottom line of the business.
+
+16
+00:00:48,050 --> 00:00:53,450
+Then we talked about the architecture process and outlined the various steps that an architect should
+
+17
+00:00:53,450 --> 00:00:57,500
+take in order to make sure the architecture is sound and successful.
+
+18
+00:00:57,620 --> 00:01:03,960
+We then explored the system requirements and discussed the difference between functional and non-functional
+
+19
+00:01:03,960 --> 00:01:04,920
+requirements.
+
+20
+00:01:05,370 --> 00:01:11,550
+After the requirements, we looked at a list of the various application types and determined which type
+
+21
+00:01:11,550 --> 00:01:13,950
+is the best fit for each scenario.
+
+22
+00:01:14,160 --> 00:01:19,920
+Having selected the application type, we looked at technology stack and discussed the various technologies
+
+23
+00:01:19,920 --> 00:01:26,460
+that are candidates for back end, front end mobile and desktop apps, as well as the difference between
+
+24
+00:01:26,460 --> 00:01:29,190
+relational databases and NoSQL databases.
+
+25
+00:01:29,220 --> 00:01:33,090
+We concluded by emphasizing this decision must be made rationally.
+
+26
+00:01:33,120 --> 00:01:40,260
+Since this topic is often quite loaded, we then met a family of quality attributes called Collectively
+
+27
+00:01:40,260 --> 00:01:41,730
+The Star Highlights.
+
+28
+00:01:41,850 --> 00:01:48,330
+We talked about scalability, manageability, modularity, extensibility and testability and explained
+
+29
+00:01:48,330 --> 00:01:51,180
+their importance in the overall architecture.
+
+30
+00:01:51,210 --> 00:01:54,270
+And then we started to discuss architecture.
+
+31
+00:01:54,450 --> 00:02:00,690
+We first talked about components architecture, explained what a component is and how it should be designed.
+
+32
+00:02:00,720 --> 00:02:06,540
+We also talked about layered architecture, one of the most important concepts in the architecture world,
+
+33
+00:02:06,540 --> 00:02:10,650
+and one that will be used in almost every application you will design.
+
+34
+00:02:10,889 --> 00:02:17,070
+We then learned a little bit about design patterns, although these are relevant mainly to developers.
+
+35
+00:02:17,100 --> 00:02:19,740
+We talked about their importance to the architect.
+
+36
+00:02:20,750 --> 00:02:26,180
+Having concluded the component architecture, we turned our attention to the system architecture and
+
+37
+00:02:26,180 --> 00:02:32,990
+discussed concepts such as loose coupling, stateless caching, messaging and logging and monitoring.
+
+38
+00:02:33,080 --> 00:02:39,020
+We continued to the next section to discuss various external considerations you must be aware of, such
+
+39
+00:02:39,020 --> 00:02:45,410
+as deadlines and costs, and understood that ignoring them might render our architecture irrelevant.
+
+40
+00:02:45,530 --> 00:02:50,900
+And then we talked about the architecture document, probably the most important aspect of the architect's
+
+41
+00:02:50,900 --> 00:02:51,470
+work.
+
+42
+00:02:51,500 --> 00:02:57,560
+This document summarizes all the architecture process and provides the team with comprehensive guidance
+
+43
+00:02:57,560 --> 00:02:59,030
+about their system.
+
+44
+00:02:59,270 --> 00:03:06,410
+And then we put it all to a practical test and discussed a real world case study of an Iot company that
+
+45
+00:03:06,410 --> 00:03:07,770
+needs a new system.
+
+46
+00:03:07,790 --> 00:03:13,220
+We went through all the steps discussed earlier and saw how to utilize them in practice.
+
+47
+00:03:13,250 --> 00:03:19,190
+The result of this exercise was a real practical architecture document that you can freely use in your
+
+48
+00:03:19,190 --> 00:03:20,190
+own systems.
+
+49
+00:03:20,220 --> 00:03:26,690
+Next, we discussed some advanced architecture topics such as event sourcing and microservices.
+
+50
+00:03:26,700 --> 00:03:30,960
+You won't necessarily use them, but it's a good idea to be familiar with them.
+
+51
+00:03:30,990 --> 00:03:35,310
+And last we learned about some soft skills architects have to have.
+
+52
+00:03:35,340 --> 00:03:39,700
+We discussed listening, dealing with criticism, public speaking and more.
+
+53
+00:03:39,720 --> 00:03:45,110
+All of these skills will make us all better architects and basically better persons.
+
+54
+00:03:45,120 --> 00:03:47,820
+And here we are at the end of it all.
+
+55
+00:03:48,300 --> 00:03:52,830
+I hope you had a great time in this course and I hope you've learned a lot.
+
+56
+00:03:52,860 --> 00:03:57,690
+I hope you feel ready for the next challenge and that you have all the tools you need to become a great
+
+57
+00:03:57,690 --> 00:03:58,470
+architect.
+
+58
+00:03:58,590 --> 00:04:03,430
+As always, do not hesitate to contact me with every question or comment you have.
+
+59
+00:04:03,450 --> 00:04:07,200
+I love to hear from my students and I promise to get back to you.
+
+60
+00:04:07,230 --> 00:04:13,290
+Thanks for being with me in this course and good luck in your new life as a software architect.
+

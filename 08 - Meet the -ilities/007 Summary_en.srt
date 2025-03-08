@@ -1,0 +1,40 @@
+1
+00:00:00,140 --> 00:00:05,400
+In this section, we discussed the highlights, the family of quality attributes of a system.
+
+2
+00:00:05,450 --> 00:00:10,580
+We talked about the relationships between between non-functional requirements and these quality attributes
+
+3
+00:00:10,580 --> 00:00:16,160
+and explained that the quality attributes represent technical capabilities that stem from the non-functional
+
+4
+00:00:16,160 --> 00:00:17,000
+requirements.
+
+5
+00:00:17,330 --> 00:00:26,210
+We described five common qualities scalability, manageability, modularity, extensibility and testability.
+
+6
+00:00:26,300 --> 00:00:31,790
+I strongly recommend that each system you design will implement these ilities even if you are not sure
+
+7
+00:00:31,820 --> 00:00:36,500
+they are actually required in the system, they will probably be later in its lifespan.
+
+8
+00:00:36,530 --> 00:00:40,990
+I also recommend to take a look at the full list of the ilities in the Wikipedia page.
+
+9
+00:00:41,000 --> 00:00:46,280
+Some of them are really relevant for a very specific kind of systems, but others might come in handy
+
+10
+00:00:46,310 --> 00:00:47,750
+for your system as well.
+

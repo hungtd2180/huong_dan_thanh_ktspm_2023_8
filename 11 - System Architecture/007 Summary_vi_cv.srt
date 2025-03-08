@@ -1,0 +1,52 @@
+1
+00:00:00,290 --> 00:00:04,670
+Trong phần này, chúng ta đã nói về kiến trúc hệ thống và những khía cạnh chính của nó.
+
+2
+00:00:04,700 --> 00:00:09,650
+Sử dụng các khái niệm chúng ta đã học trong phần này một cách khôn ngoan, bạn sẽ có thể thiết kế kiến trúc hệ thống
+
+3
+00:00:09,650 --> 00:00:14,660
+đảm bảo hệ thống của bạn nhanh, an toàn, đáng tin cậy và dễ bảo trì.
+
+4
+00:00:14,870 --> 00:00:19,550
+Lưu ý rằng việc đưa ra lựa chọn đúng đắn càng sớm càng tốt là vô cùng quan trọng.
+
+5
+00:00:19,580 --> 00:00:23,620
+Nhiều khái niệm chúng ta đã thảo luận trong phần này rất khó thay đổi sau khi đã hình thành.
+
+6
+00:00:23,630 --> 00:00:29,930
+Ví dụ, việc chuyển từ nhắn tin dựa trên API nghỉ ngơi sang nhắn tin dựa trên hàng đợi sẽ dẫn đến việc viết lại
+
+7
+00:00:29,960 --> 00:00:32,330
+của ít nhất một số thành phần của hệ thống.
+
+8
+00:00:32,330 --> 00:00:36,680
+Vì vậy, hãy luôn cố gắng đảm bảo rằng quyết định của bạn được đưa ra một cách sáng suốt nhất có thể.
+
+9
+00:00:36,680 --> 00:00:39,350
+Ngoài ra, hãy lưu ý rằng những khái niệm này không mang tính loại trừ.
+
+10
+00:00:39,380 --> 00:00:44,360
+Tất nhiên còn nhiều quyết định khác phải được đưa vào xem xét và tất nhiên còn nhiều công việc hơn nữa
+
+11
+00:00:44,360 --> 00:00:48,920
+phải làm gì đó hơn là chọn đúng cách ghi nhật ký và giám sát cũng như chọn đúng phương pháp nhắn tin.
+
+12
+00:00:49,010 --> 00:00:54,320
+Nhưng các khái niệm được thảo luận ở đây thường là những khái niệm quan trọng nhất và bạn sẽ thấy mình đang sử dụng
+
+13
+00:00:54,320 --> 00:00:56,690
+chúng trong hầu hết mọi hệ thống bạn thiết kế.
+

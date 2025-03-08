@@ -1,0 +1,60 @@
+1
+00:00:00,320 --> 00:00:04,910
+We've gone through the most common application types you will encounter as an architect.
+
+2
+00:00:04,939 --> 00:00:09,200
+However, today in the cloud era, there are many more types of applications.
+
+3
+00:00:09,200 --> 00:00:15,320
+For example, one of the hottest trend today is function as a service implemented by the likes of AWS,
+
+4
+00:00:15,320 --> 00:00:21,230
+Lambda or Azure Functions, which allows the developer to write a short focused code segments and not
+
+5
+00:00:21,230 --> 00:00:23,840
+worry about servers, scale or SLA.
+
+6
+00:00:24,320 --> 00:00:30,260
+Applications built on these functions are not web apps or web API and represent a new type of applications.
+
+7
+00:00:30,260 --> 00:00:34,070
+But still most apps today fall into the categories we discussed.
+
+8
+00:00:34,280 --> 00:00:39,410
+One of the first tasks you will have when beginning work on a system is to determine which application
+
+9
+00:00:39,410 --> 00:00:41,180
+type is best suited for it.
+
+10
+00:00:41,420 --> 00:00:46,760
+Often a system will comprise of more than one application, and you will find yourself mixing and matching
+
+11
+00:00:46,760 --> 00:00:48,670
+various types in a single system.
+
+12
+00:00:48,680 --> 00:00:54,470
+For example, many web apps have in addition to the main application, also a service that run continuously
+
+13
+00:00:54,470 --> 00:01:00,420
+and performs maintenance tasks such as removing old data records, monitoring various processes and
+
+14
+00:01:00,420 --> 00:01:00,930
+so on.
+
+15
+00:01:00,960 --> 00:01:05,099
+This is quite common and you will probably encounter this type of systems in your job.
+

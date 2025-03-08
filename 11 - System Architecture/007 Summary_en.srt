@@ -1,0 +1,52 @@
+1
+00:00:00,290 --> 00:00:04,670
+In this section, we talked about system architecture and the main aspects of it.
+
+2
+00:00:04,700 --> 00:00:09,650
+Using the concepts we have learned in this section, wisely, you will be able to design system architecture
+
+3
+00:00:09,650 --> 00:00:14,660
+that ensures your system is fast, secure, reliable and easy to maintain.
+
+4
+00:00:14,870 --> 00:00:19,550
+Note that it's extremely important to make the right choices as early as possible.
+
+5
+00:00:19,580 --> 00:00:23,620
+Many concepts we have discussed in this section are difficult to change once made.
+
+6
+00:00:23,630 --> 00:00:29,930
+For example, moving from rest API based messaging to queue based messaging will result in a rewrite
+
+7
+00:00:29,960 --> 00:00:32,330
+of at least some of the components of the system.
+
+8
+00:00:32,330 --> 00:00:36,680
+So always try to make sure your decisions are as informed as possible.
+
+9
+00:00:36,680 --> 00:00:39,350
+Also, note these concepts are not exclusive.
+
+10
+00:00:39,380 --> 00:00:44,360
+Of course there are more decisions that must be factored in and of course there are a lot more of work
+
+11
+00:00:44,360 --> 00:00:48,920
+to do than to choose the right logging and monitoring and to select the right messaging method.
+
+12
+00:00:49,010 --> 00:00:54,320
+But the concepts discussed here are usually the most important ones and you will find yourself using
+
+13
+00:00:54,320 --> 00:00:56,690
+them in almost every system you will design.
+

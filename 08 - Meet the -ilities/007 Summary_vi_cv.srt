@@ -1,0 +1,40 @@
+1
+00:00:00,140 --> 00:00:05,400
+Trong phần này, chúng ta thảo luận về những điểm nổi bật, nhóm các thuộc tính chất lượng của một hệ thống.
+
+2
+00:00:05,450 --> 00:00:10,580
+Chúng tôi đã nói về mối quan hệ giữa các yêu cầu phi chức năng và các thuộc tính chất lượng này
+
+3
+00:00:10,580 --> 00:00:16,160
+và giải thích rằng các thuộc tính chất lượng đại diện cho các khả năng kỹ thuật bắt nguồn từ các chức năng phi chức năng
+
+4
+00:00:16,160 --> 00:00:17,000
+yêu cầu.
+
+5
+00:00:17,330 --> 00:00:26,210
+Chúng tôi đã mô tả năm phẩm chất chung: khả năng mở rộng, khả năng quản lý, khả năng mô-đun, khả năng mở rộng và khả năng kiểm tra.
+
+6
+00:00:26,300 --> 00:00:31,790
+Tôi thực sự khuyên rằng mỗi hệ thống bạn thiết kế sẽ triển khai những khả năng này ngay cả khi bạn không chắc chắn
+
+7
+00:00:31,820 --> 00:00:36,500
+chúng thực sự cần thiết trong hệ thống, có thể sẽ cần thiết vào giai đoạn sau của vòng đời hệ thống.
+
+8
+00:00:36,530 --> 00:00:40,990
+Tôi cũng khuyên bạn nên xem danh sách đầy đủ các khả năng trên trang Wikipedia.
+
+9
+00:00:41,000 --> 00:00:46,280
+Một số trong số chúng thực sự có liên quan đến một loại hệ thống rất cụ thể, nhưng một số khác có thể hữu ích
+
+10
+00:00:46,310 --> 00:00:47,750
+cho hệ thống của bạn nữa.
+

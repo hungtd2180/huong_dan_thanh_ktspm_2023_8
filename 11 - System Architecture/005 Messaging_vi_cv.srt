@@ -1,0 +1,884 @@
+1
+00:00:00,330 --> 00:00:02,400
+Hãy nói về tin nhắn.
+
+2
+00:00:02,430 --> 00:00:08,730
+Thuật ngữ nhắn tin đề cập đến phương tiện giao tiếp giữa các dịch vụ khác nhau trong hệ thống.
+
+3
+00:00:08,910 --> 00:00:14,700
+Trong các phần trước, chúng ta đã nói về mạng nhện, tình huống mà tất cả các dịch vụ đang giao tiếp
+
+4
+00:00:14,700 --> 00:00:21,180
+trực tiếp với nhau, dẫn đến một mớ hỗn độn các URL rối rắm sẽ bị sập và cháy khi
+
+5
+00:00:21,180 --> 00:00:22,470
+URL thay đổi.
+
+6
+00:00:22,500 --> 00:00:26,520
+Kịch bản này có liên quan khi các dịch vụ giao tiếp qua REST API.
+
+7
+00:00:27,090 --> 00:00:33,030
+Tuy nhiên, có nhiều cách hơn để các dịch vụ giao tiếp với nhau và điều quan trọng là phải nhận thức được
+
+8
+00:00:33,030 --> 00:00:38,310
+những cách này và có thể đưa ra quyết định sáng suốt về việc lựa chọn nền tảng nhắn tin nào.
+
+9
+00:00:38,340 --> 00:00:41,280
+Lưu ý rằng việc lựa chọn tin nhắn không mang tính độc quyền.
+
+10
+00:00:41,310 --> 00:00:46,560
+Chúng ta thường có thể tìm thấy những hệ thống có nhiều phương thức nhắn tin khác nhau, mỗi phương thức được sử dụng cho những mục đích khác nhau.
+
+11
+00:00:46,590 --> 00:00:50,390
+Không có gì sai với điều đó và tôi thực sự khuyến khích bạn làm như vậy.
+
+12
+00:00:50,400 --> 00:00:56,670
+Chỉ cần đảm bảo luôn sử dụng đúng phương pháp nhắn tin cho đúng nhiệm vụ trước khi khám phá các phương pháp khác nhau
+
+13
+00:00:56,670 --> 00:00:57,220
+phương pháp.
+
+14
+00:00:57,240 --> 00:00:59,130
+Đầu tiên chúng ta hãy đặt ra tiêu chí.
+
+15
+00:00:59,130 --> 00:01:02,590
+Chúng tôi sẽ xem xét chúng để việc so sánh trở nên hữu ích hơn.
+
+16
+00:01:02,770 --> 00:01:05,379
+Tiêu chí đầu tiên tất nhiên là hiệu suất.
+
+17
+00:01:05,379 --> 00:01:08,650
+Chúng tôi luôn ưu tiên phương pháp nhắn tin nhanh hơn.
+
+18
+00:01:08,680 --> 00:01:11,080
+Tiếp theo là kích thước tin nhắn.
+
+19
+00:01:11,320 --> 00:01:17,320
+Trên thực tế, hầu hết các hệ thống không yêu cầu phải có nhiều tin nhắn giữa các dịch vụ, nhưng đôi khi điều này lại hữu ích.
+
+20
+00:01:17,620 --> 00:01:20,020
+Tiêu chí tiếp theo là mô hình thực hiện.
+
+21
+00:01:20,050 --> 00:01:25,780
+Một số nền tảng nhắn tin yêu cầu mô hình phản hồi yêu cầu có những hạn chế của nó và một số cho phép
+
+22
+00:01:25,780 --> 00:01:27,670
+các tiến trình chạy lâu cần thực thi.
+
+23
+00:01:28,150 --> 00:01:31,480
+Một tiêu chí quan trọng khác là phản hồi và độ tin cậy.
+
+24
+00:01:31,480 --> 00:01:37,330
+Và bằng phản hồi tôi muốn nói đến khả năng xác định liệu tin nhắn có thất bại hay không và liệu đó có phải là khả năng
+
+25
+00:01:37,330 --> 00:01:39,340
+để thực hiện một số hành động khắc phục.
+
+26
+00:01:39,370 --> 00:01:44,470
+Không phải mọi phương thức nhắn tin đều báo cáo trạng thái và đây chắc chắn là một cân nhắc quan trọng.
+
+27
+00:01:44,740 --> 00:01:47,710
+Phản hồi cũng liên quan chặt chẽ đến độ tin cậy.
+
+28
+00:01:47,740 --> 00:01:53,320
+Một phương pháp đáng tin cậy sẽ đảm bảo tin nhắn sẽ được nhận ngay cả khi có vấn đề xảy ra trong quá trình này.
+
+29
+00:01:53,350 --> 00:01:58,540
+Điều này rất quan trọng đối với các hệ thống quan trọng, nơi dữ liệu trong tin nhắn phải được nhận
+
+30
+00:01:58,540 --> 00:01:59,710
+dù thế nào đi nữa.
+
+31
+00:02:00,130 --> 00:02:03,480
+Tiêu chí cuối cùng là tính phức tạp của việc thực hiện.
+
+32
+00:02:03,490 --> 00:02:08,979
+Nếu một nền tảng nhắn tin đòi hỏi nhiều nỗ lực phát triển, đó là điều chúng tôi muốn biết
+
+33
+00:02:08,979 --> 00:02:09,820
+trước đó.
+
+34
+00:02:10,449 --> 00:02:15,400
+Vậy hãy bắt đầu danh sách của chúng ta với phương thức nhắn tin phổ biến nhất là Rest API.
+
+35
+00:02:16,060 --> 00:02:22,510
+Rest API là một tiêu chuẩn thực tế cho phương thức nhắn tin dựa trên Http giữa các dịch vụ với Rest API.
+
+36
+00:02:22,540 --> 00:02:29,710
+Dịch vụ này cung cấp API sử dụng tiêu chuẩn giao thức Http, bao gồm các động từ Http chỉ ra
+
+37
+00:02:29,710 --> 00:02:31,090
+loại hành động cần thực hiện.
+
+38
+00:02:31,090 --> 00:02:38,710
+Ví dụ, get có nghĩa là truy xuất thực thể và post có nghĩa là tạo thực thể mới, v.v.
+
+39
+00:02:40,700 --> 00:02:41,810
+Về mặt hiệu suất.
+
+40
+00:02:41,810 --> 00:02:44,330
+Rest API thường rất nhanh.
+
+41
+00:02:44,360 --> 00:02:49,910
+Hầu hết các máy chủ web đều có hiệu suất tuyệt vời khi xử lý các yêu cầu Http thông thường, đó chính xác là
+
+42
+00:02:49,910 --> 00:02:55,490
+API nghỉ ngơi là gì và vì nó cho phép kết nối trực tiếp giữa các dịch vụ mà không cần trung gian
+
+43
+00:02:55,490 --> 00:02:59,720
+Cơ chế giữa chúng là một trong những nền tảng nhắn tin nhanh nhất hiện nay.
+
+44
+00:03:00,320 --> 00:03:05,780
+Về kích thước tin nhắn, REST API tuân thủ cùng một giới hạn như giao thức Http.
+
+45
+00:03:05,810 --> 00:03:12,290
+Các hoạt động lấy thường bị giới hạn ở tám kilobyte, trong khi các hoạt động đăng hoặc đặt thường bị giới hạn
+
+46
+00:03:12,290 --> 00:03:16,720
+đến vài chục megabyte, mặc dù kích thước này thay đổi tùy theo máy chủ web và nền tảng.
+
+47
+00:03:16,730 --> 00:03:22,640
+Mô hình thực thi của REST API là yêu cầu phản hồi, nghĩa là nó rất phù hợp cho các hành động ngắn nhanh
+
+48
+00:03:22,640 --> 00:03:25,340
+nhưng không phù hợp cho những quá trình dài.
+
+49
+00:03:25,670 --> 00:03:27,500
+Vậy còn phản hồi thì sao?
+
+50
+00:03:27,590 --> 00:03:30,020
+Đây chính là nơi mà REST API thực sự tỏa sáng.
+
+51
+00:03:30,020 --> 00:03:35,300
+Vì đây là phương pháp đồng bộ nên người gọi sẽ nhận được phản hồi ngay lập tức về hành động thông qua phản hồi Http
+
+52
+00:03:35,300 --> 00:03:35,720
+mã số.
+
+53
+00:03:35,750 --> 00:03:39,360
+Nếu có vấn đề trong quá trình thực hiện, nó sẽ nhận được 500 điểm.
+
+54
+00:03:39,390 --> 00:03:43,230
+Nếu có vấn đề với tin nhắn đã gửi, nó sẽ nhận được 400.
+
+55
+00:03:43,230 --> 00:03:47,100
+Và tất nhiên, nếu mọi việc diễn ra tốt đẹp, nó sẽ đạt 200.
+
+56
+00:03:47,130 --> 00:03:51,560
+Còn nhiều mã phản hồi khác nữa, nhưng đây là những mã phổ biến nhất.
+
+57
+00:03:51,570 --> 00:03:56,940
+Bằng cách nhận được phản hồi ngay lập tức, người gọi có thể triển khai chính sách lỗi để thực hiện khi có
+
+58
+00:03:56,940 --> 00:04:00,030
+một vấn đề như thử lại việc ghi nhật ký và nhiều vấn đề khác.
+
+59
+00:04:00,690 --> 00:04:06,780
+Vì vậy, trong khi API còn lại không phải là một phương pháp đáng tin cậy theo nghĩa là một thông báo sẽ đến ngay cả khi có
+
+60
+00:04:06,780 --> 00:04:09,610
+một vấn đề, phản hồi tuyệt vời sẽ bù đắp cho điều đó.
+
+61
+00:04:09,630 --> 00:04:12,960
+Tuy nhiên, chúng ta vẫn chưa có được một hệ thống hoàn toàn đáng tin cậy.
+
+62
+00:04:14,460 --> 00:04:17,790
+Độ phức tạp của Rest API hầu như không tồn tại.
+
+63
+00:04:18,000 --> 00:04:23,160
+Tất cả các ngôn ngữ phát triển hiện đại đều có các thư viện chuyên biệt giúp bạn tạo Rest API
+
+64
+00:04:23,160 --> 00:04:29,400
+và triển khai các phần kỹ thuật khác như tuần tự hóa Json được chuyển đổi thành đối tượng, v.v.
+
+65
+00:04:29,430 --> 00:04:32,620
+Ví dụ, trong Dotnet chúng ta có ASP.Net web API.
+
+66
+00:04:32,730 --> 00:04:37,200
+Trong Java, chúng ta có spring trong Python, Flask, v.v.
+
+67
+00:04:37,230 --> 00:04:39,000
+Vấn đề cốt lõi rất đơn giản.
+
+68
+00:04:39,030 --> 00:04:41,820
+Việc phát triển REST API cực kỳ dễ dàng.
+
+69
+00:04:42,690 --> 00:04:48,690
+Rest API cực kỳ hữu ích cho các hệ thống dựa trên web truyền thống với giao diện người dùng có thể nói chuyện
+
+70
+00:04:48,690 --> 00:04:49,650
+nghỉ ngơi và Json.
+
+71
+00:04:49,650 --> 00:04:55,470
+Và hầu như mọi công nghệ máy khách hiện nay đều có thể làm được điều đó hoặc các dịch vụ khác gọi đến API của nó.
+
+72
+00:04:55,710 --> 00:05:00,690
+Nếu bạn đang thiết kế một hệ thống như vậy, REST API sẽ là nơi đầu tiên bạn cần tìm đến để tìm phương thức nhắn tin.
+
+73
+00:05:02,540 --> 00:05:06,890
+Phương pháp nhắn tin tiếp theo của chúng tôi là thông báo đẩy http hoặc pubsub.
+
+74
+00:05:08,060 --> 00:05:13,280
+Thông báo đẩy về cơ bản có nghĩa là một khách hàng đăng ký một sự kiện và khi sự kiện này xảy ra,
+
+75
+00:05:13,280 --> 00:05:16,100
+nó nhận được thông báo từ máy chủ về điều đó.
+
+76
+00:05:16,490 --> 00:05:20,590
+Hiện nay, có rất nhiều công cụ thực hiện phương pháp này bằng nhiều loại công nghệ khác nhau.
+
+77
+00:05:20,600 --> 00:05:24,230
+Nhiều trong số chúng triển khai Rest API mà chúng ta đã thảo luận trước đó.
+
+78
+00:05:24,320 --> 00:05:29,780
+Tôi muốn tập trung thảo luận này vào các loại thông báo đẩy đặc biệt, những loại cho phép thời gian thực
+
+79
+00:05:29,780 --> 00:05:31,850
+giao tiếp cho các ứng dụng web.
+
+80
+00:05:32,060 --> 00:05:37,970
+Loại thông báo đẩy này được triển khai bởi các thư viện như SignalR hoặc Socket.io.
+
+81
+00:05:38,240 --> 00:05:44,690
+Các thư viện này sử dụng các kỹ thuật web tiên tiến như WebSockets để giữ cho máy khách Http luôn được kết nối
+
+82
+00:05:44,690 --> 00:05:51,230
+đến trình duyệt, do đó cho phép giao tiếp thời gian thực hai chiều trái ngược với phương pháp truyền thống hơn
+
+83
+00:05:51,230 --> 00:05:55,610
+mô hình yêu cầu phản hồi trong đó chỉ có máy khách khởi tạo giao tiếp.
+
+84
+00:05:55,940 --> 00:06:01,730
+Phương pháp này cực kỳ hữu ích trong các ứng dụng như trò chuyện, nơi cần thông báo cho nhiều khách hàng
+
+85
+00:06:01,730 --> 00:06:04,610
+về các sự kiện như người dùng nhập tin nhắn.
+
+86
+00:06:04,640 --> 00:06:08,010
+Vậy phương pháp này so sánh thế nào với tiêu chí của chúng tôi?
+
+87
+00:06:08,790 --> 00:06:11,460
+Xét về hiệu suất, phương pháp này thật tuyệt vời.
+
+88
+00:06:11,460 --> 00:06:16,680
+Sử dụng các thư viện này, tin nhắn được gửi và nhận cực kỳ nhanh chóng và trên quy mô lớn.
+
+89
+00:06:16,710 --> 00:06:23,420
+Một máy có thể gửi hơn 10.000 tin nhắn mỗi giây và thường thì dung lượng tin nhắn còn lớn hơn nữa.
+
+90
+00:06:23,430 --> 00:06:26,160
+Phương pháp này khá hạn chế, mặc dù không phải lúc nào cũng vậy.
+
+91
+00:06:26,160 --> 00:06:27,450
+Có một hạn chế về mặt hình thức.
+
+92
+00:06:27,450 --> 00:06:32,550
+Thông thường kích thước tin nhắn sẽ không vượt quá vài kilobyte để đạt được hiệu suất mong muốn và
+
+93
+00:06:32,550 --> 00:06:33,210
+tỉ lệ.
+
+94
+00:06:33,930 --> 00:06:37,650
+Mô hình thực hiện thông báo đẩy Http khá độc đáo.
+
+95
+00:06:37,680 --> 00:06:43,320
+Việc triển khai thông thường là phương thức máy khách được đăng ký với sự kiện máy chủ và khi nó được đưa ra
+
+96
+00:06:43,320 --> 00:06:45,000
+phương pháp này được thực hiện.
+
+97
+00:06:45,030 --> 00:06:50,550
+Đăng ký thường được duy trì bằng kết nối websocket mở hoặc một số triển khai dài
+
+98
+00:06:50,550 --> 00:06:51,190
+bỏ phiếu.
+
+99
+00:06:51,210 --> 00:06:55,170
+Khi một sự kiện được đưa ra, một phương thức sẽ được thực thi trên máy khách.
+
+100
+00:06:55,260 --> 00:07:00,780
+Bản thân máy chủ không chờ phương thức hoàn tất mà nó đã hoàn tất khi phương thức được thực thi.
+
+101
+00:07:00,780 --> 00:07:04,350
+Vì vậy, không có vấn đề gì như hết thời gian chờ hoặc luồng bận.
+
+102
+00:07:04,710 --> 00:07:08,550
+Phản hồi và độ tin cậy là nhược điểm lớn nhất của phương pháp này.
+
+103
+00:07:08,550 --> 00:07:14,820
+Các thư viện này hoạt động theo chế độ gửi và quên, và khi tin nhắn được gửi đến người đăng ký, chúng
+
+104
+00:07:14,820 --> 00:07:17,430
+không biết liệu nó có được nhận hay không.
+
+105
+00:07:17,670 --> 00:07:23,520
+Điều này có nghĩa là nếu vì lý do nào đó mà tin nhắn không được nhận, có thể là do sự cố mạng
+
+106
+00:07:23,520 --> 00:07:27,030
+hoặc lỗi ở máy khách, máy chủ sẽ không bao giờ biết về điều đó.
+
+107
+00:07:27,060 --> 00:07:33,240
+Điều này làm cho các thư viện đó không hữu ích cho các ứng dụng đòi hỏi độ tin cậy cao, đó là hầu hết
+
+108
+00:07:33,240 --> 00:07:34,820
+của các ứng dụng phía máy chủ.
+
+109
+00:07:34,830 --> 00:07:40,140
+Đây là lý do tại sao các thư viện này chủ yếu được sử dụng cho các ứng dụng máy khách máy chủ, nơi độ tin cậy
+
+110
+00:07:40,140 --> 00:07:42,000
+có vai trò ít quan trọng hơn nhiều.
+
+111
+00:07:42,000 --> 00:07:47,490
+Ví dụ, trong ứng dụng trò chuyện, nếu một tin nhắn không được gửi đi thì đó cũng không phải là thảm họa.
+
+112
+00:07:47,490 --> 00:07:53,190
+Nhưng nếu không nhận được yêu cầu thực hiện một số hành động trên một dịch vụ, hậu quả có thể rất lớn
+
+113
+00:07:53,190 --> 00:07:53,850
+tệ hơn.
+
+114
+00:07:54,180 --> 00:08:00,810
+Hiện nay có những phương pháp giúp thông báo đẩy Http đáng tin cậy hơn, nhưng chúng đòi hỏi quá trình phát triển phức tạp
+
+115
+00:08:00,810 --> 00:08:03,810
+điều này sẽ làm cho mọi thứ trở nên kém hấp dẫn hơn rất nhiều.
+
+116
+00:08:03,840 --> 00:08:07,770
+Xét về độ phức tạp, việc triển khai những phương pháp này cực kỳ dễ dàng.
+
+117
+00:08:07,800 --> 00:08:11,850
+Các thư viện khác nhau rất dễ sử dụng và phương thức của máy khách rất đơn giản.
+
+118
+00:08:11,850 --> 00:08:17,850
+Thông thường chỉ cần không quá 2 hoặc 3 dòng mã để triển khai phía máy chủ và thêm hai dòng nữa
+
+119
+00:08:17,850 --> 00:08:18,870
+cho khách hàng.
+
+120
+00:08:19,080 --> 00:08:21,480
+Vậy chúng ta nên sử dụng phương pháp này ở đâu?
+
+121
+00:08:22,110 --> 00:08:27,570
+Như chúng tôi đã nói trước đây, nó hữu ích nhất trong các tình huống mà nhiều khách hàng cần được thông báo nhanh chóng và
+
+122
+00:08:27,570 --> 00:08:30,210
+chúng ta có thể thỏa hiệp về độ tin cậy.
+
+123
+00:08:30,240 --> 00:08:36,360
+Các ứng dụng như vậy là các ứng dụng trò chuyện hoặc ứng dụng giám sát nhận được thông báo liên tục và nếu một thông báo
+
+124
+00:08:36,360 --> 00:08:37,860
+bị mất, chúng ta có thể sống chung với nó.
+
+125
+00:08:38,700 --> 00:08:45,300
+Phương pháp nhắn tin tiếp theo là xếp hàng với hàng đợi như một nền tảng nhắn tin, luồng khá khác biệt
+
+126
+00:08:45,300 --> 00:08:46,440
+từ phương pháp trước.
+
+127
+00:08:46,440 --> 00:08:52,950
+Chúng tôi đã thảo luận với Queue một dịch vụ muốn chuyển một thông điệp đến một dịch vụ khác đặt thông điệp
+
+128
+00:08:52,950 --> 00:08:56,760
+trong một công cụ xếp hàng như Rabbitmq hoặc MQ series.
+
+129
+00:08:56,940 --> 00:09:03,390
+Dịch vụ khác gọi hàng đợi theo định kỳ hoặc nhận thông báo từ hàng đợi và sau đó nhận
+
+130
+00:09:03,390 --> 00:09:04,650
+tin nhắn từ hàng đợi.
+
+131
+00:09:05,190 --> 00:09:11,700
+Ưu điểm chính của hàng đợi là chúng ta có thể chắc chắn rằng tin nhắn sẽ được xử lý một lần và chỉ một lần sau đó
+
+132
+00:09:11,700 --> 00:09:13,320
+dịch vụ sẽ lấy tin nhắn.
+
+133
+00:09:13,320 --> 00:09:15,480
+Không có dịch vụ nào khác nhận được tin nhắn này.
+
+134
+00:09:15,990 --> 00:09:21,360
+Ngoài ra, hàng đợi có thể đảm bảo các tin nhắn được xử lý theo thứ tự chúng được nhận, điều này
+
+135
+00:09:21,360 --> 00:09:23,640
+không phải lúc nào cũng như vậy với các API còn lại.
+
+136
+00:09:23,910 --> 00:09:26,070
+Vậy chúng ta hãy phân tích phương pháp này.
+
+137
+00:09:27,030 --> 00:09:28,230
+Về hiệu suất.
+
+138
+00:09:28,230 --> 00:09:34,230
+Đây là một trong những điểm yếu nhất của phương pháp này so với REST API và thông báo đẩy được triển khai
+
+139
+00:09:34,230 --> 00:09:36,140
+kết nối trực tiếp giữa hai dịch vụ.
+
+140
+00:09:36,150 --> 00:09:41,810
+Ở đây chúng ta có một điểm dừng bổ sung trong hàng đợi, điều này làm tăng thêm độ trễ cho quá trình nhắn tin.
+
+141
+00:09:41,820 --> 00:09:47,250
+Ngoài ra, nếu các dịch vụ sử dụng thăm dò để kiểm tra tin nhắn mới trong hàng đợi, thường có
+
+142
+00:09:47,250 --> 00:09:50,820
+bộ đếm thời gian lên lịch thăm dò, điều này sẽ thêm một độ trễ nữa.
+
+143
+00:09:50,820 --> 00:09:56,940
+Nếu hàng đợi sử dụng tính năng lưu trữ tin nhắn, nghĩa là tin nhắn được ghi vào cơ sở dữ liệu trước khi truyền đi.
+
+144
+00:09:56,970 --> 00:10:00,450
+Để nâng cao độ tin cậy thì hiệu suất thậm chí còn tệ hơn.
+
+145
+00:10:01,020 --> 00:10:04,290
+Về kích thước tin nhắn, nó khác nhau tùy theo từng công cụ xếp hàng.
+
+146
+00:10:04,530 --> 00:10:10,320
+Ví dụ, Rabbitmq giới hạn kích thước tin nhắn ở mức hai gigabyte, mặc dù điều này được khuyến khích rất nhiều
+
+147
+00:10:10,320 --> 00:10:12,120
+để sử dụng những tin nhắn nhỏ hơn nhiều.
+
+148
+00:10:12,150 --> 00:10:15,720
+IBM WebSphere MQ giới hạn kích thước ở mức 100MB.
+
+149
+00:10:15,720 --> 00:10:21,180
+Tuy nhiên, cách tốt nhất là luôn sử dụng các tin nhắn nhỏ hơn và nếu nội dung của tin nhắn là
+
+150
+00:10:21,180 --> 00:10:28,000
+lớn, ví dụ như một tệp video sau đó lưu trữ nó trong kho dữ liệu ngoài và giữ nguyên bản tin đó
+
+151
+00:10:28,000 --> 00:10:29,560
+tham chiếu đến vị trí của nó.
+
+152
+00:10:30,780 --> 00:10:36,420
+Mô hình thực hiện cho Q, như chúng ta đã thảo luận, là kéo dịch vụ, mong đợi thông báo
+
+153
+00:10:36,420 --> 00:10:39,990
+nên định kỳ thăm dò hàng đợi và kiểm tra xem có tin nhắn mới không.
+
+154
+00:10:39,990 --> 00:10:42,960
+Và khi tìm thấy, hãy lấy lại và xử lý.
+
+155
+00:10:43,230 --> 00:10:45,630
+Còn phản hồi và độ tin cậy thì sao?
+
+156
+00:10:45,660 --> 00:10:48,640
+Vâng, tình hình ở đây phức tạp hơn một chút.
+
+157
+00:10:48,660 --> 00:10:54,690
+Người gửi tin nhắn, người đưa tin nhắn vào hàng đợi, sẽ không biết liệu mục tiêu có thực sự
+
+158
+00:10:54,690 --> 00:10:55,350
+hiểu rồi.
+
+159
+00:10:55,380 --> 00:10:59,700
+Tất cả những gì nó biết là liệu hàng đợi có nhận được tin nhắn và sẵn sàng chuyển tiếp hay không.
+
+160
+00:10:59,880 --> 00:11:05,130
+Mặt khác, hàng đợi thường có các công cụ quản lý và giám sát toàn diện để đảm bảo
+
+161
+00:11:05,130 --> 00:11:10,770
+tin nhắn không bị mất trên đường đến bên kia và có phương tiện để đảm bảo không có vấn đề gì
+
+162
+00:11:10,770 --> 00:11:11,610
+trên đường đi.
+
+163
+00:11:11,640 --> 00:11:14,730
+Vì vậy, phản hồi cho người gửi không thực sự quan trọng.
+
+164
+00:11:14,800 --> 00:11:20,940
+Bên cạnh việc chuyển giao thực tế cho hàng đợi, điểm mấu chốt là hàng đợi là một trong những thứ đáng tin cậy nhất
+
+165
+00:11:20,940 --> 00:11:21,930
+các hình thức nhắn tin.
+
+166
+00:11:21,930 --> 00:11:27,120
+Và nếu đây là ưu tiên hàng đầu của bạn với cái giá phải trả là hiệu suất, bạn chắc chắn nên cân nhắc sử dụng
+
+167
+00:11:27,120 --> 00:11:27,600
+Nó.
+
+168
+00:11:27,720 --> 00:11:29,670
+Vậy còn độ phức tạp thì sao?
+
+169
+00:11:30,790 --> 00:11:34,210
+Vâng, đây cũng là một trong những điểm yếu của Q.
+
+170
+00:11:34,240 --> 00:11:39,340
+Để sử dụng nó, chúng ta nên đưa vào kiến trúc của mình một công cụ Q và học cách sử dụng nó.
+
+171
+00:11:39,370 --> 00:11:43,450
+Chúng ta sẽ cần dành thời gian cho việc đào tạo, thiết lập và phức tạp.
+
+172
+00:11:43,450 --> 00:11:45,780
+Động cơ Q có thể khá khó bảo trì.
+
+173
+00:11:45,790 --> 00:11:48,790
+Nó phức tạp hơn nhiều so với một API nghỉ ngơi đơn giản.
+
+174
+00:11:49,000 --> 00:11:51,340
+Vậy khi nào chúng ta nên sử dụng Q?
+
+175
+00:11:51,820 --> 00:11:58,060
+Trường hợp sử dụng điển hình cho Q là một hệ thống có nhiều thông điệp truyền đi xung quanh nơi mà thứ tự và độ tin cậy
+
+176
+00:11:58,060 --> 00:12:01,270
+là ưu tiên hàng đầu và hiệu suất chỉ là thứ yếu.
+
+177
+00:12:01,420 --> 00:12:05,500
+Một ví dụ phổ biến là hệ thống xử lý lượng dữ liệu khổng lồ.
+
+178
+00:12:05,530 --> 00:12:11,370
+Dữ liệu được đưa vào hàng đợi và chờ đến lượt, sau đó được xử lý và lưu trữ trong kho dữ liệu.
+
+179
+00:12:11,380 --> 00:12:16,840
+Trong một hệ thống như vậy, hiệu suất thường không phải là ưu tiên hàng đầu vì không có người dùng hoặc dịch vụ
+
+180
+00:12:16,840 --> 00:12:19,870
+chờ dữ liệu đã được xử lý ở phía bên kia.
+
+181
+00:12:19,900 --> 00:12:23,740
+Nó được lưu trữ để sử dụng trong tương lai, nhưng hiện tại vẫn chưa biết mục đích sử dụng là gì.
+
+182
+00:12:23,950 --> 00:12:29,940
+Hệ thống như vậy là một ví dụ điển hình về nhắn tin dựa trên hàng đợi, vì nó tận dụng lợi thế của hàng đợi
+
+183
+00:12:29,950 --> 00:12:35,540
+sức mạnh, trật tự và độ tin cậy trong khi không bị ảnh hưởng bởi điểm yếu chính của nó là hiệu suất.
+
+184
+00:12:36,800 --> 00:12:41,840
+Phương pháp nhắn tin cuối cùng chúng ta sẽ thảo luận là nhắn tin dựa trên tệp và dựa trên cơ sở dữ liệu.
+
+185
+00:12:41,870 --> 00:12:47,240
+Thuật ngữ rườm rà này thực ra khá giống với phương pháp này nhưng có một điểm khác biệt quan trọng.
+
+186
+00:12:47,390 --> 00:12:52,550
+Trong khi ở phương pháp hàng đợi, tin nhắn được đưa vào hàng đợi và công cụ hàng đợi đảm bảo tin nhắn
+
+187
+00:12:52,550 --> 00:12:55,130
+sẽ được xử lý một lần và chỉ một lần.
+
+188
+00:12:55,160 --> 00:13:03,080
+Trong phương pháp này, tin nhắn được đặt dưới dạng tệp trong thư mục được chỉ định hoặc dưới dạng bản ghi trong cơ sở dữ liệu.
+
+189
+00:13:04,100 --> 00:13:09,950
+Sau khi lưu trữ, Azure Services sẽ định kỳ kéo hệ thống tệp của cơ sở dữ liệu và tìm kiếm tin nhắn mới.
+
+190
+00:13:09,980 --> 00:13:16,220
+Khi tìm thấy, tin nhắn sẽ được lấy ra bằng cách đọc tệp hoặc bằng cách lấy dữ liệu và xử lý.
+
+191
+00:13:17,150 --> 00:13:22,790
+Tôi sẽ không đi qua tất cả các tiêu chí của phương pháp này vì nó khá giống với tiêu chí hàng đợi ngoại trừ
+
+192
+00:13:22,790 --> 00:13:26,290
+kích thước tin nhắn, không bị giới hạn trong phương pháp này như bạn có thể thấy.
+
+193
+00:13:26,300 --> 00:13:30,140
+Nhưng tôi muốn làm nổi bật sự khác biệt chính giữa phương pháp này và hàng đợi.
+
+194
+00:13:30,410 --> 00:13:31,550
+Tại sao lại phải xếp hàng?
+
+195
+00:13:31,580 --> 00:13:37,500
+Có sự đảm bảo rằng tin nhắn sẽ được xử lý một lần và chỉ một lần trong phương pháp này không có điều đó.
+
+196
+00:13:37,530 --> 00:13:38,250
+bảo đảm.
+
+197
+00:13:38,370 --> 00:13:44,640
+Bây giờ hãy tưởng tượng tình huống sau Trong ứng dụng của chúng tôi, chúng tôi có một dịch vụ liên tục kéo tệp
+
+198
+00:13:44,640 --> 00:13:47,370
+hệ thống cho các tập tin mới chứa dữ liệu đo từ xa.
+
+199
+00:13:47,670 --> 00:13:52,230
+Vì chúng ta muốn hệ thống có tính dự phòng nên chúng ta có ba trường hợp của dịch vụ này.
+
+200
+00:13:52,230 --> 00:13:54,000
+Tất cả đều kéo cùng một thư mục.
+
+201
+00:13:54,090 --> 00:13:58,140
+Bây giờ giả sử một tập tin mới được thêm vào thư mục ngay lập tức.
+
+202
+00:13:58,170 --> 00:13:59,100
+Ba dịch vụ.
+
+203
+00:13:59,100 --> 00:14:02,430
+Hãy thử mở nó ra để đọc và xử lý nội dung bên trong.
+
+204
+00:14:02,460 --> 00:14:04,590
+Điều này đặt ra hai vấn đề.
+
+205
+00:14:04,710 --> 00:14:11,580
+Một tệp có thể bị khóa bởi dịch vụ đầu tiên truy cập vào tệp đó và các dịch vụ khác sẽ nhận được ngoại lệ.
+
+206
+00:14:11,580 --> 00:14:17,610
+Điều này thực sự có thể chứng minh là một điều tốt về mặt kiến trúc, vì theo cách này dữ liệu sẽ không
+
+207
+00:14:17,610 --> 00:14:19,110
+được xử lý nhiều lần.
+
+208
+00:14:19,110 --> 00:14:21,780
+Và điều này đưa chúng ta đến vấn đề thứ hai.
+
+209
+00:14:21,930 --> 00:14:27,090
+Nếu tệp có thể truy cập được, chúng ta có ba dịch vụ xử lý nội dung của tệp và lưu trữ dữ liệu.
+
+210
+00:14:27,120 --> 00:14:32,970
+Hiện tại, điều này có thể chấp nhận được trong một số trường hợp, nhưng trong nhiều trường hợp khác, nó có thể làm hỏng dữ liệu.
+
+211
+00:14:33,000 --> 00:14:38,730
+Hãy tưởng tượng một tập tin chứa các bản ghi chuyển tiền nếu bản ghi đó được xử lý nhiều lần.
+
+212
+00:14:38,730 --> 00:14:41,700
+Nó có thể gây ra thảm họa cho chủ tài khoản.
+
+213
+00:14:41,730 --> 00:14:47,160
+Bây giờ, những vấn đề này có thể được giải quyết bằng cách sử dụng các cơ chế và cờ phức tạp, nhưng tốt nhất là nên tránh nếu
+
+214
+00:14:47,160 --> 00:14:47,790
+khả thi.
+
+215
+00:14:47,790 --> 00:14:51,570
+Bất cứ khi nào cần cơ chế thăm dò, tốt nhất là sử dụng hàng đợi.
+
+216
+00:14:52,230 --> 00:14:56,370
+Như vậy là chúng ta đã kết thúc cuộc thảo luận về phương thức nhắn tin.
+
+217
+00:14:56,370 --> 00:15:01,170
+Trong bảng này, tôi đã tóm tắt tất cả các khía cạnh của các phương pháp khác nhau mà chúng ta đã thảo luận để bạn lựa chọn
+
+218
+00:15:01,170 --> 00:15:02,010
+dễ dàng hơn.
+
+219
+00:15:02,040 --> 00:15:06,210
+Hãy nhớ luôn đảm bảo rằng bạn đang sử dụng đúng phương thức nhắn tin.
+
+220
+00:15:06,240 --> 00:15:09,720
+Không có gì sai khi sử dụng nhiều hơn một phương pháp trong hệ thống của bạn.
+
+221
+00:15:09,720 --> 00:15:12,540
+Chỉ cần đảm bảo luôn sử dụng đúng cách.
+

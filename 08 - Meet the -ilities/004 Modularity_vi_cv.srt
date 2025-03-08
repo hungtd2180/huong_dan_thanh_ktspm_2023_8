@@ -1,0 +1,100 @@
+1
+00:00:00,290 --> 00:00:04,280
+Tính mô-đun là một trong những thuộc tính chất lượng quan trọng nhất hiện nay.
+
+2
+00:00:04,310 --> 00:00:07,760
+Việc biến ứng dụng của bạn thành dạng mô-đun sẽ thực sự giúp ích cho bạn trong quá trình thực hiện.
+
+3
+00:00:07,790 --> 00:00:13,280
+Nó sẽ giảm thiểu công sức cần thiết để duy trì ứng dụng và làm cho ứng dụng linh hoạt hơn nhiều khi thay đổi.
+
+4
+00:00:13,400 --> 00:00:16,100
+Vậy hệ thống mô-đun thực chất là gì?
+
+5
+00:00:16,219 --> 00:00:22,130
+Nói một cách đơn giản, hệ thống mô-đun là hệ thống được xây dựng từ các khối xây dựng nhỏ, được xác định rõ ràng
+
+6
+00:00:22,130 --> 00:00:25,700
+có thể thay đổi hoặc thay thế mà không ảnh hưởng đến toàn bộ hệ thống.
+
+7
+00:00:25,790 --> 00:00:31,610
+Ví dụ, hãy xem một hệ thống lấy dữ liệu từ API của một hệ thống khác và lưu dữ liệu này
+
+8
+00:00:31,610 --> 00:00:32,630
+trong cơ sở dữ liệu.
+
+9
+00:00:32,720 --> 00:00:38,360
+Trong một hệ thống không theo mô-đun, cả hai chức năng của hệ thống là lấy dữ liệu và lưu dữ liệu vào
+
+10
+00:00:38,360 --> 00:00:41,060
+cơ sở dữ liệu được thực hiện trong một thành phần duy nhất.
+
+11
+00:00:41,090 --> 00:00:44,630
+Đây là lựa chọn dễ dàng hơn nhưng cũng là lựa chọn tệ nhất.
+
+12
+00:00:44,660 --> 00:00:49,670
+Giả sử hệ thống bên ngoài được thay thế bằng một hệ thống mới sau quá trình thay thế này.
+
+13
+00:00:49,670 --> 00:00:56,390
+API hiện đã khác và mã ứng dụng truy cập vào nó phải được viết lại theo dạng không mô-đun
+
+14
+00:00:56,390 --> 00:00:56,760
+hệ thống.
+
+15
+00:00:56,780 --> 00:01:02,340
+Thay đổi này ảnh hưởng đến toàn bộ ứng dụng vì ứng dụng chỉ bao gồm một thành phần duy nhất.
+
+16
+00:01:02,370 --> 00:01:05,900
+Bây giờ chúng ta cần phải kiểm tra tất cả và triển khai lại tất cả.
+
+17
+00:01:05,910 --> 00:01:11,250
+Chúng ta phải nghĩ về thay đổi nhỏ này như thể nó có nghĩa là chúng ta đang triển khai hệ thống lần đầu tiên.
+
+18
+00:01:11,250 --> 00:01:12,390
+Chúng ta không có lựa chọn.
+
+19
+00:01:12,390 --> 00:01:14,310
+Toàn bộ ứng dụng đều bị ảnh hưởng.
+
+20
+00:01:14,340 --> 00:01:20,490
+Mặt khác, nếu ứng dụng là mô-đun, mã truy cập API được đóng gói trong
+
+21
+00:01:20,490 --> 00:01:22,200
+một thành phần độc lập nhỏ.
+
+22
+00:01:22,350 --> 00:01:27,570
+Nếu API trên hệ thống khác bị thay đổi, chỉ thành phần cụ thể này mới được thay đổi, để lại
+
+23
+00:01:27,570 --> 00:01:29,250
+phần còn lại của hệ thống vẫn còn nguyên vẹn.
+
+24
+00:01:29,850 --> 00:01:35,490
+Như bạn có thể thấy, điều này dẫn đến một hệ thống linh hoạt và dễ bảo trì hơn nhiều, cho phép ngắn gọn
+
+25
+00:01:35,490 --> 00:01:39,900
+chu kỳ triển khai và tiết kiệm rất nhiều thời gian khi thêm hoặc cập nhật các thành phần.
+

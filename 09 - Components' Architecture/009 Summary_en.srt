@@ -1,0 +1,28 @@
+1
+00:00:00,230 --> 00:00:04,560
+In this section, we discuss the architecture and best practices for software components.
+
+2
+00:00:04,580 --> 00:00:09,410
+The concepts and techniques we covered in this section are the building blocks of almost any software
+
+3
+00:00:09,410 --> 00:00:12,750
+component, and you will find yourself using them frequently.
+
+4
+00:00:12,770 --> 00:00:17,990
+Later in this course, we will discuss architectural patterns for full blown distributed applications
+
+5
+00:00:17,990 --> 00:00:21,450
+and it will complement the knowledge you have gained in this section.
+
+6
+00:00:21,470 --> 00:00:24,920
+Meanwhile, I hope you have understood the concepts we discussed.
+
+7
+00:00:24,920 --> 00:00:30,440
+If you have any question or comment, please do not hesitate to contact me and I'll be happy to help.
+

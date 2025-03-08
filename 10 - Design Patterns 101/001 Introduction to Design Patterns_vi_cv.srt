@@ -1,0 +1,212 @@
+1
+00:00:00,380 --> 00:00:05,720
+Không có cuộc thảo luận nào về mã hóa và kiến trúc được coi là trọn vẹn nếu không nói đến các mẫu thiết kế.
+
+2
+00:00:05,870 --> 00:00:10,070
+Bạn có thể đã nghe về nó trước đây và có lẽ bạn đã biết mọi thứ cần biết về nó
+
+3
+00:00:10,070 --> 00:00:10,460
+Nó.
+
+4
+00:00:10,460 --> 00:00:15,890
+Nhưng luôn là một ý tưởng hay khi có lời nhắc nhở về một trong những thuật ngữ nổi tiếng nhất trong phần mềm
+
+5
+00:00:15,890 --> 00:00:16,620
+ngành công nghiệp.
+
+6
+00:00:16,640 --> 00:00:19,040
+Vậy mẫu thiết kế là gì?
+
+7
+00:00:19,130 --> 00:00:25,580
+Định nghĩa cơ bản là các mẫu thiết kế là tập hợp các giải pháp có thể tái sử dụng chung cho các
+
+8
+00:00:25,580 --> 00:00:27,350
+vấn đề trong thiết kế phần mềm.
+
+9
+00:00:27,470 --> 00:00:33,490
+Khi viết phần mềm, có rất nhiều vấn đề nhỏ mà bạn sẽ thường xuyên phải giải quyết.
+
+10
+00:00:33,500 --> 00:00:40,520
+Các câu hỏi như cách giao tiếp giữa các lớp hoặc cách khởi tạo các triển khai giao diện, hoặc
+
+11
+00:00:40,520 --> 00:00:41,990
+cách truy cập kho dữ liệu.
+
+12
+00:00:41,990 --> 00:00:44,130
+Và còn rất nhiều câu hỏi khác nữa.
+
+13
+00:00:44,150 --> 00:00:48,290
+Hầu như mọi nhà phát triển phần mềm đều phải trả lời ở đâu đó tương tự.
+
+14
+00:00:48,380 --> 00:00:54,320
+Các mẫu thiết kế là một tập hợp các giải pháp hoặc mẫu cố gắng trả lời những câu hỏi đó và cung cấp
+
+15
+00:00:54,320 --> 00:00:58,070
+một mô hình hoặc khuôn mẫu được xác định rõ ràng cho những vấn đề đó.
+
+16
+00:00:58,190 --> 00:01:01,500
+Khi sử dụng các mẫu thiết kế, bạn sẽ đạt được những lợi ích sau.
+
+17
+00:01:01,890 --> 00:01:05,580
+Mẫu này đã được rất nhiều nhà phát triển thử nghiệm và sử dụng.
+
+18
+00:01:05,580 --> 00:01:11,220
+Không cần phải phát minh lại bánh xe và bạn có thể tái sử dụng các giải pháp đã được xây dựng và
+
+19
+00:01:11,220 --> 00:01:13,830
+được thực hiện bởi những bộ óc sáng giá nhất trong ngành.
+
+20
+00:01:14,370 --> 00:01:19,740
+Các mẫu thiết kế thường sẽ làm cho mã của bạn dễ đọc và sửa đổi hơn, do đó làm cho ứng dụng dễ sử dụng hơn
+
+21
+00:01:19,740 --> 00:01:20,340
+linh hoạt.
+
+22
+00:01:20,340 --> 00:01:22,320
+Và đây luôn là một mục đích tốt.
+
+23
+00:01:23,300 --> 00:01:29,480
+Các mẫu thiết kế lần đầu tiên được giới thiệu vào năm 1987, nhưng trở nên thực sự nổi tiếng khi cuốn sách này được xuất bản
+
+24
+00:01:29,480 --> 00:01:36,530
+vào năm 1994 bởi Gang of Four, Erich Gamma, Richard Helm, Ralph Johnson và John Vlissides.
+
+25
+00:01:36,890 --> 00:01:41,570
+Cuốn sách này đã thu hút sự chú ý của ngành công nghiệp phần mềm đến các mẫu thiết kế và đặt nền móng
+
+26
+00:01:41,570 --> 00:01:45,200
+cho cách suy nghĩ của chúng ta ngày nay với các khuôn mẫu và thực hành.
+
+27
+00:01:45,230 --> 00:01:47,930
+Nếu bạn chưa đọc thì chắc chắn bạn nên đọc.
+
+28
+00:01:47,960 --> 00:01:52,910
+Bạn có thể tìm thấy liên kết để mua sách trong tài liệu tài nguyên đi kèm ở cuối bài viết này
+
+29
+00:01:52,910 --> 00:01:53,630
+phần.
+
+30
+00:01:53,660 --> 00:01:58,280
+Bây giờ, bạn có thể nghĩ, tại sao một kiến trúc sư lại phải tìm hiểu về các mẫu thiết kế?
+
+31
+00:01:58,310 --> 00:02:03,050
+Những mô hình này được sử dụng trong quá trình phát triển và không liên quan gì đến bức tranh toàn cảnh.
+
+32
+00:02:03,260 --> 00:02:04,850
+Vâng, bạn nói đúng.
+
+33
+00:02:04,880 --> 00:02:08,060
+Các mẫu thiết kế thực sự hướng nhiều hơn tới các nhà phát triển.
+
+34
+00:02:08,060 --> 00:02:13,430
+Nhưng có hai lý do quan trọng mà một kiến trúc sư phần mềm ít nhất phải biết đến chúng.
+
+35
+00:02:13,550 --> 00:02:16,430
+Đầu tiên, các mẫu thiết kế có khía cạnh kiến trúc.
+
+36
+00:02:16,460 --> 00:02:21,980
+Mặc dù có quy mô nhỏ, nhưng mỗi mô hình thực sự thảo luận về một kiến trúc được đề xuất để giải quyết một vấn đề nhất định.
+
+37
+00:02:21,980 --> 00:02:22,640
+vấn đề.
+
+38
+00:02:22,640 --> 00:02:26,640
+Bạn có thể gọi nó là kiến trúc vi mô, nhưng nó vẫn là kiến trúc.
+
+39
+00:02:26,670 --> 00:02:32,430
+Hãy nhớ mục tiêu của kiến trúc là làm cho ứng dụng nhanh, an toàn, đáng tin cậy và dễ bảo trì
+
+40
+00:02:32,430 --> 00:02:37,620
+trong khi triển khai các mẫu thiết kế có liên quan chắc chắn sẽ giúp ứng dụng trở nên đáng tin cậy hơn
+
+41
+00:02:37,620 --> 00:02:41,730
+và dễ bảo trì hơn, đây chắc chắn là một trong những mục tiêu của một kiến trúc sư.
+
+42
+00:02:41,790 --> 00:02:45,360
+Thứ hai, chúng ta đã nói về vấn đề này và chúng ta sẽ tiếp tục nói về nó.
+
+43
+00:02:45,390 --> 00:02:49,670
+Kiến trúc sư phải luôn nắm rõ những gì đang diễn ra trong mã ứng dụng.
+
+44
+00:02:49,680 --> 00:02:54,420
+Anh ta phải có khả năng xem xét mã, tìm ra vấn đề trong đó và thậm chí viết một số mã.
+
+45
+00:02:54,420 --> 00:02:59,310
+Vì các mẫu thiết kế là một công cụ quan trọng đối với các nhà phát triển, nên kiến trúc sư phải quen thuộc
+
+46
+00:02:59,310 --> 00:03:00,120
+với họ nữa.
+
+47
+00:03:00,390 --> 00:03:04,050
+Bây giờ, như bạn có thể đoán, có rất nhiều mẫu thiết kế.
+
+48
+00:03:04,170 --> 00:03:07,830
+Như bạn có thể thấy trong ảnh chụp màn hình Wikipedia này, có hàng tá những thứ như vậy.
+
+49
+00:03:07,830 --> 00:03:12,630
+Chúng ta sẽ tập trung vào bốn điều trong số đó, mà tôi tin là rất quan trọng và rất phổ biến.
+
+50
+00:03:12,750 --> 00:03:17,520
+Bạn gần như chắc chắn sẽ tìm thấy cơ hội để triển khai những mô hình đó vào ứng dụng của mình.
+
+51
+00:03:17,520 --> 00:03:22,740
+Và tất nhiên tôi khuyến khích bạn tìm hiểu và áp dụng phần còn lại vào các mô hình mà chúng ta sẽ thảo luận.
+
+52
+00:03:22,740 --> 00:03:27,450
+Là kho lưu trữ của nhà máy, mặt tiền và lệnh.
+
+53
+00:03:27,470 --> 00:03:30,530
+Vậy chúng ta hãy bắt đầu với mô hình nhà máy.
+

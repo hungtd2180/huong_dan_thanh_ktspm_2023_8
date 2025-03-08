@@ -1,0 +1,128 @@
+1
+00:00:00,440 --> 00:00:04,120
+And as promised, here is your architecture document.
+
+2
+00:00:04,130 --> 00:00:08,870
+In the resources section of this lecture, you can find the full architecture document of the system.
+
+3
+00:00:08,870 --> 00:00:11,660
+We just discussed the IO2 system.
+
+4
+00:00:11,750 --> 00:00:16,880
+In the document you will find all the sections we talked about the background requirements, executive
+
+5
+00:00:16,880 --> 00:00:19,510
+summary, architecture, overview and components.
+
+6
+00:00:19,520 --> 00:00:20,210
+Drill down.
+
+7
+00:00:20,210 --> 00:00:24,440
+You will find there are all the decisions we made complete with the rationale behind them.
+
+8
+00:00:24,440 --> 00:00:28,790
+You will see there all the figures and diagrams that we used during our discussion.
+
+9
+00:00:28,790 --> 00:00:31,220
+You will find the functional and non-functional requirements.
+
+10
+00:00:31,220 --> 00:00:35,540
+You will see the technology stack dilemma that we had and what we decided to use.
+
+11
+00:00:35,570 --> 00:00:40,210
+You will find all the messaging methods we are going to implement and so on and so forth.
+
+12
+00:00:40,220 --> 00:00:45,950
+In short, you will find the full architecture we discussed formalized in an easy to read comprehensive
+
+13
+00:00:45,950 --> 00:00:46,610
+format.
+
+14
+00:00:46,640 --> 00:00:53,120
+Now the good part is this Feel free to use this document as a template for your future architecture
+
+15
+00:00:53,120 --> 00:00:53,840
+document.
+
+16
+00:00:53,870 --> 00:00:58,850
+One of the major tasks of every software architect is to craft the architecture document.
+
+17
+00:00:58,880 --> 00:01:02,790
+Using this document as a template will make your work so much easier.
+
+18
+00:01:02,790 --> 00:01:08,610
+Instead of beginning from scratch and trying to figure out what to write and in what order, the template
+
+19
+00:01:08,610 --> 00:01:10,230
+figures everything out for you.
+
+20
+00:01:10,260 --> 00:01:14,370
+The document sets the sections, their order and their desired content.
+
+21
+00:01:14,400 --> 00:01:20,490
+All you have to do is simply fill in the blanks and of course, feel free to use the i o to specific
+
+22
+00:01:20,490 --> 00:01:23,100
+sections as a foundation of your architecture.
+
+23
+00:01:23,100 --> 00:01:27,870
+However you choose to use this template, I'm sure it will help you become a better, more professional
+
+24
+00:01:27,870 --> 00:01:28,650
+architect.
+
+25
+00:01:28,830 --> 00:01:32,520
+One final note before you go and download the document.
+
+26
+00:01:32,550 --> 00:01:37,980
+Note that at the beginning of the document there is a copyright notice that states the template is based
+
+27
+00:01:37,980 --> 00:01:38,940
+on this course.
+
+28
+00:01:38,940 --> 00:01:42,780
+Please do notrillionemove this notice it's an important part of the document.
+
+29
+00:01:42,900 --> 00:01:49,500
+So now go on and grab the file after downloading it, take the time and read through it.
+
+30
+00:01:49,530 --> 00:01:54,240
+Make sure you are comfortable with its structure and contents and make sure you see the correlation
+
+31
+00:01:54,240 --> 00:01:56,940
+between it and the discussions we had in this section.
+
+32
+00:01:57,060 --> 00:02:01,110
+After you have read it, let's go to the next section.
+

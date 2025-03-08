@@ -1,0 +1,80 @@
+1
+00:00:00,710 --> 00:00:04,010
+Chào mừng đến với phần Mẫu kiến trúc nâng cao.
+
+2
+00:00:04,190 --> 00:00:09,530
+Cho đến nay, chúng ta đã tìm hiểu về các mô hình kiến trúc phổ biến nhất như mở rộng không trạng thái, lỏng lẻo
+
+3
+00:00:09,530 --> 00:00:11,540
+kiến trúc ghép nối và phân lớp.
+
+4
+00:00:11,690 --> 00:00:16,880
+Bạn có thể sẽ sử dụng các mẫu này trong hầu hết mọi hệ thống bạn thiết kế và tôi chắc chắn rằng chúng sẽ như vậy.
+
+5
+00:00:16,880 --> 00:00:17,690
+phục vụ bạn tốt.
+
+6
+00:00:17,720 --> 00:00:20,760
+Tuy nhiên, đây không phải là những mô hình duy nhất tồn tại.
+
+7
+00:00:20,780 --> 00:00:26,090
+Thế giới kiến trúc phần mềm là một thế giới luôn thay đổi và phát triển, và các mô hình mới thường xuyên xuất hiện
+
+8
+00:00:26,090 --> 00:00:26,660
+nổi lên.
+
+9
+00:00:26,690 --> 00:00:31,280
+Trong phần này, tôi muốn giới thiệu cho bạn một số mẫu kiến trúc tiên tiến hơn
+
+10
+00:00:31,280 --> 00:00:32,180
+tồn tại ngày nay.
+
+11
+00:00:32,210 --> 00:00:37,310
+Có thể bạn sẽ không sử dụng chúng trong mọi hệ thống, nhưng bạn nên luôn ghi nhớ chúng.
+
+12
+00:00:37,310 --> 00:00:40,460
+Và khi có cơ hội, hãy tận dụng chúng.
+
+13
+00:00:41,450 --> 00:00:43,590
+Chúng ta sẽ không đi sâu vào những mô hình này.
+
+14
+00:00:43,610 --> 00:00:49,610
+Điều này sẽ đòi hỏi một khóa học riêng, nhưng chúng ta sẽ nắm được cốt lõi của các mô hình này để bạn biết chúng
+
+15
+00:00:49,610 --> 00:00:51,020
+tồn tại khi có liên quan.
+
+16
+00:00:51,050 --> 00:00:53,990
+Đây là những mô hình chúng ta sẽ thảo luận.
+
+17
+00:00:54,020 --> 00:00:59,180
+Nguồn sự kiện và người tìm kiếm dịch vụ vi mô.
+
+18
+00:00:59,330 --> 00:01:01,900
+Đừng lo lắng nếu bạn không quen với những mẫu này.
+
+19
+00:01:01,920 --> 00:01:03,600
+Đó là lý do tại sao tôi ở đây.
+
+20
+00:01:03,720 --> 00:01:05,099
+Vậy chúng ta đi thôi.
+

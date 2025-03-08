@@ -1,0 +1,128 @@
+1
+00:00:00,600 --> 00:00:03,780
+Và đây là kỹ năng cuối cùng mà chúng ta sẽ thảo luận.
+
+2
+00:00:03,810 --> 00:00:11,190
+Và đây là một điều đơn giản nhưng rất quan trọng và có thể tóm tắt như thế này: Hãy luôn học hỏi.
+
+3
+00:00:11,430 --> 00:00:14,910
+Chúng ta đang sống trong một thế giới năng động và thế giới phần mềm thậm chí còn năng động hơn.
+
+4
+00:00:14,940 --> 00:00:17,310
+Mọi thứ đang thay đổi chỉ trong chớp mắt.
+
+5
+00:00:17,340 --> 00:00:21,870
+Những khuôn khổ từng thịnh hành cách đây ba năm giờ đã hoàn toàn bị lãng quên.
+
+6
+00:00:21,900 --> 00:00:26,160
+Bạn có thể đã nghe nói đến jQuery, Grant, AngularJS và Hadoop.
+
+7
+00:00:26,310 --> 00:00:32,070
+Tất cả các khuôn khổ và công cụ này đã từng cực kỳ phổ biến cách đây không lâu nhưng hiện nay hầu như không còn nữa
+
+8
+00:00:32,070 --> 00:00:32,520
+đã sử dụng.
+
+9
+00:00:32,549 --> 00:00:34,750
+Họ đã được thay thế bằng những giải pháp tốt hơn.
+
+10
+00:00:34,770 --> 00:00:39,220
+Một số người không thích nhịp độ nhanh này, nhưng đó là sự thật.
+
+11
+00:00:39,240 --> 00:00:43,140
+Một trong những câu nói nổi tiếng nhất trong thế giới kinh doanh là thích nghi hoặc chết.
+
+12
+00:00:43,500 --> 00:00:47,130
+Mặc dù nguồn gốc của nó không rõ ràng nhưng nó vẫn chứa đựng nhiều sự thật.
+
+13
+00:00:47,160 --> 00:00:49,880
+Bạn nên thường xuyên quan sát xung quanh và kiểm tra xem có gì mới không.
+
+14
+00:00:49,890 --> 00:00:53,000
+Nếu có mô hình hoặc công nghệ mới, hãy làm theo.
+
+15
+00:00:53,010 --> 00:00:57,690
+Bạn không cần phải chấp nhận chúng ngay lập tức nhưng chắc chắn nên để mắt tới chúng.
+
+16
+00:00:57,690 --> 00:01:00,280
+Vì vậy, khi đến lúc, bạn sẽ biết phải làm gì.
+
+17
+00:01:00,310 --> 00:01:02,320
+Bây giờ làm sao để học được điều này?
+
+18
+00:01:02,320 --> 00:01:04,930
+Bạn có thể tìm thấy kiến thức liên quan đến kiến trúc sư ở đâu?
+
+19
+00:01:04,959 --> 00:01:06,340
+Đây là những gì tôi làm.
+
+20
+00:01:06,370 --> 00:01:12,190
+Nguồn kiến thức chính của tôi là blog, bài viết và hội nghị.
+
+21
+00:01:12,220 --> 00:01:16,410
+Có rất nhiều blog và trang web viết bài chuyên về công nghệ và kiến trúc.
+
+22
+00:01:16,420 --> 00:01:20,410
+Một số trang web phổ biến nhất là D Zone, InfoQ và O&#39;Reilly.
+
+23
+00:01:20,440 --> 00:01:24,510
+Đăng ký vào các trang web này và bạn sẽ nhận được nhiều thông tin chất lượng.
+
+24
+00:01:24,520 --> 00:01:29,110
+Ngoài ra, mỗi năm tôi đều tham dự một hội nghị về phần mềm và kiến trúc.
+
+25
+00:01:29,140 --> 00:01:37,660
+Những sự kiện yêu thích của tôi là Hội nghị kiến trúc phần mềm O&#39;Reilly, Infocus, Qcon, NDC và Microsoft Build.
+
+26
+00:01:37,690 --> 00:01:41,590
+Nhưng tất nhiên, bạn có thể tìm thấy những hội nghị khác hữu ích hơn.
+
+27
+00:01:41,620 --> 00:01:46,780
+Những hội nghị này là cơ hội tuyệt vời để gặp gỡ trực tiếp những người tài năng nhất trong
+
+28
+00:01:46,780 --> 00:01:51,690
+ngành công nghiệp và tìm hiểu về các xu hướng và phát triển mới nhất mà bạn nên biết.
+
+29
+00:01:51,700 --> 00:01:55,880
+Và việc đến thăm những địa điểm mới và gặp gỡ những người mới luôn là điều thú vị.
+
+30
+00:01:55,900 --> 00:02:00,650
+Vậy nên điều cốt yếu là: Dù bạn chọn phương pháp nào, hãy luôn tiếp tục học hỏi.
+
+31
+00:02:00,670 --> 00:02:03,700
+Đừng để bị tụt hậu với kiến thức và kỹ năng lỗi thời.
+
+32
+00:02:03,700 --> 00:02:07,600
+Hãy đảm bảo rằng bạn có thể đóng góp cho khách hàng của mình trong thế giới thay đổi nhanh chóng này.
+

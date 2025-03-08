@@ -1,0 +1,116 @@
+1
+00:00:01,550 --> 00:00:06,380
+Hệ thống mà chúng ta đang nói đến là hệ thống dành cho một công ty khởi nghiệp trẻ hư cấu có tên là Io2.
+
+2
+00:00:06,500 --> 00:00:13,040
+Nếu bạn không quen với thuật ngữ Iot, nó là viết tắt của Internet of Things và đại diện cho những thứ nhỏ,
+
+3
+00:00:13,040 --> 00:00:19,640
+luôn kết nối các thiết bị mà chúng ta sử dụng hàng ngày, chẳng hạn như camera gia đình, bộ định tuyến Wi-Fi, bộ điều nhiệt được kết nối
+
+4
+00:00:19,640 --> 00:00:20,660
+và nhiều hơn nữa.
+
+5
+00:00:20,840 --> 00:00:26,690
+Công ty khởi nghiệp của chúng tôi phát triển một hệ thống bảng điều khiển báo cáo gần như theo thời gian thực trạng thái của các thiết bị IoT
+
+6
+00:00:26,690 --> 00:00:33,080
+khách hàng của họ đang sử dụng và quản lý, Ví dụ, nhà thông minh, đang ngày càng trở nên phổ biến,
+
+7
+00:00:33,080 --> 00:00:35,060
+có rất nhiều thiết bị IoT.
+
+8
+00:00:35,090 --> 00:00:40,880
+Hãy nghĩ về bộ điều chỉnh nhiệt độ, bóng đèn, bộ định tuyến, máy ảnh, công tắc điện, tủ lạnh và
+
+9
+00:00:40,880 --> 00:00:41,720
+còn nhiều hơn thế nữa.
+
+10
+00:00:41,840 --> 00:00:45,710
+Mỗi loại đều có ứng dụng riêng và có thể quản lý bằng điện thoại thông minh.
+
+11
+00:00:45,710 --> 00:00:50,720
+Nhưng liệu có dễ hơn không khi có được cái nhìn thống nhất về tất cả các thiết bị đó trên một màn hình duy nhất?
+
+12
+00:00:50,750 --> 00:00:54,170
+Đây chính là những gì tôi đang làm với ứng dụng này.
+
+13
+00:00:54,200 --> 00:01:00,690
+Nó thu thập thông tin trạng thái từ các thiết bị IoT đã đăng ký và các định dạng, dữ liệu để trực quan đẹp mắt
+
+14
+00:01:00,690 --> 00:01:05,700
+bảng điều khiển, cho phép khách hàng biết chính xác những gì đang diễn ra với thiết bị của bạn.
+
+15
+00:01:05,790 --> 00:01:11,010
+Ngoài ra, khách hàng có thể thực hiện một số truy vấn được xác định trước để truy cập thêm thông tin về
+
+16
+00:01:11,010 --> 00:01:11,760
+thiết bị.
+
+17
+00:01:12,750 --> 00:01:18,120
+Điều quan trọng cần lưu ý là đối với giai đoạn một của hệ thống, khách hàng không thêm hoặc cập nhật bất kỳ
+
+18
+00:01:18,120 --> 00:01:18,630
+dữ liệu.
+
+19
+00:01:18,660 --> 00:01:22,860
+Thông tin trạng thái được nhận trực tiếp từ các thiết bị tại hiện trường.
+
+20
+00:01:22,890 --> 00:01:25,710
+Dữ liệu chỉ được trình bày cho khách hàng.
+
+21
+00:01:25,920 --> 00:01:31,650
+Một khía cạnh quan trọng khác là khách hàng ra mắt sẽ được nhập vào hệ thống theo cách thủ công bởi
+
+22
+00:01:31,650 --> 00:01:36,090
+nhân viên bán hàng thực hiện quy trình xác minh chuyên sâu để ngăn ngừa rò rỉ dữ liệu.
+
+23
+00:01:36,120 --> 00:01:41,670
+Vì thế, hệ thống không cần phải có quy trình đăng ký và bạn có thể đảm nhận các thiết bị
+
+24
+00:01:41,670 --> 00:01:43,170
+đã được đăng ký.
+
+25
+00:01:43,830 --> 00:01:49,740
+Bạn là kiến trúc sư của hệ thống và nhiệm vụ của bạn là thiết kế kiến trúc sao cho ứng dụng IO2
+
+26
+00:01:49,740 --> 00:01:54,630
+sẽ thúc đẩy hoạt động kinh doanh của công ty, cuối cùng dẫn đến đợt IPO thành công.
+
+27
+00:01:54,810 --> 00:01:59,790
+Bây giờ, hãy nhớ rằng bạn phải tuân theo quy trình kiến trúc đã thảo luận trước đó để đạt được
+
+28
+00:01:59,790 --> 00:02:01,110
+kiến trúc tốt nhất có thể.
+
+29
+00:02:01,230 --> 00:02:03,450
+Vậy bạn sẽ làm gì tiếp theo?
+

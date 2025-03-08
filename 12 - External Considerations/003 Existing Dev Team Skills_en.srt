@@ -1,0 +1,92 @@
+1
+00:00:00,320 --> 00:00:05,210
+When selecting the technology stack, which is one of the most important parts of designing a system,
+
+2
+00:00:05,210 --> 00:00:09,080
+always factor in the existing dev team knowledge and skills.
+
+3
+00:00:09,230 --> 00:00:15,050
+Deciding on a technology stack that the dev team is not familiar with might cause two problems.
+
+4
+00:00:15,140 --> 00:00:18,380
+The first is delay to the project development.
+
+5
+00:00:18,410 --> 00:00:23,060
+The developers will have to dedicate time for training to make them familiar with the new technology.
+
+6
+00:00:23,090 --> 00:00:27,380
+This will have effect on the project schedule and can lead to late delivery.
+
+7
+00:00:27,410 --> 00:00:30,140
+The second potential problem is low quality.
+
+8
+00:00:30,170 --> 00:00:35,060
+Since the system will be the first for the dev team to be developed in the selected technology stack,
+
+9
+00:00:35,090 --> 00:00:40,460
+the developers will not have experience with the platform and will not know how to avoid common pitfalls,
+
+10
+00:00:40,460 --> 00:00:46,070
+implement best practices and take advantage of some hidden gems found in every development platform.
+
+11
+00:00:46,370 --> 00:00:50,900
+Now, it should be noted that not all platform migrations are created equal.
+
+12
+00:00:51,050 --> 00:00:57,140
+For example, for backend developer to migrate from Dotnet to Java might require some effort, but at
+
+13
+00:00:57,140 --> 00:00:59,480
+the end of the day, these are quite similar platforms.
+
+14
+00:00:59,480 --> 00:01:04,090
+And if the developer did a good job with Dotnet, he will probably be a good Java developer.
+
+15
+00:01:04,110 --> 00:01:09,630
+On the other hand, a Windows desktop developer migrating to Python backend development will have a
+
+16
+00:01:09,630 --> 00:01:12,040
+really hard time becoming a good Python developer.
+
+17
+00:01:12,060 --> 00:01:17,400
+Not only desktop development is conceptually very different from web development and requires a different
+
+18
+00:01:17,400 --> 00:01:18,060
+mindset.
+
+19
+00:01:18,090 --> 00:01:21,000
+The platforms themselves are completely different.
+
+20
+00:01:21,030 --> 00:01:26,160
+They move from object oriented statically typed language such as dotnet to the dynamic.
+
+21
+00:01:26,160 --> 00:01:27,990
+Python might not be easy.
+
+22
+00:01:28,140 --> 00:01:33,840
+So to summarize, when evaluating various technology stacks, always check what the current development
+
+23
+00:01:33,840 --> 00:01:39,000
+team's skills are and try to understand the effect it will have on the project's schedule and quality.
+

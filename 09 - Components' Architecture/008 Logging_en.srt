@@ -1,0 +1,156 @@
+1
+00:00:00,350 --> 00:00:01,810
+Imagine this.
+
+2
+00:00:01,819 --> 00:00:07,790
+It's 2 a.m. You are sleeping in your nice, comfortable bed, dreaming on unicorns and rainbows.
+
+3
+00:00:07,820 --> 00:00:10,400
+Suddenly the phone is ringing.
+
+4
+00:00:10,640 --> 00:00:11,500
+Confused.
+
+5
+00:00:11,510 --> 00:00:14,630
+You're sitting up blurry eyes and all and answer the phone.
+
+6
+00:00:14,660 --> 00:00:19,460
+Your hysterical boss is on the other side screaming about a problem with the mission critical software
+
+7
+00:00:19,490 --> 00:00:24,590
+you have just designed and commanding you to come straight away to the office and help the developers
+
+8
+00:00:24,590 --> 00:00:26,570
+who have no clue what's going on.
+
+9
+00:00:26,750 --> 00:00:30,230
+From this point, there are two alternate storylines.
+
+10
+00:00:30,260 --> 00:00:35,720
+In the first you hurriedly dress, forget to brush your teeth, eats something in a hurry, drives like
+
+11
+00:00:35,720 --> 00:00:41,630
+crazy, meets the developers and spending three very stressed halls looking at the code until you finally
+
+12
+00:00:41,660 --> 00:00:45,560
+find the culprit, which happens to be a null parameter no one expected.
+
+13
+00:00:45,800 --> 00:00:49,760
+In the second storyline you tell your boss, Oh, look at the logs.
+
+14
+00:00:49,790 --> 00:00:53,060
+They are on that network drive and go back to sleep.
+
+15
+00:00:53,480 --> 00:00:56,990
+Logging is important, even very important.
+
+16
+00:00:57,020 --> 00:01:03,030
+In fact, it's so important that this is the first component I always design when working on a new system.
+
+17
+00:01:03,030 --> 00:01:08,850
+No matter how simple the code is or how urgent is the system, never ignore the logging.
+
+18
+00:01:09,330 --> 00:01:14,130
+A good system uses logging for two purposes one to track errors.
+
+19
+00:01:14,130 --> 00:01:19,560
+If there are any exceptions during the system's activity, the system will write those exceptions to
+
+20
+00:01:19,560 --> 00:01:24,600
+the log, complete with all the relevant details, full error message stack trace, inner exceptions,
+
+21
+00:01:24,600 --> 00:01:26,340
+user details, and so on.
+
+22
+00:01:27,090 --> 00:01:31,440
+This way when an exception will happen and let's face it, they always do.
+
+23
+00:01:31,470 --> 00:01:35,220
+Eventually you will have a great starting point to investigate the exception.
+
+24
+00:01:35,250 --> 00:01:40,770
+You will know where to look for the details and understand immediately what are the causes of the exception.
+
+25
+00:01:41,010 --> 00:01:43,410
+The second purpose is to gather data.
+
+26
+00:01:43,680 --> 00:01:49,200
+Logs should not be used only for exceptions, but to collect and store operational data on the system.
+
+27
+00:01:49,200 --> 00:01:54,960
+For example, using logging, you can find out which model is the most visited by users and which one
+
+28
+00:01:54,960 --> 00:01:55,910
+is less popular.
+
+29
+00:01:55,920 --> 00:02:01,860
+You can store performance data and find out which methods perform poorly and which ones are blazingly
+
+30
+00:02:01,860 --> 00:02:02,520
+fast.
+
+31
+00:02:02,550 --> 00:02:07,710
+In fact, if the logging is really massive, you can reconstruct a specific user flow throughout the
+
+32
+00:02:07,710 --> 00:02:09,960
+system and understand his behavior.
+
+33
+00:02:09,990 --> 00:02:12,690
+This is priceless data for any system.
+
+34
+00:02:12,960 --> 00:02:16,790
+Note that it doesn't really matter where will you store the logs?
+
+35
+00:02:16,800 --> 00:02:20,730
+It can be in files, in database in event log.
+
+36
+00:02:20,730 --> 00:02:25,110
+Any place is good as long as you actually store the data and can access it.
+
+37
+00:02:25,200 --> 00:02:28,230
+There are a lot of log analysis tools in the market today.
+
+38
+00:02:28,260 --> 00:02:33,660
+Kibana one of the most popular and I urge you to use whatever tool you want as long as you keep logging
+
+39
+00:02:33,660 --> 00:02:35,280
+the hell out of your application.
+

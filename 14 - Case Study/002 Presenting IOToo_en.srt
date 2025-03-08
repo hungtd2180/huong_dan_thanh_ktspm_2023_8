@@ -1,0 +1,116 @@
+1
+00:00:01,550 --> 00:00:06,380
+The system we are talking about is for a young, fictitious startup called Io2.
+
+2
+00:00:06,500 --> 00:00:13,040
+If you are not familiar with the Iot term, it stands for Internet of Things and represents those small,
+
+3
+00:00:13,040 --> 00:00:19,640
+always connected devices that we use every day, such as home cameras, Wi-Fi routers, connected thermostats
+
+4
+00:00:19,640 --> 00:00:20,660
+and more.
+
+5
+00:00:20,840 --> 00:00:26,690
+Our startup develops a dashboard system that reports in almost real time the status of the Iot devices
+
+6
+00:00:26,690 --> 00:00:33,080
+its clients are using and managing, For example, smart homes, which are becoming more and more ubiquitous,
+
+7
+00:00:33,080 --> 00:00:35,060
+has a lot of Iot devices.
+
+8
+00:00:35,090 --> 00:00:40,880
+Think about the thermostats, light bulbs, routers, cameras, electric switches, refrigerators and
+
+9
+00:00:40,880 --> 00:00:41,720
+lots more.
+
+10
+00:00:41,840 --> 00:00:45,710
+Each one of them has its own app and can be managed from a smartphone.
+
+11
+00:00:45,710 --> 00:00:50,720
+But wouldn't it be easier to get a unified view of all those devices on a single screen?
+
+12
+00:00:50,750 --> 00:00:54,170
+This is what I o to is doing with this application.
+
+13
+00:00:54,200 --> 00:01:00,690
+It collects status information from registered Iot devices and formats, the data to visually pleasing
+
+14
+00:01:00,690 --> 00:01:05,700
+dashboard, allowing you the customer to know exactly what is going on with your devices.
+
+15
+00:01:05,790 --> 00:01:11,010
+In addition, the customer can execute some predefined queries to access more information about the
+
+16
+00:01:11,010 --> 00:01:11,760
+devices.
+
+17
+00:01:12,750 --> 00:01:18,120
+It's important to note that for phase one of the system, the customer is not adding or updating any
+
+18
+00:01:18,120 --> 00:01:18,630
+data.
+
+19
+00:01:18,660 --> 00:01:22,860
+The status info is received directly from the devices in the field.
+
+20
+00:01:22,890 --> 00:01:25,710
+The data is just presented to the customer.
+
+21
+00:01:25,920 --> 00:01:31,650
+Another important aspect is that the launch customers will be entered into the system manually by the
+
+22
+00:01:31,650 --> 00:01:36,090
+salespeople following an intensive verification process to prevent data leaks.
+
+23
+00:01:36,120 --> 00:01:41,670
+Because of that, the system does not have to have a registration process and you can assume the devices
+
+24
+00:01:41,670 --> 00:01:43,170
+are already registered.
+
+25
+00:01:43,830 --> 00:01:49,740
+You are the architect of the system and it's your job to design the architecture so that the IO2 application
+
+26
+00:01:49,740 --> 00:01:54,630
+will boost the company's business, leading it eventually to a successful IPO.
+
+27
+00:01:54,810 --> 00:01:59,790
+Now, remember, you have to follow the architecture process discussed earlier in order to achieve the
+
+28
+00:01:59,790 --> 00:02:01,110
+best architecture possible.
+
+29
+00:02:01,230 --> 00:02:03,450
+So what do you do next?
+

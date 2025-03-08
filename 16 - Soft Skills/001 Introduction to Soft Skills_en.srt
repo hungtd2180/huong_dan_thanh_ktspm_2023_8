@@ -1,0 +1,100 @@
+1
+00:00:00,260 --> 00:00:02,690
+Welcome to the Soft Skills section.
+
+2
+00:00:02,840 --> 00:00:08,240
+In order to be a great architect, it's not enough to be well-versed in technology stacks, architectural
+
+3
+00:00:08,240 --> 00:00:10,940
+patterns, and coding best practices.
+
+4
+00:00:11,090 --> 00:00:14,150
+A great architect must have great soft skills.
+
+5
+00:00:14,180 --> 00:00:20,360
+These soft skills are essential when communicating with a project team from the developers to the project
+
+6
+00:00:20,360 --> 00:00:23,180
+manager and even the CTO and CEO.
+
+7
+00:00:23,600 --> 00:00:25,700
+Let's think about it for a moment.
+
+8
+00:00:26,240 --> 00:00:30,140
+A software architect is in a very unique position in the organizational tree.
+
+9
+00:00:30,170 --> 00:00:35,720
+She has a very deep knowledge about the application and its architecture, and she is expected to guide
+
+10
+00:00:35,720 --> 00:00:38,390
+the development team about the actual implementation.
+
+11
+00:00:38,390 --> 00:00:41,890
+But in reality, she has no authority over them.
+
+12
+00:00:41,900 --> 00:00:44,480
+She can't command the team What to do.
+
+13
+00:00:44,510 --> 00:00:46,370
+She can only recommend.
+
+14
+00:00:46,400 --> 00:00:52,760
+Now, if the architect is an arrogant, righteous person that makes everybody else feel inferior, no
+
+15
+00:00:52,760 --> 00:00:54,200
+one will want to work with him.
+
+16
+00:00:54,200 --> 00:00:57,950
+And as a result, no one would want to implement the architecture.
+
+17
+00:00:58,130 --> 00:01:04,379
+The architect must be able to make the team do what he wants without the actual authority over them.
+
+18
+00:01:04,410 --> 00:01:10,560
+This is called influence without authority, and this is one of the biggest challenges in the software
+
+19
+00:01:10,560 --> 00:01:11,190
+world.
+
+20
+00:01:11,340 --> 00:01:17,550
+You don't want to make the developers do as you say because they have to, but because they want to.
+
+21
+00:01:17,580 --> 00:01:23,280
+In this section, we will explore some soft skills that will greatly help you improve your communication
+
+22
+00:01:23,280 --> 00:01:26,460
+skills with the team and make them want to work with you.
+
+23
+00:01:26,490 --> 00:01:32,250
+Learning and internalizing these skills will make you a better architect, someone who is extremely
+
+24
+00:01:32,250 --> 00:01:38,010
+nice to work with and as an added bonus, also a better person, which is always good.
+
+25
+00:01:38,010 --> 00:01:39,480
+So let's go.
+

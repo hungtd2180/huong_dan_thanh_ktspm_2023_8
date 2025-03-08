@@ -1,0 +1,336 @@
+1
+00:00:00,590 --> 00:00:01,810
+Chúng ta đã thảo luận rồi.
+
+2
+00:00:01,819 --> 00:00:04,070
+Loose Coupling là một phần thành phần của phần mềm.
+
+3
+00:00:04,070 --> 00:00:09,710
+Khi chúng ta nói về nhu cầu mất các lớp cặp bằng cách sử dụng tiêm phụ thuộc để thay đổi trong
+
+4
+00:00:09,710 --> 00:00:12,920
+một lớp không nhất thiết ảnh hưởng đến các lớp khác.
+
+5
+00:00:12,950 --> 00:00:18,680
+Khái niệm này cũng đúng đối với kiến trúc hệ thống, mặc dù ở quy mô khác, khi nói về kiến trúc lỏng lẻo
+
+6
+00:00:18,680 --> 00:00:24,380
+ghép nối trong kiến trúc hệ thống, chúng ta nói về việc đảm bảo các thành phần hoặc dịch vụ khác nhau không
+
+7
+00:00:24,380 --> 00:00:26,580
+có liên quan chặt chẽ với các thành phần khác.
+
+8
+00:00:26,600 --> 00:00:31,730
+Lý do cho điều này một lần nữa khá giống với sự kết hợp lỏng lẻo bên trong các thành phần.
+
+9
+00:00:32,240 --> 00:00:38,780
+Nếu các dịch vụ được kết hợp với các dịch vụ khác, thì mỗi khi một dịch vụ được thay đổi và trong các hệ thống hiện đại,
+
+10
+00:00:38,780 --> 00:00:40,010
+điều này xảy ra rất nhiều.
+
+11
+00:00:40,040 --> 00:00:43,370
+Thay đổi này có thể ảnh hưởng đến các dịch vụ khác sử dụng nó.
+
+12
+00:00:43,760 --> 00:00:49,010
+Bằng cách kết hợp lỏng lẻo các dịch vụ, chúng tôi đảm bảo tính độc lập của từng dịch vụ và đảm bảo
+
+13
+00:00:49,010 --> 00:00:53,000
+chúng có thể được sửa đổi mà không gây ảnh hưởng nhiều đến các dịch vụ khác, nếu có.
+
+14
+00:00:53,270 --> 00:00:58,430
+Điều này sẽ làm cho hệ thống của chúng tôi linh hoạt hơn nhiều và tất nhiên là rất dễ bảo trì.
+
+15
+00:00:58,550 --> 00:01:04,349
+Bây giờ bạn có thể có một câu hỏi hay ở đây, vì các dịch vụ khác nhau chạy trong các quy trình khác nhau và thực hiện
+
+16
+00:01:04,349 --> 00:01:07,290
+không chia sẻ cùng một mã, vậy mục đích của việc kết hợp lỏng lẻo là gì?
+
+17
+00:01:07,320 --> 00:01:13,320
+Không phải khi một lớp duy nhất thay đổi trong dịch vụ A thì nó sẽ ảnh hưởng đến các lớp khác trong dịch vụ B.
+
+18
+00:01:13,440 --> 00:01:15,850
+Vâng, đó thực sự là một câu hỏi hay.
+
+19
+00:01:15,870 --> 00:01:22,470
+Trên thực tế, sự liên kết lỏng lẻo trong các dịch vụ hoặc thành phần có ý nghĩa khác với sự liên kết lỏng lẻo bên trong các thành phần.
+
+20
+00:01:23,060 --> 00:01:28,910
+Nhìn chung, sự kết hợp lỏng lẻo trong các dịch vụ có nghĩa là thực tế là một dịch vụ được triển khai trong một
+
+21
+00:01:28,910 --> 00:01:35,720
+nền tảng hoặc cung cấp API cụ thể sẽ không buộc các dịch vụ khác phải sử dụng cùng một nền tảng.
+
+22
+00:01:35,750 --> 00:01:42,860
+Ngoài ra, sự kết hợp lỏng lẻo cũng có nghĩa là những thay đổi trong API dịch vụ, chẳng hạn như URL hoặc các tham số của nó
+
+23
+00:01:42,860 --> 00:01:46,250
+sẽ có tác động tối thiểu hoặc không có tác động đến dịch vụ gọi điện.
+
+24
+00:01:46,520 --> 00:01:48,440
+Hãy cùng xem một ví dụ.
+
+25
+00:01:49,220 --> 00:01:52,700
+Giả sử chúng ta có một dịch vụ cung cấp giá cổ phiếu.
+
+26
+00:01:52,730 --> 00:01:54,470
+Dịch vụ này dựa trên Java.
+
+27
+00:01:54,500 --> 00:01:58,820
+Bây giờ giả sử chúng ta cần một dịch vụ khác để quản lý danh mục đầu tư cho khách hàng.
+
+28
+00:01:58,850 --> 00:02:03,650
+Đương nhiên, dịch vụ này sẽ phải truy vấn dịch vụ báo giá cổ phiếu để lấy một số dữ liệu.
+
+29
+00:02:03,770 --> 00:02:09,560
+Dịch vụ chứng khoán hiển thị API của nó như một lệnh gọi phương thức từ xa Java RMI.
+
+30
+00:02:09,590 --> 00:02:14,480
+Đây là phương pháp đơn giản, hiệu quả và nhanh chóng để thực thi API trên các đối tượng từ xa.
+
+31
+00:02:14,510 --> 00:02:21,080
+Vấn đề là sử dụng RMI, dịch vụ gọi điện, là dịch vụ danh mục đầu tư cũng phải được phát triển
+
+32
+00:02:21,080 --> 00:02:21,890
+trong Java.
+
+33
+00:02:21,980 --> 00:02:24,120
+Đây là một hạn chế của Java RMI.
+
+34
+00:02:24,420 --> 00:02:27,690
+Vì vậy, trong ví dụ này chúng ta đã tạo ra sự kết hợp chặt chẽ.
+
+35
+00:02:27,720 --> 00:02:33,960
+Việc triển khai dịch vụ chứng khoán buộc các nhà phát triển phải sử dụng Java cho cả dịch vụ danh mục đầu tư.
+
+36
+00:02:34,420 --> 00:02:37,060
+Hãy cùng xem một ví dụ khác hiện đại hơn.
+
+37
+00:02:37,780 --> 00:02:44,050
+Các nhà phát triển dịch vụ chứng khoán hiểu rằng RMI không phải là giải pháp phù hợp cho các ứng dụng hiện đại và đã chuyển đổi
+
+38
+00:02:44,050 --> 00:02:48,310
+đến Rest API, đây là tiêu chuẩn thực tế cho API hiện nay.
+
+39
+00:02:48,400 --> 00:02:55,090
+Một dịch vụ khác chịu trách nhiệm tạo ra khuyến nghị đầu tư được xây dựng bằng Python và đang truy vấn
+
+40
+00:02:55,090 --> 00:02:56,110
+dịch vụ chứng khoán.
+
+41
+00:02:56,140 --> 00:03:00,820
+Lần này, truy vấn được thực hiện bằng cách gọi lệnh rest tới dịch vụ chứng khoán.
+
+42
+00:03:00,850 --> 00:03:05,980
+Lưu ý rằng dịch vụ này được triển khai bằng Python lần này và không có vấn đề gì cả.
+
+43
+00:03:06,310 --> 00:03:12,640
+Mọi thứ đều tốt trong vài tháng và sau đó dịch vụ chứng khoán phải được chuyển sang một URL khác trong một thời gian
+
+44
+00:03:12,910 --> 00:03:14,020
+lý do liên quan.
+
+45
+00:03:14,230 --> 00:03:20,710
+Điều xảy ra bây giờ là do URL dịch vụ chứng khoán đã thay đổi tất cả các dịch vụ, làm việc với nó
+
+46
+00:03:20,710 --> 00:03:23,830
+phải thay đổi mã của chúng để trỏ tới URL mới.
+
+47
+00:03:24,460 --> 00:03:30,370
+Điều đó có nghĩa là có một sự kết hợp chặt chẽ giữa các dịch vụ, mặc dù bản thân API là
+
+48
+00:03:30,370 --> 00:03:33,520
+được trình bày bằng cách sử dụng API nghỉ ngơi không phụ thuộc vào nền tảng tiêu chuẩn.
+
+49
+00:03:33,940 --> 00:03:37,790
+Để hiểu rõ hơn, chúng ta hãy nói về một ứng dụng đầy đủ.
+
+50
+00:03:37,820 --> 00:03:41,240
+Ứng dụng này có thể có ít nhất sáu dịch vụ.
+
+51
+00:03:41,270 --> 00:03:44,210
+Tất nhiên là họ sẽ giao tiếp với nhau.
+
+52
+00:03:44,360 --> 00:03:50,030
+Bây giờ, nếu chúng giao tiếp trực tiếp như thế này, chúng ta sẽ có thứ được gọi là mạng nhện.
+
+53
+00:03:50,120 --> 00:03:51,890
+Tôi đoán là bạn có thể hiểu tại sao.
+
+54
+00:03:52,520 --> 00:03:59,060
+Bây giờ hãy tưởng tượng điều gì sẽ xảy ra nếu một dịch vụ duy nhất thay đổi URL của nó, hãy xem có bao nhiêu dịch vụ sẽ được
+
+55
+00:03:59,060 --> 00:03:59,780
+ảnh hưởng.
+
+56
+00:03:59,810 --> 00:04:05,960
+Nếu bản đồ dịch vụ của bạn trông giống như một mạng nhện, hãy chuẩn bị cho một bất ngờ khó chịu khi thậm chí một trong các URL
+
+57
+00:04:05,960 --> 00:04:06,650
+đã thay đổi.
+
+58
+00:04:06,680 --> 00:04:10,280
+Mạng nhện là dấu hiệu chắc chắn của một hệ thống liên kết mạnh mẽ.
+
+59
+00:04:10,580 --> 00:04:13,880
+Bây giờ có một vài cách để giải quyết sự ghép nối này.
+
+60
+00:04:14,120 --> 00:04:17,800
+Một là xây dựng danh bạ Trang Vàng cho dịch vụ.
+
+61
+00:04:17,810 --> 00:04:23,840
+Bất cứ khi nào một dịch vụ cần giao tiếp với dịch vụ khác, nó sẽ yêu cầu thư mục cung cấp URL của
+
+62
+00:04:23,840 --> 00:04:27,710
+dịch vụ mà nó muốn truy cập và sử dụng URL mà nó nhận được.
+
+63
+00:04:27,740 --> 00:04:33,890
+Theo cách này, URL không được mã hóa cứng vào dịch vụ và khi nó thay đổi, thay đổi chỉ ảnh hưởng đến một người duy nhất
+
+64
+00:04:33,890 --> 00:04:34,310
+dịch vụ.
+
+65
+00:04:34,310 --> 00:04:35,420
+Thư mục.
+
+66
+00:04:35,630 --> 00:04:38,450
+Trong giải pháp này chỉ có một URL duy nhất.
+
+67
+00:04:38,450 --> 00:04:45,260
+Các dịch vụ cần biết các thư mục và do đó nếu nó thay đổi (điều này sẽ không xảy ra thường xuyên), sự thay đổi
+
+68
+00:04:45,260 --> 00:04:47,630
+sẽ chỉ giới hạn ở một URL duy nhất.
+
+69
+00:04:47,840 --> 00:04:54,260
+Bạn có thể tự phát triển một công cụ tuyệt vời có thể thực hiện được điều đó, chẳng hạn như console.
+
+70
+00:04:56,060 --> 00:04:59,420
+Một cách khác là xây dựng một đơn vị trung gian hoặc cổng thông tin.
+
+71
+00:04:59,450 --> 00:05:05,690
+Trong trường hợp này, dịch vụ sẽ truy cập vào trung gian và yêu cầu trung gian chuyển đến dịch vụ chứng khoán và thực hiện
+
+72
+00:05:05,720 --> 00:05:06,470
+một truy vấn.
+
+73
+00:05:06,500 --> 00:05:13,130
+Người trung gian nắm giữ một bảng ánh xạ nội bộ, bảng này ánh xạ các tác vụ tới các URL và do đó nó biết URL nào
+
+74
+00:05:13,160 --> 00:05:17,210
+để truy cập nhằm thực hiện nhiệm vụ do dịch vụ gọi giao.
+
+75
+00:05:17,300 --> 00:05:23,510
+Dịch vụ gọi điện không biết URL của dịch vụ chứng khoán là gì hoặc thậm chí không biết có dịch vụ chứng khoán hay không.
+
+76
+00:05:23,540 --> 00:05:28,500
+Tất cả những gì nó biết là anh ta đã yêu cầu người trung gian làm điều gì đó và việc đó đã được thực hiện.
+
+77
+00:05:28,550 --> 00:05:31,460
+Không quan trọng là như thế nào, ở đâu và do ai thực hiện.
+
+78
+00:05:31,730 --> 00:05:35,050
+Trong giải pháp này cũng chỉ có một URL duy nhất.
+
+79
+00:05:35,060 --> 00:05:40,460
+Dịch vụ cần phải nhận biết được người trung gian, do đó những thay đổi sẽ chỉ giới hạn ở URL duy nhất này.
+
+80
+00:05:40,940 --> 00:05:44,900
+Bây giờ, giải pháp nào bạn chọn cũng không quan trọng, cả hai đều tốt.
+
+81
+00:05:44,930 --> 00:05:50,510
+Bạn cũng sẽ thấy những biến thể của hai phương pháp này và đôi khi, áp dụng cả hai có thể là một ý tưởng hay.
+
+82
+00:05:50,630 --> 00:05:55,700
+Nhưng điều quan trọng là bạn sẽ tránh được sự kết hợp chặt chẽ bằng cách sử dụng ít nhất một trong số chúng.
+
+83
+00:05:56,190 --> 00:06:01,760
+Luôn là một ý tưởng tốt để giữ cho các dịch vụ của bạn được kết nối lỏng lẻo nhất có thể, do đó làm cho hệ thống của bạn
+
+84
+00:06:01,760 --> 00:06:03,980
+linh hoạt và dễ bảo trì hơn nhiều.
+

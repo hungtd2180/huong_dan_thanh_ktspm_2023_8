@@ -1,0 +1,128 @@
+1
+00:00:00,600 --> 00:00:03,780
+And here we are at the last skill we will discuss.
+
+2
+00:00:03,810 --> 00:00:11,190
+And this is a simple yet very important one and it can be summarized like this Always keep learning.
+
+3
+00:00:11,430 --> 00:00:14,910
+We live in a dynamic world and the software world is even more so.
+
+4
+00:00:14,940 --> 00:00:17,310
+Things are changing in a blink of an eye.
+
+5
+00:00:17,340 --> 00:00:21,870
+Frameworks that were all the rage just three years ago are now completely forgotten.
+
+6
+00:00:21,900 --> 00:00:26,160
+You have probably heard of jQuery, Grant, AngularJS and Hadoop.
+
+7
+00:00:26,310 --> 00:00:32,070
+All these frameworks and engines were extremely popular not many years ago but now are almost never
+
+8
+00:00:32,070 --> 00:00:32,520
+used.
+
+9
+00:00:32,549 --> 00:00:34,750
+They were succeeded by better alternatives.
+
+10
+00:00:34,770 --> 00:00:39,220
+Now some don't like this fast pace, but that's a fact of life.
+
+11
+00:00:39,240 --> 00:00:43,140
+One of the most famous quotes in the business world is adapt or die.
+
+12
+00:00:43,500 --> 00:00:47,130
+Although its origin is not clear, it still holds a lot of truth.
+
+13
+00:00:47,160 --> 00:00:49,880
+You should always look around and check what's new.
+
+14
+00:00:49,890 --> 00:00:53,000
+If there are new patterns or technologies, follow them.
+
+15
+00:00:53,010 --> 00:00:57,690
+You don't need to immediately embrace them, but should definitely keep an eye on them.
+
+16
+00:00:57,690 --> 00:01:00,280
+So when time comes, you will know what to do.
+
+17
+00:01:00,310 --> 00:01:02,320
+Now how to do this learning?
+
+18
+00:01:02,320 --> 00:01:04,930
+Where can you find the knowledge relevant for architects?
+
+19
+00:01:04,959 --> 00:01:06,340
+Here is what I do.
+
+20
+00:01:06,370 --> 00:01:12,190
+My main sources for knowledge are blogs, articles and conferences.
+
+21
+00:01:12,220 --> 00:01:16,410
+There are a lot of blogs and articles sites dedicated to technology and architecture.
+
+22
+00:01:16,420 --> 00:01:20,410
+Some of the more popular are D Zone, InfoQ and O'Reilly.
+
+23
+00:01:20,440 --> 00:01:24,510
+Subscribe to these sites and you will get a lot of quality information.
+
+24
+00:01:24,520 --> 00:01:29,110
+In addition to that, I go once a year to a conference about software and architecture.
+
+25
+00:01:29,140 --> 00:01:37,660
+My favorites are O'Reilly Software Architecture Conference, Infocus, Qcon, NDC and Microsoft Build.
+
+26
+00:01:37,690 --> 00:01:41,590
+But of course, you might find other conferences you find useful.
+
+27
+00:01:41,620 --> 00:01:46,780
+These conferences are a great opportunity for firsthand meeting with the most talented people in the
+
+28
+00:01:46,780 --> 00:01:51,690
+industry and for learning about the newest trends and developments you should be aware of.
+
+29
+00:01:51,700 --> 00:01:55,880
+And it's always fun to visit new places and meet new people.
+
+30
+00:01:55,900 --> 00:02:00,650
+So the bottom line is this Whatever method you pick, always keep learning.
+
+31
+00:02:00,670 --> 00:02:03,700
+Don't get left behind with outdated knowledge and skills.
+
+32
+00:02:03,700 --> 00:02:07,600
+Make sure you can contribute to your clients in this fast changing world.
+

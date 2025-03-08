@@ -1,0 +1,228 @@
+1
+00:00:00,170 --> 00:00:04,280
+The next section in the architectural document is the requirements section.
+
+2
+00:00:04,310 --> 00:00:08,810
+This is also a short section, usually no more than one page, usually less.
+
+3
+00:00:08,810 --> 00:00:12,240
+And its target audience is all the team and management members.
+
+4
+00:00:12,260 --> 00:00:16,450
+In this section we are going to describe the various requirements from the system.
+
+5
+00:00:16,460 --> 00:00:21,510
+Now, as you probably remember from previous sections, there are two types of requirements.
+
+6
+00:00:21,530 --> 00:00:27,620
+Functional requirements that describe what the system should do and non-functional requirements that
+
+7
+00:00:27,620 --> 00:00:30,230
+describe what should the system deal with.
+
+8
+00:00:30,410 --> 00:00:31,770
+Just a quick reminder.
+
+9
+00:00:31,790 --> 00:00:37,420
+Non-functional requirements specifies the required performance, expected load and data volume, SLA
+
+10
+00:00:37,430 --> 00:00:38,330
+and more.
+
+11
+00:00:38,360 --> 00:00:44,150
+Note that as opposed to functional requirements, these requirements do not describe what the system
+
+12
+00:00:44,150 --> 00:00:49,940
+should do, but rather what is the environment the system is expected to work in and with what it is
+
+13
+00:00:49,940 --> 00:00:51,050
+expected to deal.
+
+14
+00:00:51,140 --> 00:00:56,780
+The requirements section in the architectural document describes briefly both types of requirements.
+
+15
+00:00:56,810 --> 00:01:01,920
+Note that this section should be brief and the requirements should be listed in a bulleted list.
+
+16
+00:01:01,950 --> 00:01:05,069
+No more than three lines per requirement.
+
+17
+00:01:06,030 --> 00:01:10,280
+Now you might be asking yourself and me, why do we need this section?
+
+18
+00:01:10,290 --> 00:01:15,570
+After all, similar to the background section, the team is well aware of the requirement and should
+
+19
+00:01:15,660 --> 00:01:16,900
+be reminded of them.
+
+20
+00:01:16,920 --> 00:01:20,670
+Well, that's a very good question and let's try to answer it.
+
+21
+00:01:21,600 --> 00:01:26,520
+There are two important reasons for including the requirements in the architecture document.
+
+22
+00:01:26,640 --> 00:01:32,670
+First, similar to the background section, this section is included in the document to allow the readers
+
+23
+00:01:32,670 --> 00:01:37,860
+to comment on the requirements and to make sure everyone is well aware of what the system should do
+
+24
+00:01:37,860 --> 00:01:40,710
+and under what conditions it's supposed to work.
+
+25
+00:01:40,740 --> 00:01:45,480
+This is a great opportunity for you to validate your understanding of the system and make sure that
+
+26
+00:01:45,480 --> 00:01:49,170
+whatever you design solves an actual problem for the customer.
+
+27
+00:01:49,320 --> 00:01:54,270
+Second, remember that the architecture is designed against a well defined requirement.
+
+28
+00:01:54,300 --> 00:01:59,400
+A lot of the architectural characteristics such as redundancy, messaging, data storage and more,
+
+29
+00:01:59,400 --> 00:02:02,110
+are designed in light of a specific requirement.
+
+30
+00:02:02,130 --> 00:02:07,350
+For example, if there is a non-functional requirement that a message should never be lost no matter
+
+31
+00:02:07,350 --> 00:02:11,550
+what, then perhaps you will go for a queue based messaging mechanism.
+
+32
+00:02:11,670 --> 00:02:17,280
+If the requirements change and suddenly there is some tolerance towards message losses, the architecture
+
+33
+00:02:17,280 --> 00:02:20,970
+might change and we will recommend a rest API based messaging instead.
+
+34
+00:02:21,150 --> 00:02:27,120
+For this reason, it is extremely important to lay out the exact requirements, especially the non-functional
+
+35
+00:02:27,120 --> 00:02:28,740
+ones in the architecture document.
+
+36
+00:02:28,770 --> 00:02:34,470
+This way you make it clear what are the requirements that dictated the architecture and makes sure everyone
+
+37
+00:02:34,470 --> 00:02:35,370
+knows that.
+
+38
+00:02:35,790 --> 00:02:42,900
+Now note that this section is by no means a replacement for a design document created by a system analyst.
+
+39
+00:02:42,930 --> 00:02:48,690
+It gives a high level overview of the requirements and is mainly a talking point list, not a full blown
+
+40
+00:02:48,690 --> 00:02:49,380
+document.
+
+41
+00:02:49,410 --> 00:02:54,510
+Therefore, do not describe all the nuances and intricacies of each requirement.
+
+42
+00:02:54,540 --> 00:02:56,790
+A short, concise description will be enough.
+
+43
+00:02:57,060 --> 00:02:59,470
+So how is this section structured?
+
+44
+00:02:59,490 --> 00:03:04,650
+Well, first are the functional requirements and provide a list of the main functional requirements,
+
+45
+00:03:04,650 --> 00:03:06,930
+usually no more than five requirements.
+
+46
+00:03:06,960 --> 00:03:11,700
+Remember, use a bulleted list with no more than three lines for each requirement.
+
+47
+00:03:11,730 --> 00:03:16,140
+For example, here is a partial requirements list that can appear in a document.
+
+48
+00:03:20,300 --> 00:03:22,460
+Next comes the non-functional requirements.
+
+49
+00:03:22,460 --> 00:03:24,560
+In contrast to the functional requirements.
+
+50
+00:03:24,560 --> 00:03:28,790
+It's extremely important to be extremely accurate and specific in this list.
+
+51
+00:03:28,820 --> 00:03:34,370
+The reason is that while functional requirements are well documented in other design documents, non-functional
+
+52
+00:03:34,370 --> 00:03:39,680
+requirements are usually not included in any other document other than the architectural document.
+
+53
+00:03:39,710 --> 00:03:45,230
+For this reason, make sure the non-functional requirements list, while short and concise, contains
+
+54
+00:03:45,230 --> 00:03:49,250
+all the necessary details for the readers to fully grasp the requirements.
+
+55
+00:03:49,280 --> 00:03:52,550
+Here is a sample list of a non-functional requirements.
+
+56
+00:03:56,730 --> 00:03:59,370
+So we have talked about the requirements section.
+
+57
+00:03:59,370 --> 00:04:01,110
+Let's move on to the next one.
+

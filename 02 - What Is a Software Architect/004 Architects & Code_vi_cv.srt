@@ -1,0 +1,183 @@
+1
+00:00:00,260 --> 00:00:05,570
+Một trong những cuộc tranh luận gay gắt nhất trong cộng đồng kiến ​​trúc sư là liệu một kiến ​​trúc sư có nên viết mã như
+
+2
+00:00:05,570 --> 00:00:09,170
+thực sự viết mã bằng IDE, gỡ lỗi, ghi nhật ký, v.v.
+
+3
+00:00:09,980 --> 00:00:14,570
+Tất nhiên, câu hỏi không phải là liệu một kiến ​​trúc sư có nên tham gia vào nỗ lực phát triển hay không và
+
+4
+00:00:14,570 --> 00:00:16,129
+trở thành một thành viên trong nhóm phát triển.
+
+5
+00:00:16,160 --> 00:00:17,750
+Tất nhiên anh ta không nên làm như vậy.
+
+6
+00:00:17,960 --> 00:00:22,880
+Câu hỏi đặt ra là liệu một kiến ​​trúc sư có nên có kỹ năng lập trình để có thể thử nghiệm các công nghệ mới hay không,
+
+7
+00:00:22,880 --> 00:00:26,600
+tạo POC hoặc trình bày một số khái niệm trong mã.
+
+8
+00:00:26,630 --> 00:00:32,240
+Những người cho rằng một kiến ​​trúc sư không nên lập trình cho rằng anh ta có nhiều việc quan trọng hơn là gõ
+
+9
+00:00:32,240 --> 00:00:35,130
+bàn phím và tạo ra một vài dòng mã.
+
+10
+00:00:35,150 --> 00:00:38,960
+Họ nói rằng anh ta nên tạo ra các mẫu, yêu cầu và tài liệu.
+
+11
+00:00:38,960 --> 00:00:43,850
+Và họ có lý, nhưng tôi rất tiếc phải nói rằng họ đã sai.
+
+12
+00:00:43,940 --> 00:00:48,350
+Một kiến ​​trúc sư giỏi phải có kỹ năng lập trình và đây là ba lý do cho điều đó.
+
+13
+00:00:49,990 --> 00:00:51,860
+Độ tin cậy về kiến ​​trúc.
+
+14
+00:00:52,220 --> 00:00:56,960
+Là một kiến ​​trúc sư, bạn sẽ thiết kế một kiến ​​trúc sử dụng một số nền tảng và mẫu nhất định.
+
+15
+00:00:56,960 --> 00:01:02,610
+Bạn phải đảm bảo kiến ​​trúc khả thi và cách tốt nhất để thực hiện là thử và triển khai
+
+16
+00:01:02,610 --> 00:01:03,540
+tự mình thực hiện.
+
+17
+00:01:03,570 --> 00:01:04,950
+Đúng vậy, đó không phải là sai lầm.
+
+18
+00:01:04,980 --> 00:01:09,720
+Bạn phải có khả năng triển khai một số phần nhất định của kiến ​​trúc để kiểm tra chúng trước khi mong đợi
+
+19
+00:01:09,720 --> 00:01:12,760
+các nhà phát triển triển khai những thứ không thể triển khai.
+
+20
+00:01:12,780 --> 00:01:14,310
+Đúng, đó là một từ.
+
+21
+00:01:14,340 --> 00:01:18,600
+Ví dụ, bạn có định đề xuất sử dụng một gói tiêm phụ thuộc nào đó không?
+
+22
+00:01:18,720 --> 00:01:23,430
+Kiểm tra nó trong một ứng dụng nhỏ và đảm bảo rằng nó thực sự làm những gì bạn mong đợi không?
+
+23
+00:01:23,730 --> 00:01:28,710
+Bạn có đang cân nhắc xem có nên sử dụng cơ sở dữ liệu NoSQL hay gắn bó với RDBMS truyền thống không?
+
+24
+00:01:28,740 --> 00:01:29,640
+Không vấn đề gì.
+
+25
+00:01:29,640 --> 00:01:32,700
+Cài đặt cả hai trên máy của bạn và thử nghiệm chúng.
+
+26
+00:01:32,730 --> 00:01:36,180
+Đây là cách duy nhất để làm cho kiến ​​trúc đáng tin cậy.
+
+27
+00:01:36,210 --> 00:01:41,190
+Bằng cách thử nghiệm trước, bạn đảm bảo thiết kế của mình có thể được triển khai hiệu quả và dễ dàng.
+
+28
+00:01:42,570 --> 00:01:44,080
+Hỗ trợ các nhà phát triển.
+
+29
+00:01:44,100 --> 00:01:48,900
+Một trong những nhiệm vụ khó khăn nhất của kiến ​​trúc sư là đảm bảo kiến ​​trúc thực sự được triển khai.
+
+30
+00:01:48,930 --> 00:01:53,010
+Cách tốt nhất để làm điều đó là cung cấp hỗ trợ liên tục cho các nhà phát triển.
+
+31
+00:01:53,040 --> 00:01:57,930
+Kiến trúc sư phải có khả năng giúp đỡ các nhà phát triển khi họ gặp khó khăn trong khi triển khai kiến ​​trúc
+
+32
+00:01:57,930 --> 00:02:02,960
+và kiểm tra công việc của nhà phát triển để phát hiện ra các sai lệch so với mục đích triển khai dự kiến.
+
+33
+00:02:02,990 --> 00:02:07,880
+Nếu kiến ​​trúc sư không có kỹ năng lập trình, anh ta sẽ không thể xem xét mã và xác định được những
+
+34
+00:02:07,880 --> 00:02:08,750
+các sai lệch.
+
+35
+00:02:09,410 --> 00:02:10,610
+Được tôn trọng.
+
+36
+00:02:10,699 --> 00:02:15,230
+Một trong những yếu tố chính để thành công với tư cách là một kiến ​​trúc sư là giành được sự tôn trọng của các nhà phát triển.
+
+37
+00:02:15,260 --> 00:02:21,050
+Nếu kiến ​​trúc sư được coi là người không biết các nhà phát triển thực sự đang làm gì, họ
+
+38
+00:02:21,050 --> 00:02:26,180
+sẽ nghĩ anh ta là một kẻ kiêu ngạo, ngạo mạn và xa cách và sẽ ngay lập tức mất đi sự tôn trọng đối với anh ta.
+
+39
+00:02:26,210 --> 00:02:31,160
+Mặt khác, nếu họ thấy bạn ngồi cùng họ, giúp họ giải quyết vấn đề và lắng nghe
+
+40
+00:02:31,190 --> 00:02:36,470
+với họ, họ sẽ đánh giá cao bạn là một người thực tế, thực tế và tốt bụng và sẽ
+
+41
+00:02:36,470 --> 00:02:41,390
+sẽ rất vui khi được lắng nghe bạn trong tương lai khi thảo luận về các chủ đề và nhiệm vụ kiến ​​trúc.
+
+42
+00:02:41,810 --> 00:02:44,720
+Nhưng bạn không thể thực sự giúp đỡ các nhà phát triển nếu bạn không thể viết mã, phải không?
+
+43
+00:02:45,350 --> 00:02:47,990
+Tóm lại, hãy tiếp tục viết mã.
+
+44
+00:02:48,020 --> 00:02:52,940
+Rốt cuộc, nó không chỉ giúp bạn tạo ra một kiến ​​trúc đáng tin cậy, cung cấp hỗ trợ liên tục,
+
+45
+00:02:52,940 --> 00:02:54,500
+và giành được sự tôn trọng của các nhà phát triển.
+
+46
+00:02:54,500 --> 00:02:55,640
+Nó cũng vui nữa.

@@ -1,0 +1,124 @@
+1
+00:00:00,260 --> 00:00:05,060
+Một trong những khía cạnh quan trọng nhất của một thành phần được viết tốt là khả năng xử lý ngoại lệ.
+
+2
+00:00:05,090 --> 00:00:09,950
+Chúng tôi đã đề cập đến việc xử lý ngoại lệ như một phần của mô hình phân lớp, nhưng có một số cách tốt nhất
+
+3
+00:00:09,950 --> 00:00:13,790
+các biện pháp thực hành cần áp dụng khi xử lý các trường hợp ngoại lệ chưa được đề cập trước đó.
+
+4
+00:00:13,940 --> 00:00:18,320
+Đầu tiên, chỉ bắt ngoại lệ nếu bạn có liên quan đến nó.
+
+5
+00:00:18,470 --> 00:00:24,260
+Tôi thường thấy mã bắt được ngoại lệ và sau đó chỉ cần ghi ngoại lệ vào nhật ký và không làm gì cả
+
+6
+00:00:24,260 --> 00:00:25,040
+những thứ khác cùng với nó.
+
+7
+00:00:25,070 --> 00:00:30,320
+Đây thường không phải là cách tốt để xử lý các trường hợp ngoại lệ vì hành vi này có thể đạt được bằng cách sử dụng một trung tâm
+
+8
+00:00:30,320 --> 00:00:36,980
+cơ chế xử lý ngoại lệ như bộ lọc trong ASP.Net và không yêu cầu phải có lệnh try catch trong
+
+9
+00:00:36,980 --> 00:00:38,270
+mọi đoạn mã.
+
+10
+00:00:38,390 --> 00:00:44,510
+Nếu có một hành động cụ thể cần thực hiện, nếu một ngoại lệ được đưa ra, chẳng hạn như khôi phục một giao dịch
+
+11
+00:00:44,510 --> 00:00:50,990
+hoặc thực hiện một số loại thuật toán chiến thắng hoặc gói ngoại lệ trong một thuật toán khác, thì đó là
+
+12
+00:00:50,990 --> 00:00:51,980
+một ý tưởng hay để bắt nó.
+
+13
+00:00:51,980 --> 00:00:54,860
+Nhưng ngoài điều đó ra, tốt hơn hết là nên tránh nó.
+
+14
+00:00:55,280 --> 00:01:02,340
+Thứ hai, luôn luôn bắt một ngoại lệ cụ thể khi bắt một ngoại lệ, bạn nên biết những gì
+
+15
+00:01:02,340 --> 00:01:06,510
+loại ngoại lệ cần chú ý, ví dụ, khi làm việc với cơ sở dữ liệu.
+
+16
+00:01:06,540 --> 00:01:12,930
+Cố gắng phát hiện ngoại lệ và xử lý đúng khi bạn không chỉ định ngoại lệ cụ thể để phát hiện.
+
+17
+00:01:12,960 --> 00:01:17,160
+Bạn không thực sự biết mình sẽ nhận được gì và có thể xử lý ngoại lệ theo cách sai.
+
+18
+00:01:17,190 --> 00:01:22,860
+Ví dụ, nếu bạn làm việc với cơ sở dữ liệu và không chỉ định loại ngoại lệ và chỉ đơn giản cho rằng
+
+19
+00:01:22,860 --> 00:01:28,500
+ngoại lệ liên quan đến cơ sở dữ liệu, bạn có thể gặp phải một ngoại lệ khác, chẳng hạn như chia cho số không
+
+20
+00:01:28,500 --> 00:01:29,220
+ngoại lệ.
+
+21
+00:01:29,220 --> 00:01:34,620
+Điều đó không liên quan gì đến hành động cơ sở dữ liệu và việc khôi phục giao dịch có thể không phải là ý tưởng hay.
+
+22
+00:01:35,070 --> 00:01:40,290
+Lần thứ ba sử dụng try catch trên đoạn mã nhỏ nhất có thể.
+
+23
+00:01:41,010 --> 00:01:47,880
+Nhiều lần tôi thấy các phương pháp bắt đầu bằng try và kết thúc bằng catch và nhà phát triển nghĩ như vậy
+
+24
+00:01:47,880 --> 00:01:49,500
+là cách đúng đắn để xử lý các trường hợp ngoại lệ.
+
+25
+00:01:49,500 --> 00:01:51,060
+Vâng, điều này là sai.
+
+26
+00:01:51,090 --> 00:01:55,850
+Luôn sử dụng cơ chế try catch trên đoạn mã nhỏ nhất có thể.
+
+27
+00:01:55,860 --> 00:02:02,440
+Nếu bạn có dòng mã truy cập cơ sở dữ liệu, hãy bao quanh dòng mã đó và chỉ bao quanh nó bằng lệnh try catch.
+
+28
+00:02:02,460 --> 00:02:08,020
+Nếu bạn có một dòng chia một số cho một số khác, hãy thử phát hiện lỗi chia cho không.
+
+29
+00:02:08,039 --> 00:02:13,440
+Luôn luôn xem xét các dòng mã cụ thể và kiểm tra những ngoại lệ nào có thể được đưa ra từ chúng và bắt
+
+30
+00:02:13,440 --> 00:02:14,340
+những ngoại lệ đó.
+
+31
+00:02:14,370 --> 00:02:18,660
+Không bao giờ bao quanh các đoạn mã lớn bằng cách xử lý ngoại lệ chung không cần thiết.
+

@@ -1,0 +1,171 @@
+1
+00:00:00,140 --> 00:00:03,290
+Vậy kiến ​​trúc sư phần mềm thực sự là gì?
+
+2
+00:00:03,320 --> 00:00:05,000
+Mục tiêu của anh ấy là gì?
+
+3
+00:00:05,030 --> 00:00:06,950
+Anh ấy thực sự đang làm gì?
+
+4
+00:00:06,980 --> 00:00:08,570
+Anh ấy đang làm việc với ai?
+
+5
+00:00:08,930 --> 00:00:11,120
+Vâng, tất cả những câu hỏi này đều tuyệt vời.
+
+6
+00:00:11,120 --> 00:00:15,500
+Nhưng trước khi trả lời, chúng ta hãy thảo luận về các loại kiến ​​trúc sư khác.
+
+7
+00:00:15,530 --> 00:00:19,100
+Từ kiến ​​trúc sư trong thế giới phần mềm là một từ quá tải.
+
+8
+00:00:19,130 ​​--> 00:00:21,350
+Có khá nhiều loại kiến ​​trúc sư.
+
+9
+00:00:21,350 --> 00:00:28,850
+Và chúng ta hãy xem xét những loại phổ biến nhất, đó là kiến ​​trúc sư cơ sở hạ tầng, kiến ​​trúc sư phần mềm
+
+10
+00:00:28,850 --> 00:00:31,610
+và kiến ​​trúc sư doanh nghiệp.
+
+11
+00:00:32,509 --> 00:00:37,520
+Còn một số loại kiến ​​trúc sư nữa, nhưng chúng mang tính chuyên biệt hơn và chúng tôi muốn nói về chúng.
+
+12
+00:00:37,730 --> 00:00:40,640
+Vậy hãy cùng xem những loại kiến ​​trúc sư đó là gì.
+
+13
+00:00:40,670 --> 00:00:43,550
+Đầu tiên là kiến ​​trúc sư cơ sở hạ tầng.
+
+14
+00:00:45,050 --> 00:00:49,970
+Kiến trúc sư cơ sở hạ tầng chịu trách nhiệm thiết kế cơ sở hạ tầng của một hệ thống nhất định.
+
+15
+00:00:49,970 --> 00:00:56,720
+Và theo tôi, cơ sở hạ tầng có nghĩa là tất cả các yếu tố không liên quan đến phần mềm như máy chủ, máy ảo,
+
+16
+00:00:56,720 --> 00:00:58,760
+lưu trữ mạng, v.v.
+
+17
+00:00:58,970 --> 00:01:04,970
+Anh ấy chịu trách nhiệm cho tất cả những điều này và cũng đảm bảo chúng hoạt động tốt với hệ thống đã phát triển.
+
+18
+00:01:05,060 --> 00:01:09,950
+Kiến trúc sư cơ sở hạ tầng phải quen thuộc với các yêu cầu của hệ thống để anh ấy có thể đảm bảo rằng
+
+19
+00:01:09,950 --> 00:01:13,280
+cơ sở hạ tầng mà anh ấy thiết kế sẽ hỗ trợ các yêu cầu đó.
+
+20
+00:01:13,280 --> 00:01:19,970
+Ví dụ, nếu hệ thống dự kiến ​​sẽ tăng trưởng thêm ba terabyte mỗi năm, kiến ​​trúc sư cơ sở hạ tầng
+
+21
+00:01:19,970 --> 00:01:24,530
+phải đảm bảo rằng bộ nhớ cho hệ thống này có thể xử lý được tải này.
+
+22
+00:01:25,430 --> 00:01:30,270
+Con đường sự nghiệp của kiến ​​trúc sư cơ sở hạ tầng trải qua các chuyên gia về cơ sở hạ tầng.
+
+23
+00:01:30,290 --> 00:01:35,540
+Bạn phải thành thạo về cơ sở hạ tầng, thiết kế, triển khai và cấu hình để
+
+24
+00:01:35,540 --> 00:01:37,880
+trở thành một kiến ​​trúc sư cơ sở hạ tầng giỏi.
+
+25
+00:01:38,270 --> 00:01:40,550
+Tiếp theo là kiến ​​trúc sư phần mềm.
+
+26
+00:01:40,850 --> 00:01:46,530
+Kiến trúc sư phần mềm, đôi khi còn được gọi là kiến ​​trúc sư giải pháp hoặc kiến ​​trúc sư hệ thống, chịu trách nhiệm
+
+27
+00:01:46,530 --> 00:01:48,360
+về kiến ​​trúc của phần mềm.
+
+28
+00:01:48,810 --> 00:01:53,760
+Vì chúng ta sẽ làm việc với một kiến ​​trúc sư phần mềm trong phần còn lại của khóa học này, nên tôi sẽ chuyển sang kiến ​​trúc sư doanh nghiệp
+
+29
+00:01:53,760 --> 00:01:54,510
+kiến trúc sư.
+
+30
+00:01:54,930 --> 00:01:59,700
+Kiến trúc sư doanh nghiệp làm việc với ban quản lý cấp cao của tổ chức để đảm bảo CNTT của
+
+31
+00:01:59,700 --> 00:02:06,600
+tổ chức là một công cụ hỗ trợ cho doanh nghiệp chứ không phải là trở ngại trong nhiều quyết định kinh doanh của tổ chức,
+
+32
+00:02:06,600 --> 00:02:13,050
+chẳng hạn như bắt đầu một đợt bán hàng mới hoặc tham gia vào một lĩnh vực kinh doanh mới bị CNTT kìm hãm, cần có thời gian
+
+33
+00:02:13,050 --> 00:02:14,730
+để thích ứng với các yêu cầu mới.
+
+34
+00:02:14,760 --> 00:02:20,340
+Kiến trúc sư doanh nghiệp thường làm việc với CEO và CIO của tổ chức để tìm ra những
+
+35
+00:02:20,340 --> 00:02:26,490
+điểm nghẽn chính, điều gì kìm hãm CNTT và cách sắp xếp hợp lý để hỗ trợ tính liên tục của doanh nghiệp.
+
+36
+00:02:26,520 --> 00:02:31,770
+Vì kiến ​​trúc sư doanh nghiệp hoạt động ở cấp độ rất cao trong tổ chức nên anh ta hầu như không có
+
+37
+00:02:31,800 --> 00:02:36,930
+mối quan hệ công việc với các vai trò hướng đến phát triển như nhà phát triển và trưởng nhóm.
+
+38
+00:02:37,840 --> 00:02:43,240
+Để trở thành một kiến ​​trúc sư doanh nghiệp, trước tiên bạn phải là một kiến ​​trúc sư phần mềm cao cấp hoặc
+
+39
+00:02:43,240 --> 00:02:44,980
+một nhà quản lý dự án giàu kinh nghiệm.
+
+40
+00:02:45,610 --> 00:02:50,500
+Như tôi đã nói trước đó, vai trò của kiến ​​trúc sư doanh nghiệp không quá kỹ thuật và bạn không phải lúc nào cũng
+
+41
+00:02:50,500 --> 00:02:55,960
+phải có kinh nghiệm thực tế, thực hành để trở thành một kiến ​​trúc sư, mặc dù chắc chắn đó là một điểm cộng.
+
+42
+00:02:56,230 --> 00:02:56,860
+Tuyệt.
+
+43
+00:02:56,860 --> 00:03:03,310
+Sau khi thảo luận về các loại kiến ​​trúc sư khác, chúng ta hãy gặp nhân vật chính của chúng ta, kiến ​​trúc sư phần mềm.

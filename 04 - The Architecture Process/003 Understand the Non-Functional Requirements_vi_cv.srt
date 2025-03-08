@@ -1,0 +1,40 @@
+1
+00:00:00,200 --> 00:00:05,780
+Bước tiếp theo trong quy trình kiến trúc là hiểu các yêu cầu phi chức năng của hệ thống.
+
+2
+00:00:06,260 --> 00:00:11,210
+Yêu cầu phi chức năng là một loại yêu cầu đặc biệt xác định một số yêu cầu kỹ thuật và dịch vụ
+
+3
+00:00:11,210 --> 00:00:13,040
+các thuộc tính cấp độ của hệ thống.
+
+4
+00:00:13,490 --> 00:00:19,160
+Ví dụ, các yêu cầu không chức năng phổ biến nhất là về số lượng người dùng đồng thời, nặng
+
+5
+00:00:19,160 --> 00:00:22,490
+tải, khối lượng dữ liệu và hiệu suất.
+
+6
+00:00:22,910 --> 00:00:28,790
+Như chúng ta sẽ thấy trong phần sau, khách hàng và nhà phân tích hệ thống thường không nhận thức được các vấn đề không chức năng.
+
+7
+00:00:28,790 --> 00:00:33,650
+yêu cầu và nhiệm vụ của kiến trúc sư là giúp họ xây dựng những yêu cầu đó.
+
+8
+00:00:34,190 --> 00:00:40,370
+Đối với chúng tôi, những kiến trúc sư, các yêu cầu phi chức năng quan trọng hơn nhiều so với các yêu cầu thông thường.
+
+9
+00:00:40,490 --> 00:00:46,760
+Tôi không bao giờ bắt đầu làm việc trên một hệ thống trước khi biết chính xác các yêu cầu không chức năng của nó là gì vì
+
+10
+00:00:46,760 --> 00:00:50,870
+rất nhiều yếu tố kiến trúc có thể bị ảnh hưởng bởi những yêu cầu đó.
+

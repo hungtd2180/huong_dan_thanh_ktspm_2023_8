@@ -1,0 +1,68 @@
+1
+00:00:00,260 --> 00:00:05,600
+In this section, we discuss the technology stack selection process and divided it to back end, front
+
+2
+00:00:05,600 --> 00:00:06,950
+end and data store.
+
+3
+00:00:07,310 --> 00:00:12,380
+I didn't try to declare a winner on each category, but rather to demonstrate what are the principles
+
+4
+00:00:12,380 --> 00:00:17,810
+that affect the selection and what are the parameters we should evaluate when making this selection?
+
+5
+00:00:18,080 --> 00:00:23,510
+I would like to emphasize again how important is a rational, educated selection and what is the impact
+
+6
+00:00:23,510 --> 00:00:26,240
+of selecting the wrong technology for the wrong reasons?
+
+7
+00:00:26,270 --> 00:00:29,230
+There are a lot of emotions in this discussion.
+
+8
+00:00:29,240 --> 00:00:34,640
+You will tackle dev teams that won't be ready to hear about anything which is not dotnet even if it's
+
+9
+00:00:34,640 --> 00:00:36,790
+clearly not the right choice for the system.
+
+10
+00:00:36,800 --> 00:00:41,990
+You will participate in heated discussions between Angular supporters and React supporters and you will
+
+11
+00:00:41,990 --> 00:00:47,740
+definitely be part of a meeting discussing NoSQL versus SQL from all the wrong reasons.
+
+12
+00:00:47,750 --> 00:00:51,230
+My best advice is stay out of the line of fire.
+
+13
+00:00:51,260 --> 00:00:55,520
+Bring to the table the rational voice backed by concrete numbers and factors.
+
+14
+00:00:55,550 --> 00:00:58,720
+Never get involved emotionally in such discussion.
+
+15
+00:00:58,730 --> 00:01:02,600
+It will harm your architecture and more important, your reputation.
+
+16
+00:01:02,610 --> 00:01:07,440
+Believe me, after the system will be implemented successfully using the technologies you recommended,
+
+17
+00:01:07,440 --> 00:01:11,910
+no matter how angry they were at the beginning, they will be thanking you at the end.
+

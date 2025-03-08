@@ -1,0 +1,155 @@
+1
+00:00:00,290 --> 00:00:03,680
+Vậy hãy nói về trách nhiệm của kiến ​​trúc sư phần mềm.
+
+2
+00:00:03,710 --> 00:00:09,510
+Một trong những câu hỏi tôi thường hỏi là, sự khác biệt giữa một nhà phát triển cao cấp và một kiến ​​trúc sư là gì?
+
+3
+00:00:09,530 --> 00:00:15,110
+Rốt cuộc, trong rất nhiều công ty, chủ yếu là các công ty nhỏ, không có chức năng của một kiến ​​trúc sư, chỉ có
+
+4
+00:00:15,110 --> 00:00:16,010
+một trưởng nhóm.
+
+5
+00:00:16,040 --> 00:00:18,050
+Tại sao chúng ta lại cần một kiến ​​trúc sư?
+
+6
+00:00:18,350 --> 00:00:23,660
+Câu trả lời ngắn gọn là nhà phát triển này biết những gì có thể làm được.
+
+7
+00:00:24,080 --> 00:00:26,540
+Kiến trúc sư biết những gì cần làm.
+
+8
+00:00:26,990 --> 00:00:29,340
+Một nhà phát triển cao cấp hiểu rất rõ về công nghệ.
+
+9
+00:00:29,360 --> 00:00:35,450
+Anh ấy biết cách tốt nhất để triển khai vòng lặp, cách thực hiện các hoạt động hiệu quả, thư viện nào
+
+10
+00:00:35,450 --> 00:00:37,790
+để sử dụng để truy cập cơ sở dữ liệu, v.v.
+
+11
+00:00:38,000 --> 00:00:42,740
+Một kiến ​​trúc sư phần mềm cũng khá quen thuộc với công nghệ và nền tảng, mặc dù không nhiều
+
+12
+00:00:42,740 --> 00:00:43,690
+như một nhà phát triển.
+
+13
+00:00:43,700 --> 00:00:49,600
+Nhưng mục tiêu chính của anh ta là đảm bảo thiết kế phần mềm thực hiện các yêu cầu của hệ thống.
+
+14
+00:00:49,610 --> 00:00:52,910
+Anh ta ít quan tâm đến các chi tiết triển khai của hệ thống.
+
+15
+00:00:52,940 --> 00:00:54,830
+Đây là công việc của một nhà phát triển.
+
+16
+00:00:55,940 --> 00:01:01,410
+Kiến trúc sư nhìn vào cấp độ vĩ mô và kết hợp công nghệ với các yêu cầu.
+
+17
+00:01:01,970 --> 00:01:07,420
+Chúng ta sẽ nói nhiều về các yêu cầu sau trong khóa học này, nhưng hãy đặt nền tảng cho các yêu cầu
+
+18
+00:01:07,420 --> 00:01:08,920
+của hầu hết mọi hệ thống.
+
+19
+00:01:08,920 --> 00:01:15,790
+Và chúng nhanh, an toàn, đáng tin cậy, dễ bảo trì.
+
+20
+00:01:16,770 --> 00:01:19,080
+Trong hầu hết mọi hệ thống mà tôi đã tham gia.
+
+21
+00:01:19,090 --> 00:01:21,570
+Danh sách này là chén thánh của kiến ​​trúc.
+
+22
+00:01:21,600 --> 00:01:27,390
+Đây là mục đích của kiến ​​trúc, để làm cho hệ thống nhanh, an toàn, đáng tin cậy và dễ
+
+23
+00:01:27,390 --> 00:01:28,050
+bảo trì.
+
+24
+00:01:28,080 --> 00:01:32,250
+Tất nhiên, mỗi hệ thống đều có định nghĩa riêng về các mục đó một cách nhanh chóng.
+
+25
+00:01:32,250 --> 00:01:33,510
+Trong một ứng dụng thời gian thực.
+
+26
+00:01:33,510 --> 00:01:39,600
+Làm việc với dữ liệu đo từ xa vệ tinh không nhanh như hệ thống thông tin truyền thống hướng đến
+
+27
+00:01:39,600 --> 00:01:40,530
+người dùng cuối.
+
+28
+00:01:40,560 --> 00:01:48,090
+Tương tự như vậy, độ tin cậy của một ứng dụng quan trọng đối với sứ mệnh phải có thời gian hoạt động là 99,99% không
+
+29
+00:01:48,090 --> 00:01:53,550
+giống như độ tin cậy của một ứng dụng trò chuyện hoặc hệ thống hỗ trợ, chỉ khả dụng trong
+
+30
+00:01:53,550 --> 00:01:54,930
+giờ làm việc bình thường.
+
+31
+00:01:54,960 --> 00:01:59,550
+Nhưng danh sách này thường là danh sách xác định của mọi kiến ​​trúc.
+
+32
+00:01:59,910 --> 00:02:04,950
+Bây giờ, điều quan trọng cần lưu ý là danh sách này không liên quan gì đến công nghệ, mô hình kiến ​​trúc
+
+33
+00:02:04,950 --> 00:02:07,140
+hoặc các nền tảng mà bạn không thấy ở đây.
+
+34
+00:02:07,140 --> 00:02:13,410
+Sử dụng kiến ​​trúc dựa trên dịch vụ vi mô hoặc sử dụng Java hoặc không sử dụng cơ sở dữ liệu quan hệ.
+
+35
+00:02:13,440 --> 00:02:19,020
+Đó là bởi vì một kiến ​​trúc sư giỏi biết rằng các mô hình công nghệ và tất cả các thuật ngữ thông dụng khác chỉ là
+
+36
+00:02:19,030 --> 00:02:20,530
+phương tiện để đạt được kết quả cuối cùng.
+
+37
+00:02:20,560 --> 00:02:24,160
+Công nghệ phải phục vụ các yêu cầu chứ không phải ngược lại.
+
+38
+00:02:24,460 --> 00:02:31,330
+Tóm lại, một kiến ​​trúc sư phần mềm là người thiết kế hệ thống sao cho nhanh, an toàn, đáng tin cậy
+
+39
+00:02:31,330 --> 00:02:37,360
+và dễ bảo trì, đồng thời lựa chọn các nền tảng và mô hình công nghệ tối ưu để đạt được các mục tiêu này.

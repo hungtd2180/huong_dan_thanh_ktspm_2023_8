@@ -1,0 +1,380 @@
+1
+00:00:00,350 --> 00:00:03,770
+So let's discuss our candidates for backend and service technology.
+
+2
+00:00:03,800 --> 00:00:09,110
+Now, to be clear, when talking about backend, we mean the server side of web apps and web API.
+
+3
+00:00:09,440 --> 00:00:14,360
+So our discussion here is about web apps, web API, console and services.
+
+4
+00:00:14,540 --> 00:00:17,330
+I'll call all of them backend for the sake of simplicity.
+
+5
+00:00:18,110 --> 00:00:23,750
+Now, just to set expectations, I'm not going to give you a definite recommendation about the platform
+
+6
+00:00:23,750 --> 00:00:25,190
+you should use for your backend.
+
+7
+00:00:25,220 --> 00:00:31,100
+That won't be smart since there are so many factors to be taken into account that without intimate knowledge
+
+8
+00:00:31,100 --> 00:00:33,950
+of the requirements, such a decision cannot be made.
+
+9
+00:00:34,190 --> 00:00:39,590
+What I am going to do is to lay out the main contenders and talk about pros and cons of each one of
+
+10
+00:00:39,590 --> 00:00:40,040
+them.
+
+11
+00:00:40,070 --> 00:00:43,550
+This will make your life much easier when selecting the platform.
+
+12
+00:00:44,210 --> 00:00:47,630
+Note Also, I'm not going to talk about every technology exists.
+
+13
+00:00:47,660 --> 00:00:50,300
+This will make the lecture too long and too boring.
+
+14
+00:00:50,330 --> 00:00:53,300
+I'm going to discuss the most popular platforms.
+
+15
+00:00:53,720 --> 00:00:58,490
+So here are our main candidates for backend applications in alphabetical order.
+
+16
+00:00:58,580 --> 00:00:59,240
+Dotnet.
+
+17
+00:00:59,240 --> 00:01:04,410
+Classic Dotnet, Core Java, NodeJS, PHP and Python.
+
+18
+00:01:05,519 --> 00:01:10,080
+So let's begin with Dotnet Classic or as we will call it here, simply Dotnet.
+
+19
+00:01:10,560 --> 00:01:15,090
+Dotnet was founded by Microsoft in 2001 as a response for Java.
+
+20
+00:01:15,120 --> 00:01:21,540
+It's a general purpose object oriented, statically typed platform with frameworks for desktop applications
+
+21
+00:01:21,540 --> 00:01:29,070
+called Winforms and later on WPF and for web apps and web API called ASP.Net Development in Dotnet is
+
+22
+00:01:29,070 --> 00:01:30,390
+done using Visual Studio.
+
+23
+00:01:30,390 --> 00:01:33,840
+In my humble opinion, one of the best development tools on the planet.
+
+24
+00:01:35,280 --> 00:01:40,240
+Dotnet is not cross platform, so it's relevant only for Windows based applications.
+
+25
+00:01:40,260 --> 00:01:44,820
+Its performance are okay, but there are faster platforms such as NodeJS.
+
+26
+00:01:45,210 --> 00:01:50,320
+Dotnet is a very mature platform with huge third party components and large community.
+
+27
+00:01:50,340 --> 00:01:55,950
+However, its roadmap is not clear since it looks like Microsoft is pushing Dotnet developers towards
+
+28
+00:01:55,950 --> 00:01:56,970
+Dotnet core.
+
+29
+00:01:57,480 --> 00:02:02,790
+Today, Dotnet is the default choice for Windows based application, mainly because of its great IDE
+
+30
+00:02:02,820 --> 00:02:04,830
+clear syntax and large community.
+
+31
+00:02:05,940 --> 00:02:07,950
+Next is Dotnet core.
+
+32
+00:02:08,850 --> 00:02:15,000
+You can call it Next Generation Dotnet and it aims to fill the gaps in Dotnet mainly cross platform
+
+33
+00:02:15,000 --> 00:02:17,410
+support and performance.
+
+34
+00:02:17,460 --> 00:02:23,430
+In my own experience, Dotnet core is a flexible and fast platform, but as of this recording, not
+
+35
+00:02:23,430 --> 00:02:24,420
+fully baked yet.
+
+36
+00:02:24,450 --> 00:02:30,360
+There are some glaring omissions, such as webhook support, partial odata support, PowerShell support
+
+37
+00:02:30,360 --> 00:02:31,470
+and more.
+
+38
+00:02:31,530 --> 00:02:37,980
+Dotnet Core apps can be developed using Visual Studio but also with VS code and other popular ides.
+
+39
+00:02:38,970 --> 00:02:45,150
+Dotnet core community is not that large, but is very vocal and is growing rapidly in the last Stack
+
+40
+00:02:45,150 --> 00:02:46,410
+Overflow Developers survey.
+
+41
+00:02:46,410 --> 00:02:51,510
+It's called Second among server side frameworks right after NodeJS in the long run.
+
+42
+00:02:51,540 --> 00:02:53,070
+Dotnet core would be a great choice.
+
+43
+00:02:53,070 --> 00:02:58,530
+Right now you should be aware about its gaps, but also about its amazing performance and capabilities.
+
+44
+00:02:59,640 --> 00:03:01,170
+The third one is Java.
+
+45
+00:03:01,500 --> 00:03:05,280
+Java has been around for a long time and it looks like it's here to stay.
+
+46
+00:03:05,550 --> 00:03:11,850
+Created in 1995 by Sun Microsystems, currently owned by Oracle, Java is one of the most popular platforms
+
+47
+00:03:11,850 --> 00:03:13,630
+in use today, like Dotnet.
+
+48
+00:03:13,650 --> 00:03:17,760
+It's a general purpose object oriented, statically typed language.
+
+49
+00:03:17,910 --> 00:03:23,850
+Its early forays into client side in the form of Java applets and later Java was not a huge success,
+
+50
+00:03:23,850 --> 00:03:25,440
+but the Android ecosystem with it.
+
+51
+00:03:25,440 --> 00:03:28,950
+Apps written natively in Java gave it a huge boost.
+
+52
+00:03:28,980 --> 00:03:31,170
+The server side Java is called Java.
+
+53
+00:03:31,200 --> 00:03:36,690
+EE recently changed to Jakarta Enterprise edition and provides everything you can expect from a server
+
+54
+00:03:36,690 --> 00:03:40,350
+side platform, including web apps, web API database access and lots more.
+
+55
+00:03:40,350 --> 00:03:43,020
+And all this in a cross platform environment.
+
+56
+00:03:44,280 --> 00:03:49,620
+Java has a huge community, sometimes suffering from too much self-criticism, but still provides great
+
+57
+00:03:49,620 --> 00:03:50,580
+support for everything.
+
+58
+00:03:50,580 --> 00:03:51,120
+Java.
+
+59
+00:03:51,450 --> 00:03:56,730
+In the last years it looks like the interest in Java on the back end has waned and new kids in the block
+
+60
+00:03:56,910 --> 00:03:58,080
+get all the attention.
+
+61
+00:03:58,080 --> 00:04:01,320
+But Java is still a great platform for web apps and web API.
+
+62
+00:04:03,110 --> 00:04:06,900
+Node.js is one of the youngest platform here, second only to Dotnet core.
+
+63
+00:04:07,050 --> 00:04:13,020
+It was founded on 2009 by Ryan Dahl and is optimized for highly concurrent web apps.
+
+64
+00:04:13,050 --> 00:04:18,720
+Its syntax is based on JavaScript, which makes it dynamically typed and it quickly gained adoption
+
+65
+00:04:18,720 --> 00:04:21,390
+because of its familiar syntax and great performance.
+
+66
+00:04:21,870 --> 00:04:27,240
+It's probably one of the fastest frameworks out there fighting with Dotnet core on the first place.
+
+67
+00:04:27,450 --> 00:04:32,610
+As mentioned, NodeJS is not targeted for long running processes, so don't try to build services with
+
+68
+00:04:32,610 --> 00:04:32,970
+it.
+
+69
+00:04:32,970 --> 00:04:38,160
+But for web apps that require a lot of short concurrent IO operations, it should be on the top of the
+
+70
+00:04:38,160 --> 00:04:38,730
+list.
+
+71
+00:04:40,290 --> 00:04:46,200
+PHP was founded in 1994 by Rasmus Lerdorf, which makes it even more mature than Java.
+
+72
+00:04:46,200 --> 00:04:50,340
+But in contrast to Java, which is object oriented statically typed language.
+
+73
+00:04:50,700 --> 00:04:51,600
+PHP very.
+
+74
+00:04:51,840 --> 00:04:53,910
+How can I call it messy?
+
+75
+00:04:54,600 --> 00:04:57,270
+It's very easy to learn, but that comes at a cost.
+
+76
+00:04:57,270 --> 00:04:59,640
+It sometimes looks like it was rushed out of.
+
+77
+00:04:59,670 --> 00:05:01,830
+The gate and was not polished enough.
+
+78
+00:05:02,460 --> 00:05:07,830
+However, it's one of the most popular languages out there and has a vibrant community.
+
+79
+00:05:08,970 --> 00:05:14,280
+PHP is laser focused on web apps and web APIs, so if you are planning a long running component, better
+
+80
+00:05:14,280 --> 00:05:15,300
+look somewhere else.
+
+81
+00:05:16,560 --> 00:05:18,510
+Last but not least is Python.
+
+82
+00:05:18,660 --> 00:05:24,810
+Founded on 1989 by Guido van Rossum and quickly became one of the most popular scripting language,
+
+83
+00:05:24,810 --> 00:05:29,310
+Python quickly gained momentum as the language that can perform almost any task.
+
+84
+00:05:29,640 --> 00:05:33,990
+You can find it inside applications written in other platforms, in machine learning systems and of
+
+85
+00:05:33,990 --> 00:05:36,000
+course as a web app or web API.
+
+86
+00:05:36,360 --> 00:05:39,870
+One of the strongest selling point of Python is its learning curve.
+
+87
+00:05:39,900 --> 00:05:43,740
+It is one of the easiest language to learn and is also very tolerant.
+
+88
+00:05:43,770 --> 00:05:47,460
+Python also has a large community which is known for its helpful members.
+
+89
+00:05:48,210 --> 00:05:53,010
+You can consider Python for almost any type of application, including web app, web API console or
+
+90
+00:05:53,010 --> 00:05:53,700
+service.
+
+91
+00:05:54,960 --> 00:05:58,230
+So this was a short review of the leading backend platforms.
+
+92
+00:05:58,260 --> 00:06:01,000
+Let's summarize it with the following table.
+
+93
+00:06:01,300 --> 00:06:04,270
+In this table you can see the main attributes of every platform.
+
+94
+00:06:04,270 --> 00:06:06,670
+I recommend you to use this table as a reference.
+
+95
+00:06:06,670 --> 00:06:11,290
+When time has come to select the technology platform for the backend service or console.
+

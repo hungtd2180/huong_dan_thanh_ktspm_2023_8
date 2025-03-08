@@ -1,0 +1,336 @@
+1
+00:00:00,260 --> 00:00:06,530
+Mẫu kho lưu trữ cũng là một trong những mẫu được biết đến và sử dụng rộng rãi nhất, và nó hòa trộn tốt vào
+
+2
+00:00:06,530 --> 00:00:08,660
+một kiến trúc nhiều lớp được thiết kế tốt.
+
+3
+00:00:08,810 --> 00:00:14,810
+Mẫu kho lưu trữ nêu rằng các mô-đun không xử lý công việc thực tế với kho dữ liệu phải
+
+4
+00:00:14,810 --> 00:00:17,270
+hoàn toàn không biết gì về loại kho lưu trữ dữ liệu.
+
+5
+00:00:17,300 --> 00:00:20,120
+Đó là ngôn ngữ truy vấn, kết nối và xử lý giao dịch.
+
+6
+00:00:20,120 --> 00:00:20,240
+VÀ.
+
+7
+00:00:20,930 --> 00:00:27,320
+Ví dụ, nếu kho dữ liệu là cơ sở dữ liệu MySQL, thì mô-đun mã không nên đưa ra câu lệnh SQL nào.
+
+8
+00:00:27,330 --> 00:00:29,700
+Điều đó không phải là một phần của mã xử lý dữ liệu.
+
+9
+00:00:29,720 --> 00:00:35,480
+Nói cách khác, mô hình kho lưu trữ mô tả một kỹ thuật trừu tượng hóa dữ liệu cần được sử dụng trong
+
+10
+00:00:35,480 --> 00:00:37,790
+để đạt được sự cô lập mà chúng ta đã đề cập.
+
+11
+00:00:37,820 --> 00:00:44,000
+Bây giờ, điều đó có thể nghe quen thuộc, vì định nghĩa này khá giống với lớp truy cập dữ liệu mà chúng ta đã thảo luận
+
+12
+00:00:44,000 --> 00:00:45,770
+trong bài giảng về kiến trúc nhiều lớp.
+
+13
+00:00:45,770 --> 00:00:51,230
+Và không phải ngẫu nhiên mà cả mô hình kho lưu trữ và mô hình kiến trúc phân lớp đều bắt nguồn từ
+
+14
+00:00:51,230 --> 00:00:52,590
+cùng một nguyên tắc.
+
+15
+00:00:52,610 --> 00:00:55,910
+Làm cho phần mềm của chúng tôi linh hoạt hơn và dễ bảo trì hơn.
+
+16
+00:00:55,940 --> 00:00:59,090
+Sự khác biệt chính giữa họ là đối tượng khán giả.
+
+17
+00:00:59,120 --> 00:01:05,129
+Mô hình kiến trúc nhiều lớp chủ yếu được sử dụng bởi các kiến trúc sư và các mô hình thiết kế được định hướng nhiều hơn
+
+18
+00:01:05,129 --> 00:01:06,570
+hướng tới các nhà phát triển.
+
+19
+00:01:06,690 --> 00:01:11,910
+Tuy nhiên, với tư cách là một kiến trúc sư, bạn sẽ nghe rất nhiều về mô hình kho lưu trữ và bạn chắc chắn nên
+
+20
+00:01:11,910 --> 00:01:13,860
+biết tại sao lại có sự ồn ào như vậy.
+
+21
+00:01:13,890 --> 00:01:16,280
+Quay trở lại với mô hình kho lưu trữ.
+
+22
+00:01:16,290 --> 00:01:19,860
+Chúng tôi nói rằng mô hình này cung cấp lớp trừu tượng phía trên kho dữ liệu.
+
+23
+00:01:19,890 --> 00:01:21,900
+Chính xác thì nó làm được điều đó như thế nào?
+
+24
+00:01:21,930 --> 00:01:24,450
+Một lần nữa, chúng ta hãy bắt đầu bằng một ví dụ.
+
+25
+00:01:24,720 --> 00:01:28,470
+Ứng dụng của chúng tôi quản lý bộ phận nhân sự của công ty.
+
+26
+00:01:28,500 --> 00:01:34,860
+Ứng dụng cần truy cập kho dữ liệu cho các hoạt động Crud truyền thống, tạo, đọc,
+
+27
+00:01:34,950 --> 00:01:37,050
+cập nhật và xóa.
+
+28
+00:01:37,170 --> 00:01:43,650
+Bây giờ đối với hoạt động đọc, có hai yêu cầu Chúng ta cần lấy một nhân viên theo ID của cô ấy và
+
+29
+00:01:43,650 --> 00:01:46,740
+cũng như để lấy danh sách nhân viên theo tên phòng ban.
+
+30
+00:01:46,830 --> 00:01:51,370
+Trong một hệ thống đơn giản, các nhà phát triển sẽ tạo ra một phương thức xử lý mọi quyền truy cập dữ liệu.
+
+31
+00:01:51,390 --> 00:01:57,090
+Phương pháp này được gọi bởi UI hoặc giao diện dịch vụ và thực hiện tất cả các công việc cấp thấp của công việc
+
+32
+00:01:57,090 --> 00:01:58,170
+với cơ sở dữ liệu.
+
+33
+00:01:58,200 --> 00:02:04,500
+Trong ví dụ của chúng tôi, cơ sở dữ liệu là SQL Server, do đó phương pháp này đưa ra các câu lệnh SQL chuẩn.
+
+34
+00:02:04,860 --> 00:02:10,590
+Như bạn có thể thấy, phương pháp đầu tiên mà các nhà phát triển tạo ra là phương pháp thêm ngày nghỉ vào một ngày cụ thể
+
+35
+00:02:10,590 --> 00:02:11,220
+người lao động.
+
+36
+00:02:11,250 --> 00:02:16,770
+Bây giờ, tất nhiên, có nhiều hơn một nơi mà ứng dụng cần lấy dữ liệu nhân viên để
+
+37
+00:02:16,770 --> 00:02:19,770
+các nhà phát triển tạo ra ngày càng nhiều phương pháp.
+
+38
+00:02:19,800 --> 00:02:25,740
+Tất cả chúng đều phát lệnh SQL trực tiếp đến cơ sở dữ liệu, về cơ bản là thực hiện giống nhau, đó là truy xuất
+
+39
+00:02:25,740 --> 00:02:26,640
+dữ liệu nhân viên.
+
+40
+00:02:26,730 --> 00:02:30,360
+Hệ thống được đưa vào sử dụng và mọi người đều hài lòng.
+
+41
+00:02:31,290 --> 00:02:33,820
+Ba tháng sau, thảm họa xảy ra.
+
+42
+00:02:33,840 --> 00:02:36,330
+Có vẻ như tên cột cần phải được thay đổi.
+
+43
+00:02:36,360 --> 00:02:39,390
+Không có thay đổi lớn, chỉ là lỗi đánh máy cần sửa.
+
+44
+00:02:39,480 --> 00:02:44,370
+Vậy, tác động của thay đổi nhỏ này trong quá trình triển khai hiện tại là gì?
+
+45
+00:02:44,370 --> 00:02:49,530
+Các nhà phát triển phải sàng lọc tất cả các phương pháp trong ứng dụng, tìm tất cả các vị trí mà bản gốc
+
+46
+00:02:49,530 --> 00:02:51,510
+tên được sử dụng và chuyển sang tên mới.
+
+47
+00:02:51,540 --> 00:02:57,960
+Đây là một nhiệm vụ tẻ nhạt, nhàm chán, dễ xảy ra lỗi, buộc các nhà phát triển phải sửa đổi một phần lớn
+
+48
+00:02:57,960 --> 00:03:01,590
+của mã, điều này sẽ buộc nhóm phải chạy lại tất cả các bài kiểm tra.
+
+49
+00:03:02,010 --> 00:03:05,010
+Mô hình kho lưu trữ sẽ giải quyết được vấn đề này.
+
+50
+00:03:05,760 --> 00:03:10,820
+Khi sử dụng mô hình kho lưu trữ, các phương pháp này sẽ không bao giờ giao tiếp trực tiếp với cơ sở dữ liệu.
+
+51
+00:03:10,830 --> 00:03:16,530
+Thay vào đó, nó sẽ gọi một phương thức nhà máy, mà bạn đã quen thuộc với nó rồi, và lấy một thể hiện
+
+52
+00:03:16,530 --> 00:03:17,610
+của kho lưu trữ.
+
+53
+00:03:17,850 --> 00:03:22,810
+Kho lưu trữ đại diện cho kho dữ liệu và hiển thị các hành động mà ứng dụng yêu cầu.
+
+54
+00:03:22,830 --> 00:03:29,430
+Ví dụ, kho lưu trữ của chúng tôi được biểu diễn bằng giao diện có tên là kho lưu trữ I Employees sẽ hiển thị những thông tin sau
+
+55
+00:03:29,460 --> 00:03:30,180
+phương pháp.
+
+56
+00:03:30,420 --> 00:03:31,950
+Lấy thông tin nhân viên theo ID.
+
+57
+00:03:32,190 --> 00:03:34,350
+Lấy thông tin nhân viên theo phòng ban.
+
+58
+00:03:34,380 --> 00:03:35,400
+Cập nhật nhân viên.
+
+59
+00:03:35,430 --> 00:03:38,100
+Tạo nhân viên và xóa nhân viên.
+
+60
+00:03:38,310 --> 00:03:43,860
+Phương pháp nhà máy khởi tạo một lớp kho lưu trữ, trong trường hợp này là một lớp hoạt động với SQL Server
+
+61
+00:03:43,860 --> 00:03:48,120
+và đưa ra các câu lệnh SQL chính xác và sử dụng chúng cho nhiều phương pháp khác nhau.
+
+62
+00:03:48,150 --> 00:03:51,760
+Mã gọi không biết những gì đang diễn ra trong lớp kho lưu trữ.
+
+63
+00:03:51,780 --> 00:03:55,660
+Dữ liệu có thể được lưu trữ trong cơ sở dữ liệu dưới dạng tệp được gửi đến các hệ thống khác.
+
+64
+00:03:55,680 --> 00:04:00,580
+Nó không quan tâm đến việc điều gì sẽ xảy ra khi một cột duy nhất bị thay đổi.
+
+65
+00:04:00,600 --> 00:04:03,500
+Chỉ có lớp kho lưu trữ sẽ được sửa đổi.
+
+66
+00:04:03,510 --> 00:04:05,340
+Không nên động vào bất kỳ mã nào khác.
+
+67
+00:04:05,370 --> 00:04:10,680
+Điều này làm cho sự thay đổi trở nên đơn giản và tập trung hơn nhiều, khiến nó linh hoạt và dễ dàng hơn rất nhiều.
+
+68
+00:04:10,680 --> 00:04:11,580
+để duy trì.
+
+69
+00:04:11,820 --> 00:04:18,149
+Và hãy xem xét một trường hợp khác, cực đoan hơn. Điều gì sẽ xảy ra nếu quyết định chuyển sang một trường hợp khác?
+
+70
+00:04:18,149 --> 00:04:21,240
+loại kho lưu trữ dữ liệu, ví dụ, từ SQL Server đến MongoDB?
+
+71
+00:04:21,720 --> 00:04:26,290
+Trong trường hợp này, tác động của việc thay đổi hệ thống không lưu trữ sẽ rất lớn.
+
+72
+00:04:26,310 --> 00:04:30,120
+Các câu lệnh SQL cần được viết lại, các cơ chế kết nối cần được thay đổi.
+
+73
+00:04:30,150 --> 00:04:32,610
+Giao dịch là một vấn đề hoàn toàn khác.
+
+74
+00:04:32,640 --> 00:04:35,520
+Về cơ bản, đây là việc viết lại toàn bộ hệ thống.
+
+75
+00:04:35,610 --> 00:04:38,640
+Nhưng với mô hình kho lưu trữ, sự thay đổi diễn ra tinh tế hơn.
+
+76
+00:04:38,670 --> 00:04:44,610
+Chúng tôi chỉ cần tạo một lớp mới triển khai giao diện kho lưu trữ I Employees trỏ đến phương thức nhà máy
+
+77
+00:04:44,610 --> 00:04:46,470
+đến lớp học mới và kết thúc một ngày làm việc.
+
+78
+00:04:46,890 --> 00:04:52,620
+Các lớp khác thậm chí sẽ không biết điều gì đó đã thay đổi và đó là sức mạnh thực sự của kho lưu trữ
+
+79
+00:04:52,620 --> 00:04:53,250
+mẫu.
+
+80
+00:04:53,550 --> 00:04:57,360
+Đây là dạng cơ bản nhất của mô hình kho lưu trữ.
+
+81
+00:04:57,360 --> 00:04:59,910
+Có những hình thức nâng cao hơn bao gồm.
+
+82
+00:04:59,950 --> 00:05:05,350
+Các lớp chung và kế thừa cung cấp một khuôn khổ tốt hơn để mở rộng chức năng.
+
+83
+00:05:05,350 --> 00:05:10,570
+Nhưng ngay cả ở dạng cơ bản nhất, mẫu kho lưu trữ là một trong những mẫu hữu ích nhất mà bạn sẽ
+
+84
+00:05:10,570 --> 00:05:11,440
+từng sử dụng.
+

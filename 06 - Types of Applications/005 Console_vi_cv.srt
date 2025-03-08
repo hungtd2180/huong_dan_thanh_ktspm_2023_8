@@ -1,0 +1,76 @@
+1
+00:00:00,140 --> 00:00:06,170
+Ứng dụng bảng điều khiển hoặc ứng dụng dòng lệnh, thường được gọi là CLI, là các ứng dụng chạy bên trong
+
+2
+00:00:06,170 --> 00:00:08,150
+dòng lệnh của hệ điều hành.
+
+3
+00:00:08,480 --> 00:00:11,450
+Những ứng dụng này có một số đặc điểm chung.
+
+4
+00:00:12,110 --> 00:00:13,880
+Chúng không có giao diện người dùng (UI) nào đẹp mắt cả.
+
+5
+00:00:14,030 --> 00:00:19,310
+Điều duy nhất người dùng cuối nhìn thấy là các dòng văn bản hiển thị trong cửa sổ dòng lệnh.
+
+6
+00:00:20,090 --> 00:00:22,340
+Chúng đòi hỏi một số kiến thức chuyên môn nhất định.
+
+7
+00:00:22,340 --> 00:00:27,880
+Các ứng dụng điều khiển được kích hoạt bằng cách nhập lệnh dưới dạng văn bản thuần túy, thường có một số tham số.
+
+8
+00:00:27,890 --> 00:00:33,200
+Người dùng cuối bình thường quen với các ứng dụng trỏ và nhấp sẽ gặp khó khăn khi làm việc với
+
+9
+00:00:33,200 --> 00:00:34,430
+những ứng dụng này.
+
+10
+00:00:35,500 --> 00:00:39,130
+Thông thường, chúng có rất ít tương tác với người dùng, nếu có.
+
+11
+00:00:39,130 --> 00:00:44,050
+Trong hầu hết các trường hợp, ứng dụng bảng điều khiển có thể đưa ra một số câu hỏi cho người dùng để cấu hình
+
+12
+00:00:44,050 --> 00:00:46,480
+hành vi của nó, và sau đó chúng ta sẽ bắt đầu chạy.
+
+13
+00:00:46,480 --> 00:00:49,900
+Cấu hình này cũng có thể được thiết lập thông qua tham số dòng lệnh.
+
+14
+00:00:50,770 --> 00:00:55,720
+Chúng có thể kích hoạt các quá trình chạy dài cũng như thực hiện các hành động tập trung rất ngắn.
+
+15
+00:00:56,450 --> 00:01:01,790
+Các ứng dụng điều khiển được sử dụng chủ yếu để thực hiện các quy trình chạy dài không tương tác với
+
+16
+00:01:01,790 --> 00:01:08,390
+người dùng cuối và các hành động tập trung ngắn hạn, chẳng hạn như xuất dữ liệu cần được sử dụng bởi những người được đào tạo đặc biệt
+
+17
+00:01:08,390 --> 00:01:09,380
+người dùng có quyền lực.
+
+18
+00:01:09,560 --> 00:01:14,750
+Điều quan trọng cần lưu ý là thực tế ứng dụng là ứng dụng console không làm thay đổi bất cứ điều gì
+
+19
+00:01:14,750 --> 00:01:20,420
+đối với kiến trúc của nó hoặc các mẫu kiến trúc và thực hành cũng áp dụng cho các ứng dụng bảng điều khiển.
+

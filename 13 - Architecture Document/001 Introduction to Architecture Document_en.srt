@@ -1,0 +1,76 @@
+1
+00:00:01,340 --> 00:00:03,830
+Welcome to the architectural document section.
+
+2
+00:00:04,010 --> 00:00:09,050
+In this section, we will explore the most important product of the architect's work, the architectural
+
+3
+00:00:09,050 --> 00:00:09,830
+document.
+
+4
+00:00:10,070 --> 00:00:15,290
+In this document, the architect describes the architecture that was designed as well as the various
+
+5
+00:00:15,290 --> 00:00:17,640
+requirements functional and non-functional.
+
+6
+00:00:17,660 --> 00:00:20,090
+The technology stack and more.
+
+7
+00:00:20,360 --> 00:00:25,340
+In fact, the architectural document includes almost all the concepts and information discussed in this
+
+8
+00:00:25,340 --> 00:00:26,630
+course up until now.
+
+9
+00:00:27,020 --> 00:00:31,580
+The architecture document is a cornerstone of the application development, and no development should
+
+10
+00:00:31,580 --> 00:00:36,470
+begin before an architectural document is created and the developers fully grasped its contents.
+
+11
+00:00:36,650 --> 00:00:41,510
+In this section, we will deep dive into this document, understand what its goals are, who is the
+
+12
+00:00:41,510 --> 00:00:44,120
+audience and what is its structure.
+
+13
+00:00:44,300 --> 00:00:50,150
+Remember that this course has a very special bonus, a complete full blown, ready to use architectural
+
+14
+00:00:50,150 --> 00:00:53,750
+document which you can download and use as a template for your architecture.
+
+15
+00:00:53,780 --> 00:00:59,210
+You can find this document in the resources of the next section where we will discuss a case study for
+
+16
+00:00:59,210 --> 00:01:00,570
+the architecture process.
+
+17
+00:01:00,570 --> 00:01:05,880
+So remember, even if you feel you don't fully understand the role of each section in the document,
+
+18
+00:01:05,910 --> 00:01:09,540
+you will be able to see it in its full context in the actual document.
+
+19
+00:01:09,570 --> 00:01:10,470
+Let's go.
+

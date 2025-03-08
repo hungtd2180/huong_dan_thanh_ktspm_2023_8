@@ -1,0 +1,64 @@
+1
+00:00:00,170 --> 00:00:02,930
+So who is the perfect audience for this course?
+
+2
+00:00:03,050 --> 00:00:07,520
+In order to benefit the most from this course, you must have some background in programming.
+
+3
+00:00:07,520 --> 00:00:10,940
+It doesn't really matter which platform you are currently programming with.
+
+4
+00:00:10,970 --> 00:00:14,450
+It could be Java Dotnet, PHP or anything else.
+
+5
+00:00:14,450 --> 00:00:16,550
+There won't be coding in this course.
+
+6
+00:00:16,640 --> 00:00:22,310
+However, this course might not be a good fit for general developers who take their first steps in the
+
+7
+00:00:22,310 --> 00:00:23,480
+programming world.
+
+8
+00:00:23,720 --> 00:00:29,750
+We will be discussing some advanced software principles which junior developers might not be aware of,
+
+9
+00:00:29,750 --> 00:00:35,390
+and this might make it more difficult for them to grasp the concepts described in this course.
+
+10
+00:00:37,450 --> 00:00:40,720
+In addition, it would be better to have some backend experience.
+
+11
+00:00:40,720 --> 00:00:46,630
+Most architectural dilemmas present themselves in the back end where performance security, caching
+
+12
+00:00:46,630 --> 00:00:49,570
+and other considerations are extremely important.
+
+13
+00:00:49,750 --> 00:00:55,780
+So to sum it up, the perfect audience for this course is someone with three years of experience as
+
+14
+00:00:55,780 --> 00:00:58,770
+a developer with backend development experience.
+
+15
+00:00:58,780 --> 00:01:03,880
+However, anyone with some development experience will benefit from this course and you are more than
+
+16
+00:01:03,880 --> 00:01:08,350
+invited to contact me regarding any question you have about this course material.
+

@@ -1,0 +1,88 @@
+1
+00:00:00,320 --> 00:00:05,360
+One of the biggest problems with the non-functional requirements is that it's not clear who should define
+
+2
+00:00:05,360 --> 00:00:05,870
+them.
+
+3
+00:00:06,050 --> 00:00:11,120
+Usually we expect the client to gether with a system analyst to define the functional requirements.
+
+4
+00:00:11,120 --> 00:00:15,080
+After all, they know what the system should do more than anyone else.
+
+5
+00:00:15,350 --> 00:00:18,230
+But non-functional requirements are a different story.
+
+6
+00:00:18,260 --> 00:00:23,030
+Most of the time the client has no idea about non-functional requirements and what the consequences
+
+7
+00:00:23,030 --> 00:00:24,770
+of those requirements are.
+
+8
+00:00:24,920 --> 00:00:31,610
+In my experience, when asked what is the SLA for the system, assuming he knows what an SLA is, the
+
+9
+00:00:31,610 --> 00:00:38,360
+client will usually say always when asked What is the required response time for the API?
+
+10
+00:00:38,390 --> 00:00:41,570
+The answer will be somewhere around ten milliseconds.
+
+11
+00:00:42,850 --> 00:00:47,440
+So we, the architects, have two roles in the non-functional requirements discussion.
+
+12
+00:00:48,310 --> 00:00:50,080
+The first is to frame the boundaries.
+
+13
+00:00:50,080 --> 00:00:56,680
+We must explain the client that 100% uptime is not realistic and probably not really needed.
+
+14
+00:00:56,710 --> 00:01:02,080
+We must explain to him that his current network will not enable completing an API call in less than
+
+15
+00:01:02,080 --> 00:01:03,610
+100 milliseconds.
+
+16
+00:01:03,850 --> 00:01:07,360
+And after we have done all this, we can talk about possible values.
+
+17
+00:01:07,570 --> 00:01:13,450
+And this discussion must be backed by real numbers, for example, when talking about concurrent users.
+
+18
+00:01:13,480 --> 00:01:16,230
+Try to calculate the real number of concurrent users.
+
+19
+00:01:16,240 --> 00:01:18,190
+Don't pull numbers out of a hat.
+
+20
+00:01:18,220 --> 00:01:21,660
+Also try to set realistic goals for the performance requirement.
+
+21
+00:01:21,670 --> 00:01:27,430
+Remember, if the system is going to be used by end users, you don't need to fight for every millisecond.
+
+22
+00:01:27,460 --> 00:01:29,260
+The users won't notice that.
+

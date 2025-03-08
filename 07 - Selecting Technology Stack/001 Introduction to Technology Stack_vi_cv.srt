@@ -1,0 +1,104 @@
+1
+00:00:00,410 --> 00:00:03,110
+Chào mừng đến với phần Công nghệ.
+
+2
+00:00:03,260 --> 00:00:08,180
+Trong phần này, chúng ta sẽ thảo luận về một trong những nhiệm vụ quan trọng và nặng nề nhất của kiến trúc sư, và
+
+3
+00:00:08,180 --> 00:00:11,310
+đó là lựa chọn công nghệ của hệ thống.
+
+4
+00:00:11,330 --> 00:00:16,400
+Công nghệ được chọn sẽ xác định ngôn ngữ, nền tảng và công cụ nào sẽ được sử dụng trong
+
+5
+00:00:16,400 --> 00:00:20,630
+phát triển hệ thống và những kỹ năng cần có của nhóm phát triển là gì.
+
+6
+00:00:20,900 --> 00:00:23,510
+Quyết định này quan trọng vì hai lý do.
+
+7
+00:00:23,510 --> 00:00:25,840
+Thứ nhất, nó không thể đảo ngược được.
+
+8
+00:00:25,850 --> 00:00:30,560
+Khi bạn đã quyết định sử dụng một nền tảng cụ thể và công việc đã bắt đầu trên nền tảng này, bạn không thể đảo ngược
+
+9
+00:00:30,560 --> 00:00:30,710
+Nó.
+
+10
+00:00:30,710 --> 00:00:36,730
+Không thể quyết định sau ba tháng phát triển rằng chúng tôi thực sự thích nền tảng khác.
+
+11
+00:00:36,740 --> 00:00:42,380
+Quyết định như vậy sẽ dẫn đến việc phải viết lại toàn bộ hệ thống và làm chậm tiến độ đáng kể.
+
+12
+00:00:42,920 --> 00:00:48,140
+Có một số mẫu kiến trúc cho phép có một số loại tính linh hoạt trong việc lựa chọn ngăn xếp công nghệ,
+
+13
+00:00:48,140 --> 00:00:49,730
+đặc biệt là các dịch vụ vi mô.
+
+14
+00:00:49,730 --> 00:00:53,690
+Nhưng ngay cả như vậy, việc chuyển đổi nền tảng giữa các dịch vụ cũng không phải là ý tưởng hay.
+
+15
+00:00:54,470 --> 00:01:00,540
+Lý do thứ hai Những quyết định như vậy thường chứa đầy cảm xúc và được đưa ra một cách phi lý trí.
+
+16
+00:01:00,540 --> 00:01:01,290
+cơ sở.
+
+17
+00:01:01,290 --> 00:01:05,519
+Bạn sẽ gặp phải những tình huống mà nhóm phát triển muốn thực hiện một nền tảng cụ thể vì
+
+18
+00:01:05,519 --> 00:01:09,600
+Nó mới, hấp dẫn và nhóm bên kia hành lang đã sử dụng nó.
+
+19
+00:01:09,630 --> 00:01:13,950
+Sẽ không thành vấn đề nếu công nghệ này kém hơn so với nhiệm vụ cụ thể đang thực hiện.
+
+20
+00:01:13,980 --> 00:01:15,600
+Họ vẫn muốn có nó.
+
+21
+00:01:15,690 --> 00:01:22,200
+Vì vậy, quyết định này phải được đưa ra với sự sáng suốt, phải được ghi chép đầy đủ và là nỗ lực của cả nhóm.
+
+22
+00:01:22,200 --> 00:01:24,450
+Và không chỉ riêng bạn, kiến trúc sư.
+
+23
+00:01:24,600 --> 00:01:29,520
+Trong phần này chúng ta sẽ thảo luận về công nghệ, các giải pháp thay thế cho front-end, back-end và dữ liệu
+
+24
+00:01:29,520 --> 00:01:30,090
+cửa hàng.
+
+25
+00:01:30,240 --> 00:01:34,800
+Đối với mỗi phương án thay thế, chúng tôi sẽ cung cấp một chút thông tin cơ bản và thảo luận về ưu và nhược điểm của nó.
+
+26
+00:01:34,830 --> 00:01:39,420
+Tôi hy vọng phần này sẽ giúp bạn đưa ra quyết định sáng suốt về công nghệ trong hệ thống của mình.
+

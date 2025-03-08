@@ -1,0 +1,40 @@
+1
+00:00:00,290 --> 00:00:05,240
+Dịch vụ khá giống với ứng dụng điều khiển với hai điểm khác biệt quan trọng.
+
+2
+00:00:05,420 --> 00:00:10,850
+Chúng không có giao diện người dùng nào cả, trái ngược với cửa sổ dòng lệnh trong ứng dụng bảng điều khiển.
+
+3
+00:00:10,850 --> 00:00:16,520
+Và chúng được quản lý bởi một trình quản lý dịch vụ, đây là một tính năng của hệ điều hành quản lý
+
+4
+00:00:16,520 --> 00:00:17,480
+các dịch vụ.
+
+5
+00:00:17,510 --> 00:00:23,330
+Trong Windows chỉ có một trình quản lý dịch vụ, trong khi trên Linux có nhiều trình quản lý dịch vụ mà bạn có thể lựa chọn.
+
+6
+00:00:23,900 --> 00:00:28,280
+Trình quản lý dịch vụ khởi động và dừng các dịch vụ cũng như theo dõi hoạt động của chúng.
+
+7
+00:00:28,640 --> 00:00:34,490
+Vì các dịch vụ không thể hỏi người dùng về hành vi của họ nên chúng thường sẽ có một tệp cấu hình
+
+8
+00:00:34,490 --> 00:00:36,380
+chứa các tham số cần thiết.
+
+9
+00:00:36,410 --> 00:00:42,230
+Các dịch vụ được sử dụng cho các tiến trình chạy lâu dài như giám sát thư mục trên đĩa khi không có sự can thiệp của người dùng
+
+10
+00:00:42,230 --> 00:00:43,100
+là bắt buộc.
+

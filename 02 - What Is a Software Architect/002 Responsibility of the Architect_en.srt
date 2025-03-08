@@ -1,0 +1,156 @@
+1
+00:00:00,290 --> 00:00:03,680
+So let's talk about the responsibility of the software architect.
+
+2
+00:00:03,710 --> 00:00:09,510
+One of the questions I often asked is, what is the difference between a senior developer and an architect?
+
+3
+00:00:09,530 --> 00:00:15,110
+After all, in a lot of companies, mainly small ones, there is not a function of an architect, just
+
+4
+00:00:15,110 --> 00:00:16,010
+a team leader.
+
+5
+00:00:16,040 --> 00:00:18,050
+Why do we need an architect at all?
+
+6
+00:00:18,350 --> 00:00:23,660
+The short answer is this developer knows what can be done.
+
+7
+00:00:24,080 --> 00:00:26,540
+Architect knows what should be done.
+
+8
+00:00:26,990 --> 00:00:29,340
+A senior developer knows the technology very well.
+
+9
+00:00:29,360 --> 00:00:35,450
+He knows what is the best way to implement loops, how to perform operations efficiently, what libraries
+
+10
+00:00:35,450 --> 00:00:37,790
+to use to access the database and so on.
+
+11
+00:00:38,000 --> 00:00:42,740
+A software architect is also quite familiar with the technology and platform, although not as much
+
+12
+00:00:42,740 --> 00:00:43,690
+as a developer.
+
+13
+00:00:43,700 --> 00:00:49,600
+But his main goal is to make sure the software design implements the requirements of the system.
+
+14
+00:00:49,610 --> 00:00:52,910
+He is less interested in the implementation details of the system.
+
+15
+00:00:52,940 --> 00:00:54,830
+This is a developer's job.
+
+16
+00:00:55,940 --> 00:01:01,410
+The architect looks at the macro level and fuses the technology with the requirements.
+
+17
+00:01:01,970 --> 00:01:07,420
+We will talk a lot about requirements later in this course, but let's lay the foundations for the requirements
+
+18
+00:01:07,420 --> 00:01:08,920
+of almost any system.
+
+19
+00:01:08,920 --> 00:01:15,790
+And these are fast, secure, reliable, easy to maintain.
+
+20
+00:01:16,770 --> 00:01:19,080
+In almost every system I've been involved.
+
+21
+00:01:19,090 --> 00:01:21,570
+This list was the holy grail of the architecture.
+
+22
+00:01:21,600 --> 00:01:27,390
+This is what the architecture was made for, to make the system fast, secure, reliable and easy to
+
+23
+00:01:27,390 --> 00:01:28,050
+maintain.
+
+24
+00:01:28,080 --> 00:01:32,250
+Of course, every system has its own definition of those items fast.
+
+25
+00:01:32,250 --> 00:01:33,510
+In a real time application.
+
+26
+00:01:33,510 --> 00:01:39,600
+Working with satellites telemetry is not the same fast of a traditional information system geared towards
+
+27
+00:01:39,600 --> 00:01:40,530
+end users.
+
+28
+00:01:40,560 --> 00:01:48,090
+Likewise, reliability of a mission critical application which must have an uptime of 99.99% is not
+
+29
+00:01:48,090 --> 00:01:53,550
+the same as reliability of a chat application or a support system, which should be available only during
+
+30
+00:01:53,550 --> 00:01:54,930
+normal working hours.
+
+31
+00:01:54,960 --> 00:01:59,550
+But still, this list is usually the defining list of every architecture.
+
+32
+00:01:59,910 --> 00:02:04,950
+Now, it's important to note that this list has nothing to do with technology, architectural patterns
+
+33
+00:02:04,950 --> 00:02:07,140
+or platforms you don't see here.
+
+34
+00:02:07,140 --> 00:02:13,410
+Use a microservices based architecture or use Java or don't use relational database.
+
+35
+00:02:13,440 --> 00:02:19,020
+That's because a good architect knows that technology patterns and all the other buzzwords are just
+
+36
+00:02:19,030 --> 00:02:20,530
+means to the end result.
+
+37
+00:02:20,560 --> 00:02:24,160
+The technology should serve the requirements and not the other way around.
+
+38
+00:02:24,460 --> 00:02:31,330
+So to summarize, a software architect is someone who designs the system to be fast, secure, reliable
+
+39
+00:02:31,330 --> 00:02:37,360
+and easy to maintain and selects the optimal technology platforms and patterns to achieve these goals.
+

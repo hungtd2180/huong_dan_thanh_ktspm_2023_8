@@ -1,0 +1,84 @@
+1
+00:00:00,770 --> 00:00:03,800
+Vâng, bây giờ chúng ta đã có một kiến trúc hệ thống hoàn chỉnh.
+
+2
+00:00:03,800 --> 00:00:05,030
+Thật tuyệt vời.
+
+3
+00:00:05,060 --> 00:00:09,320
+Bước hợp lý tiếp theo là viết ra và tạo một tài liệu kiến trúc.
+
+4
+00:00:09,320 --> 00:00:14,620
+Vì vậy, chúng ta hãy xem xét các phần khác nhau của tài liệu và đảm bảo rằng chúng ta biết những gì cần có trong từng phần
+
+5
+00:00:14,630 --> 00:00:15,570
+Đầu tiên.
+
+6
+00:00:15,590 --> 00:00:16,550
+Lý lịch.
+
+7
+00:00:16,760 --> 00:00:18,780
+Vâng, chúng ta đã có thông tin cơ bản ở đây.
+
+8
+00:00:18,800 --> 00:00:23,390
+Phần này mô tả hệ thống IO2, động cơ và chức năng chính của nó.
+
+9
+00:00:23,630 --> 00:00:29,690
+Sau đó, chúng tôi đã xác định rõ các yêu cầu, cả yêu cầu chức năng và không chức năng, và chúng tôi chỉ
+
+10
+00:00:29,690 --> 00:00:31,700
+cần phải viết chúng vào phần này.
+
+11
+00:00:31,730 --> 00:00:37,280
+Kiến trúc tổng thể là phần tiếp theo của chúng tôi và ở đây chúng tôi sẽ phác thảo các dịch vụ khác nhau và nhắn tin
+
+12
+00:00:37,280 --> 00:00:38,000
+giữa chúng.
+
+13
+00:00:38,000 --> 00:00:39,920
+Chúng tôi đã đề cập đến vấn đề này rồi.
+
+14
+00:00:40,400 --> 00:00:45,680
+Sau đó, chúng ta sẽ đi sâu vào từng dịch vụ và mô tả vai trò của dịch vụ đó là gì,
+
+15
+00:00:45,680 --> 00:00:48,560
+công nghệ của nó là gì và kiến trúc bên trong của nó như thế nào.
+
+16
+00:00:48,680 --> 00:00:54,890
+Chúng tôi đã trình bày tất cả những điều này trong các bài giảng trước và chỉ tóm tắt nội dung, như bạn có thể thấy
+
+17
+00:00:54,890 --> 00:00:59,900
+hãy nhớ rằng, phần tóm tắt là phần cuối cùng chúng ta sẽ viết, mặc dù nó xuất hiện ở phần đầu
+
+18
+00:01:00,000 --> 00:01:00,810
+của tài liệu.
+
+19
+00:01:00,840 --> 00:01:05,010
+Tất nhiên, chúng ta đã có đủ kiến thức cần thiết cho phần tóm tắt.
+
+20
+00:01:05,610 --> 00:01:06,390
+Được rồi, tốt lắm.
+
+21
+00:01:06,390 --> 00:01:10,230
+Có vẻ như chúng ta đã có mọi thứ cần thiết để viết tài liệu.
+

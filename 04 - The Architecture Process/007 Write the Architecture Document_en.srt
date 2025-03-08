@@ -1,0 +1,40 @@
+1
+00:00:00,200 --> 00:00:01,790
+This is what you were waiting for.
+
+2
+00:00:01,819 --> 00:00:05,060
+This is a culmination of all the efforts you've put into the system.
+
+3
+00:00:05,060 --> 00:00:07,220
+And this is your greatest creation.
+
+4
+00:00:07,520 --> 00:00:12,350
+The architecture document describes the whole process you have been through and gives the developers
+
+5
+00:00:12,350 --> 00:00:15,740
+and management a full picture of the system that is going to be built.
+
+6
+00:00:16,100 --> 00:00:21,350
+A good architecture document is relevant for all the levels in the organization the CEO, the CIO,
+
+7
+00:00:21,380 --> 00:00:23,930
+the project manager, and of course, the developers.
+
+8
+00:00:23,960 --> 00:00:26,300
+They will all find great value in it.
+
+9
+00:00:26,480 --> 00:00:31,520
+We will talk a lot about the structure and the content of the document in the relevant section and explain
+
+10
+00:00:31,520 --> 00:00:33,290
+how to maximize its value.
+

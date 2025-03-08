@@ -1,0 +1,184 @@
+1
+00:00:00,260 --> 00:00:05,570
+One of the most heated arguments in the architects community is whether an architect should code like
+
+2
+00:00:05,570 --> 00:00:09,170
+really code with an IDE, debugging, logging, etcetera.
+
+3
+00:00:09,980 --> 00:00:14,570
+Of course, the question is not whether an architect should participate in the development effort and
+
+4
+00:00:14,570 --> 00:00:16,129
+be one of the development team.
+
+5
+00:00:16,160 --> 00:00:17,750
+Of course he shouldn't do that.
+
+6
+00:00:17,960 --> 00:00:22,880
+The question is whether an architect should have coding skills that will allow him to test new technologies,
+
+7
+00:00:22,880 --> 00:00:26,600
+create POCs or demonstrate some concepts in code.
+
+8
+00:00:26,630 --> 00:00:32,240
+Those who claim an architect should not be coding say that he has more important things to do than punching
+
+9
+00:00:32,240 --> 00:00:35,130
+the keyboard and producing a few lines of code.
+
+10
+00:00:35,150 --> 00:00:38,960
+He will better be producing patterns, requirements and documents, they say.
+
+11
+00:00:38,960 --> 00:00:43,850
+And they have a point, but and I'm sorry to say that they are wrong.
+
+12
+00:00:43,940 --> 00:00:48,350
+A good architect must have coding skills and here are the three reasons for that.
+
+13
+00:00:49,990 --> 00:00:51,860
+Architectural trustworthiness.
+
+14
+00:00:52,220 --> 00:00:56,960
+As an architect, you are going to design an architecture which utilizes certain platforms and patterns.
+
+15
+00:00:56,960 --> 00:01:02,610
+You have to make sure the architecture is feasible and the best way to do it is to try and implement
+
+16
+00:01:02,610 --> 00:01:03,540
+it yourself.
+
+17
+00:01:03,570 --> 00:01:04,950
+Yes, that's not a mistake.
+
+18
+00:01:04,980 --> 00:01:09,720
+You have to be able to implement certain parts of the architecture in order to test them before expecting
+
+19
+00:01:09,720 --> 00:01:12,760
+the developers to implement the unimplementable.
+
+20
+00:01:12,780 --> 00:01:14,310
+Yes, that's a word.
+
+21
+00:01:14,340 --> 00:01:18,600
+For example, are you going to recommend using a certain dependency injection package?
+
+22
+00:01:18,720 --> 00:01:23,430
+Test it in a small application and make sure it's actually do what you expect it to do?
+
+23
+00:01:23,730 --> 00:01:28,710
+Are you contemplating whether to use a NoSQL database or stick with a traditional RDBMS?
+
+24
+00:01:28,740 --> 00:01:29,640
+No problem.
+
+25
+00:01:29,640 --> 00:01:32,700
+Install both on your machine and test them out.
+
+26
+00:01:32,730 --> 00:01:36,180
+This is the only way to make the architecture trustworthy.
+
+27
+00:01:36,210 --> 00:01:41,190
+By testing it beforehand, you ensure your design can be implemented effectively and easily.
+
+28
+00:01:42,570 --> 00:01:44,080
+Support the developers.
+
+29
+00:01:44,100 --> 00:01:48,900
+One of the hardest tasks of the architect is to make sure the architecture is actually implemented.
+
+30
+00:01:48,930 --> 00:01:53,010
+The best way to do that is to provide an ongoing support to the developers.
+
+31
+00:01:53,040 --> 00:01:57,930
+The architect must be able to help developers when they get stuck while implementing the architecture
+
+32
+00:01:57,930 --> 00:02:02,960
+and examine the developer's work to detect deviations from the intended implementation.
+
+33
+00:02:02,990 --> 00:02:07,880
+If the architect does not possess coding skills, he won't be able to review the code and locate those
+
+34
+00:02:07,880 --> 00:02:08,750
+deviations.
+
+35
+00:02:09,410 --> 00:02:10,610
+Gain respect.
+
+36
+00:02:10,699 --> 00:02:15,230
+One of the key factors to succeed as an architect is to gain the respect of the developers.
+
+37
+00:02:15,260 --> 00:02:21,050
+If the architect is perceived as someone who has no idea what the developers are actually doing, they
+
+38
+00:02:21,050 --> 00:02:26,180
+will think of him as a snob, arrogant and detached and will immediately lose respect for him.
+
+39
+00:02:26,210 --> 00:02:31,160
+If, on the other hand, they will see you sitting with them, helping them solve problems and listening
+
+40
+00:02:31,190 --> 00:02:36,470
+to them, they will appreciate you as a down to earth, practical and and all around nice guy and will
+
+41
+00:02:36,470 --> 00:02:41,390
+be more than happy to listen to you in the future when discussing architectural topics and tasks.
+
+42
+00:02:41,810 --> 00:02:44,720
+But you can't really help developers if you can't code, aren't you?
+
+43
+00:02:45,350 --> 00:02:47,990
+So to summarize, keep coding.
+
+44
+00:02:48,020 --> 00:02:52,940
+After all, it won't only help you create a trustworthy architecture, provide an ongoing support,
+
+45
+00:02:52,940 --> 00:02:54,500
+and gain the respect of the developers.
+
+46
+00:02:54,500 --> 00:02:55,640
+It also fun.
+

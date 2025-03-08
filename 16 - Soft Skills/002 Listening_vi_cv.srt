@@ -1,0 +1,72 @@
+1
+00:00:00,170 --> 00:00:05,360
+Một trong những kỹ năng mềm quan trọng nhất mà không nhiều kiến trúc sư có được là kỹ năng lắng nghe.
+
+2
+00:00:05,390 --> 00:00:11,210
+Nghe có vẻ khá đơn giản, tôi biết, nhưng tôi đã gặp vô số kiến trúc sư hành động như thể họ đã biết
+
+3
+00:00:11,210 --> 00:00:16,850
+tất cả những gì cần biết về phần mềm, kiến trúc, yêu cầu công nghệ và dự án cụ thể
+
+4
+00:00:16,850 --> 00:00:19,580
+và đơn giản là không dễ chịu khi làm việc cùng.
+
+5
+00:00:19,760 --> 00:00:25,940
+Một trong những yếu tố chính trong một nhóm làm việc thành công là khả năng lắng nghe và cho rằng bạn không phải là người
+
+6
+00:00:25,940 --> 00:00:27,530
+người thông minh nhất trong phòng.
+
+7
+00:00:27,740 --> 00:00:33,920
+Giả định này, bất kể đúng hay không, sẽ giúp bạn trở thành một người đồng đội tốt hơn và kết quả là,
+
+8
+00:00:33,950 --> 00:00:35,240
+một kiến trúc sư giỏi hơn.
+
+9
+00:00:35,270 --> 00:00:36,410
+Hãy nghĩ về điều đó.
+
+10
+00:00:36,440 --> 00:00:41,360
+Nếu bạn không phải là người thông minh nhất trong phòng, thì có lẽ bạn nên lắng nghe những gì người khác nói.
+
+11
+00:00:41,360 --> 00:00:42,590
+trong phòng phải nói.
+
+12
+00:00:42,620 --> 00:00:46,460
+Họ có thể có một số ý tưởng thông minh đáng chia sẻ và sử dụng.
+
+13
+00:00:46,460 --> 00:00:51,410
+Bạn biết đấy, trí tuệ tập thể gần như luôn tốt hơn tác phẩm độc tấu.
+
+14
+00:00:51,440 --> 00:00:55,260
+Ngay cả khi bạn chắc chắn rằng mình vừa thiết kế ra kiến trúc tốt nhất có thể.
+
+15
+00:00:55,280 --> 00:01:01,650
+Luôn cho rằng bạn đã quên điều gì đó hoặc không nhận thức được tất cả các hàm ý của các yêu cầu hoặc không
+
+16
+00:01:01,650 --> 00:01:04,050
+suy nghĩ về một số hạn chế về lịch trình.
+
+17
+00:01:04,170 --> 00:01:09,200
+Hãy nói về công việc của bạn và quan trọng hơn, hãy lắng nghe những gì người khác nói về nó.
+
+18
+00:01:09,210 --> 00:01:11,610
+Nó sẽ làm cho công việc của bạn tốt hơn rất nhiều.
+

@@ -1,0 +1,72 @@
+1
+00:00:00,260 --> 00:00:02,610
+Chào mừng đến với phần Quy trình kiến trúc.
+
+2
+00:00:02,630 --> 00:00:07,490
+Trong phần này, chúng ta sẽ thảo luận về quá trình làm việc của kiến trúc sư để tạo nên kiến trúc
+
+3
+00:00:07,490 --> 00:00:11,240
+hữu ích nhất có thể và mang lại giá trị tối đa cho khách hàng.
+
+4
+00:00:11,270 --> 00:00:16,100
+Kiến trúc sư nên tuân theo một lộ trình được xác định rõ ràng, cuối cùng sẽ dẫn đến một giải pháp thực tế và tốt.
+
+5
+00:00:16,100 --> 00:00:21,860
+nghĩ đến kiến trúc đảm bảo hệ thống nhanh, an toàn, đáng tin cậy và dễ bảo trì.
+
+6
+00:00:22,100 --> 00:00:24,640
+Trong phần này chúng ta sẽ nói về quá trình này.
+
+7
+00:00:24,650 --> 00:00:28,940
+Tôi sẽ tóm tắt ngắn gọn về từng bước trong quy trình và mô tả tầm quan trọng của chúng.
+
+8
+00:00:28,940 --> 00:00:30,050
+Ở các phần sau.
+
+9
+00:00:30,050 --> 00:00:33,830
+Chúng tôi sẽ đi sâu vào từng bước và thảo luận về những việc chính xác cần phải làm.
+
+10
+00:00:34,070 --> 00:00:36,920
+Sau đây là các bước trong quy trình kiến trúc.
+
+11
+00:00:37,560 --> 00:00:39,660
+Hiểu rõ các yêu cầu của hệ thống.
+
+12
+00:00:39,870 --> 00:00:42,600
+Hiểu các yêu cầu phi chức năng.
+
+13
+00:00:42,630 --> 00:00:44,460
+Lập bản đồ các thành phần.
+
+14
+00:00:44,550 --> 00:00:46,620
+Chọn ngăn xếp công nghệ.
+
+15
+00:00:46,650 --> 00:00:48,630
+Thiết kế kiến trúc.
+
+16
+00:00:48,660 --> 00:00:50,890
+Viết tài liệu kiến trúc.
+
+17
+00:00:50,970 --> 00:00:52,950
+Hỗ trợ nhóm phát triển.
+
+18
+00:00:53,190 --> 00:00:55,170
+Chúng ta hãy nói về các bước này.
+

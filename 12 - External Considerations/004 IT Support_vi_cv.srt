@@ -1,0 +1,104 @@
+1
+00:00:00,350 --> 00:00:05,330
+Một trong những cám dỗ lớn nhất khi thiết kế kiến trúc là đề xuất các công cụ khác nhau cho
+
+2
+00:00:05,330 --> 00:00:07,040
+nhiều khía cạnh kiến trúc khác nhau.
+
+3
+00:00:07,160 --> 00:00:14,390
+Các công cụ như công cụ tìm kiếm, trình quản lý luồng kinh doanh, cơ sở dữ liệu NoSQL và nhiều công cụ khác là những khuyến nghị khá phổ biến
+
+4
+00:00:14,390 --> 00:00:15,950
+cho kiến trúc hiện đại ngày nay.
+
+5
+00:00:16,070 --> 00:00:20,860
+Vấn đề là những công cụ đó cần có người quen thuộc với chúng và có thể bảo trì chúng.
+
+6
+00:00:20,870 --> 00:00:26,840
+Bây giờ, nếu bộ phận CNTT của tổ chức có đủ kỹ năng để duy trì cơ sở dữ liệu NoSQL mới.
+
+7
+00:00:26,870 --> 00:00:29,690
+Mọi thứ đều tốt, nhưng điều gì xảy ra nếu không tốt?
+
+8
+00:00:29,840 --> 00:00:35,150
+Điều thường xảy ra là nhóm phát triển trở thành nhóm hỗ trợ cho các sản phẩm này và
+
+9
+00:00:35,150 --> 00:00:38,840
+các nhà phát triển trở thành chuyên gia trong việc cài đặt và bảo trì chúng.
+
+10
+00:00:38,840 --> 00:00:41,240
+Và đó không phải là điều tốt.
+
+11
+00:00:41,510 --> 00:00:43,670
+Các nhà phát triển nên phát triển.
+
+12
+00:00:43,830 --> 00:00:45,740
+Đó là cách sử dụng thời gian hiệu quả nhất.
+
+13
+00:00:45,740 --> 00:00:51,110
+Đây là lý do họ được trả tiền để phát triển, không phải để trở thành dba, không phải để cấu hình loạt MQ, không phải để
+
+14
+00:00:51,110 --> 00:00:56,630
+tìm hiểu kỹ các bài viết hỗ trợ của MongoDB và kiến trúc bạn thiết kế phải tính đến yếu tố này.
+
+15
+00:00:56,660 --> 00:01:01,620
+Bạn phải đảm bảo rằng khi đề xuất một sản phẩm mới để đưa vào hệ thống, sẽ có
+
+16
+00:01:01,620 --> 00:01:04,470
+người nào đó ngoài nhóm phát triển sẽ xử lý việc này.
+
+17
+00:01:04,500 --> 00:01:10,200
+Nếu không phải như vậy, hãy phân tích thật cẩn thận về nỗ lực cần thiết để duy trì sản phẩm
+
+18
+00:01:10,200 --> 00:01:13,320
+và kiểm tra với các nhà phát triển xem họ có thể xử lý được không.
+
+19
+00:01:13,770 --> 00:01:19,410
+Lưu ý rằng nếu sản phẩm là sản phẩm mới, sáng giá, các nhà phát triển thường sẽ rất hào hứng về nó
+
+20
+00:01:19,410 --> 00:01:21,510
+và sẽ đảm bảo rằng họ có thể xử lý được.
+
+21
+00:01:21,540 --> 00:01:23,010
+Đừng coi đó là điều hiển nhiên.
+
+22
+00:01:23,010 --> 00:01:27,960
+Sự phấn khích sẽ giảm dần theo thời gian và khi điều này xảy ra, các nhà phát triển sẽ phải chịu đựng sự nhàm chán và
+
+23
+00:01:27,960 --> 00:01:31,650
+công việc đơn giản là bảo trì sản phẩm thay vì viết mã.
+
+24
+00:01:31,740 --> 00:01:37,140
+Vì vậy, điểm mấu chốt là bất cứ khi nào có thể, đừng bao gồm các sản phẩm trong kiến trúc có
+
+25
+00:01:37,140 --> 00:01:39,110
+không có ai được giao nhiệm vụ chăm sóc họ.
+
+26
+00:01:39,120 --> 00:01:42,630
+Luôn ưu tiên những sản phẩm mà bộ phận đó biết đến và hỗ trợ.
+

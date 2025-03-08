@@ -1,0 +1,236 @@
+1
+00:00:00,470 --> 00:00:03,920
+Mô hình nâng cao tiếp theo mà chúng ta sẽ thảo luận là nguồn sự kiện.
+
+2
+00:00:04,070 --> 00:00:07,440
+Nhưng trước tiên, hãy cùng xem xét cách quản lý thực thể truyền thống.
+
+3
+00:00:07,460 --> 00:00:13,870
+Trong các ứng dụng truyền thống, các thực thể được lưu trữ trong cơ sở dữ liệu, thường là một tập hợp các thuộc tính
+
+4
+00:00:13,880 --> 00:00:17,030
+nơi ứng dụng cần cập nhật một thuộc tính cụ thể.
+
+5
+00:00:17,060 --> 00:00:21,200
+Nó chỉ truy cập vào thuộc tính này và sửa đổi giá trị của nó.
+
+6
+00:00:21,230 --> 00:00:24,170
+Với việc tìm nguồn sự kiện, chúng tôi xử lý theo cách khác.
+
+7
+00:00:24,440 --> 00:00:28,700
+Khi triển khai nguồn sự kiện, chúng tôi không sửa đổi các thuộc tính của thực thể.
+
+8
+00:00:28,730 --> 00:00:32,110
+Thay vào đó, chúng tôi theo dõi các sự kiện liên quan đến thực thể.
+
+9
+00:00:32,119 --> 00:00:37,850
+Bây giờ, bạn có thể đang gặp khó khăn trong việc hiểu khái niệm này, nhưng thực ra bạn có thể
+
+10
+00:00:37,850 --> 00:00:40,340
+hãy xem nó được triển khai ở nhiều nơi xung quanh bạn.
+
+11
+00:00:40,340 --> 00:00:43,550
+Ví dụ tốt nhất về nguồn sự kiện chính là tài khoản ngân hàng của bạn.
+
+12
+00:00:43,580 --> 00:00:45,320
+Hãy nghĩ đến sao kê tài khoản ngân hàng của bạn.
+
+13
+00:00:45,320 --> 00:00:48,440
+Có lẽ bây giờ trông nó giống thế này.
+
+14
+00:00:48,440 --> 00:00:50,540
+Đây là một ví dụ tuyệt vời về việc tìm nguồn sự kiện.
+
+15
+00:00:50,540 --> 00:00:54,830
+Lưu ý rằng bạn không thấy thực thể nào có một vài trường dữ liệu ở đây.
+
+16
+00:00:54,830 --> 00:01:01,200
+Những gì bạn thấy ở đây là danh sách các sự kiện đã xảy ra với thực thể, trong trường hợp này là tài khoản ngân hàng.
+
+17
+00:01:01,230 --> 00:01:03,570
+Lưu ý rằng bạn không nhìn thấy thực thể đó.
+
+18
+00:01:03,570 --> 00:01:06,320
+Điều duy nhất bạn thấy ở đây là các sự kiện.
+
+19
+00:01:06,330 --> 00:01:08,920
+Tài khoản ngân hàng chỉ là một ví dụ.
+
+20
+00:01:08,940 --> 00:01:13,770
+Nguồn sự kiện đang ngày càng được ưa chuộng và được triển khai trong nhiều trường hợp sử dụng.
+
+21
+00:01:13,770 --> 00:01:16,740
+Vậy ứng cử viên nào là tốt nhất để sử dụng dịch vụ tìm nguồn sự kiện?
+
+22
+00:01:16,740 --> 00:01:20,910
+Những trường hợp sử dụng nào đòi hỏi phải triển khai tôi bằng cách sử dụng nguồn sự kiện?
+
+23
+00:01:21,030 --> 00:01:24,230
+Vâng, trường hợp rõ ràng nhất là khi lịch sử có ý nghĩa.
+
+24
+00:01:24,240 --> 00:01:30,090
+Nếu bạn không chỉ quan tâm đến trạng thái thực thể của mình mà còn quan tâm đến cách thức nó đạt được trạng thái đó thì nguồn sự kiện là
+
+25
+00:01:30,090 --> 00:01:31,080
+sự phù hợp tự nhiên.
+
+26
+00:01:31,110 --> 00:01:36,870
+Sử dụng nguồn sự kiện, bạn có cái nhìn toàn diện về những gì đã xảy ra với một thực thể cụ thể từ thời điểm
+
+27
+00:01:36,870 --> 00:01:40,580
+nó đã được tạo ra và bạn có thể thu được nhiều hiểu biết từ nó.
+
+28
+00:01:40,590 --> 00:01:44,730
+Nhưng nguồn sự kiện cũng hữu ích cho các loại ứng dụng khác.
+
+29
+00:01:44,730 --> 00:01:47,850
+Hãy cùng xem xét ưu và nhược điểm của việc tìm nguồn sự kiện.
+
+30
+00:01:47,850 --> 00:01:49,770
+Đầu tiên là ưu điểm.
+
+31
+00:01:50,130 --> 00:01:51,990
+Một lần theo dõi.
+
+32
+00:01:51,990 --> 00:01:57,120
+Chúng tôi đã nói về nó bằng cách sử dụng nguồn sự kiện, bạn có thể theo dõi tất cả các sự kiện đã xảy ra với
+
+33
+00:01:57,120 --> 00:01:58,680
+thực thể khá dễ dàng.
+
+34
+00:01:58,680 --> 00:02:04,440
+Mô hình dữ liệu thứ hai Khi sử dụng nguồn sự kiện, mô hình dữ liệu của bạn trở nên cực kỳ đơn giản.
+
+35
+00:02:04,470 --> 00:02:05,130
+Không còn nữa.
+
+36
+00:02:05,130 --> 00:02:08,729
+Bạn cần thiết kế các thực thể phức tạp có mối quan hệ với các thực thể khác.
+
+37
+00:02:08,759 --> 00:02:14,670
+Tất cả những gì bạn cần làm để có được trạng thái thực thể là xem xét các sự kiện của nó và xây dựng một ad hoc
+
+38
+00:02:14,670 --> 00:02:15,570
+trạng thái của nó.
+
+39
+00:02:15,690 --> 00:02:17,640
+Buổi biểu diễn thứ ba.
+
+40
+00:02:17,640 --> 00:02:22,920
+Để thay đổi trạng thái của thực thể, tất cả những gì bạn phải làm là thêm một bản ghi nhỏ vào kho dữ liệu.
+
+41
+00:02:22,950 --> 00:02:23,790
+Vậy thôi.
+
+42
+00:02:23,820 --> 00:02:27,990
+Không cần phải cập nhật nhiều bảng hoặc áp dụng ràng buộc và khóa ngoại.
+
+43
+00:02:28,080 --> 00:02:31,080
+Chỉ cần chèn một câu lệnh đơn giản là bạn có thể bắt đầu.
+
+44
+00:02:31,200 --> 00:02:33,090
+Báo cáo lần thứ tư.
+
+45
+00:02:33,120 --> 00:02:37,650
+Nhiều báo cáo kinh doanh yêu cầu lịch sử các thực thể sử dụng nguồn sự kiện.
+
+46
+00:02:37,650 --> 00:02:39,150
+Đây thực sự là một việc dễ như ăn bánh.
+
+47
+00:02:39,180 --> 00:02:43,800
+Lịch sử đã được xây dựng trong dữ liệu và việc còn lại là lấy lại nó.
+
+48
+00:02:43,980 --> 00:02:45,990
+Được rồi, đây là những ưu điểm.
+
+49
+00:02:46,020 --> 00:02:52,110
+Bây giờ nói đến nhược điểm, nhược điểm rõ ràng nhất là không có một góc nhìn thống nhất nào về thực thể.
+
+50
+00:02:52,140 --> 00:02:54,300
+Bạn muốn xem trạng thái hiện tại của thực thể.
+
+51
+00:02:54,330 --> 00:02:57,600
+Sau đó, bạn cần trải qua các sự kiện và xây dựng trạng thái hiện tại.
+
+52
+00:02:57,630 --> 00:02:59,760
+Việc này có thể tốn thời gian và nguồn lực.
+
+53
+00:02:59,790 --> 00:03:03,350
+Ưu điểm thứ hai của việc sử dụng nguồn sự kiện là khả năng lưu trữ.
+
+54
+00:03:03,360 --> 00:03:08,280
+Nếu một thực thể có lịch sử lâu dài, các sự kiện của nó sẽ chiếm nhiều không gian lưu trữ.
+
+55
+00:03:08,280 --> 00:03:13,230
+Và khi có nhiều thực thể có lịch sử lâu đời thì điều này có thể trở thành vấn đề.
+
+56
+00:03:13,440 --> 00:03:19,650
+Vì vậy, điểm mấu chốt là không phải tất cả các ứng dụng đều nên sử dụng nguồn sự kiện, nhưng nếu bạn yêu cầu một
+
+57
+00:03:19,680 --> 00:03:25,260
+khả năng truy xuất nguồn gốc của các thực thể của bạn và bạn thiếu ý tưởng về một mô hình dữ liệu thống nhất, hãy chắc chắn xem xét
+
+58
+00:03:25,260 --> 00:03:26,370
+tại nơi cung cấp sự kiện.
+
+59
+00:03:26,640 --> 00:03:31,350
+Mẫu tiếp theo của chúng tôi bổ sung thêm nguồn sự kiện và giải quyết một số nhược điểm của nó.
+

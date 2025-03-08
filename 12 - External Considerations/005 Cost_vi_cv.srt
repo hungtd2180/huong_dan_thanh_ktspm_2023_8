@@ -1,0 +1,76 @@
+1
+00:00:00,850 --> 00:00:04,330
+Yếu tố cuối cùng chúng ta sẽ thảo luận trong phần này là yếu tố chi phí.
+
+2
+00:00:04,360 --> 00:00:10,630
+Đôi khi chúng ta sẽ thấy có một công cụ tuyệt vời có thể giải quyết chính xác vấn đề mà chúng ta gặp phải trong ứng dụng của mình.
+
+3
+00:00:10,630 --> 00:00:13,390
+Ví dụ, một trình quản lý luồng kinh doanh hiện đại sáng bóng.
+
+4
+00:00:13,390 --> 00:00:18,850
+Nhưng trước khi đưa nó vào kiến trúc, chúng ta cần xem xét một khía cạnh quan trọng là chi phí của nó.
+
+5
+00:00:18,940 --> 00:00:24,460
+Chúng ta thường thấy những công cụ tuyệt vời có sẵn miễn phí để sử dụng cho mục đích thương mại, chẳng hạn như Apache Foundation
+
+6
+00:00:24,460 --> 00:00:24,820
+công cụ.
+
+7
+00:00:24,820 --> 00:00:30,310
+Tuy nhiên, điều này có thể khiến chúng ta quên rằng vẫn còn những sản phẩm có giá rất đắt và
+
+8
+00:00:30,310 --> 00:00:33,250
+chi phí này phải được cân nhắc khi thiết kế kiến trúc của chúng tôi.
+
+9
+00:00:33,250 --> 00:00:36,430
+Ví dụ, chúng ta hãy xem lại trường hợp Trình quản lý luồng kinh doanh.
+
+10
+00:00:36,430 --> 00:00:38,160
+Về cơ bản chúng ta có hai lựa chọn.
+
+11
+00:00:38,170 --> 00:00:43,390
+Chúng ta có thể mua một cái rồi đầu tư thời gian và tiền bạc vào việc thiết lập mua hàng, đào tạo và hỗ trợ,
+
+12
+00:00:43,390 --> 00:00:45,910
+hoặc chúng tôi có thể tự phát triển một cái.
+
+13
+00:00:45,940 --> 00:00:50,770
+Nguyên tắc chung là luôn sử dụng sản phẩm hiện có thay vì phát triển sản phẩm mới.
+
+14
+00:00:50,770 --> 00:00:56,890
+Nhưng quy tắc này phải được xem xét một cách thận trọng Để xác thực sự lựa chọn sử dụng sản phẩm hiện có,
+
+15
+00:00:56,920 --> 00:01:00,910
+chúng ta phải ước tính chi phí của nó so với giá trị của nó đối với ứng dụng.
+
+16
+00:01:00,910 --> 00:01:07,930
+Nếu sản phẩm có giá 100.000 đô la một năm và có 200 tính năng, nhưng chúng ta chỉ cần năm trong số đó, thì nó
+
+17
+00:01:07,930 --> 00:01:11,050
+có thể là một ý tưởng hay khi xem xét lựa chọn phát triển nội bộ.
+
+18
+00:01:11,320 --> 00:01:16,660
+Quản lý chi phí thông minh và hiệu quả có thể tạo nên sự khác biệt giữa một dự án thành công hay thất bại.
+
+19
+00:01:16,690 --> 00:01:20,860
+Hãy luôn đảm bảo rằng bạn nắm rõ chi phí liên quan đến các quyết định về kiến trúc.
+

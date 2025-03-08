@@ -1,0 +1,152 @@
+1
+00:00:00,830 --> 00:00:03,590
+Chào mừng đến với phần Kiến trúc hệ thống.
+
+2
+00:00:03,770 --> 00:00:09,210
+Tôi xin nói rõ ngay từ đầu rằng đây là phần quan trọng nhất trong khóa học này.
+
+3
+00:00:09,230 --> 00:00:14,780
+Hầu hết công việc của một kiến trúc sư phần mềm là thiết kế kiến trúc hệ thống và bạn sẽ thấy mình
+
+4
+00:00:14,780 --> 00:00:19,760
+sử dụng các khái niệm mà chúng ta sẽ thảo luận trong phần này trong hầu hết các hệ thống mà bạn sẽ làm việc.
+
+5
+00:00:19,790 --> 00:00:25,310
+Có lẽ bây giờ bạn đã biết rằng mục tiêu chính của kiến trúc sư là thiết kế một hệ thống nhanh,
+
+6
+00:00:25,310 --> 00:00:27,260
+đáng tin cậy và dễ bảo trì.
+
+7
+00:00:27,350 --> 00:00:32,870
+Những phẩm chất này được chuyển thành một hệ thống được thiết kế bằng cách sử dụng các khái niệm mà chúng ta sẽ thảo luận trong bài này.
+
+8
+00:00:32,870 --> 00:00:33,500
+phần.
+
+9
+00:00:33,710 --> 00:00:37,910
+Nhưng trước khi đi sâu hơn, chúng ta hãy nói về ý nghĩa của kiến trúc hệ thống.
+
+10
+00:00:38,600 --> 00:00:41,630
+Chúng ta đã nói nhiều về các thành phần và kiến trúc.
+
+11
+00:00:41,660 --> 00:00:45,290
+Chúng ta đã nói về các lớp, ghi nhật ký, sự phụ thuộc, sự tiêm và nhiều thứ khác.
+
+12
+00:00:45,410 --> 00:00:50,330
+Với kiến trúc hệ thống, chúng ta có góc nhìn cao hơn và nhìn vào bức tranh toàn cảnh.
+
+13
+00:00:50,330 --> 00:00:54,620
+Và nhìn vào bức tranh toàn cảnh, chúng ta thường tự hỏi mình những câu hỏi này.
+
+14
+00:00:55,430 --> 00:00:57,890
+Hệ thống sẽ hoạt động thế nào khi chịu tải nặng?
+
+15
+00:00:58,220 --> 00:01:03,140
+Điều sẽ xảy ra là hệ thống sẽ bị sập ngay tại thời điểm này trong quy trình kinh doanh.
+
+16
+00:01:03,170 --> 00:01:07,520
+Quá trình cập nhật có thể phức tạp đến mức nào và hơn thế nữa?
+
+17
+00:01:07,730 --> 00:01:09,360
+Đây là những câu hỏi chính.
+
+18
+00:01:09,380 --> 00:01:13,250
+Tất nhiên có thể có nhiều hơn tùy thuộc vào yêu cầu cụ thể của hệ thống.
+
+19
+00:01:13,280 --> 00:01:17,630
+Câu trả lời bạn đưa ra cho những câu hỏi này sẽ khác nhau tùy theo hệ thống.
+
+20
+00:01:17,630 --> 00:01:23,000
+Ví dụ, bạn có thể quyết định rằng sự cố hệ thống có thể chấp nhận được vì dữ liệu không nhạy cảm và
+
+21
+00:01:23,000 --> 00:01:26,690
+không có nhiều người dùng nên hệ thống không nên dư thừa.
+
+22
+00:01:26,720 --> 00:01:32,840
+Mặt khác, nếu hệ thống là nhiệm vụ quan trọng và không được phép mất dữ liệu, hãy lập kế hoạch cho một đợt khôi phục lớn
+
+23
+00:01:32,840 --> 00:01:38,870
+hệ thống có nhiều hàng đợi, như bạn sẽ thấy trong các phần tiếp theo, kiến trúc hệ thống bao gồm
+
+24
+00:01:38,870 --> 00:01:40,250
+các khía cạnh sau đây.
+
+25
+00:01:41,160 --> 00:01:46,860
+Một định nghĩa về các thành phần phần mềm hoặc dịch vụ cùng nhau tạo nên hệ thống.
+
+26
+00:01:46,980 --> 00:01:51,360
+Hai là Xác định cách thức các thành phần này giao tiếp với nhau.
+
+27
+00:01:51,390 --> 00:01:57,450
+Ba Thiết kế các khả năng khác nhau của hệ thống, cụ thể là khả năng mở rộng, dự phòng, hiệu suất,
+
+28
+00:01:57,450 --> 00:01:59,010
+khả năng quản lý và nhiều hơn nữa.
+
+29
+00:02:00,450 --> 00:02:06,210
+Trong phần này chúng ta sẽ tập trung chủ yếu vào khía cạnh thứ hai và thứ ba, vì chúng ta đã đề cập đến
+
+30
+00:02:06,210 --> 00:02:08,910
+các thành phần phần mềm trong các phần trước.
+
+31
+00:02:09,210 --> 00:02:15,990
+Các chủ đề trong phần này là Loose Coupling, nói về cách làm cho các thành phần của chúng ta độc lập
+
+32
+00:02:15,990 --> 00:02:16,980
+từ nhau.
+
+33
+00:02:17,100 --> 00:02:22,920
+Không trạng thái Một mô hình cho phép các thành phần của chúng ta có thể mở rộng quy mô và làm cho toàn bộ hệ thống trở nên dư thừa.
+
+34
+00:02:23,190 --> 00:02:27,270
+Lưu trữ đệm là một kỹ thuật giúp cải thiện hiệu suất hệ thống.
+
+35
+00:02:27,510 --> 00:02:33,330
+Nhắn tin, là một cuộc thảo luận về các kỹ thuật khác nhau để truyền dữ liệu giữa các dịch vụ và
+
+36
+00:02:33,330 --> 00:02:39,960
+ưu và nhược điểm và ghi nhật ký và giám sát để đảm bảo hệ thống của chúng tôi có thể báo cáo trạng thái của nó và
+
+37
+00:02:39,960 --> 00:02:41,620
+tránh những thất bại bất ngờ.
+
+38
+00:02:41,650 --> 00:02:44,440
+Trước tiên, chúng ta hãy nói về sự liên kết lỏng lẻo.
+

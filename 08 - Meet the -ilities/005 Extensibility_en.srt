@@ -1,0 +1,132 @@
+1
+00:00:00,230 --> 00:00:04,100
+The next quality attribute we will talk about is extensibility.
+
+2
+00:00:04,340 --> 00:00:11,240
+A system that implements extensibility or an extensible system is a system that its functionality can
+
+3
+00:00:11,240 --> 00:00:14,060
+be extended without modifying its existing code.
+
+4
+00:00:14,090 --> 00:00:16,940
+Let's explain it through a real world example.
+
+5
+00:00:17,830 --> 00:00:22,300
+Let's say we have an information system that has an API to query its data.
+
+6
+00:00:22,330 --> 00:00:29,780
+The API has a specific parameter called format that specifies the exact format of the data to be returned.
+
+7
+00:00:29,800 --> 00:00:33,790
+On day one, the system supports two formats Json and XML.
+
+8
+00:00:33,820 --> 00:00:37,300
+Everyone is happy with this format and the system works perfect.
+
+9
+00:00:37,330 --> 00:00:42,660
+Then one day a new requirement is received that requires a new format to be added to the list.
+
+10
+00:00:42,670 --> 00:00:43,600
+CSV.
+
+11
+00:00:44,530 --> 00:00:50,230
+Now on a naive system, the part that made the format was created as a single class that contains a
+
+12
+00:00:50,230 --> 00:00:56,370
+switch statement that checks what is the required format and executes code accordingly in the code built
+
+13
+00:00:56,380 --> 00:00:57,070
+like that.
+
+14
+00:00:57,100 --> 00:00:59,650
+The new requirement presents a serious problem.
+
+15
+00:00:59,650 --> 00:01:05,379
+We now have to modify a core piece of code and then perform all the tests it requires in order to ensure
+
+16
+00:01:05,379 --> 00:01:06,730
+we didn't screw anything.
+
+17
+00:01:06,880 --> 00:01:10,180
+In an extensible system, the process is quite different.
+
+18
+00:01:10,210 --> 00:01:15,280
+In such a system, we do not need to modify the original code but rather to extend it.
+
+19
+00:01:15,310 --> 00:01:18,140
+Now what does it mean to extend the code?
+
+20
+00:01:18,140 --> 00:01:24,470
+By extending we mean that we that we can add new code to the application and make it work without modifying
+
+21
+00:01:24,470 --> 00:01:25,820
+the original code.
+
+22
+00:01:25,850 --> 00:01:28,460
+There are various methods for such an extension.
+
+23
+00:01:28,460 --> 00:01:31,580
+For example inheritance, plugin framework and more.
+
+24
+00:01:31,610 --> 00:01:37,130
+One of the most common patterns is using a plugin framework with a dependency injection similar to the
+
+25
+00:01:37,130 --> 00:01:38,270
+code shown now.
+
+26
+00:01:40,250 --> 00:01:47,690
+In this code, the format name, which is XML, Json, or CSV or any other future format is passed to
+
+27
+00:01:47,690 --> 00:01:48,710
+the factory method.
+
+28
+00:01:48,710 --> 00:01:49,880
+Get formatter.
+
+29
+00:01:50,330 --> 00:01:54,230
+The factory method returns an implementation of the I formatter interface.
+
+30
+00:01:54,230 --> 00:01:59,300
+Note that the calling code has no idea what is the specific implementation that was returned.
+
+31
+00:01:59,510 --> 00:02:01,400
+We will discuss more about it later.
+
+32
+00:02:01,400 --> 00:02:06,170
+But the important thing to understand about the extensibility quality attribute is that such methods
+
+33
+00:02:06,170 --> 00:02:11,000
+exist and they allow us to extend the system's functionality without modifying its code.
+

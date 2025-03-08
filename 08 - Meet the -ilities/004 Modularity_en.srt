@@ -1,0 +1,100 @@
+1
+00:00:00,290 --> 00:00:04,280
+Modularity is one of the more important quality attributes out there.
+
+2
+00:00:04,310 --> 00:00:07,760
+Making your application modular will really help you along the road.
+
+3
+00:00:07,790 --> 00:00:13,280
+It will minimize the effort needed to maintain the application and make it much more flexible for changes.
+
+4
+00:00:13,400 --> 00:00:16,100
+So what exactly is a modular system?
+
+5
+00:00:16,219 --> 00:00:22,130
+Simply speaking, a modular system is a system that is built from small, well-defined building blocks
+
+6
+00:00:22,130 --> 00:00:25,700
+that can be changed or replaced without affecting the whole system.
+
+7
+00:00:25,790 --> 00:00:31,610
+For example, let's look at a system that gets data from an API of another system and saves this data
+
+8
+00:00:31,610 --> 00:00:32,630
+in the database.
+
+9
+00:00:32,720 --> 00:00:38,360
+In a non modular system, both the functionalities of the system getting the data and saving it in the
+
+10
+00:00:38,360 --> 00:00:41,060
+database are performed in a single component.
+
+11
+00:00:41,090 --> 00:00:44,630
+This is an easier choice, but also the worst one.
+
+12
+00:00:44,660 --> 00:00:49,670
+Let's assume the external system is replaced by a new system as a result of this replacement.
+
+13
+00:00:49,670 --> 00:00:56,390
+The API is now different and the application code that accesses it should be rewritten in a non modular
+
+14
+00:00:56,390 --> 00:00:56,760
+system.
+
+15
+00:00:56,780 --> 00:01:02,340
+This change affects the whole application since the application is composed of only a single component.
+
+16
+00:01:02,370 --> 00:01:05,900
+We now need to test all of it and deploy it all over again.
+
+17
+00:01:05,910 --> 00:01:11,250
+We have to think of this small change as if it means we are deploying the system for the first time.
+
+18
+00:01:11,250 --> 00:01:12,390
+We don't have a choice.
+
+19
+00:01:12,390 --> 00:01:14,310
+All of the application is affected.
+
+20
+00:01:14,340 --> 00:01:20,490
+On the other hand, if the application is modular, the code that accesses the API is encapsulated in
+
+21
+00:01:20,490 --> 00:01:22,200
+a small independent component.
+
+22
+00:01:22,350 --> 00:01:27,570
+If the API on the other system is changed, only this specific component should be changed, leaving
+
+23
+00:01:27,570 --> 00:01:29,250
+the rest of the system intact.
+
+24
+00:01:29,850 --> 00:01:35,490
+As you can see, this results in a much more flexible and maintainable system that allows for short
+
+25
+00:01:35,490 --> 00:01:39,900
+deployment cycles and saves a lot of time when adding or updating components.
+

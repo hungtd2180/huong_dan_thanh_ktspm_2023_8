@@ -1,0 +1,48 @@
+1
+00:00:00,360 --> 00:00:03,660
+Well, I guess you can guess what this type is all about.
+
+2
+00:00:03,690 --> 00:00:04,740
+Mobile apps.
+
+3
+00:00:04,770 --> 00:00:10,560
+As their name suggests, are apps that run on mobile phones, specifically smartphones, probably Android
+
+4
+00:00:10,560 --> 00:00:12,060
+powered or iPhones.
+
+5
+00:00:12,570 --> 00:00:18,570
+Modern mobile apps connect with web APIs all the time for multiple purposes Logging, loading next levels,
+
+6
+00:00:18,570 --> 00:00:21,630
+storing user generated content, and much more.
+
+7
+00:00:21,930 --> 00:00:26,670
+Actually, there are not a lot of mobile apps, perhaps only games that can function properly without
+
+8
+00:00:26,670 --> 00:00:27,840
+internet connectivity.
+
+9
+00:00:28,470 --> 00:00:34,590
+Mobile apps will be used mainly for apps that require user interaction, for example, games or social
+
+10
+00:00:34,590 --> 00:00:35,130
+apps.
+
+11
+00:00:35,280 --> 00:00:39,510
+Front end for web API application for displaying various types of content.
+
+12
+00:00:39,510 --> 00:00:45,690
+For example, news and apps that are location sensitive and will benefit from the phone's GPS.
+

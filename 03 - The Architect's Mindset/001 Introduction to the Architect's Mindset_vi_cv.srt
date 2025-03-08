@@ -1,0 +1,44 @@
+1
+00:00:00,200 --> 00:00:04,220
+Chào mừng bạn đến với phần thứ ba của khóa học này, Tư duy của kiến trúc sư.
+
+2
+00:00:04,580 --> 00:00:09,440
+Trong phần này, chúng ta sẽ thảo luận về một trong những khía cạnh quan trọng nhất của việc trở thành một kiến trúc sư, đó là
+
+3
+00:00:09,440 --> 00:00:11,030
+tư duy của kiến trúc sư.
+
+4
+00:00:11,540 --> 00:00:16,790
+Nếu công việc hiện tại của bạn là công việc kỹ thuật, chẳng hạn như nhà phát triển hoặc trưởng nhóm, thì có lẽ bạn là
+
+5
+00:00:16,790 --> 00:00:20,630
+suy nghĩ về công việc bạn làm từ góc độ lập trình và phát triển.
+
+6
+00:00:20,660 --> 00:00:26,180
+Nhưng như bạn sẽ thấy trong phần này, đây không phải lúc nào cũng là quan điểm phù hợp nhất đối với một kiến trúc sư.
+
+7
+00:00:26,480 --> 00:00:31,370
+Kiến trúc sư thường phải đưa ra quyết định dựa trên các yếu tố khác đôi khi xa lạ với một
+
+8
+00:00:31,370 --> 00:00:32,049
+nhà phát triển.
+
+9
+00:00:32,060 --> 00:00:37,400
+Nhưng để trở thành một kiến trúc sư thực sự giỏi, bạn phải thích nghi với quan điểm mới, đó là
+
+10
+00:00:37,400 --> 00:00:39,880
+sẽ giúp bạn trở thành tài sản thực sự của tổ chức.
+
+11
+00:00:39,890 --> 00:00:42,200
+Vậy chúng ta hãy nói về tư duy mới này.
+

@@ -1,0 +1,156 @@
+1
+00:00:00,380 --> 00:00:06,140
+Khả năng mở rộng là khả năng của ứng dụng hỗ trợ việc thêm tài nguyên điện toán để hỗ trợ
+
+2
+00:00:06,140 --> 00:00:10,410
+tải bổ sung mà không làm gián đoạn hoạt động của ứng dụng.
+
+3
+00:00:10,430 --> 00:00:16,160
+Nói cách khác đơn giản hơn, giả sử một ứng dụng thương mại điện tử được triển khai trên máy ảo.
+
+4
+00:00:16,160 --> 00:00:19,910
+Mọi thứ đều hoạt động tốt và ứng dụng chạy rất mượt.
+
+5
+00:00:19,910 --> 00:00:22,370
+Và rồi Thứ Sáu Đen Tối cũng đến.
+
+6
+00:00:22,400 --> 00:00:27,920
+Một cú đánh lớn được dự đoán và CIO tin rằng máy ảo hiện tại sẽ không thể hỗ trợ
+
+7
+00:00:27,920 --> 00:00:28,940
+tải trọng dự kiến.
+
+8
+00:00:29,420 --> 00:00:33,590
+Trong các hệ thống không hỗ trợ khả năng mở rộng, những điều sau đây sẽ xảy ra.
+
+9
+00:00:34,040 --> 00:00:39,650
+Mã của ứng dụng sẽ được kiểm tra để tìm các đoạn mã không hỗ trợ tải mong đợi.
+
+10
+00:00:39,800 --> 00:00:45,830
+Có lẽ một số đoạn mã sẽ phải được viết lại và VM sẽ được củng cố.
+
+11
+00:00:45,830 --> 00:00:48,230
+Nhiều CPU và nhiều bộ nhớ hơn.
+
+12
+00:00:48,350 --> 00:00:54,110
+Như bạn có thể đoán, đây là một quá trình dài, phức tạp và không bao giờ đủ nhanh để phản hồi thực tế.
+
+13
+00:00:54,110 --> 00:00:54,920
+thách thức.
+
+14
+00:00:55,070 --> 00:01:01,830
+Mặt khác, trong các hệ thống hỗ trợ khả năng mở rộng, quá trình này đơn giản và nhanh hơn nhiều.
+
+15
+00:01:02,340 --> 00:01:09,630
+Thêm một máy ảo khác, thông báo cho bộ cân bằng tải về máy ảo mới và thế là xong.
+
+16
+00:01:10,260 --> 00:01:13,260
+Như bạn thấy, không có thay đổi nào được thực hiện đối với mã.
+
+17
+00:01:13,440 --> 00:01:17,520
+Điều quan trọng là phải nhận thấy sự khác biệt giữa hai loại khả năng mở rộng.
+
+18
+00:01:17,850 --> 00:01:23,150
+Trong trường hợp đầu tiên, chúng tôi lấy một VM hiện có và thêm sức mạnh CPU và bộ nhớ vào đó.
+
+19
+00:01:23,160 --> 00:01:25,470
+Đây được gọi là mở rộng quy mô.
+
+20
+00:01:25,980 --> 00:01:31,680
+Trong trường hợp thứ hai, chúng tôi chỉ thêm các VM mới và không động đến bất kỳ VM hiện có nào.
+
+21
+00:01:31,680 --> 00:01:33,600
+Đây được gọi là mở rộng quy mô.
+
+22
+00:01:33,630 --> 00:01:34,410
+Hiện nay.
+
+23
+00:01:34,410 --> 00:01:37,170
+Chúng tôi luôn ưu tiên mở rộng quy mô hơn là mở rộng quy mô.
+
+24
+00:01:37,170 --> 00:01:38,250
+Và tại sao lại như vậy?
+
+25
+00:01:38,280 --> 00:01:40,740
+Bởi vì hai lý do rất quan trọng.
+
+26
+00:01:40,890 --> 00:01:42,840
+Một sự dư thừa.
+
+27
+00:01:42,870 --> 00:01:47,700
+Càng có nhiều VM, chúng ta càng được bảo vệ tốt hơn trước tình trạng VM bị sập.
+
+28
+00:01:47,790 --> 00:01:52,980
+Nếu bạn có một VM duy nhất, rất mạnh, ứng dụng vẫn sẽ không hoạt động nếu VM duy nhất này
+
+29
+00:01:52,980 --> 00:01:54,420
+máy chủ sẽ bị sập.
+
+30
+00:01:54,550 --> 00:02:01,050
+Hai Có giới hạn về CPU và bộ nhớ mà chúng ta có thể thêm vào máy chủ nếu ứng dụng sử dụng một lượng lớn
+
+31
+00:02:01,050 --> 00:02:04,580
+lượng bộ nhớ, chúng ta sẽ đạt đến giới hạn này ở đâu đó trên đường đi.
+
+32
+00:02:04,590 --> 00:02:09,720
+Mặt khác, về cơ bản không có giới hạn nào về số lượng VM mà chúng ta có thể thêm vào bộ cân bằng tải.
+
+33
+00:02:09,750 --> 00:02:13,080
+do đó làm cho ứng dụng phát triển vô hạn.
+
+34
+00:02:13,860 --> 00:02:15,750
+Vì vậy, kết luận ở đây rất rõ ràng.
+
+35
+00:02:15,780 --> 00:02:18,690
+Luôn lựa chọn mở rộng ứng dụng của bạn.
+
+36
+00:02:18,990 --> 00:02:24,450
+Lưu ý rằng kịch bản mở rộng bao gồm bộ cân bằng tải, không phải là một phần của kịch bản mở rộng.
+
+37
+00:02:24,480 --> 00:02:29,230
+Scale Out luôn sử dụng bộ cân bằng tải để phân phối tải giữa các VM.
+
+38
+00:02:29,250 --> 00:02:34,530
+Một trong những mô hình kiến trúc chính để hỗ trợ kịch bản mở rộng quy mô là không có trạng thái và chúng ta sẽ thảo luận
+
+39
+00:02:34,530 --> 00:02:35,940
+sẽ được đề cập ở phần sau của khóa học này.
+

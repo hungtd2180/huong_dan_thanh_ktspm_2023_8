@@ -1,0 +1,152 @@
+1
+00:00:00,830 --> 00:00:03,590
+Welcome to the System architecture section.
+
+2
+00:00:03,770 --> 00:00:09,210
+Let me be clear right from the start, this is the most important section in this course.
+
+3
+00:00:09,230 --> 00:00:14,780
+Most of the work of a software architect is designing the system architecture and you will find yourself
+
+4
+00:00:14,780 --> 00:00:19,760
+using the concepts we will discuss in this section in almost all the systems you will work on.
+
+5
+00:00:19,790 --> 00:00:25,310
+You probably already know by now that the main goal of the architect is to design a system that is fast,
+
+6
+00:00:25,310 --> 00:00:27,260
+reliable and easy to maintain.
+
+7
+00:00:27,350 --> 00:00:32,870
+These qualities are translated to a system that is designed using the concepts we will discuss in this
+
+8
+00:00:32,870 --> 00:00:33,500
+section.
+
+9
+00:00:33,710 --> 00:00:37,910
+But before diving in, let's talk about the meaning of system architecture.
+
+10
+00:00:38,600 --> 00:00:41,630
+We already talked a lot about components, architecture.
+
+11
+00:00:41,660 --> 00:00:45,290
+We talked about layers, logging, dependency, injection and more.
+
+12
+00:00:45,410 --> 00:00:50,330
+With system architecture, we take a higher point of view and we look at the big picture.
+
+13
+00:00:50,330 --> 00:00:54,620
+And in the big picture, we usually ask ourselves these questions.
+
+14
+00:00:55,430 --> 00:00:57,890
+How will the system work under heavy load?
+
+15
+00:00:58,220 --> 00:01:03,140
+What will happen is the system will crash at this exact moment in the business flow.
+
+16
+00:01:03,170 --> 00:01:07,520
+How complicated can be the update process and more?
+
+17
+00:01:07,730 --> 00:01:09,360
+These are the main questions.
+
+18
+00:01:09,380 --> 00:01:13,250
+Of course there could be more depending on the specific requirements of the system.
+
+19
+00:01:13,280 --> 00:01:17,630
+Now, the answers you will give to these questions will vary depending on the system.
+
+20
+00:01:17,630 --> 00:01:23,000
+For example, you might decide that a system crash is tolerable since the data is not sensitive and
+
+21
+00:01:23,000 --> 00:01:26,690
+there are not many users and so the system should not be redundant.
+
+22
+00:01:26,720 --> 00:01:32,840
+On the other hand, if the system is mission critical and no data should be ever lost, plan for a massive
+
+23
+00:01:32,840 --> 00:01:38,870
+system with a lot of queues, as you will see in the next sections, the system architecture includes
+
+24
+00:01:38,870 --> 00:01:40,250
+the following aspects.
+
+25
+00:01:41,160 --> 00:01:46,860
+One defining the software components or services that together compose the system.
+
+26
+00:01:46,980 --> 00:01:51,360
+Two Defining the way these components communicate with each other.
+
+27
+00:01:51,390 --> 00:01:57,450
+Three Designing the various capabilities of the system, namely scalability, redundancy, performance,
+
+28
+00:01:57,450 --> 00:01:59,010
+manageability and more.
+
+29
+00:02:00,450 --> 00:02:06,210
+In this section we will focus mainly on the second and third aspects, since we've already covered the
+
+30
+00:02:06,210 --> 00:02:08,910
+software components themselves in previous sections.
+
+31
+00:02:09,210 --> 00:02:15,990
+The topics in this section are Loose Coupling, which talks about the way to make our components independent
+
+32
+00:02:15,990 --> 00:02:16,980
+from each other.
+
+33
+00:02:17,100 --> 00:02:22,920
+Stateless A pattern that allows our components to scale and make the whole system redundant.
+
+34
+00:02:23,190 --> 00:02:27,270
+Caching a technique that helps improve the system performance.
+
+35
+00:02:27,510 --> 00:02:33,330
+Messaging, which is a discussion about various techniques for passing data between services and their
+
+36
+00:02:33,330 --> 00:02:39,960
+pros and cons and logging and monitoring to make sure our system will be able to report its status and
+
+37
+00:02:39,960 --> 00:02:41,620
+avoid surprising failures.
+
+38
+00:02:41,650 --> 00:02:44,440
+So first, let's talk about loose coupling.
+

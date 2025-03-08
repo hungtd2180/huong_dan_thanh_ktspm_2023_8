@@ -1,0 +1,524 @@
+1
+00:00:01,190 --> 00:00:06,860
+Lưu trữ đệm là một trong những mô hình kiến trúc được sử dụng nhiều nhất trong phần mềm, nhưng không phải lúc nào cũng được sử dụng đúng cách.
+
+2
+00:00:07,010 --> 00:00:09,980
+Trước tiên, chúng ta hãy giải thích khái niệm cơ bản về bộ nhớ đệm.
+
+3
+00:00:10,010 --> 00:00:15,710
+Khi sử dụng bộ nhớ đệm, chúng ta đưa dữ liệu đến gần người dùng hơn để việc truy xuất dữ liệu diễn ra nhanh hơn.
+
+4
+00:00:16,010 --> 00:00:17,780
+Hãy cùng xem một số ví dụ.
+
+5
+00:00:18,110 --> 00:00:20,630
+Tất cả các trình duyệt web hiện đại đều có bộ nhớ đệm.
+
+6
+00:00:20,660 --> 00:00:26,330
+Vai trò của bộ nhớ đệm trong trình duyệt web rất đơn giản khi duyệt một trang web cụ thể, thay vì yêu cầu
+
+7
+00:00:26,330 --> 00:00:32,119
+một máy chủ từ xa để phục vụ trang, nó được lấy từ bộ nhớ của trình duyệt, do đó hiển thị
+
+8
+00:00:32,119 --> 00:00:33,530
+trang nhanh hơn nhiều.
+
+9
+00:00:33,740 --> 00:00:39,560
+Các nhà phát triển có thể vô hiệu hóa bộ nhớ đệm để đảm bảo trang hiển thị luôn được cập nhật và chứa
+
+10
+00:00:39,560 --> 00:00:40,730
+dữ liệu có liên quan.
+
+11
+00:00:41,090 --> 00:00:45,140
+Hãy cùng xem một ví dụ khác có liên quan hơn đến chúng ta, những kiến trúc sư.
+
+12
+00:00:45,350 --> 00:00:47,840
+Một dịch vụ cần dữ liệu từ kho dữ liệu.
+
+13
+00:00:47,870 --> 00:00:51,830
+Giả sử kho dữ liệu là một cơ sở dữ liệu quan hệ như SQL Server.
+
+14
+00:00:52,160 --> 00:00:59,000
+Tất nhiên, dịch vụ này có mã trong lớp truy cập dữ liệu để truy cập cơ sở dữ liệu và phát hành các câu lệnh SQL
+
+15
+00:00:59,000 --> 00:01:00,390
+để lấy lại dữ liệu.
+
+16
+00:01:00,660 --> 00:01:02,870
+Hoạt động truy xuất có thể mất một thời gian.
+
+17
+00:01:02,880 --> 00:01:07,020
+Cơ sở dữ liệu phải biên dịch câu lệnh SQL, truy xuất dữ liệu.
+
+18
+00:01:07,050 --> 00:01:10,710
+Sau đó, mã sẽ cần phải tuần tự hóa dữ liệu thành các đối tượng.
+
+19
+00:01:10,740 --> 00:01:12,270
+Mã có thể hoạt động với.
+
+20
+00:01:12,300 --> 00:01:14,340
+Tất cả những điều này có thể mất thời gian.
+
+21
+00:01:14,460 --> 00:01:20,460
+Thêm vào đó là thực tế là cơ sở dữ liệu có thể được đặt ở vị trí vật lý xa mã và chúng ta có
+
+22
+00:01:20,460 --> 00:01:22,050
+một quá trình không hiệu quả.
+
+23
+00:01:22,380 --> 00:01:25,170
+Để tránh sự chậm trễ này, chúng ta có thể sử dụng bộ nhớ đệm.
+
+24
+00:01:25,530 --> 00:01:31,200
+Bộ nhớ đệm là một lớp khác thường nằm giữa kho dữ liệu và lớp logic nghiệp vụ lưu trữ
+
+25
+00:01:31,200 --> 00:01:34,620
+dữ liệu theo cách giúp việc truy xuất trở nên dễ dàng và nhanh chóng.
+
+26
+00:01:34,770 --> 00:01:39,810
+Công cụ lưu trữ đệm thường lưu trữ dữ liệu trong bộ nhớ, do đó việc truy xuất dữ liệu cực kỳ nhanh chóng.
+
+27
+00:01:39,840 --> 00:01:46,440
+Một số công cụ, chẳng hạn như Redis, lưu dữ liệu vào đĩa theo định kỳ, nhưng vẫn truy xuất dữ liệu
+
+28
+00:01:46,440 --> 00:01:48,240
+được thực hiện dựa trên bộ nhớ lưu trữ.
+
+29
+00:01:48,690 --> 00:01:52,830
+Công cụ lưu trữ đệm cung cấp một số ưu điểm khi so sánh với cơ sở dữ liệu truyền thống.
+
+30
+00:01:52,860 --> 00:01:55,650
+Bảng sau đây tóm tắt sự đánh đổi này.
+
+31
+00:01:55,680 --> 00:02:00,010
+Như bạn có thể thấy, bộ nhớ đệm đánh đổi độ tin cậy để lấy hiệu suất.
+
+32
+00:02:00,030 --> 00:02:04,890
+Dữ liệu được lưu trữ trong bộ nhớ dễ bị mất hơn và sẽ bị mất trong trường hợp máy chủ gặp sự cố.
+
+33
+00:02:04,920 --> 00:02:11,100
+Mặt khác, nó có hiệu suất cao hơn so với cơ sở dữ liệu truyền thống vì cơ sở dữ liệu thường
+
+34
+00:02:11,100 --> 00:02:12,630
+lưu trữ dữ liệu trong đĩa.
+
+35
+00:02:12,660 --> 00:02:19,560
+Chúng tôi hầu như luôn coi chúng là nguồn duy nhất của sự thật, nghĩa là dữ liệu gốc thực sự là
+
+36
+00:02:19,560 --> 00:02:20,520
+được lưu trữ trong cơ sở dữ liệu.
+
+37
+00:02:20,520 --> 00:02:25,230
+Và nếu dữ liệu bị thiếu trong bộ nhớ đệm, chúng tôi sẽ quay lại cơ sở dữ liệu để lấy lại.
+
+38
+00:02:25,440 --> 00:02:31,440
+Bây giờ, với tư cách là kiến trúc sư, chúng ta phải có khả năng xác định khi nào và làm thế nào để sử dụng bộ nhớ đệm trong hệ thống của mình.
+
+39
+00:02:31,440 --> 00:02:36,360
+Và để làm được điều đó, trước tiên chúng ta hãy xác định loại dữ liệu mà chúng ta muốn lưu vào bộ nhớ đệm.
+
+40
+00:02:36,600 --> 00:02:38,790
+Nguyên tắc chung là như thế này.
+
+41
+00:02:38,820 --> 00:02:43,890
+Bộ nhớ đệm nên lưu trữ dữ liệu được truy cập thường xuyên và ít khi sửa đổi.
+
+42
+00:02:44,010 --> 00:02:46,530
+Lý do đằng sau quy tắc này rất đơn giản.
+
+43
+00:02:46,860 --> 00:02:52,290
+Nếu dữ liệu được truy cập thường xuyên, chúng tôi muốn làm cho nó nhanh chóng và dễ dàng để truy xuất để người dùng
+
+44
+00:02:52,290 --> 00:02:56,250
+trải nghiệm sẽ được tối ưu hóa và hệ thống sẽ chịu ít tải nhất.
+
+45
+00:02:56,250 --> 00:02:59,610
+Bằng cách đặt dữ liệu vào bộ nhớ đệm, chúng ta sẽ có được dữ liệu đó.
+
+46
+00:02:59,640 --> 00:03:05,700
+Quá trình truy xuất rất nhẹ vì dữ liệu nằm trong bộ nhớ và không cần thao tác io.
+
+47
+00:03:05,700 --> 00:03:10,470
+Và kết quả là nó cũng rất nhanh, giúp tối ưu hóa trải nghiệm của người dùng.
+
+48
+00:03:10,800 --> 00:03:14,370
+Mặt khác, dữ liệu hiếm khi cần phải được sửa đổi.
+
+49
+00:03:14,400 --> 00:03:16,110
+Lý do cho điều đó là như thế này.
+
+50
+00:03:16,140 --> 00:03:22,170
+Một trong những thách thức lớn nhất với bộ nhớ đệm là giữ cho nó đồng bộ với kho dữ liệu, đó là kho dữ liệu duy nhất của chúng tôi.
+
+51
+00:03:22,170 --> 00:03:23,130
+nguồn gốc của sự thật.
+
+52
+00:03:23,160 --> 00:03:28,860
+Nếu kho dữ liệu và bộ nhớ đệm không được đồng bộ hóa và chứa dữ liệu khác nhau, điều này có thể dẫn đến dữ liệu
+
+53
+00:03:28,860 --> 00:03:31,080
+sự hỏng hóc và trải nghiệm người dùng kém.
+
+54
+00:03:31,200 --> 00:03:33,570
+Một lần nữa, chúng ta hãy xem một ví dụ.
+
+55
+00:03:33,690 --> 00:03:39,360
+Ứng dụng của chúng tôi lấy dữ liệu báo giá cổ phiếu và hiển thị cho người dùng để thực hiện mọi việc nhanh chóng.
+
+56
+00:03:39,390 --> 00:03:41,320
+Dữ liệu được lưu trữ trong bộ nhớ đệm.
+
+57
+00:03:41,340 --> 00:03:45,030
+Hiện nay, dữ liệu của Stokes thay đổi khá thường xuyên.
+
+58
+00:03:45,060 --> 00:03:47,430
+Giả sử dữ liệu thay đổi mỗi giây.
+
+59
+00:03:47,460 --> 00:03:52,380
+Hầu hết người dùng làm việc với dữ liệu báo giá cổ phiếu ngay trước mắt họ để họ có thể nhìn thấy các con số
+
+60
+00:03:52,380 --> 00:03:53,580
+thay đổi theo thời gian thực.
+
+61
+00:03:53,700 --> 00:03:57,360
+Điều này tuân thủ phần truy cập thường xuyên trong quy tắc của chúng tôi.
+
+62
+00:03:57,390 --> 00:04:01,890
+Bây giờ điều gì xảy ra khi dữ liệu thay đổi, điều này xảy ra mỗi giây, bạn còn nhớ không?
+
+63
+00:04:02,070 --> 00:04:06,900
+Giả sử hệ thống tuân thủ theo mô hình kiến trúc mà chúng ta đã thảo luận trước đó, điều đó có nghĩa là
+
+64
+00:04:06,900 --> 00:04:10,070
+chúng tôi có ba máy chủ với bộ cân bằng tải ở phía trước.
+
+65
+00:04:10,110 --> 00:04:13,260
+Lưu ý rằng mỗi máy chủ đều có bộ nhớ đệm riêng.
+
+66
+00:04:13,680 --> 00:04:20,250
+Giả sử các máy chủ đưa API ra để cập nhật giá cổ phiếu và có lệnh gọi API mới đến và
+
+67
+00:04:20,250 --> 00:04:23,580
+bộ cân bằng tải quyết định định tuyến nó đến máy chủ số một.
+
+68
+00:04:23,670 --> 00:04:29,460
+Nó lấy dữ liệu, cập nhật cơ sở dữ liệu trung tâm và cũng cập nhật bộ nhớ đệm của riêng nó.
+
+69
+00:04:29,460 --> 00:04:31,230
+Và đây là một vấn đề.
+
+70
+00:04:31,840 --> 00:04:34,990
+Zarkesh trên các máy chủ khác chứa dữ liệu cũ.
+
+71
+00:04:35,020 --> 00:04:37,510
+Đó là dữ liệu không liên quan.
+
+72
+00:04:37,540 --> 00:04:41,350
+Các bộ nhớ đệm khác không được cập nhật do lệnh gọi API.
+
+73
+00:04:41,350 --> 00:04:45,730
+Vì vậy, hiện tại có hai máy chủ lưu trữ dữ liệu không được cập nhật và không liên quan.
+
+74
+00:04:45,730 --> 00:04:50,770
+Và khi người dùng yêu cầu báo giá cổ phiếu và bộ cân bằng tải sẽ định tuyến yêu cầu đến một
+
+75
+00:04:50,770 --> 00:04:55,440
+trong số các máy chủ này, người dùng sẽ được cung cấp dữ liệu sai, điều này rất tệ.
+
+76
+00:04:55,480 --> 00:04:56,860
+Vậy có thể làm gì?
+
+77
+00:04:57,790 --> 00:04:59,580
+Để hiểu các giải pháp khác nhau?
+
+78
+00:04:59,590 --> 00:05:01,910
+Chúng ta hãy phân loại các loại bộ nhớ đệm khác nhau.
+
+79
+00:05:01,930 --> 00:05:09,730
+Nhìn chung, chúng ta có thể nói có hai loại bộ nhớ đệm trong bộ nhớ, bộ nhớ đệm trong quy trình và bộ nhớ đệm phân tán
+
+80
+00:05:10,720 --> 00:05:11,530
+trong trí nhớ.
+
+81
+00:05:11,530 --> 00:05:15,370
+Đang tiến hành triển khai bộ nhớ đệm, đây là một phần của mã dịch vụ.
+
+82
+00:05:15,400 --> 00:05:20,490
+Nó sử dụng bộ nhớ dịch vụ và được thực thi như một phần của quy trình dịch vụ.
+
+83
+00:05:20,500 --> 00:05:25,780
+Hầu như tất cả các ngôn ngữ phát triển đều có thư viện cho bộ nhớ đệm trong bộ nhớ, trong quá trình xử lý và thực sự cho
+
+84
+00:05:25,780 --> 00:05:31,390
+triển khai đơn giản, bạn có thể sử dụng bộ sưu tập đồng thời tĩnh và gọi đó là một ngày như bạn có thể
+
+85
+00:05:31,490 --> 00:05:37,220
+đoán, trong bộ nhớ cache có hiệu suất vượt trội, vì việc truy cập nó đơn giản như gọi một lớp trong
+
+86
+00:05:37,220 --> 00:05:39,870
+mã lấy dữ liệu từ bộ nhớ tiến trình.
+
+87
+00:05:39,890 --> 00:05:45,950
+Mặt khác, nó bị giới hạn về kích thước vì nó có thể chứa dữ liệu lớn như bộ nhớ xử lý.
+
+88
+00:05:45,950 --> 00:05:47,660
+thường là vài gigabyte.
+
+89
+00:05:47,900 --> 00:05:50,690
+Bộ nhớ đệm phân tán là một khái niệm hoàn toàn khác.
+
+90
+00:05:50,720 --> 00:05:56,930
+Đây là một sản phẩm riêng biệt lưu trữ dữ liệu bộ nhớ đệm trong một quy trình riêng biệt và cung cấp giao diện dễ dàng
+
+91
+00:05:56,930 --> 00:05:58,340
+để truy cập dữ liệu.
+
+92
+00:05:58,670 --> 00:06:02,930
+Điểm tốt nhất của bộ nhớ đệm phân tán là nó được phân bổ tốt.
+
+93
+00:06:02,960 --> 00:06:08,540
+Điều đó có nghĩa là bộ nhớ đệm được phân phối trên các máy chủ và điều đó cung cấp bộ nhớ đệm được phân phối
+
+94
+00:06:08,540 --> 00:06:10,840
+khả năng lưu trữ dữ liệu rất lớn.
+
+95
+00:06:10,850 --> 00:06:16,460
+Trên thực tế, kích thước bộ nhớ đệm chỉ bị giới hạn bởi tổng kích thước bộ nhớ của tất cả các máy chủ.
+
+96
+00:06:16,460 --> 00:06:22,490
+Bộ nhớ đệm phân tán được cài đặt trên các công cụ bộ nhớ đệm phân tán thường được cài đặt dưới dạng dịch vụ trên
+
+97
+00:06:22,490 --> 00:06:26,270
+các máy chủ mà chúng đang hoạt động và mỗi dịch vụ được gọi là Node.
+
+98
+00:06:26,300 --> 00:06:31,670
+Điều tuyệt vời với các công cụ bộ nhớ đệm phân tán là các nút được đồng bộ hóa nội bộ và đó là
+
+99
+00:06:31,670 --> 00:06:36,630
+trách nhiệm của cơ chế bộ nhớ đệm là đảm bảo tất cả các nút đều quen thuộc với dữ liệu mới.
+
+100
+00:06:36,650 --> 00:06:42,080
+Vì vậy, trong trường hợp này, khi một máy chủ cụ thể cập nhật bộ nhớ đệm, nó sẽ được phân phối ngay lập tức đến máy chủ khác.
+
+101
+00:06:42,080 --> 00:06:46,370
+các nút, cho phép tất cả các máy chủ khác được đồng bộ hóa và có cùng dữ liệu.
+
+102
+00:06:47,060 --> 00:06:50,030
+Vậy nhược điểm của bộ nhớ đệm phân tán là gì?
+
+103
+00:06:50,060 --> 00:06:52,370
+Câu trả lời là hiệu suất.
+
+104
+00:06:52,400 --> 00:06:57,980
+Trong khi với bộ nhớ đệm trong quá trình xử lý, hiệu suất cực nhanh vì bộ nhớ đệm thực thi trong
+
+105
+00:06:57,980 --> 00:07:01,760
+cùng một quy trình và sử dụng cùng một mã với bộ nhớ đệm phân tán.
+
+106
+00:07:01,760 --> 00:07:03,190
+Chúng ta không có lợi thế này.
+
+107
+00:07:03,200 --> 00:07:08,990
+Bộ nhớ đệm chạy trên một quy trình khác và đôi khi nó thậm chí chạy trên các máy chủ khác nhau, điều này làm tăng thêm mạng
+
+108
+00:07:08,990 --> 00:07:10,560
+nhảy đến quá trình truy xuất.
+
+109
+00:07:10,580 --> 00:07:16,670
+Ngoài ra, hầu hết các công cụ bộ nhớ đệm phân tán chỉ cho phép lưu trữ các kiểu dữ liệu nguyên thủy, chuỗi, số,
+
+110
+00:07:16,670 --> 00:07:20,600
+v.v., trong khi bộ nhớ đệm trong tiến trình có thể lưu trữ bất cứ thứ gì.
+
+111
+00:07:20,630 --> 00:07:26,330
+Điều này giúp chúng ta tăng thêm hiệu suất vì không cần phải tuần tự hóa và hủy tuần tự hóa dữ liệu.
+
+112
+00:07:26,720 --> 00:07:29,540
+Và bây giờ chúng ta hãy quay lại bộ nhớ cache quy tắc của mình.
+
+113
+00:07:29,540 --> 00:07:33,350
+Nên lưu trữ dữ liệu được truy cập thường xuyên và ít khi sửa đổi.
+
+114
+00:07:33,350 --> 00:07:37,580
+Và chúng tôi rời đi giữa cuộc thảo luận hiếm khi có thay đổi gì.
+
+115
+00:07:37,580 --> 00:07:43,940
+Nếu dữ liệu thường xuyên được sửa đổi, như trường hợp báo giá cổ phiếu và chúng tôi đang sử dụng trong bộ nhớ trong quá trình
+
+116
+00:07:43,940 --> 00:07:49,370
+bộ nhớ đệm, chúng ta sẽ phải phát triển một số cơ chế để đồng bộ hóa giữa dữ liệu trong cơ sở dữ liệu và từng bộ nhớ đệm.
+
+117
+00:07:49,370 --> 00:07:50,740
+mọi bộ nhớ đệm trong bộ nhớ.
+
+118
+00:07:50,750 --> 00:07:54,380
+Cơ chế này sẽ liên tục tấn công cơ sở dữ liệu và chúng ta sẽ thua.
+
+119
+00:07:54,380 --> 00:07:58,370
+Một trong những ưu điểm của bộ nhớ đệm là giảm tải cho hệ thống.
+
+120
+00:07:58,550 --> 00:08:03,650
+Mặt khác, nếu chúng ta sử dụng bộ nhớ đệm phân tán, có lẽ mọi việc sẽ ổn.
+
+121
+00:08:03,680 --> 00:08:09,470
+Dữ liệu cập nhật sẽ được đồng bộ ngay lập tức giữa tất cả các nút và máy chủ sẽ truy cập dữ liệu mới.
+
+122
+00:08:09,920 --> 00:08:13,820
+Vì vậy, chúng tôi đã khám phá bộ nhớ đệm trong tiến trình so với bộ nhớ đệm phân tán.
+
+123
+00:08:13,850 --> 00:08:19,070
+Chúng ta hãy tóm tắt tất cả trong bảng sau, bảng này sẽ giúp bạn quyết định loại bộ nhớ đệm nào bạn cần
+
+124
+00:08:19,070 --> 00:08:19,700
+để sử dụng.
+
+125
+00:08:19,850 --> 00:08:27,320
+Vì vậy, hãy sử dụng bộ nhớ đệm phân tán nếu bạn cần phân phối giữa các máy chủ, khả năng chuyển đổi dự phòng và bộ nhớ đệm lớn
+
+126
+00:08:27,320 --> 00:08:33,530
+lưu trữ và sử dụng bộ nhớ đệm trong tiến trình nếu bạn cần hiệu suất tốt nhất có thể.
+
+127
+00:08:33,530 --> 00:08:35,630
+Và lưu trữ các đối tượng phức tạp.
+
+128
+00:08:35,720 --> 00:08:41,419
+Ngoài ra, việc sử dụng bộ nhớ đệm phân tán đòi hỏi một số đào tạo và thiết lập, trong khi trong bộ nhớ, trong quá trình
+
+129
+00:08:41,419 --> 00:08:43,700
+bộ nhớ đệm đơn giản như sử dụng một lớp.
+
+130
+00:08:44,059 --> 00:08:46,760
+Như vậy là chúng ta đã kết thúc cuộc thảo luận về bộ nhớ đệm.
+
+131
+00:08:46,760 --> 00:08:52,040
+Tôi hy vọng bạn đã học được điều này và hy vọng nó sẽ giúp bạn thiết kế chiến lược lưu trữ đệm của mình trong tương lai.
+

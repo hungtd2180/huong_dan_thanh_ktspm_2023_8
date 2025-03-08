@@ -1,0 +1,132 @@
+1
+00:00:00,260 --> 00:00:04,520
+Web API khá giống với ứng dụng web nhưng có hai điểm khác biệt quan trọng.
+
+2
+00:00:04,700 --> 00:00:10,310
+Thứ nhất, nó không phục vụ các trang HTML mà dữ liệu thường ở dạng cấu trúc Json.
+
+3
+00:00:10,670 --> 00:00:16,490
+Hai máy khách của nó không phải là trình duyệt web mà là các ứng dụng khác, bao gồm cả mã JavaScript chạy
+
+4
+00:00:16,490 --> 00:00:18,020
+bên trong trình duyệt web.
+
+5
+00:00:18,440 --> 00:00:24,260
+API Web đã trở nên cực kỳ phổ biến trong vài năm trở lại đây và hầu như mọi ứng dụng web đều có API Web
+
+6
+00:00:24,260 --> 00:00:26,750
+API ngoài ứng dụng web truyền thống.
+
+7
+00:00:27,290 --> 00:00:34,010
+Web API, như tên gọi của nó, cung cấp một giao diện lập trình ứng dụng API, cho phép các
+
+8
+00:00:34,010 --> 00:00:37,010
+các chương trình để truy cập vào đó và thực hiện nhiều hành động khác nhau.
+
+9
+00:00:37,550 --> 00:00:43,610
+Có nhiều loại triển khai API web khác nhau, nhưng loại phổ biến nhất chắc chắn là
+
+10
+00:00:43,610 --> 00:00:44,690
+API còn lại.
+
+11
+00:00:45,800 --> 00:00:50,780
+Rest API là một chủ đề lớn với nhiều triết lý và suy nghĩ, nhưng đối với khóa học này thì đủ để
+
+12
+00:00:50,780 --> 00:00:58,580
+nói rằng phần còn lại cho phép chúng ta truy cập các thực thể bằng cách kết hợp các tham số URL và động từ Http.
+
+13
+00:00:58,730 --> 00:01:05,670
+Ví dụ: URL sau sẽ được API thực thi với tư cách là người dùng số 17.
+
+14
+00:01:06,640 --> 00:01:10,540
+Điều này có nghĩa là xóa đơn hàng số 156.
+
+15
+00:01:11,270 --> 00:01:16,910
+Như bạn có thể thấy, lợi thế chính của rest là nó không yêu cầu nhiều hơn một URL chuẩn để
+
+16
+00:01:16,910 --> 00:01:22,820
+thực hiện API và không yêu cầu các giao thức cồng kềnh trên giao thức Http như với
+
+17
+00:01:22,820 --> 00:01:23,820
+giao thức xà phòng.
+
+18
+00:01:23,840 --> 00:01:29,600
+Đối với những ai đã quen thuộc, API Web được sử dụng để truy xuất và tiếp nhận dữ liệu.
+
+19
+00:01:29,600 --> 00:01:33,410
+Không nên sử dụng nó để trả về mã đánh dấu trực quan như HTML.
+
+20
+00:01:33,920 --> 00:01:38,150
+Vì lý do này, hầu như bất kỳ loại ứng dụng nào cũng có thể là máy khách của API web.
+
+21
+00:01:38,180 --> 00:01:40,310
+Bất kỳ mã nào có thể truy cập vào API còn lại.
+
+22
+00:01:40,310 --> 00:01:45,920
+Và tôi tin rằng hầu hết mọi ngôn ngữ đều hỗ trợ khả năng đó, có thể truy cập API web và sử dụng nó.
+
+23
+00:01:46,040 --> 00:01:52,010
+Đây là lý do tại sao API web được sử dụng bởi các ứng dụng web, ứng dụng khách hàng phong phú và tất nhiên là các hệ thống khác.
+
+24
+00:01:52,630 --> 00:01:59,530
+Các ứng dụng API Web là tốt nhất cho các hệ thống yêu cầu truy xuất và lưu trữ dữ liệu, mặc dù không phải là số lượng lớn
+
+25
+00:01:59,530 --> 00:02:01,210
+của dữ liệu trong mỗi hành động.
+
+26
+00:02:01,330 --> 00:02:06,460
+Hành động do khách hàng khởi xướng, nghĩa là người gọi là người đưa ra yêu cầu thực hiện một việc gì đó như
+
+27
+00:02:06,460 --> 00:02:09,250
+lấy tất cả dữ liệu, lưu tên người dùng, v.v.
+
+28
+00:02:09,759 --> 00:02:17,230
+Quy mô lớn với số lượng người dùng lớn và nhiều dữ liệu cùng hành động tập trung ngắn hạn trái ngược với hành động dài hạn
+
+29
+00:02:17,230 --> 00:02:18,310
+các tiến trình đang chạy.
+
+30
+00:02:18,340 --> 00:02:23,560
+API web và ứng dụng web được xây dựng trên cùng một khái niệm và thường có chung nền tảng.
+
+31
+00:02:23,560 --> 00:02:25,120
+Tương tự như ứng dụng web.
+
+32
+00:02:25,150 --> 00:02:30,430
+API Web cũng hoạt động tốt nhất trong mô hình yêu cầu phản hồi và nên được sử dụng cho những hệ thống như thế này.
+
+33
+00:02:30,760 --> 00:02:34,210
+Nên tránh các tiến trình chạy lâu khi sử dụng API web.
+

@@ -1,0 +1,40 @@
+1
+00:00:00,290 --> 00:00:05,240
+Services are quite similar to console applications with two important distinctions.
+
+2
+00:00:05,420 --> 00:00:10,850
+They have no user interface at all as opposed to the command line window in the console application.
+
+3
+00:00:10,850 --> 00:00:16,520
+And they are managed by a service manager, which is a feature of the operating system that manages
+
+4
+00:00:16,520 --> 00:00:17,480
+the services.
+
+5
+00:00:17,510 --> 00:00:23,330
+In Windows there is one service manager, while on Linux there are a handful you can choose from.
+
+6
+00:00:23,900 --> 00:00:28,280
+The service manager starts and stops the services and also monitors their activity.
+
+7
+00:00:28,640 --> 00:00:34,490
+Since services cannot ask the user about their behaviors, they will usually have a configuration file
+
+8
+00:00:34,490 --> 00:00:36,380
+containing the required parameters.
+
+9
+00:00:36,410 --> 00:00:42,230
+Services are used for long running processes such as monitoring folder on the disk when no user intervention
+
+10
+00:00:42,230 --> 00:00:43,100
+is required.
+

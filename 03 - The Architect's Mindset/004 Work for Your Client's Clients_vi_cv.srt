@@ -1,0 +1,180 @@
+1
+00:00:00,380 --> 00:00:05,270
+Một trong những khía cạnh quan trọng nhất của công việc kiến trúc sư là xác định khách hàng là ai.
+
+2
+00:00:05,300 --> 00:00:06,970
+Nghe có vẻ hơi ngớ ngẩn.
+
+3
+00:00:06,980 --> 00:00:09,290
+Tất nhiên là tôi biết khách hàng của tôi là ai.
+
+4
+00:00:09,320 --> 00:00:10,580
+Đó là người trả tiền cho tôi.
+
+5
+00:00:10,580 --> 00:00:13,370
+Vâng, đúng vậy, nhưng cũng không đúng.
+
+6
+00:00:13,520 --> 00:00:14,690
+Để tôi giải thích nhé.
+
+7
+00:00:15,350 --> 00:00:19,060
+Trong hầu hết mọi tổ chức, kiến trúc sư đều là một phần của bộ phận CNTT.
+
+8
+00:00:19,070 --> 00:00:23,810
+Không quan trọng kiến trúc sư là nhân viên của tổ chức hay là một nhà tư vấn làm việc
+
+9
+00:00:23,810 --> 00:00:24,770
+với tổ chức.
+
+10
+00:00:24,770 --> 00:00:26,660
+Anh ấy được những người làm trong ngành CNTT thuê.
+
+11
+00:00:27,530 --> 00:00:32,060
+Nhưng các chuyên gia CNTT có khách hàng và họ là người dùng cuối của ứng dụng.
+
+12
+00:00:32,060 --> 00:00:34,370
+Và đây chính là những người mà bạn nên làm việc cùng.
+
+13
+00:00:34,580 --> 00:00:35,780
+Điều này có nghĩa là gì?
+
+14
+00:00:35,810 --> 00:00:39,770
+Điều này có nghĩa là tư duy của bạn phải hướng tới khách hàng của khách hàng.
+
+15
+00:00:39,800 --> 00:00:45,110
+Điều đó có nghĩa là với mỗi quyết định bạn đưa ra, bạn phải tự hỏi tác động của quyết định này sẽ như thế nào
+
+16
+00:00:45,110 --> 00:00:46,610
+trên máy khách của khách hàng của bạn?
+
+17
+00:00:46,640 --> 00:00:51,950
+Điều này có nghĩa là sự thoải mái của khách hàng của khách hàng được ưu tiên hơn sự thoải mái của khách hàng của bạn.
+
+18
+00:00:51,980 --> 00:00:53,430
+Chúng ta hãy xem một ví dụ.
+
+19
+00:00:53,450 --> 00:00:58,340
+Một trong những hệ thống gần đây tôi làm việc là hệ thống hiển thị dữ liệu dựa trên dữ liệu đo từ xa nhận được
+
+20
+00:00:58,340 --> 00:00:59,790
+từ các trạm từ xa.
+
+21
+00:00:59,910 --> 00:01:04,769
+Một trong những vấn đề nan giải mà chúng tôi gặp phải là phải làm gì khi cơ sở dữ liệu lưu trữ dữ liệu từ xa ngoại tuyến.
+
+22
+00:01:05,010 --> 00:01:10,410
+Đây là một kịch bản chúng tôi phải cân nhắc vì bộ phận CNTT không thể cam kết một SLA cụ thể
+
+23
+00:01:10,410 --> 00:01:11,250
+cơ sở dữ liệu.
+
+24
+00:01:11,610 --> 00:01:17,100
+Giải pháp chúng tôi đưa ra là hiển thị thông báo rõ ràng cho người dùng cuối rằng có sự cố
+
+25
+00:01:17,100 --> 00:01:19,410
+với hệ thống và yêu cầu anh ta thử lại sau.
+
+26
+00:01:19,440 --> 00:01:22,150
+Đây là hành vi khá phổ biến trong tình huống như thế này.
+
+27
+00:01:22,170 --> 00:01:27,000
+Tuy nhiên, khách hàng hỏi liệu chúng tôi có thể tìm ra giải pháp trung gian nào cho phép anh ta xem không
+
+28
+00:01:27,000 --> 00:01:29,250
+dữ liệu nhưng không thực hiện bất kỳ sửa đổi nào.
+
+29
+00:01:29,850 --> 00:01:35,430
+Chúng tôi đã suy nghĩ rất kỹ và đưa ra một giải pháp khiến kiến trúc của chúng tôi phức tạp hơn nhiều.
+
+30
+00:01:35,460 --> 00:01:40,500
+Chúng tôi đã giới thiệu một lớp lưu trữ đệm chuyên dụng sao chép dữ liệu và được sử dụng khi cơ sở dữ liệu
+
+31
+00:01:40,500 --> 00:01:41,430
+đã ngoại tuyến.
+
+32
+00:01:41,670 --> 00:01:45,360
+Khách hàng của tôi, một nhóm phát triển, đã làm việc chăm chỉ hơn nhiều.
+
+33
+00:01:45,360 --> 00:01:51,120
+Nhưng khách hàng của khách hàng của tôi, người dùng cuối, đã vô cùng hài lòng với giải pháp này và khen ngợi sự sẵn lòng của chúng tôi
+
+34
+00:01:51,120 --> 00:01:53,340
+để giúp anh ấy và suy nghĩ vượt ra ngoài khuôn khổ.
+
+35
+00:01:54,290 --> 00:01:59,390
+Bây giờ, bạn có thể nói rằng làm việc với khách hàng là công việc của nhà phân tích hệ thống chứ không phải của kiến trúc sư.
+
+36
+00:01:59,510 --> 00:02:04,460
+Điều này thường đúng, nhưng đôi khi một dự án được thực hiện mà không có nhà phân tích hệ thống tham gia,
+
+37
+00:02:04,460 --> 00:02:09,080
+và thậm chí nếu có, bạn vẫn phải hiểu môi trường của khách hàng để thực hiện
+
+38
+00:02:09,080 --> 00:02:10,440
+quyết định tốt nhất cho anh ấy.
+
+39
+00:02:10,460 --> 00:02:14,870
+Trong trường hợp này, kiến trúc sư không thay thế nhà phân tích hệ thống, nhưng việc tham gia là một ý tưởng rất hay.
+
+40
+00:02:14,870 --> 00:02:17,840
+cô ấy tham gia một số cuộc họp và gặp gỡ trực tiếp khách hàng.
+
+41
+00:02:19,360 --> 00:02:24,730
+Đôi khi bạn sẽ thấy rằng khách hàng của mình, tức bộ phận CNTT, không coi họ là khách hàng.
+
+42
+00:02:24,760 --> 00:02:30,670
+Họ sẽ gọi người dùng cuối là đồng nghiệp, người cùng làm việc, hoặc thậm chí là những kẻ khó chịu luôn
+
+43
+00:02:30,670 --> 00:02:31,570
+có nhu cầu.
+
+44
+00:02:31,600 --> 00:02:34,470
+Trong trường hợp này, công việc của bạn có thể sẽ khó khăn hơn một chút.
+
+45
+00:02:34,480 --> 00:02:37,720
+Bạn không chỉ phải thay đổi tư duy của mình mà còn phải thay đổi cả họ nữa.
+

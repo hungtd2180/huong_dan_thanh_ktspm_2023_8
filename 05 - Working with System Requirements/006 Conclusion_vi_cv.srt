@@ -1,0 +1,56 @@
+1
+00:00:00,620 --> 00:00:04,430
+Vậy chúng ta hãy kết luận những gì đã học về các yêu cầu phi chức năng.
+
+2
+00:00:04,610 --> 00:00:09,260
+Những yêu cầu này xác định hệ thống sẽ phải xử lý những vấn đề gì về mặt hiệu suất.
+
+3
+00:00:09,800 --> 00:00:10,910
+Tải người dùng.
+
+4
+00:00:10,910 --> 00:00:11,690
+Vân vân.
+
+5
+00:00:12,080 --> 00:00:16,610
+Khách hàng thường sẽ không thể tự mình xác định những yêu cầu đó và đó sẽ là của bạn
+
+6
+00:00:16,610 --> 00:00:19,220
+công việc của một kiến trúc sư là giúp anh ta định nghĩa chúng.
+
+7
+00:00:19,460 --> 00:00:24,950
+Và có lẽ bài học quan trọng nhất từ phần này là không bao giờ thiết kế một hệ thống mà không biết
+
+8
+00:00:24,950 --> 00:00:26,360
+yêu cầu chức năng của nó.
+
+9
+00:00:26,390 --> 00:00:31,280
+Tác động của những yêu cầu đó lên kiến trúc là rất lớn và bạn không muốn thiết kế một hệ thống
+
+10
+00:00:31,280 --> 00:00:34,760
+sẽ thất bại thảm hại ngay trong ngày đầu tiên sản xuất.
+
+11
+00:00:34,970 --> 00:00:39,890
+Trên thực tế, vị trí của các yêu cầu phi chức năng trong kiến trúc quan trọng đến mức chúng
+
+12
+00:00:39,890 --> 00:00:45,020
+có đoạn văn riêng trong tài liệu kiến trúc, như chúng ta sẽ thấy sau trong khóa học này.
+
+13
+00:00:45,680 --> 00:00:50,600
+Bây giờ chúng ta đã biết các yêu cầu phi chức năng là gì và cách xử lý chúng, hãy tiếp tục
+
+14
+00:00:50,600 --> 00:00:52,430
+hành trình của chúng tôi trong dòng chảy kiến trúc.
+

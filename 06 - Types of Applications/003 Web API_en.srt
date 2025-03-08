@@ -1,0 +1,132 @@
+1
+00:00:00,260 --> 00:00:04,520
+Web API is quite similar to web app with two important differences.
+
+2
+00:00:04,700 --> 00:00:10,310
+One, it does not serve HTML pages, but data usually in the form of a Json structure.
+
+3
+00:00:10,670 --> 00:00:16,490
+Two Its clients are not web browsers, but other applications, including JavaScript code that runs
+
+4
+00:00:16,490 --> 00:00:18,020
+inside a web browser.
+
+5
+00:00:18,440 --> 00:00:24,260
+Web API has become extremely popular in the last few years and almost every web app exposes also web
+
+6
+00:00:24,260 --> 00:00:26,750
+API in addition to the more traditional web app.
+
+7
+00:00:27,290 --> 00:00:34,010
+Web API, as its name implies, exposes an API application programming interface, which allows other
+
+8
+00:00:34,010 --> 00:00:37,010
+programs to access it and execute various actions.
+
+9
+00:00:37,550 --> 00:00:43,610
+There are various types of web API implementation, but the most popular one by a large margin is definitely
+
+10
+00:00:43,610 --> 00:00:44,690
+the rest API.
+
+11
+00:00:45,800 --> 00:00:50,780
+Rest API is a huge topic with a lot of philosophy and thinking, but for this course it's suffice to
+
+12
+00:00:50,780 --> 00:00:58,580
+say that rest allows us to access entities with a combination of URL parameters and Http verb.
+
+13
+00:00:58,730 --> 00:01:05,670
+For example, the following URL will be executed by the API as get me user number 17.
+
+14
+00:01:06,640 --> 00:01:10,540
+This means delete order number 156.
+
+15
+00:01:11,270 --> 00:01:16,910
+As you can see, the main advantage of rest is that it does not require more than a standard URL to
+
+16
+00:01:16,910 --> 00:01:22,820
+execute the API and does not require cumbersome protocols on top of the Http protocol as was with the
+
+17
+00:01:22,820 --> 00:01:23,820
+soap protocol.
+
+18
+00:01:23,840 --> 00:01:29,600
+For those of you who are familiar with it, Web APIs are used for data retrieval and receiving.
+
+19
+00:01:29,600 --> 00:01:33,410
+It should not be used for returning visual markup such as HTML.
+
+20
+00:01:33,920 --> 00:01:38,150
+For this reason, almost any kind of application can be a client of web API.
+
+21
+00:01:38,180 --> 00:01:40,310
+Any code that can access a rest API.
+
+22
+00:01:40,310 --> 00:01:45,920
+And I believe that almost every language supports that capability, can access web API and use it.
+
+23
+00:01:46,040 --> 00:01:52,010
+This is the reason that web APIs are used by web apps, rich client apps, and of course, other systems.
+
+24
+00:01:52,630 --> 00:01:59,530
+Web API applications are best for systems that require data retrieval and store, though not huge amounts
+
+25
+00:01:59,530 --> 00:02:01,210
+of data in each action.
+
+26
+00:02:01,330 --> 00:02:06,460
+Client initiated actions, meaning the caller is the one making the request to do something such as
+
+27
+00:02:06,460 --> 00:02:09,250
+getting all the data saving username and so on.
+
+28
+00:02:09,759 --> 00:02:17,230
+Large scale with a large number of users and a lot of data and short focused action as opposed to long
+
+29
+00:02:17,230 --> 00:02:18,310
+running processes.
+
+30
+00:02:18,340 --> 00:02:23,560
+Web API and web apps are built on the same concepts and usually share the same underpinnings.
+
+31
+00:02:23,560 --> 00:02:25,120
+So as with web apps.
+
+32
+00:02:25,150 --> 00:02:30,430
+Web API also works best in the request response model and should be used for these kind of systems.
+
+33
+00:02:30,760 --> 00:02:34,210
+Long running processes should be avoided when using web API.
+

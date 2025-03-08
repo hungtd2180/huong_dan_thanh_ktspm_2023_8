@@ -1,0 +1,376 @@
+1
+00:00:00,290 --> 00:00:04,610
+Vì vậy, chúng ta kết thúc bài giảng trước với bốn dịch vụ trông như thế này.
+
+2
+00:00:04,880 --> 00:00:09,650
+Và bây giờ chúng ta cần quyết định loại tin nhắn nào là phù hợp nhất giữa mỗi người.
+
+3
+00:00:10,010 --> 00:00:12,080
+Chúng ta hãy bắt đầu với người nhận.
+
+4
+00:00:12,920 --> 00:00:17,380
+Bộ thu, đúng như tên gọi của nó, sẽ nhận các tin nhắn từ các thiết bị IoT.
+
+5
+00:00:17,390 --> 00:00:23,410
+Trong trường hợp này, phương thức nhắn tin thực sự được quyết định bởi cách các thiết bị khác nhau gửi tin nhắn của chúng
+
+6
+00:00:23,420 --> 00:00:25,250
+để tìm hiểu xem họ làm điều đó như thế nào.
+
+7
+00:00:25,280 --> 00:00:28,310
+Chúng tôi sẽ liên lạc lại với khách hàng sau một vài cuộc điện thoại.
+
+8
+00:00:28,310 --> 00:00:30,560
+Cô ấy quay lại với chúng tôi cùng câu trả lời.
+
+9
+00:00:30,590 --> 00:00:35,510
+Các thiết bị giao tiếp qua Http, sử dụng động từ post để gửi bản cập nhật.
+
+10
+00:00:35,630 --> 00:00:37,040
+Vâng, tuyệt vời quá.
+
+11
+00:00:37,070 --> 00:00:43,400
+Điều này có nghĩa là bộ thu của chúng tôi vừa trở thành một ứng dụng API web tiêu chuẩn với API còn lại là
+
+12
+00:00:43,400 --> 00:00:44,210
+giao diện.
+
+13
+00:00:44,420 --> 00:00:45,170
+Tuyệt vời.
+
+14
+00:00:45,200 --> 00:00:47,180
+Chúng ta hãy chuyển sang trình xử lý.
+
+15
+00:00:48,050 --> 00:00:51,300
+Bây giờ mọi thứ bắt đầu trở nên phức tạp một chút.
+
+16
+00:00:51,320 --> 00:00:57,260
+Như bạn có thể nhớ, vai trò của trình xử lý là xác thực và phân tích cú pháp các thông điệp mà người nhận nhận được.
+
+17
+00:00:57,290 --> 00:01:03,000
+Lý do tồn tại duy nhất của nó là để chuyển giao các nhiệm vụ từ người nhận, người này nên tập trung vào việc nhận.
+
+18
+00:01:03,000 --> 00:01:05,099
+các thông điệp và giải phóng các yêu cầu.
+
+19
+00:01:05,310 --> 00:01:10,380
+Sau khi trình xử lý xử lý xong tin nhắn, nó sẽ lưu trữ tin nhắn đó vào kho dữ liệu để sử dụng sau.
+
+20
+00:01:10,410 --> 00:01:14,460
+Vậy phương thức nhắn tin tốt nhất giữa người nhận và người xử lý là gì?
+
+21
+00:01:14,730 --> 00:01:18,030
+Vâng, có vẻ như cơ chế tốt nhất ở đây là Q.
+
+22
+00:01:18,300 --> 00:01:23,970
+Rõ ràng là chúng tôi muốn các tin nhắn được xử lý theo thứ tự chúng được nhận, đây là một điều cổ điển
+
+23
+00:01:23,970 --> 00:01:28,980
+tính năng của Q và chúng tôi thích độ tin cậy và khả năng mở rộng mà cơ chế này mang lại.
+
+24
+00:01:30,000 --> 00:01:35,580
+Nếu chúng ta sử dụng API nghỉ ngơi giữa bộ thu và trình xử lý, bộ thu sẽ có rất nhiều việc
+
+25
+00:01:35,580 --> 00:01:41,460
+phải làm vì nó sẽ đợi mỗi yêu cầu đến trình xử lý cho đến khi nó hoàn tất và chúng ta sẽ phải xử lý lỗi
+
+26
+00:01:41,460 --> 00:01:42,200
+và trục trặc.
+
+27
+00:01:42,210 --> 00:01:45,930
+Điều này sẽ làm giảm hiệu suất, một yếu tố rất quan trọng đối với người nhận.
+
+28
+00:01:46,320 --> 00:01:49,720
+Khi sử dụng Q, về cơ bản chúng ta có cơ chế bắn và quên.
+
+29
+00:01:49,740 --> 00:01:53,190
+Người nhận đưa tin nhắn vào hàng đợi và quên nó đi.
+
+30
+00:01:53,220 --> 00:01:55,830
+Đây chính xác là điều chúng ta muốn trong trường hợp này.
+
+31
+00:01:56,340 --> 00:01:56,970
+Tuyệt vời.
+
+32
+00:01:56,970 --> 00:02:01,110
+Vì vậy, chúng ta có API nghỉ ngơi cho bộ thu và Q cho bộ xử lý.
+
+33
+00:02:01,230 --> 00:02:02,370
+Còn thông tin thì sao?
+
+34
+00:02:03,130 --> 00:02:04,630
+Vâng, câu hỏi này dễ thôi.
+
+35
+00:02:04,660 --> 00:02:07,390
+Hãy xem ai sẽ truy cập thông tin.
+
+36
+00:02:07,600 --> 00:02:10,340
+Câu trả lời tất nhiên là người dùng cuối.
+
+37
+00:02:10,360 --> 00:02:11,900
+Họ sẽ làm điều đó bằng cách nào?
+
+38
+00:02:11,920 --> 00:02:15,070
+Vâng, rõ ràng là thông qua trình duyệt web.
+
+39
+00:02:15,100 --> 00:02:17,260
+Trình duyệt web truy cập máy chủ như thế nào.
+
+40
+00:02:17,260 --> 00:02:24,460
+Tất nhiên, sử dụng giao thức Http và tiêu chuẩn thực tế để truy cập máy chủ Http ngày nay là thông qua
+
+41
+00:02:24,460 --> 00:02:25,270
+API còn lại.
+
+42
+00:02:25,870 --> 00:02:30,010
+Vì vậy, thông tin sẽ triển khai API còn lại tương tự như các bộ thu.
+
+43
+00:02:30,160 --> 00:02:33,580
+Cuối cùng nhưng không kém phần quan trọng, đó là dịch vụ ghi nhật ký.
+
+44
+00:02:34,120 --> 00:02:40,540
+Hãy nhớ rằng chúng ta cần các bản ghi do các dịch vụ khác tạo ra được gửi đến dịch vụ ghi nhật ký để tổng hợp.
+
+45
+00:02:40,570 --> 00:02:41,860
+Chúng ta có thể làm điều đó bằng cách nào?
+
+46
+00:02:42,160 --> 00:02:46,540
+Vâng, theo bản năng, chúng ta có thể nghĩ rằng dịch vụ ghi nhật ký nên công khai API còn lại.
+
+47
+00:02:46,570 --> 00:02:50,600
+Vì vậy, các dịch vụ khác có thể dễ dàng truy cập bằng cách gửi bản ghi nhật ký.
+
+48
+00:02:50,620 --> 00:02:52,360
+Nhưng đó không phải là ý kiến hay.
+
+49
+00:02:52,390 --> 00:02:58,060
+Nhật ký có xu hướng khá lớn và chúng ta có thể mong đợi các dịch vụ khác nhau tạo ra một số lượng lớn nhật ký
+
+50
+00:02:58,060 --> 00:02:59,200
+ghi lại mỗi giờ.
+
+51
+00:02:59,230 --> 00:03:03,810
+Bây giờ, nếu với mỗi bản ghi như vậy, các dịch vụ sẽ thực hiện lệnh gọi API còn lại.
+
+52
+00:03:03,830 --> 00:03:06,380
+Điều này sẽ làm giảm hiệu suất rất nhiều.
+
+53
+00:03:06,410 --> 00:03:11,750
+Chúng tôi cần một giải pháp cho phép chúng tôi gửi một lượng lớn hồ sơ đến dịch vụ ghi nhật ký mà không cần
+
+54
+00:03:11,750 --> 00:03:13,220
+ảnh hưởng đến hiệu suất.
+
+55
+00:03:13,520 --> 00:03:17,000
+Hiện nay, một trong những giải pháp phổ biến cho vấn đề này là sử dụng tệp.
+
+56
+00:03:17,030 --> 00:03:22,670
+Trong giải pháp này, các dịch vụ khác nhau ghi các bản ghi nhật ký vào một tệp và dịch vụ ghi nhật ký sẽ kéo
+
+57
+00:03:22,670 --> 00:03:25,040
+các tập tin này và tổng hợp nội dung.
+
+58
+00:03:25,280 --> 00:03:29,260
+Vì vậy, đây là một giải pháp rất phổ biến, nhưng nó có hai vấn đề chính.
+
+59
+00:03:29,270 --> 00:03:32,720
+Thứ nhất, nó không hoạt động được trong môi trường đám mây.
+
+60
+00:03:32,990 --> 00:03:37,670
+Khóa học này không nói về các ứng dụng đám mây, nhưng vẫn quan trọng là phải biết những gì có thể
+
+61
+00:03:37,670 --> 00:03:39,250
+và không thể thực hiện được trên đám mây.
+
+62
+00:03:39,260 --> 00:03:42,980
+Và việc ghi vào các tập tin trong ứng dụng đám mây là điều tối kỵ.
+
+63
+00:03:43,190 --> 00:03:48,800
+Vấn đề thứ hai là các tập tin có xu hướng bị khóa, bị quét và xóa bởi phần mềm diệt vi-rút
+
+64
+00:03:48,800 --> 00:03:52,640
+phần mềm hoặc đơn giản là bị xóa bởi người quản trị hệ thống bất cẩn.
+
+65
+00:03:52,670 --> 00:03:57,710
+Tóm lại, file là một nguồn tài nguyên không được kiểm soát chặt chẽ và tốt hơn hết là nên tránh.
+
+66
+00:03:57,740 --> 00:03:59,570
+Được rồi, vậy còn lại gì?
+
+67
+00:03:59,720 --> 00:04:01,910
+Thực ra còn lại hai lựa chọn.
+
+68
+00:04:01,940 --> 00:04:07,340
+Đầu tiên, hãy ghi nhật ký vào cơ sở dữ liệu và để dịch vụ ghi nhật ký truy vấn cơ sở dữ liệu và xử lý
+
+69
+00:04:07,340 --> 00:04:08,270
+ghi chép nhật ký.
+
+70
+00:04:08,510 --> 00:04:15,020
+Tùy chọn thứ hai Sử dụng các dịch vụ khác nhau sẽ thêm các bản ghi vào hàng đợi và dịch vụ ghi nhật ký sẽ
+
+71
+00:04:15,020 --> 00:04:17,120
+kéo các bản ghi từ hàng đợi và xử lý chúng.
+
+72
+00:04:17,329 --> 00:04:18,540
+Cái nào tốt hơn?
+
+73
+00:04:18,560 --> 00:04:22,010
+Vâng, trong trường hợp này, lời khuyên của tôi là hãy sử dụng hàng đợi.
+
+74
+00:04:22,040 --> 00:04:26,780
+Lý do là việc sử dụng cơ sở dữ liệu trong trường hợp này thực sự buộc nó phải hoạt động giống như một hàng đợi.
+
+75
+00:04:26,810 --> 00:04:32,210
+Cơ sở dữ liệu chỉ là nơi lưu trữ tạm thời các bản ghi và mọi bản ghi sẽ được truy xuất sẽ
+
+76
+00:04:32,210 --> 00:04:33,800
+phải được xóa ngay lập tức.
+
+77
+00:04:33,830 --> 00:04:35,060
+Giống như hàng đợi.
+
+78
+00:04:35,360 --> 00:04:40,910
+Vì vậy, thay vì phát minh lại bánh xe, chúng ta hãy sử dụng cơ chế xếp hàng và có được hiệu quả nhất
+
+79
+00:04:40,910 --> 00:04:41,600
+nhắn tin.
+
+80
+00:04:42,350 --> 00:04:44,060
+Và thế là chúng ta ở đây.
+
+81
+00:04:44,210 --> 00:04:49,250
+Chúng tôi đã xác định các cơ chế nhắn tin khác nhau của hệ thống và hiện chúng tôi có bức tranh đầy đủ về
+
+82
+00:04:49,250 --> 00:04:50,330
+kiến trúc hệ thống.
+
+83
+00:04:50,360 --> 00:04:54,020
+Chúng tôi lập bản đồ các thành phần và đi đến kết luận rằng chúng tôi cần bốn thành phần.
+
+84
+00:04:54,050 --> 00:04:57,350
+Chúng tôi đã quyết định phương thức nhắn tin giữa các dịch vụ này là gì?
+
+85
+00:04:57,350 --> 00:05:01,670
+Và bây giờ chúng ta đã hiểu các yếu tố quyết định cho từng cơ chế nhắn tin.
+
+86
+00:05:01,820 --> 00:05:04,720
+Bây giờ chúng ta có thể chuyển sang phân tích chi tiết các thành phần.
+
+87
+00:05:04,730 --> 00:05:07,460
+Nhưng trước khi làm điều đó, chúng tôi xin cảnh báo một lời.
+
+88
+00:05:07,700 --> 00:05:13,640
+Lưu ý rằng trước khi đề xuất khách hàng sử dụng hàng đợi, bạn phải đảm bảo rằng khách hàng biết cách
+
+89
+00:05:13,640 --> 00:05:16,270
+để thiết lập, sử dụng và bảo trì công cụ Q.
+
+90
+00:05:16,280 --> 00:05:21,980
+Nếu bạn không biết cách sử dụng nó, thì có lẽ bạn nên sử dụng một giải pháp ít thanh lịch hơn.
+
+91
+00:05:21,980 --> 00:05:24,590
+nhưng có nhiều cơ hội thành công hơn.
+
+92
+00:05:25,040 --> 00:05:26,410
+Được rồi, chúng ta xong rồi.
+
+93
+00:05:26,420 --> 00:05:28,590
+Chúng ta hãy cùng tìm hiểu sâu hơn về dịch vụ đầu tiên.
+
+94
+00:05:28,610 --> 00:05:29,990
+Dịch vụ ghi nhật ký.
+

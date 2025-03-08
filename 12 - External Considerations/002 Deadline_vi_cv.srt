@@ -1,0 +1,80 @@
+1
+00:00:00,920 --> 00:00:03,020
+Chúng ta hãy nói về thời hạn.
+
+2
+00:00:03,110 --> 00:00:08,840
+Douglas Adams, tác giả của The Hitchhiker&#39;s Guide to the Galaxy Series và nhiều cuốn sách tuyệt vời khác, đã
+
+3
+00:00:08,840 --> 00:00:10,660
+một câu trích dẫn tuyệt vời về thời hạn.
+
+4
+00:00:10,670 --> 00:00:11,780
+Tôi thích thời hạn.
+
+5
+00:00:11,780 --> 00:00:14,480
+Tôi thích tiếng rít của chúng khi bay qua.
+
+6
+00:00:14,510 --> 00:00:16,040
+Vâng, chúng ta đều thế phải không?
+
+7
+00:00:16,430 --> 00:00:20,550
+Nhưng nghiêm túc mà nói, thời hạn là yếu tố quan trọng khi thiết kế kiến trúc.
+
+8
+00:00:20,570 --> 00:00:25,610
+Khi quyết định về các mẫu kiến trúc mà chúng ta sẽ sử dụng, chúng ta phải nhận thức được, dù chỉ là mơ hồ.
+
+9
+00:00:25,610 --> 00:00:27,560
+Sẽ mất bao lâu để thực hiện chúng?
+
+10
+00:00:27,560 --> 00:00:30,230
+Và nó liên quan thế nào đến thời hạn của dự án?
+
+11
+00:00:30,350 --> 00:00:33,670
+Ví dụ, bạn còn nhớ cuộc thảo luận về phương thức nhắn tin của chúng ta không?
+
+12
+00:00:33,680 --> 00:00:39,350
+Nếu bạn còn nhớ, chúng tôi đã nói rằng việc xây dựng cơ chế xếp hàng sẽ mất nhiều thời gian hơn so với việc sử dụng REST API.
+
+13
+00:00:39,380 --> 00:00:44,780
+Đây là điều cần được cân nhắc khi quyết định lựa chọn nền tảng nhắn tin cho các dự án lớn.
+
+14
+00:00:44,780 --> 00:00:49,850
+Thông thường đây không phải là vấn đề, nhưng khi làm việc trên các hệ thống nhỏ hơn với thời hạn gấp, hãy luôn thực hiện
+
+15
+00:00:49,880 --> 00:00:53,360
+chắc chắn kiến trúc có thể thực sự được triển khai trong khung thời gian nhất định.
+
+16
+00:00:53,480 --> 00:00:58,820
+Nếu bạn không chắc chắn về điều đó, cách tốt nhất là tham khảo ý kiến của trưởng nhóm phát triển.
+
+17
+00:00:58,850 --> 00:01:03,540
+Họ thường sẽ quen thuộc với khả năng của nhà phát triển và có thể ước tính công việc
+
+18
+00:01:03,540 --> 00:01:05,790
+cần thiết cho việc triển khai kiến trúc.
+
+19
+00:01:06,030 --> 00:01:11,130
+Sử dụng thông tin có giá trị này, bạn sẽ có thể đưa ra quyết định sáng suốt có tính đến các yếu tố
+
+20
+00:01:11,130 --> 00:01:12,270
+thời hạn của dự án.
+

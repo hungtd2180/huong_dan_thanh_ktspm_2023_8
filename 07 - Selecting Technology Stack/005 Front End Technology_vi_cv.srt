@@ -1,0 +1,604 @@
+1
+00:00:00,360 --> 00:00:06,630
+Trước khi thảo luận về công nghệ front-end, chúng ta hãy cùng nhắc lại một chút về front-end là gì.
+
+2
+00:00:06,630 --> 00:00:10,530
+là một phần của phần mềm được người dùng thực tế tận mắt nhìn thấy.
+
+3
+00:00:10,920 --> 00:00:15,540
+Đây là nơi chúng ta sẽ hiển thị văn bản không đáy, danh sách thả xuống, màu sắc, thông báo và nhiều nội dung khác.
+
+4
+00:00:16,050 --> 00:00:20,790
+Vì vậy, tất nhiên, khi lựa chọn công nghệ nổi, chúng tôi muốn lựa chọn thứ gì đó mạnh mẽ
+
+5
+00:00:20,790 --> 00:00:23,820
+khả năng thị giác, nhưng điều đó sẽ không khiến chúng ta phải làm việc quá sức.
+
+6
+00:00:24,600 --> 00:00:29,430
+Nhưng trước tiên, hãy cùng xem lại các loại ứng dụng mà chúng ta đã thảo luận và xem loại nào trong số chúng thực sự có
+
+7
+00:00:29,430 --> 00:00:30,120
+một mặt trước.
+
+8
+00:00:30,570 --> 00:00:37,920
+Vì vậy, các ứng dụng Web chắc chắn được định nghĩa là các ứng dụng Web chạy trên trình duyệt và hiển thị nó
+
+9
+00:00:38,170 --> 00:00:38,790
+cho người dùng.
+
+10
+00:00:38,940 --> 00:00:40,710
+Chúng ta chắc chắn có một mặt trước ở đây.
+
+11
+00:00:41,430 --> 00:00:45,570
+Web API không hẳn là máy khách của Web API.
+
+12
+00:00:45,720 --> 00:00:51,150
+Các ứng dụng khác như ứng dụng di động, bản thân chúng có thể có giao diện người dùng, nhưng API Web
+
+13
+00:00:51,150 --> 00:00:54,700
+Bản thân ứng dụng không phải là ứng dụng di động.
+
+14
+00:00:55,350 --> 00:01:00,570
+Vâng, đó chính là vấn đề, là nó sẽ điều khiển.
+
+15
+00:01:00,630 --> 00:01:01,560
+Việc đó phức tạp lắm.
+
+16
+00:01:01,860 --> 00:01:06,720
+Về mặt kỹ thuật, có một giao diện người dùng cho ứng dụng bảng điều khiển, nhưng nó không được xây dựng riêng biệt với
+
+17
+00:01:06,720 --> 00:01:07,760
+chính ứng dụng bảng điều khiển.
+
+18
+00:01:08,130 --> 00:01:13,410
+Và thực tế là sẽ không có khoản đầu tư lớn nào vào giao diện người dùng của bất kỳ ứng dụng điều khiển nào.
+
+19
+00:01:13,860 --> 00:01:19,680
+Vì vậy, để thảo luận, không có giao diện nào cho dịch vụ điều khiển.
+
+20
+00:01:20,220 --> 00:01:24,450
+Không phải toàn bộ mục đích của dịch vụ này là không có giao diện người dùng.
+
+21
+00:01:24,450 --> 00:01:30,300
+Vì vậy, tất nhiên không có giao diện dành cho máy tính để bàn Ubaidi, nhưng cũng có các ứng dụng dành cho máy tính để bàn.
+
+22
+00:01:30,300 --> 00:01:31,170
+Rất khác nhau.
+
+23
+00:01:31,170 --> 00:01:35,480
+Điểm chung của tất cả chúng là người dùng có thể nhìn thấy và tương tác với chúng.
+
+24
+00:01:35,850 --> 00:01:38,040
+Vì vậy, có một giao diện cho ứng dụng máy tính để bàn.
+
+25
+00:01:38,820 --> 00:01:44,800
+Được rồi, chúng ta hãy xem xét các giá trị và loại giá trị rồi xem cách chọn công nghệ trước.
+
+26
+00:01:44,880 --> 00:01:51,270
+Ứng dụng web, theo định nghĩa, ứng dụng web có giao diện người dùng dựa trên Web, nghĩa là chúng ta sẽ sử dụng kết hợp
+
+27
+00:01:51,270 --> 00:01:59,280
+của JavaScript và các dịch vụ thì câu hỏi thực sự ở đây là chúng ta sẽ sử dụng khuôn khổ JavaScript nào?
+
+28
+00:01:59,820 --> 00:02:04,410
+Các framework phổ biến nhất tại thời điểm ghi âm này là Angular và React.
+
+29
+00:02:05,160 --> 00:02:10,590
+Có những ứng cử viên tuyệt vời khác như người tị nạn, nhưng tôi thực sự muốn tập trung vào những ứng cử viên phổ biến nhất
+
+30
+00:02:10,590 --> 00:02:11,940
+với cộng đồng lớn nhất.
+
+31
+00:02:12,900 --> 00:02:16,560
+Trước tiên, chúng ta hãy so sánh Angiulo và mức độ phổ biến.
+
+32
+00:02:16,950 --> 00:02:20,120
+Như bạn có thể thấy trên Google Trends, mức độ phổ biến của chúng khá giống nhau.
+
+33
+00:02:22,350 --> 00:02:27,120
+Khi xem stack overflow dot com, chúng ta có thể thấy có nhiều câu hỏi hơn liên quan đến động vật móng guốc và những
+
+34
+00:02:27,120 --> 00:02:28,050
+liên quan đến hành động.
+
+35
+00:02:28,530 --> 00:02:35,940
+Nhưng vì Angulo cũ hơn, được thành lập vào năm 2010 chứ không phải năm 2013, nên các con số thực sự khá
+
+36
+00:02:35,940 --> 00:02:36,320
+đóng.
+
+37
+00:02:37,480 --> 00:02:38,880
+Chúng ta hãy so sánh các khả năng.
+
+38
+00:02:39,730 --> 00:02:45,690
+Angular là một khuôn khổ đầy đủ với một bộ đầy đủ các khả năng mà khuôn khổ A14 sẽ cần, chẳng hạn như
+
+39
+00:02:45,690 --> 00:02:50,370
+quản lý trạng thái liên kết dữ liệu, dịch vụ định tuyến và nhiều nội dung học tập khác.
+
+40
+00:02:50,370 --> 00:02:50,670
+Và sẽ.
+
+41
+00:02:50,670 --> 00:02:55,590
+Tôi có thể mất thời gian và điều này sẽ không dễ dàng ngay cả với những nhà phát triển có nhiều kinh nghiệm trong phát triển Web.
+
+42
+00:02:56,400 --> 00:03:00,030
+Ngược lại, React có nhiều thư viện hơn là một framework có đầy đủ tính năng.
+
+43
+00:03:00,420 --> 00:03:03,900
+Nó tập trung vào giao diện người dùng và thực hiện rất tốt ở khía cạnh này.
+
+44
+00:03:04,290 --> 00:03:07,920
+Nếu cần những khả năng khác thì nên sử dụng các thư viện riêng biệt.
+
+45
+00:03:08,490 --> 00:03:14,010
+Mặt khác, đường cong học tập của React ngắn hơn nhiều và các nhà phát triển Web có thể bắt kịp tốc độ
+
+46
+00:03:14,010 --> 00:03:18,510
+chỉ trong vài ngày, trong khi luyện tập góc cạnh có thể mất vài tuần, thậm chí còn lâu hơn.
+
+47
+00:03:18,510 --> 00:03:24,210
+Nếu bạn đang tìm kiếm giải pháp trọn gói cho mọi nhu cầu về trang web của mình và bạn có thời gian để đào tạo,
+
+48
+00:03:24,210 --> 00:03:25,260
+lựa chọn góc cạnh.
+
+49
+00:03:25,320 --> 00:03:27,090
+Nếu không thì hãy phản ứng.
+
+50
+00:03:28,530 --> 00:03:31,470
+Được rồi, chúng ta hãy nói về ứng dụng di động.
+
+51
+00:03:31,830 --> 00:03:36,240
+Khi thiết kế ứng dụng di động, điều đầu tiên chúng ta cần làm là quyết định phương pháp phát triển mà chúng ta sẽ sử dụng.
+
+52
+00:03:36,240 --> 00:03:36,840
+sẽ sử dụng.
+
+53
+00:03:37,260 --> 00:03:43,920
+Có ba cách tiếp cận chính để phát triển ứng dụng di động: nền tảng lai gốc và nền tảng chéo.
+
+54
+00:03:44,490 --> 00:03:49,230
+Về cơ bản, những cách tiếp cận đó thể hiện sự đánh đổi giữa thời gian phát triển so với khả năng và
+
+55
+00:03:49,230 --> 00:03:51,780
+lựa chọn của bạn nên dựa trên những yếu tố này.
+
+56
+00:03:52,560 --> 00:03:54,240
+Chúng ta hãy thảo luận về những cách tiếp cận này.
+
+57
+00:03:55,560 --> 00:03:56,820
+Ứng dụng gốc là câu trả lời.
+
+58
+00:03:56,820 --> 00:04:00,510
+Chỉ cần sử dụng nền tảng phát triển gốc cho từng nền tảng di động.
+
+59
+00:04:00,510 --> 00:04:06,240
+Ví dụ, phát triển iPhone gốc có thể được thực hiện bằng cách sử dụng Objectivity hoặc ngôn ngữ Swift với
+
+60
+00:04:06,630 --> 00:04:09,330
+công cụ phát triển và sử dụng iOS SDK.
+
+61
+00:04:09,750 --> 00:04:14,700
+Mặt khác, các ứng dụng Android được phát triển chủ yếu bằng Java sử dụng Android studio và Android
+
+62
+00:04:14,700 --> 00:04:15,270
+Bộ phát triển phần mềm (SDK).
+
+63
+00:04:15,900 --> 00:04:17,790
+Như bạn thấy, AOS là bản gốc.
+
+64
+00:04:18,480 --> 00:04:23,730
+Môi trường hoàn toàn khác với Android và bạn sẽ phải có các nhà phát triển có chuyên môn
+
+65
+00:04:23,730 --> 00:04:25,530
+trong mỗi môi trường đó.
+
+66
+00:04:25,890 --> 00:04:31,700
+Mặt khác, bản địa có quyền truy cập đầy đủ vào tất cả các khả năng của lĩnh vực này, bao gồm máy ảnh, máy đo gia tốc,
+
+67
+00:04:31,710 --> 00:04:37,320
+Bluetooth, hệ thống tập tin, văn bản và nhiều hơn nữa, bạn không bị giới hạn ở bất kỳ khía cạnh nào và bạn có thể tận dụng
+
+68
+00:04:37,320 --> 00:04:38,730
+bất kỳ tính năng nào bạn muốn.
+
+69
+00:04:39,120 --> 00:04:43,860
+Ngoài ra, các ứng dụng gốc có khả năng phản hồi rất nhanh và sẽ mang lại trải nghiệm tốt nhất cho người dùng.
+
+70
+00:04:44,430 --> 00:04:51,660
+Ứng dụng lai hoàn toàn trái ngược với ứng dụng gốc, vui vẻ cung cấp cao su gốc, thường có công cụ
+
+71
+00:04:51,660 --> 00:04:52,590
+chẳng hạn như ứng dụng điện thoại.
+
+72
+00:04:52,830 --> 00:04:59,520
+Và trong đó bạn sẽ tìm thấy một trang web thông thường hoàn chỉnh với JavaScript và xem liệu bạn có thể nghĩ về nó như
+
+73
+00:04:59,520 --> 00:04:59,840
+Iglauer.
+
+74
+00:04:59,920 --> 00:05:05,020
+Chống lại Browsr với khả năng hạn chế của điện thoại, nhưng nó vẫn là một trang web và yêu cầu kết nối Internet,
+
+75
+00:05:06,070 --> 00:05:11,820
+việc truy cập các chức năng của điện thoại như máy đo gia tốc hoặc COMILLA có thể là một thách thức mà không cần phải chịu đựng
+
+76
+00:05:11,860 --> 00:05:12,960
+rất nhiều hạn chế.
+
+77
+00:05:12,970 --> 00:05:19,150
+Ngoài ra, vui mừng khi cung cấp trải nghiệm người dùng kém hơn so với các ứng dụng gốc về đồ họa, hiệu suất
+
+78
+00:05:19,150 --> 00:05:19,840
+có giới hạn.
+
+79
+00:05:20,470 --> 00:05:24,670
+Trong những năm gần đây, một tiêu chuẩn mới đã xuất hiện có tên là Progressive Web Apps hay Pittaway.
+
+80
+00:05:25,150 --> 00:05:30,550
+Tiêu chuẩn này cho phép hoạt động giống các ứng dụng gốc hơn với khả năng ngoại tuyến, cải thiện
+
+81
+00:05:30,550 --> 00:05:31,750
+truy cập phần cứng và nhiều hơn nữa.
+
+82
+00:05:32,170 --> 00:05:36,150
+Tiêu chuẩn này có vẻ khá hứa hẹn và bạn chắc chắn nên chú ý đến nó.
+
+83
+00:05:36,550 --> 00:05:38,170
+Nhưng nó vẫn chưa đủ trưởng thành.
+
+84
+00:05:38,500 --> 00:05:44,950
+Apple chỉ thêm hỗ trợ cho Pittaway vào iPhone trong mối quan hệ với ngành công nghiệp tại Hoa Kỳ và ngay cả trong phiên bản này,
+
+85
+00:05:44,950 --> 00:05:47,730
+vẫn còn hạn chế và chưa ngang bằng với hỗ trợ của Android.
+
+86
+00:05:48,070 --> 00:05:49,840
+Vì vậy, chắc chắn là đáng để tìm hiểu.
+
+87
+00:05:50,050 --> 00:05:51,790
+Nhưng có lẽ còn quá sớm để sử dụng thực tế.
+
+88
+00:05:51,910 --> 00:05:57,760
+Ưu điểm lớn nhất của hybrid nằm ở chỗ nhóm phát triển đến từ wrapper gốc, điều này đòi hỏi
+
+89
+00:05:57,760 --> 00:05:58,570
+một chút học hỏi.
+
+90
+00:05:58,570 --> 00:06:00,730
+Mọi thứ còn lại đều là phát triển web thông thường.
+
+91
+00:06:01,290 --> 00:06:05,500
+Nếu nhóm của bạn biết cách phát triển ứng dụng web, họ sẽ biết cách phát triển ứng dụng lai.
+
+92
+00:06:05,650 --> 00:06:11,740
+Thật dễ dàng khi nằm giữa ứng dụng gốc và ứng dụng lai mà chúng ta tìm thấy trên các ứng dụng đa nền tảng.
+
+93
+00:06:12,220 --> 00:06:14,230
+Phương pháp nền tảng chi phí hoạt động như sau.
+
+94
+00:06:15,730 --> 00:06:20,980
+Quá trình phát triển được thực hiện trong một môi trường chuyên biệt không liên kết trực tiếp với bất kỳ nền tảng di động nào,
+
+95
+00:06:21,370 --> 00:06:22,960
+môi trường nền tảng tăng trưởng hàng đầu.
+
+96
+00:06:22,960 --> 00:06:28,570
+Hôm nay, al-Samarie và React Native tóm tắt lại, và bạn sẽ phát triển bằng C Sharp sử dụng visual studio
+
+97
+00:06:28,570 --> 00:06:29,680
+trong khi ở bản xứ thực sự.
+
+98
+00:06:29,680 --> 00:06:34,450
+Quá trình phát triển được thực hiện bằng JavaScript, sử dụng một trong nhiều ý tưởng hỗ trợ REAC gốc.
+
+99
+00:06:35,050 --> 00:06:39,970
+Sau khi quá trình phát triển hoàn tất, bạn so sánh ứng dụng và kết quả là bản gốc cho
+
+100
+00:06:39,970 --> 00:06:40,960
+nền tảng đã chọn.
+
+101
+00:06:41,200 --> 00:06:46,690
+Bạn sẽ có thể bù đắp cho iOS và Android và nhận được các ứng dụng gốc cho cả hai mà không cần
+
+102
+00:06:46,690 --> 00:06:48,910
+viết một dòng Java hoặc mục tiêu.
+
+103
+00:06:50,320 --> 00:06:52,210
+Vậy thì ưu điểm của cách tiếp cận này là rất rõ ràng.
+
+104
+00:06:52,210 --> 00:06:55,770
+Chúng tôi chỉ viết mã một lần và mã đó sẽ chạy trên cả hai nền tảng dưới dạng ứng dụng gốc.
+
+105
+00:06:55,990 --> 00:06:56,840
+Nhược điểm là gì?
+
+106
+00:06:57,040 --> 00:06:57,920
+Có một số ít.
+
+107
+00:06:58,700 --> 00:07:03,640
+Đầu tiên, thường có một chính phủ hỗ trợ các khả năng tiềm ẩn của hệ điều hành gốc
+
+108
+00:07:03,640 --> 00:07:07,450
+và các công cụ đa nền tảng luôn bắt kịp với nhiều nền tảng di động khác nhau.
+
+109
+00:07:07,960 --> 00:07:11,750
+Ngoài ra, các ứng dụng đa nền tảng không hoạt động tốt với đồ họa nặng.
+
+110
+00:07:11,770 --> 00:07:14,770
+Vì vậy, nếu đó là kế hoạch của bạn, bạn sẽ phải chuyển sang ứng dụng gốc.
+
+111
+00:07:15,700 --> 00:07:20,920
+Cuối cùng nhưng không kém phần quan trọng đối với một số tình huống, bạn vẫn phải dùng đến lập trình gốc, đặc biệt là
+
+112
+00:07:20,920 --> 00:07:22,490
+khi truy cập vào các cảm biến cụ thể.
+
+113
+00:07:22,840 --> 00:07:25,440
+Vì vậy, trong trường hợp này, đây không phải là nền tảng chi phí của bạn.
+
+114
+00:07:26,140 --> 00:07:30,790
+Vậy chúng ta hãy tóm tắt trong bảng này để bạn có thể thấy sự khác biệt giữa ba cách tiếp cận.
+
+115
+00:07:31,150 --> 00:07:34,890
+Sử dụng bảng này làm tài liệu tham khảo khi lựa chọn công nghệ cho ứng dụng di động.
+
+116
+00:07:35,110 --> 00:07:37,390
+Tôi hy vọng nó sẽ giúp ích cho bạn như nó đã giúp ích cho tôi.
+
+117
+00:07:38,890 --> 00:07:43,080
+Và bây giờ là phần thứ ba ở phía trước bên trái, đó là mặt bàn.
+
+118
+00:07:43,360 --> 00:07:48,940
+Bây giờ, hãy đối mặt với thực tế, nếu bạn đang phát triển một ứng dụng máy tính để bàn có thể chạy trên PC, thì nhiều khả năng
+
+119
+00:07:48,940 --> 00:07:50,560
+Bạn đang nhắm tới Windows phải không?
+
+120
+00:07:50,770 --> 00:07:55,050
+Vì vậy, tôi giới hạn cuộc thảo luận vào máy tính để bàn chạy Windows.
+
+121
+00:07:55,060 --> 00:08:04,600
+Chúng tôi có ba lựa chọn cho các trang trại gió phát triển máy tính để bàn F và bạn sẽ Frome là tất cả công nghệ này
+
+122
+00:08:04,600 --> 00:08:07,600
+được giới thiệu vào năm 2001 cùng với sự ra đời của dot net.
+
+123
+00:08:07,930 --> 00:08:13,390
+Nó có khái niệm tương tự như các nền tảng cũ hơn như Basics và khá hạn chế về mặt đồ họa.
+
+124
+00:08:13,420 --> 00:08:14,170
+khả năng.
+
+125
+00:08:14,530 --> 00:08:18,010
+Ví dụ, hãy thử thêm các góc bo tròn vào một nút.
+
+126
+00:08:18,010 --> 00:08:20,590
+Có thể, nhưng trời ơi, khó quá.
+
+127
+00:08:21,280 --> 00:08:25,630
+Mặt khác, việc phát triển ở Wohlforth khá dễ dàng và thời gian học cũng ngắn.
+
+128
+00:08:26,710 --> 00:08:32,169
+Chúng tôi đã giới thiệu vào năm 2006 và tình hình đã được cải thiện đáng kể.
+
+129
+00:08:32,350 --> 00:08:36,909
+Nó cung cấp khả năng kiểm soát hoàn toàn về mặt hình ảnh và mang lại sự tự do hoàn toàn cho các nhà thiết kế hình ảnh.
+
+130
+00:08:36,909 --> 00:08:43,960
+Bạn thực sự có thể làm bất cứ điều gì bạn muốn, nhưng điều quan trọng là nó phức tạp hơn nhiều so với việc bất ngờ gặp may.
+
+131
+00:08:44,410 --> 00:08:47,290
+Để sử dụng WP, bạn sẽ phải học ngôn ngữ mới.
+
+132
+00:08:47,290 --> 00:08:52,270
+Zemel, tương tự như email, có chức năng như một ngôn ngữ đánh dấu cho giao diện người dùng.
+
+133
+00:08:52,690 --> 00:08:56,620
+Zemel là một ngôn ngữ đánh dấu rất phong phú và rất dễ bị lạc lối trong đó.
+
+134
+00:08:57,010 --> 00:09:03,820
+Thậm chí có thể nói rằng một nhà phát triển thiếu kinh nghiệm có thể gây ra nhiều tác hại hơn là một nhà phát triển thiếu kinh nghiệm, cố ý
+
+135
+00:09:03,820 --> 00:09:04,420
+nhà phát triển.
+
+136
+00:09:06,100 --> 00:09:10,180
+Ứng cử viên cuối cùng của chúng tôi là GWP hoặc Universal Windows Platform.
+
+137
+00:09:10,720 --> 00:09:17,110
+Nỗ lực WPEC của Microsoft nhằm thống nhất tất cả các màn hình như PC, Xbox, Dịch vụ Windows Phone và
+
+138
+00:09:17,110 --> 00:09:19,690
+nhiều hơn để hỗ trợ một nền tảng UI duy nhất.
+
+139
+00:09:20,120 --> 00:09:26,200
+Kết quả của nỗ lực này là bạn, điều này khá giống với những khác biệt quan trọng.
+
+140
+00:09:26,800 --> 00:09:32,980
+Đầu tiên, nó chạy trong hộp cát, nghĩa là nó không có quyền truy cập đầy đủ vào tất cả các khả năng của hệ điều hành
+
+141
+00:09:33,250 --> 00:09:35,040
+tương tự như các ứng dụng lai trên thiết bị di động.
+
+142
+00:09:35,680 --> 00:09:39,460
+Thứ hai, như đã đề cập ở trên, nó chạy trên mọi cửa sổ có màn hình.
+
+143
+00:09:39,790 --> 00:09:43,780
+Vì vậy, nếu bạn muốn phát triển ứng dụng cho Windows và Xbox thì đây chính là cách thực hiện.
+
+144
+00:09:44,800 --> 00:09:46,410
+Thứ ba, nó kém trưởng thành hơn nhiều.
+
+145
+00:09:46,540 --> 00:09:51,460
+Và đó là tóm tắt về các lựa chọn thay thế cho máy tính để bàn.
+
+146
+00:09:51,460 --> 00:09:52,300
+Trong bảng này.
+
+147
+00:09:52,300 --> 00:09:56,800
+Bạn có thể xem tóm tắt về ba phương án thay thế mà bạn đã nói đến cùng với những khác biệt chính giữa
+
+148
+00:09:56,800 --> 00:09:57,010
+họ.
+
+149
+00:09:57,310 --> 00:09:58,750
+Như thường lệ, bạn đã mời.
+
+150
+00:09:58,850 --> 00:10:01,300
+Chúng tôi sử dụng bảng này làm tài liệu tham khảo cho hệ thống tương lai của bạn.
+
+151
+00:10:01,410 --> 00:10:05,030
+Chúng ta hãy tiếp tục và bây giờ hãy bầu chọn công nghệ dữ liệu.
+

@@ -1,0 +1,100 @@
+1
+00:00:00,290 --> 00:00:02,420
+Welcome to the case study section.
+
+2
+00:00:02,420 --> 00:00:07,939
+In this section, we are going to use all the knowledge gained throughout this course by designing architecture
+
+3
+00:00:07,939 --> 00:00:09,740
+of a real world application.
+
+4
+00:00:09,920 --> 00:00:14,960
+This will be a great opportunity for you to test your knowledge of all the topics we discussed and see
+
+5
+00:00:14,960 --> 00:00:17,120
+their usage in the real world.
+
+6
+00:00:17,270 --> 00:00:22,370
+The system we are going to design is quite similar to one of the systems I've been working on in recent
+
+7
+00:00:22,400 --> 00:00:22,920
+years.
+
+8
+00:00:22,940 --> 00:00:28,940
+This is not a toy system specifically designed to make your life easier, but a real world application
+
+9
+00:00:28,940 --> 00:00:34,910
+used by real customers serving real data and cost millions to design, develop and deploy.
+
+10
+00:00:35,270 --> 00:00:40,100
+I've changed some details in the system description to keep customers data safe, but other than that,
+
+11
+00:00:40,130 --> 00:00:41,630
+that's the real deal.
+
+12
+00:00:42,530 --> 00:00:47,570
+In this section I'll introduce you to the application and then we will go through all the stages in
+
+13
+00:00:47,570 --> 00:00:48,860
+the architecture process.
+
+14
+00:00:48,890 --> 00:00:55,100
+We will talk about requirements, map the components of the architecture, select the technology stack,
+
+15
+00:00:55,100 --> 00:01:02,100
+and then design the architecture of the various components and then get yourself prepared for a real
+
+16
+00:01:02,100 --> 00:01:02,820
+treat.
+
+17
+00:01:02,970 --> 00:01:07,950
+At the end of this section, you will have the opportunity to download a complete architecture document
+
+18
+00:01:07,950 --> 00:01:10,500
+containing the architecture of this application.
+
+19
+00:01:10,650 --> 00:01:16,140
+This is a real world architecture document, quite similar to the ones I prepare for my clients.
+
+20
+00:01:16,140 --> 00:01:21,690
+You are invited to read it and even better, use it as a template for the systems you are working on.
+
+21
+00:01:21,720 --> 00:01:26,730
+Be sure to listen closely to the usage guidelines of the document, and as long as you follow them,
+
+22
+00:01:26,730 --> 00:01:28,080
+it's yours to use.
+
+23
+00:01:28,110 --> 00:01:33,480
+This will make your life as an architect much easier and will boost your transition from developer to
+
+24
+00:01:33,480 --> 00:01:34,340
+an architect.
+
+25
+00:01:34,350 --> 00:01:35,940
+So let's go.
+

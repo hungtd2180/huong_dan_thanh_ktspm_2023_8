@@ -1,0 +1,136 @@
+1
+00:00:00,440 --> 00:00:05,900
+The facade pattern is one of the simplest patterns and still one of the most important of them.
+
+2
+00:00:06,080 --> 00:00:12,410
+In this pattern, a layer of abstraction is created in order to mask complex actions that lies underneath
+
+3
+00:00:12,410 --> 00:00:15,560
+it, thus helping the client to perform this action.
+
+4
+00:00:15,590 --> 00:00:18,380
+Again, let's explain it with an example.
+
+5
+00:00:18,560 --> 00:00:20,820
+Say we have a banking system.
+
+6
+00:00:20,840 --> 00:00:24,740
+Naturally, we need to have a way to transfer money between accounts.
+
+7
+00:00:24,770 --> 00:00:30,500
+The developers analyze the transfer process and comes up with a list of actions that should be performed.
+
+8
+00:00:30,620 --> 00:00:31,400
+One.
+
+9
+00:00:31,430 --> 00:00:35,150
+Make sure the accounts participating in the transfer actually exist.
+
+10
+00:00:35,300 --> 00:00:39,980
+To make sure there is enough money in the first account to perform the transfer.
+
+11
+00:00:40,070 --> 00:00:40,880
+Three.
+
+12
+00:00:40,910 --> 00:00:43,550
+Withdraw the money from the first account.
+
+13
+00:00:43,580 --> 00:00:44,450
+Four.
+
+14
+00:00:44,480 --> 00:00:46,890
+Deposit the money in the second account.
+
+15
+00:00:46,910 --> 00:00:48,170
+And five.
+
+16
+00:00:48,200 --> 00:00:52,610
+Add event in the account log documenting the transfer for both the accounts.
+
+17
+00:00:52,640 --> 00:00:58,280
+Now, being the pedantic developer they are, they build these five actions as five separate methods
+
+18
+00:00:58,280 --> 00:01:02,550
+in the code, which is good because all of these actions can stand on their own.
+
+19
+00:01:03,000 --> 00:01:08,250
+For example, we might need to make a check for funds on a specific account even when not transferring
+
+20
+00:01:08,250 --> 00:01:08,790
+money.
+
+21
+00:01:09,210 --> 00:01:14,910
+As a result of this, though, if a client now wants to transfer money, he has to access five methods.
+
+22
+00:01:14,940 --> 00:01:17,100
+It's a long and error prone process.
+
+23
+00:01:17,130 --> 00:01:20,340
+It's easy to forget one method or use the wrong parameters.
+
+24
+00:01:20,370 --> 00:01:22,680
+In short, a lot can go wrong here.
+
+25
+00:01:22,710 --> 00:01:24,990
+The facade pattern comes to the rescue.
+
+26
+00:01:25,020 --> 00:01:31,230
+The developers implement a facade which stands in front of the specific method and exposes a specific
+
+27
+00:01:31,230 --> 00:01:32,540
+focus functionality.
+
+28
+00:01:32,550 --> 00:01:38,340
+In our case, the facade is a method named transfer money, which accepts three arguments, account
+
+29
+00:01:38,340 --> 00:01:42,570
+to withdraw, account to deposit and some behind the scenes.
+
+30
+00:01:42,600 --> 00:01:48,180
+This method uses the above mentioned five methods to perform the transfer and not using any specific
+
+31
+00:01:48,180 --> 00:01:50,130
+code written for the method itself.
+
+32
+00:01:50,160 --> 00:01:53,490
+In other words, the facade does not invent new functionality.
+
+33
+00:01:53,520 --> 00:01:57,180
+It simply packages an existing one into an easy to use method.
+
+34
+00:01:57,390 --> 00:02:03,810
+Using the facade pattern makes your code much more readable and easy to use and is highly recommended.
+

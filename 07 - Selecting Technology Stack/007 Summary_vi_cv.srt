@@ -1,0 +1,68 @@
+1
+00:00:00,260 --> 00:00:05,600
+Trong phần này, chúng tôi thảo luận về quy trình lựa chọn ngăn xếp công nghệ và chia nó thành phần cuối, phần đầu
+
+2
+00:00:05,600 --> 00:00:06,950
+kết thúc và lưu trữ dữ liệu.
+
+3
+00:00:07,310 --> 00:00:12,380
+Tôi không cố gắng tuyên bố người chiến thắng ở mỗi hạng mục mà chỉ muốn chứng minh các nguyên tắc
+
+4
+00:00:12,380 --> 00:00:17,810
+điều đó ảnh hưởng đến việc lựa chọn và chúng ta nên đánh giá những thông số nào khi thực hiện lựa chọn này?
+
+5
+00:00:18,080 --> 00:00:23,510
+Tôi muốn nhấn mạnh lại một lần nữa tầm quan trọng của việc lựa chọn hợp lý, có giáo dục và tác động của nó là gì
+
+6
+00:00:23,510 --> 00:00:26,240
+của việc lựa chọn công nghệ sai vì những lý do sai lầm?
+
+7
+00:00:26,270 --> 00:00:29,230
+Có rất nhiều cảm xúc trong cuộc thảo luận này.
+
+8
+00:00:29,240 --> 00:00:34,640
+Bạn sẽ giải quyết các nhóm phát triển không sẵn sàng lắng nghe bất cứ điều gì không phải là dotnet ngay cả khi nó là
+
+9
+00:00:34,640 --> 00:00:36,790
+rõ ràng không phải là lựa chọn đúng đắn cho hệ thống.
+
+10
+00:00:36,800 --> 00:00:41,990
+Bạn sẽ tham gia vào các cuộc thảo luận sôi nổi giữa những người ủng hộ Angular và những người ủng hộ React và bạn sẽ
+
+11
+00:00:41,990 --> 00:00:47,740
+chắc chắn sẽ tham gia một cuộc họp thảo luận về NoSQL so với SQL vì tất cả những lý do sai lầm.
+
+12
+00:00:47,750 --> 00:00:51,230
+Lời khuyên tốt nhất của tôi là hãy tránh xa tuyến lửa.
+
+13
+00:00:51,260 --> 00:00:55,520
+Đưa ra tiếng nói lý trí được hỗ trợ bởi những con số và yếu tố cụ thể.
+
+14
+00:00:55,550 --> 00:00:58,720
+Đừng bao giờ để cảm xúc chi phối cuộc thảo luận này.
+
+15
+00:00:58,730 --> 00:01:02,600
+Nó sẽ gây hại cho kiến trúc của bạn và quan trọng hơn là danh tiếng của bạn.
+
+16
+00:01:02,610 --> 00:01:07,440
+Hãy tin tôi, sau khi hệ thống được triển khai thành công bằng các công nghệ mà bạn đề xuất,
+
+17
+00:01:07,440 --> 00:01:11,910
+dù lúc đầu họ có tức giận thế nào thì cuối cùng họ cũng sẽ cảm ơn bạn.
+

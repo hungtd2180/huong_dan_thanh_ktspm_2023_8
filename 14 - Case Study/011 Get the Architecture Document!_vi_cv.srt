@@ -1,0 +1,128 @@
+1
+00:00:00,440 --> 00:00:04,120
+Và như đã hứa, đây là tài liệu kiến trúc của bạn.
+
+2
+00:00:04,130 --> 00:00:08,870
+Trong phần tài nguyên của bài giảng này, bạn có thể tìm thấy toàn bộ tài liệu kiến trúc của hệ thống.
+
+3
+00:00:08,870 --> 00:00:11,660
+Chúng ta vừa thảo luận về hệ thống IO2.
+
+4
+00:00:11,750 --> 00:00:16,880
+Trong tài liệu bạn sẽ tìm thấy tất cả các phần chúng tôi đã nói về các yêu cầu cơ bản, điều hành
+
+5
+00:00:16,880 --> 00:00:19,510
+tóm tắt, kiến trúc, tổng quan và các thành phần.
+
+6
+00:00:19,520 --> 00:00:20,210
+Khoan sâu hơn.
+
+7
+00:00:20,210 --> 00:00:24,440
+Bạn sẽ thấy tất cả các quyết định chúng tôi đưa ra đều có lý do đầy đủ đằng sau.
+
+8
+00:00:24,440 --> 00:00:28,790
+Bạn sẽ thấy tất cả các hình ảnh và sơ đồ mà chúng tôi đã sử dụng trong cuộc thảo luận.
+
+9
+00:00:28,790 --> 00:00:31,220
+Bạn sẽ tìm thấy các yêu cầu chức năng và phi chức năng.
+
+10
+00:00:31,220 --> 00:00:35,540
+Bạn sẽ thấy tình huống khó xử về công nghệ mà chúng tôi gặp phải và những gì chúng tôi quyết định sử dụng.
+
+11
+00:00:35,570 --> 00:00:40,210
+Bạn sẽ tìm thấy tất cả các phương thức nhắn tin mà chúng tôi sẽ triển khai, v.v.
+
+12
+00:00:40,220 --> 00:00:45,950
+Tóm lại, bạn sẽ thấy toàn bộ kiến trúc mà chúng ta đã thảo luận được trình bày một cách chính thức trong một bản tóm tắt dễ đọc.
+
+13
+00:00:45,950 --> 00:00:46,610
+định dạng.
+
+14
+00:00:46,640 --> 00:00:53,120
+Bây giờ phần tốt là Hãy thoải mái sử dụng tài liệu này như một mẫu cho kiến trúc tương lai của bạn
+
+15
+00:00:53,120 --> 00:00:53,840
+tài liệu.
+
+16
+00:00:53,870 --> 00:00:58,850
+Một trong những nhiệm vụ chính của mỗi kiến trúc sư phần mềm là tạo ra tài liệu kiến trúc.
+
+17
+00:00:58,880 --> 00:01:02,790
+Sử dụng tài liệu này làm mẫu sẽ giúp công việc của bạn dễ dàng hơn rất nhiều.
+
+18
+00:01:02,790 --> 00:01:08,610
+Thay vì bắt đầu từ đầu và cố gắng tìm ra những gì cần viết và theo thứ tự nào, mẫu
+
+19
+00:01:08,610 --> 00:01:10,230
+giải quyết mọi việc cho bạn.
+
+20
+00:01:10,260 --> 00:01:14,370
+Tài liệu này thiết lập các phần, thứ tự và nội dung mong muốn của chúng.
+
+21
+00:01:14,400 --> 00:01:20,490
+Tất cả những gì bạn phải làm chỉ là điền vào chỗ trống và tất nhiên, hãy thoải mái sử dụng io để cụ thể
+
+22
+00:01:20,490 --> 00:01:23,100
+các phần làm nền tảng cho kiến trúc của bạn.
+
+23
+00:01:23,100 --> 00:01:27,870
+Dù bạn chọn sử dụng mẫu này theo cách nào, tôi chắc chắn nó sẽ giúp bạn trở nên tốt hơn, chuyên nghiệp hơn.
+
+24
+00:01:27,870 --> 00:01:28,650
+kiến trúc sư.
+
+25
+00:01:28,830 --> 00:01:32,520
+Một lưu ý cuối cùng trước khi bạn tải tài liệu xuống.
+
+26
+00:01:32,550 --> 00:01:37,980
+Lưu ý rằng ở đầu tài liệu có thông báo bản quyền nêu rõ mẫu này dựa trên
+
+27
+00:01:37,980 --> 00:01:38,940
+trên khóa học này.
+
+28
+00:01:38,940 --> 00:01:42,780
+Xin đừng xóa thông báo này vì đây là một phần quan trọng của tài liệu.
+
+29
+00:01:42,900 --> 00:01:49,500
+Bây giờ, sau khi tải xuống, hãy lấy tệp đó, dành thời gian và đọc kỹ.
+
+30
+00:01:49,530 --> 00:01:54,240
+Hãy đảm bảo rằng bạn cảm thấy thoải mái với cấu trúc và nội dung của nó và đảm bảo rằng bạn thấy được mối tương quan
+
+31
+00:01:54,240 --> 00:01:56,940
+giữa nó và các cuộc thảo luận chúng ta đã có trong phần này.
+
+32
+00:01:57,060 --> 00:02:01,110
+Sau khi đọc xong, chúng ta hãy chuyển sang phần tiếp theo.
+

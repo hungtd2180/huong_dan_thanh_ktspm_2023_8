@@ -1,0 +1,48 @@
+1
+00:00:00,290 --> 00:00:05,480
+Vâng, chúng tôi chỉ nói rằng các yêu cầu phi chức năng là những yêu cầu quan trọng nhất và rằng
+
+2
+00:00:05,480 --> 00:00:11,150
+kiến trúc sư không nên trong bất kỳ trường hợp nào, thiết kế hệ thống mà không biết phần không chức năng
+
+3
+00:00:11,150 --> 00:00:12,230
+yêu cầu là.
+
+4
+00:00:12,260 --> 00:00:16,520
+Nhưng điều quan trọng không kém là phải nhận thức được các yêu cầu về chức năng.
+
+5
+00:00:16,550 --> 00:00:21,440
+Nhiều kiến trúc sư cảm thấy họ chỉ cần lướt qua các yêu cầu chức năng và tập trung vào
+
+6
+00:00:21,470 --> 00:00:22,730
+những cái không có chức năng.
+
+7
+00:00:22,760 --> 00:00:24,350
+Đó cũng là một sai lầm.
+
+8
+00:00:24,710 --> 00:00:27,050
+Bạn còn nhớ định nghĩa của chúng tôi về kiến trúc không?
+
+9
+00:00:27,080 --> 00:00:30,660
+Hãy nhớ rằng một kiến trúc tốt phải cải thiện được lợi nhuận kinh doanh.
+
+10
+00:00:30,680 --> 00:00:34,160
+Điều đó sẽ không thể thực hiện được nếu bạn không chắc hệ thống sẽ làm gì.
+
+11
+00:00:34,190 --> 00:00:39,650
+Vì vậy, trước khi đi sâu vào các yêu cầu không chức năng, đây là lời nhắc nhở không mấy nhẹ nhàng rằng
+
+12
+00:00:39,650 --> 00:00:43,700
+các yêu cầu chức năng cũng quan trọng không kém và bạn phải thành thạo về chúng.
+

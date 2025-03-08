@@ -1,0 +1,44 @@
+1
+00:00:00,200 --> 00:00:04,220
+Welcome to the third section of this course, the architect's Mindset.
+
+2
+00:00:04,580 --> 00:00:09,440
+In this section, we will discuss one of the most important aspects of being an architect, which is
+
+3
+00:00:09,440 --> 00:00:11,030
+the architect's mindset.
+
+4
+00:00:11,540 --> 00:00:16,790
+If your current job is a technical one, such as a developer or a team leader, then you are probably
+
+5
+00:00:16,790 --> 00:00:20,630
+thinking about the work you do from a coding and development point of view.
+
+6
+00:00:20,660 --> 00:00:26,180
+But as you will see in this section, this is not always the most appropriate point of view for an architect.
+
+7
+00:00:26,480 --> 00:00:31,370
+The architect should often make a decision based on other factors which are sometimes foreign for a
+
+8
+00:00:31,370 --> 00:00:32,049
+developer.
+
+9
+00:00:32,060 --> 00:00:37,400
+But in order to be a really good architect, you have to adapt yourself to the new point of view, which
+
+10
+00:00:37,400 --> 00:00:39,880
+will make you a real asset for the organization.
+
+11
+00:00:39,890 --> 00:00:42,200
+So let's talk about this new mindset.
+

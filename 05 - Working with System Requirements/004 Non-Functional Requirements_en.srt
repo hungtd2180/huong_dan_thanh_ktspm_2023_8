@@ -1,0 +1,556 @@
+1
+00:00:00,230 --> 00:00:05,240
+We have already explained what non-functional requirements are, but let's go over it again just in
+
+2
+00:00:05,240 --> 00:00:05,900
+case.
+
+3
+00:00:05,930 --> 00:00:09,320
+So while functional requirements define what the system should do.
+
+4
+00:00:09,350 --> 00:00:13,250
+Non-functional requirements describe what the system should deal with.
+
+5
+00:00:13,370 --> 00:00:16,760
+Systems can deal with many challenges during their operation.
+
+6
+00:00:16,790 --> 00:00:19,610
+They can experience large number of concurrent users.
+
+7
+00:00:19,610 --> 00:00:24,710
+They can experience servers crash, they can suffer extremely high load of requests and so on.
+
+8
+00:00:24,860 --> 00:00:30,080
+Non-functional requirements basically describe what is the expected environment for the system with
+
+9
+00:00:30,080 --> 00:00:31,940
+emphasis on edge cases.
+
+10
+00:00:32,570 --> 00:00:37,100
+If you will take a look at the Wikipedia page for non-functional requirements, you will see a long
+
+11
+00:00:37,100 --> 00:00:38,590
+list of those requirements.
+
+12
+00:00:38,600 --> 00:00:43,820
+In real life, however, there are five non-functional requirements that we will usually deal with.
+
+13
+00:00:43,880 --> 00:00:52,070
+Those five are performance load data, volume, concurrent users and SLA.
+
+14
+00:00:53,300 --> 00:00:55,250
+Let's discuss each of them.
+
+15
+00:00:55,670 --> 00:00:56,930
+Performance.
+
+16
+00:00:57,230 --> 00:01:00,150
+Well, that sounds like a simple requirement, right?
+
+17
+00:01:00,180 --> 00:01:02,730
+What is the required performance for this system?
+
+18
+00:01:02,760 --> 00:01:03,600
+Fast.
+
+19
+00:01:03,630 --> 00:01:04,680
+Easy peasy.
+
+20
+00:01:04,890 --> 00:01:06,990
+Well, not so fast.
+
+21
+00:01:07,200 --> 00:01:12,420
+See what I did here when talking about performance, there are two things we should keep in mind.
+
+22
+00:01:12,810 --> 00:01:19,290
+One, always talk in numbers, and two, latency and throughput.
+
+23
+00:01:19,530 --> 00:01:21,300
+Let's talk about the first one.
+
+24
+00:01:22,410 --> 00:01:28,080
+When the client asks for a fast system, your next question should be what is fast?
+
+25
+00:01:28,290 --> 00:01:31,390
+Fast can mean a lot of things in a lot of systems.
+
+26
+00:01:31,410 --> 00:01:38,340
+I've worked on systems where fast meant 30 milliseconds and on systems where fast meant five seconds.
+
+27
+00:01:38,520 --> 00:01:43,380
+The problem is that your client probably wasn't thinking on the exact number and you will have to help
+
+28
+00:01:43,380 --> 00:01:44,190
+him with that.
+
+29
+00:01:44,820 --> 00:01:50,400
+The rule of thumb is that when there is an end user at the end of the flow, we usually need the task
+
+30
+00:01:50,400 --> 00:01:52,620
+to be complete in less than a second.
+
+31
+00:01:52,980 --> 00:01:58,950
+When working in a B2B environment, that's a business to business, we are usually looking at faster
+
+32
+00:01:58,950 --> 00:02:02,610
+systems that can measure even 100 milliseconds per task.
+
+33
+00:02:02,640 --> 00:02:09,060
+The reason for that is that we human beings are less sensitive to subsecond delays and for us, a data
+
+34
+00:02:09,060 --> 00:02:13,740
+that is displayed in one second or 700 milliseconds looks almost the same.
+
+35
+00:02:13,890 --> 00:02:20,010
+While for a software running on a machine with CPU cycles of a few milliseconds, this will be a very
+
+36
+00:02:20,010 --> 00:02:20,790
+long time.
+
+37
+00:02:21,740 --> 00:02:27,470
+But again, the most important thing is to work out this number together with the client or system analyst.
+
+38
+00:02:28,640 --> 00:02:31,280
+The second concept is about latency and throughput.
+
+39
+00:02:31,310 --> 00:02:35,990
+Those two words define the way we look at performance and give us two points of view on it.
+
+40
+00:02:36,020 --> 00:02:37,490
+Let's begin with latency.
+
+41
+00:02:38,300 --> 00:02:44,120
+Latency answers the question How much time does it take to perform a single task in the application?
+
+42
+00:02:44,210 --> 00:02:49,130
+For example, how much time will it take for the API to save the user data in the database?
+
+43
+00:02:49,160 --> 00:02:53,750
+Or how much time will it take to read a single file from the file system?
+
+44
+00:02:54,320 --> 00:02:58,700
+You can see that the latency deals with the time it takes to perform a single task.
+
+45
+00:02:59,090 --> 00:03:03,440
+Throughput, on the other hand, answers a completely different question.
+
+46
+00:03:03,680 --> 00:03:07,520
+How many tasks can be performed in a given time unit?
+
+47
+00:03:07,670 --> 00:03:14,600
+For example, how many users can be saved in the database in a minute, or how many files can be read
+
+48
+00:03:14,600 --> 00:03:15,560
+in a second?
+
+49
+00:03:15,920 --> 00:03:21,110
+Now let's look at some numbers so we can understand better the difference between latency and throughput.
+
+50
+00:03:21,140 --> 00:03:25,250
+Let's say the latency of saving user data is one second.
+
+51
+00:03:25,370 --> 00:03:29,310
+This is quite slow, but let's stay with it for the sake of the discussion.
+
+52
+00:03:29,790 --> 00:03:32,040
+Now, what would be the throughput?
+
+53
+00:03:32,070 --> 00:03:34,740
+Can we know how many users can be saved in one minute?
+
+54
+00:03:34,770 --> 00:03:36,960
+The answer is a resounding no.
+
+55
+00:03:36,990 --> 00:03:42,120
+If the application is well designed, deployed on a strong hardware and knows its way around the threads,
+
+56
+00:03:42,150 --> 00:03:46,110
+it might have a throughput of 1000 users saved in one minute.
+
+57
+00:03:46,230 --> 00:03:51,510
+On the other hand, if the code is buggy and there are a lot of memory leaks and no concurrency at all,
+
+58
+00:03:51,510 --> 00:03:56,760
+we won't be able to reach a throughput of 60, which is the latency multiplied by 60, the number of
+
+59
+00:03:56,760 --> 00:03:57,960
+seconds in a minute.
+
+60
+00:03:58,350 --> 00:04:00,870
+So this is the difference between latency and throughput.
+
+61
+00:04:00,870 --> 00:04:05,100
+And when discussing performance, both of them must be mentioned and set.
+
+62
+00:04:05,640 --> 00:04:07,530
+Now let's talk about load.
+
+63
+00:04:07,560 --> 00:04:13,170
+The load non-functional requirement defines what is the load or quantity of the application will have
+
+64
+00:04:13,170 --> 00:04:15,030
+to withstand without crashing.
+
+65
+00:04:15,240 --> 00:04:18,990
+The exact definition of load depends on the exact type of the application.
+
+66
+00:04:18,990 --> 00:04:24,720
+For example, for a web API based application, the load will usually be defined as how many concurrent
+
+67
+00:04:24,720 --> 00:04:28,230
+requests are going to be received by the system without crashing.
+
+68
+00:04:28,260 --> 00:04:32,820
+Note that this requirement looks similar to throughput, which defines how many requests can be handled
+
+69
+00:04:32,820 --> 00:04:34,230
+in a specific time unit.
+
+70
+00:04:34,260 --> 00:04:39,660
+The difference between the two is that while throughput defines the time unit, the load defines the
+
+71
+00:04:39,660 --> 00:04:45,120
+availability of the system, meaning the system should be able to handle the load without crashing down.
+
+72
+00:04:45,210 --> 00:04:51,990
+For example, the performance requirement can dictate throughput of 100 requests per second, but the
+
+73
+00:04:51,990 --> 00:04:57,480
+system should be able to handle 500 concurrent requests without crashing, even if those requests will
+
+74
+00:04:57,480 --> 00:04:59,080
+take more than a second to complete.
+
+75
+00:04:59,100 --> 00:05:04,110
+This definition is important since the worst thing that can happen to a system is to crash under heavy
+
+76
+00:05:04,110 --> 00:05:04,590
+load.
+
+77
+00:05:04,620 --> 00:05:09,510
+Users can tolerate a slowdown when there is a load, but they won't like it if the system will crash
+
+78
+00:05:09,510 --> 00:05:10,170
+and burn.
+
+79
+00:05:10,170 --> 00:05:14,040
+So the best practice here is to always look at peak numbers.
+
+80
+00:05:14,370 --> 00:05:20,070
+For example, for an e-commerce website, the regular load might be up to 200 concurrent requests.
+
+81
+00:05:20,070 --> 00:05:24,580
+But on Black Friday, we are looking at more than 2000 concurrent requests.
+
+82
+00:05:24,600 --> 00:05:29,370
+In that case, we should plan for the extreme case because this is when it's more important for our
+
+83
+00:05:29,370 --> 00:05:31,680
+system to be alive and functioning.
+
+84
+00:05:33,700 --> 00:05:35,650
+Next is data volume.
+
+85
+00:05:35,860 --> 00:05:42,160
+This requirement defines how much data in gigabytes or terabytes our system will accumulate over time.
+
+86
+00:05:42,340 --> 00:05:45,110
+This requirement is important for a few reasons.
+
+87
+00:05:45,130 --> 00:05:50,050
+It will dictate what kind of database you are going to use, since not all databases can handle large
+
+88
+00:05:50,050 --> 00:05:51,640
+quantities of data equally.
+
+89
+00:05:51,850 --> 00:05:58,390
+It will also determine what type of queries we are going to write because a query in a table of a 100,000
+
+90
+00:05:58,390 --> 00:06:03,540
+rows will be completely different from a query in a table of 100 million rows.
+
+91
+00:06:03,550 --> 00:06:05,760
+And of course it will help us plan ahead.
+
+92
+00:06:05,770 --> 00:06:10,300
+The storage we need to allocate the data volume usually has two aspects.
+
+93
+00:06:10,390 --> 00:06:16,990
+One, how much data is required on day one and two, what is the forecasted data growth?
+
+94
+00:06:17,970 --> 00:06:24,690
+For example, a system might need 500MB on its first day and is expected to grow by two terabytes annually.
+
+95
+00:06:24,900 --> 00:06:29,760
+Of course, the growth period can be different and can be weekly, monthly, quarterly and so on.
+
+96
+00:06:30,960 --> 00:06:33,060
+Next is concurrent users.
+
+97
+00:06:34,150 --> 00:06:38,500
+This requirement defines how many users will be using the system simultaneously.
+
+98
+00:06:39,100 --> 00:06:43,720
+This requirement is quite similar to the load requirement, which also defines how many requests should
+
+99
+00:06:43,720 --> 00:06:47,500
+be handled by the system simultaneously, but with one week difference.
+
+100
+00:06:47,890 --> 00:06:53,650
+The concurrent users requirement describes how many users will be using the system, not how many users
+
+101
+00:06:53,650 --> 00:06:55,300
+will be performing requests.
+
+102
+00:06:55,330 --> 00:07:01,180
+This distinction is important when a user is using a system, there are a lot of dead times when no
+
+103
+00:07:01,180 --> 00:07:02,520
+action is actually taken.
+
+104
+00:07:02,530 --> 00:07:06,490
+For example, a user is asking the system to display all the data.
+
+105
+00:07:06,520 --> 00:07:10,870
+The system executes an API that goes to the database and retrieves the data.
+
+106
+00:07:10,900 --> 00:07:12,310
+This is an actual action.
+
+107
+00:07:12,400 --> 00:07:14,650
+Now the user is looking at the data.
+
+108
+00:07:14,650 --> 00:07:16,720
+During this time the system is doing nothing.
+
+109
+00:07:16,750 --> 00:07:18,100
+The API is not working.
+
+110
+00:07:18,100 --> 00:07:21,010
+The database just sits there and the network is silent.
+
+111
+00:07:21,220 --> 00:07:26,920
+So as you can guess, systems that can hold 500 concurrent requests will be able to withstand a much
+
+112
+00:07:26,920 --> 00:07:28,720
+higher number of concurrent users.
+
+113
+00:07:29,110 --> 00:07:33,980
+The rule of thumb says that concurrent users are ten times the number of concurrent requests.
+
+114
+00:07:33,980 --> 00:07:40,280
+So if the system should work with 500 concurrent requests, it can support 5000 concurrent users.
+
+115
+00:07:40,280 --> 00:07:44,600
+But this number actually depends on the type of system and the usage pattern.
+
+116
+00:07:44,880 --> 00:07:45,350
+SLA.
+
+117
+00:07:46,230 --> 00:07:49,080
+The last functional requirement we will discuss is the SLA.
+
+118
+00:07:49,440 --> 00:07:55,650
+SLA, which stands for Service Level Agreement, describes what is the required uptime for this system
+
+119
+00:07:55,650 --> 00:07:56,650
+in percentage.
+
+120
+00:07:56,670 --> 00:08:00,250
+This term is widely used by almost all public cloud providers.
+
+121
+00:08:00,270 --> 00:08:03,170
+One of the biggest competitions between them is on the SLA.
+
+122
+00:08:03,180 --> 00:08:05,010
+For example, Azure Cosmos.
+
+123
+00:08:05,010 --> 00:08:08,700
+DB takes pride with its 99.99% SLA.
+
+124
+00:08:08,940 --> 00:08:12,780
+This is translated to less than an hour of downtime in a year.
+
+125
+00:08:12,810 --> 00:08:14,280
+Take a look at the numbers.
+
+126
+00:08:19,300 --> 00:08:22,330
+The SLA has great influence on the design of the system.
+
+127
+00:08:22,330 --> 00:08:27,760
+For example, a system that cannot be brought down must have a sophisticated update mechanism that won't
+
+128
+00:08:27,760 --> 00:08:30,130
+require turning off the system while it's updating.
+
+129
+00:08:30,160 --> 00:08:33,370
+This is possible, of course, but it has to be designed this way.
+
+130
+00:08:34,179 --> 00:08:37,900
+One important thing to note about SLA is client expectations.
+
+131
+00:08:38,289 --> 00:08:43,210
+If you will ask the client what is required for the system, he will usually give you an answer along
+
+132
+00:08:43,210 --> 00:08:49,690
+the lines of 100% of the famous five nines, which is 99.999%.
+
+133
+00:08:49,930 --> 00:08:52,970
+When this happens, I usually tell him no problem.
+
+134
+00:08:52,990 --> 00:08:57,760
+For this we will need to build at least three data centers in different continents with independent
+
+135
+00:08:57,760 --> 00:09:01,300
+and dual power stations and automatic failover between them.
+
+136
+00:09:01,300 --> 00:09:02,260
+What do you say?
+
+137
+00:09:02,860 --> 00:09:07,360
+This generally brings him down to earth and we discuss more realistic goals.
+
+138
+00:09:07,450 --> 00:09:11,890
+So these were the most common non-functional requirements you will need to have for the system.
+
+139
+00:09:11,890 --> 00:09:17,170
+And again, never start working on the architecture before you have set those requirements.
+

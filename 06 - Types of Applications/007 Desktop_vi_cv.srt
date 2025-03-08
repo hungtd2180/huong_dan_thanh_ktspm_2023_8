@@ -1,0 +1,80 @@
+1
+00:00:00,170 --> 00:00:03,190
+Ứng dụng dành cho máy tính để bàn là những ứng dụng kém cỏi trong thế giới ứng dụng.
+
+2
+00:00:03,200 --> 00:00:06,360
+Trong một thế giới mà API web và công nghệ đám mây đang trở nên thịnh hành.
+
+3
+00:00:06,380 --> 00:00:10,010
+Hầu như không ai nói về ứng dụng máy tính để bàn và có lý do chính đáng.
+
+4
+00:00:10,430 --> 00:00:13,580
+Ứng dụng dành cho máy tính để bàn là ứng dụng chạy chủ yếu trên PC.
+
+5
+00:00:13,820 --> 00:00:19,610
+Điều quan trọng là phải phân biệt nó với các ứng dụng khách hàng phong phú truy cập API Web và chỉ là một hình ảnh mỏng
+
+6
+00:00:19,610 --> 00:00:21,080
+lớp phía trên dữ liệu.
+
+7
+00:00:21,110 --> 00:00:26,330
+Tôi đang nói về một ứng dụng có tất cả các tài nguyên của nó, bao gồm logic và dữ liệu trên cục bộ
+
+8
+00:00:26,330 --> 00:00:26,660
+Máy tính.
+
+9
+00:00:27,560 --> 00:00:33,110
+Ứng dụng này có thể sử dụng internet cho một số tác vụ tùy ý, chẳng hạn như xác thực giấy phép hoặc
+
+10
+00:00:33,110 --> 00:00:37,430
+gửi nhật ký hoạt động, nhưng nó vẫn hoạt động đầy đủ khi ngoại tuyến.
+
+11
+00:00:37,820 --> 00:00:42,200
+Một khía cạnh khác của ứng dụng máy tính để bàn là UI hoặc giao diện người dùng.
+
+12
+00:00:42,290 --> 00:00:47,240
+Ứng dụng dành cho máy tính để bàn hướng đến người dùng cuối và thường có giao diện người dùng tuyệt vời.
+
+13
+00:00:47,910 --> 00:00:52,980
+Một ví dụ tốt về ứng dụng như vậy là Microsoft Word, có thể hoạt động với hoặc không có Internet đang hoạt động.
+
+14
+00:00:52,980 --> 00:00:53,440
+sự liên quan.
+
+15
+00:00:53,460 --> 00:00:59,070
+Tất nhiên, bạn sẽ mất một số khả năng khi ngoại tuyến, chẳng hạn như kết nối đám mây, nhưng vẫn còn
+
+16
+00:00:59,070 --> 00:01:05,370
+có thể hoạt động đầy đủ theo cách này nhờ sử dụng rộng rãi điện toán đám mây và kết nối internet phổ biến.
+
+17
+00:01:05,400 --> 00:01:07,830
+Sự phổ biến của ứng dụng máy tính để bàn đang giảm dần.
+
+18
+00:01:08,370 --> 00:01:15,930
+Bạn sẽ sử dụng các ứng dụng máy tính để bàn chủ yếu cho các hành động lấy người dùng làm trung tâm như xử lý văn bản hoặc tính toán và
+
+19
+00:01:15,930 --> 00:01:17,090
+chơi game nặng.
+
+20
+00:01:17,100 --> 00:01:22,500
+Nhưng một lần nữa, bạn có thể dành cả đời làm kiến trúc sư mà không cần thiết kế ứng dụng máy tính để bàn dù chỉ một lần.
+

@@ -1,0 +1,28 @@
+1
+00:00:00,680 --> 00:00:05,840
+Trong các phần trước, chúng ta đã thảo luận về khái niệm kiến trúc của các thành phần và hệ thống phần mềm và
+
+2
+00:00:05,840 --> 00:00:09,110
+tập trung vào các cân nhắc chuyên môn về khả năng mở rộng, tính dự phòng.
+
+3
+00:00:09,110 --> 00:00:09,890
+Vân vân.
+
+4
+00:00:09,920 --> 00:00:15,580
+Tuy nhiên, với tư cách là kiến trúc sư, chúng tôi thường cân nhắc thêm khi đưa ra quyết định về kiến trúc
+
+5
+00:00:15,590 --> 00:00:20,420
+những cân nhắc không liên quan gì đến các phương pháp hay nhất, kiến trúc hoặc phần mềm.
+
+6
+00:00:20,720 --> 00:00:26,000
+Trong phần này, chúng ta sẽ thảo luận về những cân nhắc này và xem chúng có thể ảnh hưởng đến ngăn xếp công nghệ như thế nào
+
+7
+00:00:26,000 --> 00:00:28,130
+và các mẫu kiến trúc chúng ta sẽ sử dụng.
+

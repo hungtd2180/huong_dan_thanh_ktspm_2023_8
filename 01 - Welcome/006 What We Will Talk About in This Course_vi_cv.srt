@@ -1,0 +1,319 @@
+1
+00:00:00,260 --> 00:00:03,080
+Vậy chúng ta sẽ nói về điều gì trong khóa học này?
+
+2
+00:00:03,350 --> 00:00:06,540
+Vâng, chúng ta sẽ đề cập đến rất nhiều tài liệu.
+
+3
+00:00:06,560 --> 00:00:10,250
+Đầu tiên là phần chào mừng, mà chúng ta đang ở ngay bây giờ.
+
+4
+00:00:10,760 --> 00:00:13,910
+Sau đó, chúng ta sẽ nói về định nghĩa của một kiến ​​trúc sư phần mềm.
+
+5
+00:00:13,910 --> 00:00:16,880
+Như bạn sẽ thấy, có một số loại kiến ​​trúc sư.
+
+6
+00:00:16,910 --> 00:00:23,030
+Chúng tôi sẽ mô tả một số loại trong số chúng và sau đó tập trung vào các loại mà chúng tôi thực sự quan tâm, kiến ​​trúc sư phần mềm.
+
+7
+00:00:24,080 --> 00:00:29,360
+Sau đó, chúng ta sẽ thảo luận về những gì có lẽ là thay đổi lớn nhất mà một kiến ​​trúc sư phần mềm nên thực hiện để mang lại
+
+8
+00:00:29,360 --> 00:00:31,400
+lợi ích tối đa cho tổ chức của họ.
+
+9
+00:00:31,430 --> 00:00:34,940
+Áp dụng tư duy kinh doanh thay vì tư duy công nghệ.
+
+10
+00:00:35,060 --> 00:00:39,770
+Chúng ta sẽ nói về ý nghĩa của tư duy này và lý do tại sao nó lại quan trọng đối với kiến ​​trúc sư.
+
+11
+00:00:40,460 --> 00:00:44,140
+Phần thứ tư trong khóa học này phác thảo quy trình kiến ​​trúc.
+
+12
+00:00:44,150 --> 00:00:49,910
+Các bước thực tế mà kiến ​​trúc sư cần thực hiện để xây dựng một kiến ​​trúc mạnh mẽ nhưng thực tế là gì
+
+13
+00:00:49,910 --> 00:00:52,010
+cho hệ thống mà cô ấy đang làm việc?
+
+14
+00:00:52,760 --> 00:00:58,430
+Các phần tiếp theo sẽ đi sâu vào quy trình này và nêu chi tiết các thông số cụ thể của từng bước.
+
+15
+00:00:59,180 --> 00:01:04,620
+Phần làm việc với Yêu cầu hệ thống nói về tầm quan trọng của việc hiểu đầy đủhệ thống
+
+16
+00:01:04,620 --> 00:01:09,270
+yêu cầu và giới thiệu cho chúng ta khái niệm về yêu cầu phi chức năng.
+
+17
+00:01:09,480 --> 00:01:14,430
+Sau khi thảo luận về các yêu cầu, chúng ta sẽ chuyển sự chú ý của mình sang chính ứng dụng.
+
+18
+00:01:16,270 --> 00:01:20,080
+Điều đầu tiên mà một kiến ​​trúc sư nên làm là xác định loại ứng dụng.
+
+19
+00:01:20,080 --> 00:01:25,240
+Và trong phần này, chúng ta sẽ khám phá các loại ứng dụng chính thống khác nhau và các
+
+20
+00:01:25,240 --> 00:01:27,160
+thuộc tính chính của từng loại.
+
+21
+00:01:27,730 --> 00:01:32,320
+Sau khi chúng ta đã quyết định loại ứng dụng, đã đến lúc chọn ngăn xếp công nghệ.
+
+22
+00:01:32,350 --> 00:01:37,720
+Trong phần này, chúng ta sẽ thảo luận về các cân nhắc khác nhau khi chọn ngăn xếp công nghệ và khám phá
+
+23
+00:01:37,720 --> 00:01:42,220
+nhiều tùy chọn triển khai cho giao diện người dùng, giao diện quản trị và kho dữ liệu.
+
+24
+00:01:42,550 --> 00:01:47,110
+Sau khi đã chọn ngăn xếp công nghệ, đã đến lúc bắt đầu nói về kiến ​​trúc.
+
+25
+00:01:47,140 --> 00:01:48,280
+Nhưng hãy đợi đã.
+
+26
+00:01:48,310 --> 00:01:53,890
+Trước khi thảo luận về kiến ​​trúc, chúng ta cần đáp ứng một tập hợp các khả năng sẽ giúp chúng ta thiết kế một kiến ​​trúc
+
+27
+00:01:53,890 --> 00:01:56,740
+đáp ứng các yêu cầu phi chức năng.
+
+28
+00:01:56,740 --> 00:02:02,650
+Và để hiểu đầy đủ các yêu cầu phi chức năng, chúng ta sẽ đáp ứng các điểm nổi bật về phong cách.
+
+29
+00:02:02,680 --> 00:02:08,050
+Không, họ không phải là một gia đình lập dị, mà là một tập hợp các yêu cầu phi chức năng mà mọi kiến ​​trúc sư nên
+
+30
+00:02:08,050 --> 00:02:12,520
+biết về và đảm bảo kiến ​​trúc của cô ấy phù hợp với họ.
+
+31
+00:02:13,840 --> 00:02:17,590
+Và bây giờ là lúc bắt đầu xem xét các thành phần của ứng dụng.
+
+32
+00:02:17,620 --> 00:02:22,780
+Các thành phần là khối xây dựng của hầu hết mọi ứng dụng và chúng phải được thiết kế đúng cách
+
+33
+00:02:22,780 --> 00:02:26,890
+để đảm bảo ứng dụng nhanh, hiệu quả và dễ bảo trì.
+
+34
+00:02:27,130 --> 00:02:31,240
+Trong phần này, chúng ta sẽ đi sâu vào các thuộc tính của một thành phần được thiết kế tốt.
+
+35
+00:02:31,270 --> 00:02:37,120
+Lưu ý: Phần này hơi thấp một chút, nhưng là điều bắt buộc đối với mọi kiến ​​trúc sư để có thể
+
+36
+00:02:37,120 --> 00:02:39,310
+xem mã mà không ngất xỉu.
+
+37
+00:02:40,740 --> 00:02:43,560
+Phần tiếp theo là phần giới thiệu về các mẫu thiết kế.
+
+38
+00:02:43,560 --> 00:02:48,450
+Có thể bạn đã nghe nói về các mẫu thiết kế rồi, nhưng ngay cả khi chưa nghe, đừng lo, chúng ta sẽ thảo luận về
+
+39
+00:02:48,450 --> 00:02:51,540
+ý tưởng đằng sau các mẫu thiết kế và đi sâu vào một số mẫu trong số đó.
+
+40
+00:02:53,080 --> 00:02:58,420
+Sau khi nói về cấp độ vi mô của hệ thống, đã đến lúc lùi lại một bước và xem xét cấp độ vĩ mô
+
+41
+00:02:58,420 --> 00:03:00,700
+như toàn bộ hệ thống.
+
+42
+00:03:00,730 --> 00:03:06,340
+Để một hệ thống đáng tin cậy, nhanh chóng, an toàn và dễ bảo trì, điều quan trọng là phải
+
+43
+00:03:06,340 --> 00:03:09,490
+cân nhắc các thuộc tính khác nhau của một hệ thống được thiết kế tốt.
+
+44
+00:03:09,520 --> 00:03:14,050
+Chúng ta sẽ thảo luận về các thuộc tính đó và tìm hiểu cách chúng ảnh hưởng đến kiến ​​trúc.
+
+45
+00:03:14,140 --> 00:03:20,410
+Mọi kiến ​​trúc sư dày dạn kinh nghiệm đều biết rằng các quyết định về kiến ​​trúc hiếm khi được đưa ra trên cơ sở kỹ thuật thuần túy.
+
+46
+00:03:20,440 --> 00:03:24,820
+Luôn có những cân nhắc và hạn chế khác phải được tính đến.
+
+47
+00:03:25,030 --> 00:03:29,980
+Trong phần tiếp theo, chúng ta sẽ khám phá những hạn chế phổ biến nhất và xem chúng có thể ảnh hưởng đến
+
+48
+00:03:29,980 --> 00:03:30,910
+kiến trúc như thế nào.
+
+49
+00:03:30,910 --> 00:03:33,340
+Và sau đó, hãy đánh trống.
+
+50
+00:03:33,370 --> 00:03:38,860
+Chúng ta đến với phần có lẽ là quan trọng nhất trong khóa học này, tài liệu kiến ​​trúc.
+
+51
+00:03:39,460 --> 00:03:42,610
+Tài liệu này là đỉnh cao của quá trình kiến ​​trúc.
+
+52
+00:03:42,640 --> 00:03:47,890
+Đây là sản phẩm của công nghệ yêu cầu, thành phần ngăn xếp, hệ thống kiến ​​trúc, kiến ​​trúc,
+
+53
+00:03:47,890 --> 00:03:53,150
+các cân nhắc bên ngoài, các cuộc họp tràn ngập cà phê và các buổi viết dài im lặng.
+
+54
+00:03:53,780 --> 00:03:58,880
+Tài liệu mô tả kiến ​​trúc được thiết kế cho hệ thống và chứa mọi thứ mà các nhà phát triển
+
+55
+00:03:58,880 --> 00:04:02,570
+và các trưởng nhóm cần biết để bắt đầu phát triển hệ thống.
+
+56
+00:04:02,780 --> 00:04:08,240
+Trong phần này, chúng ta sẽ xem xét các tài liệu, mục tiêu, đối tượng và cấu trúc và thảo luận về nội dung
+
+57
+00:04:08,240 --> 00:04:09,950
+của từng phần trong tài liệu.
+
+58
+00:04:09,980 --> 00:04:14,570
+Sau khi chúng ta đã nói về tài liệu, đã đến lúc đưa mọi thứ chúng ta đã nói vào thử nghiệm.
+
+59
+00:04:15,680 --> 00:04:20,690
+Trong phần nghiên cứu tình huống, chúng ta sẽ thảo luận về một hệ thống mà chúng ta cần thiết kế cho một công ty IoT hư cấu.
+
+60
+00:04:20,720 --> 00:04:25,310
+Chúng ta sẽ cùng nhau thực hiện tất cả các bước mà chúng ta đã nói về, hiểu các yêu cầu, quyết định về
+
+61
+00:04:25,310 --> 00:04:30,770
+bản đồ ngăn xếp công nghệ và thiết kế các thành phần khác nhau, và nói về tài liệu kiến ​​trúc
+
+62
+00:04:30,770 --> 00:04:31,640
+cấu trúc.
+
+63
+00:04:31,820 --> 00:04:37,070
+Ở cuối phần này, bạn sẽ tìm thấy một phần thưởng rất đặc biệt, một tài liệu kiến ​​trúc hoàn chỉnh
+
+64
+00:04:37,070 --> 00:04:41,450
+với tất cả các phần được thảo luận trong khóa học này đã sẵn sàng để bạn tải xuống và sử dụng.
+
+65
+00:04:41,480 --> 00:04:46,460
+Bạn có thể sử dụng nó như một mẫu cho các tài liệu trong tương lai của mình hoặc làm tài liệu tham khảo cho tài liệu của riêng bạn.
+
+66
+00:04:46,460 --> 00:04:48,500
+Nhưng dù sao thì bạn cũng có thể sử dụng nó.
+
+67
+00:04:48,530 --> 00:04:49,490
+Hãy tận hưởng nhé.
+
+68
+00:04:51,370 --> 00:04:56,740
+Kiến trúc phần mềm là một thế giới chuyển động, sôi động và luôn có những xu hướng và tiến bộ mới.
+
+69
+00:04:56,770 --> 00:05:04,000
+Phần tiếp theo sẽ khám phá một số khái niệm kiến ​​trúc nâng cao, chẳng hạn như dịch vụ vi mô và nguồn sự kiện.
+
+70
+00:05:04,030 --> 00:05:06,400
+Đừng lo nếu bạn không biết những điều này có nghĩa là gì.
+
+71
+00:05:06,400 --> 00:05:07,480
+Tôi sẽ giải thích tất cả.
+
+72
+00:05:09,370 --> 00:05:13,570
+Và phần cuối cùng nhưng không kém phần quan trọng của khóa học này là về các kỹ năng mềm.
+
+73
+00:05:13,960 --> 00:05:16,360
+Một kiến ​​trúc sư giỏi phải rèn luyện các kỹ năng mềm của mình.
+
+74
+00:05:16,360 --> 00:05:20,230
+Bạn cần biết cách nói chuyện với mọi người, cách lắng nghe, cách ứng xử với những lời chỉ trích.
+
+75
+00:05:20,230 --> 00:05:21,910
+Và bạn sẽ nhận được rất nhiều điều này.
+
+76
+00:05:21,910 --> 00:05:24,760
+Cách đàm phán với tổ chức chính trị và nhiều hơn nữa.
+
+77
+00:05:24,790 --> 00:05:30,370
+Phần Kỹ năng mềm đề cập đến những chủ đề đó và tôi khuyến khích bạn chú ý đến phần này.
+
+78
+00:05:30,400 --> 00:05:33,850
+Đây có thể chính xác là điều sẽ giúp bạn trở thành một kiến ​​trúc sư tuyệt vời.
+
+79
+00:05:34,430 --> 00:05:38,790
+Và sau tất cả những điều này, chúng ta sẽ kết luận và suy ngẫm về những gì chúng ta đã cùng nhau học được.
+
+80
+00:05:38,810 --> 00:05:44,630
+Vì vậy, hãy chuẩn bị tinh thần cho thế giới hấp dẫn của kiến ​​trúc phần mềm và bắt đầu thôi.

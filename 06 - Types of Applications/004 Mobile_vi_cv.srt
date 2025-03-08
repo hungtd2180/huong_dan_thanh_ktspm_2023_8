@@ -1,0 +1,48 @@
+1
+00:00:00,360 --> 00:00:03,660
+Vâng, tôi đoán là bạn có thể đoán được loại này là gì.
+
+2
+00:00:03,690 --> 00:00:04,740
+Ứng dụng di động.
+
+3
+00:00:04,770 --> 00:00:10,560
+Như tên gọi của chúng, là những ứng dụng chạy trên điện thoại di động, cụ thể là điện thoại thông minh, có thể là Android
+
+4
+00:00:10,560 --> 00:00:12,060
+được cung cấp năng lượng hoặc iPhone.
+
+5
+00:00:12,570 --> 00:00:18,570
+Các ứng dụng di động hiện đại kết nối với API web mọi lúc cho nhiều mục đích Ghi nhật ký, tải các cấp độ tiếp theo,
+
+6
+00:00:18,570 --> 00:00:21,630
+lưu trữ nội dung do người dùng tạo ra và nhiều hơn thế nữa.
+
+7
+00:00:21,930 --> 00:00:26,670
+Trên thực tế, không có nhiều ứng dụng di động, có lẽ chỉ có các trò chơi có thể hoạt động bình thường mà không cần
+
+8
+00:00:26,670 --> 00:00:27,840
+kết nối internet.
+
+9
+00:00:28,470 --> 00:00:34,590
+Ứng dụng di động sẽ được sử dụng chủ yếu cho các ứng dụng yêu cầu tương tác của người dùng, ví dụ như trò chơi hoặc mạng xã hội
+
+10
+00:00:34,590 --> 00:00:35,130
+ứng dụng.
+
+11
+00:00:35,280 --> 00:00:39,510
+Giao diện cho ứng dụng API web để hiển thị nhiều loại nội dung khác nhau.
+
+12
+00:00:39,510 --> 00:00:45,690
+Ví dụ, tin tức và ứng dụng có thông tin vị trí sẽ được hưởng lợi từ GPS của điện thoại.
+

@@ -1,0 +1,336 @@
+1
+00:00:00,590 --> 00:00:01,810
+We already discussed.
+
+2
+00:00:01,819 --> 00:00:04,070
+Loose Coupling is a software component section.
+
+3
+00:00:04,070 --> 00:00:09,710
+When we talked about the need to loose couple classes using dependency injection so that changes in
+
+4
+00:00:09,710 --> 00:00:12,920
+one class won't necessarily affect other classes.
+
+5
+00:00:12,950 --> 00:00:18,680
+This concept is also true for system architecture, although on another scale, when talking about loose
+
+6
+00:00:18,680 --> 00:00:24,380
+coupling in system architecture, we talk about making sure the various components or services are not
+
+7
+00:00:24,380 --> 00:00:26,580
+strongly tied to other components.
+
+8
+00:00:26,600 --> 00:00:31,730
+The reasoning for this is again quite similar to the loose coupling inside components.
+
+9
+00:00:32,240 --> 00:00:38,780
+If services will be coupled to other services, then every time a service is changed and in modern systems,
+
+10
+00:00:38,780 --> 00:00:40,010
+this happens a lot.
+
+11
+00:00:40,040 --> 00:00:43,370
+This change might affect other services that use it.
+
+12
+00:00:43,760 --> 00:00:49,010
+By loosely coupling the services, we ensure the independence of each of the services and make sure
+
+13
+00:00:49,010 --> 00:00:53,000
+they can be modified with minimal impact on other services, if at all.
+
+14
+00:00:53,270 --> 00:00:58,430
+This will make our system much more flexible and of course very easy to maintain.
+
+15
+00:00:58,550 --> 00:01:04,349
+Now you might have a good question here, since different services run in different processes and do
+
+16
+00:01:04,349 --> 00:01:07,290
+not share the same code, what's the point of loose coupling?
+
+17
+00:01:07,320 --> 00:01:13,320
+It's not that when a single class is changed in service A it will affect other classes in service B.
+
+18
+00:01:13,440 --> 00:01:15,850
+Well, that's indeed a good question.
+
+19
+00:01:15,870 --> 00:01:22,470
+In fact, loose coupling in services or components has other meaning than loose coupling inside components.
+
+20
+00:01:23,060 --> 00:01:28,910
+In general, loose coupling in services means that the fact that a service is implemented in a specific
+
+21
+00:01:28,910 --> 00:01:35,720
+platform or exposes specific API will not force other services to use the same platform.
+
+22
+00:01:35,750 --> 00:01:42,860
+In addition, loose coupling also means that changes in the service API, such as its URL or its parameters
+
+23
+00:01:42,860 --> 00:01:46,250
+will have minimal to no effect on the calling services.
+
+24
+00:01:46,520 --> 00:01:48,440
+Let's look at an example.
+
+25
+00:01:49,220 --> 00:01:52,700
+Say we have a service that exposes stock quotes.
+
+26
+00:01:52,730 --> 00:01:54,470
+The service is Java based.
+
+27
+00:01:54,500 --> 00:01:58,820
+Now let's say we need another service that manages portfolios for customers.
+
+28
+00:01:58,850 --> 00:02:03,650
+Naturally, this service will have to query the stock quotes service for some data.
+
+29
+00:02:03,770 --> 00:02:09,560
+The stock service exposes its API as a Java RMI remote method invocation.
+
+30
+00:02:09,590 --> 00:02:14,480
+This is a simple, performant and effective method for executing API on remote objects.
+
+31
+00:02:14,510 --> 00:02:21,080
+The problem is using RMI, the calling service, which is the portfolio service must also be developed
+
+32
+00:02:21,080 --> 00:02:21,890
+in Java.
+
+33
+00:02:21,980 --> 00:02:24,120
+This is a limitation of Java RMI.
+
+34
+00:02:24,420 --> 00:02:27,690
+So in this example we created a strong coupling.
+
+35
+00:02:27,720 --> 00:02:33,960
+The implementation of the stock service forced the developers to use Java also for the portfolio service.
+
+36
+00:02:34,420 --> 00:02:37,060
+Let's look at another, more modern example.
+
+37
+00:02:37,780 --> 00:02:44,050
+The stock services developers understood that RMI is not the right solution for modern apps and switched
+
+38
+00:02:44,050 --> 00:02:48,310
+to Rest API, which is a de facto standard for API nowadays.
+
+39
+00:02:48,400 --> 00:02:55,090
+Another service responsible for creating investing recommendation was built in Python and is querying
+
+40
+00:02:55,090 --> 00:02:56,110
+the stock service.
+
+41
+00:02:56,140 --> 00:03:00,820
+This time the querying is done by making a rest call to the stock service.
+
+42
+00:03:00,850 --> 00:03:05,980
+Note that the service is implemented in Python this time and there is no problem with that.
+
+43
+00:03:06,310 --> 00:03:12,640
+Everything is good for a few months and then the stock service has to be moved to another URL for some
+
+44
+00:03:12,910 --> 00:03:14,020
+related reasons.
+
+45
+00:03:14,230 --> 00:03:20,710
+What happens now is that because the stock service URL has changed all the services, working with it
+
+46
+00:03:20,710 --> 00:03:23,830
+has to change their code to point to the new URL.
+
+47
+00:03:24,460 --> 00:03:30,370
+That means one thing there is a strong coupling between the services, even though the API itself is
+
+48
+00:03:30,370 --> 00:03:33,520
+exposed using standard platform agnostic rest API.
+
+49
+00:03:33,940 --> 00:03:37,790
+To make it more clear, let's talk about a full blown application.
+
+50
+00:03:37,820 --> 00:03:41,240
+This application will probably have at least six services.
+
+51
+00:03:41,270 --> 00:03:44,210
+Naturally, they are going to communicate with each other.
+
+52
+00:03:44,360 --> 00:03:50,030
+Now, if they communicate directly like this, we will have what is known as the spider web.
+
+53
+00:03:50,120 --> 00:03:51,890
+I guess you can understand why.
+
+54
+00:03:52,520 --> 00:03:59,060
+Now imagine what will happen if a single service will change its URL, see how many services will be
+
+55
+00:03:59,060 --> 00:03:59,780
+affected.
+
+56
+00:03:59,810 --> 00:04:05,960
+If your services map looks like a spider web, be ready for a nasty surprise when even one of the URL
+
+57
+00:04:05,960 --> 00:04:06,650
+is changed.
+
+58
+00:04:06,680 --> 00:04:10,280
+The spider web is a sure sign of a strong coupling system.
+
+59
+00:04:10,580 --> 00:04:13,880
+Now there are a couple of ways to solve this coupling.
+
+60
+00:04:14,120 --> 00:04:17,800
+One Build a Yellow Pages directory for the service.
+
+61
+00:04:17,810 --> 00:04:23,840
+Whenever a service needs to communicate with other service, it asks the directory for the URL of the
+
+62
+00:04:23,840 --> 00:04:27,710
+service it wants to access and uses the URL it gets.
+
+63
+00:04:27,740 --> 00:04:33,890
+This way the URL is not hard coded into the service and when it changes the change affects only a single
+
+64
+00:04:33,890 --> 00:04:34,310
+service.
+
+65
+00:04:34,310 --> 00:04:35,420
+The directory.
+
+66
+00:04:35,630 --> 00:04:38,450
+In this solution there is only a single URL.
+
+67
+00:04:38,450 --> 00:04:45,260
+The services need to know the directories and so if it changes which won't happen frequently, the change
+
+68
+00:04:45,260 --> 00:04:47,630
+will be limited to a single URL only.
+
+69
+00:04:47,840 --> 00:04:54,260
+You can develop one of your own and there are some great tools that do just that, such as console.
+
+70
+00:04:56,060 --> 00:04:59,420
+Another way is to build a middleman or gateway.
+
+71
+00:04:59,450 --> 00:05:05,690
+In this scenario, the service accesses the middleman and asks it to go to the stock service and make
+
+72
+00:05:05,720 --> 00:05:06,470
+a query.
+
+73
+00:05:06,500 --> 00:05:13,130
+The middleman holds an internal mapping table, which maps tasks to URLs, and so it knows which URL
+
+74
+00:05:13,160 --> 00:05:17,210
+to access in order to fulfill the task given by the calling service.
+
+75
+00:05:17,300 --> 00:05:23,510
+The calling service has no idea what the URL of the stock service is or even if there is a stock service.
+
+76
+00:05:23,540 --> 00:05:28,500
+All it knows is that he asked the middleman to do something and it was done.
+
+77
+00:05:28,550 --> 00:05:31,460
+It doesn't care how, where and by whom.
+
+78
+00:05:31,730 --> 00:05:35,050
+In this solution also there is only a single URL.
+
+79
+00:05:35,060 --> 00:05:40,460
+The service needs to be aware of the middleman, so changes will be limited to this single URL.
+
+80
+00:05:40,940 --> 00:05:44,900
+Now it doesn't really matter which solution you pick, they are both good.
+
+81
+00:05:44,930 --> 00:05:50,510
+You will also see variations of those two and sometimes it might be even a good idea to implement both.
+
+82
+00:05:50,630 --> 00:05:55,700
+But the important part is that you will better avoid strong coupling by using at least one of them.
+
+83
+00:05:56,190 --> 00:06:01,760
+It's always a good idea to keep your services as loosely coupled as possible, thus making your system
+
+84
+00:06:01,760 --> 00:06:03,980
+much more flexible and maintainable.
+

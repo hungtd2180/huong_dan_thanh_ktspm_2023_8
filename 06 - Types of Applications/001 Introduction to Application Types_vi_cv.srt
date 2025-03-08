@@ -1,0 +1,48 @@
+1
+00:00:00,230 --> 00:00:02,730
+Chào mừng đến với phần Loại ứng dụng.
+
+2
+00:00:02,750 --> 00:00:08,420
+Trong phần này chúng ta sẽ thảo luận về các loại ứng dụng khác nhau và kiến trúc sư sẽ làm việc với một trong các loại đó.
+
+3
+00:00:08,420 --> 00:00:13,340
+điều đầu tiên mà một kiến trúc sư nên làm khi làm việc trên một hệ thống là xác định loại ứng dụng nào
+
+4
+00:00:13,340 --> 00:00:14,660
+hệ thống sẽ như thế nào.
+
+5
+00:00:14,690 --> 00:00:20,120
+Quyết định này thường được đưa ra sau khi xử lý các yêu cầu, có thể là yêu cầu chức năng hoặc không chức năng.
+
+6
+00:00:20,210 --> 00:00:24,950
+Trong giai đoạn này, bạn đã học được những gì có thể học được về chức năng của hệ thống và
+
+7
+00:00:24,950 --> 00:00:26,990
+môi trường mà nó sẽ hoạt động.
+
+8
+00:00:26,990 --> 00:00:32,509
+Và bạn có thể đưa ra quyết định mang tính giáo dục về loại ứng dụng phù hợp nhất với các yêu cầu này.
+
+9
+00:00:32,630 --> 00:00:37,010
+Đây là một quyết định quan trọng vì mỗi loại đều có ưu và nhược điểm riêng.
+
+10
+00:00:37,040 --> 00:00:41,990
+Hơn nữa, một khi đã quyết định, thường sẽ không dễ để chuyển sang loại hình khác.
+
+11
+00:00:42,260 --> 00:00:51,680
+Các loại ứng dụng phổ biến nhất là ứng dụng web, API web, dịch vụ bảng điều khiển di động và máy tính để bàn.
+
+12
+00:00:51,800 --> 00:00:53,900
+Chúng ta hãy cùng thảo luận từng vấn đề một nhé.
+

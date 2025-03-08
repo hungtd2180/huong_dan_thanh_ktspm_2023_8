@@ -1,0 +1,104 @@
+1
+00:00:00,410 --> 00:00:03,110
+Welcome to the Technology stack section.
+
+2
+00:00:03,260 --> 00:00:08,180
+In this section, we will discuss one of the most important and loaded tasks of the architect, and
+
+3
+00:00:08,180 --> 00:00:11,310
+that is selecting the technology stack of the system.
+
+4
+00:00:11,330 --> 00:00:16,400
+The selected technology stack will determine what languages, platforms and tools will be used during
+
+5
+00:00:16,400 --> 00:00:20,630
+system development and what are the skills required from the development team.
+
+6
+00:00:20,900 --> 00:00:23,510
+This decision is important for two reasons.
+
+7
+00:00:23,510 --> 00:00:25,840
+One, it's irreversible.
+
+8
+00:00:25,850 --> 00:00:30,560
+Once you've decided to use a specific platform and work has begun on this platform, you can't reverse
+
+9
+00:00:30,560 --> 00:00:30,710
+it.
+
+10
+00:00:30,710 --> 00:00:36,730
+It's not possible to decide three months into development that actually we prefer another platform.
+
+11
+00:00:36,740 --> 00:00:42,380
+Such a decision will result in a complete rewrite of the system and a substantial delay in schedule.
+
+12
+00:00:42,920 --> 00:00:48,140
+There are some architectural patterns that allow some kind of flexibility in the technology stack selection,
+
+13
+00:00:48,140 --> 00:00:49,730
+notably microservices.
+
+14
+00:00:49,730 --> 00:00:53,690
+But even there, it's not a good idea to switch platforms between each service.
+
+15
+00:00:54,470 --> 00:01:00,540
+Reason number two Decisions like that are often loaded with emotions and are made on a non rational
+
+16
+00:01:00,540 --> 00:01:01,290
+basis.
+
+17
+00:01:01,290 --> 00:01:05,519
+You will encounter situations where the development team would like to do a specific platform because
+
+18
+00:01:05,519 --> 00:01:09,600
+it's new, sexy and the team across the corridor already uses it.
+
+19
+00:01:09,630 --> 00:01:13,950
+It won't matter that this technology is inferior for the specific task in hand.
+
+20
+00:01:13,980 --> 00:01:15,600
+They will still want it.
+
+21
+00:01:15,690 --> 00:01:22,200
+So this decision has to be made with clear mind, must be heavily documented, and be a group effort.
+
+22
+00:01:22,200 --> 00:01:24,450
+And not only yours, the architect.
+
+23
+00:01:24,600 --> 00:01:29,520
+In this section we will discuss technology, stack alternatives for the front end, back end and data
+
+24
+00:01:29,520 --> 00:01:30,090
+store.
+
+25
+00:01:30,240 --> 00:01:34,800
+For each alternative, we will give a little background and discuss its pros and cons.
+
+26
+00:01:34,830 --> 00:01:39,420
+I hope this section will help you make an informed decision about the technology stack in your system.
+

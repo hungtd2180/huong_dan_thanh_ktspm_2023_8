@@ -1,0 +1,556 @@
+1
+00:00:00,230 --> 00:00:05,240
+Chúng tôi đã giải thích các yêu cầu phi chức năng là gì, nhưng chúng ta hãy xem lại một lần nữa
+
+2
+00:00:05,240 --> 00:00:05,900
+trường hợp.
+
+3
+00:00:05,930 --> 00:00:09,320
+Trong khi các yêu cầu chức năng xác định hệ thống nên làm gì.
+
+4
+00:00:09,350 --> 00:00:13,250
+Yêu cầu phi chức năng mô tả những gì hệ thống cần xử lý.
+
+5
+00:00:13,370 --> 00:00:16,760
+Hệ thống có thể giải quyết được nhiều thách thức trong quá trình hoạt động.
+
+6
+00:00:16,790 --> 00:00:19,610
+Họ có thể trải nghiệm số lượng lớn người dùng cùng lúc.
+
+7
+00:00:19,610 --> 00:00:24,710
+Họ có thể gặp phải tình trạng máy chủ bị sập, họ có thể phải chịu lượng yêu cầu cực lớn, v.v.
+
+8
+00:00:24,860 --> 00:00:30,080
+Các yêu cầu phi chức năng về cơ bản mô tả môi trường mong đợi cho hệ thống với
+
+9
+00:00:30,080 --> 00:00:31,940
+tập trung vào các trường hợp ngoại lệ.
+
+10
+00:00:32,570 --> 00:00:37,100
+Nếu bạn xem trang Wikipedia về các yêu cầu không chức năng, bạn sẽ thấy một trang dài
+
+11
+00:00:37,100 --> 00:00:38,590
+danh sách các yêu cầu đó.
+
+12
+00:00:38,600 --> 00:00:43,820
+Tuy nhiên, trong thực tế, có năm yêu cầu không mang tính chức năng mà chúng ta thường phải giải quyết.
+
+13
+00:00:43,880 --> 00:00:52,070
+Năm yếu tố đó là dữ liệu tải hiệu suất, khối lượng, người dùng đồng thời và SLA.
+
+14
+00:00:53,300 --> 00:00:55,250
+Chúng ta hãy cùng thảo luận về từng vấn đề.
+
+15
+00:00:55,670 --> 00:00:56,930
+Hiệu suất.
+
+16
+00:00:57,230 --> 00:01:00,150
+Vâng, nghe có vẻ là một yêu cầu đơn giản phải không?
+
+17
+00:01:00,180 --> 00:01:02,730
+Hiệu suất cần thiết cho hệ thống này là bao nhiêu?
+
+18
+00:01:02,760 --> 00:01:03,600
+Nhanh.
+
+19
+00:01:03,630 --> 00:01:04,680
+Quá dễ dàng.
+
+20
+00:01:04,890 --> 00:01:06,990
+Vâng, không nhanh như vậy đâu.
+
+21
+00:01:07,200 --> 00:01:12,420
+Hãy xem tôi đã nói gì ở đây khi nói về hiệu suất, có hai điều chúng ta cần ghi nhớ.
+
+22
+00:01:12,810 --> 00:01:19,290
+Một là luôn nói về con số, và hai là độ trễ và thông lượng.
+
+23
+00:01:19,530 --> 00:01:21,300
+Chúng ta hãy nói về điều đầu tiên.
+
+24
+00:01:22,410 --> 00:01:28,080
+Khi khách hàng yêu cầu một hệ thống nhanh, câu hỏi tiếp theo của bạn nên là nhanh như thế nào?
+
+25
+00:01:28,290 --> 00:01:31,390
+Nhanh có thể có nhiều ý nghĩa trong nhiều hệ thống.
+
+26
+00:01:31,410 --> 00:01:38,340
+Tôi đã làm việc trên các hệ thống mà nhanh có nghĩa là 30 mili giây và trên các hệ thống mà nhanh có nghĩa là năm giây.
+
+27
+00:01:38,520 --> 00:01:43,380
+Vấn đề là khách hàng của bạn có thể không nghĩ đến con số chính xác và bạn sẽ phải giúp họ
+
+28
+00:01:43,380 --> 00:01:44,190
+anh ấy với điều đó.
+
+29
+00:01:44,820 --> 00:01:50,400
+Nguyên tắc chung là khi có người dùng cuối ở cuối luồng, chúng ta thường cần nhiệm vụ
+
+30
+00:01:50,400 --> 00:01:52,620
+để hoàn thành trong vòng chưa đầy một giây.
+
+31
+00:01:52,980 --> 00:01:58,950
+Khi làm việc trong môi trường B2B, tức là doanh nghiệp với doanh nghiệp, chúng ta thường hướng đến mục tiêu nhanh hơn
+
+32
+00:01:58,950 --> 00:02:02,610
+hệ thống có thể đo được tới 100 mili giây cho mỗi tác vụ.
+
+33
+00:02:02,640 --> 00:02:09,060
+Lý do cho điều đó là con người chúng ta ít nhạy cảm hơn với độ trễ dưới một giây và đối với chúng ta, dữ liệu
+
+34
+00:02:09,060 --> 00:02:13,740
+được hiển thị trong một giây hoặc 700 mili giây trông gần như giống nhau.
+
+35
+00:02:13,890 --> 00:02:20,010
+Trong khi đối với một phần mềm chạy trên máy có chu kỳ CPU là vài mili giây, thì đây sẽ là một
+
+36
+00:02:20,010 --> 00:02:20,790
+lâu lắm rồi.
+
+37
+00:02:21,740 --> 00:02:27,470
+Nhưng một lần nữa, điều quan trọng nhất là phải cùng với khách hàng hoặc nhà phân tích hệ thống tính toán con số này.
+
+38
+00:02:28,640 --> 00:02:31,280
+Khái niệm thứ hai là về độ trễ và thông lượng.
+
+39
+00:02:31,310 --> 00:02:35,990
+Hai từ đó định nghĩa cách chúng ta nhìn nhận hiệu suất và cung cấp cho chúng ta hai góc nhìn về vấn đề này.
+
+40
+00:02:36,020 --> 00:02:37,490
+Chúng ta hãy bắt đầu với độ trễ.
+
+41
+00:02:38,300 --> 00:02:44,120
+Độ trễ trả lời câu hỏi Cần bao nhiêu thời gian để thực hiện một tác vụ duy nhất trong ứng dụng?
+
+42
+00:02:44,210 --> 00:02:49,130
+Ví dụ, phải mất bao lâu để API lưu dữ liệu người dùng vào cơ sở dữ liệu?
+
+43
+00:02:49,160 --> 00:02:53,750
+Hoặc phải mất bao lâu để đọc một tập tin duy nhất từ hệ thống tập tin?
+
+44
+00:02:54,320 --> 00:02:58,700
+Bạn có thể thấy rằng độ trễ liên quan đến thời gian cần thiết để thực hiện một tác vụ duy nhất.
+
+45
+00:02:59,090 --> 00:03:03,440
+Ngược lại, thông lượng lại trả lời một câu hỏi hoàn toàn khác.
+
+46
+00:03:03,680 --> 00:03:07,520
+Có bao nhiêu nhiệm vụ có thể được thực hiện trong một đơn vị thời gian nhất định?
+
+47
+00:03:07,670 --> 00:03:14,600
+Ví dụ, có bao nhiêu người dùng có thể được lưu trong cơ sở dữ liệu trong một phút hoặc có bao nhiêu tệp có thể được đọc
+
+48
+00:03:14,600 --> 00:03:15,560
+trong một giây?
+
+49
+00:03:15,920 --> 00:03:21,110
+Bây giờ chúng ta hãy xem xét một số con số để có thể hiểu rõ hơn sự khác biệt giữa độ trễ và thông lượng.
+
+50
+00:03:21,140 --> 00:03:25,250
+Giả sử độ trễ lưu dữ liệu người dùng là một giây.
+
+51
+00:03:25,370 --> 00:03:29,310
+Cách này khá chậm, nhưng chúng ta hãy tiếp tục thảo luận.
+
+52
+00:03:29,790 --> 00:03:32,040
+Vậy thì thông lượng sẽ là bao nhiêu?
+
+53
+00:03:32,070 --> 00:03:34,740
+Chúng ta có thể biết được có bao nhiêu người dùng có thể được cứu trong một phút không?
+
+54
+00:03:34,770 --> 00:03:36,960
+Câu trả lời chắc chắn là không.
+
+55
+00:03:36,990 --> 00:03:42,120
+Nếu ứng dụng được thiết kế tốt, triển khai trên phần cứng mạnh và biết cách xử lý các luồng,
+
+56
+00:03:42,150 --> 00:03:46,110
+Nó có thể lưu được 1000 người dùng trong một phút.
+
+57
+00:03:46,230 --> 00:03:51,510
+Mặt khác, nếu mã có lỗi và có nhiều rò rỉ bộ nhớ và không có tính đồng thời nào cả,
+
+58
+00:03:51,510 --> 00:03:56,760
+chúng ta sẽ không thể đạt được thông lượng là 60, tức là độ trễ nhân với 60, tức là số lượng
+
+59
+00:03:56,760 --> 00:03:57,960
+giây trong một phút.
+
+60
+00:03:58,350 --> 00:04:00,870
+Đây chính là sự khác biệt giữa độ trễ và thông lượng.
+
+61
+00:04:00,870 --> 00:04:05,100
+Và khi thảo luận về hiệu suất, cả hai đều phải được đề cập và thiết lập.
+
+62
+00:04:05,640 --> 00:04:07,530
+Bây giờ chúng ta hãy nói về tải.
+
+63
+00:04:07,560 --> 00:04:13,170
+Yêu cầu không chức năng tải xác định tải hoặc số lượng ứng dụng sẽ có
+
+64
+00:04:13,170 --> 00:04:15,030
+để chịu đựng mà không bị đổ vỡ.
+
+65
+00:04:15,240 --> 00:04:18,990
+Định nghĩa chính xác về tải trọng phụ thuộc vào loại ứng dụng cụ thể.
+
+66
+00:04:18,990 --> 00:04:24,720
+Ví dụ, đối với ứng dụng dựa trên API web, tải thường được xác định là có bao nhiêu ứng dụng đồng thời
+
+67
+00:04:24,720 --> 00:04:28,230
+hệ thống sẽ tiếp nhận các yêu cầu mà không bị sập.
+
+68
+00:04:28,260 --> 00:04:32,820
+Lưu ý rằng yêu cầu này trông giống với thông lượng, xác định số lượng yêu cầu có thể được xử lý
+
+69
+00:04:32,820 --> 00:04:34,230
+trong một đơn vị thời gian cụ thể.
+
+70
+00:04:34,260 --> 00:04:39,660
+Sự khác biệt giữa hai điều này là trong khi thông lượng xác định đơn vị thời gian thì tải xác định
+
+71
+00:04:39,660 --> 00:04:45,120
+tính khả dụng của hệ thống, nghĩa là hệ thống phải có khả năng xử lý tải mà không bị sập.
+
+72
+00:04:45,210 --> 00:04:51,990
+Ví dụ, yêu cầu về hiệu suất có thể quyết định thông lượng là 100 yêu cầu mỗi giây, nhưng
+
+73
+00:04:51,990 --> 00:04:57,480
+hệ thống phải có khả năng xử lý 500 yêu cầu đồng thời mà không bị sập, ngay cả khi những yêu cầu đó sẽ
+
+74
+00:04:57,480 --> 00:04:59,080
+mất hơn một giây để hoàn thành.
+
+75
+00:04:59,100 --> 00:05:04,110
+Định nghĩa này rất quan trọng vì điều tồi tệ nhất có thể xảy ra với một hệ thống là bị sập dưới tác động nặng nề.
+
+76
+00:05:04,110 --> 00:05:04,590
+trọng tải.
+
+77
+00:05:04,620 --> 00:05:09,510
+Người dùng có thể chịu được sự chậm lại khi có tải, nhưng họ sẽ không thích nếu hệ thống bị sập
+
+78
+00:05:09,510 --> 00:05:10,170
+và đốt cháy.
+
+79
+00:05:10,170 --> 00:05:14,040
+Vì vậy, cách tốt nhất ở đây là luôn xem xét các con số đỉnh.
+
+80
+00:05:14,370 --> 00:05:20,070
+Ví dụ, đối với một trang web thương mại điện tử, tải thông thường có thể lên tới 200 yêu cầu đồng thời.
+
+81
+00:05:20,070 --> 00:05:24,580
+Nhưng vào ngày Black Friday, chúng tôi phải xử lý hơn 2000 yêu cầu cùng lúc.
+
+82
+00:05:24,600 --> 00:05:29,370
+Trong trường hợp đó, chúng ta nên lập kế hoạch cho trường hợp cực đoan vì đây là lúc quan trọng hơn đối với chúng ta.
+
+83
+00:05:29,370 --> 00:05:31,680
+hệ thống vẫn tồn tại và hoạt động.
+
+84
+00:05:33,700 --> 00:05:35,650
+Tiếp theo là khối lượng dữ liệu.
+
+85
+00:05:35,860 --> 00:05:42,160
+Yêu cầu này xác định lượng dữ liệu tính bằng gigabyte hoặc terabyte mà hệ thống của chúng ta sẽ tích lũy theo thời gian.
+
+86
+00:05:42,340 --> 00:05:45,110
+Yêu cầu này quan trọng vì một số lý do.
+
+87
+00:05:45,130 --> 00:05:50,050
+Nó sẽ quyết định loại cơ sở dữ liệu nào bạn sẽ sử dụng, vì không phải tất cả các cơ sở dữ liệu đều có thể xử lý được dữ liệu lớn.
+
+88
+00:05:50,050 --> 00:05:51,640
+lượng dữ liệu như nhau.
+
+89
+00:05:51,850 --> 00:05:58,390
+Nó cũng sẽ xác định loại truy vấn nào chúng ta sẽ viết vì một truy vấn trong bảng có 100.000
+
+90
+00:05:58,390 --> 00:06:03,540
+các hàng sẽ hoàn toàn khác so với truy vấn trong một bảng có 100 triệu hàng.
+
+91
+00:06:03,550 --> 00:06:05,760
+Và tất nhiên nó sẽ giúp chúng ta lên kế hoạch trước.
+
+92
+00:06:05,770 --> 00:06:10,300
+Dung lượng lưu trữ mà chúng ta cần phân bổ cho khối lượng dữ liệu thường có hai khía cạnh.
+
+93
+00:06:10,390 --> 00:06:16,990
+Một, cần bao nhiêu dữ liệu vào ngày một và ngày hai, dự báo mức tăng trưởng dữ liệu là bao nhiêu?
+
+94
+00:06:17,970 --> 00:06:24,690
+Ví dụ, một hệ thống có thể cần 500MB vào ngày đầu tiên và dự kiến sẽ tăng thêm hai terabyte mỗi năm.
+
+95
+00:06:24,900 --> 00:06:29,760
+Tất nhiên, thời gian tăng trưởng có thể khác nhau và có thể là hàng tuần, hàng tháng, hàng quý, v.v.
+
+96
+00:06:30,960 --> 00:06:33,060
+Tiếp theo là số người dùng đồng thời.
+
+97
+00:06:34,150 --> 00:06:38,500
+Yêu cầu này xác định số lượng người dùng sẽ sử dụng hệ thống cùng một lúc.
+
+98
+00:06:39,100 --> 00:06:43,720
+Yêu cầu này khá giống với yêu cầu tải, yêu cầu này cũng xác định số lượng yêu cầu cần thực hiện
+
+99
+00:06:43,720 --> 00:06:47,500
+có thể được hệ thống xử lý cùng lúc nhưng cách nhau một tuần.
+
+100
+00:06:47,890 --> 00:06:53,650
+Yêu cầu về số lượng người dùng đồng thời mô tả có bao nhiêu người dùng sẽ sử dụng hệ thống, không phải có bao nhiêu người dùng
+
+101
+00:06:53,650 --> 00:06:55,300
+sẽ thực hiện các yêu cầu.
+
+102
+00:06:55,330 --> 00:07:01,180
+Sự phân biệt này rất quan trọng khi người dùng sử dụng hệ thống, có rất nhiều thời điểm chết khi không có
+
+103
+00:07:01,180 --> 00:07:02,520
+hành động thực sự được thực hiện.
+
+104
+00:07:02,530 --> 00:07:06,490
+Ví dụ, người dùng yêu cầu hệ thống hiển thị toàn bộ dữ liệu.
+
+105
+00:07:06,520 --> 00:07:10,870
+Hệ thống thực thi API để truy cập cơ sở dữ liệu và lấy dữ liệu.
+
+106
+00:07:10,900 --> 00:07:12,310
+Đây là một hành động thực tế.
+
+107
+00:07:12,400 --> 00:07:14,650
+Bây giờ người dùng đang xem dữ liệu.
+
+108
+00:07:14,650 --> 00:07:16,720
+Trong thời gian này hệ thống không làm gì cả.
+
+109
+00:07:16,750 --> 00:07:18,100
+API không hoạt động.
+
+110
+00:07:18,100 --> 00:07:21,010
+Cơ sở dữ liệu chỉ nằm ở đó và mạng thì im lặng.
+
+111
+00:07:21,220 --> 00:07:26,920
+Vì vậy, như bạn có thể đoán, các hệ thống có thể xử lý 500 yêu cầu đồng thời sẽ có thể chịu được nhiều
+
+112
+00:07:26,920 --> 00:07:28,720
+số lượng người dùng đồng thời cao hơn.
+
+113
+00:07:29,110 --> 00:07:33,980
+Nguyên tắc chung là số lượng người dùng đồng thời gấp mười lần số lượng yêu cầu đồng thời.
+
+114
+00:07:33,980 --> 00:07:40,280
+Vì vậy, nếu hệ thống phải hoạt động với 500 yêu cầu đồng thời, nó có thể hỗ trợ 5000 người dùng đồng thời.
+
+115
+00:07:40,280 --> 00:07:44,600
+Nhưng con số này thực tế phụ thuộc vào loại hệ thống và cách sử dụng.
+
+116
+00:07:44,880 --> 00:07:45,350
+Thỏa thuận cấp độ dịch vụ
+
+117
+00:07:46,230 --> 00:07:49,080
+Yêu cầu chức năng cuối cùng chúng ta sẽ thảo luận là SLA.
+
+118
+00:07:49,440 --> 00:07:55,650
+SLA, viết tắt của Thỏa thuận mức dịch vụ, mô tả thời gian hoạt động cần thiết cho hệ thống này
+
+119
+00:07:55,650 --> 00:07:56,650
+theo phần trăm.
+
+120
+00:07:56,670 --> 00:08:00,250
+Thuật ngữ này được sử dụng rộng rãi bởi hầu hết các nhà cung cấp dịch vụ đám mây công cộng.
+
+121
+00:08:00,270 --> 00:08:03,170
+Một trong những cuộc cạnh tranh lớn nhất giữa họ là về SLA.
+
+122
+00:08:03,180 --> 00:08:05,010
+Ví dụ: Azure Cosmos.
+
+123
+00:08:05,010 --> 00:08:08,700
+DB tự hào với SLA 99,99% của mình.
+
+124
+00:08:08,940 --> 00:08:12,780
+Điều này tương đương với thời gian ngừng hoạt động ít hơn một giờ trong một năm.
+
+125
+00:08:12,810 --> 00:08:14,280
+Hãy xem xét các con số.
+
+126
+00:08:19,300 --> 00:08:22,330
+SLA có ảnh hưởng lớn đến việc thiết kế hệ thống.
+
+127
+00:08:22,330 --> 00:08:27,760
+Ví dụ, một hệ thống không thể bị hạ gục phải có một cơ chế cập nhật tinh vi sẽ không
+
+128
+00:08:27,760 --> 00:08:30,130
+yêu cầu tắt hệ thống trong khi đang cập nhật.
+
+129
+00:08:30,160 --> 00:08:33,370
+Tất nhiên là có thể, nhưng phải thiết kế theo cách này.
+
+130
+00:08:34,179 --> 00:08:37,900
+Một điều quan trọng cần lưu ý về SLA là kỳ vọng của khách hàng.
+
+131
+00:08:38,289 --> 00:08:43,210
+Nếu bạn hỏi khách hàng những gì cần thiết cho hệ thống, họ thường sẽ trả lời bạn cùng với
+
+132
+00:08:43,210 --> 00:08:49,690
+các dòng của 100% năm số chín nổi tiếng, tức là 99,999%.
+
+133
+00:08:49,930 --> 00:08:52,970
+Khi điều này xảy ra, tôi thường nói với anh ấy rằng không sao cả.
+
+134
+00:08:52,990 --> 00:08:57,760
+Để làm được điều này, chúng ta sẽ cần xây dựng ít nhất ba trung tâm dữ liệu ở các châu lục khác nhau với các trung tâm dữ liệu độc lập.
+
+135
+00:08:57,760 --> 00:09:01,300
+và hai nhà máy điện cùng khả năng chuyển đổi dự phòng tự động giữa chúng.
+
+136
+00:09:01,300 --> 00:09:02,260
+Bạn nói sao?
+
+137
+00:09:02,860 --> 00:09:07,360
+Điều này thường giúp anh ấy trở nên thực tế hơn và chúng tôi thảo luận về những mục tiêu thực tế hơn.
+
+138
+00:09:07,450 --> 00:09:11,890
+Vì vậy, đây là những yêu cầu phi chức năng phổ biến nhất mà bạn cần có cho hệ thống.
+
+139
+00:09:11,890 --> 00:09:17,170
+Và một lần nữa, đừng bao giờ bắt đầu làm việc trên kiến trúc trước khi bạn đã thiết lập những yêu cầu đó.
+

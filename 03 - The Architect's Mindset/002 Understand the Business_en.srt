@@ -1,0 +1,136 @@
+1
+00:00:00,260 --> 00:00:05,620
+The biggest mindset change you have to make in order to be a good architect is to understand the business
+
+2
+00:00:05,630 --> 00:00:08,210
+your client or employer is involved in.
+
+3
+00:00:08,540 --> 00:00:10,370
+Now, this might sound trivial.
+
+4
+00:00:10,370 --> 00:00:14,420
+Supposedly everyone in the organization knows what the company is doing, right?
+
+5
+00:00:14,690 --> 00:00:17,690
+Well, that's usually only partly true.
+
+6
+00:00:17,720 --> 00:00:23,270
+I'm sure every Microsoft employee knows that Microsoft develops software such as Windows and Office
+
+7
+00:00:23,270 --> 00:00:26,510
+and that it has one of the largest public clouds in the world.
+
+8
+00:00:26,540 --> 00:00:32,960
+I'm also sure that every Amazon employee knows that Amazon sells a huge selection of items from books
+
+9
+00:00:32,960 --> 00:00:33,980
+to fresh food.
+
+10
+00:00:34,430 --> 00:00:36,410
+But that is not enough.
+
+11
+00:00:36,410 --> 00:00:37,790
+And let me tell you a story.
+
+12
+00:00:38,090 --> 00:00:41,660
+A couple of years ago, I was approached by a company in the Iot field.
+
+13
+00:00:41,660 --> 00:00:45,260
+It was a medium sized company with about 600 employees worldwide.
+
+14
+00:00:45,440 --> 00:00:50,650
+I was familiar with this company and I knew vaguely what they were doing, but I knew it wasn't enough.
+
+15
+00:00:50,660 --> 00:00:53,150
+So I grabbed my PC and began reading.
+
+16
+00:00:53,420 --> 00:00:58,340
+The day after we had the meeting, to their surprise, I was able to tell them about their founders,
+
+17
+00:00:58,340 --> 00:01:01,500
+their line of products, their revenue and profit.
+
+18
+00:01:01,500 --> 00:01:04,780
+And bear in mind, the company was not publicly traded at that time.
+
+19
+00:01:05,220 --> 00:01:06,690
+Competitors and so on.
+
+20
+00:01:06,780 --> 00:01:10,890
+This blew them out of the water and we agreed to work together on this very day.
+
+21
+00:01:11,010 --> 00:01:16,170
+But I'm not telling you this story to teach you marketing tactics, although it's a very effective one.
+
+22
+00:01:17,060 --> 00:01:22,130
+The real important lesson here is that in order to be of a real value to the organization, you have
+
+23
+00:01:22,130 --> 00:01:25,130
+to have a deep understanding of the organization's business.
+
+24
+00:01:25,160 --> 00:01:28,310
+You have to know what keeps the CEO awake at night.
+
+25
+00:01:28,340 --> 00:01:32,000
+You have to understand what its weaknesses and strengths are.
+
+26
+00:01:32,030 --> 00:01:35,930
+Who are they competing with and what is their growth strategy?
+
+27
+00:01:36,320 --> 00:01:40,580
+Only after you understand all this, you can start talking architecture and technology.
+
+28
+00:01:40,760 --> 00:01:45,050
+One of the most common mistakes made by architects is that they are looking at the systems they are
+
+29
+00:01:45,050 --> 00:01:49,340
+working on as a stand alone system, isolated from the rest of their organization.
+
+30
+00:01:49,340 --> 00:01:51,080
+But it can't work that way.
+
+31
+00:01:51,110 --> 00:01:56,450
+Every organization is a living organism with a lot of moving parts, and the architect must understand
+
+32
+00:01:56,450 --> 00:01:59,600
+how the system integrates into this living organism.
+
+33
+00:01:59,600 --> 00:02:02,330
+And what role does this part play?
+
+34
+00:02:02,420 --> 00:02:08,630
+So to recap, remember, always understand the business before you begin working on the architecture.
+

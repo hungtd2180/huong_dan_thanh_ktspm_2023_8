@@ -1,0 +1,60 @@
+1
+00:00:00,320 --> 00:00:04,910
+Chúng tôi đã xem xét các loại ứng dụng phổ biến nhất mà bạn sẽ gặp phải với tư cách là một kiến trúc sư.
+
+2
+00:00:04,939 --> 00:00:09,200
+Tuy nhiên, ngày nay trong kỷ nguyên đám mây, có nhiều loại ứng dụng hơn.
+
+3
+00:00:09,200 --> 00:00:15,320
+Ví dụ, một trong những xu hướng nóng nhất hiện nay là chức năng như một dịch vụ được triển khai bởi AWS,
+
+4
+00:00:15,320 --> 00:00:21,230
+Lambda hoặc Azure Functions, cho phép nhà phát triển viết các đoạn mã ngắn tập trung và không
+
+5
+00:00:21,230 --> 00:00:23,840
+lo lắng về máy chủ, quy mô hoặc SLA.
+
+6
+00:00:24,320 --> 00:00:30,260
+Các ứng dụng được xây dựng trên các chức năng này không phải là ứng dụng web hoặc API web và đại diện cho một loại ứng dụng mới.
+
+7
+00:00:30,260 --> 00:00:34,070
+Nhưng hầu hết các ứng dụng hiện nay đều thuộc vào những thể loại mà chúng ta đã thảo luận.
+
+8
+00:00:34,280 --> 00:00:39,410
+Một trong những nhiệm vụ đầu tiên bạn sẽ phải làm khi bắt đầu làm việc trên một hệ thống là xác định ứng dụng nào
+
+9
+00:00:39,410 --> 00:00:41,180
+loại nào phù hợp nhất với nó.
+
+10
+00:00:41,420 --> 00:00:46,760
+Thông thường, một hệ thống sẽ bao gồm nhiều hơn một ứng dụng và bạn sẽ thấy mình đang kết hợp và kết hợp
+
+11
+00:00:46,760 --> 00:00:48,670
+nhiều loại khác nhau trong một hệ thống duy nhất.
+
+12
+00:00:48,680 --> 00:00:54,470
+Ví dụ, nhiều ứng dụng web ngoài ứng dụng chính còn có một dịch vụ chạy liên tục
+
+13
+00:00:54,470 --> 00:01:00,420
+và thực hiện các nhiệm vụ bảo trì như xóa các bản ghi dữ liệu cũ, giám sát các quy trình khác nhau và
+
+14
+00:01:00,420 --> 00:01:00,930
+sớm.
+
+15
+00:01:00,960 --> 00:01:05,099
+Điều này khá phổ biến và có thể bạn sẽ gặp loại hệ thống này trong công việc của mình.
+

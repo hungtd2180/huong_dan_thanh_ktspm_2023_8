@@ -1,0 +1,260 @@
+1
+00:00:00,300 --> 00:00:06,750
+Một kỹ năng mềm rất quan trọng mà mọi kiến trúc sư và thực tế là mọi chuyên gia đều phải có là không
+
+2
+00:00:06,780 --> 00:00:08,700
+luôn cố gắng để mình đúng.
+
+3
+00:00:08,790 --> 00:00:09,880
+Điều này có nghĩa là gì?
+
+4
+00:00:09,900 --> 00:00:12,270
+Vâng, hãy tưởng tượng tình huống sau.
+
+5
+00:00:12,300 --> 00:00:16,260
+Bạn đang họp để trình bày về kiến trúc mà bạn đã thiết kế cho hệ thống.
+
+6
+00:00:16,260 --> 00:00:22,200
+Đột nhiên, một trong những người tham dự giơ tay và anh ấy có một câu hỏi liên quan đến điều này
+
+7
+00:00:22,200 --> 00:00:22,810
+các dòng.
+
+8
+00:00:22,830 --> 00:00:25,620
+Tôi nghĩ mô hình không trạng thái là vô dụng ở đây.
+
+9
+00:00:25,620 --> 00:00:29,750
+Nó sẽ làm giảm hiệu suất và làm cho mã phức tạp hơn nhiều.
+
+10
+00:00:29,760 --> 00:00:31,980
+Chúng ta nên sử dụng trạng thái ở đây.
+
+11
+00:00:32,009 --> 00:00:34,170
+Bây giờ bạn biết anh ấy không đúng rồi.
+
+12
+00:00:34,170 --> 00:00:40,380
+Bạn biết rằng không có trạng thái là cách tốt nhất để thực hiện ở đây vì hệ thống sẽ phải đối mặt với tải trọng lớn và
+
+13
+00:00:40,380 --> 00:00:42,600
+vì yêu cầu về thời gian hoạt động khá cao.
+
+14
+00:00:42,630 --> 00:00:46,590
+Không quốc tịch là lựa chọn tự nhiên ở đây, nhưng bạn nên phản ứng thế nào?
+
+15
+00:00:46,710 --> 00:00:50,450
+Bản năng đầu tiên là nói rằng, ừ, bạn sai rồi.
+
+16
+00:00:50,460 --> 00:00:53,170
+Vô quốc tịch là cách tốt nhất vì lý do này hay lý do khác.
+
+17
+00:00:53,190 --> 00:00:55,590
+Rốt cuộc, bạn cũng đang ở đây, phải không?
+
+18
+00:00:55,620 --> 00:00:57,840
+Nhưng hãy suy nghĩ thêm một chút.
+
+19
+00:00:57,870 --> 00:01:00,970
+Có một điều quan trọng mà chúng ta không bao giờ được quên.
+
+20
+00:01:01,000 --> 00:01:02,950
+Mục đích của cuộc họp này là gì?
+
+21
+00:01:02,950 --> 00:01:04,430
+Chúng ta muốn đạt được điều gì?
+
+22
+00:01:04,450 --> 00:01:07,030
+Vâng, trong trường hợp này, câu trả lời thật dễ dàng.
+
+23
+00:01:07,060 --> 00:01:09,760
+Chúng tôi muốn nhận được sự chấp thuận cho kiến trúc.
+
+24
+00:01:09,790 --> 00:01:11,320
+Được rồi, bây giờ chúng ta hãy xem nhé.
+
+25
+00:01:11,350 --> 00:01:14,110
+Người đặt câu hỏi đó là ai?
+
+26
+00:01:14,620 --> 00:01:15,880
+Ông là giám đốc công nghệ.
+
+27
+00:01:15,910 --> 00:01:19,020
+Anh ấy là người mà bạn cần sự chấp thuận nhất.
+
+28
+00:01:19,030 --> 00:01:25,480
+Vậy bây giờ câu hỏi bạn cần tự hỏi là loại phản hồi nào sẽ giúp tôi nhận được sự chấp thuận?
+
+29
+00:01:25,510 --> 00:01:28,660
+Tôi có cần phải chứng minh cho anh ấy thấy rằng tôi đúng và thông minh hơn anh ấy không?
+
+30
+00:01:28,660 --> 00:01:30,560
+Liệu điều đó có giúp tôi đạt được mục tiêu của mình không?
+
+31
+00:01:30,580 --> 00:01:33,030
+Hoặc có lẽ tôi nên áp dụng cách tiếp cận khác.
+
+32
+00:01:33,040 --> 00:01:36,430
+Hãy xem liệu bạn có nói với CTO rằng ông ấy sai không.
+
+33
+00:01:36,430 --> 00:01:39,370
+Bạn đang có nguy cơ tạo ra sự đối kháng với chính mình.
+
+34
+00:01:39,400 --> 00:01:40,800
+Bạn không muốn điều đó.
+
+35
+00:01:40,810 --> 00:01:45,520
+Nếu bạn làm như vậy, có lẽ bạn sẽ đúng, nhưng sẽ làm tổn hại đến cơ hội đạt được mục tiêu của bạn.
+
+36
+00:01:45,520 --> 00:01:46,090
+cuộc họp.
+
+37
+00:01:46,090 --> 00:01:50,410
+Vậy nên điều bạn thực sự cần làm ở đây là phải thông minh thay vì đúng đắn.
+
+38
+00:01:50,590 --> 00:01:56,020
+Và thông minh có nghĩa là làm những việc giúp bạn đạt được mục tiêu thay vì làm những việc đó
+
+39
+00:01:56,020 --> 00:01:57,580
+điều đó sẽ khiến bạn cảm thấy thoải mái.
+
+40
+00:01:57,580 --> 00:01:59,430
+Vậy phản ứng thông minh là gì?
+
+41
+00:01:59,440 --> 00:02:02,140
+Vâng, tôi xin đề xuất một điều gì đó như thế.
+
+42
+00:02:02,170 --> 00:02:03,870
+Đúng, đó là một ý kiến tuyệt vời.
+
+43
+00:02:03,880 --> 00:02:09,100
+Chúng tôi thực sự đã suy nghĩ rất nhiều về vấn đề cụ thể này và chúng tôi tin rằng đây là lựa chọn tốt hơn.
+
+44
+00:02:09,100 --> 00:02:11,910
+Chúng ta hãy trò chuyện trực tiếp và thảo luận sâu hơn về vấn đề này.
+
+45
+00:02:11,920 --> 00:02:14,130
+Bây giờ, hãy xem bạn đã làm gì ở đây.
+
+46
+00:02:14,140 --> 00:02:20,410
+Đầu tiên, bạn đã dành cho CTO rất nhiều sự tôn trọng bằng cách nói với ông ấy rằng đây là một quan điểm tuyệt vời và quyết định
+
+47
+00:02:20,410 --> 00:02:21,370
+không phải là dễ dàng.
+
+48
+00:02:21,400 --> 00:02:26,590
+Bạn không bác bỏ câu hỏi của anh ấy vì cho rằng đó là vô nghĩa và cũng không nói rằng anh ấy sai.
+
+49
+00:02:26,620 --> 00:02:30,130
+Thứ hai, bạn đã đề nghị một cuộc họp riêng để thảo luận về vấn đề này.
+
+50
+00:02:30,130 --> 00:02:33,220
+Một lần nữa, bạn thể hiện sự tôn trọng khi đưa ra lời đề nghị đó.
+
+51
+00:02:33,220 --> 00:02:38,860
+Thứ ba và quan trọng nhất, bạn đã tránh được một cuộc thảo luận kỹ thuật dài dòng, nhàm chán và mệt mỏi ở giữa.
+
+52
+00:02:38,860 --> 00:02:41,640
+của cuộc họp bằng cách đề xuất bạn chuyển cuộc họp này sang chế độ ngoại tuyến.
+
+53
+00:02:41,650 --> 00:02:44,110
+Bạn không cần phải đi sâu vào vấn đề này ngay bây giờ.
+
+54
+00:02:44,110 --> 00:02:45,460
+Giữa cuộc họp.
+
+55
+00:02:45,700 --> 00:02:51,340
+Nhân tiện, kinh nghiệm của tôi cho thấy hầu hết các nhà quản lý sẽ vui mừng khi bạn mời họ họp.
+
+56
+00:02:51,340 --> 00:02:53,020
+nhưng nó sẽ không xảy ra hàng nghìn tỷ lần.
+
+57
+00:02:53,020 --> 00:02:54,700
+Họ quá bận rộn cho việc đó.
+
+58
+00:02:54,700 --> 00:02:56,650
+Và bây giờ hãy xem bạn có gì nhé.
+
+59
+00:02:56,650 --> 00:03:03,040
+Thay vì một CTO vô cùng tức giận khi bạn nói với anh ta rằng anh ta sai và khi bạn giải thích dài dòng
+
+60
+00:03:03,040 --> 00:03:08,980
+tại sao anh ấy sai, Bây giờ bạn có một CTO cảm thấy bạn tôn trọng anh ấy và quan điểm của anh ấy và không cảm thấy
+
+61
+00:03:08,980 --> 00:03:10,000
+bị bạn sa thải.
+
+62
+00:03:10,030 --> 00:03:13,210
+CTO nào có nhiều khả năng chấp thuận kiến trúc của bạn hơn?
+
+63
+00:03:13,240 --> 00:03:15,190
+Bạn đoán đúng rồi đấy.
+
+64
+00:03:15,190 --> 00:03:20,260
+Và tất cả những điều này chỉ vì bạn đã làm điều thông minh chứ không phải điều khiến bạn cảm thấy đúng đắn.
+
+65
+00:03:20,260 --> 00:03:23,980
+Vì vậy, hãy luôn ghi nhớ, hãy thông minh, chứ đừng đúng đắn.
+

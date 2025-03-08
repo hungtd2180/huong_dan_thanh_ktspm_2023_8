@@ -1,0 +1,40 @@
+1
+00:00:00,200 --> 00:00:01,790
+Đây chính là điều bạn đang chờ đợi.
+
+2
+00:00:01,819 --> 00:00:05,060
+Đây là thành quả của mọi nỗ lực bạn đã bỏ ra cho hệ thống.
+
+3
+00:00:05,060 --> 00:00:07,220
+Và đây là sáng tạo tuyệt vời nhất của bạn.
+
+4
+00:00:07,520 --> 00:00:12,350
+Tài liệu kiến trúc mô tả toàn bộ quá trình bạn đã trải qua và cung cấp cho các nhà phát triển
+
+5
+00:00:12,350 --> 00:00:15,740
+và quản lý bức tranh toàn cảnh về hệ thống sắp được xây dựng.
+
+6
+00:00:16,100 --> 00:00:21,350
+Một tài liệu kiến trúc tốt có liên quan đến tất cả các cấp trong tổ chức, CEO, CIO,
+
+7
+00:00:21,380 --> 00:00:23,930
+người quản lý dự án và tất nhiên là các nhà phát triển.
+
+8
+00:00:23,960 --> 00:00:26,300
+Mọi người đều thấy nó có giá trị to lớn.
+
+9
+00:00:26,480 --> 00:00:31,520
+Chúng tôi sẽ nói nhiều về cấu trúc và nội dung của tài liệu trong phần có liên quan và giải thích
+
+10
+00:00:31,520 --> 00:00:33,290
+làm thế nào để tối đa hóa giá trị của nó.
+

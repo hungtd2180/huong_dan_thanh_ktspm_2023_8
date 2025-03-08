@@ -1,0 +1,80 @@
+1
+00:00:00,920 --> 00:00:03,020
+Let's talk about deadlines.
+
+2
+00:00:03,110 --> 00:00:08,840
+Douglas Adams, the author of The Hitchhiker's Guide to the Galaxy Series and more great books, had
+
+3
+00:00:08,840 --> 00:00:10,660
+a great quote about deadlines.
+
+4
+00:00:10,670 --> 00:00:11,780
+I love deadlines.
+
+5
+00:00:11,780 --> 00:00:14,480
+I love the whooshing noise they make as they go by.
+
+6
+00:00:14,510 --> 00:00:16,040
+Well, don't we all?
+
+7
+00:00:16,430 --> 00:00:20,550
+But seriously, deadlines are a major factor when designing our architecture.
+
+8
+00:00:20,570 --> 00:00:25,610
+When deciding on the architectural patterns we are going to use, we must be aware, even vaguely.
+
+9
+00:00:25,610 --> 00:00:27,560
+How long will it take to implement them?
+
+10
+00:00:27,560 --> 00:00:30,230
+And how does it relate to the project's deadlines?
+
+11
+00:00:30,350 --> 00:00:33,670
+For example, remember our messaging method discussion?
+
+12
+00:00:33,680 --> 00:00:39,350
+If you remember, we said that building queuing mechanism will take longer than using rest API.
+
+13
+00:00:39,380 --> 00:00:44,780
+This is something that should be factored in when deciding on messaging platform on large projects.
+
+14
+00:00:44,780 --> 00:00:49,850
+This is usually not a problem, but when working on smaller systems with tight deadlines, always make
+
+15
+00:00:49,880 --> 00:00:53,360
+sure the architecture can be actually implemented in the given time frame.
+
+16
+00:00:53,480 --> 00:00:58,820
+If you are not sure about that, the best thing to do is to consult with the development team leaders.
+
+17
+00:00:58,850 --> 00:01:03,540
+They will usually be familiar with the developer's capabilities and will be able to estimate the work
+
+18
+00:01:03,540 --> 00:01:05,790
+required for the architectural implementation.
+
+19
+00:01:06,030 --> 00:01:11,130
+Using this valuable information, you will be able to make an educated decision that factors in the
+
+20
+00:01:11,130 --> 00:01:12,270
+project's deadline.
+

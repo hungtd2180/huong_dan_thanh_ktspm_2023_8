@@ -1,0 +1,216 @@
+1
+00:00:00,590 --> 00:00:03,560
+Phần tiếp theo trong tài liệu là phần tóm tắt.
+
+2
+00:00:03,590 --> 00:00:07,130
+Độ dài của nó thường là một vài trang, thông thường không quá ba trang.
+
+3
+00:00:07,130 --> 00:00:13,370
+Và như bạn có thể đoán, đối tượng mục tiêu chủ yếu là ban quản lý, nghĩa là CEO, CTO và quản lý dự án.
+
+4
+00:00:13,730 --> 00:00:19,310
+Tóm tắt trình bày kiến trúc được thiết kế cho hệ thống ở cấp độ rất cao cho phép
+
+5
+00:00:19,340 --> 00:00:22,520
+những người không có chuyên môn hiểu được những gì cơ bản đang diễn ra.
+
+6
+00:00:22,610 --> 00:00:25,250
+Vậy tại sao chúng ta lại cần bản tóm tắt?
+
+7
+00:00:25,280 --> 00:00:30,650
+Rốt cuộc, bản thân tài liệu mô tả kiến trúc rất chi tiết và chứa tất cả các chi tiết
+
+8
+00:00:30,650 --> 00:00:31,220
+về nó.
+
+9
+00:00:31,250 --> 00:00:36,290
+Tại sao chúng ta lại cần một phần riêng để nhắc lại thông tin đã có sẵn?
+
+10
+00:00:36,470 --> 00:00:38,040
+Vâng, đây chính là câu trả lời.
+
+11
+00:00:38,060 --> 00:00:42,920
+Hãy nhớ rằng một trong những mục tiêu chính của tài liệu kiến trúc là làm cho ban quản lý tự tin
+
+12
+00:00:42,920 --> 00:00:47,360
+trong công việc của bạn và khiến họ cảm thấy họ đã đưa ra lựa chọn đúng đắn khi làm việc với bạn.
+
+13
+00:00:47,390 --> 00:00:52,820
+Tất nhiên, nếu CEO đọc hết tất cả các tài liệu kiến trúc, ông ấy sẽ rất ấn tượng và sẽ
+
+14
+00:00:52,820 --> 00:00:54,320
+thực sự thích tác phẩm của bạn.
+
+15
+00:00:54,350 --> 00:00:56,960
+Tương tự như vậy đối với CTO và quản lý dự án.
+
+16
+00:00:57,320 --> 00:00:59,880
+Vấn đề là họ sẽ không làm điều đó.
+
+17
+00:00:59,940 --> 00:01:03,360
+Những người quản lý thường là những người rất bận rộn không có chuyên môn kỹ thuật.
+
+18
+00:01:03,360 --> 00:01:09,660
+Họ sẽ không biết sự khác biệt phức tạp giữa Rest API và Signal R là gì và họ không thể
+
+19
+00:01:09,660 --> 00:01:12,400
+ít quan tâm đến trạng thái không trạng thái hoặc tiêm phụ thuộc.
+
+20
+00:01:12,420 --> 00:01:16,590
+Họ là những người hướng đến kinh doanh và họ muốn biết hệ thống có được quản lý tốt hay không.
+
+21
+00:01:16,590 --> 00:01:17,550
+Của bạn.
+
+22
+00:01:17,730 --> 00:01:23,370
+Vì vậy, nếu bạn mong đợi họ thực sự đọc tài liệu này, một tài liệu rất dài và mang tính kỹ thuật,
+
+23
+00:01:23,370 --> 00:01:27,630
+họ sẽ dừng lại ở giữa và không hiểu mình vừa đọc gì.
+
+24
+00:01:27,660 --> 00:01:32,490
+Họ sẽ không cảm thấy thoải mái hơn khi làm việc với bạn và chắc chắn sẽ không tự tin hơn về điều đó.
+
+25
+00:01:32,490 --> 00:01:35,340
+Và đây chính là nơi mà phần tóm tắt nội dung chính được đưa vào.
+
+26
+00:01:35,490 --> 00:01:41,280
+Mục tiêu của bản tóm tắt điều hành là cung cấp góc nhìn ở cấp độ rất cao về kiến trúc bằng cách sử dụng
+
+27
+00:01:41,280 --> 00:01:46,950
+và không quá nhiều thuật ngữ chuyên môn, do đó tăng cường sự tin tưởng của ban quản lý khi làm việc với bạn.
+
+28
+00:01:47,100 --> 00:01:52,410
+Nó phải truyền tải được ý tưởng và khái niệm rộng lớn của kiến trúc, nhưng không nên sử dụng quá nhiều
+
+29
+00:01:52,410 --> 00:01:54,030
+chi tiết kỹ thuật cấp thấp.
+
+30
+00:01:54,060 --> 00:01:56,970
+Hãy cố gắng hiểu được suy nghĩ của đối tượng mục tiêu ở đây.
+
+31
+00:01:56,970 --> 00:02:02,940
+Đây là người có nhiều việc phải làm, không có thời gian để đọc các tài liệu kỹ thuật dài và
+
+32
+00:02:02,940 --> 00:02:06,690
+nên nhanh chóng hài lòng với giải pháp được đưa ra.
+
+33
+00:02:06,720 --> 00:02:10,449
+Bạn nên viết phần tóm tắt cụ thể dành cho người này.
+
+34
+00:02:10,470 --> 00:02:13,510
+Bây giờ là một vài mẹo cho phần tóm tắt.
+
+35
+00:02:13,530 --> 00:02:16,370
+Đầu tiên, hãy sử dụng biểu đồ và sơ đồ.
+
+36
+00:02:16,380 --> 00:02:20,390
+Chúng tạo ấn tượng lớn và thực sự hữu ích trong việc tạo sự tự tin.
+
+37
+00:02:20,400 --> 00:02:24,920
+Thông thường, bạn sẽ có sẵn sơ đồ mô tả kiến trúc cấp cao của hệ thống.
+
+38
+00:02:24,930 --> 00:02:27,240
+Cũng sử dụng nó trong phần tóm tắt.
+
+39
+00:02:27,510 --> 00:02:33,360
+Thứ hai, việc viết tóm tắt thực tế nên được thực hiện sau khi viết xong kiến trúc.
+
+40
+00:02:33,360 --> 00:02:34,410
+các phần liên quan.
+
+41
+00:02:34,410 --> 00:02:40,470
+Hãy nhớ rằng, phần tóm tắt nội dung tóm tắt kiến trúc và nó không thể tóm tắt điều gì đó
+
+42
+00:02:40,470 --> 00:02:41,700
+vẫn chưa được tạo ra.
+
+43
+00:02:41,730 --> 00:02:43,610
+Bây giờ, đừng nhầm lẫn ở đây.
+
+44
+00:02:43,620 --> 00:02:49,650
+Phần tóm tắt xuất hiện trước phần kiến trúc nhưng lại được viết sau phần này.
+
+45
+00:02:49,830 --> 00:02:54,150
+Thứ ba, sử dụng các thuật ngữ kỹ thuật phổ biến và sử dụng chúng một cách riêng biệt.
+
+46
+00:02:54,360 --> 00:02:57,420
+Bạn có thể đề cập đến dịch vụ đám mây siêu nhỏ hoặc khả năng mở rộng.
+
+47
+00:02:57,450 --> 00:03:02,130
+Không đề cập đến các thuật ngữ cấp thấp như dependency injection hoặc signal.
+
+48
+00:03:02,550 --> 00:03:05,130
+Thứ tư, đừng lặp lại chính mình.
+
+49
+00:03:05,160 --> 00:03:08,730
+Tài liệu này đã mô tả bối cảnh và các yêu cầu.
+
+50
+00:03:08,730 --> 00:03:11,220
+Đừng viết lại chúng trong phần tóm tắt.
+
+51
+00:03:11,250 --> 00:03:15,210
+Điều này sẽ chỉ làm người đọc mệt mỏi và làm họ mất hứng thú với bạn.
+
+52
+00:03:15,240 --> 00:03:19,470
+Hãy nhớ rằng, người đọc phần tóm tắt có thời gian và sự kiên nhẫn hạn chế.
+
+53
+00:03:19,470 --> 00:03:20,970
+Đừng thách thức họ.
+
+54
+00:03:21,720 --> 00:03:27,120
+Được rồi, bây giờ chúng ta đã hoàn thành phần tóm tắt, hãy tiếp tục phần tiếp theo.
+

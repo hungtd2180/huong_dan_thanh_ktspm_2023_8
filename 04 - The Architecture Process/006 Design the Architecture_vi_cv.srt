@@ -1,0 +1,40 @@
+1
+00:00:00,350 --> 00:00:02,450
+Đây chính là trọng tâm công việc của bạn.
+
+2
+00:00:02,660 --> 00:00:07,040
+Bạn đã có các yêu cầu, các yêu cầu phi chức năng, các thành phần và công nghệ
+
+3
+00:00:07,040 --> 00:00:07,590
+chồng lên nhau.
+
+4
+00:00:07,610 --> 00:00:13,010
+Tất cả những gì còn lại là thiết kế kiến trúc sẽ gắn kết tất cả những thứ đó lại với nhau và sẽ tạo ra một
+
+5
+00:00:13,010 --> 00:00:17,090
+hệ thống nhanh chóng, an toàn, đáng tin cậy và dễ bảo trì.
+
+6
+00:00:17,360 --> 00:00:22,700
+Chúng ta sẽ tìm hiểu về các phẩm chất của một hệ thống được thiết kế tốt như liên kết lỏng lẻo, khả năng mở rộng không trạng thái,
+
+7
+00:00:22,700 --> 00:00:28,460
+bộ nhớ đệm, nhắn tin và nhiều hơn nữa và xem những phẩm chất đó được sử dụng như thế nào như các khối xây dựng của
+
+8
+00:00:28,460 --> 00:00:29,360
+ngành kiến trúc.
+
+9
+00:00:29,510 --> 00:00:34,450
+Khi hoàn tất, bạn sẽ có một kiến trúc hoàn chỉnh, nhưng nó vẫn chưa được chính thức hóa.
+
+10
+00:00:34,460 --> 00:00:36,890
+Điều này đưa chúng ta tới bước tiếp theo.
+

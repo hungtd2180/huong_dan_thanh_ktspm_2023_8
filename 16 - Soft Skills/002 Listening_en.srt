@@ -1,0 +1,72 @@
+1
+00:00:00,170 --> 00:00:05,360
+One of the most important soft skills that not enough architects possess is listening.
+
+2
+00:00:05,390 --> 00:00:11,210
+Sounds quite simple, I know, but I've met countless architects that behaved as if they already know
+
+3
+00:00:11,210 --> 00:00:16,850
+all that is to know about software, architecture, technology requirements and the specific project
+
+4
+00:00:16,850 --> 00:00:19,580
+and were simply not pleasant to work with.
+
+5
+00:00:19,760 --> 00:00:25,940
+One of the key factors in a successful teamwork is the ability to listen and to assume you are not the
+
+6
+00:00:25,940 --> 00:00:27,530
+smartest person in the room.
+
+7
+00:00:27,740 --> 00:00:33,920
+This assumption, regardless if true or not, will help you become a better team player and as a result,
+
+8
+00:00:33,950 --> 00:00:35,240
+a better architect.
+
+9
+00:00:35,270 --> 00:00:36,410
+Think about it.
+
+10
+00:00:36,440 --> 00:00:41,360
+If you are not the smartest man in the room, then you should probably listen to what the other people
+
+11
+00:00:41,360 --> 00:00:42,590
+in the room have to say.
+
+12
+00:00:42,620 --> 00:00:46,460
+They might have some clever thoughts worth sharing and using.
+
+13
+00:00:46,460 --> 00:00:51,410
+You know, collective wisdom is almost always better than a soloist work.
+
+14
+00:00:51,440 --> 00:00:55,260
+Even if you are sure you have just designed the best architecture possible.
+
+15
+00:00:55,280 --> 00:01:01,650
+Always assume you forgot something or wasn't aware of all the implications of the requirements or didn't
+
+16
+00:01:01,650 --> 00:01:04,050
+think about certain scheduling restrictions.
+
+17
+00:01:04,170 --> 00:01:09,200
+Talk about your work and more important, listen to what others have to say about it.
+
+18
+00:01:09,210 --> 00:01:11,610
+It will make your work so much better.
+

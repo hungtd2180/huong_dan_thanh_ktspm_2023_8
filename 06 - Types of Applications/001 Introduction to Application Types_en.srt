@@ -1,0 +1,48 @@
+1
+00:00:00,230 --> 00:00:02,730
+Welcome to the Application Types section.
+
+2
+00:00:02,750 --> 00:00:08,420
+In this section we will discuss the various application types and architect will work with one of the
+
+3
+00:00:08,420 --> 00:00:13,340
+first things an architect should do when working on a system is to determine what kind of applications
+
+4
+00:00:13,340 --> 00:00:14,660
+the system is going to be.
+
+5
+00:00:14,690 --> 00:00:20,120
+This decision is usually made after working on the requirements, either functional or non-functional.
+
+6
+00:00:20,210 --> 00:00:24,950
+In this phase, you have already learned what can be learned about the functionality of the system and
+
+7
+00:00:24,950 --> 00:00:26,990
+the environment it will be operating in.
+
+8
+00:00:26,990 --> 00:00:32,509
+And you can make an educational decision about the type of applications that best fits these requirements.
+
+9
+00:00:32,630 --> 00:00:37,010
+This is an important decision since each type has its own pros and cons.
+
+10
+00:00:37,040 --> 00:00:41,990
+Moreover, once the decision is made, it's usually not easy to switch to other types.
+
+11
+00:00:42,260 --> 00:00:51,680
+The most common application types are web apps, web API, mobile console service and desktop.
+
+12
+00:00:51,800 --> 00:00:53,900
+Let's go and discuss each one of them.
+

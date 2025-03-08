@@ -1,0 +1,36 @@
+1
+00:00:00,440 --> 00:00:04,610
+In this section, we discussed soft skills every architect must have.
+
+2
+00:00:04,640 --> 00:00:10,160
+This is not an exclusive list, and there are some skills you might want to explore, but these are
+
+3
+00:00:10,160 --> 00:00:11,660
+the most important ones.
+
+4
+00:00:11,870 --> 00:00:16,720
+Always remember at the end of the day, you are not working with computers and bits and bytes.
+
+5
+00:00:16,730 --> 00:00:22,550
+You are working with people and you must be able to work with people because it doesn't matter how good
+
+6
+00:00:22,550 --> 00:00:24,410
+you are with computers and PowerPoint.
+
+7
+00:00:24,410 --> 00:00:27,490
+If you suck with people, you don't stand a chance.
+
+8
+00:00:27,500 --> 00:00:33,590
+So embrace these skills, practice them and I'm sure you will see how they improve your work and make
+
+9
+00:00:33,590 --> 00:00:35,840
+you a better, more successful architect.
+

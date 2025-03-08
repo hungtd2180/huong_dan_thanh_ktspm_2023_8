@@ -1,0 +1,39 @@
+1
+00:00:00,320 --> 00:00:02,820
+Chúng ta hãy nói về kiến ​​trúc sư và bằng cấp học thuật.
+
+2
+00:00:02,840 --> 00:00:07,070
+Tôi thường được hỏi, tôi nên học gì ở trường đại học để trở thành kiến ​​trúc sư?
+
+3
+00:00:07,100 --> 00:00:09,110
+Câu trả lời khá ngắn gọn.
+
+4
+00:00:09,170 --> 00:00:14,170
+Tôi không biết bất kỳ học viện nào có bằng cấp hướng đến kiến ​​trúc phần mềm.
+
+5
+00:00:14,240 --> 00:00:19,490
+Tất nhiên, bằng cấp khoa học máy tính thông thường luôn hữu ích, mặc dù không phải lúc nào cũng bắt buộc, nhưng
+
+6
+00:00:19,490 --> 00:00:23,360
+không có bằng cấp cụ thể nào phải có để trở thành kiến ​​trúc sư.
+
+7
+00:00:23,600 --> 00:00:29,420
+Có một số khóa học và chứng chỉ liên quan đến kiến ​​trúc như TOGAF, nhưng chúng hướng đến
+
+8
+00:00:29,420 --> 00:00:33,020
+nhiều hơn về kiến ​​trúc doanh nghiệp hơn là kiến ​​trúc phần mềm.
+
+9
+00:00:33,320 --> 00:00:38,570
+Vì vậy, điểm mấu chốt là bạn không cần phải có bất kỳ nền giáo dục chính thức cụ thể nào để trở thành một kiến ​​trúc sư.
+
+10
+00:00:38,570 --> 00:00:40,910
+Chủ yếu là vấn đề kinh nghiệm.

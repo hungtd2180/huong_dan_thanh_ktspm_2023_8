@@ -1,0 +1,88 @@
+1
+00:00:00,530 --> 00:00:03,290
+So what is the goal of the architectural document?
+
+2
+00:00:03,320 --> 00:00:08,029
+Why do we have to invest so much time carefully crafting such a comprehensive document?
+
+3
+00:00:08,060 --> 00:00:11,810
+Well, that's a very good question, and let's try to answer it.
+
+4
+00:00:11,960 --> 00:00:16,880
+First and foremost, the architectural document is a foundation of the development efforts of the system.
+
+5
+00:00:16,880 --> 00:00:19,790
+It describes what should be developed and how.
+
+6
+00:00:19,970 --> 00:00:24,770
+As a rule of thumb, no lines of code should be created before the development team read through the
+
+7
+00:00:24,770 --> 00:00:29,180
+architecture document and made sure they fully understand what should be done and how.
+
+8
+00:00:29,210 --> 00:00:33,950
+The document outlines the technology stack and the various components and services that comprise the
+
+9
+00:00:33,950 --> 00:00:36,860
+system and how do they communicate with each other.
+
+10
+00:00:36,890 --> 00:00:41,210
+Without this knowledge, the development team will have no idea what should be developed.
+
+11
+00:00:41,240 --> 00:00:46,160
+When following the document, the team will be able to develop a well thought of fully documented,
+
+12
+00:00:46,160 --> 00:00:49,840
+fast, secure, reliable and easy to maintain system.
+
+13
+00:00:49,850 --> 00:00:53,540
+This cannot be accomplished when such a document is not present.
+
+14
+00:00:53,690 --> 00:00:56,870
+So this is the first and the main goal of the document.
+
+15
+00:00:56,870 --> 00:01:01,080
+But actually there is more as we will see in this section.
+
+16
+00:01:01,110 --> 00:01:04,900
+The document also describes the functional and non-functional requirements.
+
+17
+00:01:04,920 --> 00:01:11,220
+In many cases, this is the first time such requirements are expressed on writing, and this is the
+
+18
+00:01:11,220 --> 00:01:14,190
+first time the customer is able to see it in formal form.
+
+19
+00:01:14,190 --> 00:01:18,840
+For the team, this is a great opportunity to validate the requirements and make sure together with
+
+20
+00:01:18,840 --> 00:01:21,810
+the customer that he gets what he actually wants.
+
+21
+00:01:21,960 --> 00:01:24,390
+So these are the goals of the document.
+
+22
+00:01:24,390 --> 00:01:27,390
+Let's move on and talk about some more aspects of it.
+

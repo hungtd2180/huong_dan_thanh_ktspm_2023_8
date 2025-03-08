@@ -1,0 +1,132 @@
+1
+00:00:00,260 --> 00:00:05,330
+After discussing the architect's responsibility, let's look at her place in the organization chart.
+
+2
+00:00:05,480 --> 00:00:07,310
+This is not a theoretical discussion.
+
+3
+00:00:07,310 --> 00:00:12,410
+The location of the architect in the chart dictates her responsibilities and the scope of her work.
+
+4
+00:00:12,710 --> 00:00:17,090
+Before taking a look at a typical organization charts, I want to emphasize a point.
+
+5
+00:00:17,330 --> 00:00:21,210
+Architect is not and should not be a managerial position.
+
+6
+00:00:21,230 --> 00:00:22,740
+She does not hire and fire.
+
+7
+00:00:22,760 --> 00:00:28,370
+She does not manage vacation requests and definitely not conducting performance reviews or compensation
+
+8
+00:00:28,370 --> 00:00:29,480
+negotiations.
+
+9
+00:00:29,690 --> 00:00:34,700
+The reason for that is that the architect is a professional role and has a lot to deal with.
+
+10
+00:00:34,730 --> 00:00:38,990
+It's not a good idea to mix all her responsibilities with management tasks.
+
+11
+00:00:39,380 --> 00:00:44,330
+So with that in mind, let's look at two typical organization charts involve the architect.
+
+12
+00:00:45,460 --> 00:00:50,710
+The first chart demonstrates an organization chart with a dedicated architect for each project.
+
+13
+00:00:51,430 --> 00:00:57,280
+As you can see, the architect reports to the project manager and she herself has no subordinates.
+
+14
+00:00:57,370 --> 00:01:02,650
+This is a typical, though very simplified chart where the architects are junior ones.
+
+15
+00:01:03,070 --> 00:01:07,990
+In this scenario, the architect sees a bigger picture but only of the project.
+
+16
+00:01:08,020 --> 00:01:12,980
+They are not involved with other projects in the organization and their contribution is quite limited.
+
+17
+00:01:13,000 --> 00:01:18,580
+But keep in mind that even in this case, they have a tremendous contribution to the project.
+
+18
+00:01:18,610 --> 00:01:22,960
+Their guidance is invaluable and they do a really important job.
+
+19
+00:01:24,640 --> 00:01:27,380
+The second chart demonstrates different scenario.
+
+20
+00:01:27,400 --> 00:01:30,820
+In this scenario, the architect reports directly to the CIO.
+
+21
+00:01:31,000 --> 00:01:36,550
+This is usually the case with senior experienced architects which have proven themselves valuable to
+
+22
+00:01:36,550 --> 00:01:41,920
+the organization and which has a tremendous added value at the organization level and not just the project
+
+23
+00:01:41,920 --> 00:01:42,520
+level.
+
+24
+00:01:42,820 --> 00:01:45,460
+Remember, we have talked about enterprise architects.
+
+25
+00:01:45,700 --> 00:01:50,920
+A software architect in this position usually deals with some aspects of enterprise architecture too,
+
+26
+00:01:50,950 --> 00:01:54,850
+mainly on the technical side and less on the organizational side.
+
+27
+00:01:55,660 --> 00:02:01,090
+It is quite common to see both the charts combined, meaning the CIO works with the senior architect
+
+28
+00:02:01,090 --> 00:02:03,280
+and every project has its own architect.
+
+29
+00:02:03,310 --> 00:02:08,710
+In this case, the senior architect will make an organization wide decision such as global architectural
+
+30
+00:02:08,710 --> 00:02:12,350
+patterns, platforms to be used in the organization and so on.
+
+31
+00:02:12,370 --> 00:02:16,930
+As the project's architect will harness this guidance to the specific projects they are working on.
+
+32
+00:02:17,620 --> 00:02:22,060
+The senior architect will often provide an ongoing support to the project's architect and will make
+
+33
+00:02:22,090 --> 00:02:24,590
+sure they adhere to the organizational guidance as.
+

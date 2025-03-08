@@ -1,0 +1,84 @@
+1
+00:00:00,320 --> 00:00:04,700
+Như bạn có thể đoán, khả năng quản lý là khả năng quản lý ứng dụng.
+
+2
+00:00:04,730 --> 00:00:06,260
+Vậy điều đó có nghĩa là gì?
+
+3
+00:00:06,290 --> 00:00:11,780
+Nói một cách đơn giản, đó là khả năng biết được những gì đang diễn ra với ứng dụng tại bất kỳ thời điểm nào và
+
+4
+00:00:11,780 --> 00:00:14,060
+thực hiện các hành động để cải thiện công việc của mình.
+
+5
+00:00:14,090 --> 00:00:20,270
+Ví dụ, một ứng dụng có thể quản lý được sẽ liên tục báo cáo trạng thái của nó cho các tác nhân giám sát và cho phép
+
+6
+00:00:20,270 --> 00:00:25,820
+họ biết khi nào lỗi xảy ra, khi nào có tải trọng đặc biệt cao, khi nào ram đang trở nên nguy hiểm
+
+7
+00:00:25,820 --> 00:00:27,020
+cao và vân vân.
+
+8
+00:00:27,290 --> 00:00:32,780
+Các tác nhân giám sát báo cáo lại điều này cho bảng điều khiển quản lý và sau đó có thể đưa ra quyết định
+
+9
+00:00:32,780 --> 00:00:38,090
+tự động hoặc do một người vận hành thực hiện một số hành động, chẳng hạn như thử lại quy trình đã gây ra
+
+10
+00:00:38,090 --> 00:00:43,010
+lỗi hoặc thêm tài nguyên để đối phó với tải và tình huống.
+
+11
+00:00:43,130 --> 00:00:49,790
+Cách tốt nhất để phân biệt một hệ thống có thể quản lý được với một hệ thống không thể quản lý được là tìm ra ai là người
+
+12
+00:00:49,790 --> 00:00:51,460
+một báo cáo về vấn đề.
+
+13
+00:00:51,470 --> 00:00:54,860
+Nếu là người dùng cuối thì hệ thống không thể quản lý được.
+
+14
+00:00:54,860 --> 00:01:01,770
+Và như một tác dụng phụ, chúng tôi đã biến người dùng của bạn thành một nhóm, điều này không tốt nếu hệ thống
+
+15
+00:01:01,770 --> 00:01:05,190
+Bản thân báo cáo vấn đề, trải nghiệm tốt hơn nhiều.
+
+16
+00:01:05,190 --> 00:01:07,790
+Hệ thống sẽ phát hiện ra sự cố sắp xảy ra.
+
+17
+00:01:07,800 --> 00:01:13,920
+Ví dụ, một lượng lớn yêu cầu được nhận trong thời gian rất ngắn và thời gian phản hồi giảm đi đáng kể.
+
+18
+00:01:13,950 --> 00:01:19,500
+Kết quả là, hệ thống sẽ cảnh báo tác nhân giám sát về điều này và người vận hành quyết định thêm nhiều VM hơn
+
+19
+00:01:19,500 --> 00:01:20,700
+để chịu được tải trọng đó.
+
+20
+00:01:20,730 --> 00:01:26,490
+Kết quả cuối cùng là người dùng thậm chí không biết có vấn đề và hệ thống vẫn hoạt động bình thường
+
+21
+00:01:26,520 --> 00:01:27,180
+vui vẻ.
+

@@ -1,0 +1,40 @@
+1
+00:00:00,350 --> 00:00:02,450
+This is the heart of your work.
+
+2
+00:00:02,660 --> 00:00:07,040
+You already have the requirements, the non-functional requirements, the components and the technology
+
+3
+00:00:07,040 --> 00:00:07,590
+stack.
+
+4
+00:00:07,610 --> 00:00:13,010
+All that's left is to design the architecture that will glue all those together and will result in a
+
+5
+00:00:13,010 --> 00:00:17,090
+system that is fast, secure, reliable and easy to maintain.
+
+6
+00:00:17,360 --> 00:00:22,700
+We will learn about the qualities of a well-designed system such as loose coupling, stateless scaling,
+
+7
+00:00:22,700 --> 00:00:28,460
+caching, messaging and lots more and see how those qualities are used as the building blocks of the
+
+8
+00:00:28,460 --> 00:00:29,360
+architecture.
+
+9
+00:00:29,510 --> 00:00:34,450
+When you are done, you will have a complete architecture in place, but it won't be formalized yet.
+
+10
+00:00:34,460 --> 00:00:36,890
+Which brings us to the next step.
+

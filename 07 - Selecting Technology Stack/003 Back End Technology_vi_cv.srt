@@ -1,0 +1,380 @@
+1
+00:00:00,350 --> 00:00:03,770
+Vậy chúng ta hãy thảo luận về các ứng viên cho công nghệ dịch vụ và nền tảng.
+
+2
+00:00:03,800 --> 00:00:09,110
+Bây giờ, để rõ ràng hơn, khi nói về phần phụ trợ, chúng ta muốn nói đến phía máy chủ của ứng dụng web và API web.
+
+3
+00:00:09,440 --> 00:00:14,360
+Vì vậy, cuộc thảo luận của chúng ta ở đây là về ứng dụng web, API web, bảng điều khiển và dịch vụ.
+
+4
+00:00:14,540 --> 00:00:17,330
+Tôi sẽ gọi tất cả chúng là backend để đơn giản hơn.
+
+5
+00:00:18,110 --> 00:00:23,750
+Bây giờ, chỉ để đặt kỳ vọng, tôi sẽ không đưa ra cho bạn một khuyến nghị chắc chắn về nền tảng này
+
+6
+00:00:23,750 --> 00:00:25,190
+bạn nên sử dụng cho phần phụ trợ của mình.
+
+7
+00:00:25,220 --> 00:00:31,100
+Điều đó sẽ không thông minh vì có rất nhiều yếu tố cần phải tính đến nếu không có kiến thức sâu sắc
+
+8
+00:00:31,100 --> 00:00:33,950
+trong số các yêu cầu, quyết định như vậy không thể được đưa ra.
+
+9
+00:00:34,190 --> 00:00:39,590
+Những gì tôi sẽ làm là trình bày các ứng cử viên chính và nói về ưu và nhược điểm của từng ứng cử viên.
+
+10
+00:00:39,590 --> 00:00:40,040
+họ.
+
+11
+00:00:40,070 --> 00:00:43,550
+Điều này sẽ giúp bạn dễ dàng hơn nhiều khi lựa chọn nền tảng.
+
+12
+00:00:44,210 --> 00:00:47,630
+Lưu ý: Tôi sẽ không nói về mọi công nghệ hiện có.
+
+13
+00:00:47,660 --> 00:00:50,300
+Điều này sẽ khiến bài giảng trở nên quá dài và nhàm chán.
+
+14
+00:00:50,330 --> 00:00:53,300
+Tôi sẽ thảo luận về những nền tảng phổ biến nhất.
+
+15
+00:00:53,720 --> 00:00:58,490
+Sau đây là danh sách các ứng dụng nền tảng chính theo thứ tự bảng chữ cái.
+
+16
+00:00:58,580 --> 00:00:59,240
+Mạng Dotnet.
+
+17
+00:00:59,240 --> 00:01:04,410
+Dotnet cổ điển, Core Java, NodeJS, PHP và Python.
+
+18
+00:01:05,519 --> 00:01:10,080
+Vậy chúng ta hãy bắt đầu với Dotnet Classic hay ở đây chúng tôi sẽ gọi đơn giản là Dotnet.
+
+19
+00:01:10,560 --> 00:01:15,090
+Dotnet được Microsoft thành lập vào năm 2001 để đối phó với Java.
+
+20
+00:01:15,120 --> 00:01:21,540
+Đây là một nền tảng hướng đối tượng mục đích chung, được gõ tĩnh với các khuôn khổ cho các ứng dụng máy tính để bàn
+
+21
+00:01:21,540 --> 00:01:29,070
+được gọi là Winforms và sau đó là WPF và đối với các ứng dụng web và API web được gọi là ASP.Net Phát triển trong Dotnet là
+
+22
+00:01:29,070 --> 00:01:30,390
+được thực hiện bằng Visual Studio.
+
+23
+00:01:30,390 --> 00:01:33,840
+Theo ý kiến khiêm tốn của tôi, đây là một trong những công cụ phát triển tốt nhất trên hành tinh.
+
+24
+00:01:35,280 --> 00:01:40,240
+Dotnet không hỗ trợ đa nền tảng, do đó nó chỉ phù hợp với các ứng dụng chạy trên Windows.
+
+25
+00:01:40,260 --> 00:01:44,820
+Hiệu suất của nó ổn, nhưng có những nền tảng nhanh hơn như NodeJS.
+
+26
+00:01:45,210 --> 00:01:50,320
+Dotnet là một nền tảng rất hoàn thiện với nhiều thành phần của bên thứ ba và cộng đồng lớn.
+
+27
+00:01:50,340 --> 00:01:55,950
+Tuy nhiên, lộ trình của nó không rõ ràng vì có vẻ như Microsoft đang thúc đẩy các nhà phát triển Dotnet hướng tới
+
+28
+00:01:55,950 --> 00:01:56,970
+Lõi Dotnet.
+
+29
+00:01:57,480 --> 00:02:02,790
+Ngày nay, Dotnet là lựa chọn mặc định cho ứng dụng chạy trên Windows, chủ yếu là vì IDE tuyệt vời của nó
+
+30
+00:02:02,820 --> 00:02:04,830
+cú pháp rõ ràng và cộng đồng lớn.
+
+31
+00:02:05,940 --> 00:02:07,950
+Tiếp theo là Dotnet core.
+
+32
+00:02:08,850 --> 00:02:15,000
+Bạn có thể gọi nó là Dotnet thế hệ tiếp theo và nó nhằm mục đích lấp đầy những khoảng trống trong Dotnet chủ yếu là đa nền tảng
+
+33
+00:02:15,000 --> 00:02:17,410
+hỗ trợ và hiệu suất.
+
+34
+00:02:17,460 --> 00:02:23,430
+Theo kinh nghiệm của riêng tôi, Dotnet core là một nền tảng linh hoạt và nhanh chóng, nhưng tính đến thời điểm ghi âm này, không
+
+35
+00:02:23,430 --> 00:02:24,420
+đã chín hoàn toàn.
+
+36
+00:02:24,450 --> 00:02:30,360
+Có một số thiếu sót rõ ràng, chẳng hạn như hỗ trợ webhook, hỗ trợ odata một phần, hỗ trợ PowerShell
+
+37
+00:02:30,360 --> 00:02:31,470
+và nhiều hơn nữa.
+
+38
+00:02:31,530 --> 00:02:37,980
+Các ứng dụng Dotnet Core có thể được phát triển bằng Visual Studio nhưng cũng có thể sử dụng VS code và các ide phổ biến khác.
+
+39
+00:02:38,970 --> 00:02:45,150
+Cộng đồng Dotnet core không lớn lắm nhưng rất năng nổ và đang phát triển nhanh chóng trong Stack gần đây
+
+40
+00:02:45,150 --> 00:02:46,410
+Khảo sát dành cho nhà phát triển Overflow.
+
+41
+00:02:46,410 --> 00:02:51,510
+Về lâu dài, nó được coi là nền tảng thứ hai trong số các nền tảng phía máy chủ ngay sau NodeJS.
+
+42
+00:02:51,540 --> 00:02:53,070
+Dotnet core sẽ là lựa chọn tuyệt vời.
+
+43
+00:02:53,070 --> 00:02:58,530
+Ngay bây giờ, bạn hẳn đã biết về những khoảng trống cũng như hiệu suất và khả năng tuyệt vời của nó.
+
+44
+00:02:59,640 --> 00:03:01,170
+Thứ ba là Java.
+
+45
+00:03:01,500 --> 00:03:05,280
+Java đã tồn tại trong một thời gian dài và có vẻ như nó sẽ còn tồn tại lâu dài.
+
+46
+00:03:05,550 --> 00:03:11,850
+Được tạo ra vào năm 1995 bởi Sun Microsystems, hiện thuộc sở hữu của Oracle, Java là một trong những nền tảng phổ biến nhất
+
+47
+00:03:11,850 --> 00:03:13,630
+đang được sử dụng hiện nay, giống như Dotnet.
+
+48
+00:03:13,650 --> 00:03:17,760
+Đây là ngôn ngữ hướng đối tượng, có kiểu tĩnh, mục đích chung.
+
+49
+00:03:17,910 --> 00:03:23,850
+Những bước đột phá ban đầu của nó vào phía máy khách dưới dạng các ứng dụng Java và sau đó là Java không thành công lắm,
+
+50
+00:03:23,850 --> 00:03:25,440
+mà còn cả hệ sinh thái Android nữa.
+
+51
+00:03:25,440 --> 00:03:28,950
+Các ứng dụng được viết bằng Java gốc đã mang lại sự thúc đẩy to lớn.
+
+52
+00:03:28,980 --> 00:03:31,170
+Java phía máy chủ được gọi là Java.
+
+53
+00:03:31,200 --> 00:03:36,690
+EE gần đây đã chuyển sang phiên bản Jakarta Enterprise và cung cấp mọi thứ bạn có thể mong đợi từ một máy chủ
+
+54
+00:03:36,690 --> 00:03:40,350
+nền tảng phụ, bao gồm các ứng dụng web, quyền truy cập cơ sở dữ liệu API web và nhiều hơn nữa.
+
+55
+00:03:40,350 --> 00:03:43,020
+Và tất cả những điều này đều diễn ra trong môi trường đa nền tảng.
+
+56
+00:03:44,280 --> 00:03:49,620
+Java có một cộng đồng lớn, đôi khi phải chịu đựng quá nhiều sự tự chỉ trích, nhưng vẫn cung cấp những điều tuyệt vời
+
+57
+00:03:49,620 --> 00:03:50,580
+hỗ trợ mọi thứ.
+
+58
+00:03:50,580 --> 00:03:51,120
+Java.
+
+59
+00:03:51,450 --> 00:03:56,730
+Trong những năm gần đây, có vẻ như sự quan tâm đến Java ở phía sau đã giảm sút và xuất hiện những đứa trẻ mới trong khối
+
+60
+00:03:56,910 --> 00:03:58,080
+thu hút mọi sự chú ý.
+
+61
+00:03:58,080 --> 00:04:01,320
+Nhưng Java vẫn là nền tảng tuyệt vời cho các ứng dụng web và API web.
+
+62
+00:04:03,110 --> 00:04:06,900
+Node.js là một trong những nền tảng trẻ nhất ở đây, chỉ đứng sau Dotnet core.
+
+63
+00:04:07,050 --> 00:04:13,020
+Nền tảng này được Ryan Dahl thành lập vào năm 2009 và được tối ưu hóa cho các ứng dụng web có tính đồng thời cao.
+
+64
+00:04:13,050 --> 00:04:18,720
+Cú pháp của nó dựa trên JavaScript, khiến nó được gõ động và nhanh chóng được chấp nhận
+
+65
+00:04:18,720 --> 00:04:21,390
+vì cú pháp quen thuộc và hiệu suất tuyệt vời.
+
+66
+00:04:21,870 --> 00:04:27,240
+Có lẽ đây là một trong những nền tảng nhanh nhất hiện nay khi cạnh tranh trực tiếp với Dotnet core.
+
+67
+00:04:27,450 --> 00:04:32,610
+Như đã đề cập, NodeJS không nhắm mục tiêu vào các quy trình chạy dài, vì vậy đừng cố gắng xây dựng các dịch vụ với
+
+68
+00:04:32,610 --> 00:04:32,970
+Nó.
+
+69
+00:04:32,970 --> 00:04:38,160
+Nhưng đối với các ứng dụng web yêu cầu nhiều hoạt động IO đồng thời ngắn, nó phải nằm ở đầu
+
+70
+00:04:38,160 --> 00:04:38,730
+danh sách.
+
+71
+00:04:40,290 --> 00:04:46,200
+PHP được thành lập vào năm 1994 bởi Rasmus Lerdorf, điều này khiến nó thậm chí còn trưởng thành hơn Java.
+
+72
+00:04:46,200 --> 00:04:50,340
+Nhưng trái ngược với Java, là ngôn ngữ hướng đối tượng có kiểu tĩnh.
+
+73
+00:04:50,700 --> 00:04:51,600
+PHP rất nhiều.
+
+74
+00:04:51,840 --> 00:04:53,910
+Làm sao tôi có thể gọi nó là lộn xộn được?
+
+75
+00:04:54,600 --> 00:04:57,270
+Rất dễ học, nhưng phải trả giá.
+
+76
+00:04:57,270 --> 00:04:59,640
+Đôi khi trông giống như nó được đưa ra một cách vội vã.
+
+77
+00:04:59,670 --> 00:05:01,830
+Cổng không được đánh bóng đủ.
+
+78
+00:05:02,460 --> 00:05:07,830
+Tuy nhiên, đây là một trong những ngôn ngữ phổ biến nhất hiện nay và có cộng đồng người sử dụng sôi động.
+
+79
+00:05:08,970 --> 00:05:14,280
+PHP tập trung vào các ứng dụng web và API web, vì vậy nếu bạn đang lập kế hoạch cho một thành phần chạy lâu dài, tốt hơn
+
+80
+00:05:14,280 --> 00:05:15,300
+nhìn đi nơi khác.
+
+81
+00:05:16,560 --> 00:05:18,510
+Cuối cùng nhưng không kém phần quan trọng là Python.
+
+82
+00:05:18,660 --> 00:05:24,810
+Được thành lập vào năm 1989 bởi Guido van Rossum và nhanh chóng trở thành một trong những ngôn ngữ lập trình phổ biến nhất,
+
+83
+00:05:24,810 --> 00:05:29,310
+Python nhanh chóng trở thành ngôn ngữ có thể thực hiện hầu hết mọi tác vụ.
+
+84
+00:05:29,640 --> 00:05:33,990
+Bạn có thể tìm thấy nó bên trong các ứng dụng được viết trên các nền tảng khác, trong các hệ thống học máy và
+
+85
+00:05:33,990 --> 00:05:36,000
+khóa học dưới dạng ứng dụng web hoặc API web.
+
+86
+00:05:36,360 --> 00:05:39,870
+Một trong những điểm hấp dẫn nhất của Python là đường cong học tập của nó.
+
+87
+00:05:39,900 --> 00:05:43,740
+Đây là một trong những ngôn ngữ dễ học nhất và cũng rất khoan dung.
+
+88
+00:05:43,770 --> 00:05:47,460
+Python cũng có một cộng đồng lớn được biết đến với các thành viên hữu ích.
+
+89
+00:05:48,210 --> 00:05:53,010
+Bạn có thể cân nhắc Python cho hầu hết mọi loại ứng dụng, bao gồm ứng dụng web, bảng điều khiển API web hoặc
+
+90
+00:05:53,010 --> 00:05:53,700
+dịch vụ.
+
+91
+00:05:54,960 --> 00:05:58,230
+Đây là bài đánh giá ngắn về các nền tảng phụ trợ hàng đầu.
+
+92
+00:05:58,260 --> 00:06:01,000
+Chúng ta hãy tóm tắt lại bằng bảng sau.
+
+93
+00:06:01,300 --> 00:06:04,270
+Trong bảng này bạn có thể thấy các thuộc tính chính của từng nền tảng.
+
+94
+00:06:04,270 --> 00:06:06,670
+Tôi khuyên bạn nên sử dụng bảng này làm tài liệu tham khảo.
+
+95
+00:06:06,670 --> 00:06:11,290
+Khi đến lúc phải lựa chọn nền tảng công nghệ cho dịch vụ hoặc bảng điều khiển phía sau.
+

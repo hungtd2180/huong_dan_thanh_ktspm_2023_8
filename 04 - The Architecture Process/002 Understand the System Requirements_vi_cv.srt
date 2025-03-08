@@ -1,0 +1,56 @@
+1
+00:00:00,230 --> 00:00:04,520
+Điều đầu tiên mà kiến trúc sư cần làm khi bắt đầu làm việc trên một hệ thống mới là hiểu
+
+2
+00:00:04,520 --> 00:00:05,870
+yêu cầu của hệ thống.
+
+3
+00:00:06,200 --> 00:00:06,860
+Được rồi.
+
+4
+00:00:06,860 --> 00:00:11,450
+Vâng, thực ra, điều đầu tiên là phải hiểu mục tiêu của hệ thống, như chúng ta đã thảo luận trước đó trong bài này
+
+5
+00:00:11,450 --> 00:00:12,020
+khóa học.
+
+6
+00:00:12,020 --> 00:00:15,650
+Nhưng một quá trình kiến trúc thực sự bắt đầu bằng các yêu cầu.
+
+7
+00:00:15,770 --> 00:00:19,610
+Hãy nhớ rằng các yêu cầu mô tả những gì hệ thống nên làm.
+
+8
+00:00:19,640 --> 00:00:25,970
+Họ thường bắt đầu bằng các nhiệm vụ cấp cao như cho phép người dùng cuối xem dữ liệu đo từ xa và thường mô tả
+
+9
+00:00:25,970 --> 00:00:30,110
+cũng như quy trình làm việc, dịch vụ logic và các thành phần giao diện người dùng.
+
+10
+00:00:30,320 --> 00:00:35,400
+Những yêu cầu đó thường được xác định bởi nhà phân tích hệ thống làm việc trực tiếp với khách hàng.
+
+11
+00:00:35,420 --> 00:00:41,000
+Vì vậy, trong hầu hết các trường hợp, cuộc họp làm việc đầu tiên của bạn sau cuộc họp giới thiệu bắt buộc sẽ là với
+
+12
+00:00:41,000 --> 00:00:42,080
+nhà phân tích hệ thống.
+
+13
+00:00:42,320 --> 00:00:47,000
+Trong cuộc họp này, bạn sẽ thảo luận về các yêu cầu của hệ thống mới và có thể đặt ngày cho tương lai.
+
+14
+00:00:47,000 --> 00:00:48,680
+các cuộc họp về cùng một chủ đề.
+

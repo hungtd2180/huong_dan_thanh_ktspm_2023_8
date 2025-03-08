@@ -1,0 +1,44 @@
+1
+00:00:15,730 --> 00:00:19,120
+This is one of the most important steps in this process.
+
+2
+00:00:19,300 --> 00:00:23,920
+In this step, you are going to decide together with the development team, what will be the platform
+
+3
+00:00:23,920 --> 00:00:25,930
+on which the system will be based.
+
+4
+00:00:26,230 --> 00:00:30,440
+Usually there will be more than one technology to be used in most systems.
+
+5
+00:00:30,460 --> 00:00:35,140
+You will have to select the back end platform, the front end platform and the data store platform.
+
+6
+00:00:35,140 --> 00:00:41,020
+In addition, in some systems such as ones that are based on microservices architecture, you will often
+
+7
+00:00:41,020 --> 00:00:45,370
+select multiple back end platforms and perhaps also multiple data stores.
+
+8
+00:00:45,400 --> 00:00:47,410
+As we will see in the relevant section.
+
+9
+00:00:47,410 --> 00:00:52,480
+There are a lot of factors you have to consider when selecting the technology stack, and the selection
+
+10
+00:00:52,480 --> 00:00:54,010
+must be very rational.
+
+11
+00:00:54,220 --> 00:00:57,370
+A wrong technology stack can lead to failure of the whole system.
+

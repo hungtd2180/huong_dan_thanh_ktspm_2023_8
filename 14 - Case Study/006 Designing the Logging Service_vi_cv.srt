@@ -1,0 +1,544 @@
+1
+00:00:00,260 --> 00:00:04,280
+Dịch vụ ghi nhật ký là dịch vụ đầu tiên chúng ta sẽ tìm hiểu sâu hơn.
+
+2
+00:00:04,400 --> 00:00:06,820
+Có thể điều này nghe có vẻ hơi lạ.
+
+3
+00:00:06,830 --> 00:00:09,860
+Suy cho cùng, đây là dịch vụ nhàm chán nhất.
+
+4
+00:00:09,890 --> 00:00:12,260
+Hãy bắt đầu với điều gì đó thú vị hơn.
+
+5
+00:00:12,590 --> 00:00:16,040
+Vâng, lý do chúng tôi bắt đầu cung cấp dịch vụ này là có hai phần.
+
+6
+00:00:16,070 --> 00:00:20,180
+Đầu tiên, chúng tôi muốn nhấn mạnh rằng việc ghi nhật ký rất quan trọng.
+
+7
+00:00:20,210 --> 00:00:26,450
+Nhiều nhà phát triển và đáng buồn là các kiến trúc sư coi việc ghi nhật ký là một ý nghĩ muộn màng, nhưng đây là cách sai lầm.
+
+8
+00:00:26,450 --> 00:00:27,080
+xử lý nó.
+
+9
+00:00:27,110 --> 00:00:32,960
+Ghi nhật ký là một trong những nền tảng của mọi ứng dụng và do đó nên được coi như bất kỳ ứng dụng nào khác
+
+10
+00:00:32,960 --> 00:00:33,650
+dịch vụ.
+
+11
+00:00:34,400 --> 00:00:40,340
+Thứ hai, chúng tôi muốn xây dựng tất cả các dịch vụ của mình theo cách đã bao gồm việc ghi nhật ký và không thêm nó
+
+12
+00:00:40,340 --> 00:00:40,910
+sau đó.
+
+13
+00:00:40,940 --> 00:00:46,370
+Để làm được điều đó, chúng ta cần dịch vụ ghi nhật ký sẵn sàng để các dịch vụ khác có thể giao tiếp với nó.
+
+14
+00:00:46,400 --> 00:00:52,100
+Trong ứng dụng cụ thể của chúng tôi, dịch vụ ghi nhật ký đọc từ hàng đợi và không tương tác trực tiếp
+
+15
+00:00:52,100 --> 00:00:53,120
+với các dịch vụ khác.
+
+16
+00:00:53,120 --> 00:00:56,360
+Nhưng dù sao thì bắt đầu luôn là ý tưởng hay.
+
+17
+00:00:56,360 --> 00:00:57,800
+Vậy chúng ta đi thôi.
+
+18
+00:00:59,380 --> 00:01:03,070
+Sau đây là các bước chúng ta cần thực hiện để phân tích chi tiết các thành phần.
+
+19
+00:01:03,100 --> 00:01:06,280
+Đầu tiên, hãy quyết định loại ứng dụng.
+
+20
+00:01:06,280 --> 00:01:08,860
+Đây có phải là dịch vụ ứng dụng web dành cho máy tính để bàn không?
+
+21
+00:01:09,040 --> 00:01:12,430
+Thứ hai, quyết định công nghệ của thành phần.
+
+22
+00:01:12,430 --> 00:01:15,190
+Và thứ ba, thiết kế kiến trúc.
+
+23
+00:01:15,940 --> 00:01:18,820
+Được rồi, chúng ta hãy bắt đầu với loại ứng dụng.
+
+24
+00:01:18,970 --> 00:01:23,860
+Và để làm được điều đó, chúng ta cần phải tự nhắc nhở mình về mục đích của dịch vụ ghi nhật ký.
+
+25
+00:01:23,890 --> 00:01:31,090
+Nó sẽ đọc các bản ghi nhật ký từ hàng đợi, có thể thực hiện một số loại xác thực và sau đó lưu trữ chúng
+
+26
+00:01:31,090 --> 00:01:32,230
+trong kho dữ liệu.
+
+27
+00:01:32,620 --> 00:01:34,510
+Và đây là điều quan trọng.
+
+28
+00:01:34,540 --> 00:01:37,720
+Dịch vụ ghi nhật ký không chờ bất kỳ yêu cầu nào.
+
+29
+00:01:37,720 --> 00:01:41,720
+Nó luôn bật và thỉnh thoảng sẽ lấy dữ liệu từ hàng đợi.
+
+30
+00:01:41,740 --> 00:01:46,180
+Vậy hãy cùng xem ứng dụng này so sánh thế nào với các loại ứng dụng mà chúng ta biết.
+
+31
+00:01:46,360 --> 00:01:53,140
+Vì vậy, ứng dụng web đầu tiên và API web, cả hai đều không được đưa vào sử dụng vì, như chúng tôi vừa nói, dịch vụ ghi nhật ký
+
+32
+00:01:53,140 --> 00:01:59,590
+không dựa trên mô hình yêu cầu phản hồi mà luôn trực tuyến và khởi tạo các hoạt động riêng của nó.
+
+33
+00:01:59,600 --> 00:02:02,210
+Đây chắc chắn không phải là ứng dụng di động.
+
+34
+00:02:02,210 --> 00:02:05,060
+Nó chạy trên máy chủ chứ không phải trên máy khách.
+
+35
+00:02:05,270 --> 00:02:06,530
+Còn máy chơi game thì sao?
+
+36
+00:02:06,560 --> 00:02:08,840
+Vâng, trông có vẻ phù hợp đấy.
+
+37
+00:02:08,870 --> 00:02:14,600
+Ứng dụng bảng điều khiển phù hợp nhất với các quy trình chạy lâu dài trong khi vẫn cung cấp giao diện người dùng hạn chế.
+
+38
+00:02:14,630 --> 00:02:17,670
+Đây chính xác là những gì chúng ta cần từ dịch vụ ghi nhật ký.
+
+39
+00:02:17,690 --> 00:02:21,140
+Chúng tôi không cần bất kỳ giao diện người dùng nào và đây là một quá trình chạy dài.
+
+40
+00:02:21,140 --> 00:02:23,390
+Vậy thì đây là một ứng cử viên tuyệt vời.
+
+41
+00:02:23,420 --> 00:02:25,580
+Tiếp theo là dịch vụ.
+
+42
+00:02:25,780 --> 00:02:29,980
+Hãy nhớ rằng dịch vụ khá giống với giao diện điều khiển với hai điểm khác biệt quan trọng.
+
+43
+00:02:29,990 --> 00:02:34,780
+Chúng không cung cấp bất kỳ giao diện người dùng nào và được quản lý bởi một loại trình quản lý dịch vụ nào đó.
+
+44
+00:02:34,790 --> 00:02:38,090
+Vì vậy, có vẻ như dịch vụ ghi nhật ký cũng có thể là một dịch vụ.
+
+45
+00:02:38,870 --> 00:02:44,300
+Cuối cùng là ứng dụng máy tính để bàn, tất nhiên là không liên quan đến dịch vụ ghi nhật ký vì nó chạy
+
+46
+00:02:44,300 --> 00:02:45,200
+trên máy chủ.
+
+47
+00:02:45,410 --> 00:02:48,480
+Vì vậy chúng ta chỉ còn lại ứng dụng và dịch vụ bảng điều khiển.
+
+48
+00:02:48,500 --> 00:02:49,790
+Cái nào tốt hơn?
+
+49
+00:02:50,180 --> 00:02:55,480
+Vâng, thực ra không có câu trả lời chắc chắn nào cả mà chủ yếu phụ thuộc vào sở thích cá nhân.
+
+50
+00:02:55,490 --> 00:03:00,140
+Tôi muốn biến nó thành một dịch vụ, nhưng nếu bạn thiết kế nó như một ứng dụng điều khiển, bạn sẽ không làm được
+
+51
+00:03:00,140 --> 00:03:00,920
+một sai lầm.
+
+52
+00:03:01,310 --> 00:03:03,690
+Được rồi, chúng ta đã có loại ứng dụng.
+
+53
+00:03:03,710 --> 00:03:06,110
+Tiếp theo là công nghệ.
+
+54
+00:03:06,260 --> 00:03:11,810
+Như bạn có thể nhớ khi quyết định về ngăn xếp công nghệ, trước tiên chúng ta cần xác định các yếu tố là gì
+
+55
+00:03:11,810 --> 00:03:14,690
+trong thành phần cần chọn ngăn xếp.
+
+56
+00:03:14,720 --> 00:03:20,870
+Trong dịch vụ của chúng tôi có hai thành phần như vậy là mã thành phần và kho dữ liệu.
+
+57
+00:03:21,080 --> 00:03:22,550
+Chúng ta hãy bắt đầu với mã.
+
+58
+00:03:24,220 --> 00:03:29,260
+Vì dịch vụ ghi nhật ký sẽ là một dịch vụ, chúng tôi không có nhiều yêu cầu từ công nghệ
+
+59
+00:03:29,260 --> 00:03:29,770
+chồng lên nhau.
+
+60
+00:03:29,890 --> 00:03:35,050
+Chúng tôi cần mã để có thể truy cập API và lưu trữ dữ liệu trong kho dữ liệu.
+
+61
+00:03:35,080 --> 00:03:38,920
+Điều này không có gì đặc biệt và bất kỳ nền tảng phát triển nào cũng có thể làm được.
+
+62
+00:03:38,950 --> 00:03:42,200
+Ngoài ra, không có yêu cầu đặc biệt nào về hiệu suất.
+
+63
+00:03:42,220 --> 00:03:47,230
+Tất nhiên là chúng ta muốn nó nhanh, nhưng không có yêu cầu cụ thể nào giới hạn chúng ta ở đây.
+
+64
+00:03:47,410 --> 00:03:52,780
+Bây giờ đã đến lúc bạn cần tìm đến các nhà phát triển và hỏi họ xem họ có kinh nghiệm với nền tảng nào.
+
+65
+00:03:52,810 --> 00:03:53,770
+Hãy cùng làm nhé.
+
+66
+00:03:54,280 --> 00:03:59,680
+Vâng, có vẻ như nhóm phát triển quen thuộc với Microsoft stack, nghĩa là nền tảng Dotnet
+
+67
+00:03:59,680 --> 00:04:01,150
+và SQL Server.
+
+68
+00:04:01,330 --> 00:04:02,200
+Tốt đấy.
+
+69
+00:04:02,200 --> 00:04:07,210
+Vì Dotnet là một nền tảng đa năng có thể được sử dụng trong cả dịch vụ lẫn ứng dụng web.
+
+70
+00:04:07,210 --> 00:04:10,840
+Và điều đó có thể hữu ích khi chúng ta thảo luận về các dịch vụ khác.
+
+71
+00:04:10,930 --> 00:04:16,870
+Điều đáng lưu ý duy nhất ở đây là Dotnet hơi lỗi thời và dự án mới nên sử dụng lõi Dotnet,
+
+72
+00:04:16,870 --> 00:04:20,410
+là phiên bản kế thừa đa nền tảng mới của Dotnet.
+
+73
+00:04:20,440 --> 00:04:26,120
+Nhóm không quen thuộc với Dotnet core, nhưng sau một cuộc thảo luận ngắn, chúng tôi đồng ý về một quy trình tích hợp
+
+74
+00:04:26,120 --> 00:04:32,270
+và cùng nhau quyết định dịch vụ sẽ dựa trên Dotnet core và cơ sở dữ liệu sẽ là SQL Server.
+
+75
+00:04:32,690 --> 00:04:38,330
+Bây giờ cần lưu ý rằng nếu nhóm quen thuộc với Java và MySQL thì điều đó cũng rất tuyệt.
+
+76
+00:04:38,360 --> 00:04:40,670
+Python và Postgres cũng tốt.
+
+77
+00:04:40,760 --> 00:04:45,890
+Hầu như bất kỳ sự kết hợp nào cũng sẽ hoạt động ở đây miễn là nền tảng hỗ trợ bảng điều khiển, ứng dụng hoặc dịch vụ và
+
+78
+00:04:45,890 --> 00:04:47,180
+có thể truy cập cơ sở dữ liệu.
+
+79
+00:04:47,930 --> 00:04:48,290
+Được rồi.
+
+80
+00:04:48,290 --> 00:04:48,710
+Tuyệt vời.
+
+81
+00:04:48,710 --> 00:04:50,450
+Vậy là chúng ta có nền tảng công nghệ.
+
+82
+00:04:50,480 --> 00:04:52,730
+Bây giờ chúng ta hãy thiết kế kiến trúc.
+
+83
+00:04:52,940 --> 00:04:58,730
+Hãy nhớ lại cuộc thảo luận của chúng ta về kiến trúc nhiều lớp, cách chúng ta nói rằng trong hầu hết các trường hợp, đây là cách giải quyết
+
+84
+00:04:58,730 --> 00:05:00,470
+kiến trúc của từng thành phần.
+
+85
+00:05:00,500 --> 00:05:01,130
+Tốt.
+
+86
+00:05:01,280 --> 00:05:03,170
+Hãy xem nó có phù hợp ở đây không.
+
+87
+00:05:03,200 --> 00:05:10,190
+Như bạn có thể nhớ, kiến trúc phân lớp có ba lớp giao diện người dùng hoặc giao diện dịch vụ,
+
+88
+00:05:10,220 --> 00:05:14,420
+logic kinh doanh và truy cập dữ liệu ghi vào kho dữ liệu.
+
+89
+00:05:14,450 --> 00:05:18,020
+Bây giờ, bạn có nghĩ mô hình này phù hợp với trường hợp này không?
+
+90
+00:05:18,050 --> 00:05:19,940
+Hãy dành chút thời gian để suy nghĩ về điều này.
+
+91
+00:05:19,940 --> 00:05:23,840
+Bạn có thể tạm dừng bài giảng và tiếp tục khi đi đến kết luận.
+
+92
+00:05:28,380 --> 00:05:28,980
+Được rồi.
+
+93
+00:05:28,980 --> 00:05:33,720
+Vì vậy, tôi hy vọng bạn có ý kiến về việc kiến trúc phân lớp có phù hợp với việc ghi nhật ký hay không
+
+94
+00:05:33,720 --> 00:05:34,290
+dịch vụ.
+
+95
+00:05:34,290 --> 00:05:36,530
+Và đây là suy nghĩ của tôi về vấn đề này.
+
+96
+00:05:36,540 --> 00:05:38,910
+Phù hợp, nhưng không hoàn toàn phù hợp.
+
+97
+00:05:39,150 --> 00:05:43,650
+Vấn đề chính ở đây là lớp đầu tiên, lớp UI hoặc lớp API.
+
+98
+00:05:43,680 --> 00:05:46,350
+Dịch vụ ghi nhật ký không có UI hoặc API.
+
+99
+00:05:46,380 --> 00:05:51,870
+Đây là một quá trình chạy dài và không hiển thị bất cứ thông tin gì, không có API và không có giao diện người dùng.
+
+100
+00:05:51,900 --> 00:05:54,450
+Các lớp còn lại thực sự khá liên quan.
+
+101
+00:05:54,480 --> 00:05:59,220
+Chúng ta cần lớp nghiệp vụ để xử lý các bản ghi nhật ký và chúng ta cần lớp truy cập dữ liệu để truy cập
+
+102
+00:05:59,220 --> 00:06:00,020
+cơ sở dữ liệu.
+
+103
+00:06:00,030 --> 00:06:07,020
+Vì vậy, những gì chúng ta sẽ làm là điều chỉnh mẫu lớp cổ điển và sửa đổi lớp trên cùng thành lớp thăm dò
+
+104
+00:06:07,020 --> 00:06:07,650
+lớp.
+
+105
+00:06:07,800 --> 00:06:12,810
+Lớp này chịu trách nhiệm truy cập hàng đợi và lấy các bản ghi nhật ký để xử lý bởi
+
+106
+00:06:12,810 --> 00:06:13,650
+lớp kinh doanh.
+
+107
+00:06:13,740 --> 00:06:17,970
+Và đây là cách mẫu lớp được cập nhật sẽ trông như thế nào trong trường hợp của chúng ta.
+
+108
+00:06:19,450 --> 00:06:21,300
+Vậy thành phần này sẽ hoạt động như thế nào?
+
+109
+00:06:21,310 --> 00:06:23,200
+Luồng mà nó thực hiện là gì?
+
+110
+00:06:23,230 --> 00:06:24,220
+Đây rồi.
+
+111
+00:06:24,370 --> 00:06:28,750
+Lớp thăm dò chạy một bộ đếm thời gian để kéo hàng đợi sau mỗi vài giây.
+
+112
+00:06:28,750 --> 00:06:34,150
+Nếu có bản ghi mới được trả về từ hàng đợi, lớp thăm dò sẽ gửi chúng đến lớp logic nghiệp vụ.
+
+113
+00:06:34,180 --> 00:06:38,470
+Lớp này xác thực chúng và đảm bảo không có thư rác nào được gửi đi.
+
+114
+00:06:38,590 --> 00:06:44,090
+Nếu mọi thứ đều ổn, nó sẽ gửi chúng đến lớp truy cập dữ liệu để lưu vào cơ sở dữ liệu.
+
+115
+00:06:44,110 --> 00:06:47,320
+Và về cơ bản đó chính là kiến trúc bên trong của dịch vụ ghi nhật ký.
+
+116
+00:06:47,350 --> 00:06:49,670
+Có một điều nữa tôi muốn lưu ý.
+
+117
+00:06:49,690 --> 00:06:55,270
+Hãy nhớ lại cuộc thảo luận của chúng ta về việc tiêm phụ thuộc, cách nó loại bỏ sự phụ thuộc giữa các thành phần mã.
+
+118
+00:06:55,300 --> 00:06:55,810
+Tốt.
+
+119
+00:06:55,810 --> 00:07:00,250
+Chúng tôi sẽ sử dụng nó trong dịch vụ ghi nhật ký để tránh sự kết hợp giữa lớp thăm dò và lớp kinh doanh
+
+120
+00:07:00,250 --> 00:07:04,390
+lớp logic và giữa lớp logic nghiệp vụ và lớp truy cập dữ liệu.
+
+121
+00:07:04,570 --> 00:07:10,750
+May mắn cho chúng tôi, Dotnet core có cơ chế tiêm phụ thuộc tuyệt vời được tích hợp bằng cách sử dụng Microsoft Extensions
+
+122
+00:07:10,750 --> 00:07:14,740
+gói dependency injection và nó sẽ thực hiện mọi công việc khó khăn thay chúng ta.
+
+123
+00:07:15,010 --> 00:07:20,840
+Thực ra, khi dependency injection được tích hợp sẵn, tôi thực sự phải vật lộn rất nhiều để tìm ra lý do
+
+124
+00:07:20,840 --> 00:07:22,230
+tại sao không sử dụng nó.
+
+125
+00:07:22,250 --> 00:07:27,350
+Và điều cuối cùng, trong khi mã xử lý việc thăm dò từ hàng đợi và xác thực là một mã vanilla
+
+126
+00:07:27,350 --> 00:07:32,660
+mã không sử dụng thư viện bên ngoài, lớp truy cập dữ liệu sẽ sử dụng khung thực thể để truy cập
+
+127
+00:07:32,660 --> 00:07:34,340
+cơ sở dữ liệu và lưu các bản ghi.
+
+128
+00:07:34,370 --> 00:07:41,180
+Thư viện này cung cấp cho chúng ta khả năng ORM, về cơ bản có thể biểu diễn các bản ghi cơ sở dữ liệu dưới dạng các đối tượng đầy đủ.
+
+129
+00:07:41,450 --> 00:07:42,440
+Được rồi, tốt lắm.
+
+130
+00:07:42,470 --> 00:07:44,690
+Chúng tôi vừa thiết kế dịch vụ đầu tiên.
+
+131
+00:07:44,720 --> 00:07:49,640
+Bây giờ chúng ta đã có kiến trúc cho dịch vụ ghi nhật ký, hoàn chỉnh với loại và công nghệ của nó.
+
+132
+00:07:49,790 --> 00:07:54,050
+Tôi hy vọng bạn thích trải nghiệm này và cảm thấy sẵn sàng để tiếp tục dịch vụ tiếp theo.
+
+133
+00:07:54,080 --> 00:07:56,870
+Nó sẽ vui ít nhất là bằng trò này.
+
+134
+00:07:56,900 --> 00:08:02,360
+Hãy nhớ rằng, nếu bạn có bất kỳ câu hỏi hoặc ý kiến nào, đừng ngần ngại liên hệ với tôi và tôi hứa sẽ
+
+135
+00:08:02,360 --> 00:08:04,260
+trả lời bạn sớm nhất có thể.
+
+136
+00:08:04,280 --> 00:08:07,070
+Vậy chúng ta hãy tiếp tục buổi lễ tiếp theo.
+

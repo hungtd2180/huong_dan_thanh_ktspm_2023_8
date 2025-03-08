@@ -1,0 +1,200 @@
+1
+00:00:00,200 --> 00:00:04,370
+Nói trước công chúng là một trong những kỹ năng quan trọng nhất của mọi chuyên gia.
+
+2
+00:00:04,400 --> 00:00:10,130
+Phát biểu tại các hội nghị, buổi gặp mặt, các cuộc họp lớn và những nơi như vậy là một kỹ năng quan trọng đối với tất cả những ai muốn
+
+3
+00:00:10,130 --> 00:00:13,170
+để được thăng chức hoặc tìm kiếm công việc mới tốt hơn.
+
+4
+00:00:13,190 --> 00:00:19,970
+Nhưng chúng ta không nói ở đây về mọi chuyên gia mà nói về các kiến trúc sư và kiến trúc sư nói riêng
+
+5
+00:00:19,970 --> 00:00:22,820
+phải có khả năng nói trước đám đông.
+
+6
+00:00:22,850 --> 00:00:29,420
+Hãy nhớ rằng, các kiến trúc sư thường không có thẩm quyền chính thức đối với các nhà phát triển, nhà phân tích hệ thống hoặc dự án.
+
+7
+00:00:29,420 --> 00:00:30,050
+người quản lý.
+
+8
+00:00:30,080 --> 00:00:34,940
+Nếu một kiến trúc sư muốn gây ảnh hưởng, cô ấy nên sử dụng kỹ năng nói của mình.
+
+9
+00:00:34,970 --> 00:00:38,690
+Ngoài ra, các kiến trúc sư sẽ tham gia nhiều cuộc họp.
+
+10
+00:00:38,690 --> 00:00:42,940
+Một số trong số họ đóng vai trò quan trọng đối với sự thành công của dự án và ý kiến đóng góp của họ là vô cùng quan trọng.
+
+11
+00:00:42,950 --> 00:00:48,530
+Vì vậy, với tư cách là một kiến trúc sư, bạn phải có khả năng đứng trước khán giả và đưa ra một lời thuyết phục,
+
+12
+00:00:48,530 --> 00:00:49,640
+bài phát biểu hiệu quả.
+
+13
+00:00:49,670 --> 00:00:52,490
+Đây không phải là khóa học về hùng biện.
+
+14
+00:00:52,490 --> 00:00:57,680
+Có rất nhiều khóa học như vậy, nhưng tôi muốn nêu bật một số khía cạnh quan trọng hơn
+
+15
+00:00:57,680 --> 00:01:01,970
+nói trước công chúng sẽ giúp bạn có bài phát biểu hấp dẫn và hiệu quả.
+
+16
+00:01:01,980 --> 00:01:03,030
+Vậy chúng ta đi thôi.
+
+17
+00:01:03,240 --> 00:01:06,000
+Đầu tiên, hãy xác định mục tiêu rõ ràng.
+
+18
+00:01:06,030 --> 00:01:10,430
+Khi bạn chuẩn bị nói trước đám đông, bạn phải có mục tiêu rõ ràng.
+
+19
+00:01:10,440 --> 00:01:11,820
+Tại sao bạn lại làm thế này?
+
+20
+00:01:11,850 --> 00:01:14,310
+Bạn có muốn xin phê duyệt kiến trúc không?
+
+21
+00:01:14,340 --> 00:01:16,240
+Bạn có muốn cải thiện hình ảnh của mình không?
+
+22
+00:01:16,260 --> 00:01:17,670
+Bạn có muốn được tăng lương không?
+
+23
+00:01:17,700 --> 00:01:22,800
+Dù lý do là gì, bạn phải xác định rõ ràng và tập trung vào nó khi nói.
+
+24
+00:01:22,800 --> 00:01:26,100
+Điều này sẽ giúp bạn cải thiện bài phát biểu và làm cho nó hiệu quả hơn.
+
+25
+00:01:26,130 --> 00:01:28,530
+Thứ hai, hãy hiểu rõ đối tượng của bạn.
+
+26
+00:01:28,560 --> 00:01:33,160
+Bạn phải luôn biết mình sẽ nói chuyện với ai và điều chỉnh cách nói cho phù hợp.
+
+27
+00:01:33,180 --> 00:01:38,670
+Ví dụ, nếu bạn định nói chuyện với các nhà phân tích kinh doanh, có lẽ bạn nên tránh nói chuyện dài dòng.
+
+28
+00:01:38,670 --> 00:01:39,800
+thảo luận kỹ thuật.
+
+29
+00:01:39,810 --> 00:01:42,780
+Họ sẽ không hiểu điều đó và điều đó sẽ khiến họ chán.
+
+30
+00:01:42,930 --> 00:01:48,420
+Thứ ba, hãy tự tin hoặc nếu bạn sợ hãi, hãy giả vờ tự tin.
+
+31
+00:01:48,450 --> 00:01:52,700
+Mọi người có xu hướng tôn trọng và tin tưởng những người tự tin vào những gì họ nói.
+
+32
+00:01:52,710 --> 00:01:58,980
+Nếu cuộc nói chuyện của bạn quá dài dòng, với ai và a, thì sẽ không hay và mọi người sẽ mất hứng thú với bạn.
+
+33
+00:01:59,010 --> 00:02:02,910
+Bạn phải cho họ biết hoặc nghĩ rằng bạn biết mình đang nói gì.
+
+34
+00:02:02,940 --> 00:02:06,420
+Thứ tư, đừng bao giờ đọc.
+
+35
+00:02:06,450 --> 00:02:11,039
+Một trong những sai lầm lớn nhất mà người thuyết trình mắc phải là đọc nội dung trên slide.
+
+36
+00:02:11,070 --> 00:02:13,650
+Khán giả của bạn là những người trưởng thành và thông minh.
+
+37
+00:02:13,650 --> 00:02:14,850
+Họ biết đọc.
+
+38
+00:02:14,850 --> 00:02:15,780
+Cảm ơn rất nhiều.
+
+39
+00:02:15,810 --> 00:02:20,180
+Các slide đi kèm nên được sử dụng để nêu quan điểm và hình dung các khái niệm.
+
+40
+00:02:20,190 --> 00:02:24,390
+Trong mọi trường hợp, chúng không được chứa nội dung đó.
+
+41
+00:02:24,660 --> 00:02:27,150
+Thứ năm, duy trì giao tiếp bằng mắt.
+
+42
+00:02:27,150 --> 00:02:30,480
+Luôn nhìn vào khán giả của bạn và đảm bảo nhìn vào tất cả mọi người.
+
+43
+00:02:30,480 --> 00:02:36,060
+Một trong những sai lầm phổ biến của những người phát biểu trước công chúng là chỉ tập trung vào một người tham dự và chỉ nhìn vào người đó
+
+44
+00:02:36,060 --> 00:02:36,900
+trong suốt cuộc nói chuyện.
+
+45
+00:02:36,930 --> 00:02:42,420
+Điều này sẽ khiến người tham dự tội nghiệp cảm thấy không thoải mái và khiến những người còn lại trong khán phòng cảm thấy giống như bạn.
+
+46
+00:02:42,420 --> 00:02:43,500
+đừng nói chuyện với họ.
+
+47
+00:02:44,130 --> 00:02:47,610
+Được rồi, đây là một số điểm nổi bật về việc nói trước công chúng.
+
+48
+00:02:47,610 --> 00:02:52,410
+Và một lần nữa, tôi thực sự khuyên bạn nên tìm hiểu một số nguồn tài liệu và đọc một số cuốn sách về chủ đề này.
+
+49
+00:02:52,410 --> 00:02:57,360
+Đây là một trong những kỹ năng quan trọng nhất mà các kiến trúc sư nên có và bạn nên là chuyên gia trong lĩnh vực đó
+
+50
+00:02:57,360 --> 00:02:57,990
+cánh đồng.
+

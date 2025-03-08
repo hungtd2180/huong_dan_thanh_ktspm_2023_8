@@ -1,0 +1,80 @@
+1
+00:00:00,710 --> 00:00:04,010
+Welcome to the Advanced Architecture Patterns section.
+
+2
+00:00:04,190 --> 00:00:09,530
+By now, we have learned about the most common architectural patterns such as stateless scaling, loose
+
+3
+00:00:09,530 --> 00:00:11,540
+coupling and layered architecture.
+
+4
+00:00:11,690 --> 00:00:16,880
+You will probably use these patterns in almost every system you will design, and I'm sure they will
+
+5
+00:00:16,880 --> 00:00:17,690
+serve you well.
+
+6
+00:00:17,720 --> 00:00:20,760
+However, these are not the only patterns exist.
+
+7
+00:00:20,780 --> 00:00:26,090
+The software architecture world is an ever changing and evolving world, and new patterns frequently
+
+8
+00:00:26,090 --> 00:00:26,660
+emerge.
+
+9
+00:00:26,690 --> 00:00:31,280
+In this section, I would like to give you a taste of some of the more advanced architectural patterns
+
+10
+00:00:31,280 --> 00:00:32,180
+exist today.
+
+11
+00:00:32,210 --> 00:00:37,310
+You will probably not use them in every system, but it's always a good idea to keep them in mind.
+
+12
+00:00:37,310 --> 00:00:40,460
+And when an opportunity presents itself, use them.
+
+13
+00:00:41,450 --> 00:00:43,590
+We are not going to deep dive into these patterns.
+
+14
+00:00:43,610 --> 00:00:49,610
+This will require a course of itself, but we will get the gist of these patterns so you will know they
+
+15
+00:00:49,610 --> 00:00:51,020
+exist when relevant.
+
+16
+00:00:51,050 --> 00:00:53,990
+So these are the patterns we will discuss.
+
+17
+00:00:54,020 --> 00:00:59,180
+Microservices event sourcing and seekers.
+
+18
+00:00:59,330 --> 00:01:01,900
+Don't worry if you are not familiar with these patterns.
+
+19
+00:01:01,920 --> 00:01:03,600
+That's why I'm here for.
+
+20
+00:01:03,720 --> 00:01:05,099
+So let's go.
+

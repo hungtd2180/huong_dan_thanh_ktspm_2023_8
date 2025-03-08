@@ -1,0 +1,152 @@
+1
+00:00:00,200 --> 00:00:05,060
+Let's face it, your walk is going to be criticized probably heavily.
+
+2
+00:00:05,090 --> 00:00:10,550
+You will be questioned on almost any design element in your architecture and will be asked to explain
+
+3
+00:00:10,550 --> 00:00:11,750
+the logic behind it.
+
+4
+00:00:11,960 --> 00:00:17,390
+Now, the worst thing to do with criticism is to get offended and attack back.
+
+5
+00:00:17,570 --> 00:00:23,840
+Doing so will put you in a compromised position and will paint you as a weak, unprofessional and immature.
+
+6
+00:00:23,870 --> 00:00:26,570
+This is not the place you want to be in.
+
+7
+00:00:26,600 --> 00:00:30,470
+Remember, there can be a lot of reasons behind criticism.
+
+8
+00:00:30,470 --> 00:00:32,570
+It can be a genuine questioning.
+
+9
+00:00:32,570 --> 00:00:36,080
+Someone actually wants to make sure the architecture is sound.
+
+10
+00:00:36,080 --> 00:00:38,360
+And she asks all the right questions.
+
+11
+00:00:38,390 --> 00:00:44,660
+Of course, in this situation you have to be very professional and provide all the facts and logic behind
+
+12
+00:00:44,690 --> 00:00:45,500
+your design.
+
+13
+00:00:45,680 --> 00:00:50,810
+Remember also, there is nothing wrong in saying, You know what, That's a good point.
+
+14
+00:00:50,810 --> 00:00:51,910
+I didn't think about.
+
+15
+00:00:51,920 --> 00:00:53,060
+Let me double check it.
+
+16
+00:00:53,060 --> 00:00:56,090
+And if it checks out, I'll fix the architecture document.
+
+17
+00:00:56,120 --> 00:01:01,620
+Such a response will only improve your image and reputation with a client and will make him appreciate
+
+18
+00:01:01,620 --> 00:01:02,610
+you even more.
+
+19
+00:01:02,640 --> 00:01:08,760
+Now, what do you do with a team member trying to mock you and make everyone think how bad the architecture
+
+20
+00:01:08,760 --> 00:01:09,290
+is?
+
+21
+00:01:09,300 --> 00:01:13,030
+By the way, there can be a lot of reasons for such a behavior.
+
+22
+00:01:13,050 --> 00:01:18,720
+I had a client a few years back that asked me to be the chief architect of a system and to have some
+
+23
+00:01:18,720 --> 00:01:21,840
+other guy as my, well, let's call it assistant.
+
+24
+00:01:21,870 --> 00:01:25,770
+This guy, which I'll call John, was a lot of trouble for me.
+
+25
+00:01:25,770 --> 00:01:31,610
+He didn't help at all, didn't perform any task I asked him to do and always questioned the design.
+
+26
+00:01:31,620 --> 00:01:37,290
+Only a few months later I found out John had hoped to be the chief architect of this project and was
+
+27
+00:01:37,290 --> 00:01:39,900
+extremely upset by not getting this job.
+
+28
+00:01:39,900 --> 00:01:43,770
+He expressed his frustration by constant nagging and questioning me.
+
+29
+00:01:43,800 --> 00:01:45,810
+So what do you do in this case?
+
+30
+00:01:45,840 --> 00:01:50,310
+First, do not get offended and never, ever attack back.
+
+31
+00:01:50,340 --> 00:01:55,500
+No matter how right you are, you have to stay professional and always be the bigger person.
+
+32
+00:01:55,530 --> 00:02:02,970
+Second, as before, always answer with logic and facts outraged people usually are at a loss of words
+
+33
+00:02:02,970 --> 00:02:09,300
+when faced with logic and facts, and that the best way to handle them if things get worse, set a meeting
+
+34
+00:02:09,300 --> 00:02:12,030
+with the manager and ask him gently to handle your own.
+
+35
+00:02:12,030 --> 00:02:12,450
+John.
+
+36
+00:02:12,750 --> 00:02:15,120
+But again, this is an edge case.
+
+37
+00:02:15,210 --> 00:02:20,940
+Not everyone who questions your design is doing so to mock, you always assume the criticism is for
+
+38
+00:02:20,940 --> 00:02:24,030
+a good cause and answer it calmly and professionally.
+

@@ -1,0 +1,428 @@
+1
+00:00:00,230 --> 00:00:04,100
+Nhiệm vụ tiếp theo sau khi lập bản đồ yêu cầu là lập bản đồ các thành phần.
+
+2
+00:00:04,130 --> 00:00:09,740
+Trong nhiệm vụ này, chúng ta quyết định những thành phần nào tham gia vào ứng dụng của chúng ta trong khi ghi nhớ
+
+3
+00:00:09,740 --> 00:00:15,080
+rằng một thành phần là một đoạn mã độc lập chạy trong tiến trình riêng của nó và có khả năng tính toán riêng
+
+4
+00:00:15,080 --> 00:00:15,920
+tài nguyên.
+
+5
+00:00:16,070 --> 00:00:20,300
+Cách tốt nhất để xác định các thành phần là xem xét lại các yêu cầu chức năng.
+
+6
+00:00:20,480 --> 00:00:22,970
+Chúng ta thấy có ba yêu cầu chính.
+
+7
+00:00:23,000 --> 00:00:29,480
+Người ta nhận được cập nhật trạng thái từ các thiết bị IoT để lưu trữ các cập nhật này để sử dụng trong tương lai.
+
+8
+00:00:29,480 --> 00:00:30,530
+Và ba.
+
+9
+00:00:30,560 --> 00:00:35,420
+Cho phép người dùng cuối truy vấn các bản cập nhật và cung cấp cho họ thông tin có liên quan.
+
+10
+00:00:35,780 --> 00:00:39,230
+Và chúng ta cũng hãy nhắc nhở bản thân về khối lượng công việc dự kiến.
+
+11
+00:00:39,230 --> 00:00:43,820
+Chúng ta đang nói đến 500 tin nhắn đồng thời và 40 người dùng đồng thời.
+
+12
+00:00:43,940 --> 00:00:46,720
+Bây giờ, có một sự phân biệt quan trọng ở đây.
+
+13
+00:00:46,730 --> 00:00:52,760
+Chúng ta đang xem xét hai nhiệm vụ hoàn toàn khác nhau, tiếp nhận tin nhắn và phản hồi yêu cầu của khách hàng.
+
+14
+00:00:52,790 --> 00:00:58,700
+Hai nhiệm vụ này thực hiện các hành động riêng biệt, có các yêu cầu phi chức năng khác nhau và hoạt động chống lại
+
+15
+00:00:58,700 --> 00:01:00,150
+các thực thể riêng biệt.
+
+16
+00:01:00,240 --> 00:01:06,210
+Vì lý do này, lựa chọn tự nhiên ở đây là tách hai nhiệm vụ này thành hai thành phần riêng biệt.
+
+17
+00:01:06,210 --> 00:01:13,230
+một bên chịu trách nhiệm tiếp nhận các thông điệp, chúng ta hãy gọi là bên nhận và một bên chờ người dùng
+
+18
+00:01:13,230 --> 00:01:17,710
+yêu cầu sẽ được gọi là nhà cung cấp thông tin hoặc đơn giản là thông tin.
+
+19
+00:01:17,730 --> 00:01:20,430
+Vì thông tin cung cấp hơi dài một chút.
+
+20
+00:01:20,970 --> 00:01:23,520
+Vậy thì nó gồm có hai thành phần.
+
+21
+00:01:23,700 --> 00:01:25,440
+Nhưng khoan đã, đó chưa phải là tất cả.
+
+22
+00:01:25,650 --> 00:01:28,890
+Có một khía cạnh rất quan trọng đang ẩn giấu ở đây.
+
+23
+00:01:28,920 --> 00:01:31,920
+Chúng ta biết máy thu sẽ hoạt động dưới tải trọng lớn.
+
+24
+00:01:31,920 --> 00:01:33,940
+500 yêu cầu đồng thời.
+
+25
+00:01:33,960 --> 00:01:39,570
+Điều đó có nghĩa là một trong những khía cạnh quan trọng của người nhận là nó cần phải phát hành tin nhắn
+
+26
+00:01:39,570 --> 00:01:45,690
+yêu cầu cập nhật nhanh nhất có thể vì cứ mỗi mili giây nó hoạt động trên một thông báo cụ thể, có
+
+27
+00:01:45,690 --> 00:01:51,360
+có nhiều tin nhắn đang chờ được xử lý và chúng tôi không muốn rơi vào tình trạng thiếu luồng,
+
+28
+00:01:51,360 --> 00:01:56,790
+nghĩa là dịch vụ sẽ không có đủ tài nguyên để xử lý các yêu cầu đang chờ và nó sẽ bắt đầu
+
+29
+00:01:56,790 --> 00:01:58,020
+ném ngoại lệ.
+
+30
+00:01:58,650 --> 00:02:01,550
+Vì vậy, chúng tôi cần trả lời yêu cầu nhanh nhất có thể.
+
+31
+00:02:01,560 --> 00:02:06,150
+Nhưng điều đó đặt ra câu hỏi rằng nên làm gì với yêu cầu sau khi nhận được?
+
+32
+00:02:06,180 --> 00:02:08,320
+Về cơ bản có hai lựa chọn ở đây.
+
+33
+00:02:08,340 --> 00:02:12,570
+Đầu tiên, chỉ cần chèn yêu cầu vào kho dữ liệu theo nguyên trạng.
+
+34
+00:02:12,870 --> 00:02:18,180
+Không cần xử lý hay xác thực hoặc các tin nhắn có cùng định dạng và chúng ta đều sống hạnh phúc mãi mãi
+
+35
+00:02:18,180 --> 00:02:18,780
+sau đó.
+
+36
+00:02:18,810 --> 00:02:21,270
+Như bạn có thể đoán, điều này khá hiếm.
+
+37
+00:02:21,600 --> 00:02:27,690
+Tùy chọn thứ hai Mỗi tin nhắn cần được xác thực và xử lý và sau đó có thể được lưu trữ để
+
+38
+00:02:27,690 --> 00:02:28,560
+sử dụng sau này.
+
+39
+00:02:28,710 --> 00:02:33,890
+Bây giờ, sự lựa chọn này được quyết định bởi cách các thiết bị IoT gửi tin nhắn.
+
+40
+00:02:33,900 --> 00:02:39,390
+Chúng tôi sẽ cần đến gặp khách hàng và hỏi cô ấy định dạng chính xác của tin nhắn là gì và cách xử lý như thế nào.
+
+41
+00:02:39,390 --> 00:02:40,540
+là bắt buộc đối với họ.
+
+42
+00:02:40,560 --> 00:02:42,300
+Vậy chúng ta hãy đi hỏi cô ấy nhé.
+
+43
+00:02:42,450 --> 00:02:45,510
+Hai ngày sau, cô ấy quay lại với câu trả lời như sau.
+
+44
+00:02:45,750 --> 00:02:48,230
+Có bốn loại thiết bị IoT.
+
+45
+00:02:48,240 --> 00:02:50,830
+Mỗi loại đều có định dạng tin nhắn riêng.
+
+46
+00:02:50,850 --> 00:02:56,700
+Ba trong số chúng sử dụng định dạng Json và một định dạng cũ sử dụng chuỗi định dạng cố định.
+
+47
+00:02:56,730 --> 00:03:02,820
+Ngoài ra, hầu hết các tin nhắn phải được xác thực vì phần mềm thiết bị có thể bị lỗi
+
+48
+00:03:02,820 --> 00:03:04,860
+và chúng ta không thể tin tưởng một cách mù quáng.
+
+49
+00:03:06,330 --> 00:03:07,800
+Sẽ rất vui đây.
+
+50
+00:03:08,100 --> 00:03:11,770
+Vậy bây giờ chúng ta biết người nhận có những nhiệm vụ sau.
+
+51
+00:03:11,790 --> 00:03:16,850
+Người ta nhận được tin nhắn rõ ràng là để xác thực tin nhắn.
+
+52
+00:03:16,860 --> 00:03:24,000
+Ba người truyền tin nhắn và chuyển đổi nó thành một định dạng thống nhất và bốn người lưu nó vào kho dữ liệu.
+
+53
+00:03:24,360 --> 00:03:26,740
+Chúng ta hãy nói đôi chút về nhiệm vụ thứ ba.
+
+54
+00:03:26,760 --> 00:03:34,020
+Nhiệm vụ này cực kỳ quan trọng vì nó làm cho dữ liệu của chúng ta độc lập với nguồn của nó, nghĩa là khi chúng ta sẽ truy vấn
+
+55
+00:03:34,020 --> 00:03:39,900
+dữ liệu, nó sẽ luôn trông giống nhau và có cùng định dạng bất kể nguồn gốc của nó, bất kể
+
+56
+00:03:39,900 --> 00:03:42,570
+trạng thái cập nhật được nhận từ thiết bị nào.
+
+57
+00:03:42,600 --> 00:03:48,090
+Dữ liệu có thể được khách hàng truy cập hoàn toàn và không cần phải định dạng dữ liệu trong khi truy vấn.
+
+58
+00:03:49,020 --> 00:03:54,360
+Khái niệm này cực kỳ quan trọng trong các hệ thống nhận dữ liệu từ nhiều nguồn khác nhau, mỗi nguồn có
+
+59
+00:03:54,360 --> 00:03:55,210
+định dạng riêng của nó.
+
+60
+00:03:55,230 --> 00:04:02,040
+Dữ liệu phải được lưu trữ theo định dạng thống nhất bất kể nguồn gốc của nó, để cho phép truy vấn nhanh chóng và hiệu quả.
+
+61
+00:04:02,340 --> 00:04:04,650
+Được rồi, quay lại với các thành phần.
+
+62
+00:04:04,680 --> 00:04:07,860
+Chúng ta nên thực hiện những nhiệm vụ này để quyết định điều này.
+
+63
+00:04:07,890 --> 00:04:13,620
+Chúng ta phải nhớ rằng người nhận phải giải phóng yêu cầu càng nhanh càng tốt vì vậy chúng ta không muốn
+
+64
+00:04:13,620 --> 00:04:15,050
+để thực hiện các nhiệm vụ bổ sung.
+
+65
+00:04:15,060 --> 00:04:19,820
+Chúng ta muốn nó nhận được tin nhắn, lưu lại để sử dụng sau và kết thúc yêu cầu.
+
+66
+00:04:19,829 --> 00:04:24,960
+Vì vậy, người nhận sẽ chịu trách nhiệm tiếp nhận tin nhắn và đó là tất cả những gì chúng ta sẽ làm
+
+67
+00:04:24,960 --> 00:04:25,290
+xử lý.
+
+68
+00:04:25,290 --> 00:04:26,490
+Các nhiệm vụ khác.
+
+69
+00:04:26,520 --> 00:04:29,310
+Vâng, rõ ràng không phải là dịch vụ thông tin.
+
+70
+00:04:29,340 --> 00:04:32,220
+Nó không liên quan gì đến việc xử lý tin nhắn đến.
+
+71
+00:04:32,220 --> 00:04:34,770
+Nó chỉ xử lý các yêu cầu của người dùng.
+
+72
+00:04:34,860 --> 00:04:38,280
+Vì vậy, có vẻ như chúng ta đang xem xét các thành phần bổ sung.
+
+73
+00:04:38,640 --> 00:04:43,230
+Được rồi, chúng ta có một thành phần mới sẽ xử lý việc xác thực.
+
+74
+00:04:43,350 --> 00:04:49,140
+Chúng ta có muốn một thành phần khác xử lý việc phân tích cú pháp hay sẽ giao trách nhiệm này cho cùng một thành phần?
+
+75
+00:04:49,350 --> 00:04:53,600
+Vâng, đó là một câu hỏi hay và thực sự không có câu trả lời chắc chắn nào cho nó.
+
+76
+00:04:53,610 --> 00:04:58,620
+Một số người cho rằng mỗi thành phần chỉ có thể đảm nhiệm một và chỉ một nhiệm vụ duy nhất.
+
+77
+00:04:58,620 --> 00:04:59,700
+Và do đó.
+
+78
+00:04:59,860 --> 00:05:03,010
+Đây phải là thành phần riêng biệt để xác thực và xử lý.
+
+79
+00:05:03,160 --> 00:05:09,100
+Những người khác sẽ nói rằng vì xác thực là một nhiệm vụ khá nhỏ và không phải là nhiệm vụ nguyên tử nên không có
+
+80
+00:05:09,100 --> 00:05:10,120
+giá trị để xác thực.
+
+81
+00:05:10,120 --> 00:05:11,320
+Nếu không có sự phân tích cú pháp.
+
+82
+00:05:11,350 --> 00:05:14,470
+Khi đó, cả hai đều có thể được thực hiện bởi cùng một thành phần.
+
+83
+00:05:14,620 --> 00:05:18,130
+Trong trường hợp này, tôi nghĩ cách tiếp cận sau là đúng nhất.
+
+84
+00:05:18,160 --> 00:05:23,590
+Xác thực và phân tích cú pháp luôn song hành với nhau và theo quan điểm cao hơn, chúng là một phần của cùng một
+
+85
+00:05:23,590 --> 00:05:24,160
+dịch vụ.
+
+86
+00:05:24,190 --> 00:05:29,950
+Ngoài ra, bất kỳ thành phần bổ sung nào cũng là một quy trình khác mà chúng ta cần duy trì và không có lý do chính đáng
+
+87
+00:05:29,950 --> 00:05:32,380
+cho trường hợp cụ thể này.
+
+88
+00:05:32,410 --> 00:05:39,190
+Tóm lại, chúng ta có ba thành phần máy thu nhận trình xử lý tin nhắn xác thực
+
+89
+00:05:39,190 --> 00:05:45,820
+và xử lý dữ liệu đó rồi lưu trữ để sử dụng sau này và lấy thông tin cho phép người dùng truy vấn dữ liệu.
+
+90
+00:05:45,970 --> 00:05:47,920
+Nhưng khoan đã, đó chưa phải là tất cả.
+
+91
+00:05:48,100 --> 00:05:52,870
+Hãy nhớ khi chúng ta nói về việc ghi nhật ký và giám sát thì việc có một trung tâm luôn là một ý tưởng hay
+
+92
+00:05:52,870 --> 00:05:53,860
+dịch vụ ghi nhật ký.
+
+93
+00:05:53,860 --> 00:05:55,150
+Vậy chúng ta hãy thêm một cái nữa.
+
+94
+00:05:56,270 --> 00:06:01,970
+Dịch vụ này là nơi tất cả các bản ghi được gửi đến và cho phép chúng tôi có được cái nhìn toàn diện về các ứng dụng
+
+95
+00:06:01,970 --> 00:06:02,660
+hoạt động.
+
+96
+00:06:02,690 --> 00:06:08,210
+Điều này cực kỳ quan trọng, đặc biệt là trong các ứng dụng như của chúng tôi, nơi có một số thành phần
+
+97
+00:06:08,210 --> 00:06:10,460
+và mỗi người đều có trách nhiệm riêng của mình.
+
+98
+00:06:10,490 --> 00:06:16,070
+Sử dụng dịch vụ ghi nhật ký trung tâm giúp chúng ta có cái nhìn thống nhất về tất cả các luồng trong hệ thống, bất kể
+
+99
+00:06:16,070 --> 00:06:18,500
+của các thành phần cụ thể mà chúng được chạy.
+
+100
+00:06:18,950 --> 00:06:22,010
+Được rồi, chúng ta đã có các thành phần của ứng dụng.
+
+101
+00:06:22,040 --> 00:06:23,720
+Một điều cuối cùng.
+
+102
+00:06:24,050 --> 00:06:27,210
+Rõ ràng là các cập nhật trạng thái phải được lưu ở đâu đó.
+
+103
+00:06:27,230 --> 00:06:32,900
+Chúng ta cần một số loại kho dữ liệu nơi trình xử lý sẽ lưu các bản cập nhật trước đó và thông tin sẽ có thể
+
+104
+00:06:32,900 --> 00:06:33,860
+để truy vấn chúng.
+
+105
+00:06:33,890 --> 00:06:38,360
+Vì vậy, hãy thêm một kho dữ liệu được chia sẻ giữa các dịch vụ đó.
+
+106
+00:06:38,510 --> 00:06:39,680
+Được rồi, tốt lắm.
+
+107
+00:06:39,710 --> 00:06:42,950
+Tiếp theo, chúng ta hãy nói về thông điệp giữa chúng.
+

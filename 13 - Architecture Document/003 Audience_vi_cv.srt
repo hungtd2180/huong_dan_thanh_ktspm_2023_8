@@ -1,0 +1,184 @@
+1
+00:00:00,290 --> 00:00:02,200
+Chúng ta hãy nói về các tài liệu kiến trúc.
+
+2
+00:00:02,210 --> 00:00:04,850
+Đối tượng Chúng tôi viết tài liệu này cho ai?
+
+3
+00:00:04,880 --> 00:00:07,910
+Đối tượng mục tiêu của tài liệu này là ai?
+
+4
+00:00:08,029 --> 00:00:10,400
+Vâng, câu trả lời có thể khiến bạn ngạc nhiên một chút.
+
+5
+00:00:10,430 --> 00:00:13,730
+Trong khi bạn có thể nghĩ rằng tài liệu này chỉ dành cho các nhà phát triển.
+
+6
+00:00:13,730 --> 00:00:19,580
+Đối tượng thực sự của nó là hầu hết mọi người tham gia vào hệ thống, bao gồm cả người quản lý dự án, giám đốc công nghệ,
+
+7
+00:00:19,610 --> 00:00:23,750
+nếu có thì là trưởng nhóm QA và tất nhiên là cả các nhà phát triển.
+
+8
+00:00:24,380 --> 00:00:28,580
+Sự khác biệt duy nhất là thành viên nhóm sẽ được lợi gì từ tài liệu này?
+
+9
+00:00:28,610 --> 00:00:32,180
+Chúng ta hãy cùng xem xét các vai trò khác nhau của các đội và giải thích.
+
+10
+00:00:32,450 --> 00:00:34,510
+Vậy chúng ta hãy bắt đầu với nhóm phát triển.
+
+11
+00:00:34,520 --> 00:00:40,040
+Chúng tôi đã thảo luận về việc sử dụng tài liệu và giải thích tài liệu, các khái niệm cơ bản của
+
+12
+00:00:40,040 --> 00:00:45,680
+hệ thống, công nghệ, các thành phần và dịch vụ và cách chúng giao tiếp với
+
+13
+00:00:45,680 --> 00:00:46,460
+nhau.
+
+14
+00:00:46,730 --> 00:00:51,020
+Vậy thì rõ ràng là nhóm phát triển chính là đối tượng của tài liệu của chúng tôi.
+
+15
+00:00:51,260 --> 00:00:54,020
+Tiếp theo, chúng ta hãy nói về quản lý.
+
+16
+00:00:54,050 --> 00:00:59,990
+Trong quản lý, tôi chủ yếu nhắm tới người quản lý dự án, giám đốc công nghệ và trong các tổ chức nhỏ hơn, thậm chí
+
+17
+00:01:00,090 --> 00:01:01,050
+giám đốc điều hành.
+
+18
+00:01:01,350 --> 00:01:04,500
+Vậy quản lý có liên quan gì tới tài liệu kiến trúc?
+
+19
+00:01:04,530 --> 00:01:09,300
+Nói một cách đơn giản, ban quản lý sẽ sử dụng tài liệu này để đảm bảo nhóm được quản lý tốt.
+
+20
+00:01:09,330 --> 00:01:13,560
+Khi người quản lý dự án thấy các yêu cầu được trình bày chi tiết đầy đủ trong tài liệu kiến trúc,
+
+21
+00:01:13,560 --> 00:01:19,170
+cô ấy sẽ biết rằng bạn nắm bắt được toàn bộ bản chất của hệ thống và do đó cô ấy có thể tin tưởng bạn.
+
+22
+00:01:19,290 --> 00:01:24,900
+Khi CTO sẽ xem qua bản tóm tắt điều hành và sẽ thấy bạn đang sử dụng các phương pháp hay nhất và hiện đại
+
+23
+00:01:24,900 --> 00:01:26,160
+công nghệ và mô hình.
+
+24
+00:01:26,160 --> 00:01:31,350
+Ngay cả khi bạn không hiểu hết mọi từ trong đó, bạn vẫn sẽ cảm thấy tự tin khi làm việc.
+
+25
+00:01:31,470 --> 00:01:33,900
+Ngay cả CEO cũng sẽ thấy hệ thống.
+
+26
+00:01:33,900 --> 00:01:37,410
+Thiết kế hướng tới mục tiêu kinh doanh chứ không phải mục tiêu kiến trúc.
+
+27
+00:01:37,410 --> 00:01:40,440
+Anh ấy sẽ biết rằng mình đã lựa chọn đúng khi làm việc với bạn.
+
+28
+00:01:41,010 --> 00:01:45,720
+Hiện nay, thông thường ban quản lý sẽ không xem xét toàn bộ tài liệu mà chỉ xem xét những phần đầu tiên.
+
+29
+00:01:45,720 --> 00:01:46,860
+Nhưng thế là đủ rồi.
+
+30
+00:01:47,010 --> 00:01:51,870
+Họ không cần phải thông thạo tất cả các chi tiết kỹ thuật và kiến trúc và thành thật mà nói, họ không cần
+
+31
+00:01:51,870 --> 00:01:52,860
+có thời gian cho việc này.
+
+32
+00:01:53,010 --> 00:01:58,860
+Vì lý do này, các phần chủ yếu nhắm vào mục tiêu quản lý sẽ xuất hiện đầu tiên trong tài liệu, như
+
+33
+00:01:58,860 --> 00:02:00,600
+bạn sẽ thấy sau.
+
+34
+00:02:01,170 --> 00:02:02,850
+Còn QA thì sao?
+
+35
+00:02:03,390 --> 00:02:06,600
+Vâng, người dẫn đầu cũng nên đọc tài liệu này.
+
+36
+00:02:06,630 --> 00:02:12,360
+Lý do là bằng cách đọc nó, người đứng đầu QA có thể bắt đầu chuẩn bị cho cơ sở hạ tầng thử nghiệm
+
+37
+00:02:12,540 --> 00:02:17,240
+khi thực hiện các thử nghiệm tích hợp và thử nghiệm tải, cần phải có cơ sở hạ tầng phù hợp.
+
+38
+00:02:17,250 --> 00:02:22,320
+Có những máy chủ cần được cài đặt và chuẩn bị các công cụ kiểm tra cần được cấu hình và
+
+39
+00:02:22,320 --> 00:02:24,330
+đôi khi cần phải có một số mã hóa liên quan.
+
+40
+00:02:24,690 --> 00:02:29,670
+Tài liệu kiến trúc sẽ cung cấp cho người đứng đầu QA những thông tin cần thiết để bắt đầu chuẩn bị
+
+41
+00:02:29,670 --> 00:02:35,220
+cơ sở hạ tầng này bằng cách tìm hiểu về các công nghệ được sử dụng trong hệ thống và số lượng và loại dịch vụ
+
+42
+00:02:35,250 --> 00:02:39,780
+và có thể xây dựng cơ sở hạ tầng phù hợp, do đó rút ngắn thời gian thực hiện dự án.
+
+43
+00:02:39,960 --> 00:02:44,760
+Vì vậy, như bạn có thể thấy, hầu hết các thành viên trong nhóm đều có thể đạt được điều gì đó từ tài liệu kiến trúc,
+
+44
+00:02:44,760 --> 00:02:49,770
+và chúng tôi với tư cách là kiến trúc sư phải cố gắng hết sức để cung cấp nó cho bất kỳ ai quan tâm.
+
+45
+00:02:49,800 --> 00:02:54,660
+Chúng ta sẽ bắt đầu nói về cấu trúc tài liệu ngay sau đây và sau đó tôi sẽ làm rõ phần nào
+
+46
+00:02:54,660 --> 00:02:56,670
+có liên quan đến đối tượng nào.
+

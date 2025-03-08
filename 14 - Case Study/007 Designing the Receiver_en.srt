@@ -1,0 +1,348 @@
+1
+00:00:00,200 --> 00:00:02,390
+Our next service is a receiver.
+
+2
+00:00:02,480 --> 00:00:04,430
+Let's have a quick refresher.
+
+3
+00:00:04,730 --> 00:00:10,700
+The receiver is a service that receives the messages from the Iot devices and sends them to the queue
+
+4
+00:00:10,700 --> 00:00:12,260
+to be handled by the handler.
+
+5
+00:00:12,620 --> 00:00:15,860
+So first, what kind of application is this service?
+
+6
+00:00:15,890 --> 00:00:17,400
+Well, this is an easy one.
+
+7
+00:00:17,420 --> 00:00:21,980
+We said the devices send their messages via Http using the rest protocol.
+
+8
+00:00:21,980 --> 00:00:26,870
+So the evident conclusion is that the service is a web API which exposes rest endpoints.
+
+9
+00:00:26,900 --> 00:00:27,470
+Good.
+
+10
+00:00:27,650 --> 00:00:29,030
+That was really easy.
+
+11
+00:00:29,060 --> 00:00:33,020
+Let's continue to the next step which is selecting the technology stack.
+
+12
+00:00:33,140 --> 00:00:36,180
+Well, it turns out that this is also an easy decision.
+
+13
+00:00:36,200 --> 00:00:41,420
+We already decided that the first service is going to be based in Dotnet core and we will need a really
+
+14
+00:00:41,420 --> 00:00:43,550
+good reason to divert from this decision.
+
+15
+00:00:43,550 --> 00:00:48,710
+Using multiple technologies in a single application can create a lot of headaches if done for the wrong
+
+16
+00:00:48,710 --> 00:00:49,300
+reasons.
+
+17
+00:00:49,310 --> 00:00:54,350
+So let's see if there is any good reason not to continue with Dotnet core on this service.
+
+18
+00:00:54,470 --> 00:00:58,760
+So does Dotnet Core has a good support for web API applications?
+
+19
+00:00:58,790 --> 00:01:01,440
+The answer is a resounding yes.
+
+20
+00:01:01,470 --> 00:01:06,210
+It was built from the ground up to support web API applications using its ASP.
+
+21
+00:01:06,360 --> 00:01:09,210
+Net core libraries and has great support for it.
+
+22
+00:01:09,210 --> 00:01:12,240
+In addition, its web API performance are great.
+
+23
+00:01:12,570 --> 00:01:20,190
+Okay, so it looks like there is no reason not to use Dotnet core here and this is what we will do next.
+
+24
+00:01:20,220 --> 00:01:22,740
+Let's look at the service architecture.
+
+25
+00:01:22,770 --> 00:01:25,500
+Remember the layered architecture we discussed earlier?
+
+26
+00:01:25,530 --> 00:01:28,230
+Let's see if it's a good fit for this service.
+
+27
+00:01:28,350 --> 00:01:34,170
+When looking at this diagram that shows the classic three layers architecture, it looks like it's going
+
+28
+00:01:34,170 --> 00:01:35,790
+to fit exactly to our service.
+
+29
+00:01:35,790 --> 00:01:38,610
+But a closer look reveals a problem here.
+
+30
+00:01:38,850 --> 00:01:41,790
+Take a look at the bottom layer, the data access layer.
+
+31
+00:01:41,820 --> 00:01:44,520
+Remember what our service is supposed to do with the messages.
+
+32
+00:01:44,520 --> 00:01:46,350
+It's going to put them in a queue.
+
+33
+00:01:46,380 --> 00:01:47,310
+That's right.
+
+34
+00:01:47,310 --> 00:01:49,800
+There is no data store for this service.
+
+35
+00:01:49,830 --> 00:01:54,960
+Well, you can argue that queue is some kind of data store, but in reality we don't treat it that way.
+
+36
+00:01:54,960 --> 00:01:58,560
+But as a method for passing messages from one point to another.
+
+37
+00:01:58,590 --> 00:02:03,810
+So while our service definitely needs service interface, which is what the devices will talk to and
+
+38
+00:02:03,810 --> 00:02:08,490
+the business logic layer, which will validate the messages, we need to substitute the data access
+
+39
+00:02:08,490 --> 00:02:10,050
+layer with another layer.
+
+40
+00:02:10,410 --> 00:02:16,050
+In this case, we will create a new layer called queue handling layer, which will take care of the
+
+41
+00:02:16,050 --> 00:02:20,130
+various tasks of working with the queue, mainly adding the message to the queue.
+
+42
+00:02:20,130 --> 00:02:23,070
+And this is how the updated diagram looks like.
+
+43
+00:02:24,300 --> 00:02:27,990
+This is actually a great example of the strength of the layered architecture.
+
+44
+00:02:28,020 --> 00:02:33,420
+We had to replace an entire functionality of the system using queue instead of data store, and only
+
+45
+00:02:33,420 --> 00:02:35,510
+one layer was impacted by this.
+
+46
+00:02:35,520 --> 00:02:39,420
+The service interface and business layer have no idea something has changed.
+
+47
+00:02:39,450 --> 00:02:44,760
+The service interface still works with a business layer in the exact same way they worked before.
+
+48
+00:02:44,760 --> 00:02:49,800
+The change and the business layer will continue working with interfaces representing the data layer
+
+49
+00:02:49,800 --> 00:02:52,860
+and will have no idea the concrete implementation has changed.
+
+50
+00:02:53,040 --> 00:02:56,840
+So if you ask yourself why do I need a layer architecture?
+
+51
+00:02:56,850 --> 00:02:58,590
+I hope you've got your answer now.
+
+52
+00:02:59,010 --> 00:03:04,530
+Last but not least, we will be adding a logging layer to allow the service to log everything that's
+
+53
+00:03:04,530 --> 00:03:06,860
+happening during the receiving of the message.
+
+54
+00:03:06,870 --> 00:03:10,440
+Now look how the logging is represented in the diagram.
+
+55
+00:03:10,440 --> 00:03:14,420
+This is not a normal layer and it's not located between other layers.
+
+56
+00:03:14,430 --> 00:03:20,280
+It looks like a vertical layer or in more professional jargon, a cross cutting concern.
+
+57
+00:03:20,460 --> 00:03:25,860
+This kind of layer, which is not exactly a layer, is available to all the layers, which is logical
+
+58
+00:03:25,860 --> 00:03:28,170
+since all layers must be able to log.
+
+59
+00:03:28,170 --> 00:03:30,540
+What is going on with the messages are taking care of.
+
+60
+00:03:30,570 --> 00:03:36,450
+So all the layers will have a reference to a logging mechanism and will enjoy this cross-cutting concern.
+
+61
+00:03:37,260 --> 00:03:38,070
+Okay.
+
+62
+00:03:38,310 --> 00:03:43,770
+Now this is a good time to look back at the non-functional requirements defined for the system and make
+
+63
+00:03:43,770 --> 00:03:46,110
+sure our architecture is compatible with them.
+
+64
+00:03:46,230 --> 00:03:50,580
+There are actually two non-functional requirements that are relevant for this service.
+
+65
+00:03:50,730 --> 00:03:57,840
+The load non-functional requirement, which is set for 540 concurrent requests, while 500 of them are
+
+66
+00:03:57,840 --> 00:04:04,800
+from the devices and the message lost non-functional requirements that stands at 1% message loss allowed.
+
+67
+00:04:05,070 --> 00:04:09,600
+Let's begin with the load requirement at 500 concurrent requests.
+
+68
+00:04:09,630 --> 00:04:11,450
+We are quite comfortable with our design.
+
+69
+00:04:11,460 --> 00:04:14,760
+The architecture is fully stateless and easily scaled out.
+
+70
+00:04:14,790 --> 00:04:20,060
+Adding to that, the fact that the service does not do much other than adding the message to a queue
+
+71
+00:04:20,070 --> 00:04:24,870
+for the sake of performance and it looks like this service will have no problem complying with this
+
+72
+00:04:24,870 --> 00:04:25,500
+number.
+
+73
+00:04:25,650 --> 00:04:27,990
+And what about the message loss requirement?
+
+74
+00:04:28,020 --> 00:04:34,080
+Well, if you remember, we said earlier that the fact that the requirement is for 99% and not 100%
+
+75
+00:04:34,080 --> 00:04:35,070
+is a big difference.
+
+76
+00:04:35,070 --> 00:04:42,420
+And this is where we see that since 1% of the messages can be lost, a standard rest API is good enough.
+
+77
+00:04:42,510 --> 00:04:49,530
+The chance for more than 1% of requests to be lost in such an API is extremely low and since again the
+
+78
+00:04:49,530 --> 00:04:54,060
+service does not do much in the first place, we can be comfortable with this requirement.
+
+79
+00:04:54,150 --> 00:04:59,550
+If we had to make sure that no matter what, no message will be lost, we would have been in a much
+
+80
+00:04:59,550 --> 00:04:59,940
+more difficult.
+
+81
+00:04:59,980 --> 00:05:03,940
+Position and probably we'll have to implement complex failsafe mechanism to make.
+
+82
+00:05:03,970 --> 00:05:06,370
+Sure the message will always be received.
+
+83
+00:05:06,910 --> 00:05:10,210
+And that concludes our civil service architecture.
+
+84
+00:05:10,240 --> 00:05:14,950
+We now have a complete architecture for this important service, which includes its application type
+
+85
+00:05:14,950 --> 00:05:18,850
+technology stack and internal architecture, including logging mechanism.
+
+86
+00:05:19,030 --> 00:05:19,990
+That's great.
+
+87
+00:05:19,990 --> 00:05:22,750
+And we can now continue to our next service.
+

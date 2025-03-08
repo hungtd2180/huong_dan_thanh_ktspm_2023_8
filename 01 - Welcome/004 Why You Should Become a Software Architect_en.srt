@@ -1,0 +1,148 @@
+1
+00:00:00,620 --> 00:00:02,120
+Before discussing the how.
+
+2
+00:00:02,120 --> 00:00:03,500
+Let's talk about the why.
+
+3
+00:00:03,700 --> 00:00:05,930
+Why is it a good idea to be a software architect?
+
+4
+00:00:05,960 --> 00:00:07,640
+What's so attractive about it?
+
+5
+00:00:07,760 --> 00:00:08,930
+Good question.
+
+6
+00:00:09,140 --> 00:00:12,650
+There are three very good reasons to be a software architect.
+
+7
+00:00:12,680 --> 00:00:17,000
+One, this is a really, really, very interesting job.
+
+8
+00:00:17,270 --> 00:00:24,320
+As a software architect, your daily routine may include talking to CXO that CEOs, CFOs, CIOs and
+
+9
+00:00:24,320 --> 00:00:29,840
+more discussing technology with development manager and conducting some research about new patterns
+
+10
+00:00:29,840 --> 00:00:30,890
+and platforms.
+
+11
+00:00:31,130 --> 00:00:37,070
+There truly is no other role in the software industry, which is as diverse, broad and spread across
+
+12
+00:00:37,070 --> 00:00:40,160
+the whole organization as the role of the architect.
+
+13
+00:00:40,520 --> 00:00:46,520
+As we will see later in this course, a good architects work involves business, technology, methodology,
+
+14
+00:00:46,520 --> 00:00:48,080
+soft skills and more.
+
+15
+00:00:48,110 --> 00:00:52,910
+I can promise you this as an architect, you are not going to get bored ever.
+
+16
+00:00:53,960 --> 00:00:58,000
+Reason number two Career path and visibility.
+
+17
+00:00:58,070 --> 00:01:04,530
+Being an architect, you communicate with all levels of the organization that will make you quite visible
+
+18
+00:01:04,530 --> 00:01:07,560
+to management and will pave the way to future promotions.
+
+19
+00:01:07,860 --> 00:01:13,380
+One of my friends was a developer for five years and felt it's time to move on.
+
+20
+00:01:13,410 --> 00:01:18,690
+He wasn't sure what kind of job to look for and knowing him and his abilities, I recommended him to
+
+21
+00:01:18,690 --> 00:01:20,820
+look for a junior architect position.
+
+22
+00:01:21,960 --> 00:01:27,030
+After a couple of weeks, he landed a job and was amazed by the amount of communication he had with
+
+23
+00:01:27,030 --> 00:01:29,310
+the CEO and CIO of the company.
+
+24
+00:01:29,490 --> 00:01:33,780
+Today he is a senior architect in one of the largest companies on the planet.
+
+25
+00:01:33,780 --> 00:01:38,310
+So yes, being a software architect can definitely push your career forward.
+
+26
+00:01:38,910 --> 00:01:41,760
+Reason number three, money.
+
+27
+00:01:42,120 --> 00:01:45,570
+Everyone wants it, but few are ready to talk about it.
+
+28
+00:01:45,810 --> 00:01:48,360
+But take a look at these numbers.
+
+29
+00:01:48,480 --> 00:01:53,430
+As you can see, the average salary of an architect is almost double the salary of a developer.
+
+30
+00:01:53,460 --> 00:01:57,840
+Here, I'll just be quiet for a few seconds while you are crunching the numbers.
+
+31
+00:02:01,410 --> 00:02:04,050
+But honestly, you should not go for the money.
+
+32
+00:02:04,080 --> 00:02:06,840
+A good architect is someone who loves what she does.
+
+33
+00:02:06,870 --> 00:02:12,150
+You should love the challenge and enjoy the discussions, embrace the research, and only then think
+
+34
+00:02:12,150 --> 00:02:13,080
+about the money.
+
+35
+00:02:14,320 --> 00:02:18,070
+So to recap, here are the three reasons to be an architect.
+
+36
+00:02:18,070 --> 00:02:20,880
+And believe me, these reasons are real.
+
+37
+00:02:20,890 --> 00:02:26,230
+If you are looking for an interesting, promising and rewarding role, go be a software architect.
+

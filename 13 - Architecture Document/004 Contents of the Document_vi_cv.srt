@@ -1,0 +1,136 @@
+1
+00:00:00,770 --> 00:00:05,820
+Một trong những cuộc tranh luận sôi nổi nhất trong cộng đồng kiến trúc là định dạng của tài liệu kiến trúc.
+
+2
+00:00:05,900 --> 00:00:10,820
+Có một số tiêu chuẩn đôi khi được sử dụng khi viết tài liệu kiến trúc để xác định
+
+3
+00:00:10,820 --> 00:00:15,950
+nhiều loại biểu đồ và sơ đồ khác nhau để giúp kiến trúc dễ hiểu và dễ triển khai hơn.
+
+4
+00:00:16,040 --> 00:00:19,340
+Một trong những tiêu chuẩn nổi tiếng nhất là UML.
+
+5
+00:00:19,370 --> 00:00:24,410
+UML được định nghĩa là một ngôn ngữ mô hình hóa giúp trực quan hóa thiết kế của một hệ thống.
+
+6
+00:00:24,830 --> 00:00:30,680
+Nó bao gồm các khái niệm phần mềm như hoạt động, thành phần và tương tác, cũng như sơ đồ
+
+7
+00:00:30,680 --> 00:00:35,250
+trực quan hóa thiết kế hệ thống như sơ đồ lớp và sơ đồ trường hợp sử dụng.
+
+8
+00:00:35,270 --> 00:00:39,890
+Tuy nhiên, tôi thường không sử dụng UML trong các tài liệu kiến trúc của mình.
+
+9
+00:00:39,920 --> 00:00:42,170
+Lý do cho điều đó khá đơn giản.
+
+10
+00:00:42,200 --> 00:00:44,210
+Ghi nhớ các tài liệu Khán giả.
+
+11
+00:00:44,240 --> 00:00:44,960
+Tốt.
+
+12
+00:00:45,200 --> 00:00:50,180
+Hầu hết khán giả sẽ không quen thuộc với UML và sẽ không biết ý nghĩa của các thuật ngữ khác nhau
+
+13
+00:00:50,180 --> 00:00:51,380
+sơ đồ và thuật ngữ.
+
+14
+00:00:51,380 --> 00:00:56,660
+Và nếu tài liệu chứa nhiều thứ này, bạn sẽ thấy mình lãng phí rất nhiều thời gian để giải thích
+
+15
+00:00:56,660 --> 00:00:59,510
+bằng tiếng Anh thông thường hoặc bất kỳ ngôn ngữ địa phương nào của bạn.
+
+16
+00:00:59,540 --> 00:01:02,460
+Ý bạn là gì và thực sự cần phải phát triển điều gì?
+
+17
+00:01:02,670 --> 00:01:07,920
+Theo kinh nghiệm của tôi, sau khi thiết kế hàng trăm hệ thống, tài liệu kiến trúc hiệu quả nhất là
+
+18
+00:01:07,920 --> 00:01:12,020
+cách đơn giản nhất là chỉ sử dụng tiếng Anh thông thường.
+
+19
+00:01:12,030 --> 00:01:15,450
+Hãy mô tả bằng những từ ngữ đơn giản về thiết kế của hệ thống.
+
+20
+00:01:15,480 --> 00:01:18,450
+Đừng sử dụng quá nhiều từ ngữ thông dụng trong toàn bộ tài liệu.
+
+21
+00:01:18,480 --> 00:01:21,030
+Cố gắng hiểu được suy nghĩ của người đọc.
+
+22
+00:01:21,030 --> 00:01:23,280
+Liệu họ có hiểu được điều bạn đang muốn nói không?
+
+23
+00:01:23,730 --> 00:01:28,700
+Đôi khi, bạn sẽ muốn hình dung nhiều khái niệm khác nhau của thiết kế.
+
+24
+00:01:28,710 --> 00:01:31,900
+Bạn sẽ thấy điều đó trong tài liệu mà chúng ta sẽ thảo luận sau trong khóa học này.
+
+25
+00:01:31,920 --> 00:01:34,530
+Để thực hiện việc này, hãy sử dụng phần mềm bạn có trong tay.
+
+26
+00:01:34,650 --> 00:01:38,370
+Có thể là PowerPoint, Visio, Apple Keynote, bất kỳ phần mềm nào phù hợp với bạn.
+
+27
+00:01:38,400 --> 00:01:44,400
+Chỉ cần đảm bảo hình ảnh rõ ràng, súc tích, chất lượng cao và không lộn xộn với những thứ không cần thiết
+
+28
+00:01:44,400 --> 00:01:45,510
+các vật phẩm và hình dạng.
+
+29
+00:01:45,720 --> 00:01:51,330
+Bây giờ, nếu khách hàng của bạn đặc biệt muốn sơ đồ UML là một tài liệu, và tôi chỉ có một khách hàng như vậy
+
+30
+00:01:51,330 --> 00:01:56,730
+trong toàn bộ sự nghiệp của tôi chỉ đơn giản là xem qua một số hướng dẫn UML và tạo sơ đồ bằng các công cụ như
+
+31
+00:01:56,730 --> 00:01:57,240
+Tầm nhìn.
+
+32
+00:01:57,270 --> 00:02:01,770
+Nếu bạn thành thạo PowerPoint, bạn có thể dễ dàng sử dụng nó cho các sơ đồ này.
+
+33
+00:02:02,280 --> 00:02:07,920
+Tóm lại, tài liệu kiến trúc phải đơn giản. Sử dụng tiếng Anh thông thường để mô tả các yêu cầu,
+
+34
+00:02:07,920 --> 00:02:12,300
+các khái niệm và thiết kế và sử dụng các công cụ biểu đồ yêu thích của bạn để trực quan hóa.
+

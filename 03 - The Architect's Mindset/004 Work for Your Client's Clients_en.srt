@@ -1,0 +1,180 @@
+1
+00:00:00,380 --> 00:00:05,270
+One of the most important aspects of the architect's work is to identify who the client is.
+
+2
+00:00:05,300 --> 00:00:06,970
+Now, that might sound a little stupid.
+
+3
+00:00:06,980 --> 00:00:09,290
+Of course I know who my client is.
+
+4
+00:00:09,320 --> 00:00:10,580
+It's the one who pays me.
+
+5
+00:00:10,580 --> 00:00:13,370
+Well, yes, but also no.
+
+6
+00:00:13,520 --> 00:00:14,690
+Let me explain.
+
+7
+00:00:15,350 --> 00:00:19,060
+In almost every organization, the architect is part of the IT department.
+
+8
+00:00:19,070 --> 00:00:23,810
+It doesn't matter whether the architect is an employee of the organization or a consultant who works
+
+9
+00:00:23,810 --> 00:00:24,770
+with the organization.
+
+10
+00:00:24,770 --> 00:00:26,660
+He is hired by the IT people.
+
+11
+00:00:27,530 --> 00:00:32,060
+But the IT guys have clients, and these are the end users of the application.
+
+12
+00:00:32,060 --> 00:00:34,370
+And these are the guys you should work for.
+
+13
+00:00:34,580 --> 00:00:35,780
+What does it mean?
+
+14
+00:00:35,810 --> 00:00:39,770
+It means that your mindset should be geared towards your client's client.
+
+15
+00:00:39,800 --> 00:00:45,110
+It means that with every decision you make, you must ask yourself what will be the effect of this decision
+
+16
+00:00:45,110 --> 00:00:46,610
+on your client's client?
+
+17
+00:00:46,640 --> 00:00:51,950
+It means that the comfort of your client's client is prioritized over the comfort of your client.
+
+18
+00:00:51,980 --> 00:00:53,430
+Let's see an example.
+
+19
+00:00:53,450 --> 00:00:58,340
+One of the recent systems I worked on was a system that displayed data based on the telemetry received
+
+20
+00:00:58,340 --> 00:00:59,790
+from remote stations.
+
+21
+00:00:59,910 --> 00:01:04,769
+One of the dilemmas we had is what to do when the database storing the telemetry is offline.
+
+22
+00:01:05,010 --> 00:01:10,410
+This was a scenario we had to consider since the IT department could not commit to a concrete SLA of
+
+23
+00:01:10,410 --> 00:01:11,250
+the database.
+
+24
+00:01:11,610 --> 00:01:17,100
+The solution we came up with was to display a clear message to the end user that there is a problem
+
+25
+00:01:17,100 --> 00:01:19,410
+with the system and ask him to try again later.
+
+26
+00:01:19,440 --> 00:01:22,150
+This is quite a common behavior for such a scenario.
+
+27
+00:01:22,170 --> 00:01:27,000
+However, the client asked whether we can find an intermediate solution that will allow him to view
+
+28
+00:01:27,000 --> 00:01:29,250
+the data but not make any modifications.
+
+29
+00:01:29,850 --> 00:01:35,430
+We thought about it long and hard and came up with a solution that made our architecture much more complicated.
+
+30
+00:01:35,460 --> 00:01:40,500
+We have introduced a dedicated caching layer that duplicated the data and was used when the database
+
+31
+00:01:40,500 --> 00:01:41,430
+was offline.
+
+32
+00:01:41,670 --> 00:01:45,360
+My client, which was a development team, worked much harder.
+
+33
+00:01:45,360 --> 00:01:51,120
+But my client's client, the end user, was extremely satisfied with this solution and praised our willingness
+
+34
+00:01:51,120 --> 00:01:53,340
+to help him and to think outside the box.
+
+35
+00:01:54,290 --> 00:01:59,390
+Now, you might say that working with a client is a system analyst job and not the architect.
+
+36
+00:01:59,510 --> 00:02:04,460
+This is usually correct, but sometimes a project is carried out without a system analyst on board,
+
+37
+00:02:04,460 --> 00:02:09,080
+and even if there is one, you still have to understand the client's environment in order to make the
+
+38
+00:02:09,080 --> 00:02:10,440
+best decisions for him.
+
+39
+00:02:10,460 --> 00:02:14,870
+In this case, the architect does not replace the system analyst, but it's a very good idea to join
+
+40
+00:02:14,870 --> 00:02:17,840
+her for some meetings and to meet the clients personally.
+
+41
+00:02:19,360 --> 00:02:24,730
+Sometimes you will see that your client, the IT department, does not view the client as a client.
+
+42
+00:02:24,760 --> 00:02:30,670
+They will refer to the end users as colleagues, co-workers, or even those annoying guys that always
+
+43
+00:02:30,670 --> 00:02:31,570
+have demands.
+
+44
+00:02:31,600 --> 00:02:34,470
+In this case, your work might be a bit harder.
+
+45
+00:02:34,480 --> 00:02:37,720
+You have to not only change your mindset, but also them.
+

@@ -1,0 +1,144 @@
+1
+00:00:00,230 --> 00:00:02,810
+Welcome to the Components Architecture section.
+
+2
+00:00:03,410 --> 00:00:08,360
+Up until now, we discussed various topics that were required in order to prepare you to the architectural
+
+3
+00:00:08,360 --> 00:00:08,970
+design.
+
+4
+00:00:08,990 --> 00:00:13,440
+We talked about mindset processes, requirements, quality attributes, and more.
+
+5
+00:00:13,460 --> 00:00:17,210
+And now, ladies and gentlemen, it's time for the real thing.
+
+6
+00:00:17,240 --> 00:00:21,350
+In this section, we are going to discuss the architecture of software components.
+
+7
+00:00:21,380 --> 00:00:26,720
+Now, before diving in, it's important to understand what is the meaning of software component in this
+
+8
+00:00:26,720 --> 00:00:27,470
+context.
+
+9
+00:00:28,070 --> 00:00:34,820
+Software component, also sometimes known as service, is a piece of code that runs in a single process,
+
+10
+00:00:34,820 --> 00:00:37,100
+which means it is not distributed.
+
+11
+00:00:37,400 --> 00:00:43,580
+Modern systems are usually distributed, meaning they are composed of independent software components,
+
+12
+00:00:43,580 --> 00:00:49,490
+deployed on separate processes and often on separate containers or servers.
+
+13
+00:00:50,000 --> 00:00:55,140
+You have probably heard about microservices application, so application and more.
+
+14
+00:00:55,160 --> 00:01:01,620
+All these systems are distributed systems that have components or services deployed independently and
+
+15
+00:01:01,620 --> 00:01:05,400
+which communicate via some kind of network protocol, usually Http.
+
+16
+00:01:05,940 --> 00:01:10,950
+When talking about software architecture, we actually talk about two levels of architecture.
+
+17
+00:01:11,190 --> 00:01:13,570
+The first is the components architecture.
+
+18
+00:01:13,590 --> 00:01:18,180
+This is the architecture of the individual components, and this is the topic of this section.
+
+19
+00:01:18,240 --> 00:01:23,820
+The components architecture deals with the various inner components of the code, the way they interact
+
+20
+00:01:23,820 --> 00:01:27,480
+with each other and how to make it fast and easy to maintain.
+
+21
+00:01:28,580 --> 00:01:31,760
+The second level is the architecture of the whole system.
+
+22
+00:01:31,790 --> 00:01:38,180
+This kind of architecture deals with a bigger picture and makes sure the system is scalable, reliable,
+
+23
+00:01:38,180 --> 00:01:39,830
+fast and easy to maintain.
+
+24
+00:01:39,860 --> 00:01:43,010
+We will discuss system architecture later in this course.
+
+25
+00:01:43,970 --> 00:01:49,220
+Now, it's important to note that some of the principles we will discuss in this section are quite low
+
+26
+00:01:49,220 --> 00:01:55,250
+level and some will say fall under the responsibility of the of the developers lead and not the architect.
+
+27
+00:01:55,280 --> 00:02:00,230
+This might be true in some organizations, but nevertheless, I strongly believe the architect should
+
+28
+00:02:00,230 --> 00:02:01,730
+be well aware of them too.
+
+29
+00:02:01,760 --> 00:02:06,830
+As you might recall from earlier sections, the architect should never distance himself from the code
+
+30
+00:02:06,830 --> 00:02:12,500
+and he should be able to have an intelligent discussion about coding patterns and programming as a whole.
+
+31
+00:02:12,530 --> 00:02:17,600
+It is because of this reason that the architect must be at least aware of the inner workings of the
+
+32
+00:02:17,600 --> 00:02:23,450
+individual components and must be able to make sure his design supports the bigger picture of the system.
+
+33
+00:02:23,540 --> 00:02:29,400
+And again, in many, if not most organizations, the architecture of the components is definitely the
+
+34
+00:02:29,400 --> 00:02:31,010
+responsibility of the architect.
+
+35
+00:02:31,020 --> 00:02:36,690
+And in this section we will discuss exactly that, how to make a great architecture for the code components.
+
+36
+00:02:36,690 --> 00:02:37,680
+So let's go.
+

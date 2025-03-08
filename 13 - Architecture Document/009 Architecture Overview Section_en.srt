@@ -1,0 +1,260 @@
+1
+00:00:00,350 --> 00:00:04,160
+Our next section in the architectural document is architectural overview.
+
+2
+00:00:04,280 --> 00:00:08,660
+This section is usually a long one and can reach to up to ten pages.
+
+3
+00:00:08,690 --> 00:00:12,170
+Its audience is the development team and the QA lead.
+
+4
+00:00:12,380 --> 00:00:17,210
+The architectural overview section provides a high level view of the systems architecture.
+
+5
+00:00:17,240 --> 00:00:23,150
+Its goal is to present the architecture to the team and to explain its structure and logic.
+
+6
+00:00:23,270 --> 00:00:28,610
+This section does not deep dive into the specifics of any component of the architecture.
+
+7
+00:00:28,640 --> 00:00:33,890
+This is saved for the next section, but it lays the foundation of the architecture and provides the
+
+8
+00:00:33,890 --> 00:00:37,130
+context in which the various components will work.
+
+9
+00:00:37,310 --> 00:00:39,740
+This section has usually three parts.
+
+10
+00:00:39,770 --> 00:00:44,000
+The first part of this section gives a general description of the designed architecture.
+
+11
+00:00:44,030 --> 00:00:49,670
+This part lays the foundation of the architecture by describing its type and the reasoning behind it
+
+12
+00:00:49,670 --> 00:00:53,250
+and the major non-functional requirements, for example.
+
+13
+00:00:53,270 --> 00:00:59,060
+This part will explain that the system will be, for example, a web based system and will outline the
+
+14
+00:00:59,060 --> 00:01:00,780
+reasons for this choice.
+
+15
+00:01:01,020 --> 00:01:07,290
+It will describe the major architectural pattern used such as microservices, rest API, stateless and
+
+16
+00:01:07,290 --> 00:01:08,100
+so on.
+
+17
+00:01:08,250 --> 00:01:13,950
+In addition, it can be stated in this part that this application must have an average performance of
+
+18
+00:01:13,950 --> 00:01:15,750
+50 requests per second.
+
+19
+00:01:15,780 --> 00:01:20,760
+It should be clear that this part lays the foundation for the rest of the architecture that will be
+
+20
+00:01:20,760 --> 00:01:22,080
+built on top of it.
+
+21
+00:01:22,530 --> 00:01:25,770
+The second part is a high level diagram of the architecture.
+
+22
+00:01:25,800 --> 00:01:31,650
+This diagram describes the general concepts of the architecture using the various services, data stores
+
+23
+00:01:31,650 --> 00:01:37,110
+and interactions so that the reader will comprehend what the various components of the architecture
+
+24
+00:01:37,140 --> 00:01:40,030
+are and what is the responsibility of each one.
+
+25
+00:01:40,050 --> 00:01:45,450
+As mentioned before, there is not a single formal standard for visualizing architectural concepts,
+
+26
+00:01:45,450 --> 00:01:47,730
+and I'm using PowerPoint for that.
+
+27
+00:01:48,240 --> 00:01:53,970
+Let's look at a typical architecture diagram taken almost as is from one of the recent architectural
+
+28
+00:01:53,970 --> 00:01:55,890
+documents I've been working on.
+
+29
+00:01:56,070 --> 00:02:02,910
+As you can see, this diagram contains three types of elements services depicted as black rectangles,
+
+30
+00:02:02,910 --> 00:02:08,550
+interactions displayed as arrows and data stores represented as cylinders.
+
+31
+00:02:08,639 --> 00:02:11,700
+The diagram shows the various parts of the architecture.
+
+32
+00:02:11,730 --> 00:02:18,150
+It displays the services that together assemble the system, the role of each one, where they place
+
+33
+00:02:18,150 --> 00:02:20,940
+their data and the interactions between them.
+
+34
+00:02:21,060 --> 00:02:24,480
+Don't worry if you are not familiar with every term in this diagram.
+
+35
+00:02:24,480 --> 00:02:28,770
+For example, we did not discuss the Mqtt protocol.
+
+36
+00:02:28,800 --> 00:02:35,250
+This is a specialized protocol used extensively by Iot devices but is less common in more traditional
+
+37
+00:02:35,250 --> 00:02:36,240
+applications.
+
+38
+00:02:36,840 --> 00:02:42,240
+When the team will see this diagram, the developers will understand what are the components involved
+
+39
+00:02:42,240 --> 00:02:44,550
+in the system and why they are there.
+
+40
+00:02:44,820 --> 00:02:50,070
+This will be extremely helpful later when we will deep dive into each component and the developers will
+
+41
+00:02:50,070 --> 00:02:54,150
+already be familiar with the component and its role in the grand scheme.
+
+42
+00:02:54,660 --> 00:03:00,510
+It's important to note that the diagram is a logic one there is no mentioning of servers, networks,
+
+43
+00:03:00,510 --> 00:03:03,960
+switches, network drives, load balancer and such.
+
+44
+00:03:03,990 --> 00:03:10,170
+This is a strictly logic diagram displaying the logic components of the architecture do not mix physical
+
+45
+00:03:10,170 --> 00:03:12,060
+hardware with logic architecture.
+
+46
+00:03:13,050 --> 00:03:18,510
+The third and last part of the overview section is the walkthrough of the diagram.
+
+47
+00:03:18,540 --> 00:03:23,760
+In this part you will describe the various parts of the diagram and the role verbally.
+
+48
+00:03:24,210 --> 00:03:29,040
+This part walks through the diagram and explains each and every component in it.
+
+49
+00:03:29,070 --> 00:03:35,880
+It describes in simple words what is the exact role of the component, what is its functionality and
+
+50
+00:03:35,880 --> 00:03:39,060
+what interactions it has with each and every other component.
+
+51
+00:03:39,090 --> 00:03:44,430
+In addition, it describes the data that is stored in the components data store, if there is one.
+
+52
+00:03:44,640 --> 00:03:50,730
+This part is extremely important since a diagram cannot convey all the intricacies of the architecture.
+
+53
+00:03:50,760 --> 00:03:56,100
+It's important to include any logic details that you think will be relevant, such as the components,
+
+54
+00:03:56,100 --> 00:03:59,580
+users expected load, future extensions and more.
+
+55
+00:03:59,610 --> 00:04:02,970
+You will see a complete example of this part in the architecture document.
+
+56
+00:04:02,970 --> 00:04:05,880
+You will get on the next section of this course.
+
+57
+00:04:05,970 --> 00:04:08,490
+Now let's talk about technology stack.
+
+58
+00:04:08,910 --> 00:04:13,350
+What is the exact section in the document where the technology stack should be described?
+
+59
+00:04:13,380 --> 00:04:19,350
+Is it here in the overview section or in the next section that deep dives into the various components?
+
+60
+00:04:19,440 --> 00:04:23,340
+Well, the answer, as you might expect, is it depends.
+
+61
+00:04:23,700 --> 00:04:28,800
+If the system has a single technology stack and all its components will be built using this stack.
+
+62
+00:04:28,830 --> 00:04:32,130
+Then the overview section is a great place to write about it.
+
+63
+00:04:32,190 --> 00:04:37,440
+On the other hand, if the stack is different between the various components, it should be described
+
+64
+00:04:37,440 --> 00:04:43,650
+per component, since in modern systems there are usually more than one technology stack used.
+
+65
+00:04:43,680 --> 00:04:48,900
+I describe this part in detail in the next section, so let's drill down.
+

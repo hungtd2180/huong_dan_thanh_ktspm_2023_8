@@ -1,0 +1,84 @@
+1
+00:00:00,320 --> 00:00:04,700
+As you can probably guess, manageability is the ability to manage the application.
+
+2
+00:00:04,730 --> 00:00:06,260
+Now, what does it mean?
+
+3
+00:00:06,290 --> 00:00:11,780
+Simply put, it's the ability to know what's going on with the application at any given time and to
+
+4
+00:00:11,780 --> 00:00:14,060
+take actions that will improve its work.
+
+5
+00:00:14,090 --> 00:00:20,270
+For example, a manageable application will constantly report its status to monitoring agents and let
+
+6
+00:00:20,270 --> 00:00:25,820
+them know when errors occur, when there is an exceptionally high load, when the ram is becoming dangerously
+
+7
+00:00:25,820 --> 00:00:27,020
+high and so on.
+
+8
+00:00:27,290 --> 00:00:32,780
+The monitoring agents report this back to a management console and then a decision can be made either
+
+9
+00:00:32,780 --> 00:00:38,090
+automatically or by a human operator to take some action, such as retrying the process that caused
+
+10
+00:00:38,090 --> 00:00:43,010
+the error or adding resources to cope with the load and with the situation.
+
+11
+00:00:43,130 --> 00:00:49,790
+The best way to differentiate a manageable system from one that is not is by finding out who is the
+
+12
+00:00:49,790 --> 00:00:51,460
+one that reports problems.
+
+13
+00:00:51,470 --> 00:00:54,860
+If it's the end user, then the system is not manageable.
+
+14
+00:00:54,860 --> 00:01:01,770
+And as a side effect, we have made your users a team which is bad on the other hand, if the system
+
+15
+00:01:01,770 --> 00:01:05,190
+itself report problems, the experience is much better.
+
+16
+00:01:05,190 --> 00:01:07,790
+The system will find out a problem is going to occur.
+
+17
+00:01:07,800 --> 00:01:13,920
+For example, a mass of request is received in a very short time and the response time degradates substantially.
+
+18
+00:01:13,950 --> 00:01:19,500
+As a result, the system alerts the monitoring agent about it and the operator decides to add more VMs
+
+19
+00:01:19,500 --> 00:01:20,700
+to support that load.
+
+20
+00:01:20,730 --> 00:01:26,490
+The end result is that the users don't even know there is a problem and the system is just humming along
+
+21
+00:01:26,520 --> 00:01:27,180
+happily.
+

@@ -1,0 +1,104 @@
+1
+00:00:00,350 --> 00:00:05,330
+One of the biggest temptations when designing the architecture is to recommend various tools for the
+
+2
+00:00:05,330 --> 00:00:07,040
+various architectural aspects.
+
+3
+00:00:07,160 --> 00:00:14,390
+Tools like engines, business flow managers, NoSQL databases and more are quite common recommendations
+
+4
+00:00:14,390 --> 00:00:15,950
+for modern day architecture.
+
+5
+00:00:16,070 --> 00:00:20,860
+Problem is, those tools need someone who is familiar with them and can maintain them.
+
+6
+00:00:20,870 --> 00:00:26,840
+Now, if the organization's IT department possesses the skillset to maintain a shiny new NoSQL database.
+
+7
+00:00:26,870 --> 00:00:29,690
+All is good, but what happens when it's not?
+
+8
+00:00:29,840 --> 00:00:35,150
+What often happens is that the development team becomes the support team for these products and the
+
+9
+00:00:35,150 --> 00:00:38,840
+developers become experts in installing and maintaining them.
+
+10
+00:00:38,840 --> 00:00:41,240
+And that's not a good thing.
+
+11
+00:00:41,510 --> 00:00:43,670
+Developers should develop.
+
+12
+00:00:43,830 --> 00:00:45,740
+That's the best use of their time.
+
+13
+00:00:45,740 --> 00:00:51,110
+This is what they are paid for, to develop, not to be dba's, not to configure MQ series, not to
+
+14
+00:00:51,110 --> 00:00:56,630
+dig through support articles of MongoDB and the architecture you design must factor this in.
+
+15
+00:00:56,660 --> 00:01:01,620
+You must make sure that when recommending a new product to be included in the system, there will be
+
+16
+00:01:01,620 --> 00:01:04,470
+someone other than the development team to take care of it.
+
+17
+00:01:04,500 --> 00:01:10,200
+If that's not the case, then make a very careful analysis of the effort needed to maintain the product
+
+18
+00:01:10,200 --> 00:01:13,320
+and check with the developers whether they can handle it.
+
+19
+00:01:13,770 --> 00:01:19,410
+Note that if the product is a new, shining one, the developers will often be very excited about it
+
+20
+00:01:19,410 --> 00:01:21,510
+and will ensure you they can handle it.
+
+21
+00:01:21,540 --> 00:01:23,010
+Don't take it for granted.
+
+22
+00:01:23,010 --> 00:01:27,960
+Excitement fades over time and when this will happen, the developers will be left with a boring and
+
+23
+00:01:27,960 --> 00:01:31,650
+mundane task of maintaining a product instead of writing code.
+
+24
+00:01:31,740 --> 00:01:37,140
+So the bottom line is this Whenever possible, do not include products in the architecture that have
+
+25
+00:01:37,140 --> 00:01:39,110
+no one assigned for taking care of them.
+
+26
+00:01:39,120 --> 00:01:42,630
+Always prefer products that department knows and support.
+

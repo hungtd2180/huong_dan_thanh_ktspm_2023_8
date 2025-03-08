@@ -1,0 +1,524 @@
+1
+00:00:01,190 --> 00:00:06,860
+Caching is one of the most used architectural patterns in software, but is not always used correctly.
+
+2
+00:00:07,010 --> 00:00:09,980
+Let's explain the basic concept of caching first.
+
+3
+00:00:10,010 --> 00:00:15,710
+Using cache, we bring data closer to its consumer so that its retrieval will be faster.
+
+4
+00:00:16,010 --> 00:00:17,780
+Let's look at some examples.
+
+5
+00:00:18,110 --> 00:00:20,630
+All the modern web browsers have cache.
+
+6
+00:00:20,660 --> 00:00:26,330
+The role of the cache in web browser is simple when browsing a specific web page, instead of asking
+
+7
+00:00:26,330 --> 00:00:32,119
+a remote server to serve the page, it is retrieved from the browser's memory, thus displaying the
+
+8
+00:00:32,119 --> 00:00:33,530
+page much faster.
+
+9
+00:00:33,740 --> 00:00:39,560
+The developers can disable the cache to ensure the page displayed is always up to date and contains
+
+10
+00:00:39,560 --> 00:00:40,730
+the relevant data.
+
+11
+00:00:41,090 --> 00:00:45,140
+Let's look at another example more relevant for us the architects.
+
+12
+00:00:45,350 --> 00:00:47,840
+A service needs data from the data store.
+
+13
+00:00:47,870 --> 00:00:51,830
+Let's assume the data store is a relational database like SQL Server.
+
+14
+00:00:52,160 --> 00:00:59,000
+Naturally, the service has code in its data access layer to access the database and issue SQL statements
+
+15
+00:00:59,000 --> 00:01:00,390
+to retrieve the data.
+
+16
+00:01:00,660 --> 00:01:02,870
+The retrieval operation can take some time.
+
+17
+00:01:02,880 --> 00:01:07,020
+The database has to compile the SQL statement, retrieve the data.
+
+18
+00:01:07,050 --> 00:01:10,710
+Then the code will need to serialize the data to objects.
+
+19
+00:01:10,740 --> 00:01:12,270
+The code can work with.
+
+20
+00:01:12,300 --> 00:01:14,340
+All this might take time.
+
+21
+00:01:14,460 --> 00:01:20,460
+Add to that the fact that the database might be physically located far from the code, and we do have
+
+22
+00:01:20,460 --> 00:01:22,050
+an inefficient process.
+
+23
+00:01:22,380 --> 00:01:25,170
+To avoid this delay, we can use cache.
+
+24
+00:01:25,530 --> 00:01:31,200
+The cache is another layer usually sits between the data store and the business logic layer that stores
+
+25
+00:01:31,200 --> 00:01:34,620
+data in a way that makes it very easy and fast to retrieve.
+
+26
+00:01:34,770 --> 00:01:39,810
+Cache engines usually store data in memory, thus making the retrieval extremely fast.
+
+27
+00:01:39,840 --> 00:01:46,440
+Some engines, such as Redis, save the data to disk periodically, but still retrieving the data is
+
+28
+00:01:46,440 --> 00:01:48,240
+done against a memory storage.
+
+29
+00:01:48,690 --> 00:01:52,830
+Cache engines offer some trade offs when compared to more traditional databases.
+
+30
+00:01:52,860 --> 00:01:55,650
+The following table summarizes this tradeoff.
+
+31
+00:01:55,680 --> 00:02:00,010
+As you can see, cache trades reliability for performance.
+
+32
+00:02:00,030 --> 00:02:04,890
+Data stored in memory is more volatile and will be lost in case of a server crash.
+
+33
+00:02:04,920 --> 00:02:11,100
+On the other hand, it is more performant compared to traditional databases because databases usually
+
+34
+00:02:11,100 --> 00:02:12,630
+store the data in disk.
+
+35
+00:02:12,660 --> 00:02:19,560
+We almost always will refer to them as the single source of truth, meaning the real original data is
+
+36
+00:02:19,560 --> 00:02:20,520
+stored in the database.
+
+37
+00:02:20,520 --> 00:02:25,230
+And if the data is missing from the cache, we will fall back to the database to retrieve it.
+
+38
+00:02:25,440 --> 00:02:31,440
+Now, as architects, we must be able to determine whether when and how to use cache in our system.
+
+39
+00:02:31,440 --> 00:02:36,360
+And for that, let's first define the type of data that we would want to cache.
+
+40
+00:02:36,600 --> 00:02:38,790
+The rule of thumb goes like this.
+
+41
+00:02:38,820 --> 00:02:43,890
+Cache should hold data that is frequently accessed and rarely modified.
+
+42
+00:02:44,010 --> 00:02:46,530
+The reasoning behind this rule is simple.
+
+43
+00:02:46,860 --> 00:02:52,290
+If data is frequently accessed, we would like to make it fast and easy to retrieve so that the user
+
+44
+00:02:52,290 --> 00:02:56,250
+experience will be optimized and there will be minimal load on the system.
+
+45
+00:02:56,250 --> 00:02:59,610
+By placing the data in the cache, we get just that.
+
+46
+00:02:59,640 --> 00:03:05,700
+The retrieval process is very lightweight since the data is in memory and no i o operation required.
+
+47
+00:03:05,700 --> 00:03:10,470
+And as a result it's also very fast making the user experience optimized.
+
+48
+00:03:10,800 --> 00:03:14,370
+On the other hand, the data should rarely be modified.
+
+49
+00:03:14,400 --> 00:03:16,110
+The reason for that is this.
+
+50
+00:03:16,140 --> 00:03:22,170
+One of the greatest challenges with cache is keeping it in sync with the data store, which is our single
+
+51
+00:03:22,170 --> 00:03:23,130
+source of truth.
+
+52
+00:03:23,160 --> 00:03:28,860
+If the data store and the cache are not synchronized and contain different data, it can lead to data
+
+53
+00:03:28,860 --> 00:03:31,080
+corruption and bad user experience.
+
+54
+00:03:31,200 --> 00:03:33,570
+Again, let's look at an example.
+
+55
+00:03:33,690 --> 00:03:39,360
+Our application gets stock quotes data and displays it to the user to make things quick.
+
+56
+00:03:39,390 --> 00:03:41,320
+The data is stored in the cache.
+
+57
+00:03:41,340 --> 00:03:45,030
+Now, naturally, stokes data changes quite frequently.
+
+58
+00:03:45,060 --> 00:03:47,430
+Let's assume the data changes each second.
+
+59
+00:03:47,460 --> 00:03:52,380
+Most of the users work with the stock quotes data right in front of them so they can see the numbers
+
+60
+00:03:52,380 --> 00:03:53,580
+change in real time.
+
+61
+00:03:53,700 --> 00:03:57,360
+This complies to the frequent access part of our rule.
+
+62
+00:03:57,390 --> 00:04:01,890
+Now what happens when the data is changed, which happens each second, Remember?
+
+63
+00:04:02,070 --> 00:04:06,900
+Let's assume the system complies with the architectural pattern we discussed previously, which means
+
+64
+00:04:06,900 --> 00:04:10,070
+we have three servers with load balancer in front of them.
+
+65
+00:04:10,110 --> 00:04:13,260
+Note that every server has its own cache.
+
+66
+00:04:13,680 --> 00:04:20,250
+Let's assume the servers expose API to update the stock quote and new call to the API arrives and the
+
+67
+00:04:20,250 --> 00:04:23,580
+load balancer decides to route it to server number one.
+
+68
+00:04:23,670 --> 00:04:29,460
+It gets the data, updates the central database and also updates its own cache.
+
+69
+00:04:29,460 --> 00:04:31,230
+And here is a problem.
+
+70
+00:04:31,840 --> 00:04:34,990
+Zarkesh on the other servers contains stale data.
+
+71
+00:04:35,020 --> 00:04:37,510
+That is a data that is not relevant.
+
+72
+00:04:37,540 --> 00:04:41,350
+The other caches were not updated as a result of the API call.
+
+73
+00:04:41,350 --> 00:04:45,730
+So now two servers hold data that is not up to date and not relevant.
+
+74
+00:04:45,730 --> 00:04:50,770
+And when the user will ask for the stock quotes and the load balancer will route the request to one
+
+75
+00:04:50,770 --> 00:04:55,440
+of these servers, the user will be presented with a wrong data, which is bad.
+
+76
+00:04:55,480 --> 00:04:56,860
+So what can be done?
+
+77
+00:04:57,790 --> 00:04:59,580
+To understand the various solutions?
+
+78
+00:04:59,590 --> 00:05:01,910
+Let's categorize the various types of cache.
+
+79
+00:05:01,930 --> 00:05:09,730
+In general, we can say there are two types of cache in memory, in process cache and distributed cache
+
+80
+00:05:10,720 --> 00:05:11,530
+in memory.
+
+81
+00:05:11,530 --> 00:05:15,370
+In process is a cache implementation that is part of the services code.
+
+82
+00:05:15,400 --> 00:05:20,490
+It uses the service memory and is executed as part of the services process.
+
+83
+00:05:20,500 --> 00:05:25,780
+Almost all the development languages have libraries for in-memory, in-process cache and actually for
+
+84
+00:05:25,780 --> 00:05:31,390
+simple implementations, you can use static concurrent collection and call it a day as you can probably
+
+85
+00:05:31,490 --> 00:05:37,220
+guess, in memory cache excels in performance, since accessing it is as simple as calling a class in
+
+86
+00:05:37,220 --> 00:05:39,870
+the code which gets data from the process memory.
+
+87
+00:05:39,890 --> 00:05:45,950
+On the other hand, it is limited in size since it can hold data as big as a process memory which is
+
+88
+00:05:45,950 --> 00:05:47,660
+usually a few gigabytes.
+
+89
+00:05:47,900 --> 00:05:50,690
+Distributed cache is a completely different beast.
+
+90
+00:05:50,720 --> 00:05:56,930
+It's a separate product that holds the cache data in a separate process and provides easy interface
+
+91
+00:05:56,930 --> 00:05:58,340
+for accessing the data.
+
+92
+00:05:58,670 --> 00:06:02,930
+The best part of the distributed cache is that it's well distributed.
+
+93
+00:06:02,960 --> 00:06:08,540
+That means that the cache storage is distributed across servers and that gives the distributed cache
+
+94
+00:06:08,540 --> 00:06:10,840
+the ability to store very large data.
+
+95
+00:06:10,850 --> 00:06:16,460
+In fact, the cache size is limited only by the combined memory size of all the servers.
+
+96
+00:06:16,460 --> 00:06:22,490
+The distributed cache is installed on distributed cache engines are usually installed as services on
+
+97
+00:06:22,490 --> 00:06:26,270
+the servers they are on and each service is called Node.
+
+98
+00:06:26,300 --> 00:06:31,670
+What's nice with distributed cache engines is that the nodes are synchronized internally and it's the
+
+99
+00:06:31,670 --> 00:06:36,630
+responsibility of the cache mechanism to make sure all the nodes are familiar with new data.
+
+100
+00:06:36,650 --> 00:06:42,080
+So in this case, when a specific server updates the cache, it's immediately distributed to the other
+
+101
+00:06:42,080 --> 00:06:46,370
+nodes, allowing all other servers to be in sync and have the same data.
+
+102
+00:06:47,060 --> 00:06:50,030
+So what is the downside of distributed cache?
+
+103
+00:06:50,060 --> 00:06:52,370
+The answer is performance.
+
+104
+00:06:52,400 --> 00:06:57,980
+While with in-memory in-process cache, the performance is blazing fast because the cache executes in
+
+105
+00:06:57,980 --> 00:07:01,760
+the same process and uses the same code with distributed cache.
+
+106
+00:07:01,760 --> 00:07:03,190
+We don't have this advantage.
+
+107
+00:07:03,200 --> 00:07:08,990
+The cache runs on a different process and sometimes it even runs on different servers, which adds network
+
+108
+00:07:08,990 --> 00:07:10,560
+hops to the retrieval process.
+
+109
+00:07:10,580 --> 00:07:16,670
+In addition, most of the distributed cache engines allow storing only primitive types, strings, numbers,
+
+110
+00:07:16,670 --> 00:07:20,600
+etcetera, while the in-memory in-process cache can store anything.
+
+111
+00:07:20,630 --> 00:07:26,330
+This gives us another performance gain since there is no need to serialize and deserialize the data.
+
+112
+00:07:26,720 --> 00:07:29,540
+And now let's go back to our rule cache.
+
+113
+00:07:29,540 --> 00:07:33,350
+Should hold data that is frequently accessed and rarely modified.
+
+114
+00:07:33,350 --> 00:07:37,580
+And we left in the middle of the rarely modified discussion.
+
+115
+00:07:37,580 --> 00:07:43,940
+If the data is frequently modified, as is the case with stock quotes and we are using in-memory in-process
+
+116
+00:07:43,940 --> 00:07:49,370
+cache, we will have to develop some mechanism to sync between the data in the database and each and
+
+117
+00:07:49,370 --> 00:07:50,740
+every in-memory cache.
+
+118
+00:07:50,750 --> 00:07:54,380
+This mechanism will hammer the database constantly and we will lose.
+
+119
+00:07:54,380 --> 00:07:58,370
+One of the advantages of cache, reduce the load from the system.
+
+120
+00:07:58,550 --> 00:08:03,650
+On the other hand, if we will be using distributed cache, we will probably be fine.
+
+121
+00:08:03,680 --> 00:08:09,470
+The updated data will immediately sync between all the nodes and the servers will access the fresh data.
+
+122
+00:08:09,920 --> 00:08:13,820
+So we explored in-memory in process cache versus distributed cache.
+
+123
+00:08:13,850 --> 00:08:19,070
+Let's summarize it all in the following table, which will help you decide what kind of cache you need
+
+124
+00:08:19,070 --> 00:08:19,700
+to use.
+
+125
+00:08:19,850 --> 00:08:27,320
+So use distributed cache if you need distribution among servers, failover capabilities and large cache
+
+126
+00:08:27,320 --> 00:08:33,530
+storage and use in-memory in-process cache if you need best performance possible.
+
+127
+00:08:33,530 --> 00:08:35,630
+And store complex objects.
+
+128
+00:08:35,720 --> 00:08:41,419
+In addition, using distributed cache requires some training and setup, whereas in memory, in-process
+
+129
+00:08:41,419 --> 00:08:43,700
+cache is as simple as using a class.
+
+130
+00:08:44,059 --> 00:08:46,760
+So that concludes our discussion about cache.
+
+131
+00:08:46,760 --> 00:08:52,040
+I hope you learned from it and I hope it will help you design your caching strategy in the future.
+

@@ -1,0 +1,88 @@
+1
+00:00:00,200 --> 00:00:03,440
+Webops is probably the most common application type nowadays.
+
+2
+00:00:03,440 --> 00:00:05,270
+Second, maybe only to web API.
+
+3
+00:00:05,750 --> 00:00:11,120
+Web apps, also known as websites are basically the way the internet worked since its inception.
+
+4
+00:00:11,510 --> 00:00:12,410
+With web apps.
+
+5
+00:00:12,410 --> 00:00:16,370
+There is a web server, usually more than one, and a web browser.
+
+6
+00:00:16,670 --> 00:00:22,190
+Those two communicate with each other via Http protocol, although other protocols can also be used,
+
+7
+00:00:22,220 --> 00:00:26,540
+the browser sends an Http request for the server asking for a resource.
+
+8
+00:00:26,690 --> 00:00:32,630
+The resource in this case is an HTML page which gets returned to the browser, which in turn renders
+
+9
+00:00:32,630 --> 00:00:34,010
+it for the end user.
+
+10
+00:00:34,190 --> 00:00:40,160
+Almost always, the HTML page will use JavaScript code for implementing logic in the browser and CSS
+
+11
+00:00:40,160 --> 00:00:42,920
+files for the visual design of the page.
+
+12
+00:00:42,920 --> 00:00:49,520
+Web apps are best for systems that require user interface for end user user initiated actions.
+
+13
+00:00:49,520 --> 00:00:55,460
+Meaning the user is the one making the request to do something such as viewing order, data saving username
+
+14
+00:00:55,460 --> 00:01:03,300
+and so on large scale with a large number of users and a lot of data, short focused action as opposed
+
+15
+00:01:03,300 --> 00:01:04,739
+to long running processes.
+
+16
+00:01:04,739 --> 00:01:10,350
+For example, web apps are not a good fit for a process that should crunch billions of numbers and produce
+
+17
+00:01:10,350 --> 00:01:11,370
+business intelligence.
+
+18
+00:01:11,370 --> 00:01:14,370
+For this, there are other kinds of applications.
+
+19
+00:01:15,170 --> 00:01:20,420
+As we discussed earlier, Web apps work in a request response model, which is perhaps the most important
+
+20
+00:01:20,420 --> 00:01:21,310
+aspect of them.
+
+21
+00:01:21,320 --> 00:01:26,420
+As a rule of thumb, if the system you are working on can be described as a request response application,
+
+22
+00:01:26,420 --> 00:01:28,790
+then you are probably looking at a web app.
+

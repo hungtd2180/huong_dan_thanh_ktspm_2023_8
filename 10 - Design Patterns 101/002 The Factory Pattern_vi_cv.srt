@@ -1,0 +1,312 @@
+1
+00:00:01,380 --> 00:00:05,070
+Cái tên nhà máy có thể nghe quen thuộc, và thực tế là như vậy.
+
+2
+00:00:05,100 --> 00:00:10,520
+Chúng ta đã thảo luận về các phương pháp nhà máy trong khóa học này ở các bài giảng trước, chủ yếu xoay quanh các lớp.
+
+3
+00:00:10,530 --> 00:00:15,630
+Nhưng bây giờ chúng ta hãy đi sâu vào mô hình nhà máy và cung cấp đầy đủ động lực và giải thích
+
+4
+00:00:15,630 --> 00:00:16,290
+vì nó.
+
+5
+00:00:16,440 --> 00:00:18,780
+Vậy mô hình nhà máy là gì?
+
+6
+00:00:18,810 --> 00:00:25,230
+Nói một cách đơn giản, mẫu nhà máy là một mẫu cho phép tạo ra các đối tượng mà không cần chỉ định chính xác
+
+7
+00:00:25,230 --> 00:00:26,640
+lớp của đối tượng.
+
+8
+00:00:26,760 --> 00:00:29,550
+Vậy tại sao chúng ta lại muốn làm điều đó?
+
+9
+00:00:29,940 --> 00:00:35,880
+Như chúng ta đã thảo luận, việc chỉ định lớp trong mã tạo sẽ tạo ra sự kết hợp chặt chẽ và
+
+10
+00:00:35,880 --> 00:00:37,590
+sẽ liên kết mã với lớp.
+
+11
+00:00:37,680 --> 00:00:43,170
+Nếu sau này chúng ta cần sử dụng một lớp khác để triển khai cùng một logic, chúng ta sẽ phải sửa đổi
+
+12
+00:00:43,170 --> 00:00:47,610
+tất cả mã tạo ra lớp có thể được phân tán khắp ứng dụng.
+
+13
+00:00:47,610 --> 00:00:51,990
+Vì vậy, mô hình nhà máy cho phép chúng ta tránh được sự kết hợp chặt chẽ như vậy.
+
+14
+00:00:52,020 --> 00:00:53,550
+Nó được thực hiện như thế nào?
+
+15
+00:00:53,610 --> 00:00:55,740
+Vâng, chúng ta hãy xem một ví dụ.
+
+16
+00:00:55,770 --> 00:01:01,180
+Giả sử chúng ta có một ứng dụng cần biết dự báo thời tiết ở nhiều thành phố khác nhau trên thế giới.
+
+17
+00:01:01,210 --> 00:01:06,700
+Hiện nay, có nhiều nhà cung cấp dự báo thời tiết và các nhà phát triển đã quyết định chọn một nhà cung cấp
+
+18
+00:01:06,700 --> 00:01:07,990
+tên, nóng hay không.
+
+19
+00:01:08,020 --> 00:01:16,120
+Cho dù họ tạo ra một lớp có tên là Hon hay hon weather với một phương thức có tên là get weather chấp nhận
+
+20
+00:01:16,120 --> 00:01:17,680
+tên thành phố và ngày tháng.
+
+21
+00:01:17,710 --> 00:01:23,290
+Phương pháp lấy thời tiết trả về một số biểu thị nhiệt độ ở thành phố đã cho trên
+
+22
+00:01:23,290 --> 00:01:23,860
+ngày.
+
+23
+00:01:24,010 --> 00:01:26,500
+Sau đây là ví dụ về mã sử dụng lớp này.
+
+24
+00:01:26,530 --> 00:01:30,190
+Đây là một cách thực hiện đơn giản và có vẻ khá vô hại.
+
+25
+00:01:30,520 --> 00:01:36,460
+Sáu tháng sau khi trang web đi vào hoạt động, chương trình thời tiết nóng hay không nóng cực kỳ thành công đã kết thúc
+
+26
+00:01:36,460 --> 00:01:39,750
+doanh nghiệp và các nhà phát triển phải tìm người thay thế.
+
+27
+00:01:39,760 --> 00:01:43,780
+Sau một cuộc tìm kiếm vội vã, họ tìm thấy một cái tên không phải là weather.
+
+28
+00:01:43,810 --> 00:01:50,470
+Họ đã tạo ra một lớp khác có tên là N weather với cùng phương thức chữ ký get weather chấp nhận
+
+29
+00:01:50,470 --> 00:01:55,120
+cùng đối số thành phố và ngày tháng và trả về cùng giá trị nhiệt độ.
+
+30
+00:01:55,390 --> 00:01:56,440
+Bây giờ thì sao?
+
+31
+00:01:56,680 --> 00:02:03,160
+Bây giờ vì lớp trước về thời tiết được tạo trực tiếp bằng mã sử dụng từ khóa mới,
+
+32
+00:02:03,160 --> 00:02:09,759
+nhóm phải tìm tất cả các nơi lớp này được sử dụng và thay đổi mã để tạo ra một phiên bản của
+
+33
+00:02:10,030 --> 00:02:12,400
+lớp thời tiết thay vì lớp hon.
+
+34
+00:02:12,400 --> 00:02:13,570
+Lớp thời tiết.
+
+35
+00:02:13,600 --> 00:02:16,940
+Đây là một công việc tẻ nhạt, nhàm chán và dễ xảy ra lỗi.
+
+36
+00:02:16,960 --> 00:02:20,230
+Nhóm nghiên cứu phát hiện ra rằng cái mới chính là keo.
+
+37
+00:02:20,260 --> 00:02:26,440
+Đây là điều phổ biến giữa các nhà phát triển và kiến trúc sư, và nó cho thấy rằng bất cứ khi nào chúng ta sử dụng từ khóa mới,
+
+38
+00:02:26,440 --> 00:02:28,900
+chúng tôi gắn mã và lớp lại với nhau.
+
+39
+00:02:28,930 --> 00:02:31,920
+Mô hình nhà máy đề xuất giải pháp cho vấn đề này.
+
+40
+00:02:31,930 --> 00:02:33,460
+Sử dụng mẫu nhà máy.
+
+41
+00:02:33,460 --> 00:02:37,510
+Chúng ta sẽ thực hiện điều này bằng cách tạo một giao diện có tên là nhà cung cấp thời tiết.
+
+42
+00:02:37,540 --> 00:02:43,360
+Giao diện này có một phương thức duy nhất được đặt tên, bạn đoán xem, lấy thời tiết chấp nhận tên thành phố và ngày tháng
+
+43
+00:02:43,360 --> 00:02:51,370
+và trả về nhiệt độ để tạo ra lớp thời tiết và n triển khai giao diện này.
+
+44
+00:02:51,850 --> 00:02:53,650
+Tạo phương thức nhà máy.
+
+45
+00:02:53,650 --> 00:02:59,110
+Hãy gọi phương thức này là get weather provider và nó sẽ trả về một triển khai của weather provider
+
+46
+00:02:59,110 --> 00:02:59,890
+giao diện.
+
+47
+00:02:59,920 --> 00:03:03,460
+Phương pháp này chỉ trả về một trường hợp thời tiết.
+
+48
+00:03:03,490 --> 00:03:08,260
+Tất cả chỉ là một câu nói, nhưng câu nói này đã thay đổi tất cả.
+
+49
+00:03:08,950 --> 00:03:15,160
+Từ bây giờ khi mã cần truy cập thông tin thời tiết thay vì gọi trực tiếp đến weather
+
+50
+00:03:15,160 --> 00:03:18,790
+Nó sẽ tạo ra một phương thức nhà máy, lấy phiên bản và hành động trên đó.
+
+51
+00:03:18,820 --> 00:03:25,420
+Mã sẽ không biết lớp cụ thể nào đang được sử dụng và điều đó làm cho việc thay đổi trở nên rất dễ dàng.
+
+52
+00:03:25,420 --> 00:03:30,050
+trải nghiệm khi các nhà phát triển cần chuyển đổi từ thời tiết này sang thời tiết khác.
+
+53
+00:03:30,070 --> 00:03:34,280
+Tất cả những gì họ cần làm là sửa đổi mã trong phương thức của nhà máy.
+
+54
+00:03:34,300 --> 00:03:35,290
+Vậy thôi.
+
+55
+00:03:35,410 --> 00:03:36,850
+Bạn thấy nó dễ thế nào không?
+
+56
+00:03:37,030 --> 00:03:41,890
+Sử dụng phương pháp nhà máy chắc chắn sẽ giúp mã của bạn dễ bảo trì hơn, đây là một trong những điều quan trọng
+
+57
+00:03:41,890 --> 00:03:43,180
+mục tiêu của kiến trúc sư.
+
+58
+00:03:43,390 --> 00:03:47,390
+Hiện nay có một số loại phương pháp nhà máy phức tạp hơn.
+
+59
+00:03:47,410 --> 00:03:52,960
+Ví dụ, giả sử chúng ta có hai nhà cung cấp thông tin thời tiết, một cho Châu Á và một cho Châu Âu.
+
+60
+00:03:52,990 --> 00:03:56,860
+Chúng ta cần mã không phụ thuộc vào vị trí chúng ta muốn dự báo thời tiết.
+
+61
+00:03:56,860 --> 00:04:02,460
+Và vì vậy chúng ta sử dụng phương thức nhà máy như một nơi để đưa ra quyết định về trường hợp nào sẽ trả về.
+
+62
+00:04:02,470 --> 00:04:09,040
+Ví dụ, các lớp thời tiết của chúng tôi được gọi, thật đáng ngạc nhiên, là Thời tiết Châu Âu và Thời tiết Châu Á,
+
+63
+00:04:09,040 --> 00:04:11,970
+và cả hai đều triển khai giao diện nhà cung cấp thời tiết.
+
+64
+00:04:11,980 --> 00:04:14,350
+Nhà máy của chúng ta bây giờ sẽ trông như thế này.
+
+65
+00:04:14,980 --> 00:04:19,930
+Như bạn có thể thấy, phương pháp nhà máy chấp nhận tên lục địa của dự báo thời tiết cần thiết và
+
+66
+00:04:19,930 --> 00:04:22,360
+trả về một trường hợp khác dựa trên nó.
+
+67
+00:04:22,390 --> 00:04:27,400
+Đây là một mô hình khá phổ biến trong các nhà máy và có rất nhiều ví dụ về các nhà máy đưa ra quyết định
+
+68
+00:04:27,400 --> 00:04:29,830
+trên một trường hợp cụ thể cần được trả về.
+
+69
+00:04:29,860 --> 00:04:35,500
+Một cách phổ biến khác là sử dụng tệp cấu hình bên ngoài để quyết định phiên bản nào sẽ trả về.
+
+70
+00:04:36,250 --> 00:04:37,960
+Vậy đó là một mô hình nhà máy.
+
+71
+00:04:37,960 --> 00:04:42,170
+Và như bạn có thể đã hiểu, nó cực kỳ phổ biến và điều đó hoàn toàn đúng.
+
+72
+00:04:42,190 --> 00:04:47,800
+Nó sẽ giúp cuộc sống của bạn dễ dàng hơn nhiều và mã sẽ dễ đọc hơn, linh hoạt hơn và dễ bảo trì hơn.
+
+73
+00:04:47,830 --> 00:04:53,350
+Ngoài ra, mẫu nhà máy thường là cơ sở cho các mẫu khác, như chúng ta sẽ thấy trong kho lưu trữ
+
+74
+00:04:53,350 --> 00:04:53,990
+mẫu.
+
+75
+00:04:54,010 --> 00:04:56,050
+Vì vậy, kết quả cuối cùng rất đơn giản.
+
+76
+00:04:56,080 --> 00:04:58,690
+Luôn cố gắng sử dụng mẫu nhà máy.
+
+77
+00:04:58,690 --> 00:05:00,970
+Hãy nhớ rằng cái mới là keo dán.
+
+78
+00:05:01,000 --> 00:05:03,610
+Tránh kết hợp chặt chẽ với mô hình nhà máy.
+

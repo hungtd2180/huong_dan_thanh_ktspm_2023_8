@@ -1,0 +1,88 @@
+1
+00:00:00,320 --> 00:00:05,360
+Một trong những vấn đề lớn nhất với các yêu cầu không chức năng là không rõ ai nên xác định
+
+2
+00:00:05,360 --> 00:00:05,870
+họ.
+
+3
+00:00:06,050 --> 00:00:11,120
+Thông thường chúng tôi mong đợi khách hàng cùng với nhà phân tích hệ thống để xác định các yêu cầu chức năng.
+
+4
+00:00:11,120 --> 00:00:15,080
+Suy cho cùng, họ là người hiểu rõ hệ thống nên làm gì hơn bất kỳ ai.
+
+5
+00:00:15,350 --> 00:00:18,230
+Nhưng các yêu cầu không mang tính chức năng lại là một câu chuyện khác.
+
+6
+00:00:18,260 --> 00:00:23,030
+Hầu hết thời gian khách hàng không biết về các yêu cầu không chức năng và hậu quả của chúng
+
+7
+00:00:23,030 --> 00:00:24,770
+trong số những yêu cầu đó là.
+
+8
+00:00:24,920 --> 00:00:31,610
+Theo kinh nghiệm của tôi, khi được hỏi SLA cho hệ thống là gì, giả sử anh ta biết SLA là gì,
+
+9
+00:00:31,610 --> 00:00:38,360
+Khi được hỏi, khách hàng thường sẽ trả lời là luôn luôn Thời gian phản hồi cần thiết cho API là bao lâu?
+
+10
+00:00:38,390 --> 00:00:41,570
+Câu trả lời sẽ nằm trong khoảng mười mili giây.
+
+11
+00:00:42,850 --> 00:00:47,440
+Vì vậy, chúng tôi, những kiến trúc sư, có hai vai trò trong cuộc thảo luận về các yêu cầu phi chức năng.
+
+12
+00:00:48,310 --> 00:00:50,080
+Đầu tiên là xác định ranh giới.
+
+13
+00:00:50,080 --> 00:00:56,680
+Chúng tôi phải giải thích với khách hàng rằng thời gian hoạt động 100% là không thực tế và có lẽ không thực sự cần thiết.
+
+14
+00:00:56,710 --> 00:01:02,080
+Chúng tôi phải giải thích với anh ấy rằng mạng hiện tại của anh ấy sẽ không cho phép hoàn thành lệnh gọi API trong thời gian ít hơn
+
+15
+00:01:02,080 --> 00:01:03,610
+100 mili giây.
+
+16
+00:01:03,850 --> 00:01:07,360
+Và sau khi thực hiện xong tất cả những điều này, chúng ta có thể nói về những giá trị khả thi.
+
+17
+00:01:07,570 --> 00:01:13,450
+Và cuộc thảo luận này phải được chứng minh bằng số liệu thực tế, ví dụ như khi nói về số lượng người dùng đồng thời.
+
+18
+00:01:13,480 --> 00:01:16,230
+Hãy thử tính toán số lượng người dùng đồng thời thực tế.
+
+19
+00:01:16,240 --> 00:01:18,190
+Đừng vội đưa ra con số.
+
+20
+00:01:18,220 --> 00:01:21,660
+Ngoài ra, hãy cố gắng đặt ra những mục tiêu thực tế cho yêu cầu về hiệu suất.
+
+21
+00:01:21,670 --> 00:01:27,430
+Hãy nhớ rằng, nếu hệ thống được người dùng cuối sử dụng, bạn không cần phải tranh giành từng mili giây.
+
+22
+00:01:27,460 --> 00:01:29,260
+Người dùng sẽ không nhận thấy điều đó.
+

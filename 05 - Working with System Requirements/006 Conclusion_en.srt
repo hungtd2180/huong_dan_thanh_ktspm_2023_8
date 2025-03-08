@@ -1,0 +1,56 @@
+1
+00:00:00,620 --> 00:00:04,430
+So let's conclude what we have learned about nonfunctional requirements.
+
+2
+00:00:04,610 --> 00:00:09,260
+These requirements define what the system will have to deal with in terms of performance.
+
+3
+00:00:09,800 --> 00:00:10,910
+Load users.
+
+4
+00:00:10,910 --> 00:00:11,690
+ET cetera.
+
+5
+00:00:12,080 --> 00:00:16,610
+The client will usually won't be able to define those requirements by himself, and it will be your
+
+6
+00:00:16,610 --> 00:00:19,220
+job as an architect to help him define them.
+
+7
+00:00:19,460 --> 00:00:24,950
+And perhaps the most important lesson from this section never, ever design a system without knowing
+
+8
+00:00:24,950 --> 00:00:26,360
+its functional requirements.
+
+9
+00:00:26,390 --> 00:00:31,280
+The effect of those requirements on the architecture is huge, and you don't want to design a system
+
+10
+00:00:31,280 --> 00:00:34,760
+that will crash and burn on its first day in production.
+
+11
+00:00:34,970 --> 00:00:39,890
+In fact, the place of the non-functional requirements in the architecture is so important that they
+
+12
+00:00:39,890 --> 00:00:45,020
+have their own dedicated paragraph in the architecture document, as we will see later in this course.
+
+13
+00:00:45,680 --> 00:00:50,600
+So now that we know what non-functional requirements are and how to deal with them, let's continue
+
+14
+00:00:50,600 --> 00:00:52,430
+our journey in the architectural flow.
+

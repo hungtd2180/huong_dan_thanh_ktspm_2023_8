@@ -1,0 +1,212 @@
+1
+00:00:00,140 --> 00:00:04,970
+Khi lựa chọn ngăn xếp công nghệ, có một số cân nhắc cần phải được tính đến
+
+2
+00:00:04,970 --> 00:00:08,660
+để đảm bảo nền tảng tốt nhất sẽ được sử dụng trong các hệ thống này.
+
+3
+00:00:08,690 --> 00:00:10,610
+Hãy cùng xem xét những cân nhắc này.
+
+4
+00:00:10,820 --> 00:00:13,910
+Người ta có thể thực hiện các nhiệm vụ được yêu cầu.
+
+5
+00:00:14,120 --> 00:00:16,910
+Vâng, điều này nghe có vẻ tầm thường nhưng thực ra lại quan trọng.
+
+6
+00:00:16,910 --> 00:00:18,620
+Khi nhìn vào một nền tảng cụ thể.
+
+7
+00:00:18,620 --> 00:00:23,060
+Chúng ta phải đảm bảo nền tảng này thực sự có thể thực hiện được những gì được yêu cầu.
+
+8
+00:00:23,090 --> 00:00:28,430
+Ví dụ, nếu một trong những yêu cầu là hỗ trợ triển khai đa nền tảng, điều quan trọng là
+
+9
+00:00:28,430 --> 00:00:31,820
+đảm bảo công nghệ chúng ta đang xem xét thực sự là công nghệ đa nền tảng.
+
+10
+00:00:31,910 --> 00:00:37,700
+Hoặc một ví dụ khác, nếu các yêu cầu nêu rõ rằng giao diện người dùng của hệ thống phải dựa trên web,
+
+11
+00:00:37,730 --> 00:00:41,150
+không có ý nghĩa gì khi khám phá các nền tảng khách hàng giàu có.
+
+12
+00:00:42,020 --> 00:00:43,580
+Cộng đồng thứ hai.
+
+13
+00:00:44,030 --> 00:00:48,920
+Bạn luôn muốn đảm bảo có một cộng đồng lớn năng động thảo luận về nền tảng và có thể
+
+14
+00:00:48,920 --> 00:00:50,450
+cung cấp hỗ trợ khi cần thiết.
+
+15
+00:00:50,630 --> 00:00:55,760
+Bằng cách này, bạn biết rằng bạn sẽ không bị bỏ lại một mình trong bóng tối khi gặp phải các vấn đề và câu hỏi, và
+
+16
+00:00:55,760 --> 00:00:57,680
+bạn có thể tìm kiếm sự giúp đỡ trong cộng đồng này.
+
+17
+00:00:58,220 --> 00:01:00,870
+Nơi tốt nhất để tìm kiếm cộng đồng này là ở.
+
+18
+00:01:01,620 --> 00:01:02,190
+Liên hệ
+
+19
+00:01:02,220 --> 00:01:06,060
+Nếu bạn vẫn chưa biết đến trang web tuyệt vời này thì bây giờ là lúc thích hợp.
+
+20
+00:01:06,090 --> 00:01:12,300
+Đây là trang web Hỏi &amp; Đáp dành cho nhà phát triển lớn nhất cung cấp câu trả lời cho hầu hết mọi câu hỏi liên quan đến
+
+21
+00:01:12,300 --> 00:01:14,200
+phát triển trên mọi nền tảng.
+
+22
+00:01:14,220 --> 00:01:19,200
+Các nhà phát triển xuất sắc nhất đang giúp đỡ những người khác ở đây và bất kể vấn đề của bạn là gì, thì có lẽ đó là
+
+23
+00:01:19,200 --> 00:01:21,810
+đã được hỏi và trả lời ở đây.
+
+24
+00:01:22,140 --> 00:01:29,860
+Vì vậy, hãy vào Stack Overflow, nhấp vào thẻ ở thanh bên và xem công nghệ mà bạn quan tâm.
+
+25
+00:01:29,880 --> 00:01:32,760
+Bạn sẽ thấy một con số gần tên của nó.
+
+26
+00:01:32,910 --> 00:01:36,570
+Con số này biểu thị số lượng câu hỏi về công nghệ này.
+
+27
+00:01:36,600 --> 00:01:39,630
+Số lượng càng lớn, cộng đồng càng năng động.
+
+28
+00:01:40,200 --> 00:01:46,440
+Luôn là một ý tưởng hay khi nhấp vào tên thẻ và đi tới trang nền tảng.
+
+29
+00:01:46,470 --> 00:01:49,740
+Ở đó bạn có thể thấy thời điểm những câu hỏi cuối cùng được hỏi.
+
+30
+00:01:49,770 --> 00:01:53,970
+Điều này sẽ giúp bạn biết được cộng đồng này hoạt động tích cực như thế nào, chứ không chỉ là quy mô của cộng đồng.
+
+31
+00:01:54,000 --> 00:01:59,250
+Vì vậy, nếu bạn thấy câu hỏi cuối cùng được hỏi cách đây bốn ngày thì có vẻ như cộng đồng này không mấy tích cực.
+
+32
+00:01:59,520 --> 00:02:04,260
+Đây là một cách rất đơn giản và hiệu quả để tìm ra quy mô cộng đồng của công nghệ mà bạn đang tìm kiếm
+
+33
+00:02:04,260 --> 00:02:04,740
+Tại.
+
+34
+00:02:05,670 --> 00:02:09,690
+Thứ ba, sự nổi tiếng cũng có vẻ hơi hời hợt.
+
+35
+00:02:09,720 --> 00:02:12,150
+Yếu tố phổ biến khá quan trọng.
+
+36
+00:02:12,180 --> 00:02:17,370
+Các nền tảng không phổ biến thường sẽ tạo ra một cộng đồng nhỏ, từ đó dẫn đến việc thiếu sự hỗ trợ.
+
+37
+00:02:17,490 --> 00:02:22,350
+Cách tốt nhất để kiểm tra mức độ phổ biến của mọi thứ trên internet là sử dụng Google Trends.
+
+38
+00:02:22,500 --> 00:02:27,120
+Vì vậy, hãy vào Google Trends và nhập tên nền tảng mà bạn quan tâm.
+
+39
+00:02:27,150 --> 00:02:31,260
+Trong ví dụ này, chúng ta hãy xem Angular và nhấn Enter.
+
+40
+00:02:33,060 --> 00:02:36,150
+Tôi luôn muốn thiết lập tìm kiếm trong hai năm qua.
+
+41
+00:02:36,180 --> 00:02:39,480
+Một năm mặc định thường không đủ để đưa ra góc nhìn.
+
+42
+00:02:40,380 --> 00:02:45,750
+Ở đây chúng ta thấy rằng mức độ phổ biến của Angular khá ổn định, vì vậy không có sự giảm sút về mức độ phổ biến của nó,
+
+43
+00:02:45,750 --> 00:02:47,370
+nhưng cũng không tăng thêm.
+
+44
+00:02:47,460 --> 00:02:50,700
+Bây giờ chúng ta hãy thêm React, kẻ thù của nó vào biểu đồ.
+
+45
+00:02:51,180 --> 00:02:56,310
+Chúng ta thấy rằng React đang có xu hướng tăng và hiện đang ngang bằng với Angular.
+
+46
+00:02:56,520 --> 00:02:59,400
+Và bây giờ chúng ta hãy thêm jQuery.
+
+47
+00:02:59,520 --> 00:03:05,340
+Ở đây chúng ta thấy xu hướng ngược lại là mức độ phổ biến của jQuery đang giảm và điều đó chỉ ra rằng có lẽ nó
+
+48
+00:03:05,340 --> 00:03:09,090
+không phải là ý tưởng hay khi dựa giao diện người dùng web của bạn vào nó trong một ứng dụng hiện đại.
+
+49
+00:03:10,380 --> 00:03:15,240
+Vì vậy, đây là ba yếu tố cần phải lưu ý khi lựa chọn công nghệ.
+
+50
+00:03:15,270 --> 00:03:20,100
+Có nhiều yếu tố liên quan đến nhóm phát triển và tổ chức và chúng tôi sẽ thảo luận về chúng
+
+51
+00:03:20,100 --> 00:03:20,550
+sau đó.
+
+52
+00:03:20,550 --> 00:03:24,090
+Nhưng đây là những yếu tố phản ánh tác động và tiềm năng của nền tảng.
+
+53
+00:03:24,330 --> 00:03:28,500
+Và bây giờ chúng ta hãy tiếp tục thảo luận về công nghệ dịch vụ và nền tảng.
+
