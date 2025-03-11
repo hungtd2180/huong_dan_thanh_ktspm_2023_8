@@ -1,0 +1,50 @@
+00:00:00,200 --> 00:00:01,790
+This is what you were waiting for.
+Đây chính là điều bạn đang chờ đợi.
+
+
+00:00:01,819 --> 00:00:05,060
+This is a culmination of all the efforts you've put into the system.
+Đây là đỉnh cao của mọi nỗ lực bạn đã bỏ ra cho hệ thống.
+
+
+00:00:05,060 --> 00:00:07,220
+And this is your greatest creation.
+Và đây là sáng tạo tuyệt vời nhất của bạn.
+
+
+00:00:07,520 --> 00:00:12,350
+The architecture document describes the whole process you have been through and gives the developers
+Tài liệu kiến trúc mô tả toàn bộ quá trình bạn đã trải qua và cung cấp cho các nhà phát triển
+
+
+00:00:12,350 --> 00:00:15,740
+and management a full picture of the system that is going to be built.
+và quản lý một bức tranh toàn cảnh về hệ thống sẽ được xây dựng.
+
+
+00:00:16,100 --> 00:00:21,350
+A good architecture document is relevant for all the levels in the organization the CEO, the CIO,
+Một tài liệu kiến trúc tốt có liên quan đến tất cả các cấp trong tổ chức, CEO, CIO,
+
+
+00:00:21,380 --> 00:00:23,930
+the project manager, and of course, the developers.
+người quản lý dự án và tất nhiên là các nhà phát triển.
+
+
+00:00:23,960 --> 00:00:26,300
+They will all find great value in it.
+Tất cả họ đều thấy nó có giá trị lớn.
+
+
+00:00:26,480 --> 00:00:31,520
+We will talk a lot about the structure and the content of the document in the relevant section and explain
+Chúng tôi sẽ nói nhiều về cấu trúc và nội dung của tài liệu trong phần có liên quan và giải thích
+
+
+00:00:31,520 --> 00:00:33,290
+how to maximize its value.
+làm thế nào để tối đa hóa giá trị của nó.
+
+

@@ -1,0 +1,390 @@
+00:00:01,380 --> 00:00:05,070
+The name factory might sound familiar, and it really is.
+Cái tên nhà máy có thể nghe quen thuộc, và thực sự là như vậy.
+
+
+00:00:05,100 --> 00:00:10,520
+We already discussed factory methods in this course in previous lectures, mainly around layers.
+Chúng tôi đã thảo luận về các phương pháp nhà máy trong khóa học này trong các bài giảng trước, chủ yếu xoay quanh các lớp.
+
+
+00:00:10,530 --> 00:00:15,630
+But now let's do a real deep dive into the factory pattern and provide the full motivation and explanation
+Nhưng bây giờ chúng ta hãy đi sâu vào mô hình nhà máy và cung cấp đầy đủ động lực và giải thích
+
+
+00:00:15,630 --> 00:00:16,290
+for it.
+cho nó.
+
+
+00:00:16,440 --> 00:00:18,780
+So what is a factory pattern?
+Vậy mô hình nhà máy là gì?
+
+
+00:00:18,810 --> 00:00:25,230
+Simply put, the factory pattern is a pattern that allows creating objects without specifying the exact
+Nói một cách đơn giản, mẫu nhà máy là một mẫu cho phép tạo các đối tượng mà không cần chỉ định chính xác
+
+
+00:00:25,230 --> 00:00:26,640
+class of the object.
+lớp của đối tượng.
+
+
+00:00:26,760 --> 00:00:29,550
+Now, why would we want to do that?
+Bây giờ, tại sao chúng ta lại muốn làm điều đó?
+
+
+00:00:29,940 --> 00:00:35,880
+As we already discussed, specifying the class in the creating code will create a strong coupling and
+Như chúng ta đã thảo luận, việc chỉ định lớp trong mã tạo sẽ tạo ra sự kết hợp chặt chẽ và
+
+
+00:00:35,880 --> 00:00:37,590
+will tie the code to the class.
+sẽ liên kết mã với lớp.
+
+
+00:00:37,680 --> 00:00:43,170
+If later, we will need to use another class for implementing the same logic, we will have to modify
+Nếu sau này chúng ta cần sử dụng một lớp khác để triển khai cùng một logic, chúng ta sẽ phải sửa đổi
+
+
+00:00:43,170 --> 00:00:47,610
+all the code that creates the class which can be scattered all across the application.
+tất cả mã tạo ra lớp có thể được phân tán khắp ứng dụng.
+
+
+00:00:47,610 --> 00:00:51,990
+So the factory pattern allows us to avoid such strong coupling.
+Vì vậy, mô hình nhà máy cho phép chúng ta tránh được sự kết hợp chặt chẽ như vậy.
+
+
+00:00:52,020 --> 00:00:53,550
+How is it implemented?
+Nó được thực hiện như thế nào?
+
+
+00:00:53,610 --> 00:00:55,740
+Well, let's look at an example.
+Vâng, chúng ta hãy xem một ví dụ.
+
+
+00:00:55,770 --> 00:01:01,180
+Say we have an application that needs to know the weather forecast in various cities around the world.
+Giả sử chúng ta có một ứng dụng cần biết dự báo thời tiết ở nhiều thành phố khác nhau trên thế giới.
+
+
+00:01:01,210 --> 00:01:06,700
+Now, there are multiple providers of weather forecasts and the developers decided to go with a provider
+Hiện nay, có nhiều nhà cung cấp dự báo thời tiết và các nhà phát triển đã quyết định chọn một nhà cung cấp
+
+
+00:01:06,700 --> 00:01:07,990
+name, hot or not.
+tên, nóng hay không.
+
+
+00:01:08,020 --> 00:01:16,120
+Whether they created a class called Hon or hon weather with a method named get weather that accepts
+Cho dù họ tạo ra một lớp có tên là Hon hay hon weather với một phương thức có tên là get weather chấp nhận
+
+
+00:01:16,120 --> 00:01:17,680
+the city name and the date.
+tên thành phố và ngày tháng.
+
+
+00:01:17,710 --> 00:01:23,290
+The get weather method returns a number which represents the temperature in the given city on the given
+Phương pháp lấy thời tiết trả về một số biểu thị nhiệt độ ở thành phố đã cho vào ngày 22 đã cho
+
+
+00:01:23,290 --> 00:01:23,860
+date.
+ngày.
+
+
+00:01:24,010 --> 00:01:26,500
+Here is an example of a code using this class.
+Đây là một ví dụ về mã sử dụng lớp này.
+
+
+00:01:26,530 --> 00:01:30,190
+This is a straightforward implementation and it looks quite innocent.
+Đây là một cách thực hiện đơn giản và có vẻ khá vô hại.
+
+
+00:01:30,520 --> 00:01:36,460
+Six months after the site went on production, the hugely successful hot or not weather went out of
+Sáu tháng sau khi trang web đi vào hoạt động, chương trình Hot or not weather cực kỳ thành công đã kết thúc ở
+
+
+00:01:36,460 --> 00:01:39,750
+business and the developers had to find a replacement.
+doanh nghiệp và các nhà phát triển phải tìm người thay thế.
+
+
+00:01:39,760 --> 00:01:43,780
+After a hurried search, they found one named either neither weather.
+Sau một cuộc tìm kiếm vội vã, họ tìm thấy một cái tên không phải là weather.
+
+
+00:01:43,810 --> 00:01:50,470
+They created another class named N weather with the same method signature get weather that accepts the
+Họ đã tạo ra một lớp khác có tên là N weather với cùng phương thức chữ ký get weather chấp nhận
+
+
+00:01:50,470 --> 00:01:55,120
+same arguments city and date and returned the same value the temperature.
+cùng một đối số thành phố và ngày tháng và trả về cùng một giá trị nhiệt độ.
+
+
+00:01:55,390 --> 00:01:56,440
+Now what?
+Bây giờ thì sao?
+
+
+00:01:56,680 --> 00:02:03,160
+Now since the previous class on weather was directly created by the code using the new keyword, the
+Bây giờ vì lớp trước về thời tiết được tạo trực tiếp bằng mã sử dụng từ khóa mới, nên
+
+
+00:02:03,160 --> 00:02:09,759
+team has to find all the places this class is used and change the code to create an instance of the
+nhóm phải tìm tất cả các nơi lớp này được sử dụng và thay đổi mã để tạo ra một phiên bản của
+
+
+00:02:10,030 --> 00:02:12,400
+weather class instead of the hon.
+lớp thời tiết thay vì lớp hon.
+
+
+00:02:12,400 --> 00:02:13,570
+Weather Class.
+Lớp thời tiết.
+
+
+00:02:13,600 --> 00:02:16,940
+This is a tedious, boring and error prone job.
+Đây là một công việc tẻ nhạt, nhàm chán và dễ mắc lỗi.
+
+
+00:02:16,960 --> 00:02:20,230
+What the team found out is that new is glue.
+Điều mà nhóm nghiên cứu phát hiện ra là keo mới.
+
+
+00:02:20,260 --> 00:02:26,440
+This is a common thing among developers and architects, and it shows that whenever we use the new keyword,
+Đây là một điều phổ biến giữa các nhà phát triển và kiến trúc sư, và nó cho thấy rằng bất cứ khi nào chúng ta sử dụng từ khóa mới,
+
+
+00:02:26,440 --> 00:02:28,900
+we glue the code and the class together.
+chúng tôi gắn mã và lớp lại với nhau.
+
+
+00:02:28,930 --> 00:02:31,920
+The factory pattern proposes a solution for this.
+Mô hình nhà máy đề xuất một giải pháp cho vấn đề này.
+
+
+00:02:31,930 --> 00:02:33,460
+Using the factory pattern.
+Sử dụng mẫu nhà máy.
+
+
+00:02:33,460 --> 00:02:37,510
+We would do this create an interface named weather provider.
+Chúng tôi sẽ thực hiện việc này bằng cách tạo một giao diện có tên là nhà cung cấp thời tiết.
+
+
+00:02:37,540 --> 00:02:43,360
+This interface has a single method named, you guessed it get weather accepting the city name and date
+Giao diện này có một phương thức duy nhất được đặt tên, bạn đoán xem nó có nhận được thời tiết chấp nhận tên thành phố và ngày
+
+
+00:02:43,360 --> 00:02:51,370
+and returning the temperature to make the weather and n weather class implements this interface.
+và trả về nhiệt độ để tạo ra lớp thời tiết và n triển khai giao diện này.
+
+
+00:02:51,850 --> 00:02:53,650
+Create a factory method.
+Tạo một phương thức nhà máy.
+
+
+00:02:53,650 --> 00:02:59,110
+Let's call this method get weather provider and it will return an implementation of the weather provider
+Hãy gọi phương thức này là get weather provider và nó sẽ trả về một triển khai của weather provider
+
+
+00:02:59,110 --> 00:02:59,890
+interface.
+giao diện.
+
+
+00:02:59,920 --> 00:03:03,460
+This method will simply return an instance of the weather.
+Phương pháp này chỉ đơn giản trả về một trường hợp thời tiết.
+
+
+00:03:03,490 --> 00:03:08,260
+That's all a one liner, but this one line changes everything.
+Tất cả chỉ là một câu nói, nhưng câu nói này đã thay đổi mọi thứ.
+
+
+00:03:08,950 --> 00:03:15,160
+From now on when the code needed to access weather information instead of calling directly to weather
+Từ bây giờ khi mã cần truy cập thông tin thời tiết thay vì gọi trực tiếp đến weather
+
+
+00:03:15,160 --> 00:03:18,790
+it will cause a factory method, gets the instance and act on it.
+nó sẽ tạo ra một phương thức nhà máy, lấy trường hợp và hành động trên đó.
+
+
+00:03:18,820 --> 00:03:25,420
+The code will have no idea what is a concrete class it's using, and that makes the change a very easy
+Mã sẽ không biết lớp cụ thể nào đang được sử dụng và điều đó làm cho việc thay đổi trở nên rất dễ dàng
+
+
+00:03:25,420 --> 00:03:30,050
+experience when the developers will need to switch from weather to weather.
+trải nghiệm khi các nhà phát triển cần phải chuyển đổi từ thời tiết này sang thời tiết khác.
+
+
+00:03:30,070 --> 00:03:34,280
+All they need to do is to modify the code in the factory method.
+Tất cả những gì họ cần làm là sửa đổi mã trong phương thức nhà máy.
+
+
+00:03:34,300 --> 00:03:35,290
+That's it.
+Vậy là xong.
+
+
+00:03:35,410 --> 00:03:36,850
+See how easy it is?
+Bạn thấy nó dễ thế nào không?
+
+
+00:03:37,030 --> 00:03:41,890
+Using the factory method will definitely make your code easier to maintain, which is one of the major
+Sử dụng phương pháp nhà máy chắc chắn sẽ giúp mã của bạn dễ bảo trì hơn, đây là một trong
+
+
+00:03:41,890 --> 00:03:43,180
+goals of the architect.
+mục tiêu của kiến trúc sư.
+
+
+00:03:43,390 --> 00:03:47,390
+Now there are some more complicated types of factory methods.
+Hiện nay có một số loại phương pháp nhà máy phức tạp hơn.
+
+
+00:03:47,410 --> 00:03:52,960
+For example, let's say we have two weather providers, one for Asia and one for Europe.
+Ví dụ, giả sử chúng ta có hai nhà cung cấp thời tiết, một cho Châu Á và một cho Châu Âu.
+
+
+00:03:52,990 --> 00:03:56,860
+We need the code to be indifferent to the location we want the weather forecast for.
+Chúng ta cần mã không phụ thuộc vào vị trí chúng ta muốn dự báo thời tiết.
+
+
+00:03:56,860 --> 00:04:02,460
+And so we use the factory method as a place to make a decision about which instance to return.
+Và vì vậy chúng ta sử dụng phương thức nhà máy như một nơi để đưa ra quyết định về trường hợp nào sẽ trả về.
+
+
+00:04:02,470 --> 00:04:09,040
+For example, our weather classes are called, surprisingly enough, Europe Weather and Asia Weather,
+Ví dụ, các lớp thời tiết của chúng tôi được gọi, thật đáng ngạc nhiên, là Thời tiết Châu Âu và Thời tiết Châu Á,
+
+
+00:04:09,040 --> 00:04:11,970
+and they both implement the weather provider interface.
+và cả hai đều triển khai giao diện nhà cung cấp thời tiết.
+
+
+00:04:11,980 --> 00:04:14,350
+Our factory will now look like this.
+Nhà máy của chúng tôi bây giờ sẽ trông như thế này.
+
+
+00:04:14,980 --> 00:04:19,930
+As you can see, the factory method accepts the continent name of the required weather forecast and
+Như bạn có thể thấy, phương pháp nhà máy chấp nhận tên lục địa của dự báo thời tiết cần thiết và
+
+
+00:04:19,930 --> 00:04:22,360
+returns a different instance based on it.
+trả về một trường hợp khác dựa trên nó.
+
+
+00:04:22,390 --> 00:04:27,400
+This is a quite common pattern in factories and there are a lot of examples of factories making a decision
+Đây là một mô hình khá phổ biến trong các nhà máy và có rất nhiều ví dụ về các nhà máy đưa ra quyết định
+
+
+00:04:27,400 --> 00:04:29,830
+on a specific instance to be returned.
+trên một trường hợp cụ thể được trả về.
+
+
+00:04:29,860 --> 00:04:35,500
+Another common pattern is to use an external configuration file for deciding which instance to return.
+Một mô hình phổ biến khác là sử dụng tệp cấu hình bên ngoài để quyết định phiên bản nào sẽ trả về.
+
+
+00:04:36,250 --> 00:04:37,960
+So that is a factory pattern.
+Vậy đó là một mô hình nhà máy.
+
+
+00:04:37,960 --> 00:04:42,170
+And as you probably already understood, it is hugely popular and rightly so.
+Và như bạn có thể đã hiểu, nó rất phổ biến và đúng như vậy.
+
+
+00:04:42,190 --> 00:04:47,800
+It will make your life much easier and the code will be more readable, flexible and easy to maintain.
+Nó sẽ làm cho cuộc sống của bạn dễ dàng hơn nhiều và mã sẽ dễ đọc hơn, linh hoạt hơn và dễ bảo trì hơn.
+
+
+00:04:47,830 --> 00:04:53,350
+In addition, the factory pattern is often a base for other patterns, as we will see in the repository
+Ngoài ra, mẫu nhà máy thường là cơ sở cho các mẫu khác, như chúng ta sẽ thấy trong kho lưu trữ
+
+
+00:04:53,350 --> 00:04:53,990
+pattern.
+mẫu.
+
+
+00:04:54,010 --> 00:04:56,050
+So the bottom line is simple.
+Vì vậy, kết quả cuối cùng rất đơn giản.
+
+
+00:04:56,080 --> 00:04:58,690
+Always strive to use the factory pattern.
+Luôn cố gắng sử dụng mẫu nhà máy.
+
+
+00:04:58,690 --> 00:05:00,970
+Remember new is glue.
+Hãy nhớ rằng cái mới là keo dán.
+
+
+00:05:01,000 --> 00:05:03,610
+Avoid strong coupling with the factory pattern.
+Tránh kết hợp chặt chẽ với mô hình nhà máy.
+
+

@@ -1,0 +1,50 @@
+00:00:00,140 --> 00:00:05,400
+In this section, we discussed the highlights, the family of quality attributes of a system.
+Trong phần này, chúng tôi thảo luận về những điểm nổi bật, nhóm các thuộc tính chất lượng của một hệ thống.
+
+
+00:00:05,450 --> 00:00:10,580
+We talked about the relationships between between non-functional requirements and these quality attributes
+Chúng tôi đã nói về mối quan hệ giữa các yêu cầu phi chức năng và các thuộc tính chất lượng này
+
+
+00:00:10,580 --> 00:00:16,160
+and explained that the quality attributes represent technical capabilities that stem from the non-functional
+và giải thích rằng các thuộc tính chất lượng đại diện cho các khả năng kỹ thuật bắt nguồn từ 4 không chức năng
+
+
+00:00:16,160 --> 00:00:17,000
+requirements.
+yêu cầu.
+
+
+00:00:17,330 --> 00:00:26,210
+We described five common qualities scalability, manageability, modularity, extensibility and testability.
+Chúng tôi đã mô tả năm phẩm chất chung là khả năng mở rộng, khả năng quản lý, khả năng mô-đun, khả năng mở rộng và khả năng kiểm tra.
+
+
+00:00:26,300 --> 00:00:31,790
+I strongly recommend that each system you design will implement these ilities even if you are not sure
+Tôi thực sự khuyên rằng mỗi hệ thống bạn thiết kế sẽ triển khai những khả năng này ngay cả khi bạn không chắc chắn
+
+
+00:00:31,820 --> 00:00:36,500
+they are actually required in the system, they will probably be later in its lifespan.
+chúng thực sự cần thiết trong hệ thống, có thể sẽ cần thiết sau này trong vòng đời của hệ thống.
+
+
+00:00:36,530 --> 00:00:40,990
+I also recommend to take a look at the full list of the ilities in the Wikipedia page.
+Tôi cũng khuyên bạn nên xem danh sách đầy đủ các khả năng trong trang Wikipedia.
+
+
+00:00:41,000 --> 00:00:46,280
+Some of them are really relevant for a very specific kind of systems, but others might come in handy
+Một số trong số chúng thực sự có liên quan đến một loại hệ thống rất cụ thể, nhưng một số khác có thể hữu ích
+
+
+00:00:46,310 --> 00:00:47,750
+for your system as well.
+cho hệ thống của bạn nữa.
+
+

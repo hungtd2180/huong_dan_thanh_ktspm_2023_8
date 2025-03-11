@@ -1,0 +1,535 @@
+00:00:00,230 --> 00:00:04,100
+The next task after mapping the requirements is mapping the components.
+Nhiệm vụ tiếp theo sau khi lập bản đồ các yêu cầu là lập bản đồ các thành phần.
+
+
+00:00:04,130 --> 00:00:09,740
+In this task, we decide what are the components that take part in our application while remembering
+Trong nhiệm vụ này, chúng ta quyết định những thành phần nào tham gia vào ứng dụng của chúng ta trong khi ghi nhớ
+
+
+00:00:09,740 --> 00:00:15,080
+that a component is an autonomous piece of code that runs in its own process and has its own compute
+rằng một thành phần là một đoạn mã độc lập chạy trong tiến trình riêng của nó và có khả năng tính toán riêng của nó
+
+
+00:00:15,080 --> 00:00:15,920
+resources.
+tài nguyên.
+
+
+00:00:16,070 --> 00:00:20,300
+The best way to define the components is to look back at the functional requirements.
+Cách tốt nhất để xác định các thành phần là xem xét lại các yêu cầu chức năng.
+
+
+00:00:20,480 --> 00:00:22,970
+We see there are three main requirements.
+Chúng ta thấy có ba yêu cầu chính.
+
+
+00:00:23,000 --> 00:00:29,480
+One receive status updates from Iot devices to store these updates for future use.
+Người ta nhận được các cập nhật trạng thái từ các thiết bị IoT để lưu trữ các cập nhật này để sử dụng trong tương lai.
+
+
+00:00:29,480 --> 00:00:30,530
+And three.
+Và ba.
+
+
+00:00:30,560 --> 00:00:35,420
+Allow end users to query the updates and present them with the relevant information.
+Cho phép người dùng cuối truy vấn các bản cập nhật và cung cấp cho họ thông tin có liên quan.
+
+
+00:00:35,780 --> 00:00:39,230
+And also, let's remind ourselves the expected load.
+Và chúng ta cũng hãy nhắc nhở bản thân về khối lượng công việc dự kiến.
+
+
+00:00:39,230 --> 00:00:43,820
+We are talking here about 500 concurrent messages and 40 concurrent users.
+Chúng ta đang nói về 500 tin nhắn đồng thời và 40 người dùng đồng thời.
+
+
+00:00:43,940 --> 00:00:46,720
+Now, there is an important distinction here.
+Bây giờ, có một sự phân biệt quan trọng ở đây.
+
+
+00:00:46,730 --> 00:00:52,760
+We are looking at two completely different tasks, receiving messages and responding to client requests.
+Chúng ta đang xem xét hai nhiệm vụ hoàn toàn khác nhau, tiếp nhận tin nhắn và trả lời yêu cầu của khách hàng.
+
+
+00:00:52,790 --> 00:00:58,700
+These two tasks perform separate actions, have different non-functional requirements and work against
+Hai nhiệm vụ này thực hiện các hành động riêng biệt, có các yêu cầu phi chức năng khác nhau và hoạt động chống lại
+
+
+00:00:58,700 --> 00:01:00,150
+separate entities.
+các thực thể riêng biệt.
+
+
+00:01:00,240 --> 00:01:06,210
+Because of this, the natural choice here is to separate these two tasks to two separate components
+Bởi vì điều này, sự lựa chọn tự nhiên ở đây là tách hai nhiệm vụ này thành hai thành phần riêng biệt
+
+
+00:01:06,210 --> 00:01:13,230
+one that is responsible for receiving the messages, let's call it receiver and one that waits for user
+một bên chịu trách nhiệm tiếp nhận các tin nhắn, chúng ta hãy gọi là bên nhận và một bên chờ người dùng
+
+
+00:01:13,230 --> 00:01:17,710
+requests which will be called info provider or simply info.
+yêu cầu sẽ được gọi là nhà cung cấp thông tin hoặc đơn giản là thông tin.
+
+
+00:01:17,730 --> 00:01:20,430
+Since info provider is a little bit too long.
+Vì nhà cung cấp thông tin hơi dài một chút.
+
+
+00:01:20,970 --> 00:01:23,520
+So two components it is.
+Vậy thì nó có hai thành phần.
+
+
+00:01:23,700 --> 00:01:25,440
+But wait, that's not all.
+Nhưng khoan đã, đó chưa phải là tất cả.
+
+
+00:01:25,650 --> 00:01:28,890
+There is a very important aspect that is hiding here.
+Có một khía cạnh rất quan trọng đang ẩn giấu ở đây.
+
+
+00:01:28,920 --> 00:01:31,920
+We know the receiver is going to work under a heavy load.
+Chúng tôi biết máy thu sẽ hoạt động dưới tải trọng lớn.
+
+
+00:01:31,920 --> 00:01:33,940
+500 concurrent requests.
+500 yêu cầu đồng thời.
+
+
+00:01:33,960 --> 00:01:39,570
+That means that one of the important aspects of the receiver is that it needs to release the message
+Điều đó có nghĩa là một trong những khía cạnh quan trọng của người nhận là nó cần phải phát hành thông điệp
+
+
+00:01:39,570 --> 00:01:45,690
+update request as fast as possible because for every millisecond it works on a specific message, there
+yêu cầu cập nhật nhanh nhất có thể vì cứ mỗi mili giây nó hoạt động trên một thông báo cụ thể, có
+
+
+00:01:45,690 --> 00:01:51,360
+are more messages waiting to be processed and we don't want to reach a thread starvation situation,
+có nhiều tin nhắn đang chờ được xử lý và chúng tôi không muốn rơi vào tình trạng thiếu luồng,
+
+
+00:01:51,360 --> 00:01:56,790
+meaning the service will not have enough resources to handle the waiting requests and it will start
+nghĩa là dịch vụ sẽ không có đủ tài nguyên để xử lý các yêu cầu đang chờ và nó sẽ bắt đầu
+
+
+00:01:56,790 --> 00:01:58,020
+throwing exceptions.
+ném ngoại lệ.
+
+
+00:01:58,650 --> 00:02:01,550
+So we need to answer request as fast as possible.
+Vì vậy chúng tôi cần trả lời yêu cầu nhanh nhất có thể.
+
+
+00:02:01,560 --> 00:02:06,150
+But that begs a question what should be done with the request once it received?
+Nhưng điều đó đặt ra câu hỏi là nên làm gì với yêu cầu sau khi nhận được?
+
+
+00:02:06,180 --> 00:02:08,320
+There are basically two options here.
+Về cơ bản có hai lựa chọn ở đây.
+
+
+00:02:08,340 --> 00:02:12,570
+First, simply insert the request to a data store as is.
+Đầu tiên, chỉ cần chèn yêu cầu vào kho dữ liệu theo nguyên trạng.
+
+
+00:02:12,870 --> 00:02:18,180
+No processing or validation is needed or the messages have the same format and we all live happily ever
+Không cần xử lý hay xác thực hoặc các tin nhắn có cùng định dạng và chúng ta đều sống hạnh phúc mãi mãi
+
+
+00:02:18,180 --> 00:02:18,780
+after.
+sau.
+
+
+00:02:18,810 --> 00:02:21,270
+This, as you can guess, is quite rare.
+Điều này, như bạn có thể đoán, là khá hiếm.
+
+
+00:02:21,600 --> 00:02:27,690
+The second option Every message needs to be validated and processed and just then can be stored for
+Tùy chọn thứ hai Mỗi tin nhắn cần được xác thực và xử lý và sau đó có thể được lưu trữ trong
+
+
+00:02:27,690 --> 00:02:28,560
+later use.
+sử dụng sau này.
+
+
+00:02:28,710 --> 00:02:33,890
+Now this choice is dictated by the way the Iot devices send their messages.
+Bây giờ sự lựa chọn này được quyết định bởi cách các thiết bị IoT gửi tin nhắn của chúng.
+
+
+00:02:33,900 --> 00:02:39,390
+We will need to go to the client and ask her what is the exact format of the messages and what processing
+Chúng tôi sẽ cần đến gặp khách hàng và hỏi cô ấy định dạng chính xác của các tin nhắn là gì và quá trình xử lý
+
+
+00:02:39,390 --> 00:02:40,540
+is required on them.
+là bắt buộc đối với họ.
+
+
+00:02:40,560 --> 00:02:42,300
+So let's go ask her.
+Vậy chúng ta hãy đi hỏi cô ấy.
+
+
+00:02:42,450 --> 00:02:45,510
+Two days later, she comes back with the following answer.
+Hai ngày sau, cô ấy quay lại với câu trả lời sau.
+
+
+00:02:45,750 --> 00:02:48,230
+There are four types of Iot devices.
+Có bốn loại thiết bị IoT.
+
+
+00:02:48,240 --> 00:02:50,830
+Each one of them has its own message format.
+Mỗi cái đều có định dạng tin nhắn riêng.
+
+
+00:02:50,850 --> 00:02:56,700
+Three of them use Json format and one which is an old one uses a fixed format string.
+Ba trong số chúng sử dụng định dạng Json và một định dạng cũ sử dụng chuỗi định dạng cố định.
+
+
+00:02:56,730 --> 00:03:02,820
+In addition, most of the messages must be validated because the devices software must might be buggy
+Ngoài ra, hầu hết các tin nhắn phải được xác thực vì phần mềm thiết bị có thể bị lỗi
+
+
+00:03:02,820 --> 00:03:04,860
+and we cannot trust it blindly.
+và chúng ta không thể tin tưởng nó một cách mù quáng.
+
+
+00:03:06,330 --> 00:03:07,800
+That's going to be fun.
+Sẽ rất vui đây.
+
+
+00:03:08,100 --> 00:03:11,770
+So we now know the receiver has the following tasks.
+Vì vậy, bây giờ chúng ta biết người nhận có các nhiệm vụ sau.
+
+
+00:03:11,790 --> 00:03:16,850
+One receives a message obviously to validate the message.
+Người ta nhận được một thông điệp rõ ràng là để xác thực thông điệp đó.
+
+
+00:03:16,860 --> 00:03:24,000
+Three pass the message and convert it to a unified format and four save it to the data store.
+Ba người truyền tin nhắn và chuyển đổi nó thành một định dạng thống nhất và bốn người lưu nó vào kho dữ liệu.
+
+
+00:03:24,360 --> 00:03:26,740
+Let's talk a little on the third task.
+Chúng ta hãy nói một chút về nhiệm vụ thứ ba.
+
+
+00:03:26,760 --> 00:03:34,020
+This task is super important as it makes our data independent of its source, meaning when we will query
+Nhiệm vụ này cực kỳ quan trọng vì nó làm cho dữ liệu của chúng ta độc lập với nguồn của nó, nghĩa là khi chúng ta truy vấn
+
+
+00:03:34,020 --> 00:03:39,900
+the data, it will always look the same and be of the same format regardless of its source, no matter
+dữ liệu, nó sẽ luôn trông giống nhau và có cùng định dạng bất kể nguồn của nó, bất kể
+
+
+00:03:39,900 --> 00:03:42,570
+from which device the status update was received.
+từ thiết bị nào cập nhật trạng thái đã được nhận.
+
+
+00:03:42,600 --> 00:03:48,090
+The data is fully accessible to the client and there is no need to format it while querying.
+Dữ liệu có thể được truy cập hoàn toàn bởi máy khách và không cần phải định dạng dữ liệu trong khi truy vấn.
+
+
+00:03:49,020 --> 00:03:54,360
+This concept is extremely important in systems that receive data from different sources, each with
+Khái niệm này cực kỳ quan trọng trong các hệ thống nhận dữ liệu từ nhiều nguồn khác nhau, mỗi nguồn có
+
+
+00:03:54,360 --> 00:03:55,210
+its own format.
+định dạng riêng của nó.
+
+
+00:03:55,230 --> 00:04:02,040
+The data must be stored in a unified format regardless of its origin, to allow fast and efficient query.
+Dữ liệu phải được lưu trữ theo định dạng thống nhất bất kể nguồn gốc của nó, để cho phép truy vấn nhanh chóng và hiệu quả.
+
+
+00:04:02,340 --> 00:04:04,650
+Okay, so back to the components.
+Được rồi, quay lại với các thành phần.
+
+
+00:04:04,680 --> 00:04:07,860
+We should perform these tasks to decide on this.
+Chúng ta nên thực hiện những nhiệm vụ này để quyết định điều này.
+
+
+00:04:07,890 --> 00:04:13,620
+We have to remember that the receiver must release the request as fast as possible so we wouldn't want
+Chúng ta phải nhớ rằng người nhận phải giải phóng yêu cầu càng nhanh càng tốt vì vậy chúng ta không muốn
+
+
+00:04:13,620 --> 00:04:15,050
+it to perform additional tasks.
+nó để thực hiện các nhiệm vụ bổ sung.
+
+
+00:04:15,060 --> 00:04:19,820
+We want it to get the message, save it for later use and end the request.
+Chúng tôi muốn nó nhận được tin nhắn, lưu lại để sử dụng sau và kết thúc yêu cầu.
+
+
+00:04:19,829 --> 00:04:24,960
+So the receiver is going to be responsible for receiving the message and that's all we are going to
+Vì vậy, người nhận sẽ chịu trách nhiệm tiếp nhận tin nhắn và đó là tất cả những gì chúng ta sẽ làm
+
+
+00:04:24,960 --> 00:04:25,290
+handle.
+xử lý.
+
+
+00:04:25,290 --> 00:04:26,490
+The other tasks.
+Các nhiệm vụ khác.
+
+
+00:04:26,520 --> 00:04:29,310
+Well, obviously not the info service.
+Vâng, rõ ràng không phải là dịch vụ thông tin.
+
+
+00:04:29,340 --> 00:04:32,220
+It has nothing to do with handling incoming messages.
+Nó không liên quan gì đến việc xử lý tin nhắn đến.
+
+
+00:04:32,220 --> 00:04:34,770
+It handles only users requests.
+Nó chỉ xử lý các yêu cầu của người dùng.
+
+
+00:04:34,860 --> 00:04:38,280
+So it looks like we are looking here at additional components.
+Vì vậy, có vẻ như chúng ta đang xem xét các thành phần bổ sung ở đây.
+
+
+00:04:38,640 --> 00:04:43,230
+Okay, so we have a new component that will handle the validation.
+Được rồi, vì vậy chúng ta có một thành phần mới sẽ xử lý việc xác thực.
+
+
+00:04:43,350 --> 00:04:49,140
+Do we want another one to handle the parsing or will we give this responsibility to the same component?
+Chúng ta có muốn một thành phần khác xử lý việc phân tích cú pháp hay chúng ta sẽ giao trách nhiệm này cho cùng một thành phần?
+
+
+00:04:49,350 --> 00:04:53,600
+Well, that's a good question and actually there is no definite answer to it.
+Vâng, đó là một câu hỏi hay và thực sự không có câu trả lời chắc chắn nào cho nó.
+
+
+00:04:53,610 --> 00:04:58,620
+Some will say that a component must be responsible for one and only one task.
+Một số người sẽ nói rằng một thành phần phải chịu trách nhiệm cho một và chỉ một nhiệm vụ.
+
+
+00:04:58,620 --> 00:04:59,700
+And therefore.
+Và do đó.
+
+
+00:04:59,860 --> 00:05:03,010
+This should be separate component for validation and processing.
+Đây phải là thành phần riêng biệt để xác thực và xử lý.
+
+
+00:05:03,160 --> 00:05:09,100
+Others will say that since validation is quite a small task and it's not an atomic one, there is no
+Những người khác sẽ nói rằng vì xác thực là một nhiệm vụ khá nhỏ và không phải là nhiệm vụ nguyên tử nên không có
+
+
+00:05:09,100 --> 00:05:10,120
+value for validation.
+giá trị để xác thực.
+
+
+00:05:10,120 --> 00:05:11,320
+If there is no parsing.
+Nếu không có sự phân tích cú pháp.
+
+
+00:05:11,350 --> 00:05:14,470
+Then they can both be performed by the same component.
+Sau đó cả hai đều có thể được thực hiện bởi cùng một thành phần.
+
+
+00:05:14,620 --> 00:05:18,130
+In this case, I think the latter approach is the right one.
+Trong trường hợp này, tôi nghĩ cách tiếp cận sau là đúng.
+
+
+00:05:18,160 --> 00:05:23,590
+Validation and parsing always go hand in hand and from a higher point of view they are part of the same
+Xác thực và phân tích cú pháp luôn song hành với nhau và theo quan điểm cao hơn, chúng là một phần của cùng một
+
+
+00:05:23,590 --> 00:05:24,160
+service.
+dịch vụ.
+
+
+00:05:24,190 --> 00:05:29,950
+In addition, any additional component is another process we need to maintain and there is no justification
+Ngoài ra, bất kỳ thành phần bổ sung nào cũng là một quy trình khác mà chúng ta cần duy trì và không có lý do chính đáng nào
+
+
+00:05:29,950 --> 00:05:32,380
+for this in this specific scenario.
+cho điều này trong kịch bản cụ thể này.
+
+
+00:05:32,410 --> 00:05:39,190
+So to summarize, we have three components receiver that receives the message handler that validates
+Tóm lại, chúng ta có ba thành phần máy thu nhận trình xử lý tin nhắn xác thực
+
+
+00:05:39,190 --> 00:05:45,820
+and processes it and then stores it for later use and info that allows users to query the data.
+và xử lý nó rồi lưu trữ để sử dụng sau này và thông tin cho phép người dùng truy vấn dữ liệu.
+
+
+00:05:45,970 --> 00:05:47,920
+But wait, that's not all.
+Nhưng khoan đã, đó chưa phải là tất cả.
+
+
+00:05:48,100 --> 00:05:52,870
+Remember when we talked about logging and monitoring that it's always a good idea to have a central
+Hãy nhớ khi chúng ta nói về việc ghi nhật ký và giám sát, việc có một trung tâm 92 luôn là một ý tưởng hay
+
+
+00:05:52,870 --> 00:05:53,860
+logging service.
+dịch vụ ghi nhật ký.
+
+
+00:05:53,860 --> 00:05:55,150
+So let's add one.
+Vậy chúng ta hãy thêm một.
+
+
+00:05:56,270 --> 00:06:01,970
+This service is where all the logs are sent to, and it enables us to have a complete view of the applications
+Dịch vụ này là nơi tất cả các bản ghi được gửi đến và cho phép chúng tôi có được cái nhìn toàn diện về các ứng dụng
+
+
+00:06:01,970 --> 00:06:02,660
+activity.
+hoạt động.
+
+
+00:06:02,690 --> 00:06:08,210
+This is extremely important, especially in applications like ours where there are several components
+Điều này cực kỳ quan trọng, đặc biệt là trong các ứng dụng như của chúng tôi, nơi có một số thành phần
+
+
+00:06:08,210 --> 00:06:10,460
+and each one has its own responsibility.
+và mỗi người đều có trách nhiệm riêng của mình.
+
+
+00:06:10,490 --> 00:06:16,070
+Using a central logging service gives us a coherent view of all the flows in the system, regardless
+Sử dụng dịch vụ ghi nhật ký trung tâm cung cấp cho chúng ta cái nhìn thống nhất về tất cả các luồng trong hệ thống, bất kể
+
+
+00:06:16,070 --> 00:06:18,500
+of the specific components they were run in.
+của các thành phần cụ thể mà chúng được chạy trong.
+
+
+00:06:18,950 --> 00:06:22,010
+Okay, so we have the components of the application.
+Được rồi, vì vậy chúng ta có các thành phần của ứng dụng.
+
+
+00:06:22,040 --> 00:06:23,720
+One last thing.
+Một điều cuối cùng.
+
+
+00:06:24,050 --> 00:06:27,210
+Obviously the status updates should be saved somewhere.
+Rõ ràng là các cập nhật trạng thái phải được lưu ở đâu đó.
+
+
+00:06:27,230 --> 00:06:32,900
+We need some kind of data store where the handler will save the past updates and the info will be able
+Chúng ta cần một số loại kho dữ liệu nơi trình xử lý sẽ lưu các bản cập nhật trước đó và thông tin sẽ có thể
+
+
+00:06:32,900 --> 00:06:33,860
+to query for them.
+để truy vấn chúng.
+
+
+00:06:33,890 --> 00:06:38,360
+So let's add a data store shared between those services.
+Vì vậy, hãy thêm một kho dữ liệu được chia sẻ giữa các dịch vụ đó.
+
+
+00:06:38,510 --> 00:06:39,680
+Okay, great.
+Được rồi, tuyệt vời.
+
+
+00:06:39,710 --> 00:06:42,950
+Next, let's talk about the messaging between them.
+Tiếp theo, chúng ta hãy nói về thông điệp giữa chúng.
+
+

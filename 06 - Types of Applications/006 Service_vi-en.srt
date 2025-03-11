@@ -1,0 +1,50 @@
+00:00:00,290 --> 00:00:05,240
+Services are quite similar to console applications with two important distinctions.
+Các dịch vụ khá giống với các ứng dụng bảng điều khiển với hai điểm khác biệt quan trọng.
+
+
+00:00:05,420 --> 00:00:10,850
+They have no user interface at all as opposed to the command line window in the console application.
+Chúng không có giao diện người dùng nào cả, trái ngược với cửa sổ dòng lệnh trong ứng dụng bảng điều khiển.
+
+
+00:00:10,850 --> 00:00:16,520
+And they are managed by a service manager, which is a feature of the operating system that manages
+Và chúng được quản lý bởi một trình quản lý dịch vụ, đây là một tính năng của hệ điều hành quản lý
+
+
+00:00:16,520 --> 00:00:17,480
+the services.
+các dịch vụ.
+
+
+00:00:17,510 --> 00:00:23,330
+In Windows there is one service manager, while on Linux there are a handful you can choose from.
+Trong Windows có một trình quản lý dịch vụ, trong khi trên Linux có một số trình quản lý mà bạn có thể lựa chọn.
+
+
+00:00:23,900 --> 00:00:28,280
+The service manager starts and stops the services and also monitors their activity.
+Trình quản lý dịch vụ khởi động và dừng các dịch vụ cũng như theo dõi hoạt động của chúng.
+
+
+00:00:28,640 --> 00:00:34,490
+Since services cannot ask the user about their behaviors, they will usually have a configuration file
+Vì các dịch vụ không thể hỏi người dùng về hành vi của họ, nên chúng thường sẽ có tệp cấu hình
+
+
+00:00:34,490 --> 00:00:36,380
+containing the required parameters.
+chứa các tham số cần thiết.
+
+
+00:00:36,410 --> 00:00:42,230
+Services are used for long running processes such as monitoring folder on the disk when no user intervention
+Các dịch vụ được sử dụng cho các tiến trình chạy dài như giám sát thư mục trên đĩa khi không có sự can thiệp của người dùng
+
+
+00:00:42,230 --> 00:00:43,100
+is required.
+là bắt buộc.
+
+

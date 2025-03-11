@@ -1,0 +1,165 @@
+00:00:00,230 --> 00:00:04,100
+The next quality attribute we will talk about is extensibility.
+Thuộc tính chất lượng tiếp theo mà chúng ta sẽ nói đến là khả năng mở rộng.
+
+
+00:00:04,340 --> 00:00:11,240
+A system that implements extensibility or an extensible system is a system that its functionality can
+Một hệ thống thực hiện khả năng mở rộng hoặc một hệ thống có thể mở rộng là một hệ thống mà chức năng của nó có thể
+
+
+00:00:11,240 --> 00:00:14,060
+be extended without modifying its existing code.
+được mở rộng mà không cần sửa đổi mã hiện có.
+
+
+00:00:14,090 --> 00:00:16,940
+Let's explain it through a real world example.
+Hãy cùng giải thích thông qua một ví dụ thực tế.
+
+
+00:00:17,830 --> 00:00:22,300
+Let's say we have an information system that has an API to query its data.
+Giả sử chúng ta có một hệ thống thông tin có API để truy vấn dữ liệu.
+
+
+00:00:22,330 --> 00:00:29,780
+The API has a specific parameter called format that specifies the exact format of the data to be returned.
+API có một tham số cụ thể gọi là định dạng để chỉ định định dạng chính xác của dữ liệu được trả về.
+
+
+00:00:29,800 --> 00:00:33,790
+On day one, the system supports two formats Json and XML.
+Vào ngày đầu tiên, hệ thống hỗ trợ hai định dạng Json và XML.
+
+
+00:00:33,820 --> 00:00:37,300
+Everyone is happy with this format and the system works perfect.
+Mọi người đều hài lòng với định dạng này và hệ thống hoạt động hoàn hảo.
+
+
+00:00:37,330 --> 00:00:42,660
+Then one day a new requirement is received that requires a new format to be added to the list.
+Sau đó, một ngày nọ, một yêu cầu mới được nhận và yêu cầu phải thêm một định dạng mới vào danh sách.
+
+
+00:00:42,670 --> 00:00:43,600
+CSV.
+CSV
+
+
+00:00:44,530 --> 00:00:50,230
+Now on a naive system, the part that made the format was created as a single class that contains a
+Bây giờ trên một hệ thống ngây thơ, phần tạo ra định dạng được tạo thành một lớp duy nhất chứa
+
+
+00:00:50,230 --> 00:00:56,370
+switch statement that checks what is the required format and executes code accordingly in the code built
+câu lệnh switch kiểm tra định dạng cần thiết và thực thi mã theo đúng mã được xây dựng
+
+
+00:00:56,380 --> 00:00:57,070
+like that.
+như thế đó.
+
+
+00:00:57,100 --> 00:00:59,650
+The new requirement presents a serious problem.
+Yêu cầu mới đặt ra một vấn đề nghiêm trọng.
+
+
+00:00:59,650 --> 00:01:05,379
+We now have to modify a core piece of code and then perform all the tests it requires in order to ensure
+Bây giờ chúng ta phải sửa đổi một phần cốt lõi của mã và sau đó thực hiện tất cả các thử nghiệm cần thiết để đảm bảo
+
+
+00:01:05,379 --> 00:01:06,730
+we didn't screw anything.
+chúng tôi không làm hỏng bất cứ thứ gì.
+
+
+00:01:06,880 --> 00:01:10,180
+In an extensible system, the process is quite different.
+Trong một hệ thống có thể mở rộng, quá trình này khá khác biệt.
+
+
+00:01:10,210 --> 00:01:15,280
+In such a system, we do not need to modify the original code but rather to extend it.
+Trong một hệ thống như vậy, chúng ta không cần phải sửa đổi mã gốc mà chỉ cần mở rộng nó.
+
+
+00:01:15,310 --> 00:01:18,140
+Now what does it mean to extend the code?
+Bây giờ mở rộng mã có nghĩa là gì?
+
+
+00:01:18,140 --> 00:01:24,470
+By extending we mean that we that we can add new code to the application and make it work without modifying
+Bằng cách mở rộng, chúng tôi muốn nói rằng chúng tôi có thể thêm mã mới vào ứng dụng và làm cho nó hoạt động mà không cần sửa đổi
+
+
+00:01:24,470 --> 00:01:25,820
+the original code.
+mã gốc.
+
+
+00:01:25,850 --> 00:01:28,460
+There are various methods for such an extension.
+Có nhiều phương pháp khác nhau cho phần mở rộng như vậy.
+
+
+00:01:28,460 --> 00:01:31,580
+For example inheritance, plugin framework and more.
+Ví dụ như kế thừa, khung plugin và nhiều hơn nữa.
+
+
+00:01:31,610 --> 00:01:37,130
+One of the most common patterns is using a plugin framework with a dependency injection similar to the
+Một trong những mô hình phổ biến nhất là sử dụng một khuôn khổ plugin với một sự phụ thuộc tiêm tương tự như
+
+
+00:01:37,130 --> 00:01:38,270
+code shown now.
+mã được hiển thị ngay bây giờ.
+
+
+00:01:40,250 --> 00:01:47,690
+In this code, the format name, which is XML, Json, or CSV or any other future format is passed to
+Trong mã này, tên định dạng là XML, Json hoặc CSV hoặc bất kỳ định dạng nào khác trong tương lai được chuyển đến
+
+
+00:01:47,690 --> 00:01:48,710
+the factory method.
+phương pháp nhà máy.
+
+
+00:01:48,710 --> 00:01:49,880
+Get formatter.
+Nhận định dạng.
+
+
+00:01:50,330 --> 00:01:54,230
+The factory method returns an implementation of the I formatter interface.
+Phương pháp nhà máy trả về một triển khai của giao diện định dạng I.
+
+
+00:01:54,230 --> 00:01:59,300
+Note that the calling code has no idea what is the specific implementation that was returned.
+Lưu ý rằng mã gọi không biết nội dung cụ thể được trả về là gì.
+
+
+00:01:59,510 --> 00:02:01,400
+We will discuss more about it later.
+Chúng ta sẽ thảo luận thêm về vấn đề này sau.
+
+
+00:02:01,400 --> 00:02:06,170
+But the important thing to understand about the extensibility quality attribute is that such methods
+Nhưng điều quan trọng cần hiểu về thuộc tính chất lượng khả năng mở rộng là các phương pháp như vậy
+
+
+00:02:06,170 --> 00:02:11,000
+exist and they allow us to extend the system's functionality without modifying its code.
+tồn tại và chúng cho phép chúng ta mở rộng chức năng của hệ thống mà không cần sửa đổi mã của nó.
+
+

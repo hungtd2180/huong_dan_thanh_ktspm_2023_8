@@ -1,0 +1,110 @@
+00:00:00,200 --> 00:00:03,440
+Webops is probably the most common application type nowadays.
+Webops có lẽ là loại ứng dụng phổ biến nhất hiện nay.
+
+
+00:00:03,440 --> 00:00:05,270
+Second, maybe only to web API.
+Thứ hai, có lẽ chỉ dành cho API web.
+
+
+00:00:05,750 --> 00:00:11,120
+Web apps, also known as websites are basically the way the internet worked since its inception.
+Ứng dụng web, còn được gọi là trang web, về cơ bản là cách thức Internet hoạt động kể từ khi ra đời.
+
+
+00:00:11,510 --> 00:00:12,410
+With web apps.
+Với ứng dụng web.
+
+
+00:00:12,410 --> 00:00:16,370
+There is a web server, usually more than one, and a web browser.
+Có một máy chủ web, thường là nhiều hơn một, và một trình duyệt web.
+
+
+00:00:16,670 --> 00:00:22,190
+Those two communicate with each other via Http protocol, although other protocols can also be used,
+Hai giao thức này giao tiếp với nhau thông qua giao thức Http, mặc dù các giao thức khác cũng có thể được sử dụng,
+
+
+00:00:22,220 --> 00:00:26,540
+the browser sends an Http request for the server asking for a resource.
+trình duyệt gửi yêu cầu Http đến máy chủ để yêu cầu một tài nguyên.
+
+
+00:00:26,690 --> 00:00:32,630
+The resource in this case is an HTML page which gets returned to the browser, which in turn renders
+Tài nguyên trong trường hợp này là một trang HTML được trả về trình duyệt, sau đó trình duyệt sẽ hiển thị
+
+
+00:00:32,630 --> 00:00:34,010
+it for the end user.
+nó dành cho người dùng cuối.
+
+
+00:00:34,190 --> 00:00:40,160
+Almost always, the HTML page will use JavaScript code for implementing logic in the browser and CSS
+Hầu như luôn luôn, trang HTML sẽ sử dụng mã JavaScript để triển khai logic trong trình duyệt và CSS
+
+
+00:00:40,160 --> 00:00:42,920
+files for the visual design of the page.
+các tập tin cho thiết kế trực quan của trang.
+
+
+00:00:42,920 --> 00:00:49,520
+Web apps are best for systems that require user interface for end user user initiated actions.
+Ứng dụng web phù hợp nhất với các hệ thống yêu cầu giao diện người dùng cho các hành động do người dùng cuối khởi tạo.
+
+
+00:00:49,520 --> 00:00:55,460
+Meaning the user is the one making the request to do something such as viewing order, data saving username
+Nghĩa là người dùng là người đưa ra yêu cầu thực hiện một việc gì đó như xem thứ tự, lưu dữ liệu tên người dùng
+
+
+00:00:55,460 --> 00:01:03,300
+and so on large scale with a large number of users and a lot of data, short focused action as opposed
+và trên quy mô lớn với số lượng lớn người dùng và nhiều dữ liệu, hành động tập trung ngắn hạn trái ngược với
+
+
+00:01:03,300 --> 00:01:04,739
+to long running processes.
+đến các tiến trình chạy dài.
+
+
+00:01:04,739 --> 00:01:10,350
+For example, web apps are not a good fit for a process that should crunch billions of numbers and produce
+Ví dụ, các ứng dụng web không phù hợp với một quy trình cần xử lý hàng tỷ số và tạo ra
+
+
+00:01:10,350 --> 00:01:11,370
+business intelligence.
+trí tuệ kinh doanh.
+
+
+00:01:11,370 --> 00:01:14,370
+For this, there are other kinds of applications.
+Đối với điều này, có những loại ứng dụng khác.
+
+
+00:01:15,170 --> 00:01:20,420
+As we discussed earlier, Web apps work in a request response model, which is perhaps the most important
+Như chúng ta đã thảo luận trước đó, các ứng dụng Web hoạt động theo mô hình phản hồi yêu cầu, có lẽ là
+
+
+00:01:20,420 --> 00:01:21,310
+aspect of them.
+khía cạnh của chúng.
+
+
+00:01:21,320 --> 00:01:26,420
+As a rule of thumb, if the system you are working on can be described as a request response application,
+Theo nguyên tắc chung, nếu hệ thống bạn đang làm việc có thể được mô tả như một ứng dụng yêu cầu phản hồi,
+
+
+00:01:26,420 --> 00:01:28,790
+then you are probably looking at a web app.
+thì có lẽ bạn đang xem một ứng dụng web.
+
+

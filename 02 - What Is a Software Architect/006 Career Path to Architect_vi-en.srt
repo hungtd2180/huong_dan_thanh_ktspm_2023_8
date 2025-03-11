@@ -1,0 +1,210 @@
+00:00:00,740 --> 00:00:04,220
+So what is the career path for software architect?
+Vậy con đường sự nghiệp của kiến trúc sư phần mềm là gì?
+
+
+00:00:04,250 --> 00:00:08,060
+What are the steps you must go through in order to be considered an architect?
+Bạn phải trải qua những bước nào để được coi là một kiến trúc sư?
+
+
+00:00:08,330 --> 00:00:14,510
+From my own experience, and after talking with hundreds of architects, the main factor here is experience.
+Theo kinh nghiệm của riêng tôi và sau khi nói chuyện với hàng trăm kiến trúc sư, yếu tố chính ở đây là kinh nghiệm.
+
+
+00:00:14,810 --> 00:00:19,790
+Since there is no formal degree or a course that qualifies you as an architect, the main factor is
+Vì không có bằng cấp chính thức hoặc khóa học nào đủ điều kiện để bạn trở thành kiến trúc sư nên yếu tố chính là
+
+
+00:00:19,790 --> 00:00:24,690
+potential employees will look for is experience, preferably in the technological field.
+nhân viên tiềm năng sẽ tìm kiếm kinh nghiệm, tốt nhất là trong lĩnh vực công nghệ.
+
+
+00:00:24,710 --> 00:00:30,530
+In addition, the most senior technological role you have had, the more chance you have to be an architect.
+Ngoài ra, bạn càng đảm nhiệm vai trò công nghệ cấp cao thì cơ hội trở thành kiến trúc sư của bạn càng cao.
+
+
+00:00:30,800 --> 00:00:33,300
+Let's look at some career path examples.
+Hãy cùng xem một số ví dụ về lộ trình sự nghiệp.
+
+
+00:00:33,320 --> 00:00:37,070
+All of the examples assume you've begun as a developer for this course.
+Tất cả các ví dụ đều giả định bạn đã bắt đầu với tư cách là nhà phát triển cho khóa học này.
+
+
+00:00:37,070 --> 00:00:38,930
+It doesn't matter what you did before.
+Không quan trọng bạn đã làm gì trước đó.
+
+
+00:00:40,180 --> 00:00:44,380
+So here is our first career path, going straight from developer to an architect.
+Đây là con đường sự nghiệp đầu tiên của chúng tôi, đi thẳng từ nhà phát triển đến kiến trúc sư.
+
+
+00:00:44,380 --> 00:00:48,670
+This is not a very common path and it usually requires two condition to meet.
+Đây không phải là một con đường phổ biến và thường đòi hỏi phải đáp ứng hai điều kiện.
+
+
+00:00:49,210 --> 00:00:51,550
+You have a lot of experience as a developer.
+Bạn có nhiều kinh nghiệm làm nhà phát triển.
+
+
+00:00:51,550 --> 00:00:56,560
+Definitely no less than three years and your company is quite small.
+Chắc chắn là không dưới ba năm và công ty của bạn khá nhỏ.
+
+
+00:00:56,950 --> 00:01:01,600
+I see this path happens a lot in startup companies where the technical founder often functioning as
+Tôi thấy con đường này xảy ra rất nhiều ở các công ty khởi nghiệp nơi người sáng lập kỹ thuật thường hoạt động như
+
+
+00:01:01,600 --> 00:01:05,920
+a developer gets promoted to an architect when more developers are hired.
+một nhà phát triển được thăng chức lên kiến trúc sư khi có nhiều nhà phát triển được tuyển dụng.
+
+
+00:01:07,590 --> 00:01:09,600
+The next path is the most common one.
+Con đường tiếp theo là con đường phổ biến nhất.
+
+
+00:01:09,600 --> 00:01:10,490
+In this path.
+Trong con đường này.
+
+
+00:01:10,500 --> 00:01:14,910
+A developer gets promoted to a team leader and her next role is an architect.
+Một nhà phát triển được thăng chức lên làm trưởng nhóm và vai trò tiếp theo của cô ấy là một kiến trúc sư.
+
+
+00:01:14,940 --> 00:01:20,730
+During her tenure, the team leader does a great mix of technical work and managerial work, which allows
+Trong nhiệm kỳ của mình, trưởng nhóm thực hiện sự kết hợp tuyệt vời giữa công việc kỹ thuật và công việc quản lý, cho phép
+
+
+00:01:20,730 --> 00:01:25,170
+her to adopt a high level perspective which is so important for an architect.
+cô ấy phải có một góc nhìn ở cấp độ cao, điều này rất quan trọng đối với một kiến trúc sư.
+
+
+00:01:25,890 --> 00:01:30,270
+When thinking of her next position, the team leader usually has to choose between a managerial path
+Khi nghĩ đến vị trí tiếp theo của mình, người trưởng nhóm thường phải lựa chọn giữa con đường quản lý
+
+
+00:01:30,270 --> 00:01:31,560
+and a technical path.
+và một con đường kỹ thuật.
+
+
+00:01:31,860 --> 00:01:36,180
+The managerial path will lead to a project manager position, and the technical path can lead to an
+Con đường quản lý sẽ dẫn đến vị trí quản lý dự án và con đường kỹ thuật có thể dẫn đến vị trí
+
+
+00:01:36,180 --> 00:01:38,820
+architect position, albeit a junior one.
+vị trí kiến trúc sư, mặc dù là một vị trí mới vào nghề.
+
+
+00:01:39,210 --> 00:01:41,610
+And again, this is a very common path.
+Và một lần nữa, đây là một con đường rất phổ biến.
+
+
+00:01:41,610 --> 00:01:44,640
+So if you are a team leader, you are on the right path.
+Vì vậy, nếu bạn là một trưởng nhóm, bạn đang đi đúng hướng.
+
+
+00:01:45,460 --> 00:01:49,510
+The next bus is also quite common, but it leads to a senior architect role.
+Xe buýt tiếp theo cũng khá phổ biến, nhưng nó dẫn đến vai trò kiến trúc sư cao cấp.
+
+
+00:01:49,780 --> 00:01:54,760
+In this path, the next stop after team leader is development manager or a CTO.
+Trong con đường này, điểm dừng chân tiếp theo sau trưởng nhóm là giám đốc phát triển hoặc giám đốc công nghệ.
+
+
+00:01:54,800 --> 00:01:57,580
+Depends on the company size and the titles it uses.
+Tùy thuộc vào quy mô công ty và các chức danh được sử dụng.
+
+
+00:01:58,270 --> 00:02:02,560
+After serving in this position for a few years, the next stop can be an architect.
+Sau khi đảm nhiệm vị trí này trong một vài năm, điểm dừng chân tiếp theo có thể là một kiến trúc sư.
+
+
+00:02:02,590 --> 00:02:07,840
+Usually a CTO will become a senior architect and sometimes an enterprise architect.
+Thông thường, một CTO sẽ trở thành một kiến trúc sư cao cấp và đôi khi là một kiến trúc sư doanh nghiệp.
+
+
+00:02:08,740 --> 00:02:11,510
+There is another path, but I don't see it quite often.
+Có một con đường khác, nhưng tôi không thấy nó thường xuyên.
+
+
+00:02:11,530 --> 00:02:16,450
+This is the only path that does not involve technical experience and therefore I cannot say I recommend
+Đây là con đường duy nhất không liên quan đến kinh nghiệm kỹ thuật và do đó tôi không thể nói rằng tôi đề xuất
+
+
+00:02:16,450 --> 00:02:16,900
+it.
+nó.
+
+
+00:02:17,890 --> 00:02:20,620
+This path begins as a system analyst.
+Con đường này bắt đầu với tư cách là một nhà phân tích hệ thống.
+
+
+00:02:20,740 --> 00:02:25,660
+A system analyst has an excellent understanding of the system's requirements, which is a crucial quality
+Một nhà phân tích hệ thống có hiểu biết tuyệt vời về các yêu cầu của hệ thống, đây là một phẩm chất quan trọng
+
+
+00:02:25,660 --> 00:02:28,810
+of an architect, but he lacks technical experience.
+của một kiến trúc sư, nhưng anh ta thiếu kinh nghiệm kỹ thuật.
+
+
+00:02:29,320 --> 00:02:34,630
+A system analyst that would like to become an architect will usually need a long and hard training period
+Một nhà phân tích hệ thống muốn trở thành một kiến trúc sư thường sẽ cần một thời gian đào tạo dài và khó khăn
+
+
+00:02:34,750 --> 00:02:37,750
+and a lot of mentoring from experienced architects.
+và rất nhiều sự hướng dẫn từ các kiến trúc sư giàu kinh nghiệm.
+
+
+00:02:38,480 --> 00:02:41,330
+So these are the career path for an architect.
+Vậy đây là con đường sự nghiệp của một kiến trúc sư.
+
+
+00:02:41,360 --> 00:02:46,220
+I recommend you to find out which one best describes your current career phase and prepare yourself
+Tôi khuyên bạn nên tìm hiểu xem cái nào mô tả tốt nhất giai đoạn sự nghiệp hiện tại của bạn và chuẩn bị cho mình
+
+
+00:02:46,220 --> 00:02:49,910
+for the next steps that will lead you to be an exceptional software architect.
+để biết những bước tiếp theo giúp bạn trở thành một kiến trúc sư phần mềm xuất sắc.
+
+

@@ -1,0 +1,225 @@
+00:00:00,170 --> 00:00:04,490
+Another important aspect of the architect's job is to know how to speak to different persons in the
+Một khía cạnh quan trọng khác của công việc kiến trúc sư là biết cách giao tiếp với những người khác nhau trong
+
+
+00:00:04,490 --> 00:00:05,450
+organization.
+tổ chức.
+
+
+00:00:05,630 --> 00:00:07,280
+Here is the rule of thumb.
+Đây là nguyên tắc chung.
+
+
+00:00:07,700 --> 00:00:12,350
+Always keep in mind what is the thing that really matters to the person you are talking to.
+Luôn ghi nhớ điều thực sự quan trọng đối với người bạn đang nói chuyện.
+
+
+00:00:12,380 --> 00:00:16,820
+If you can adapt your language to the best interest of the person you are talking to, you will be able
+Nếu bạn có thể điều chỉnh ngôn ngữ của mình theo hướng có lợi nhất cho người mà bạn đang nói chuyện, bạn sẽ có thể
+
+
+00:00:16,820 --> 00:00:18,230
+to achieve much more.
+để đạt được nhiều hơn nữa.
+
+
+00:00:18,500 --> 00:00:23,120
+By the way, this rule is right not only for architects, of course, but for anyone who tries to achieve
+Nhân tiện, quy tắc này không chỉ đúng với các kiến trúc sư mà còn đúng với bất kỳ ai cố gắng đạt được
+
+
+00:00:23,120 --> 00:00:24,920
+something from someone.
+cái gì đó từ ai đó.
+
+
+00:00:24,950 --> 00:00:26,660
+Let's look at some examples.
+Chúng ta hãy xem một số ví dụ.
+
+
+00:00:26,750 --> 00:00:29,180
+Here is Sophie, the project manager.
+Đây là Sophie, người quản lý dự án.
+
+
+00:00:29,600 --> 00:00:31,970
+Sophie cares only for the project success.
+Sophie chỉ quan tâm đến sự thành công của dự án.
+
+
+00:00:31,970 --> 00:00:36,000
+She doesn't care what technology will be used or how amazing the architecture is.
+Cô ấy không quan tâm công nghệ nào sẽ được sử dụng hoặc kiến trúc tuyệt vời như thế nào.
+
+
+00:00:36,050 --> 00:00:40,730
+When you talk to her about your plans for the architecture, always emphasize how it will contribute
+Khi bạn nói chuyện với cô ấy về kế hoạch của bạn cho kiến trúc, hãy luôn nhấn mạnh cách nó sẽ đóng góp
+
+
+00:00:40,730 --> 00:00:41,990
+to the project success.
+đến sự thành công của dự án.
+
+
+00:00:42,470 --> 00:00:47,540
+Avoid sentences like This is the latest and greatest pattern and we will be the first to test it out.
+Tránh những câu như Đây là mẫu mới nhất và tuyệt vời nhất và chúng tôi sẽ là người đầu tiên thử nghiệm nó.
+
+
+00:00:47,570 --> 00:00:49,640
+We can write a blog post about it.
+Chúng ta có thể viết một bài đăng trên blog về nó.
+
+
+00:00:49,970 --> 00:00:55,520
+This sentence will only frighten her and she will immediately imagine how this untested technology will
+Câu này chỉ làm cô ấy sợ và cô ấy sẽ ngay lập tức tưởng tượng công nghệ chưa được kiểm chứng này sẽ như thế nào
+
+
+00:00:55,520 --> 00:00:58,430
+cause delays and compromises down the road.
+gây ra sự chậm trễ và thỏa hiệp trong tương lai.
+
+
+00:00:58,760 --> 00:01:05,030
+Instead, try something along the lines of this new technology can help us write the code twice as fast
+Thay vào đó, hãy thử một cái gì đó tương tự như công nghệ mới này có thể giúp chúng ta viết mã nhanh gấp đôi
+
+
+00:01:05,030 --> 00:01:07,580
+so we can cut our schedule and budget accordingly.
+vì vậy chúng ta có thể cắt giảm lịch trình và ngân sách của mình cho phù hợp.
+
+
+00:01:07,970 --> 00:01:13,040
+This is a language a project manager understands, and she will be more than happy to help you, assuming
+Đây là ngôn ngữ mà người quản lý dự án hiểu được và cô ấy sẽ rất vui lòng giúp bạn, giả sử là
+
+
+00:01:13,040 --> 00:01:13,520
+you are right.
+bạn đúng.
+
+
+00:01:13,520 --> 00:01:14,270
+Of course.
+Tất nhiên.
+
+
+00:01:14,480 --> 00:01:17,390
+Now let's look at Dave, the team leader.
+Bây giờ chúng ta hãy xem Dave, người trưởng nhóm.
+
+
+00:01:17,990 --> 00:01:21,200
+Dave is a hard core geek and he just loves programming.
+Dave là một người đam mê công nghệ và anh ấy rất thích lập trình.
+
+
+00:01:21,200 --> 00:01:26,270
+He spent at least one hour every night reading through technical blog posts and he always up to date
+Anh ấy dành ít nhất một giờ mỗi đêm để đọc các bài đăng trên blog kỹ thuật và anh ấy luôn cập nhật
+
+
+00:01:26,270 --> 00:01:28,700
+with the recent developments in the software industry.
+với những phát triển gần đây trong ngành công nghiệp phần mềm.
+
+
+00:01:29,270 --> 00:01:33,920
+If you want to bring Dave on board and make him a strong proponent of your architecture, talk to him
+Nếu bạn muốn đưa Dave vào nhóm và biến anh ấy thành người ủng hộ mạnh mẽ cho kiến trúc của bạn, hãy nói chuyện với anh ấy
+
+
+00:01:33,920 --> 00:01:35,340
+using a technical language.
+sử dụng ngôn ngữ kỹ thuật.
+
+
+00:01:35,360 --> 00:01:39,050
+Tell him, Listen, Dave, have you heard of the latest Angular version?
+Nói với anh ấy, Này Dave, anh đã nghe nói đến phiên bản Angular mới nhất chưa?
+
+
+00:01:39,050 --> 00:01:43,370
+We are going to use it or, you know, function as a service are pretty cool.
+Chúng tôi sẽ sử dụng nó hoặc, bạn biết đấy, hoạt động như một dịch vụ khá tuyệt.
+
+
+00:01:43,400 --> 00:01:45,920
+What do you say we will give it a try in this project?
+Bạn nói chúng ta sẽ thử điều gì trong dự án này?
+
+
+00:01:46,100 --> 00:01:50,420
+Most chances they will be more than happy to work with you when approached this way.
+Nhiều khả năng họ sẽ rất vui khi được làm việc với bạn khi được tiếp cận theo cách này.
+
+
+00:01:51,180 --> 00:01:54,030
+The last person we will look at is Shelly the CEO.
+Người cuối cùng chúng ta sẽ xem xét là Shelly, giám đốc điều hành.
+
+
+00:01:54,240 --> 00:01:59,150
+Shelly is a very business oriented person and she always looks for the financial bottom line.
+Shelly là người rất coi trọng kinh doanh và cô ấy luôn tìm kiếm lợi nhuận tài chính.
+
+
+00:01:59,160 --> 00:02:03,560
+If you want to explain her, what are the advantages of the architecture you are working on?
+Nếu bạn muốn giải thích cho cô ấy, lợi thế của kiến trúc mà bạn đang làm là gì?
+
+
+00:02:03,570 --> 00:02:05,820
+Never mention technical buzzwords.
+Không bao giờ đề cập đến các thuật ngữ kỹ thuật.
+
+
+00:02:05,850 --> 00:02:11,760
+Shelly is the kind of person that when he microservices or caching or even Java, she immediately loses
+Shelly là kiểu người mà khi anh ấy microservices hoặc lưu trữ đệm hoặc thậm chí Java, cô ấy ngay lập tức mất
+
+
+00:02:11,760 --> 00:02:13,410
+interest and stops listening.
+quan tâm và ngừng lắng nghe.
+
+
+00:02:13,410 --> 00:02:19,050
+However, if you will tell her this, the architecture I've designed will ensure the continuity of the
+Tuy nhiên, nếu bạn nói với cô ấy điều này, kiến trúc tôi thiết kế sẽ đảm bảo tính liên tục của
+
+
+00:02:19,050 --> 00:02:23,400
+business and will be able to cope with the high loads expected during Black Friday sales.
+kinh doanh và có thể xử lý được lượng hàng hóa lớn dự kiến trong đợt bán hàng Black Friday.
+
+
+00:02:23,580 --> 00:02:24,630
+Then you got her.
+Sau đó bạn có được cô ấy.
+
+
+00:02:24,660 --> 00:02:27,720
+She will listen to you and will appreciate the work you are doing.
+Cô ấy sẽ lắng nghe bạn và đánh giá cao công việc bạn đang làm.
+
+
+00:02:27,870 --> 00:02:32,670
+So to recap, always keep in mind what really matters to the person you are talking to.
+Tóm lại, hãy luôn ghi nhớ điều thực sự quan trọng đối với người bạn đang nói chuyện.
+
+
+00:02:32,700 --> 00:02:38,040
+Try to be in his shoes, not yours, and then show him how your work contributes to his interests.
+Hãy thử đặt mình vào vị trí của anh ấy chứ không phải của bạn, rồi cho anh ấy thấy công việc của bạn đóng góp như thế nào cho sở thích của anh ấy.
+
+

@@ -1,0 +1,65 @@
+00:00:00,470 --> 00:00:06,470
+In this section, we discuss the design patterns we talked about for patterns, factory repository,
+Trong phần này, chúng tôi thảo luận về các mẫu thiết kế mà chúng tôi đã nói đến cho các mẫu, kho lưu trữ nhà máy,
+
+
+00:00:06,500 --> 00:00:08,630
+facade and command.
+mặt tiền và lệnh.
+
+
+00:00:09,260 --> 00:00:13,940
+These patterns, when implemented correctly, will help you design software which is more consistent,
+Các mẫu này, khi được triển khai đúng cách, sẽ giúp bạn thiết kế phần mềm nhất quán hơn,
+
+
+00:00:13,940 --> 00:00:16,580
+flexible, readable and easy to maintain.
+linh hoạt, dễ đọc và dễ bảo trì.
+
+
+00:00:16,610 --> 00:00:20,120
+On the other hand, don't rush to implement all the patterns exist.
+Mặt khác, đừng vội vàng áp dụng tất cả các mô hình hiện có.
+
+
+00:00:20,150 --> 00:00:25,820
+One of the mistakes junior architects do is designing a patterns oriented architecture, which is an
+Một trong những sai lầm mà các kiến trúc sư mới vào nghề mắc phải là thiết kế kiến trúc theo hướng mẫu, đó là
+
+
+00:00:25,820 --> 00:00:31,530
+architecture that tries to implement as many patterns as possible instead of keeping things simple.
+kiến trúc cố gắng triển khai càng nhiều mẫu càng tốt thay vì giữ mọi thứ đơn giản.
+
+
+00:00:31,610 --> 00:00:37,400
+So don't do that either, and use only the patterns you really need in the resource document attached
+Vì vậy, đừng làm điều đó và chỉ sử dụng các mẫu bạn thực sự cần trong tài liệu nguồn đính kèm
+
+
+00:00:37,400 --> 00:00:38,210
+to this lecture.
+đến bài giảng này.
+
+
+00:00:38,240 --> 00:00:43,280
+There are some resources for learning more about the various design patterns and I highly recommend
+Có một số tài nguyên để tìm hiểu thêm về các mẫu thiết kế khác nhau và tôi thực sự khuyên bạn nên sử dụng
+
+
+00:00:43,310 --> 00:00:44,330
+going through them.
+đang trải qua chúng.
+
+
+00:00:44,360 --> 00:00:49,310
+I hope this section helped you understand the basics of design patterns and I hope you will find a real
+Tôi hy vọng phần này giúp bạn hiểu được những điều cơ bản về các mẫu thiết kế và tôi hy vọng bạn sẽ tìm thấy một mẫu thiết kế thực sự
+
+
+00:00:49,310 --> 00:00:50,390
+value using them.
+giá trị sử dụng chúng.
+
+

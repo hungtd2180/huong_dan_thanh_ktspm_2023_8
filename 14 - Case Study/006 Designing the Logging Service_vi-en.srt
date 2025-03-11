@@ -1,0 +1,680 @@
+00:00:00,260 --> 00:00:04,280
+The logging service is the first service we are going to drill down into.
+Dịch vụ ghi nhật ký là dịch vụ đầu tiên chúng ta sẽ đi sâu vào.
+
+
+00:00:04,400 --> 00:00:06,820
+Now, this may sound a little bit strange.
+Bây giờ, điều này có thể nghe có vẻ hơi lạ một chút.
+
+
+00:00:06,830 --> 00:00:09,860
+After all, it is the most boring service.
+Rốt cuộc thì đó là dịch vụ nhàm chán nhất.
+
+
+00:00:09,890 --> 00:00:12,260
+Let's start with something more interesting.
+Chúng ta hãy bắt đầu với điều gì đó thú vị hơn.
+
+
+00:00:12,590 --> 00:00:16,040
+Well, the reason we are starting with this service is twofold.
+Vâng, lý do chúng tôi bắt đầu với dịch vụ này là có hai mặt.
+
+
+00:00:16,070 --> 00:00:20,180
+First, we want to emphasize that logging is important.
+Đầu tiên, chúng tôi muốn nhấn mạnh rằng việc ghi nhật ký rất quan trọng.
+
+
+00:00:20,210 --> 00:00:26,450
+Many developers and sadly architects treat logging as an afterthought, but this is the wrong way to
+Nhiều nhà phát triển và đáng buồn là các kiến trúc sư coi việc ghi nhật ký là một ý nghĩ muộn màng, nhưng đây là cách sai lầm để
+
+
+00:00:26,450 --> 00:00:27,080
+handle it.
+xử lý nó.
+
+
+00:00:27,110 --> 00:00:32,960
+Logging is one of the cornerstones of every application and therefore should be treated as any other
+Ghi nhật ký là một trong những nền tảng của mọi ứng dụng và do đó nên được coi như bất kỳ
+
+
+00:00:32,960 --> 00:00:33,650
+service.
+dịch vụ.
+
+
+00:00:34,400 --> 00:00:40,340
+Second, we want to build all our services in a way that already includes logging and not adding it
+Thứ hai, chúng tôi muốn xây dựng tất cả các dịch vụ của mình theo cách đã bao gồm việc ghi nhật ký và không thêm nó vào
+
+
+00:00:40,340 --> 00:00:40,910
+later.
+sau đó.
+
+
+00:00:40,940 --> 00:00:46,370
+For that we will need the logging service ready so the services can communicate with it through.
+Để làm được điều đó, chúng ta cần dịch vụ ghi nhật ký sẵn sàng để các dịch vụ có thể giao tiếp với nó.
+
+
+00:00:46,400 --> 00:00:52,100
+In our specific application, the logging service reads from a queue and is not interacting directly
+Trong ứng dụng cụ thể của chúng tôi, dịch vụ ghi nhật ký đọc từ hàng đợi và không tương tác trực tiếp
+
+
+00:00:52,100 --> 00:00:53,120
+with the other services.
+với các dịch vụ khác.
+
+
+00:00:53,120 --> 00:00:56,360
+But still, it's always a good idea to begin with it.
+Nhưng dù sao thì bắt đầu với nó vẫn luôn là một ý tưởng hay.
+
+
+00:00:56,360 --> 00:00:57,800
+So let's go.
+Vậy chúng ta đi thôi.
+
+
+00:00:59,380 --> 00:01:03,070
+Here are the steps we need to take for the components drill down.
+Sau đây là các bước chúng ta cần thực hiện để phân tích sâu hơn các thành phần.
+
+
+00:01:03,100 --> 00:01:06,280
+First, decide on the kind of application.
+Đầu tiên, hãy quyết định loại ứng dụng.
+
+
+00:01:06,280 --> 00:01:08,860
+Is it Web App service Desktop.
+Có phải là dịch vụ Web App Desktop không?
+
+
+00:01:09,040 --> 00:01:12,430
+Second, decide on the technology stack of the component.
+Thứ hai, quyết định về công nghệ của thành phần.
+
+
+00:01:12,430 --> 00:01:15,190
+And third, design the architecture.
+Và thứ ba, thiết kế kiến trúc.
+
+
+00:01:15,940 --> 00:01:18,820
+Okay, so let's begin with the application type.
+Được rồi, chúng ta hãy bắt đầu với loại ứng dụng.
+
+
+00:01:18,970 --> 00:01:23,860
+And for that we need to remind ourselves what the logging service is supposed to do.
+Và để làm được điều đó, chúng ta cần phải nhắc nhở bản thân về mục đích của dịch vụ ghi nhật ký.
+
+
+00:01:23,890 --> 00:01:31,090
+It should read log records from a queue, perhaps perform some kind of validation, and then store them
+Nó sẽ đọc các bản ghi nhật ký từ hàng đợi, có thể thực hiện một số loại xác thực và sau đó lưu trữ chúng
+
+
+00:01:31,090 --> 00:01:32,230
+in the data store.
+trong kho dữ liệu.
+
+
+00:01:32,620 --> 00:01:34,510
+And here is the important thing.
+Và đây là điều quan trọng.
+
+
+00:01:34,540 --> 00:01:37,720
+The logging service does not wait for any request.
+Dịch vụ ghi nhật ký không chờ bất kỳ yêu cầu nào.
+
+
+00:01:37,720 --> 00:01:41,720
+It is always on and once in a while it pulls data from the queue.
+Nó luôn bật và thỉnh thoảng sẽ lấy dữ liệu từ hàng đợi.
+
+
+00:01:41,740 --> 00:01:46,180
+So let's see how this stacks up against the application types we know.
+Vậy hãy cùng xem điều này so sánh thế nào với các loại ứng dụng mà chúng ta biết.
+
+
+00:01:46,360 --> 00:01:53,140
+So first web apps and web API, they are both off the table since, as we just said, the logging service
+Vì vậy, ứng dụng web đầu tiên và API web, cả hai đều không còn nữa vì, như chúng tôi vừa nói, dịch vụ ghi nhật ký
+
+
+00:01:53,140 --> 00:01:59,590
+is not based on a request response model but is always online and initiating its own activities.
+không dựa trên mô hình yêu cầu phản hồi mà luôn trực tuyến và khởi tạo các hoạt động riêng của nó.
+
+
+00:01:59,600 --> 00:02:02,210
+It's definitely not mobile application.
+Chắc chắn đây không phải là ứng dụng di động.
+
+
+00:02:02,210 --> 00:02:05,060
+It runs on the server and not on the client.
+Nó chạy trên máy chủ chứ không phải trên máy khách.
+
+
+00:02:05,270 --> 00:02:06,530
+What about console?
+Còn console thì sao?
+
+
+00:02:06,560 --> 00:02:08,840
+Well, it looks like a good fit.
+Vâng, có vẻ như nó phù hợp.
+
+
+00:02:08,870 --> 00:02:14,600
+Console applications are best suited for long running processes while offering limited user interface.
+Các ứng dụng bảng điều khiển phù hợp nhất với các quy trình chạy lâu trong khi vẫn cung cấp giao diện người dùng hạn chế.
+
+
+00:02:14,630 --> 00:02:17,670
+This is exactly what we need from our logging service.
+Đây chính xác là những gì chúng ta cần từ dịch vụ ghi nhật ký của mình.
+
+
+00:02:17,690 --> 00:02:21,140
+We don't need any UI and it is a long running process.
+Chúng tôi không cần bất kỳ giao diện người dùng nào và đây là một quá trình chạy dài.
+
+
+00:02:21,140 --> 00:02:23,390
+So this is a great candidate.
+Vì vậy, đây là một ứng cử viên tuyệt vời.
+
+
+00:02:23,420 --> 00:02:25,580
+Next is the service.
+Tiếp theo là dịch vụ.
+
+
+00:02:25,780 --> 00:02:29,980
+Remember that services are quite similar to console with two important distinctions.
+Hãy nhớ rằng các dịch vụ khá giống với console với hai điểm khác biệt quan trọng.
+
+
+00:02:29,990 --> 00:02:34,780
+They offer no UI at all and are managed by some kind of service manager.
+Chúng không cung cấp bất kỳ giao diện người dùng nào và được quản lý bởi một loại trình quản lý dịch vụ nào đó.
+
+
+00:02:34,790 --> 00:02:38,090
+So it looks like the logging service can also be a service.
+Vì vậy, có vẻ như dịch vụ ghi nhật ký cũng có thể là một dịch vụ.
+
+
+00:02:38,870 --> 00:02:44,300
+Last is desktop application, which of course is not relevant for the logging service since it runs
+Cuối cùng là ứng dụng máy tính để bàn, tất nhiên là không liên quan đến dịch vụ ghi nhật ký vì nó chạy
+
+
+00:02:44,300 --> 00:02:45,200
+on the server.
+trên máy chủ.
+
+
+00:02:45,410 --> 00:02:48,480
+So we are left with console app and service.
+Vì vậy, chúng ta còn lại ứng dụng và dịch vụ bảng điều khiển.
+
+
+00:02:48,500 --> 00:02:49,790
+Which one is better?
+Cái nào tốt hơn?
+
+
+00:02:50,180 --> 00:02:55,480
+Well, actually there is no definite answer and it depends mainly on personal taste.
+Vâng, thực ra không có câu trả lời chắc chắn nào cả và nó phụ thuộc chủ yếu vào sở thích cá nhân.
+
+
+00:02:55,490 --> 00:03:00,140
+I would prefer to make it a service, but if you design it as a console application, you won't make
+Tôi muốn biến nó thành một dịch vụ, nhưng nếu bạn thiết kế nó như một ứng dụng điều khiển, bạn sẽ không tạo ra
+
+
+00:03:00,140 --> 00:03:00,920
+a mistake.
+một sai lầm.
+
+
+00:03:01,310 --> 00:03:03,690
+Okay, so we have the application type.
+Được rồi, vì vậy chúng ta có loại ứng dụng.
+
+
+00:03:03,710 --> 00:03:06,110
+Next, the technology stack.
+Tiếp theo là công nghệ.
+
+
+00:03:06,260 --> 00:03:11,810
+As you probably remember when deciding on the tech stack, we first need to define what are the elements
+Như bạn có thể nhớ khi quyết định về ngăn xếp công nghệ, trước tiên chúng ta cần xác định các yếu tố 55 là gì
+
+
+00:03:11,810 --> 00:03:14,690
+in the component that need the stack to be selected.
+trong thành phần cần ngăn xếp được chọn.
+
+
+00:03:14,720 --> 00:03:20,870
+In our service there are two such elements the components code and the data store.
+Trong dịch vụ của chúng tôi có hai thành phần như vậy là mã thành phần và kho dữ liệu.
+
+
+00:03:21,080 --> 00:03:22,550
+Let's begin with the code.
+Chúng ta hãy bắt đầu với mã.
+
+
+00:03:24,220 --> 00:03:29,260
+Since the logging service is going to be a service, we don't have a lot of requirements from the technology
+Vì dịch vụ ghi nhật ký sẽ là một dịch vụ, chúng tôi không có nhiều yêu cầu từ công nghệ
+
+
+00:03:29,260 --> 00:03:29,770
+stack.
+chồng.
+
+
+00:03:29,890 --> 00:03:35,050
+We need the code to be able to access the API and store data in a data store.
+Chúng tôi cần mã để có thể truy cập API và lưu trữ dữ liệu trong kho dữ liệu.
+
+
+00:03:35,080 --> 00:03:38,920
+This is nothing special and any development platform can do that.
+Điều này không có gì đặc biệt và bất kỳ nền tảng phát triển nào cũng có thể làm được điều đó.
+
+
+00:03:38,950 --> 00:03:42,200
+In addition, there are no special requirements about the performance.
+Ngoài ra, không có yêu cầu đặc biệt nào về hiệu suất.
+
+
+00:03:42,220 --> 00:03:47,230
+Of course we want it to be fast, but there is no specific requirement that limits us here.
+Tất nhiên chúng ta muốn nó nhanh, nhưng không có yêu cầu cụ thể nào giới hạn chúng ta ở đây.
+
+
+00:03:47,410 --> 00:03:52,780
+So now it's time to go to the developers and ask them what platforms they have experience with.
+Bây giờ đã đến lúc tìm đến các nhà phát triển và hỏi họ xem họ có kinh nghiệm với nền tảng nào.
+
+
+00:03:52,810 --> 00:03:53,770
+Let's do it.
+Hãy làm điều đó.
+
+
+00:03:54,280 --> 00:03:59,680
+Well, it looks like the development team is familiar with the Microsoft stack, meaning Dotnet platform
+Vâng, có vẻ như nhóm phát triển quen thuộc với Microsoft stack, nghĩa là nền tảng Dotnet
+
+
+00:03:59,680 --> 00:04:01,150
+and SQL Server.
+và SQL Server.
+
+
+00:04:01,330 --> 00:04:02,200
+That's good.
+Tốt lắm.
+
+
+00:04:02,200 --> 00:04:07,210
+Since Dotnet is a general purpose platform that can be used in services as well as web apps.
+Vì Dotnet là một nền tảng mục đích chung có thể được sử dụng trong các dịch vụ cũng như ứng dụng web.
+
+
+00:04:07,210 --> 00:04:10,840
+And that might be useful when we will discuss the other services.
+Và điều đó có thể hữu ích khi chúng ta thảo luận về các dịch vụ khác.
+
+
+00:04:10,930 --> 00:04:16,870
+The only caveat here is that Dotnet is a little bit outdated and new project should use Dotnet core,
+Lưu ý duy nhất ở đây là Dotnet hơi lỗi thời và dự án mới nên sử dụng Dotnet core,
+
+
+00:04:16,870 --> 00:04:20,410
+which is the new cross platform Modular successor of Dotnet.
+là nền tảng mới kế thừa mô-đun của Dotnet.
+
+
+00:04:20,440 --> 00:04:26,120
+The team is not familiar with Dotnet core, but after a short discussion we agree on an onboarding process
+Nhóm không quen thuộc với Dotnet core, nhưng sau một cuộc thảo luận ngắn, chúng tôi đồng ý về quy trình tích hợp
+
+
+00:04:26,120 --> 00:04:32,270
+and decide together the service will be based on Dotnet core and the database will be SQL Server.
+và cùng nhau quyết định dịch vụ sẽ dựa trên Dotnet core và cơ sở dữ liệu sẽ là SQL Server.
+
+
+00:04:32,690 --> 00:04:38,330
+Now it should be noted if the team is familiar with, say, Java and MySQL, that's great too.
+Bây giờ cần lưu ý rằng nếu nhóm quen thuộc với Java và MySQL thì điều đó cũng rất tuyệt.
+
+
+00:04:38,360 --> 00:04:40,670
+Python and Postgres are also good.
+Python và Postgres cũng tốt.
+
+
+00:04:40,760 --> 00:04:45,890
+Almost any combination will work here as long as the platform supports console, app or service and
+Hầu như bất kỳ sự kết hợp nào cũng sẽ hoạt động ở đây miễn là nền tảng hỗ trợ bảng điều khiển, ứng dụng hoặc dịch vụ và
+
+
+00:04:45,890 --> 00:04:47,180
+can access database.
+có thể truy cập cơ sở dữ liệu.
+
+
+00:04:47,930 --> 00:04:48,290
+Okay.
+Được.
+
+
+00:04:48,290 --> 00:04:48,710
+Great.
+Tuyệt vời.
+
+
+00:04:48,710 --> 00:04:50,450
+So we have the technology stack.
+Vì vậy, chúng ta có công nghệ ngăn xếp.
+
+
+00:04:50,480 --> 00:04:52,730
+Now let's design the architecture.
+Bây giờ chúng ta hãy thiết kế kiến trúc.
+
+
+00:04:52,940 --> 00:04:58,730
+Remember our discussion about layered architecture, how we said that in most cases this is the go to
+Hãy nhớ lại cuộc thảo luận của chúng ta về kiến trúc nhiều lớp, cách chúng ta nói rằng trong hầu hết các trường hợp, đây là cách tiếp cận
+
+
+00:04:58,730 --> 00:05:00,470
+architecture of every component.
+kiến trúc của mọi thành phần.
+
+
+00:05:00,500 --> 00:05:01,130
+Good.
+Tốt.
+
+
+00:05:01,280 --> 00:05:03,170
+Let's see if it fits here.
+Hãy xem nó có phù hợp ở đây không.
+
+
+00:05:03,200 --> 00:05:10,190
+As you probably remember, layered architecture has these three layers user interface or service interface,
+Như bạn có thể nhớ, kiến trúc phân lớp có ba lớp giao diện người dùng hoặc giao diện dịch vụ,
+
+
+00:05:10,220 --> 00:05:14,420
+business logic and data access that writes to the data store.
+logic kinh doanh và truy cập dữ liệu ghi vào kho dữ liệu.
+
+
+00:05:14,450 --> 00:05:18,020
+Now, do you think this pattern fits in in this case?
+Bây giờ, bạn có nghĩ rằng mô hình này phù hợp trong trường hợp này không?
+
+
+00:05:18,050 --> 00:05:19,940
+Take a few moments to think about it.
+Hãy dành một chút thời gian để suy nghĩ về điều đó.
+
+
+00:05:19,940 --> 00:05:23,840
+You can pause the lecture and resume when you reach a conclusion.
+Bạn có thể tạm dừng bài giảng và tiếp tục khi bạn đi đến kết luận.
+
+
+00:05:28,380 --> 00:05:28,980
+Okay.
+Được.
+
+
+00:05:28,980 --> 00:05:33,720
+So I hope you have an opinion about whether or not the layered architecture is a good fit for the logging
+Vì vậy, tôi hy vọng bạn có ý kiến về việc kiến trúc phân lớp có phù hợp với việc ghi nhật ký 94 hay không
+
+
+00:05:33,720 --> 00:05:34,290
+service.
+dịch vụ.
+
+
+00:05:34,290 --> 00:05:36,530
+And here is what I think about it.
+Và đây là những gì tôi nghĩ về nó.
+
+
+00:05:36,540 --> 00:05:38,910
+It fits, but not quite.
+Nó vừa vặn, nhưng không hoàn toàn.
+
+
+00:05:39,150 --> 00:05:43,650
+The main issue here is the first layer the UI or API layer.
+Vấn đề chính ở đây là lớp đầu tiên, lớp UI hoặc API.
+
+
+00:05:43,680 --> 00:05:46,350
+The logging service has no UI or API.
+Dịch vụ ghi nhật ký không có UI hoặc API.
+
+
+00:05:46,380 --> 00:05:51,870
+It's a long running process and exposes nothing, no API and no user interface.
+Đây là một quá trình chạy dài và không tiết lộ bất cứ thông tin gì, không có API và không có giao diện người dùng.
+
+
+00:05:51,900 --> 00:05:54,450
+The rest of the layers are actually quite relevant.
+Các lớp còn lại thực sự khá liên quan.
+
+
+00:05:54,480 --> 00:05:59,220
+We need the business layer to handle the log records and we need the data access layer to access the
+Chúng ta cần lớp nghiệp vụ để xử lý các bản ghi nhật ký và chúng ta cần lớp truy cập dữ liệu để truy cập
+
+
+00:05:59,220 --> 00:06:00,020
+database.
+cơ sở dữ liệu.
+
+
+00:06:00,030 --> 00:06:07,020
+So what we are going to do is tweak the classic layered pattern and modify the top layer to be a polling
+Vì vậy, những gì chúng ta sẽ làm là điều chỉnh mẫu lớp cổ điển và sửa đổi lớp trên cùng thành lớp thăm dò
+
+
+00:06:07,020 --> 00:06:07,650
+layer.
+lớp.
+
+
+00:06:07,800 --> 00:06:12,810
+This layer is responsible for accessing the queue and retrieving the log records to be handled by the
+Lớp này chịu trách nhiệm truy cập hàng đợi và lấy các bản ghi nhật ký để xử lý bởi
+
+
+00:06:12,810 --> 00:06:13,650
+business layer.
+lớp kinh doanh.
+
+
+00:06:13,740 --> 00:06:17,970
+And this is how the updated layers pattern will look like in our case.
+Và đây là cách mẫu lớp được cập nhật sẽ trông như thế nào trong trường hợp của chúng ta.
+
+
+00:06:19,450 --> 00:06:21,300
+So how will the component work?
+Vậy thành phần này sẽ hoạt động như thế nào?
+
+
+00:06:21,310 --> 00:06:23,200
+What is the flow it implements?
+Luồng nó thực hiện là gì?
+
+
+00:06:23,230 --> 00:06:24,220
+Here it is.
+Đây rồi.
+
+
+00:06:24,370 --> 00:06:28,750
+The polling layer runs a timer which pulls the queue every few seconds.
+Lớp thăm dò chạy một bộ đếm thời gian để kéo hàng đợi sau mỗi vài giây.
+
+
+00:06:28,750 --> 00:06:34,150
+If new records are returned from the queue, the polling layer sends them to the business logic layer.
+Nếu các bản ghi mới được trả về từ hàng đợi, lớp thăm dò sẽ gửi chúng đến lớp logic nghiệp vụ.
+
+
+00:06:34,180 --> 00:06:38,470
+This layer validates them and makes sure no garbage has been sent.
+Lớp này xác thực chúng và đảm bảo không có rác nào được gửi đi.
+
+
+00:06:38,590 --> 00:06:44,090
+If everything is okay, it sends them to the data access layer which saves them to the database.
+Nếu mọi thứ đều ổn, nó sẽ gửi chúng đến lớp truy cập dữ liệu để lưu chúng vào cơ sở dữ liệu.
+
+
+00:06:44,110 --> 00:06:47,320
+And that's basically is the inner architecture of the logging service.
+Và về cơ bản đó là kiến trúc bên trong của dịch vụ ghi nhật ký.
+
+
+00:06:47,350 --> 00:06:49,670
+There is another thing I would like to point out.
+Có một điều nữa tôi muốn chỉ ra.
+
+
+00:06:49,690 --> 00:06:55,270
+Remember our discussion around dependency injection, how it eliminates dependencies between code components.
+Hãy nhớ lại cuộc thảo luận của chúng ta về việc tiêm phụ thuộc, cách nó loại bỏ sự phụ thuộc giữa các thành phần mã.
+
+
+00:06:55,300 --> 00:06:55,810
+Good.
+Tốt.
+
+
+00:06:55,810 --> 00:07:00,250
+We are going to use it in the logging service to avoid coupling between the polling layer and the business
+Chúng tôi sẽ sử dụng nó trong dịch vụ ghi nhật ký để tránh sự kết hợp giữa lớp thăm dò và doanh nghiệp
+
+
+00:07:00,250 --> 00:07:04,390
+logic layer and between the business logic layer and the data access layer.
+lớp logic và giữa lớp logic nghiệp vụ và lớp truy cập dữ liệu.
+
+
+00:07:04,570 --> 00:07:10,750
+Lucky for us, Dotnet core has a great dependency injection mechanism built in using the Microsoft Extensions
+May mắn cho chúng tôi, Dotnet core có cơ chế tiêm phụ thuộc tuyệt vời được tích hợp bằng cách sử dụng Microsoft Extensions
+
+
+00:07:10,750 --> 00:07:14,740
+dependency injection package, and it will do all the heavy lifting for us.
+gói tiêm phụ thuộc và nó sẽ thực hiện tất cả các công việc nặng nhọc cho chúng ta.
+
+
+00:07:15,010 --> 00:07:20,840
+Actually, when the dependency injection is so built in, I really have to struggle hard to find reasons
+Thực ra, khi dependency injection được tích hợp sẵn, tôi thực sự phải vật lộn rất nhiều để tìm ra lý do
+
+
+00:07:20,840 --> 00:07:22,230
+why not to use it.
+tại sao không sử dụng nó.
+
+
+00:07:22,250 --> 00:07:27,350
+And last thing, while the code that handles the polling from the queue and the validation is a vanilla
+Và điều cuối cùng, trong khi mã xử lý việc thăm dò từ hàng đợi và xác thực là vanilla
+
+
+00:07:27,350 --> 00:07:32,660
+code that uses no external libraries, the data access layer will utilize entity framework to access
+mã không sử dụng thư viện bên ngoài, lớp truy cập dữ liệu sẽ sử dụng khung thực thể để truy cập
+
+
+00:07:32,660 --> 00:07:34,340
+the database and save the records.
+cơ sở dữ liệu và lưu các bản ghi.
+
+
+00:07:34,370 --> 00:07:41,180
+This library gives us ORM capabilities, which basically represents database records as full blown objects.
+Thư viện này cung cấp cho chúng ta khả năng ORM, về cơ bản biểu diễn các bản ghi cơ sở dữ liệu dưới dạng các đối tượng đầy đủ.
+
+
+00:07:41,450 --> 00:07:42,440
+Okay, great.
+Được rồi, tuyệt vời.
+
+
+00:07:42,470 --> 00:07:44,690
+We just designed our first service.
+Chúng tôi vừa thiết kế dịch vụ đầu tiên của mình.
+
+
+00:07:44,720 --> 00:07:49,640
+We now have an architecture for the logging service, complete with its type and technology stack.
+Bây giờ chúng ta có một kiến trúc cho dịch vụ ghi nhật ký, hoàn chỉnh với loại và công nghệ của nó.
+
+
+00:07:49,790 --> 00:07:54,050
+I hope you enjoyed this experience and feel ready to continue to the next service.
+Tôi hy vọng bạn thích trải nghiệm này và cảm thấy sẵn sàng để tiếp tục dịch vụ tiếp theo.
+
+
+00:07:54,080 --> 00:07:56,870
+It's going to be at least as fun as this one.
+Nó sẽ vui ít nhất là như thế này.
+
+
+00:07:56,900 --> 00:08:02,360
+Remember, if you have any questions or comments, do not hesitate to contact me and I promise I'll
+Hãy nhớ rằng, nếu bạn có bất kỳ câu hỏi hoặc ý kiến nào, đừng ngần ngại liên hệ với tôi và tôi hứa sẽ
+
+
+00:08:02,360 --> 00:08:04,260
+get back to you as quickly as possible.
+trả lời bạn sớm nhất có thể.
+
+
+00:08:04,280 --> 00:08:07,070
+So let's continue to our next service.
+Vậy chúng ta hãy tiếp tục buổi lễ tiếp theo.
+
+

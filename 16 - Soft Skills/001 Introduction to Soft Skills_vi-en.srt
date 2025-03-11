@@ -1,0 +1,125 @@
+00:00:00,260 --> 00:00:02,690
+Welcome to the Soft Skills section.
+Chào mừng đến với phần Kỹ năng mềm.
+
+
+00:00:02,840 --> 00:00:08,240
+In order to be a great architect, it's not enough to be well-versed in technology stacks, architectural
+Để trở thành một kiến trúc sư giỏi, chỉ thành thạo về các công nghệ, kiến trúc 3 là chưa đủ.
+
+
+00:00:08,240 --> 00:00:10,940
+patterns, and coding best practices.
+mẫu và các phương pháp mã hóa tốt nhất.
+
+
+00:00:11,090 --> 00:00:14,150
+A great architect must have great soft skills.
+Một kiến trúc sư giỏi phải có kỹ năng mềm tốt.
+
+
+00:00:14,180 --> 00:00:20,360
+These soft skills are essential when communicating with a project team from the developers to the project
+Những kỹ năng mềm này rất cần thiết khi giao tiếp với nhóm dự án từ các nhà phát triển đến dự án
+
+
+00:00:20,360 --> 00:00:23,180
+manager and even the CTO and CEO.
+quản lý và thậm chí là giám đốc công nghệ và giám đốc điều hành.
+
+
+00:00:23,600 --> 00:00:25,700
+Let's think about it for a moment.
+Chúng ta hãy suy nghĩ về điều đó một lát.
+
+
+00:00:26,240 --> 00:00:30,140
+A software architect is in a very unique position in the organizational tree.
+Kiến trúc sư phần mềm có vị trí rất đặc biệt trong cây tổ chức.
+
+
+00:00:30,170 --> 00:00:35,720
+She has a very deep knowledge about the application and its architecture, and she is expected to guide
+Cô ấy có kiến thức rất sâu rộng về ứng dụng và kiến trúc của nó, và cô ấy được kỳ vọng sẽ hướng dẫn
+
+
+00:00:35,720 --> 00:00:38,390
+the development team about the actual implementation.
+nhóm phát triển về việc triển khai thực tế.
+
+
+00:00:38,390 --> 00:00:41,890
+But in reality, she has no authority over them.
+Nhưng thực tế là cô ấy không có thẩm quyền gì đối với họ.
+
+
+00:00:41,900 --> 00:00:44,480
+She can't command the team What to do.
+Cô ấy không thể ra lệnh cho đội phải làm gì.
+
+
+00:00:44,510 --> 00:00:46,370
+She can only recommend.
+Cô ấy chỉ có thể giới thiệu.
+
+
+00:00:46,400 --> 00:00:52,760
+Now, if the architect is an arrogant, righteous person that makes everybody else feel inferior, no
+Bây giờ, nếu kiến trúc sư là một người kiêu ngạo, chính trực khiến mọi người khác cảm thấy thấp kém, thì số
+
+
+00:00:52,760 --> 00:00:54,200
+one will want to work with him.
+người ta sẽ muốn làm việc với anh ấy.
+
+
+00:00:54,200 --> 00:00:57,950
+And as a result, no one would want to implement the architecture.
+Và kết quả là không ai muốn triển khai kiến trúc này.
+
+
+00:00:58,130 --> 00:01:04,379
+The architect must be able to make the team do what he wants without the actual authority over them.
+Kiến trúc sư phải có khả năng khiến nhóm làm những gì anh ta muốn mà không cần có thẩm quyền thực sự đối với họ.
+
+
+00:01:04,410 --> 00:01:10,560
+This is called influence without authority, and this is one of the biggest challenges in the software
+Điều này được gọi là ảnh hưởng không có thẩm quyền và đây là một trong những thách thức lớn nhất trong phần mềm
+
+
+00:01:10,560 --> 00:01:11,190
+world.
+thế giới.
+
+
+00:01:11,340 --> 00:01:17,550
+You don't want to make the developers do as you say because they have to, but because they want to.
+Bạn không muốn bắt các nhà phát triển làm theo những gì bạn nói vì họ phải làm mà vì họ muốn làm.
+
+
+00:01:17,580 --> 00:01:23,280
+In this section, we will explore some soft skills that will greatly help you improve your communication
+Trong phần này, chúng ta sẽ khám phá một số kỹ năng mềm sẽ giúp bạn cải thiện đáng kể khả năng giao tiếp của mình
+
+
+00:01:23,280 --> 00:01:26,460
+skills with the team and make them want to work with you.
+kỹ năng với nhóm và khiến họ muốn làm việc với bạn.
+
+
+00:01:26,490 --> 00:01:32,250
+Learning and internalizing these skills will make you a better architect, someone who is extremely
+Học và tiếp thu những kỹ năng này sẽ giúp bạn trở thành một kiến trúc sư giỏi hơn, một người cực kỳ
+
+
+00:01:32,250 --> 00:01:38,010
+nice to work with and as an added bonus, also a better person, which is always good.
+rất vui khi được làm việc cùng và như một phần thưởng bổ sung, cũng là một người tốt hơn, điều này luôn tốt.
+
+
+00:01:38,010 --> 00:01:39,480
+So let's go.
+Vậy chúng ta đi thôi.
+
+

@@ -1,0 +1,60 @@
+00:00:00,230 --> 00:00:02,730
+Welcome to the Application Types section.
+Chào mừng đến với phần Loại ứng dụng.
+
+
+00:00:02,750 --> 00:00:08,420
+In this section we will discuss the various application types and architect will work with one of the
+Trong phần này chúng ta sẽ thảo luận về các loại ứng dụng khác nhau và kiến trúc sư sẽ làm việc với một trong 3 loại
+
+
+00:00:08,420 --> 00:00:13,340
+first things an architect should do when working on a system is to determine what kind of applications
+điều đầu tiên mà một kiến trúc sư nên làm khi làm việc trên một hệ thống là xác định loại ứng dụng nào
+
+
+00:00:13,340 --> 00:00:14,660
+the system is going to be.
+hệ thống sẽ là.
+
+
+00:00:14,690 --> 00:00:20,120
+This decision is usually made after working on the requirements, either functional or non-functional.
+Quyết định này thường được đưa ra sau khi xử lý các yêu cầu, có thể là chức năng hoặc không chức năng.
+
+
+00:00:20,210 --> 00:00:24,950
+In this phase, you have already learned what can be learned about the functionality of the system and
+Trong giai đoạn này, bạn đã học được những gì có thể học được về chức năng của hệ thống và
+
+
+00:00:24,950 --> 00:00:26,990
+the environment it will be operating in.
+môi trường mà nó sẽ hoạt động.
+
+
+00:00:26,990 --> 00:00:32,509
+And you can make an educational decision about the type of applications that best fits these requirements.
+Và bạn có thể đưa ra quyết định giáo dục về loại ứng dụng phù hợp nhất với các yêu cầu này.
+
+
+00:00:32,630 --> 00:00:37,010
+This is an important decision since each type has its own pros and cons.
+Đây là một quyết định quan trọng vì mỗi loại đều có ưu và nhược điểm riêng.
+
+
+00:00:37,040 --> 00:00:41,990
+Moreover, once the decision is made, it's usually not easy to switch to other types.
+Hơn nữa, một khi đã quyết định, thường không dễ để chuyển sang loại khác.
+
+
+00:00:42,260 --> 00:00:51,680
+The most common application types are web apps, web API, mobile console service and desktop.
+Các loại ứng dụng phổ biến nhất là ứng dụng web, API web, dịch vụ bảng điều khiển di động và máy tính để bàn.
+
+
+00:00:51,800 --> 00:00:53,900
+Let's go and discuss each one of them.
+Chúng ta hãy cùng thảo luận từng vấn đề một nhé.
+
+

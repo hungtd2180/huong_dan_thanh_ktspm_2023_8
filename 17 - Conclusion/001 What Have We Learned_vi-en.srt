@@ -1,0 +1,300 @@
+00:00:00,380 --> 00:00:01,020
+Wow.
+Ồ.
+
+
+00:00:01,130 --> 00:00:02,180
+We did it.
+Chúng tôi đã làm được.
+
+
+00:00:02,210 --> 00:00:05,570
+We've just reached the end of a very long journey.
+Chúng ta vừa mới đến đích của một cuộc hành trình rất dài.
+
+
+00:00:05,600 --> 00:00:11,910
+You began this journey as a developer or system analyst or team leader, and you end it as an architect.
+Bạn bắt đầu hành trình này với tư cách là một nhà phát triển hoặc nhà phân tích hệ thống hoặc trưởng nhóm, và bạn kết thúc nó với tư cách là một kiến trúc sư.
+
+
+00:00:11,930 --> 00:00:13,160
+Congratulations.
+Xin chúc mừng.
+
+
+00:00:13,400 --> 00:00:17,000
+Let's have a quick review of what we learned in this course.
+Chúng ta hãy cùng xem lại nhanh những gì chúng ta đã học trong khóa học này.
+
+
+00:00:17,270 --> 00:00:22,760
+After a brief introduction in which we talked about reasons to be an architect, we asked, What is
+Sau phần giới thiệu ngắn gọn trong đó chúng tôi nói về lý do để trở thành một kiến trúc sư, chúng tôi đã hỏi, 8 là gì?
+
+
+00:00:22,760 --> 00:00:23,960
+a software architect?
+một kiến trúc sư phần mềm?
+
+
+00:00:23,990 --> 00:00:26,430
+We talked about three types of architects.
+Chúng tôi đã nói về ba loại kiến trúc sư.
+
+
+00:00:26,450 --> 00:00:27,920
+Infrastructure architect.
+Kiến trúc sư cơ sở hạ tầng.
+
+
+00:00:27,920 --> 00:00:30,830
+Software Architect and enterprise architect.
+Kiến trúc sư phần mềm và kiến trúc sư doanh nghiệp.
+
+
+00:00:30,860 --> 00:00:36,440
+We also talked about the architect in the organizational tree and that she should be able to code.
+Chúng tôi cũng đã nói về kiến trúc sư trong cây tổ chức và cô ấy phải có khả năng lập trình.
+
+
+00:00:36,830 --> 00:00:40,430
+In the next section, we discussed the architect's mindset.
+Trong phần tiếp theo, chúng ta sẽ thảo luận về tư duy của kiến trúc sư.
+
+
+00:00:40,460 --> 00:00:46,460
+We emphasized an architect must be business oriented and make sure the architecture contributes to the
+Chúng tôi nhấn mạnh rằng một kiến trúc sư phải có định hướng kinh doanh và đảm bảo kiến trúc đóng góp vào
+
+
+00:00:46,460 --> 00:00:47,900
+bottom line of the business.
+lợi nhuận ròng của doanh nghiệp.
+
+
+00:00:48,050 --> 00:00:53,450
+Then we talked about the architecture process and outlined the various steps that an architect should
+Sau đó, chúng tôi nói về quy trình kiến trúc và phác thảo các bước khác nhau mà một kiến trúc sư nên thực hiện.
+
+
+00:00:53,450 --> 00:00:57,500
+take in order to make sure the architecture is sound and successful.
+thực hiện để đảm bảo kiến trúc vững chắc và thành công.
+
+
+00:00:57,620 --> 00:01:03,960
+We then explored the system requirements and discussed the difference between functional and non-functional
+Sau đó, chúng tôi khám phá các yêu cầu của hệ thống và thảo luận về sự khác biệt giữa chức năng và không chức năng
+
+
+00:01:03,960 --> 00:01:04,920
+requirements.
+yêu cầu.
+
+
+00:01:05,370 --> 00:01:11,550
+After the requirements, we looked at a list of the various application types and determined which type
+Sau khi có các yêu cầu, chúng tôi đã xem xét danh sách các loại ứng dụng khác nhau và xác định loại nào
+
+
+00:01:11,550 --> 00:01:13,950
+is the best fit for each scenario.
+là phù hợp nhất cho từng tình huống.
+
+
+00:01:14,160 --> 00:01:19,920
+Having selected the application type, we looked at technology stack and discussed the various technologies
+Sau khi chọn loại ứng dụng, chúng tôi đã xem xét ngăn xếp công nghệ và thảo luận về các công nghệ khác nhau
+
+
+00:01:19,920 --> 00:01:26,460
+that are candidates for back end, front end mobile and desktop apps, as well as the difference between
+là những ứng cử viên cho ứng dụng di động và máy tính để bàn, cũng như sự khác biệt giữa
+
+
+00:01:26,460 --> 00:01:29,190
+relational databases and NoSQL databases.
+cơ sở dữ liệu quan hệ và cơ sở dữ liệu NoSQL.
+
+
+00:01:29,220 --> 00:01:33,090
+We concluded by emphasizing this decision must be made rationally.
+Chúng tôi kết luận bằng cách nhấn mạnh rằng quyết định này phải được đưa ra một cách hợp lý.
+
+
+00:01:33,120 --> 00:01:40,260
+Since this topic is often quite loaded, we then met a family of quality attributes called Collectively
+Vì chủ đề này thường khá nặng nề, nên chúng tôi đã gặp một nhóm các thuộc tính chất lượng được gọi là Collectively
+
+
+00:01:40,260 --> 00:01:41,730
+The Star Highlights.
+Điểm nổi bật của Star.
+
+
+00:01:41,850 --> 00:01:48,330
+We talked about scalability, manageability, modularity, extensibility and testability and explained
+Chúng tôi đã nói về khả năng mở rộng, khả năng quản lý, tính mô-đun, khả năng mở rộng và khả năng kiểm tra và giải thích
+
+
+00:01:48,330 --> 00:01:51,180
+their importance in the overall architecture.
+tầm quan trọng của chúng trong kiến trúc tổng thể.
+
+
+00:01:51,210 --> 00:01:54,270
+And then we started to discuss architecture.
+Và sau đó chúng tôi bắt đầu thảo luận về kiến trúc.
+
+
+00:01:54,450 --> 00:02:00,690
+We first talked about components architecture, explained what a component is and how it should be designed.
+Đầu tiên chúng ta nói về kiến trúc thành phần, giải thích thành phần là gì và cách thiết kế thành phần.
+
+
+00:02:00,720 --> 00:02:06,540
+We also talked about layered architecture, one of the most important concepts in the architecture world,
+Chúng tôi cũng đã nói về kiến trúc nhiều lớp, một trong những khái niệm quan trọng nhất trong thế giới kiến trúc,
+
+
+00:02:06,540 --> 00:02:10,650
+and one that will be used in almost every application you will design.
+và một ứng dụng sẽ được sử dụng trong hầu hết mọi ứng dụng bạn thiết kế.
+
+
+00:02:10,889 --> 00:02:17,070
+We then learned a little bit about design patterns, although these are relevant mainly to developers.
+Sau đó, chúng tôi đã học được một chút về các mẫu thiết kế, mặc dù chúng chủ yếu liên quan đến các nhà phát triển.
+
+
+00:02:17,100 --> 00:02:19,740
+We talked about their importance to the architect.
+Chúng tôi đã nói về tầm quan trọng của chúng đối với kiến trúc sư.
+
+
+00:02:20,750 --> 00:02:26,180
+Having concluded the component architecture, we turned our attention to the system architecture and
+Sau khi kết thúc kiến trúc thành phần, chúng tôi chuyển sự chú ý của mình sang kiến trúc hệ thống và
+
+
+00:02:26,180 --> 00:02:32,990
+discussed concepts such as loose coupling, stateless caching, messaging and logging and monitoring.
+thảo luận các khái niệm như liên kết lỏng lẻo, bộ nhớ đệm không trạng thái, nhắn tin và ghi nhật ký và giám sát.
+
+
+00:02:33,080 --> 00:02:39,020
+We continued to the next section to discuss various external considerations you must be aware of, such
+Chúng tôi tiếp tục phần tiếp theo để thảo luận về nhiều cân nhắc bên ngoài khác nhau mà bạn phải biết, chẳng hạn như
+
+
+00:02:39,020 --> 00:02:45,410
+as deadlines and costs, and understood that ignoring them might render our architecture irrelevant.
+như thời hạn và chi phí, và hiểu rằng việc bỏ qua chúng có thể khiến kiến trúc của chúng ta trở nên không liên quan.
+
+
+00:02:45,530 --> 00:02:50,900
+And then we talked about the architecture document, probably the most important aspect of the architect's
+Và sau đó chúng tôi nói về tài liệu kiến trúc, có lẽ là khía cạnh quan trọng nhất của kiến trúc sư
+
+
+00:02:50,900 --> 00:02:51,470
+work.
+công việc.
+
+
+00:02:51,500 --> 00:02:57,560
+This document summarizes all the architecture process and provides the team with comprehensive guidance
+Tài liệu này tóm tắt toàn bộ quy trình kiến trúc và cung cấp cho nhóm hướng dẫn toàn diện
+
+
+00:02:57,560 --> 00:02:59,030
+about their system.
+về hệ thống của họ.
+
+
+00:02:59,270 --> 00:03:06,410
+And then we put it all to a practical test and discussed a real world case study of an Iot company that
+Và sau đó chúng tôi đưa tất cả vào thử nghiệm thực tế và thảo luận về một nghiên cứu điển hình thực tế của một công ty IoT có
+
+
+00:03:06,410 --> 00:03:07,770
+needs a new system.
+cần một hệ thống mới.
+
+
+00:03:07,790 --> 00:03:13,220
+We went through all the steps discussed earlier and saw how to utilize them in practice.
+Chúng tôi đã thực hiện tất cả các bước đã thảo luận trước đó và thấy cách sử dụng chúng trong thực tế.
+
+
+00:03:13,250 --> 00:03:19,190
+The result of this exercise was a real practical architecture document that you can freely use in your
+Kết quả của bài tập này là một tài liệu kiến trúc thực tế thực tế mà bạn có thể tự do sử dụng trong
+
+
+00:03:19,190 --> 00:03:20,190
+own systems.
+hệ thống riêng.
+
+
+00:03:20,220 --> 00:03:26,690
+Next, we discussed some advanced architecture topics such as event sourcing and microservices.
+Tiếp theo, chúng tôi thảo luận một số chủ đề kiến trúc nâng cao như nguồn sự kiện và dịch vụ vi mô.
+
+
+00:03:26,700 --> 00:03:30,960
+You won't necessarily use them, but it's a good idea to be familiar with them.
+Bạn không nhất thiết phải sử dụng chúng, nhưng tốt nhất là nên làm quen với chúng.
+
+
+00:03:30,990 --> 00:03:35,310
+And last we learned about some soft skills architects have to have.
+Và cuối cùng chúng ta đã tìm hiểu về một số kỹ năng mềm mà kiến trúc sư cần có.
+
+
+00:03:35,340 --> 00:03:39,700
+We discussed listening, dealing with criticism, public speaking and more.
+Chúng tôi đã thảo luận về việc lắng nghe, giải quyết lời chỉ trích, nói trước công chúng và nhiều vấn đề khác.
+
+
+00:03:39,720 --> 00:03:45,110
+All of these skills will make us all better architects and basically better persons.
+Tất cả những kỹ năng này sẽ giúp chúng ta trở thành những kiến trúc sư giỏi hơn và về cơ bản là những con người tốt hơn.
+
+
+00:03:45,120 --> 00:03:47,820
+And here we are at the end of it all.
+Và đây là kết thúc của tất cả.
+
+
+00:03:48,300 --> 00:03:52,830
+I hope you had a great time in this course and I hope you've learned a lot.
+Tôi hy vọng bạn đã có thời gian tuyệt vời trong khóa học này và tôi hy vọng bạn đã học được nhiều điều.
+
+
+00:03:52,860 --> 00:03:57,690
+I hope you feel ready for the next challenge and that you have all the tools you need to become a great
+Tôi hy vọng bạn cảm thấy sẵn sàng cho thử thách tiếp theo và bạn có tất cả các công cụ cần thiết để trở thành một 57 tuyệt vời
+
+
+00:03:57,690 --> 00:03:58,470
+architect.
+kiến trúc sư.
+
+
+00:03:58,590 --> 00:04:03,430
+As always, do not hesitate to contact me with every question or comment you have.
+Như thường lệ, đừng ngần ngại liên hệ với tôi nếu bạn có bất kỳ câu hỏi hoặc bình luận nào.
+
+
+00:04:03,450 --> 00:04:07,200
+I love to hear from my students and I promise to get back to you.
+Tôi rất muốn nghe ý kiến từ học sinh của mình và tôi hứa sẽ trả lời bạn.
+
+
+00:04:07,230 --> 00:04:13,290
+Thanks for being with me in this course and good luck in your new life as a software architect.
+Cảm ơn bạn đã đồng hành cùng tôi trong khóa học này và chúc bạn may mắn trong cuộc sống mới với tư cách là một kiến trúc sư phần mềm.
+
+

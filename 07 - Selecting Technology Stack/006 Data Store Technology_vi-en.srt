@@ -1,0 +1,585 @@
+00:00:00,260 --> 00:00:05,180
+Selecting the datastore technology is one of the more important decisions you will make in the project
+Việc lựa chọn công nghệ lưu trữ dữ liệu là một trong những quyết định quan trọng nhất mà bạn sẽ đưa ra trong dự án
+
+
+00:00:05,180 --> 00:00:05,660
+design.
+thiết kế.
+
+
+00:00:05,689 --> 00:00:10,610
+After all, this is where your precious data is going to be stored for the use of the application.
+Rốt cuộc, đây chính là nơi lưu trữ dữ liệu quý giá của bạn để sử dụng cho ứng dụng.
+
+
+00:00:10,760 --> 00:00:12,320
+So how do we do that?
+Vậy chúng ta làm điều đó như thế nào?
+
+
+00:00:12,470 --> 00:00:17,360
+First, let's make an introduction with the two types of datastore exist today.
+Trước tiên, chúng ta hãy cùng tìm hiểu về hai loại kho dữ liệu hiện nay.
+
+
+00:00:17,450 --> 00:00:23,540
+Note that we are not talking here about DataStore products such as SQL Server or MongoDB, but about
+Lưu ý rằng chúng tôi không nói về các sản phẩm DataStore như SQL Server hoặc MongoDB, mà là về
+
+
+00:00:23,540 --> 00:00:29,630
+two concepts of data stores, and those concepts are SQL and NoSQL.
+hai khái niệm về kho dữ liệu và những khái niệm đó là SQL và NoSQL.
+
+
+00:00:29,780 --> 00:00:34,400
+Now you have probably have heard about those two concepts, but just to ensure we are all on the same
+Bây giờ bạn có thể đã nghe về hai khái niệm đó, nhưng để đảm bảo rằng tất cả chúng ta đều ở cùng một cấp độ
+
+
+00:00:34,400 --> 00:00:37,070
+page, let's explain what each type is.
+trang, chúng ta hãy giải thích từng loại là gì.
+
+
+00:00:37,580 --> 00:00:42,140
+SQL databases or relational databases are the more traditional databases.
+Cơ sở dữ liệu SQL hoặc cơ sở dữ liệu quan hệ là những cơ sở dữ liệu truyền thống hơn.
+
+
+00:00:42,140 --> 00:00:46,040
+They have been around for almost 40 years and have served the industry well.
+Họ đã hoạt động được gần 40 năm và phục vụ tốt cho ngành công nghiệp.
+
+
+00:00:46,070 --> 00:00:51,570
+The most popular relational databases are Microsoft, SQL Server, Oracle and MySQL.
+Các cơ sở dữ liệu quan hệ phổ biến nhất là Microsoft, SQL Server, Oracle và MySQL.
+
+
+00:00:51,590 --> 00:00:54,710
+Relational databases have some common characteristics.
+Cơ sở dữ liệu quan hệ có một số đặc điểm chung.
+
+
+00:00:54,950 --> 00:00:57,050
+They store the data in tables.
+Họ lưu trữ dữ liệu trong các bảng.
+
+
+00:00:57,050 --> 00:01:03,360
+Each table stores a specific type of entity and each table has a concrete set of columns which represent
+Mỗi bảng lưu trữ một loại thực thể cụ thể và mỗi bảng có một tập hợp các cột cụ thể biểu diễn
+
+
+00:01:03,360 --> 00:01:05,430
+the various properties of the entities.
+các tính chất khác nhau của các thực thể.
+
+
+00:01:05,459 --> 00:01:11,610
+For example, the following table demonstrates how a very simplified order entity will be represented
+Ví dụ, bảng sau đây minh họa cách một thực thể đơn giản hóa rất nhiều sẽ được biểu diễn
+
+
+00:01:11,610 --> 00:01:13,410
+in a relational database.
+trong cơ sở dữ liệu quan hệ.
+
+
+00:01:13,890 --> 00:01:19,420
+Tables can have relationships with each other, hence the relational in the database name.
+Các bảng có thể có mối quan hệ với nhau, do đó có mối quan hệ trong tên cơ sở dữ liệu.
+
+
+00:01:19,440 --> 00:01:25,980
+For example, if I have an order table, it will probably have also an order items table which will
+Ví dụ, nếu tôi có một bảng đơn hàng, nó có thể cũng sẽ có một bảng mục đơn hàng sẽ
+
+
+00:01:25,980 --> 00:01:27,630
+contain the items in the order.
+chứa các mục trong đơn hàng.
+
+
+00:01:27,660 --> 00:01:32,640
+Each row in the order items table relates to a specific order in the orders table.
+Mỗi hàng trong bảng mục đơn hàng liên quan đến một đơn hàng cụ thể trong bảng đơn hàng.
+
+
+00:01:32,670 --> 00:01:36,660
+This relationship is done with the order ID field of the order item.
+Mối quan hệ này được thực hiện với trường ID đơn hàng của mục đơn hàng.
+
+
+00:01:37,050 --> 00:01:41,460
+Another characteristic of relational database is transactions.
+Một đặc điểm khác của cơ sở dữ liệu quan hệ là giao dịch.
+
+
+00:01:41,490 --> 00:01:47,670
+A transaction represents an atomic set of actions that either executes all the actions or executes none
+Một giao dịch biểu diễn một tập hợp nguyên tử các hành động thực hiện tất cả các hành động hoặc không thực hiện bất kỳ hành động nào
+
+
+00:01:47,700 --> 00:01:48,210
+of them.
+của họ.
+
+
+00:01:48,240 --> 00:01:52,570
+There is no way that only part of the actions in the transaction will be executed.
+Không có cách nào mà chỉ một phần các hành động trong giao dịch sẽ được thực hiện.
+
+
+00:01:52,620 --> 00:01:58,810
+For example, if the customer placed an item in the order, the items stock must be decreased by one.
+Ví dụ, nếu khách hàng đặt một mặt hàng vào đơn hàng, số lượng mặt hàng đó phải giảm đi một.
+
+
+00:01:58,830 --> 00:02:02,760
+It should never happen that the item was placed, but the stock was not updated.
+Không bao giờ được xảy ra trường hợp mặt hàng đã được đặt nhưng số lượng hàng chưa được cập nhật.
+
+
+00:02:02,790 --> 00:02:04,350
+This is a transaction.
+Đây là một giao dịch.
+
+
+00:02:04,560 --> 00:02:09,509
+Transactions are defined with the acid acronym, which stands for Atomicity.
+Giao dịch được định nghĩa bằng từ viết tắt acid, có nghĩa là Atomicity.
+
+
+00:02:09,539 --> 00:02:13,440
+Consistency, Isolation and Durability.
+Tính nhất quán, cô lập và độ bền.
+
+
+00:02:13,470 --> 00:02:17,490
+Only a database that supports all these can claim to support transactions.
+Chỉ có cơ sở dữ liệu hỗ trợ tất cả những điều này mới có thể tuyên bố hỗ trợ giao dịch.
+
+
+00:02:18,150 --> 00:02:23,070
+Transactions are one of the most important capabilities of relational database, and naturally they
+Giao dịch là một trong những khả năng quan trọng nhất của cơ sở dữ liệu quan hệ và tất nhiên chúng
+
+
+00:02:23,070 --> 00:02:24,060
+are widely used.
+được sử dụng rộng rãi.
+
+
+00:02:24,090 --> 00:02:29,040
+Of course, there are a lot to talk about transactions in relational databases, but that will be out
+Tất nhiên, có rất nhiều điều để nói về các giao dịch trong cơ sở dữ liệu quan hệ, nhưng điều đó sẽ được nói đến sau.
+
+
+00:02:29,040 --> 00:02:30,390
+of scope of this course.
+của phạm vi của khóa học này.
+
+
+00:02:30,840 --> 00:02:34,690
+The last characteristic we will talk about is the querying language.
+Đặc điểm cuối cùng chúng ta sẽ nói đến là ngôn ngữ truy vấn.
+
+
+00:02:34,710 --> 00:02:38,870
+All the relational databases enable querying data using the SQL Language.
+Tất cả các cơ sở dữ liệu quan hệ đều cho phép truy vấn dữ liệu bằng Ngôn ngữ SQL.
+
+
+00:02:38,880 --> 00:02:46,020
+SQL, which stands for Structured Query Language is a very mature language that was introduced by IBM
+SQL, viết tắt của Structured Query Language, là một ngôn ngữ rất hoàn thiện được IBM giới thiệu vào năm
+
+
+00:02:46,050 --> 00:02:47,520
+more than 40 years ago.
+hơn 40 năm trước.
+
+
+00:02:47,550 --> 00:02:52,860
+It allows querying and modifying data in an easy to understand language and is considered the de facto
+Nó cho phép truy vấn và sửa đổi dữ liệu bằng ngôn ngữ dễ hiểu và được coi là
+
+
+00:02:52,860 --> 00:02:56,310
+standard for accessing data in relational databases.
+tiêu chuẩn để truy cập dữ liệu trong cơ sở dữ liệu quan hệ.
+
+
+00:02:56,340 --> 00:03:02,640
+For example, here is an SQL snippet that demonstrates querying the orders table for orders that were
+Ví dụ, đây là một đoạn mã SQL minh họa việc truy vấn bảng đơn hàng cho các đơn hàng có giá trị
+
+
+00:03:02,640 --> 00:03:05,790
+generated since January 1st, 2018.
+được tạo ra từ ngày 1 tháng 1 năm 2018.
+
+
+00:03:06,420 --> 00:03:09,480
+And now let's look at NoSQL database.
+Và bây giờ chúng ta hãy xem xét cơ sở dữ liệu NoSQL.
+
+
+00:03:09,510 --> 00:03:14,860
+As their name suggests, NoSQL databases try to be the opposite of SQL databases.
+Như tên gọi của chúng, cơ sở dữ liệu NoSQL cố gắng trở thành đối lập với cơ sở dữ liệu SQL.
+
+
+00:03:14,880 --> 00:03:19,570
+One of the most significant limitations of SQL databases are performance and size.
+Một trong những hạn chế quan trọng nhất của cơ sở dữ liệu SQL là hiệu suất và kích thước.
+
+
+00:03:19,590 --> 00:03:25,410
+Since relational databases maintain schema for each record and enforce transactions, the performance
+Vì cơ sở dữ liệu quan hệ duy trì lược đồ cho mỗi bản ghi và thực thi các giao dịch, hiệu suất
+
+
+00:03:25,410 --> 00:03:28,350
+degrade as the database is getting larger and larger.
+suy thoái khi cơ sở dữ liệu ngày càng lớn hơn.
+
+
+00:03:28,380 --> 00:03:31,320
+This is the problem that NoSQL movement is trying to solve.
+Đây là vấn đề mà phong trào NoSQL đang cố gắng giải quyết.
+
+
+00:03:31,350 --> 00:03:35,310
+The greatest strength of NoSQL is a scale and performance.
+Điểm mạnh nhất của NoSQL là khả năng mở rộng và hiệu suất.
+
+
+00:03:35,340 --> 00:03:40,110
+NoSQL databases can become really huge and they are often distributed on many servers.
+Cơ sở dữ liệu NoSQL có thể trở nên rất lớn và chúng thường được phân phối trên nhiều máy chủ.
+
+
+00:03:40,110 --> 00:03:47,760
+For example, Baidu, the Chinese search engine stores more than 300TB on MongoDB, one of the most
+Ví dụ, Baidu, công cụ tìm kiếm của Trung Quốc lưu trữ hơn 300TB trên MongoDB, một trong
+
+
+00:03:47,760 --> 00:03:49,320
+popular NoSQL databases.
+cơ sở dữ liệu NoSQL phổ biến.
+
+
+00:03:49,320 --> 00:03:53,940
+And it's not uncommon to look at NoSQL databases with billions of entities.
+Và không có gì lạ khi nhìn vào cơ sở dữ liệu NoSQL với hàng tỷ thực thể.
+
+
+00:03:54,930 --> 00:04:01,020
+These trends dictate the capabilities of NoSQL databases and the differences between them and traditional
+Những xu hướng này quyết định khả năng của cơ sở dữ liệu NoSQL và sự khác biệt giữa chúng với cơ sở dữ liệu truyền thống
+
+
+00:04:01,020 --> 00:04:02,190
+SQL databases.
+Cơ sở dữ liệu SQL.
+
+
+00:04:02,340 --> 00:04:06,450
+First of all, NoSQL databases are in general schemaless.
+Trước hết, cơ sở dữ liệu NoSQL nói chung là không có lược đồ.
+
+
+00:04:06,480 --> 00:04:12,150
+What that means is that while SQL databases stores the data in a well defined table with well defined
+Điều đó có nghĩa là trong khi cơ sở dữ liệu SQL lưu trữ dữ liệu trong một bảng được xác định rõ ràng với
+
+
+00:04:12,180 --> 00:04:15,540
+columns, which defines an actual schema for the entities.
+cột, xác định lược đồ thực tế cho các thực thể.
+
+
+00:04:15,570 --> 00:04:18,360
+NoSQL databases do not force any schema.
+Cơ sở dữ liệu NoSQL không áp đặt bất kỳ lược đồ nào.
+
+
+00:04:18,390 --> 00:04:23,220
+They construct completely different entities with completely different fields in the same table.
+Họ xây dựng các thực thể hoàn toàn khác nhau với các trường hoàn toàn khác nhau trong cùng một bảng.
+
+
+00:04:23,580 --> 00:04:30,150
+Usually these entities are stored as Json documents, and since Json is a fully flexible format, you
+Thông thường các thực thể này được lưu trữ dưới dạng tài liệu Json và vì Json là định dạng hoàn toàn linh hoạt nên bạn
+
+
+00:04:30,150 --> 00:04:32,610
+are not limited to a specific field or size.
+không giới hạn ở một lĩnh vực hoặc kích thước cụ thể.
+
+
+00:04:32,640 --> 00:04:33,540
+This is great.
+Thật tuyệt vời.
+
+
+00:04:33,540 --> 00:04:39,270
+If your application is going to store semi structured or unstructured data which does not have a concrete
+Nếu ứng dụng của bạn sẽ lưu trữ dữ liệu bán cấu trúc hoặc không có cấu trúc không có 68 cụ thể
+
+
+00:04:39,270 --> 00:04:39,720
+schema.
+sơ đồ.
+
+
+00:04:39,810 --> 00:04:44,130
+In this case, the flexibility offered by NoSQL database is a great advantage.
+Trong trường hợp này, tính linh hoạt mà cơ sở dữ liệu NoSQL mang lại là một lợi thế lớn.
+
+
+00:04:44,430 --> 00:04:47,470
+Next, let's talk about transactions.
+Tiếp theo, chúng ta hãy nói về giao dịch.
+
+
+00:04:47,490 --> 00:04:53,850
+We explained what a transaction is in relational databases and why it's so important with NoSQL databases.
+Chúng tôi đã giải thích giao dịch là gì trong cơ sở dữ liệu quan hệ và tại sao nó lại quan trọng với cơ sở dữ liệu NoSQL.
+
+
+00:04:53,880 --> 00:04:55,780
+Transaction support is varied.
+Hỗ trợ giao dịch rất đa dạng.
+
+
+00:04:55,800 --> 00:04:59,970
+Most databases support a concept called eventual consistency, which.
+Hầu hết các cơ sở dữ liệu đều hỗ trợ một khái niệm gọi là tính nhất quán cuối cùng, đó là.
+
+
+00:05:00,050 --> 00:05:05,230
+Means that the database guarantees that the action will be performed, but it will not guarantee when
+Có nghĩa là cơ sở dữ liệu đảm bảo rằng hành động sẽ được thực hiện, nhưng nó sẽ không đảm bảo khi nào
+
+
+00:05:05,230 --> 00:05:06,970
+exactly it will be performed.
+chính xác nó sẽ được thực hiện.
+
+
+00:05:07,030 --> 00:05:12,520
+Of course, we are not talking here about minutes and usually not about seconds, but it won't be immediate.
+Tất nhiên, chúng ta không nói về phút ở đây và thường không nói về giây, nhưng nó sẽ không diễn ra ngay lập tức.
+
+
+00:05:12,550 --> 00:05:17,500
+This means the code must be able to cope with temporary inconsistencies in the data.
+Điều này có nghĩa là mã phải có khả năng xử lý những sự không nhất quán tạm thời trong dữ liệu.
+
+
+00:05:17,710 --> 00:05:19,660
+Now, this might sound strange.
+Bây giờ, điều này có thể nghe có vẻ lạ.
+
+
+00:05:19,660 --> 00:05:22,630
+Why wouldn't NoSQL database support acid transactions?
+Tại sao cơ sở dữ liệu NoSQL không hỗ trợ giao dịch acid?
+
+
+00:05:23,170 --> 00:05:27,370
+The answer lies in the NoSQL mission statement, size and performance.
+Câu trả lời nằm ở tuyên bố sứ mệnh, quy mô và hiệu suất của NoSQL.
+
+
+00:05:27,490 --> 00:05:32,530
+As we mentioned before, transactions are what block relational database from reaching the level of
+Như chúng tôi đã đề cập trước đó, các giao dịch là thứ ngăn chặn cơ sở dữ liệu quan hệ đạt đến cấp độ
+
+
+00:05:32,530 --> 00:05:36,270
+performance required today by huge data consumers and creators.
+hiệu suất được yêu cầu ngày nay bởi người tiêu dùng và người tạo dữ liệu lớn.
+
+
+00:05:36,280 --> 00:05:40,280
+And that's why NoSQL databases support only part of the definition.
+Và đó là lý do tại sao cơ sở dữ liệu NoSQL chỉ hỗ trợ một phần của định nghĩa.
+
+
+00:05:40,300 --> 00:05:45,550
+Each database select its own version of transaction support, and it's important to look closely at
+Mỗi cơ sở dữ liệu chọn phiên bản hỗ trợ giao dịch riêng của mình và điều quan trọng là phải xem xét kỹ lưỡng
+
+
+00:05:45,550 --> 00:05:48,970
+the transaction support of the NoSQL database you are going to work with.
+hỗ trợ giao dịch của cơ sở dữ liệu NoSQL mà bạn sẽ làm việc cùng.
+
+
+00:05:49,390 --> 00:05:52,000
+Lastly, let's talk about querying.
+Cuối cùng, chúng ta hãy nói về việc truy vấn.
+
+
+00:05:52,270 --> 00:05:54,910
+Relational databases allow access to their data.
+Cơ sở dữ liệu quan hệ cho phép truy cập vào dữ liệu của họ.
+
+
+00:05:54,910 --> 00:06:00,050
+Using the SQL language is a universal language and can be used on any relational database.
+Sử dụng ngôn ngữ SQL là ngôn ngữ phổ biến và có thể sử dụng trên bất kỳ cơ sở dữ liệu quan hệ nào.
+
+
+00:06:00,050 --> 00:06:04,460
+On the other hand, there is no standard for accessing data in NoSQL database.
+Mặt khác, không có tiêu chuẩn nào để truy cập dữ liệu trong cơ sở dữ liệu NoSQL.
+
+
+00:06:04,490 --> 00:06:09,020
+Each database has its own language and driver and requires its own learning curve.
+Mỗi cơ sở dữ liệu có ngôn ngữ và trình điều khiển riêng và yêu cầu đường cong học tập riêng.
+
+
+00:06:09,050 --> 00:06:13,520
+To be frank, this is quite frustrating and I hope it will be changed somewhere in the future.
+Nói thật thì điều này khá là bực bội và tôi hy vọng nó sẽ được thay đổi ở đâu đó trong tương lai.
+
+
+00:06:13,520 --> 00:06:15,410
+But for now that's a deal.
+Nhưng bây giờ thì đó là một thỏa thuận.
+
+
+00:06:15,890 --> 00:06:17,300
+So let's summarize.
+Vậy chúng ta hãy tóm tắt lại.
+
+
+00:06:17,330 --> 00:06:23,240
+If your system is not going to be huge and by huge, I mean at least ten of terabytes and the data is
+Nếu hệ thống của bạn không quá lớn và theo tôi thì lớn có nghĩa là ít nhất mười terabyte và dữ liệu là
+
+
+00:06:23,240 --> 00:06:24,170
+mostly structured.
+hầu hết có cấu trúc.
+
+
+00:06:24,170 --> 00:06:28,700
+And if data consistency is important to you, go for traditional SQL databases.
+Và nếu tính nhất quán của dữ liệu là quan trọng với bạn, hãy sử dụng cơ sở dữ liệu SQL truyền thống.
+
+
+00:06:28,730 --> 00:06:30,920
+It doesn't really matter which of them you will take.
+Thực ra, việc bạn chọn cái nào cũng không quan trọng.
+
+
+00:06:30,950 --> 00:06:32,480
+They are all doing a very good work.
+Tất cả họ đều đang làm việc rất tốt.
+
+
+00:06:32,510 --> 00:06:36,290
+Just make sure it's compatible with your development platform and off you go.
+Chỉ cần đảm bảo nó tương thích với nền tảng phát triển của bạn và bắt đầu thôi.
+
+
+00:06:36,320 --> 00:06:42,550
+If, on the other hand, you are planning to have a huge unstructured data store opt for the NoSQL database,
+Mặt khác, nếu bạn đang có kế hoạch lưu trữ một kho dữ liệu phi cấu trúc lớn, hãy chọn cơ sở dữ liệu NoSQL,
+
+
+00:06:42,560 --> 00:06:48,170
+MongoDB is the most popular NoSQL database at this time with support from every major software vendor.
+MongoDB là cơ sở dữ liệu NoSQL phổ biến nhất hiện nay với sự hỗ trợ từ mọi nhà cung cấp phần mềm lớn.
+
+
+00:06:48,170 --> 00:06:49,790
+So it's a natural choice.
+Vì vậy, đó là một sự lựa chọn tự nhiên.
+
+
+00:06:49,850 --> 00:06:52,040
+As usual, keep this table as reference.
+Như thường lệ, hãy giữ bảng này làm tài liệu tham khảo.
+
+
+00:06:52,040 --> 00:06:55,310
+I'm sure it will be of use on a system you will work on.
+Tôi chắc chắn nó sẽ hữu ích trên hệ thống mà bạn sẽ làm việc.
+
+
+00:06:55,430 --> 00:06:57,350
+Oh, and one more thing.
+À, và còn một điều nữa.
+
+
+00:06:57,380 --> 00:07:03,620
+Lately the line between SQL and NoSQL databases has started to blur, and we are seeing various capabilities
+Gần đây, ranh giới giữa cơ sở dữ liệu SQL và NoSQL đã bắt đầu mờ đi và chúng ta đang thấy nhiều khả năng khác nhau
+
+
+00:07:03,620 --> 00:07:05,690
+leak from one type to the other.
+rò rỉ từ loại này sang loại khác.
+
+
+00:07:05,690 --> 00:07:11,810
+For example, traditionally NoSQL databases were great at querying Json documents, whereas SQL databases,
+Ví dụ, theo truyền thống, cơ sở dữ liệu NoSQL rất tuyệt vời trong việc truy vấn các tài liệu Json, trong khi cơ sở dữ liệu SQL,
+
+
+00:07:11,810 --> 00:07:13,970
+to put it bluntly, just sucked.
+nói thẳng ra là tệ lắm.
+
+
+00:07:14,000 --> 00:07:20,030
+However, we can find today great Json querying capabilities in databases such as SQL Server and Postgres.
+Tuy nhiên, ngày nay chúng ta có thể tìm thấy khả năng truy vấn Json tuyệt vời trong các cơ sở dữ liệu như SQL Server và Postgres.
+
+
+00:07:20,360 --> 00:07:25,970
+Actually, I have a client which decided to drop MongoDB in favour of SQL Server because he really liked
+Trên thực tế, tôi có một khách hàng đã quyết định từ bỏ MongoDB để chuyển sang SQL Server vì anh ấy thực sự thích
+
+
+00:07:25,970 --> 00:07:30,170
+the combination it offered of full transaction support and Json query.
+sự kết hợp mà nó cung cấp bao gồm hỗ trợ giao dịch đầy đủ và truy vấn Json.
+
+
+00:07:30,200 --> 00:07:33,290
+Another example is the aforementioned transaction support.
+Một ví dụ khác là hỗ trợ giao dịch đã đề cập ở trên.
+
+
+00:07:33,320 --> 00:07:39,320
+MongoDB has added full acid support a few months ago, which was a great breakthrough for the NoSQL
+MongoDB đã bổ sung hỗ trợ acid đầy đủ cách đây vài tháng, đây là một bước đột phá lớn cho NoSQL
+
+
+00:07:39,320 --> 00:07:39,920
+database.
+cơ sở dữ liệu.
+
+
+00:07:39,950 --> 00:07:45,530
+They claim it won't impact performance and it will be very interesting to see whether other NoSQL vendors
+Họ tuyên bố rằng nó sẽ không ảnh hưởng đến hiệu suất và sẽ rất thú vị khi xem liệu các nhà cung cấp NoSQL khác có
+
+
+00:07:45,530 --> 00:07:46,820
+will adopt this attitude.
+sẽ áp dụng thái độ này.
+
+

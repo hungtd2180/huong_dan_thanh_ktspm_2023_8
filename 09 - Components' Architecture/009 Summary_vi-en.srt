@@ -1,0 +1,35 @@
+00:00:00,230 --> 00:00:04,560
+In this section, we discuss the architecture and best practices for software components.
+Trong phần này, chúng tôi thảo luận về kiến trúc và các biện pháp thực hành tốt nhất cho các thành phần phần mềm.
+
+
+00:00:04,580 --> 00:00:09,410
+The concepts and techniques we covered in this section are the building blocks of almost any software
+Các khái niệm và kỹ thuật mà chúng tôi đề cập trong phần này là nền tảng của hầu hết mọi phần mềm
+
+
+00:00:09,410 --> 00:00:12,750
+component, and you will find yourself using them frequently.
+thành phần, và bạn sẽ thấy mình sử dụng chúng thường xuyên.
+
+
+00:00:12,770 --> 00:00:17,990
+Later in this course, we will discuss architectural patterns for full blown distributed applications
+Sau này trong khóa học này, chúng ta sẽ thảo luận về các mẫu kiến trúc cho các ứng dụng phân tán hoàn chỉnh
+
+
+00:00:17,990 --> 00:00:21,450
+and it will complement the knowledge you have gained in this section.
+và nó sẽ bổ sung cho kiến thức bạn đã thu được trong phần này.
+
+
+00:00:21,470 --> 00:00:24,920
+Meanwhile, I hope you have understood the concepts we discussed.
+Trong khi đó, tôi hy vọng bạn đã hiểu những khái niệm chúng ta đã thảo luận.
+
+
+00:00:24,920 --> 00:00:30,440
+If you have any question or comment, please do not hesitate to contact me and I'll be happy to help.
+Nếu bạn có bất kỳ câu hỏi hoặc bình luận nào, vui lòng liên hệ với tôi và tôi sẽ sẵn lòng trợ giúp.
+
+

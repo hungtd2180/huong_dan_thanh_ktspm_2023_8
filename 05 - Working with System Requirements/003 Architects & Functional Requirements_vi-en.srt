@@ -1,0 +1,60 @@
+00:00:00,290 --> 00:00:05,480
+Well, we just say that non-functional requirements are the most important requirements and that the
+Vâng, chúng tôi chỉ nói rằng các yêu cầu phi chức năng là những yêu cầu quan trọng nhất và
+
+
+00:00:05,480 --> 00:00:11,150
+architect should not under any circumstances, design the system without knowing what the non-functional
+kiến trúc sư không nên trong bất kỳ trường hợp nào, thiết kế hệ thống mà không biết phần không chức năng
+
+
+00:00:11,150 --> 00:00:12,230
+requirements are.
+yêu cầu là.
+
+
+00:00:12,260 --> 00:00:16,520
+But it is equally important to be aware of the functional requirements.
+Nhưng điều quan trọng không kém là phải nhận thức được các yêu cầu chức năng.
+
+
+00:00:16,550 --> 00:00:21,440
+Many architects feel they only need to skim over the functional requirements and concentrate on the
+Nhiều kiến trúc sư cảm thấy họ chỉ cần lướt qua các yêu cầu chức năng và tập trung vào
+
+
+00:00:21,470 --> 00:00:22,730
+non-functional ones.
+những cái không có chức năng.
+
+
+00:00:22,760 --> 00:00:24,350
+That's a mistake too.
+Đó cũng là một sai lầm.
+
+
+00:00:24,710 --> 00:00:27,050
+Remember our definition of the architecture?
+Bạn còn nhớ định nghĩa của chúng tôi về kiến trúc không?
+
+
+00:00:27,080 --> 00:00:30,660
+Remember that a good architecture must improve the business bottom line.
+Hãy nhớ rằng một kiến trúc tốt phải cải thiện được lợi nhuận kinh doanh.
+
+
+00:00:30,680 --> 00:00:34,160
+That won't be possible if you are not sure what the system should do.
+Điều đó sẽ không thể thực hiện được nếu bạn không chắc chắn hệ thống sẽ làm gì.
+
+
+00:00:34,190 --> 00:00:39,650
+So before diving deep into the non-functional requirements, this is a not so gentle reminder that the
+Vì vậy, trước khi đi sâu vào các yêu cầu không chức năng, đây là lời nhắc nhở không mấy nhẹ nhàng rằng
+
+
+00:00:39,650 --> 00:00:43,700
+functional requirements are equally important and you have to be well versed in them.
+các yêu cầu chức năng cũng quan trọng không kém và bạn phải thành thạo về chúng.
+
+

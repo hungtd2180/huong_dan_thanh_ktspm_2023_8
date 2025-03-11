@@ -1,0 +1,160 @@
+00:00:00,440 --> 00:00:04,120
+And as promised, here is your architecture document.
+Và như đã hứa, đây là tài liệu kiến trúc của bạn.
+
+
+00:00:04,130 --> 00:00:08,870
+In the resources section of this lecture, you can find the full architecture document of the system.
+Trong phần tài nguyên của bài giảng này, bạn có thể tìm thấy toàn bộ tài liệu kiến trúc của hệ thống.
+
+
+00:00:08,870 --> 00:00:11,660
+We just discussed the IO2 system.
+Chúng ta vừa thảo luận về hệ thống IO2.
+
+
+00:00:11,750 --> 00:00:16,880
+In the document you will find all the sections we talked about the background requirements, executive
+Trong tài liệu bạn sẽ tìm thấy tất cả các phần chúng tôi đã nói về các yêu cầu cơ bản, điều hành
+
+
+00:00:16,880 --> 00:00:19,510
+summary, architecture, overview and components.
+tóm tắt, kiến trúc, tổng quan và các thành phần.
+
+
+00:00:19,520 --> 00:00:20,210
+Drill down.
+Khoan sâu.
+
+
+00:00:20,210 --> 00:00:24,440
+You will find there are all the decisions we made complete with the rationale behind them.
+Bạn sẽ thấy tất cả các quyết định chúng tôi đưa ra đều có lý do đầy đủ đằng sau chúng.
+
+
+00:00:24,440 --> 00:00:28,790
+You will see there all the figures and diagrams that we used during our discussion.
+Bạn sẽ thấy ở đó tất cả các hình ảnh và sơ đồ mà chúng tôi đã sử dụng trong cuộc thảo luận của chúng tôi.
+
+
+00:00:28,790 --> 00:00:31,220
+You will find the functional and non-functional requirements.
+Bạn sẽ tìm thấy các yêu cầu chức năng và phi chức năng.
+
+
+00:00:31,220 --> 00:00:35,540
+You will see the technology stack dilemma that we had and what we decided to use.
+Bạn sẽ thấy tình huống khó xử về công nghệ mà chúng tôi gặp phải và những gì chúng tôi quyết định sử dụng.
+
+
+00:00:35,570 --> 00:00:40,210
+You will find all the messaging methods we are going to implement and so on and so forth.
+Bạn sẽ tìm thấy tất cả các phương thức nhắn tin mà chúng tôi sẽ triển khai, v.v.
+
+
+00:00:40,220 --> 00:00:45,950
+In short, you will find the full architecture we discussed formalized in an easy to read comprehensive
+Tóm lại, bạn sẽ thấy toàn bộ kiến trúc mà chúng ta đã thảo luận được trình bày một cách chính thức trong một tài liệu toàn diện dễ đọc
+
+
+00:00:45,950 --> 00:00:46,610
+format.
+định dạng.
+
+
+00:00:46,640 --> 00:00:53,120
+Now the good part is this Feel free to use this document as a template for your future architecture
+Bây giờ phần tốt là Hãy thoải mái sử dụng tài liệu này như một mẫu cho kiến trúc tương lai của bạn
+
+
+00:00:53,120 --> 00:00:53,840
+document.
+tài liệu.
+
+
+00:00:53,870 --> 00:00:58,850
+One of the major tasks of every software architect is to craft the architecture document.
+Một trong những nhiệm vụ chính của mỗi kiến trúc sư phần mềm là tạo ra tài liệu kiến trúc.
+
+
+00:00:58,880 --> 00:01:02,790
+Using this document as a template will make your work so much easier.
+Sử dụng tài liệu này làm mẫu sẽ giúp công việc của bạn dễ dàng hơn rất nhiều.
+
+
+00:01:02,790 --> 00:01:08,610
+Instead of beginning from scratch and trying to figure out what to write and in what order, the template
+Thay vì bắt đầu từ đầu và cố gắng tìm ra những gì cần viết và theo thứ tự nào, mẫu
+
+
+00:01:08,610 --> 00:01:10,230
+figures everything out for you.
+tính toán mọi thứ cho bạn.
+
+
+00:01:10,260 --> 00:01:14,370
+The document sets the sections, their order and their desired content.
+Tài liệu thiết lập các phần, thứ tự của chúng và nội dung mong muốn của chúng.
+
+
+00:01:14,400 --> 00:01:20,490
+All you have to do is simply fill in the blanks and of course, feel free to use the i o to specific
+Tất cả những gì bạn phải làm chỉ là điền vào chỗ trống và tất nhiên, hãy thoải mái sử dụng io để chỉ định
+
+
+00:01:20,490 --> 00:01:23,100
+sections as a foundation of your architecture.
+các phần như là nền tảng cho kiến trúc của bạn.
+
+
+00:01:23,100 --> 00:01:27,870
+However you choose to use this template, I'm sure it will help you become a better, more professional
+Dù bạn chọn sử dụng mẫu này theo cách nào, tôi chắc chắn nó sẽ giúp bạn trở thành một người tốt hơn, chuyên nghiệp hơn
+
+
+00:01:27,870 --> 00:01:28,650
+architect.
+kiến trúc sư.
+
+
+00:01:28,830 --> 00:01:32,520
+One final note before you go and download the document.
+Một lưu ý cuối cùng trước khi bạn tải xuống tài liệu.
+
+
+00:01:32,550 --> 00:01:37,980
+Note that at the beginning of the document there is a copyright notice that states the template is based
+Lưu ý rằng ở đầu tài liệu có thông báo bản quyền nêu rõ mẫu này dựa trên
+
+
+00:01:37,980 --> 00:01:38,940
+on this course.
+trên khóa học này.
+
+
+00:01:38,940 --> 00:01:42,780
+Please do notrillionemove this notice it's an important part of the document.
+Xin đừng xóa thông báo này vì đây là một phần quan trọng của tài liệu.
+
+
+00:01:42,900 --> 00:01:49,500
+So now go on and grab the file after downloading it, take the time and read through it.
+Bây giờ hãy tiếp tục và lấy tệp sau khi tải xuống, dành thời gian và đọc qua nó.
+
+
+00:01:49,530 --> 00:01:54,240
+Make sure you are comfortable with its structure and contents and make sure you see the correlation
+Hãy đảm bảo rằng bạn cảm thấy thoải mái với cấu trúc và nội dung của nó và đảm bảo rằng bạn thấy được mối tương quan
+
+
+00:01:54,240 --> 00:01:56,940
+between it and the discussions we had in this section.
+giữa nó và các cuộc thảo luận chúng ta đã có trong phần này.
+
+
+00:01:57,060 --> 00:02:01,110
+After you have read it, let's go to the next section.
+Sau khi đọc xong, chúng ta hãy chuyển sang phần tiếp theo.
+
+

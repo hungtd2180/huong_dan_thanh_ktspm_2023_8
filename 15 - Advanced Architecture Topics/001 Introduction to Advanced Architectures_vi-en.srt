@@ -1,0 +1,100 @@
+00:00:00,710 --> 00:00:04,010
+Welcome to the Advanced Architecture Patterns section.
+Chào mừng đến với phần Mẫu kiến trúc nâng cao.
+
+
+00:00:04,190 --> 00:00:09,530
+By now, we have learned about the most common architectural patterns such as stateless scaling, loose
+Cho đến nay, chúng ta đã tìm hiểu về các mô hình kiến trúc phổ biến nhất như mở rộng không trạng thái, 3 lỏng lẻo
+
+
+00:00:09,530 --> 00:00:11,540
+coupling and layered architecture.
+kiến trúc ghép nối và phân lớp.
+
+
+00:00:11,690 --> 00:00:16,880
+You will probably use these patterns in almost every system you will design, and I'm sure they will
+Bạn có thể sẽ sử dụng các mẫu này trong hầu hết mọi hệ thống bạn thiết kế và tôi chắc chắn rằng chúng sẽ
+
+
+00:00:16,880 --> 00:00:17,690
+serve you well.
+phục vụ bạn tốt.
+
+
+00:00:17,720 --> 00:00:20,760
+However, these are not the only patterns exist.
+Tuy nhiên, đây không phải là những mô hình duy nhất tồn tại.
+
+
+00:00:20,780 --> 00:00:26,090
+The software architecture world is an ever changing and evolving world, and new patterns frequently
+Thế giới kiến trúc phần mềm là một thế giới luôn thay đổi và phát triển, và các mô hình mới thường xuyên xuất hiện
+
+
+00:00:26,090 --> 00:00:26,660
+emerge.
+nổi lên.
+
+
+00:00:26,690 --> 00:00:31,280
+In this section, I would like to give you a taste of some of the more advanced architectural patterns
+Trong phần này, tôi muốn giới thiệu cho bạn một số mẫu kiến trúc tiên tiến hơn
+
+
+00:00:31,280 --> 00:00:32,180
+exist today.
+tồn tại ngày nay.
+
+
+00:00:32,210 --> 00:00:37,310
+You will probably not use them in every system, but it's always a good idea to keep them in mind.
+Bạn có thể sẽ không sử dụng chúng trong mọi hệ thống, nhưng luôn nên ghi nhớ chúng.
+
+
+00:00:37,310 --> 00:00:40,460
+And when an opportunity presents itself, use them.
+Và khi có cơ hội, hãy tận dụng chúng.
+
+
+00:00:41,450 --> 00:00:43,590
+We are not going to deep dive into these patterns.
+Chúng ta sẽ không đi sâu vào những mô hình này.
+
+
+00:00:43,610 --> 00:00:49,610
+This will require a course of itself, but we will get the gist of these patterns so you will know they
+Điều này sẽ đòi hỏi một khóa học riêng, nhưng chúng ta sẽ nắm được cốt lõi của các mô hình này để bạn biết chúng là
+
+
+00:00:49,610 --> 00:00:51,020
+exist when relevant.
+tồn tại khi có liên quan.
+
+
+00:00:51,050 --> 00:00:53,990
+So these are the patterns we will discuss.
+Vì vậy, đây là những mô hình chúng ta sẽ thảo luận.
+
+
+00:00:54,020 --> 00:00:59,180
+Microservices event sourcing and seekers.
+Nguồn sự kiện Microservices và người tìm kiếm.
+
+
+00:00:59,330 --> 00:01:01,900
+Don't worry if you are not familiar with these patterns.
+Đừng lo lắng nếu bạn không quen với những mẫu này.
+
+
+00:01:01,920 --> 00:01:03,600
+That's why I'm here for.
+Đó là lý do tại sao tôi ở đây trong
+
+
+00:01:03,720 --> 00:01:05,099
+So let's go.
+Vậy chúng ta đi thôi.
+
+

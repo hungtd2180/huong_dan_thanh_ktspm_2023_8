@@ -1,0 +1,210 @@
+00:00:00,440 --> 00:00:03,440
+So our next pattern is seekers.
+Vì vậy, mô hình tiếp theo của chúng ta là người tìm kiếm.
+
+
+00:00:03,469 --> 00:00:07,850
+Yep, that's quite a funny name, but the pattern is sound, I assure you.
+Vâng, đó là một cái tên khá buồn cười, nhưng tôi đảm bảo với bạn rằng mô hình này rất hợp lý.
+
+
+00:00:07,880 --> 00:00:10,250
+So what exactly is seekers?
+Vậy người tìm kiếm thực chất là gì?
+
+
+00:00:10,280 --> 00:00:15,380
+Well, Seekers stands for command Query responsibility Segregation.
+Vâng, Seekers là viết tắt của lệnh, trách nhiệm, phân loại.
+
+
+00:00:15,410 --> 00:00:22,520
+What it actually means is this While in traditional systems, the same database is used for retrieving
+Điều này thực sự có nghĩa là Trong khi trong các hệ thống truyền thống, cùng một cơ sở dữ liệu được sử dụng để truy xuất
+
+
+00:00:22,520 --> 00:00:29,150
+and updating data in seekers based system, these are separated to two different databases, meaning
+và cập nhật dữ liệu trong hệ thống dựa trên người tìm kiếm, chúng được tách thành hai cơ sở dữ liệu khác nhau, nghĩa là
+
+
+00:00:29,150 --> 00:00:35,390
+we have one database for storing data and one database for retrieving the data and some kind of service
+chúng tôi có một cơ sở dữ liệu để lưu trữ dữ liệu và một cơ sở dữ liệu để truy xuất dữ liệu và một số loại dịch vụ
+
+
+00:00:35,390 --> 00:00:36,830
+to sync between them.
+để đồng bộ giữa chúng.
+
+
+00:00:37,010 --> 00:00:39,950
+Now, on first thought, that might sound strange.
+Lúc đầu, điều đó có vẻ lạ.
+
+
+00:00:39,950 --> 00:00:41,300
+Why would we want that?
+Tại sao chúng ta lại muốn điều đó?
+
+
+00:00:41,330 --> 00:00:45,980
+It's much more logical to retrieve and update the same data from the same database, isn't it?
+Sẽ hợp lý hơn nhiều khi lấy và cập nhật cùng một dữ liệu từ cùng một cơ sở dữ liệu, phải không?
+
+
+00:00:46,010 --> 00:00:49,640
+Well, sometimes it is, but sometimes not so much.
+Vâng, đôi khi thì đúng, nhưng đôi khi thì không.
+
+
+00:00:49,670 --> 00:00:52,550
+Let's take a look again at the event sourcing pattern.
+Chúng ta hãy xem lại mô hình nguồn sự kiện.
+
+
+00:00:52,580 --> 00:00:58,220
+As you probably remember, with event sourcing, we do not keep an entity's state, but rather add events
+Như bạn có thể nhớ, với nguồn sự kiện, chúng ta không giữ trạng thái của một thực thể mà thay vào đó thêm các sự kiện
+
+
+00:00:58,220 --> 00:00:59,940
+that happened to the entity.
+điều đó đã xảy ra với thực thể.
+
+
+00:00:59,970 --> 00:01:05,790
+This enables us an extremely efficient tracing, simple data model and great performance.
+Điều này cho phép chúng tôi theo dõi cực kỳ hiệu quả, mô hình dữ liệu đơn giản và hiệu suất tuyệt vời.
+
+
+00:01:05,820 --> 00:01:11,910
+On the other hand, it makes our life harder regarding data retrieval, since we do not have a unified
+Mặt khác, nó làm cho cuộc sống của chúng ta khó khăn hơn liên quan đến việc truy xuất dữ liệu, vì chúng ta không có một 18 thống nhất.
+
+
+00:01:11,910 --> 00:01:17,550
+view of the entity and we need to go through the entities events to gather its states, which is a slow
+quan điểm của thực thể và chúng ta cần phải xem xét các sự kiện của thực thể để thu thập các trạng thái của nó, đây là một quá trình chậm
+
+
+00:01:17,550 --> 00:01:18,990
+and cumbersome action.
+và hành động cồng kềnh.
+
+
+00:01:19,200 --> 00:01:23,870
+The pattern helps us solve exactly this with seekers.
+Mẫu này giúp chúng ta giải quyết chính xác điều này với người tìm kiếm.
+
+
+00:01:24,030 --> 00:01:30,010
+We have the event sourcing data which is stored in database a once in a while, usually a few seconds.
+Chúng tôi có dữ liệu nguồn sự kiện được lưu trữ trong cơ sở dữ liệu thỉnh thoảng, thường là vài giây.
+
+
+00:01:30,030 --> 00:01:35,550
+The data is gathered and stored in database B where it represents the entity state.
+Dữ liệu được thu thập và lưu trữ trong cơ sở dữ liệu B, nơi nó biểu diễn trạng thái thực thể.
+
+
+00:01:35,580 --> 00:01:41,040
+Note the data in both databases represent the same entities but in different formats.
+Lưu ý dữ liệu trong cả hai cơ sở dữ liệu đều đại diện cho cùng một thực thể nhưng ở các định dạng khác nhau.
+
+
+00:01:41,070 --> 00:01:47,850
+Database A is used for updates and does so with event sourcing, which gives it great performance and
+Cơ sở dữ liệu A được sử dụng để cập nhật và thực hiện việc này bằng cách lấy nguồn sự kiện, mang lại hiệu suất tuyệt vời và
+
+
+00:01:47,850 --> 00:01:52,950
+database B is used for retrieval and contains the full current state of the entities.
+cơ sở dữ liệu B được sử dụng để truy xuất và chứa toàn bộ trạng thái hiện tại của các thực thể.
+
+
+00:01:53,340 --> 00:01:55,890
+So now we've got the best of two worlds.
+Vậy là bây giờ chúng ta đã có được điều tốt nhất của cả hai thế giới.
+
+
+00:01:55,920 --> 00:01:59,460
+Great performance for updates and easy querying capabilities.
+Hiệu suất tuyệt vời cho các bản cập nhật và khả năng truy vấn dễ dàng.
+
+
+00:01:59,490 --> 00:02:02,610
+All this is made possible by the access pattern.
+Tất cả điều này có thể thực hiện được nhờ mô hình truy cập.
+
+
+00:02:02,850 --> 00:02:07,020
+Okay, so if all is so good, why isn't it more common?
+Được thôi, nếu mọi thứ đều tốt như vậy, tại sao nó lại không phổ biến hơn?
+
+
+00:02:07,020 --> 00:02:09,810
+Why don't all architects use it all the time?
+Tại sao không phải tất cả các kiến trúc sư đều sử dụng nó mọi lúc?
+
+
+00:02:09,840 --> 00:02:11,760
+The main reason is simplicity.
+Lý do chính là sự đơn giản.
+
+
+00:02:11,790 --> 00:02:18,060
+In order to implement seekers, we need two databases synchronization engine to gather the data from
+Để triển khai seekers, chúng ta cần hai công cụ đồng bộ hóa cơ sở dữ liệu để thu thập dữ liệu từ
+
+
+00:02:18,060 --> 00:02:23,640
+database A to transform it and store it in database B and event sourcing mechanism.
+cơ sở dữ liệu A để chuyển đổi nó và lưu trữ nó trong cơ sở dữ liệu B và cơ chế nguồn sự kiện.
+
+
+00:02:23,640 --> 00:02:27,720
+Implementing all these can be quite complex and not always necessary.
+Việc thực hiện tất cả những điều này có thể khá phức tạp và không phải lúc nào cũng cần thiết.
+
+
+00:02:27,750 --> 00:02:32,310
+If you are satisfied with the current single database implementation, keep using it.
+Nếu bạn hài lòng với việc triển khai cơ sở dữ liệu đơn lẻ hiện tại, hãy tiếp tục sử dụng nó.
+
+
+00:02:32,340 --> 00:02:39,570
+So when is best to use seekers mainly on systems with high frequency updates that require near real
+Vậy khi nào là tốt nhất để sử dụng seeker chủ yếu trên các hệ thống có tần suất cập nhật cao yêu cầu gần 37 thực
+
+
+00:02:39,570 --> 00:02:40,920
+time query capabilities?
+khả năng truy vấn thời gian?
+
+
+00:02:40,950 --> 00:02:42,920
+Think again on telemetry systems.
+Hãy suy nghĩ lại về hệ thống đo từ xa.
+
+
+00:02:42,930 --> 00:02:47,590
+These systems usually get a lot of data and need to handle it as quick as possible.
+Các hệ thống này thường nhận được rất nhiều dữ liệu và cần xử lý chúng càng nhanh càng tốt.
+
+
+00:02:47,610 --> 00:02:54,090
+This is a great candidate of seekers implementation, so that was a short glimpse of event sourcing
+Đây là một ứng cử viên tuyệt vời cho việc triển khai của người tìm kiếm, vì vậy đó là cái nhìn thoáng qua về nguồn sự kiện
+
+
+00:02:54,090 --> 00:02:55,020
+and seekers.
+và những người tìm kiếm.
+
+
+00:02:55,050 --> 00:03:00,030
+You may never use these patterns, but it's always a good idea to keep them in mind.
+Bạn có thể không bao giờ sử dụng những mẫu này, nhưng luôn nên ghi nhớ chúng.
+
+

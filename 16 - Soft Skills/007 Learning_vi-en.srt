@@ -1,0 +1,160 @@
+00:00:00,600 --> 00:00:03,780
+And here we are at the last skill we will discuss.
+Và đây là kỹ năng cuối cùng mà chúng ta sẽ thảo luận.
+
+
+00:00:03,810 --> 00:00:11,190
+And this is a simple yet very important one and it can be summarized like this Always keep learning.
+Và đây là một điều đơn giản nhưng rất quan trọng và nó có thể được tóm tắt như thế này: Luôn luôn học hỏi.
+
+
+00:00:11,430 --> 00:00:14,910
+We live in a dynamic world and the software world is even more so.
+Chúng ta đang sống trong một thế giới năng động và thế giới phần mềm thậm chí còn năng động hơn.
+
+
+00:00:14,940 --> 00:00:17,310
+Things are changing in a blink of an eye.
+Mọi thứ đang thay đổi trong chớp mắt.
+
+
+00:00:17,340 --> 00:00:21,870
+Frameworks that were all the rage just three years ago are now completely forgotten.
+Các khuôn khổ từng thịnh hành cách đây ba năm giờ đã hoàn toàn bị lãng quên.
+
+
+00:00:21,900 --> 00:00:26,160
+You have probably heard of jQuery, Grant, AngularJS and Hadoop.
+Bạn có thể đã nghe nói đến jQuery, Grant, AngularJS và Hadoop.
+
+
+00:00:26,310 --> 00:00:32,070
+All these frameworks and engines were extremely popular not many years ago but now are almost never
+Tất cả các khuôn khổ và công cụ này đã từng cực kỳ phổ biến cách đây không lâu nhưng hiện nay hầu như không còn nữa.
+
+
+00:00:32,070 --> 00:00:32,520
+used.
+đã sử dụng.
+
+
+00:00:32,549 --> 00:00:34,750
+They were succeeded by better alternatives.
+Họ đã được thay thế bằng những giải pháp thay thế tốt hơn.
+
+
+00:00:34,770 --> 00:00:39,220
+Now some don't like this fast pace, but that's a fact of life.
+Bây giờ một số người không thích tốc độ nhanh này, nhưng đó là sự thật của cuộc sống.
+
+
+00:00:39,240 --> 00:00:43,140
+One of the most famous quotes in the business world is adapt or die.
+Một trong những câu nói nổi tiếng nhất trong thế giới kinh doanh là thích nghi hoặc chết.
+
+
+00:00:43,500 --> 00:00:47,130
+Although its origin is not clear, it still holds a lot of truth.
+Mặc dù nguồn gốc của nó không rõ ràng nhưng nó vẫn chứa đựng rất nhiều sự thật.
+
+
+00:00:47,160 --> 00:00:49,880
+You should always look around and check what's new.
+Bạn nên luôn luôn nhìn xung quanh và kiểm tra xem có gì mới.
+
+
+00:00:49,890 --> 00:00:53,000
+If there are new patterns or technologies, follow them.
+Nếu có những mô hình hoặc công nghệ mới, hãy làm theo chúng.
+
+
+00:00:53,010 --> 00:00:57,690
+You don't need to immediately embrace them, but should definitely keep an eye on them.
+Bạn không cần phải chấp nhận họ ngay lập tức, nhưng chắc chắn nên để mắt đến họ.
+
+
+00:00:57,690 --> 00:01:00,280
+So when time comes, you will know what to do.
+Vì vậy, khi thời điểm đến, bạn sẽ biết phải làm gì.
+
+
+00:01:00,310 --> 00:01:02,320
+Now how to do this learning?
+Bây giờ làm thế nào để thực hiện việc học này?
+
+
+00:01:02,320 --> 00:01:04,930
+Where can you find the knowledge relevant for architects?
+Bạn có thể tìm thấy kiến thức liên quan đến kiến trúc sư ở đâu?
+
+
+00:01:04,959 --> 00:01:06,340
+Here is what I do.
+Đây là những gì tôi làm.
+
+
+00:01:06,370 --> 00:01:12,190
+My main sources for knowledge are blogs, articles and conferences.
+Nguồn kiến thức chính của tôi là các blog, bài viết và hội nghị.
+
+
+00:01:12,220 --> 00:01:16,410
+There are a lot of blogs and articles sites dedicated to technology and architecture.
+Có rất nhiều blog và trang web viết bài chuyên về công nghệ và kiến trúc.
+
+
+00:01:16,420 --> 00:01:20,410
+Some of the more popular are D Zone, InfoQ and O'Reilly.
+Một số trang web phổ biến nhất là D Zone, InfoQ và O&#39;Reilly.
+
+
+00:01:20,440 --> 00:01:24,510
+Subscribe to these sites and you will get a lot of quality information.
+Đăng ký vào các trang web này và bạn sẽ nhận được nhiều thông tin chất lượng.
+
+
+00:01:24,520 --> 00:01:29,110
+In addition to that, I go once a year to a conference about software and architecture.
+Ngoài ra, tôi còn tham dự một hội nghị về phần mềm và kiến trúc mỗi năm một lần.
+
+
+00:01:29,140 --> 00:01:37,660
+My favorites are O'Reilly Software Architecture Conference, Infocus, Qcon, NDC and Microsoft Build.
+Những sự kiện yêu thích của tôi là Hội nghị Kiến trúc Phần mềm O&#39;Reilly, Infocus, Qcon, NDC và Microsoft Build.
+
+
+00:01:37,690 --> 00:01:41,590
+But of course, you might find other conferences you find useful.
+Nhưng tất nhiên, bạn có thể tìm thấy những hội nghị khác mà bạn thấy hữu ích.
+
+
+00:01:41,620 --> 00:01:46,780
+These conferences are a great opportunity for firsthand meeting with the most talented people in the
+Những hội nghị này là cơ hội tuyệt vời để gặp gỡ trực tiếp những người tài năng nhất trong
+
+
+00:01:46,780 --> 00:01:51,690
+industry and for learning about the newest trends and developments you should be aware of.
+ngành công nghiệp và để tìm hiểu về các xu hướng và phát triển mới nhất mà bạn nên biết.
+
+
+00:01:51,700 --> 00:01:55,880
+And it's always fun to visit new places and meet new people.
+Và luôn thú vị khi được đến những nơi mới và gặp gỡ những người mới.
+
+
+00:01:55,900 --> 00:02:00,650
+So the bottom line is this Whatever method you pick, always keep learning.
+Vì vậy, điều cốt yếu là: Bất kể bạn chọn phương pháp nào, hãy luôn tiếp tục học hỏi.
+
+
+00:02:00,670 --> 00:02:03,700
+Don't get left behind with outdated knowledge and skills.
+Đừng để bị tụt hậu với kiến thức và kỹ năng lỗi thời.
+
+
+00:02:03,700 --> 00:02:07,600
+Make sure you can contribute to your clients in this fast changing world.
+Hãy đảm bảo rằng bạn có thể đóng góp cho khách hàng của mình trong thế giới thay đổi nhanh chóng này.
+
+

@@ -1,0 +1,95 @@
+00:00:01,340 --> 00:00:03,830
+Welcome to the architectural document section.
+Chào mừng đến với phần tài liệu kiến trúc.
+
+
+00:00:04,010 --> 00:00:09,050
+In this section, we will explore the most important product of the architect's work, the architectural
+Trong phần này, chúng ta sẽ khám phá sản phẩm quan trọng nhất của công trình kiến trúc, đó là kiến trúc
+
+
+00:00:09,050 --> 00:00:09,830
+document.
+tài liệu.
+
+
+00:00:10,070 --> 00:00:15,290
+In this document, the architect describes the architecture that was designed as well as the various
+Trong tài liệu này, kiến trúc sư mô tả kiến trúc được thiết kế cũng như
+
+
+00:00:15,290 --> 00:00:17,640
+requirements functional and non-functional.
+yêu cầu chức năng và phi chức năng.
+
+
+00:00:17,660 --> 00:00:20,090
+The technology stack and more.
+Công nghệ và nhiều hơn thế nữa.
+
+
+00:00:20,360 --> 00:00:25,340
+In fact, the architectural document includes almost all the concepts and information discussed in this
+Trên thực tế, tài liệu kiến trúc bao gồm hầu hết các khái niệm và thông tin được thảo luận trong
+
+
+00:00:25,340 --> 00:00:26,630
+course up until now.
+khóa học cho đến bây giờ.
+
+
+00:00:27,020 --> 00:00:31,580
+The architecture document is a cornerstone of the application development, and no development should
+Tài liệu kiến trúc là nền tảng của quá trình phát triển ứng dụng và không có quá trình phát triển nào nên
+
+
+00:00:31,580 --> 00:00:36,470
+begin before an architectural document is created and the developers fully grasped its contents.
+bắt đầu trước khi một tài liệu kiến trúc được tạo ra và các nhà phát triển nắm bắt đầy đủ nội dung của nó.
+
+
+00:00:36,650 --> 00:00:41,510
+In this section, we will deep dive into this document, understand what its goals are, who is the
+Trong phần này, chúng ta sẽ đi sâu vào tài liệu này, tìm hiểu mục tiêu của nó là gì, 12 người là ai
+
+
+00:00:41,510 --> 00:00:44,120
+audience and what is its structure.
+khán giả và cấu trúc của nó là gì.
+
+
+00:00:44,300 --> 00:00:50,150
+Remember that this course has a very special bonus, a complete full blown, ready to use architectural
+Hãy nhớ rằng khóa học này có một phần thưởng rất đặc biệt, một khóa học kiến trúc hoàn chỉnh, sẵn sàng sử dụng
+
+
+00:00:50,150 --> 00:00:53,750
+document which you can download and use as a template for your architecture.
+tài liệu mà bạn có thể tải xuống và sử dụng làm mẫu cho kiến trúc của mình.
+
+
+00:00:53,780 --> 00:00:59,210
+You can find this document in the resources of the next section where we will discuss a case study for
+Bạn có thể tìm thấy tài liệu này trong các nguồn tài nguyên của phần tiếp theo, nơi chúng ta sẽ thảo luận về một nghiên cứu điển hình cho
+
+
+00:00:59,210 --> 00:01:00,570
+the architecture process.
+quá trình kiến trúc.
+
+
+00:01:00,570 --> 00:01:05,880
+So remember, even if you feel you don't fully understand the role of each section in the document,
+Vì vậy, hãy nhớ rằng, ngay cả khi bạn cảm thấy mình không hiểu đầy đủ vai trò của từng phần trong tài liệu,
+
+
+00:01:05,910 --> 00:01:09,540
+you will be able to see it in its full context in the actual document.
+bạn sẽ có thể thấy nó trong toàn bộ bối cảnh của nó trong tài liệu thực tế.
+
+
+00:01:09,570 --> 00:01:10,470
+Let's go.
+Chúng ta đi thôi.
+
+

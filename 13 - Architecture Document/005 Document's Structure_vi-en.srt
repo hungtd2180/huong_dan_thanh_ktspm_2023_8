@@ -1,0 +1,115 @@
+00:00:00,110 --> 00:00:03,250
+So what is the structure of the architectural document?
+Vậy cấu trúc của tài liệu kiến trúc là gì?
+
+
+00:00:03,260 --> 00:00:08,400
+What are the sections and topics it must have in order to be as effective as possible?
+Nó phải có những phần và chủ đề nào để có hiệu quả cao nhất?
+
+
+00:00:08,420 --> 00:00:13,640
+Let's review the various parts of the document before deep diving into each one of them in the next
+Chúng ta hãy xem xét các phần khác nhau của tài liệu trước khi đi sâu vào từng phần trong 4 phần tiếp theo.
+
+
+00:00:13,640 --> 00:00:14,510
+lectures.
+bài giảng.
+
+
+00:00:14,990 --> 00:00:17,000
+First background.
+Bối cảnh đầu tiên.
+
+
+00:00:17,150 --> 00:00:22,160
+This is where you, the architect, writes down the role and motivation for the new system from the
+Đây là nơi bạn, kiến trúc sư, viết ra vai trò và động lực cho hệ thống mới từ
+
+
+00:00:22,160 --> 00:00:23,270
+business point of view.
+quan điểm kinh doanh.
+
+
+00:00:23,300 --> 00:00:27,830
+Notice there are no technical or architectural content in this section.
+Lưu ý không có nội dung kỹ thuật hoặc kiến trúc trong phần này.
+
+
+00:00:27,860 --> 00:00:30,000
+Next, the requirements.
+Tiếp theo là các yêu cầu.
+
+
+00:00:30,020 --> 00:00:35,420
+This is a very important part of the document as the requirements dictate much of the architecture.
+Đây là một phần rất quan trọng của tài liệu vì các yêu cầu quyết định phần lớn kiến trúc.
+
+
+00:00:35,750 --> 00:00:38,930
+After the requirements comes the executive summary.
+Sau các yêu cầu là phần tóm tắt.
+
+
+00:00:38,960 --> 00:00:45,200
+This is the part that CXOs will read as well as the project manager, QA leader and other non development
+Đây là phần mà CXOs cũng như người quản lý dự án, người đứng đầu QA và những người không phát triển khác sẽ đọc.
+
+
+00:00:45,200 --> 00:00:46,370
+related functions.
+chức năng liên quan.
+
+
+00:00:46,400 --> 00:00:52,160
+This is usually the last section to be read by them and it should give a high level overview of the
+Đây thường là phần cuối cùng họ đọc và nó sẽ cung cấp cái nhìn tổng quan cấp cao về
+
+
+00:00:52,160 --> 00:00:52,910
+solution.
+giải pháp.
+
+
+00:00:53,330 --> 00:00:55,640
+Next is the architecture overview.
+Tiếp theo là tổng quan về kiến trúc.
+
+
+00:00:55,670 --> 00:01:01,320
+In this section, we will lay out the high level architecture painting the big picture of the solution
+Trong phần này, chúng tôi sẽ trình bày kiến trúc cấp cao vẽ nên bức tranh toàn cảnh của giải pháp
+
+
+00:01:01,320 --> 00:01:04,349
+and following the architecture overview are the components.
+và sau đây là tổng quan về kiến trúc là các thành phần.
+
+
+00:01:04,379 --> 00:01:05,099
+Drill down.
+Khoan sâu.
+
+
+00:01:05,099 --> 00:01:09,260
+This is where most of the work is done, and that's the core of the document.
+Đây là nơi phần lớn công việc được thực hiện và đó là cốt lõi của tài liệu.
+
+
+00:01:09,270 --> 00:01:14,370
+It contains a practical, detailed architecture of the various components in the architecture, including
+Nó chứa một kiến trúc thực tế, chi tiết của các thành phần khác nhau trong kiến trúc, bao gồm
+
+
+00:01:14,370 --> 00:01:18,080
+technology, stack, architectural details and implementation instructions.
+công nghệ, ngăn xếp, chi tiết kiến trúc và hướng dẫn triển khai.
+
+
+00:01:18,090 --> 00:01:21,150
+So let's examine each section in detail.
+Vậy chúng ta hãy cùng xem xét từng phần một cách chi tiết.
+
+

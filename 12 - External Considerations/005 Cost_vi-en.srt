@@ -1,0 +1,95 @@
+00:00:00,850 --> 00:00:04,330
+The last factor we will discuss in this section is the cost factor.
+Yếu tố cuối cùng chúng ta sẽ thảo luận trong phần này là yếu tố chi phí.
+
+
+00:00:04,360 --> 00:00:10,630
+Sometimes we will find there is a great tool outside that solves the exact problem we have in our application.
+Đôi khi chúng ta sẽ thấy có một công cụ tuyệt vời bên ngoài có thể giải quyết chính xác vấn đề mà chúng ta gặp phải trong ứng dụng của mình.
+
+
+00:00:10,630 --> 00:00:13,390
+For example, a shiny modern business flow manager.
+Ví dụ, một trình quản lý luồng kinh doanh hiện đại sáng bóng.
+
+
+00:00:13,390 --> 00:00:18,850
+But before we include it in our architecture, there is an important aspect to look at its cost.
+Nhưng trước khi đưa nó vào kiến trúc của chúng ta, có một khía cạnh quan trọng cần xem xét là chi phí của nó.
+
+
+00:00:18,940 --> 00:00:24,460
+Quite often we see amazing tools that are freely available for commercial use, such as the Apache Foundation
+Chúng ta thường thấy những công cụ tuyệt vời có sẵn miễn phí để sử dụng cho mục đích thương mại, chẳng hạn như Apache Foundation
+
+
+00:00:24,460 --> 00:00:24,820
+tools.
+công cụ.
+
+
+00:00:24,820 --> 00:00:30,310
+However, this can make us forget there are still products out there that cost a lot of money, and
+Tuy nhiên, điều này có thể khiến chúng ta quên rằng vẫn còn những sản phẩm có giá rất cao và
+
+
+00:00:30,310 --> 00:00:33,250
+this cost must be considered when designing our architecture.
+chi phí này phải được xem xét khi thiết kế kiến trúc của chúng tôi.
+
+
+00:00:33,250 --> 00:00:36,430
+For example, let's look again at the business flow Manager case.
+Ví dụ, chúng ta hãy xem lại trường hợp Trình quản lý luồng kinh doanh.
+
+
+00:00:36,430 --> 00:00:38,160
+We basically have two options.
+Về cơ bản chúng ta có hai lựa chọn.
+
+
+00:00:38,170 --> 00:00:43,390
+We can either buy one and then invest time and money in the purchase setup, training and support,
+Chúng ta có thể mua một cái rồi đầu tư thời gian và tiền bạc vào việc thiết lập mua hàng, đào tạo và hỗ trợ,
+
+
+00:00:43,390 --> 00:00:45,910
+or we can develop one in-house.
+hoặc chúng tôi có thể tự phát triển một cái.
+
+
+00:00:45,940 --> 00:00:50,770
+Now the rule of thumb is to always use an existing product instead of developing one.
+Nguyên tắc chung hiện nay là luôn sử dụng sản phẩm hiện có thay vì phát triển sản phẩm mới.
+
+
+00:00:50,770 --> 00:00:56,890
+But this rule must be taken with a grain of salt To validate the choice of using existing product,
+Nhưng quy tắc này phải được xem xét một cách thận trọng Để xác thực sự lựa chọn sử dụng sản phẩm hiện có,
+
+
+00:00:56,920 --> 00:01:00,910
+we must estimate its cost versus its value to the application.
+chúng ta phải ước tính chi phí của nó so với giá trị của nó đối với ứng dụng.
+
+
+00:01:00,910 --> 00:01:07,930
+If the product costs $100,000 a year and has 200 features, but we only need five of them, then it
+Nếu sản phẩm có giá 100.000 đô la một năm và có 200 tính năng, nhưng chúng ta chỉ cần năm trong số đó, thì nó là
+
+
+00:01:07,930 --> 00:01:11,050
+might be a good idea to look at the in-house development option.
+có thể là một ý tưởng hay khi xem xét tùy chọn phát triển nội bộ.
+
+
+00:01:11,320 --> 00:01:16,660
+Smart and effective cost management can make the difference between successful and failed project.
+Quản lý chi phí thông minh và hiệu quả có thể tạo nên sự khác biệt giữa dự án thành công và thất bại.
+
+
+00:01:16,690 --> 00:01:20,860
+Be sure to always be aware of the cost involved in the architectural decisions.
+Hãy luôn đảm bảo rằng bạn nắm rõ chi phí liên quan đến các quyết định về kiến trúc.
+
+

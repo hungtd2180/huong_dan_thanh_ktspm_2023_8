@@ -1,0 +1,190 @@
+00:00:00,830 --> 00:00:03,590
+Welcome to the System architecture section.
+Chào mừng đến với phần Kiến trúc hệ thống.
+
+
+00:00:03,770 --> 00:00:09,210
+Let me be clear right from the start, this is the most important section in this course.
+Tôi xin nói rõ ngay từ đầu rằng đây là phần quan trọng nhất trong khóa học này.
+
+
+00:00:09,230 --> 00:00:14,780
+Most of the work of a software architect is designing the system architecture and you will find yourself
+Hầu hết công việc của một kiến trúc sư phần mềm là thiết kế kiến trúc hệ thống và bạn sẽ thấy mình
+
+
+00:00:14,780 --> 00:00:19,760
+using the concepts we will discuss in this section in almost all the systems you will work on.
+sử dụng các khái niệm chúng ta sẽ thảo luận trong phần này trong hầu hết các hệ thống mà bạn sẽ làm việc.
+
+
+00:00:19,790 --> 00:00:25,310
+You probably already know by now that the main goal of the architect is to design a system that is fast,
+Có lẽ bây giờ bạn đã biết rằng mục tiêu chính của kiến trúc sư là thiết kế một hệ thống nhanh,
+
+
+00:00:25,310 --> 00:00:27,260
+reliable and easy to maintain.
+đáng tin cậy và dễ bảo trì.
+
+
+00:00:27,350 --> 00:00:32,870
+These qualities are translated to a system that is designed using the concepts we will discuss in this
+Những phẩm chất này được chuyển thành một hệ thống được thiết kế bằng cách sử dụng các khái niệm mà chúng ta sẽ thảo luận trong
+
+
+00:00:32,870 --> 00:00:33,500
+section.
+phần
+
+
+00:00:33,710 --> 00:00:37,910
+But before diving in, let's talk about the meaning of system architecture.
+Nhưng trước khi đi sâu hơn, chúng ta hãy nói về ý nghĩa của kiến trúc hệ thống.
+
+
+00:00:38,600 --> 00:00:41,630
+We already talked a lot about components, architecture.
+Chúng ta đã nói rất nhiều về các thành phần, kiến trúc.
+
+
+00:00:41,660 --> 00:00:45,290
+We talked about layers, logging, dependency, injection and more.
+Chúng tôi đã nói về các lớp, ghi nhật ký, sự phụ thuộc, tiêm và nhiều hơn nữa.
+
+
+00:00:45,410 --> 00:00:50,330
+With system architecture, we take a higher point of view and we look at the big picture.
+Với kiến trúc hệ thống, chúng ta có góc nhìn cao hơn và nhìn vào bức tranh toàn cảnh.
+
+
+00:00:50,330 --> 00:00:54,620
+And in the big picture, we usually ask ourselves these questions.
+Và nhìn vào bức tranh toàn cảnh, chúng ta thường tự hỏi mình những câu hỏi này.
+
+
+00:00:55,430 --> 00:00:57,890
+How will the system work under heavy load?
+Hệ thống sẽ hoạt động như thế nào khi chịu tải nặng?
+
+
+00:00:58,220 --> 00:01:03,140
+What will happen is the system will crash at this exact moment in the business flow.
+Điều sẽ xảy ra là hệ thống sẽ bị sập ngay tại thời điểm này trong luồng công việc kinh doanh.
+
+
+00:01:03,170 --> 00:01:07,520
+How complicated can be the update process and more?
+Quá trình cập nhật có thể phức tạp đến mức nào và hơn thế nữa?
+
+
+00:01:07,730 --> 00:01:09,360
+These are the main questions.
+Đây là những câu hỏi chính.
+
+
+00:01:09,380 --> 00:01:13,250
+Of course there could be more depending on the specific requirements of the system.
+Tất nhiên có thể có nhiều hơn tùy thuộc vào yêu cầu cụ thể của hệ thống.
+
+
+00:01:13,280 --> 00:01:17,630
+Now, the answers you will give to these questions will vary depending on the system.
+Bây giờ, câu trả lời bạn đưa ra cho những câu hỏi này sẽ khác nhau tùy thuộc vào hệ thống.
+
+
+00:01:17,630 --> 00:01:23,000
+For example, you might decide that a system crash is tolerable since the data is not sensitive and
+Ví dụ, bạn có thể quyết định rằng sự cố hệ thống có thể chấp nhận được vì dữ liệu không nhạy cảm và
+
+
+00:01:23,000 --> 00:01:26,690
+there are not many users and so the system should not be redundant.
+không có nhiều người dùng nên hệ thống không nên dư thừa.
+
+
+00:01:26,720 --> 00:01:32,840
+On the other hand, if the system is mission critical and no data should be ever lost, plan for a massive
+Mặt khác, nếu hệ thống là nhiệm vụ quan trọng và không được phép mất dữ liệu, hãy lập kế hoạch cho một đợt khôi phục lớn
+
+
+00:01:32,840 --> 00:01:38,870
+system with a lot of queues, as you will see in the next sections, the system architecture includes
+hệ thống có nhiều hàng đợi, như bạn sẽ thấy trong các phần tiếp theo, kiến trúc hệ thống bao gồm
+
+
+00:01:38,870 --> 00:01:40,250
+the following aspects.
+các khía cạnh sau đây.
+
+
+00:01:41,160 --> 00:01:46,860
+One defining the software components or services that together compose the system.
+Một định nghĩa về các thành phần phần mềm hoặc dịch vụ cùng nhau tạo nên hệ thống.
+
+
+00:01:46,980 --> 00:01:51,360
+Two Defining the way these components communicate with each other.
+Hai Xác định cách các thành phần này giao tiếp với nhau.
+
+
+00:01:51,390 --> 00:01:57,450
+Three Designing the various capabilities of the system, namely scalability, redundancy, performance,
+Ba Thiết kế các khả năng khác nhau của hệ thống, cụ thể là khả năng mở rộng, dự phòng, hiệu suất,
+
+
+00:01:57,450 --> 00:01:59,010
+manageability and more.
+khả năng quản lý và nhiều hơn nữa.
+
+
+00:02:00,450 --> 00:02:06,210
+In this section we will focus mainly on the second and third aspects, since we've already covered the
+Trong phần này chúng ta sẽ tập trung chủ yếu vào khía cạnh thứ hai và thứ ba, vì chúng ta đã đề cập đến
+
+
+00:02:06,210 --> 00:02:08,910
+software components themselves in previous sections.
+các thành phần phần mềm trong các phần trước.
+
+
+00:02:09,210 --> 00:02:15,990
+The topics in this section are Loose Coupling, which talks about the way to make our components independent
+Các chủ đề trong phần này là Loose Coupling, nói về cách làm cho các thành phần của chúng ta độc lập
+
+
+00:02:15,990 --> 00:02:16,980
+from each other.
+từ nhau.
+
+
+00:02:17,100 --> 00:02:22,920
+Stateless A pattern that allows our components to scale and make the whole system redundant.
+Không trạng thái Một mẫu cho phép các thành phần của chúng ta mở rộng quy mô và làm cho toàn bộ hệ thống trở nên dư thừa.
+
+
+00:02:23,190 --> 00:02:27,270
+Caching a technique that helps improve the system performance.
+Lưu trữ đệm là một kỹ thuật giúp cải thiện hiệu suất hệ thống.
+
+
+00:02:27,510 --> 00:02:33,330
+Messaging, which is a discussion about various techniques for passing data between services and their
+Nhắn tin, là một cuộc thảo luận về các kỹ thuật khác nhau để truyền dữ liệu giữa các dịch vụ và
+
+
+00:02:33,330 --> 00:02:39,960
+pros and cons and logging and monitoring to make sure our system will be able to report its status and
+ưu và nhược điểm và ghi nhật ký và giám sát để đảm bảo hệ thống của chúng tôi có thể báo cáo trạng thái của nó và
+
+
+00:02:39,960 --> 00:02:41,620
+avoid surprising failures.
+tránh những thất bại bất ngờ.
+
+
+00:02:41,650 --> 00:02:44,440
+So first, let's talk about loose coupling.
+Trước tiên, chúng ta hãy nói về sự liên kết lỏng lẻo.
+
+

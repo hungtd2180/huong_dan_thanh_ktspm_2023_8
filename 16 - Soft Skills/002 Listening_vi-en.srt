@@ -1,0 +1,90 @@
+00:00:00,170 --> 00:00:05,360
+One of the most important soft skills that not enough architects possess is listening.
+Một trong những kỹ năng mềm quan trọng nhất mà không nhiều kiến trúc sư có được là lắng nghe.
+
+
+00:00:05,390 --> 00:00:11,210
+Sounds quite simple, I know, but I've met countless architects that behaved as if they already know
+Nghe có vẻ khá đơn giản, tôi biết, nhưng tôi đã gặp vô số kiến trúc sư hành động như thể họ đã biết
+
+
+00:00:11,210 --> 00:00:16,850
+all that is to know about software, architecture, technology requirements and the specific project
+tất cả những gì cần biết về phần mềm, kiến trúc, yêu cầu công nghệ và dự án cụ thể
+
+
+00:00:16,850 --> 00:00:19,580
+and were simply not pleasant to work with.
+và đơn giản là không dễ chịu khi làm việc cùng.
+
+
+00:00:19,760 --> 00:00:25,940
+One of the key factors in a successful teamwork is the ability to listen and to assume you are not the
+Một trong những yếu tố chính trong một nhóm làm việc thành công là khả năng lắng nghe và cho rằng bạn không phải là người thứ 6.
+
+
+00:00:25,940 --> 00:00:27,530
+smartest person in the room.
+người thông minh nhất trong phòng.
+
+
+00:00:27,740 --> 00:00:33,920
+This assumption, regardless if true or not, will help you become a better team player and as a result,
+Giả định này, bất kể đúng hay không, sẽ giúp bạn trở thành một người chơi nhóm tốt hơn và kết quả là,
+
+
+00:00:33,950 --> 00:00:35,240
+a better architect.
+một kiến trúc sư giỏi hơn.
+
+
+00:00:35,270 --> 00:00:36,410
+Think about it.
+Hãy nghĩ về điều đó.
+
+
+00:00:36,440 --> 00:00:41,360
+If you are not the smartest man in the room, then you should probably listen to what the other people
+Nếu bạn không phải là người thông minh nhất trong phòng, thì có lẽ bạn nên lắng nghe những gì người khác nói
+
+
+00:00:41,360 --> 00:00:42,590
+in the room have to say.
+trong phòng phải nói.
+
+
+00:00:42,620 --> 00:00:46,460
+They might have some clever thoughts worth sharing and using.
+Họ có thể có một số ý tưởng thông minh đáng chia sẻ và sử dụng.
+
+
+00:00:46,460 --> 00:00:51,410
+You know, collective wisdom is almost always better than a soloist work.
+Bạn biết đấy, trí tuệ tập thể gần như luôn tốt hơn tác phẩm của một nghệ sĩ độc tấu.
+
+
+00:00:51,440 --> 00:00:55,260
+Even if you are sure you have just designed the best architecture possible.
+Ngay cả khi bạn chắc chắn rằng mình vừa thiết kế được kiến trúc tốt nhất có thể.
+
+
+00:00:55,280 --> 00:01:01,650
+Always assume you forgot something or wasn't aware of all the implications of the requirements or didn't
+Luôn cho rằng bạn đã quên điều gì đó hoặc không nhận thức được tất cả các hàm ý của các yêu cầu hoặc không
+
+
+00:01:01,650 --> 00:01:04,050
+think about certain scheduling restrictions.
+nghĩ về một số hạn chế về lịch trình.
+
+
+00:01:04,170 --> 00:01:09,200
+Talk about your work and more important, listen to what others have to say about it.
+Hãy nói về công việc của bạn và quan trọng hơn, hãy lắng nghe những gì người khác nói về nó.
+
+
+00:01:09,210 --> 00:01:11,610
+It will make your work so much better.
+Nó sẽ làm cho công việc của bạn tốt hơn rất nhiều.
+
+

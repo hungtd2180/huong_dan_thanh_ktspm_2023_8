@@ -1,0 +1,70 @@
+00:00:00,620 --> 00:00:04,430
+So let's conclude what we have learned about nonfunctional requirements.
+Vậy chúng ta hãy kết luận những gì chúng ta đã học được về các yêu cầu phi chức năng.
+
+
+00:00:04,610 --> 00:00:09,260
+These requirements define what the system will have to deal with in terms of performance.
+Các yêu cầu này xác định hệ thống sẽ phải xử lý những gì về mặt hiệu suất.
+
+
+00:00:09,800 --> 00:00:10,910
+Load users.
+Tải người dùng.
+
+
+00:00:10,910 --> 00:00:11,690
+ET cetera.
+ET v.v.
+
+
+00:00:12,080 --> 00:00:16,610
+The client will usually won't be able to define those requirements by himself, and it will be your
+Khách hàng thường sẽ không thể tự mình xác định những yêu cầu đó và đó sẽ là
+
+
+00:00:16,610 --> 00:00:19,220
+job as an architect to help him define them.
+công việc của một kiến trúc sư để giúp anh ta xác định chúng.
+
+
+00:00:19,460 --> 00:00:24,950
+And perhaps the most important lesson from this section never, ever design a system without knowing
+Và có lẽ bài học quan trọng nhất từ phần này là không bao giờ thiết kế một hệ thống mà không biết
+
+
+00:00:24,950 --> 00:00:26,360
+its functional requirements.
+yêu cầu chức năng của nó.
+
+
+00:00:26,390 --> 00:00:31,280
+The effect of those requirements on the architecture is huge, and you don't want to design a system
+Tác động của những yêu cầu đó lên kiến trúc là rất lớn và bạn không muốn thiết kế một hệ thống
+
+
+00:00:31,280 --> 00:00:34,760
+that will crash and burn on its first day in production.
+sẽ sụp đổ và thất bại ngay trong ngày đầu tiên sản xuất.
+
+
+00:00:34,970 --> 00:00:39,890
+In fact, the place of the non-functional requirements in the architecture is so important that they
+Trên thực tế, vị trí của các yêu cầu phi chức năng trong kiến trúc quan trọng đến mức chúng
+
+
+00:00:39,890 --> 00:00:45,020
+have their own dedicated paragraph in the architecture document, as we will see later in this course.
+có đoạn văn riêng trong tài liệu kiến trúc, như chúng ta sẽ thấy sau trong khóa học này.
+
+
+00:00:45,680 --> 00:00:50,600
+So now that we know what non-functional requirements are and how to deal with them, let's continue
+Bây giờ chúng ta đã biết các yêu cầu phi chức năng là gì và cách xử lý chúng, hãy tiếp tục
+
+
+00:00:50,600 --> 00:00:52,430
+our journey in the architectural flow.
+hành trình của chúng tôi trong dòng chảy kiến trúc.
+
+

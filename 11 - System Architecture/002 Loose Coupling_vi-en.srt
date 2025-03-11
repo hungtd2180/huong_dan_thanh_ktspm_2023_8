@@ -1,0 +1,420 @@
+00:00:00,590 --> 00:00:01,810
+We already discussed.
+Chúng ta đã thảo luận rồi.
+
+
+00:00:01,819 --> 00:00:04,070
+Loose Coupling is a software component section.
+Loose Coupling là một phần thành phần phần mềm.
+
+
+00:00:04,070 --> 00:00:09,710
+When we talked about the need to loose couple classes using dependency injection so that changes in
+Khi chúng ta nói về nhu cầu mất các lớp cặp bằng cách sử dụng phương pháp tiêm phụ thuộc để thay đổi trong
+
+
+00:00:09,710 --> 00:00:12,920
+one class won't necessarily affect other classes.
+một lớp không nhất thiết ảnh hưởng đến các lớp khác.
+
+
+00:00:12,950 --> 00:00:18,680
+This concept is also true for system architecture, although on another scale, when talking about loose
+Khái niệm này cũng đúng đối với kiến trúc hệ thống, mặc dù ở quy mô khác, khi nói về kiến trúc lỏng lẻo
+
+
+00:00:18,680 --> 00:00:24,380
+coupling in system architecture, we talk about making sure the various components or services are not
+ghép nối trong kiến trúc hệ thống, chúng ta nói về việc đảm bảo các thành phần hoặc dịch vụ khác nhau không phải là
+
+
+00:00:24,380 --> 00:00:26,580
+strongly tied to other components.
+liên kết chặt chẽ với các thành phần khác.
+
+
+00:00:26,600 --> 00:00:31,730
+The reasoning for this is again quite similar to the loose coupling inside components.
+Lý do cho điều này một lần nữa khá giống với sự kết hợp lỏng lẻo bên trong các thành phần.
+
+
+00:00:32,240 --> 00:00:38,780
+If services will be coupled to other services, then every time a service is changed and in modern systems,
+Nếu các dịch vụ được kết hợp với các dịch vụ khác, thì mỗi khi một dịch vụ được thay đổi và trong các hệ thống hiện đại,
+
+
+00:00:38,780 --> 00:00:40,010
+this happens a lot.
+điều này xảy ra rất nhiều.
+
+
+00:00:40,040 --> 00:00:43,370
+This change might affect other services that use it.
+Thay đổi này có thể ảnh hưởng đến các dịch vụ khác sử dụng nó.
+
+
+00:00:43,760 --> 00:00:49,010
+By loosely coupling the services, we ensure the independence of each of the services and make sure
+Bằng cách kết hợp lỏng lẻo các dịch vụ, chúng tôi đảm bảo tính độc lập của từng dịch vụ và đảm bảo
+
+
+00:00:49,010 --> 00:00:53,000
+they can be modified with minimal impact on other services, if at all.
+chúng có thể được sửa đổi với tác động tối thiểu đến các dịch vụ khác, nếu có.
+
+
+00:00:53,270 --> 00:00:58,430
+This will make our system much more flexible and of course very easy to maintain.
+Điều này sẽ làm cho hệ thống của chúng tôi linh hoạt hơn nhiều và tất nhiên là rất dễ bảo trì.
+
+
+00:00:58,550 --> 00:01:04,349
+Now you might have a good question here, since different services run in different processes and do
+Bây giờ bạn có thể có một câu hỏi hay ở đây, vì các dịch vụ khác nhau chạy trong các quy trình khác nhau và thực hiện
+
+
+00:01:04,349 --> 00:01:07,290
+not share the same code, what's the point of loose coupling?
+không chia sẻ cùng một mã, mục đích của việc kết nối lỏng lẻo là gì?
+
+
+00:01:07,320 --> 00:01:13,320
+It's not that when a single class is changed in service A it will affect other classes in service B.
+Không phải khi một lớp duy nhất được thay đổi trong dịch vụ A thì nó sẽ ảnh hưởng đến các lớp khác trong dịch vụ B.
+
+
+00:01:13,440 --> 00:01:15,850
+Well, that's indeed a good question.
+Vâng, đó thực sự là một câu hỏi hay.
+
+
+00:01:15,870 --> 00:01:22,470
+In fact, loose coupling in services or components has other meaning than loose coupling inside components.
+Trên thực tế, sự kết hợp lỏng lẻo trong các dịch vụ hoặc thành phần có ý nghĩa khác với sự kết hợp lỏng lẻo bên trong các thành phần.
+
+
+00:01:23,060 --> 00:01:28,910
+In general, loose coupling in services means that the fact that a service is implemented in a specific
+Nhìn chung, sự kết hợp lỏng lẻo trong các dịch vụ có nghĩa là thực tế là một dịch vụ được triển khai trong một 21 cụ thể
+
+
+00:01:28,910 --> 00:01:35,720
+platform or exposes specific API will not force other services to use the same platform.
+nền tảng hoặc hiển thị API cụ thể sẽ không buộc các dịch vụ khác phải sử dụng cùng một nền tảng.
+
+
+00:01:35,750 --> 00:01:42,860
+In addition, loose coupling also means that changes in the service API, such as its URL or its parameters
+Ngoài ra, sự kết hợp lỏng lẻo cũng có nghĩa là những thay đổi trong API dịch vụ, chẳng hạn như URL hoặc các tham số của nó
+
+
+00:01:42,860 --> 00:01:46,250
+will have minimal to no effect on the calling services.
+sẽ có tác động tối thiểu hoặc không có tác động đến các dịch vụ gọi điện.
+
+
+00:01:46,520 --> 00:01:48,440
+Let's look at an example.
+Chúng ta hãy xem một ví dụ.
+
+
+00:01:49,220 --> 00:01:52,700
+Say we have a service that exposes stock quotes.
+Giả sử chúng ta có một dịch vụ cung cấp báo giá cổ phiếu.
+
+
+00:01:52,730 --> 00:01:54,470
+The service is Java based.
+Dịch vụ này dựa trên Java.
+
+
+00:01:54,500 --> 00:01:58,820
+Now let's say we need another service that manages portfolios for customers.
+Bây giờ chúng ta hãy nói rằng chúng ta cần một dịch vụ khác để quản lý danh mục đầu tư cho khách hàng.
+
+
+00:01:58,850 --> 00:02:03,650
+Naturally, this service will have to query the stock quotes service for some data.
+Tất nhiên, dịch vụ này sẽ phải truy vấn dịch vụ báo giá cổ phiếu để có một số dữ liệu.
+
+
+00:02:03,770 --> 00:02:09,560
+The stock service exposes its API as a Java RMI remote method invocation.
+Dịch vụ chứng khoán hiển thị API của nó như một lệnh gọi phương thức từ xa Java RMI.
+
+
+00:02:09,590 --> 00:02:14,480
+This is a simple, performant and effective method for executing API on remote objects.
+Đây là phương pháp đơn giản, hiệu quả và nhanh chóng để thực thi API trên các đối tượng từ xa.
+
+
+00:02:14,510 --> 00:02:21,080
+The problem is using RMI, the calling service, which is the portfolio service must also be developed
+Vấn đề là sử dụng RMI, dịch vụ gọi điện, là dịch vụ danh mục đầu tư cũng phải được phát triển
+
+
+00:02:21,080 --> 00:02:21,890
+in Java.
+trong Java.
+
+
+00:02:21,980 --> 00:02:24,120
+This is a limitation of Java RMI.
+Đây là một hạn chế của Java RMI.
+
+
+00:02:24,420 --> 00:02:27,690
+So in this example we created a strong coupling.
+Vì vậy, trong ví dụ này chúng tôi đã tạo ra một sự kết hợp mạnh mẽ.
+
+
+00:02:27,720 --> 00:02:33,960
+The implementation of the stock service forced the developers to use Java also for the portfolio service.
+Việc triển khai dịch vụ chứng khoán buộc các nhà phát triển phải sử dụng Java cho cả dịch vụ danh mục đầu tư.
+
+
+00:02:34,420 --> 00:02:37,060
+Let's look at another, more modern example.
+Hãy xem một ví dụ khác hiện đại hơn.
+
+
+00:02:37,780 --> 00:02:44,050
+The stock services developers understood that RMI is not the right solution for modern apps and switched
+Các nhà phát triển dịch vụ chứng khoán hiểu rằng RMI không phải là giải pháp phù hợp cho các ứng dụng hiện đại và đã chuyển sang
+
+
+00:02:44,050 --> 00:02:48,310
+to Rest API, which is a de facto standard for API nowadays.
+đến Rest API, đây là một tiêu chuẩn thực tế cho API hiện nay.
+
+
+00:02:48,400 --> 00:02:55,090
+Another service responsible for creating investing recommendation was built in Python and is querying
+Một dịch vụ khác chịu trách nhiệm tạo khuyến nghị đầu tư được xây dựng bằng Python và đang truy vấn
+
+
+00:02:55,090 --> 00:02:56,110
+the stock service.
+dịch vụ chứng khoán.
+
+
+00:02:56,140 --> 00:03:00,820
+This time the querying is done by making a rest call to the stock service.
+Lần này, truy vấn được thực hiện bằng cách gọi lệnh rest đến dịch vụ chứng khoán.
+
+
+00:03:00,850 --> 00:03:05,980
+Note that the service is implemented in Python this time and there is no problem with that.
+Lưu ý rằng dịch vụ này được triển khai bằng Python lần này và không có vấn đề gì với điều đó.
+
+
+00:03:06,310 --> 00:03:12,640
+Everything is good for a few months and then the stock service has to be moved to another URL for some
+Mọi thứ đều tốt trong vài tháng và sau đó dịch vụ chứng khoán phải được chuyển sang một URL khác trong khoảng
+
+
+00:03:12,910 --> 00:03:14,020
+related reasons.
+lý do liên quan.
+
+
+00:03:14,230 --> 00:03:20,710
+What happens now is that because the stock service URL has changed all the services, working with it
+Điều xảy ra bây giờ là do URL dịch vụ chứng khoán đã thay đổi tất cả các dịch vụ, làm việc với nó
+
+
+00:03:20,710 --> 00:03:23,830
+has to change their code to point to the new URL.
+phải thay đổi mã của họ để trỏ đến URL mới.
+
+
+00:03:24,460 --> 00:03:30,370
+That means one thing there is a strong coupling between the services, even though the API itself is
+Điều đó có nghĩa là có một sự kết hợp chặt chẽ giữa các dịch vụ, mặc dù bản thân API là
+
+
+00:03:30,370 --> 00:03:33,520
+exposed using standard platform agnostic rest API.
+được trình bày bằng cách sử dụng API nghỉ ngơi không phụ thuộc vào nền tảng tiêu chuẩn.
+
+
+00:03:33,940 --> 00:03:37,790
+To make it more clear, let's talk about a full blown application.
+Để làm rõ hơn, chúng ta hãy nói về một ứng dụng đầy đủ.
+
+
+00:03:37,820 --> 00:03:41,240
+This application will probably have at least six services.
+Ứng dụng này có thể sẽ có ít nhất sáu dịch vụ.
+
+
+00:03:41,270 --> 00:03:44,210
+Naturally, they are going to communicate with each other.
+Tất nhiên, họ sẽ giao tiếp với nhau.
+
+
+00:03:44,360 --> 00:03:50,030
+Now, if they communicate directly like this, we will have what is known as the spider web.
+Bây giờ, nếu họ giao tiếp trực tiếp như thế này, chúng ta sẽ có thứ được gọi là mạng nhện.
+
+
+00:03:50,120 --> 00:03:51,890
+I guess you can understand why.
+Tôi đoán bạn có thể hiểu tại sao.
+
+
+00:03:52,520 --> 00:03:59,060
+Now imagine what will happen if a single service will change its URL, see how many services will be
+Bây giờ hãy tưởng tượng điều gì sẽ xảy ra nếu một dịch vụ duy nhất thay đổi URL của nó, hãy xem có bao nhiêu dịch vụ sẽ là
+
+
+00:03:59,060 --> 00:03:59,780
+affected.
+bị ảnh hưởng.
+
+
+00:03:59,810 --> 00:04:05,960
+If your services map looks like a spider web, be ready for a nasty surprise when even one of the URL
+Nếu bản đồ dịch vụ của bạn trông giống như một mạng nhện, hãy chuẩn bị cho một bất ngờ khó chịu khi thậm chí một trong những URL
+
+
+00:04:05,960 --> 00:04:06,650
+is changed.
+đã thay đổi.
+
+
+00:04:06,680 --> 00:04:10,280
+The spider web is a sure sign of a strong coupling system.
+Mạng nhện là dấu hiệu chắc chắn của một hệ thống liên kết mạnh mẽ.
+
+
+00:04:10,580 --> 00:04:13,880
+Now there are a couple of ways to solve this coupling.
+Bây giờ có một vài cách để giải quyết sự ghép nối này.
+
+
+00:04:14,120 --> 00:04:17,800
+One Build a Yellow Pages directory for the service.
+Một Xây dựng danh bạ Trang Vàng cho dịch vụ.
+
+
+00:04:17,810 --> 00:04:23,840
+Whenever a service needs to communicate with other service, it asks the directory for the URL of the
+Bất cứ khi nào một dịch vụ cần giao tiếp với dịch vụ khác, nó sẽ yêu cầu thư mục cung cấp URL của
+
+
+00:04:23,840 --> 00:04:27,710
+service it wants to access and uses the URL it gets.
+dịch vụ mà nó muốn truy cập và sử dụng URL mà nó nhận được.
+
+
+00:04:27,740 --> 00:04:33,890
+This way the URL is not hard coded into the service and when it changes the change affects only a single
+Theo cách này, URL không được mã hóa cứng vào dịch vụ và khi nó thay đổi, thay đổi chỉ ảnh hưởng đến một
+
+
+00:04:33,890 --> 00:04:34,310
+service.
+dịch vụ.
+
+
+00:04:34,310 --> 00:04:35,420
+The directory.
+Thư mục.
+
+
+00:04:35,630 --> 00:04:38,450
+In this solution there is only a single URL.
+Trong giải pháp này chỉ có một URL duy nhất.
+
+
+00:04:38,450 --> 00:04:45,260
+The services need to know the directories and so if it changes which won't happen frequently, the change
+Các dịch vụ cần biết các thư mục và do đó nếu nó thay đổi (điều này sẽ không xảy ra thường xuyên), thì sự thay đổi
+
+
+00:04:45,260 --> 00:04:47,630
+will be limited to a single URL only.
+sẽ chỉ giới hạn ở một URL duy nhất.
+
+
+00:04:47,840 --> 00:04:54,260
+You can develop one of your own and there are some great tools that do just that, such as console.
+Bạn có thể phát triển một trong những công cụ của riêng mình và có một số công cụ tuyệt vời có thể thực hiện điều đó, chẳng hạn như console.
+
+
+00:04:56,060 --> 00:04:59,420
+Another way is to build a middleman or gateway.
+Một cách khác là xây dựng một trung gian hoặc cổng kết nối.
+
+
+00:04:59,450 --> 00:05:05,690
+In this scenario, the service accesses the middleman and asks it to go to the stock service and make
+Trong trường hợp này, dịch vụ sẽ truy cập vào trung gian và yêu cầu trung gian chuyển đến dịch vụ chứng khoán và thực hiện
+
+
+00:05:05,720 --> 00:05:06,470
+a query.
+một truy vấn.
+
+
+00:05:06,500 --> 00:05:13,130
+The middleman holds an internal mapping table, which maps tasks to URLs, and so it knows which URL
+Người trung gian nắm giữ một bảng ánh xạ nội bộ, bảng này ánh xạ các tác vụ tới các URL và do đó nó biết URL nào
+
+
+00:05:13,160 --> 00:05:17,210
+to access in order to fulfill the task given by the calling service.
+để truy cập nhằm thực hiện nhiệm vụ được giao bởi dịch vụ gọi.
+
+
+00:05:17,300 --> 00:05:23,510
+The calling service has no idea what the URL of the stock service is or even if there is a stock service.
+Dịch vụ gọi không biết URL của dịch vụ chứng khoán là gì hoặc thậm chí không biết có dịch vụ chứng khoán hay không.
+
+
+00:05:23,540 --> 00:05:28,500
+All it knows is that he asked the middleman to do something and it was done.
+Tất cả những gì nó biết là anh ta đã yêu cầu người trung gian làm điều gì đó và điều đó đã được thực hiện.
+
+
+00:05:28,550 --> 00:05:31,460
+It doesn't care how, where and by whom.
+Nó không quan tâm đến việc như thế nào, ở đâu và bởi ai.
+
+
+00:05:31,730 --> 00:05:35,050
+In this solution also there is only a single URL.
+Trong giải pháp này cũng chỉ có một URL duy nhất.
+
+
+00:05:35,060 --> 00:05:40,460
+The service needs to be aware of the middleman, so changes will be limited to this single URL.
+Dịch vụ cần phải nhận biết được người trung gian, do đó những thay đổi sẽ bị giới hạn ở URL duy nhất này.
+
+
+00:05:40,940 --> 00:05:44,900
+Now it doesn't really matter which solution you pick, they are both good.
+Bây giờ, giải pháp nào bạn chọn cũng không thực sự quan trọng, cả hai đều tốt.
+
+
+00:05:44,930 --> 00:05:50,510
+You will also see variations of those two and sometimes it might be even a good idea to implement both.
+Bạn cũng sẽ thấy những biến thể của hai phương pháp đó và đôi khi thậm chí có thể là một ý tưởng hay khi áp dụng cả hai.
+
+
+00:05:50,630 --> 00:05:55,700
+But the important part is that you will better avoid strong coupling by using at least one of them.
+Nhưng phần quan trọng là bạn sẽ tránh được sự kết hợp chặt chẽ hơn bằng cách sử dụng ít nhất một trong số chúng.
+
+
+00:05:56,190 --> 00:06:01,760
+It's always a good idea to keep your services as loosely coupled as possible, thus making your system
+Luôn là một ý tưởng tốt để giữ cho các dịch vụ của bạn được kết nối lỏng lẻo nhất có thể, do đó làm cho hệ thống của bạn
+
+
+00:06:01,760 --> 00:06:03,980
+much more flexible and maintainable.
+linh hoạt và dễ bảo trì hơn nhiều.
+
+

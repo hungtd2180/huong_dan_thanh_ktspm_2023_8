@@ -1,0 +1,165 @@
+00:00:00,260 --> 00:00:04,520
+Web API is quite similar to web app with two important differences.
+Web API khá giống với ứng dụng web với hai điểm khác biệt quan trọng.
+
+
+00:00:04,700 --> 00:00:10,310
+One, it does not serve HTML pages, but data usually in the form of a Json structure.
+Thứ nhất, nó không phục vụ các trang HTML mà dữ liệu thường ở dạng cấu trúc Json.
+
+
+00:00:10,670 --> 00:00:16,490
+Two Its clients are not web browsers, but other applications, including JavaScript code that runs
+Hai Khách hàng của nó không phải là trình duyệt web mà là các ứng dụng khác, bao gồm mã JavaScript chạy
+
+
+00:00:16,490 --> 00:00:18,020
+inside a web browser.
+bên trong trình duyệt web.
+
+
+00:00:18,440 --> 00:00:24,260
+Web API has become extremely popular in the last few years and almost every web app exposes also web
+API Web đã trở nên cực kỳ phổ biến trong vài năm trở lại đây và hầu như mọi ứng dụng web đều hỗ trợ web
+
+
+00:00:24,260 --> 00:00:26,750
+API in addition to the more traditional web app.
+API ngoài ứng dụng web truyền thống hơn.
+
+
+00:00:27,290 --> 00:00:34,010
+Web API, as its name implies, exposes an API application programming interface, which allows other
+Web API, như tên gọi của nó, cung cấp một giao diện lập trình ứng dụng API, cho phép
+
+
+00:00:34,010 --> 00:00:37,010
+programs to access it and execute various actions.
+các chương trình để truy cập vào nó và thực hiện nhiều hành động khác nhau.
+
+
+00:00:37,550 --> 00:00:43,610
+There are various types of web API implementation, but the most popular one by a large margin is definitely
+Có nhiều loại triển khai API web khác nhau, nhưng loại phổ biến nhất chắc chắn là
+
+
+00:00:43,610 --> 00:00:44,690
+the rest API.
+API còn lại.
+
+
+00:00:45,800 --> 00:00:50,780
+Rest API is a huge topic with a lot of philosophy and thinking, but for this course it's suffice to
+Rest API là một chủ đề lớn với nhiều triết lý và suy nghĩ, nhưng đối với khóa học này, nó chỉ đủ cho
+
+
+00:00:50,780 --> 00:00:58,580
+say that rest allows us to access entities with a combination of URL parameters and Http verb.
+nói rằng phần còn lại cho phép chúng ta truy cập các thực thể bằng sự kết hợp của các tham số URL và động từ Http.
+
+
+00:00:58,730 --> 00:01:05,670
+For example, the following URL will be executed by the API as get me user number 17.
+Ví dụ, URL sau sẽ được API thực thi với tư cách là người dùng get me số 17.
+
+
+00:01:06,640 --> 00:01:10,540
+This means delete order number 156.
+Điều này có nghĩa là xóa số đơn hàng 156.
+
+
+00:01:11,270 --> 00:01:16,910
+As you can see, the main advantage of rest is that it does not require more than a standard URL to
+Như bạn có thể thấy, lợi thế chính của rest là nó không yêu cầu nhiều hơn một URL chuẩn để
+
+
+00:01:16,910 --> 00:01:22,820
+execute the API and does not require cumbersome protocols on top of the Http protocol as was with the
+thực hiện API và không yêu cầu các giao thức cồng kềnh trên giao thức Http như với
+
+
+00:01:22,820 --> 00:01:23,820
+soap protocol.
+giao thức xà phòng.
+
+
+00:01:23,840 --> 00:01:29,600
+For those of you who are familiar with it, Web APIs are used for data retrieval and receiving.
+Đối với những ai đã quen thuộc với nó, Web API được sử dụng để truy xuất và tiếp nhận dữ liệu.
+
+
+00:01:29,600 --> 00:01:33,410
+It should not be used for returning visual markup such as HTML.
+Không nên sử dụng nó để trả về đánh dấu trực quan như HTML.
+
+
+00:01:33,920 --> 00:01:38,150
+For this reason, almost any kind of application can be a client of web API.
+Vì lý do này, hầu như bất kỳ loại ứng dụng nào cũng có thể là máy khách của API web.
+
+
+00:01:38,180 --> 00:01:40,310
+Any code that can access a rest API.
+Bất kỳ mã nào có thể truy cập API còn lại.
+
+
+00:01:40,310 --> 00:01:45,920
+And I believe that almost every language supports that capability, can access web API and use it.
+Và tôi tin rằng hầu hết mọi ngôn ngữ đều hỗ trợ khả năng đó, có thể truy cập API web và sử dụng nó.
+
+
+00:01:46,040 --> 00:01:52,010
+This is the reason that web APIs are used by web apps, rich client apps, and of course, other systems.
+Đây là lý do tại sao API web được sử dụng bởi các ứng dụng web, ứng dụng khách hàng phong phú và tất nhiên là các hệ thống khác.
+
+
+00:01:52,630 --> 00:01:59,530
+Web API applications are best for systems that require data retrieval and store, though not huge amounts
+Các ứng dụng API Web là tốt nhất cho các hệ thống yêu cầu truy xuất và lưu trữ dữ liệu, mặc dù không phải là số lượng lớn
+
+
+00:01:59,530 --> 00:02:01,210
+of data in each action.
+của dữ liệu trong mỗi hành động.
+
+
+00:02:01,330 --> 00:02:06,460
+Client initiated actions, meaning the caller is the one making the request to do something such as
+Hành động do khách hàng khởi xướng, nghĩa là người gọi là người đưa ra yêu cầu thực hiện một việc gì đó như
+
+
+00:02:06,460 --> 00:02:09,250
+getting all the data saving username and so on.
+lấy tất cả dữ liệu lưu tên người dùng và vân vân.
+
+
+00:02:09,759 --> 00:02:17,230
+Large scale with a large number of users and a lot of data and short focused action as opposed to long
+Quy mô lớn với số lượng người dùng lớn và nhiều dữ liệu cùng hành động tập trung ngắn hạn trái ngược với hành động dài hạn
+
+
+00:02:17,230 --> 00:02:18,310
+running processes.
+tiến trình đang chạy.
+
+
+00:02:18,340 --> 00:02:23,560
+Web API and web apps are built on the same concepts and usually share the same underpinnings.
+API web và ứng dụng web được xây dựng trên cùng một khái niệm và thường chia sẻ cùng một nền tảng.
+
+
+00:02:23,560 --> 00:02:25,120
+So as with web apps.
+Tương tự như với các ứng dụng web.
+
+
+00:02:25,150 --> 00:02:30,430
+Web API also works best in the request response model and should be used for these kind of systems.
+API Web cũng hoạt động tốt nhất trong mô hình yêu cầu phản hồi và nên được sử dụng cho các loại hệ thống này.
+
+
+00:02:30,760 --> 00:02:34,210
+Long running processes should be avoided when using web API.
+Nên tránh các tiến trình chạy lâu khi sử dụng API web.
+
+

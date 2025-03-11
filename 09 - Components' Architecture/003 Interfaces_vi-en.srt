@@ -1,0 +1,260 @@
+00:00:00,200 --> 00:00:05,900
+If you are developing in an object oriented platform such as Java or Dotnet, you are probably familiar
+Nếu bạn đang phát triển trên nền tảng hướng đối tượng như Java hoặc Dotnet, có lẽ bạn đã quen thuộc với
+
+
+00:00:05,900 --> 00:00:06,980
+with interfaces.
+với giao diện.
+
+
+00:00:07,010 --> 00:00:12,290
+If not, then there are probably some concepts similar to interfaces in your preferred language, such
+Nếu không, thì có lẽ có một số khái niệm tương tự như giao diện trong ngôn ngữ bạn thích, chẳng hạn như
+
+
+00:00:12,290 --> 00:00:14,270
+as abstract classes in Python.
+như các lớp trừu tượng trong Python.
+
+
+00:00:14,510 --> 00:00:17,900
+So anyway, let's bring us all up to speed with interfaces.
+Vậy thì, chúng ta hãy cùng tìm hiểu về giao diện nhé.
+
+
+00:00:17,990 --> 00:00:23,540
+Basically, an interface is a contract that declares the signatures of an implementation.
+Về cơ bản, giao diện là một hợp đồng khai báo chữ ký của một triển khai.
+
+
+00:00:23,630 --> 00:00:30,110
+The interface states that given a piece of code that should do a specific task, its methods will look
+Giao diện nêu rằng với một đoạn mã được đưa ra để thực hiện một nhiệm vụ cụ thể, các phương thức của nó sẽ trông giống như
+
+
+00:00:30,140 --> 00:00:31,520
+in a specific way.
+theo một cách cụ thể.
+
+
+00:00:32,060 --> 00:00:36,900
+For instance, let's think about a code that performs some basic math calculations.
+Ví dụ, hãy nghĩ về một đoạn mã thực hiện một số phép tính toán học cơ bản.
+
+
+00:00:36,920 --> 00:00:42,320
+For the sake of simplicity, let's assume it will only deal with a very basic for math operations.
+Để đơn giản, chúng ta hãy giả sử nó chỉ xử lý những phép toán cơ bản nhất.
+
+
+00:00:42,350 --> 00:00:45,800
+What would we expect the code method signature to look like?
+Chúng ta mong đợi chữ ký phương thức mã sẽ trông như thế nào?
+
+
+00:00:45,830 --> 00:00:47,750
+Probably something like that.
+Có lẽ là thứ gì đó như thế.
+
+
+00:00:48,110 --> 00:00:52,970
+Note that I'm using Dotnet to demonstrate the code, but it will look similar in other languages.
+Lưu ý rằng tôi đang sử dụng Dotnet để trình bày mã, nhưng nó sẽ trông tương tự trong các ngôn ngữ khác.
+
+
+00:00:53,060 --> 00:00:58,790
+As you can see, the interface defines the methods and the signature, but does not include any definition.
+Như bạn có thể thấy, giao diện định nghĩa các phương thức và chữ ký, nhưng không bao gồm bất kỳ định nghĩa nào.
+
+
+00:00:59,030 --> 00:01:03,120
+Now what's the point of interfaces and why are they so important?
+Vậy mục đích của giao diện là gì và tại sao chúng lại quan trọng đến vậy?
+
+
+00:01:03,150 --> 00:01:09,840
+The answer is simple Using interface allows us to make our code loosely coupled, meaning we do not
+Câu trả lời rất đơn giản. Sử dụng giao diện cho phép chúng ta làm cho mã của mình được kết nối lỏng lẻo, nghĩa là chúng ta không cần
+
+
+00:01:09,870 --> 00:01:11,940
+tie one class to other.
+liên kết một lớp với lớp khác.
+
+
+00:01:11,970 --> 00:01:14,220
+Let's use an example to make it clearer.
+Chúng ta hãy dùng một ví dụ để làm rõ hơn.
+
+
+00:01:14,370 --> 00:01:19,980
+Continuing with our calculator example, let's assume we have a class named calculator and a main class
+Tiếp tục với ví dụ về máy tính của chúng ta, hãy giả sử chúng ta có một lớp có tên là máy tính và một lớp chính là
+
+
+00:01:19,980 --> 00:01:23,340
+referencing and using it without using interfaces.
+tham chiếu và sử dụng nó mà không cần sử dụng giao diện.
+
+
+00:01:23,370 --> 00:01:25,470
+Our code will look like this.
+Mã của chúng ta sẽ trông như thế này.
+
+
+00:01:27,360 --> 00:01:31,040
+As you can see, the main class must be familiar with the calculator class.
+Như bạn thấy, lớp chính phải quen thuộc với lớp máy tính.
+
+
+00:01:31,050 --> 00:01:32,580
+It appears in its code.
+Nó xuất hiện trong mã của nó.
+
+
+00:01:32,610 --> 00:01:37,740
+What will happen if you would like to replace the calculator class with a different, better class?
+Điều gì sẽ xảy ra nếu bạn muốn thay thế lớp máy tính bằng một lớp khác tốt hơn?
+
+
+00:01:37,740 --> 00:01:41,250
+For example with an advanced calculator.
+Ví dụ với máy tính tiên tiến.
+
+
+00:01:41,280 --> 00:01:45,620
+We will have to change the code in the main class and recompile it.
+Chúng ta sẽ phải thay đổi mã trong lớp chính và biên dịch lại nó.
+
+
+00:01:45,630 --> 00:01:49,590
+And that means that the classes are tied and strongly coupled.
+Và điều đó có nghĩa là các lớp học được liên kết và kết hợp chặt chẽ.
+
+
+00:01:49,800 --> 00:01:53,970
+There is a saying in the software architecture field that goes like this.
+Có một câu nói trong lĩnh vực kiến trúc phần mềm như thế này.
+
+
+00:01:55,190 --> 00:01:56,630
+New is glue.
+Mới là keo.
+
+
+00:01:56,660 --> 00:02:02,540
+What it means is that whenever you see a new keyword, as in our code here, you know, there is a close
+Điều đó có nghĩa là bất cứ khi nào bạn nhìn thấy một từ khóa mới, như trong mã của chúng tôi ở đây, bạn biết đấy, có một từ khóa đóng
+
+
+00:02:02,570 --> 00:02:05,750
+tie, a strong coupling between those two classes.
+mối liên kết chặt chẽ giữa hai lớp đó.
+
+
+00:02:05,750 --> 00:02:08,210
+And this is something you want to avoid.
+Và đây là điều bạn muốn tránh.
+
+
+00:02:08,419 --> 00:02:14,390
+Strong coupling classes is generally a bad idea and will make your code less modular and much less flexible.
+Các lớp liên kết mạnh thường là một ý tưởng tồi và sẽ làm cho mã của bạn kém tính mô-đun và kém linh hoạt hơn nhiều.
+
+
+00:02:15,510 --> 00:02:18,710
+Let's see what will happen if we will use interface in our code.
+Hãy xem điều gì sẽ xảy ra nếu chúng ta sử dụng giao diện trong mã của mình.
+
+
+00:02:18,720 --> 00:02:24,600
+In this case, the main class does not knew the calculator class, but rather work with an interface.
+Trong trường hợp này, lớp chính không biết lớp máy tính mà làm việc với một giao diện.
+
+
+00:02:24,630 --> 00:02:29,940
+The interface defines what the calculator can do but gives no hint on what the concrete implementation
+Giao diện xác định những gì máy tính có thể làm nhưng không đưa ra gợi ý về việc triển khai cụ thể
+
+
+00:02:29,940 --> 00:02:31,320
+of the calculator is.
+của máy tính là.
+
+
+00:02:31,440 --> 00:02:37,170
+The calculator can be implemented by the calculator class we saw earlier or by a completely different
+Máy tính có thể được thực hiện bởi lớp máy tính mà chúng ta đã thấy trước đó hoặc bởi một lớp hoàn toàn khác
+
+
+00:02:37,170 --> 00:02:37,710
+class.
+lớp
+
+
+00:02:37,740 --> 00:02:44,220
+The main class will have no idea about it whatsoever and that allows us to make our code really modular.
+Lớp chính sẽ không biết gì về nó cả và điều đó cho phép chúng ta tạo mã thực sự có tính mô-đun.
+
+
+00:02:44,220 --> 00:02:49,830
+We can switch implementations without other code blocks being aware of it, and that's the real strength
+Chúng ta có thể chuyển đổi các triển khai mà không cần các khối mã khác nhận biết, và đó là sức mạnh thực sự
+
+
+00:02:49,830 --> 00:02:50,940
+of interfaces.
+của giao diện.
+
+
+00:02:51,210 --> 00:02:54,510
+Now where does implementation come from?
+Bây giờ việc thực hiện đến từ đâu?
+
+
+00:02:54,510 --> 00:02:56,940
+After all, there is some implementation here.
+Rốt cuộc, có một số thực hiện ở đây.
+
+
+00:02:56,970 --> 00:02:59,430
+The code runs and produces results.
+Mã chạy và tạo ra kết quả.
+
+
+00:02:59,520 --> 00:03:04,140
+Well, as you can see, the implementation is returned from the Getinstance method.
+Vâng, như bạn có thể thấy, việc triển khai được trả về từ phương thức Getinstance.
+
+
+00:03:04,170 --> 00:03:10,740
+This method uses a pattern called dependency injection to inject an instance, a concrete implementation
+Phương pháp này sử dụng một mẫu gọi là tiêm phụ thuộc để tiêm một thể hiện, một triển khai cụ thể
+
+
+00:03:10,740 --> 00:03:11,760
+to an interface.
+đến một giao diện.
+
+
+00:03:11,760 --> 00:03:13,950
+And this is the topic of the next lecture.
+Và đây là chủ đề của bài giảng tiếp theo.
+
+
+00:03:13,950 --> 00:03:21,370
+And until then, remember new is glue always prefer using interfaces instead of direct reference between
+Và cho đến lúc đó, hãy nhớ rằng mới là keo dán luôn thích sử dụng giao diện thay vì tham chiếu trực tiếp giữa
+
+
+00:03:21,370 --> 00:03:21,940
+classes.
+lớp học.
+
+
+00:03:21,940 --> 00:03:25,840
+It will make your code much more modular and easy to modify and maintain.
+Nó sẽ làm cho mã của bạn có tính mô-đun hơn và dễ sửa đổi và bảo trì hơn.
+
+

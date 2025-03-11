@@ -1,0 +1,215 @@
+00:00:00,140 --> 00:00:03,290
+So what is actually a software architect?
+Vậy kiến trúc sư phần mềm thực sự là gì?
+
+
+00:00:03,320 --> 00:00:05,000
+What is his objective?
+Mục tiêu của anh ta là gì?
+
+
+00:00:05,030 --> 00:00:06,950
+What is he actually doing?
+Anh ấy thực sự đang làm gì?
+
+
+00:00:06,980 --> 00:00:08,570
+Who is he working with?
+Anh ấy đang làm việc với ai?
+
+
+00:00:08,930 --> 00:00:11,120
+Well, all these questions are great.
+Vâng, tất cả những câu hỏi này đều tuyệt vời.
+
+
+00:00:11,120 --> 00:00:15,500
+But before we will answer them, let's discuss other types of architect.
+Nhưng trước khi trả lời, chúng ta hãy thảo luận về các loại kiến trúc sư khác.
+
+
+00:00:15,530 --> 00:00:19,100
+The word architect in the software world is an overloaded one.
+Từ kiến trúc sư trong thế giới phần mềm là một từ quá tải.
+
+
+00:00:19,130 --> 00:00:21,350
+There are quite a few types of architects.
+Có khá nhiều loại kiến trúc sư.
+
+
+00:00:21,350 --> 00:00:28,850
+And let's take a look at the most common ones, which are infrastructure architect, software architect
+Và chúng ta hãy xem xét những cái phổ biến nhất, đó là kiến trúc sư cơ sở hạ tầng, kiến trúc sư phần mềm
+
+
+00:00:28,850 --> 00:00:31,610
+and enterprise architect.
+và kiến trúc sư doanh nghiệp.
+
+
+00:00:32,509 --> 00:00:37,520
+There are some more types of architects, but they are more of a niche and we want to talk about them.
+Có một số loại kiến trúc sư khác, nhưng chúng mang tính chuyên biệt hơn và chúng tôi muốn nói về họ.
+
+
+00:00:37,730 --> 00:00:40,640
+So let's see what those types of architects are.
+Vậy chúng ta hãy cùng xem những kiểu kiến trúc sư đó là gì nhé.
+
+
+00:00:40,670 --> 00:00:43,550
+First, infrastructure architect.
+Đầu tiên, kiến trúc sư cơ sở hạ tầng.
+
+
+00:00:45,050 --> 00:00:49,970
+The infrastructure architect is responsible for designing the infrastructure of a given system.
+Kiến trúc sư cơ sở hạ tầng chịu trách nhiệm thiết kế cơ sở hạ tầng của một hệ thống nhất định.
+
+
+00:00:49,970 --> 00:00:56,720
+And by infrastructure I mean all the non software related elements such as servers, virtual machines,
+Và theo cơ sở hạ tầng, tôi muốn nói đến tất cả các yếu tố không liên quan đến phần mềm như máy chủ, máy ảo,
+
+
+00:00:56,720 --> 00:00:58,760
+network storage, etcetera.
+lưu trữ mạng, v.v.
+
+
+00:00:58,970 --> 00:01:04,970
+He is responsible for all these and also to make sure they work nicely with the system developed.
+Ông chịu trách nhiệm về tất cả những điều này và cũng đảm bảo chúng hoạt động tốt với hệ thống đã phát triển.
+
+
+00:01:05,060 --> 00:01:09,950
+The infrastructure architect should be familiar with the system requirements so he can make sure the
+Kiến trúc sư cơ sở hạ tầng phải quen thuộc với các yêu cầu của hệ thống để anh ta có thể đảm bảo
+
+
+00:01:09,950 --> 00:01:13,280
+infrastructure he designs will support those requirements.
+cơ sở hạ tầng mà ông thiết kế sẽ hỗ trợ những yêu cầu đó.
+
+
+00:01:13,280 --> 00:01:19,970
+For example, if the system is expected to grow by three terabytes annually, the infrastructure architect
+Ví dụ, nếu hệ thống dự kiến sẽ tăng trưởng thêm ba terabyte mỗi năm, kiến trúc sư cơ sở hạ tầng
+
+
+00:01:19,970 --> 00:01:24,530
+should make sure the storage for this system will be able to handle this load.
+nên đảm bảo rằng bộ lưu trữ của hệ thống này có thể xử lý được tải trọng này.
+
+
+00:01:25,430 --> 00:01:30,270
+The career path for infrastructure architect goes through infrastructure experts.
+Con đường sự nghiệp của kiến trúc sư cơ sở hạ tầng đi qua các chuyên gia cơ sở hạ tầng.
+
+
+00:01:30,290 --> 00:01:35,540
+You have to be well versed in infrastructure, design, implementation and configuration in order to
+Bạn phải thành thạo về cơ sở hạ tầng, thiết kế, triển khai và cấu hình để có thể
+
+
+00:01:35,540 --> 00:01:37,880
+become a good infrastructure architect.
+trở thành một kiến trúc sư cơ sở hạ tầng giỏi.
+
+
+00:01:38,270 --> 00:01:40,550
+Next, the software architect.
+Tiếp theo là kiến trúc sư phần mềm.
+
+
+00:01:40,850 --> 00:01:46,530
+The software architect, sometimes called also solution architect or system architect is responsible
+Kiến trúc sư phần mềm, đôi khi còn được gọi là kiến trúc sư giải pháp hoặc kiến trúc sư hệ thống chịu trách nhiệm
+
+
+00:01:46,530 --> 00:01:48,360
+for the architecture of the software.
+cho kiến trúc của phần mềm.
+
+
+00:01:48,810 --> 00:01:53,760
+Since we will be dealing with a software architect for the rest of this course, I'll skip to the enterprise
+Vì chúng ta sẽ làm việc với một kiến trúc sư phần mềm trong phần còn lại của khóa học này, tôi sẽ chuyển sang doanh nghiệp
+
+
+00:01:53,760 --> 00:01:54,510
+architect.
+kiến trúc sư.
+
+
+00:01:54,930 --> 00:01:59,700
+The enterprise architect works with the top management of the organization to make sure the IT of the
+Kiến trúc sư doanh nghiệp làm việc với ban quản lý cấp cao của tổ chức để đảm bảo CNTT của
+
+
+00:01:59,700 --> 00:02:06,600
+organization is an enabler for the business and not a hindrance in many organization's business decisions,
+tổ chức là một động lực cho doanh nghiệp chứ không phải là trở ngại trong nhiều quyết định kinh doanh của tổ chức,
+
+
+00:02:06,600 --> 00:02:13,050
+such as starting a new sale or entering a new business field is held back by the IT, which needs time
+chẳng hạn như bắt đầu một đợt bán hàng mới hoặc tham gia vào một lĩnh vực kinh doanh mới bị CNTT kìm hãm, cần có thời gian
+
+
+00:02:13,050 --> 00:02:14,730
+to adapt to the new requirements.
+để thích ứng với các yêu cầu mới.
+
+
+00:02:14,760 --> 00:02:20,340
+The enterprise architect usually works with a CEO and CIO of the organization to find out what are the
+Kiến trúc sư doanh nghiệp thường làm việc với CEO và CIO của tổ chức để tìm ra
+
+
+00:02:20,340 --> 00:02:26,490
+main bottlenecks, what holds back the IT and how it can be streamlined to support business continuity.
+những nút thắt chính, những gì kìm hãm CNTT và làm thế nào để có thể hợp lý hóa CNTT để hỗ trợ tính liên tục của hoạt động kinh doanh.
+
+
+00:02:26,520 --> 00:02:31,770
+Since the enterprise architect operates at a very high level in the organization, he has almost no
+Vì kiến trúc sư doanh nghiệp hoạt động ở cấp độ rất cao trong tổ chức nên anh ta hầu như không có
+
+
+00:02:31,800 --> 00:02:36,930
+work relations with development oriented roles such as developers and team leaders.
+mối quan hệ công việc với các vai trò hướng đến phát triển như nhà phát triển và trưởng nhóm.
+
+
+00:02:37,840 --> 00:02:43,240
+In order to become an enterprise architect, one has to be first, a senior software architect or an
+Để trở thành một kiến trúc sư doanh nghiệp, trước tiên người ta phải là một kiến trúc sư phần mềm cao cấp hoặc một
+
+
+00:02:43,240 --> 00:02:44,980
+experienced project manager.
+quản lý dự án giàu kinh nghiệm.
+
+
+00:02:45,610 --> 00:02:50,500
+As I said earlier, the enterprise architect role is not very technical, and you don't always have
+Như tôi đã nói trước đó, vai trò của kiến trúc sư doanh nghiệp không mang tính kỹ thuật cao và bạn không phải lúc nào cũng có
+
+
+00:02:50,500 --> 00:02:55,960
+to have a practical, hands on experience in order to become one, although it's definitely a plus.
+có kinh nghiệm thực tế, trực tiếp để trở thành một người như vậy, mặc dù đó chắc chắn là một điểm cộng.
+
+
+00:02:56,230 --> 00:02:56,860
+Great.
+Tuyệt vời.
+
+
+00:02:56,860 --> 00:03:03,310
+So having discussed other types of architects, let's meet our protagonist, the software architect.
+Sau khi thảo luận về các loại kiến trúc sư khác, chúng ta hãy gặp nhân vật chính của chúng ta, kiến trúc sư phần mềm.
+
+

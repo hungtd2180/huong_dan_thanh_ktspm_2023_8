@@ -1,0 +1,115 @@
+00:00:00,320 --> 00:00:05,210
+When selecting the technology stack, which is one of the most important parts of designing a system,
+Khi lựa chọn ngăn xếp công nghệ, một trong những phần quan trọng nhất của việc thiết kế hệ thống,
+
+
+00:00:05,210 --> 00:00:09,080
+always factor in the existing dev team knowledge and skills.
+luôn tính đến kiến thức và kỹ năng hiện có của nhóm phát triển.
+
+
+00:00:09,230 --> 00:00:15,050
+Deciding on a technology stack that the dev team is not familiar with might cause two problems.
+Việc quyết định sử dụng một công nghệ mà nhóm phát triển không quen thuộc có thể gây ra hai vấn đề.
+
+
+00:00:15,140 --> 00:00:18,380
+The first is delay to the project development.
+Đầu tiên là sự chậm trễ trong việc phát triển dự án.
+
+
+00:00:18,410 --> 00:00:23,060
+The developers will have to dedicate time for training to make them familiar with the new technology.
+Các nhà phát triển sẽ phải dành thời gian đào tạo để làm quen với công nghệ mới.
+
+
+00:00:23,090 --> 00:00:27,380
+This will have effect on the project schedule and can lead to late delivery.
+Điều này sẽ ảnh hưởng đến tiến độ dự án và có thể dẫn đến việc giao hàng trễ.
+
+
+00:00:27,410 --> 00:00:30,140
+The second potential problem is low quality.
+Vấn đề tiềm ẩn thứ hai là chất lượng thấp.
+
+
+00:00:30,170 --> 00:00:35,060
+Since the system will be the first for the dev team to be developed in the selected technology stack,
+Vì hệ thống sẽ là hệ thống đầu tiên mà nhóm phát triển sẽ phát triển trong ngăn xếp công nghệ đã chọn,
+
+
+00:00:35,090 --> 00:00:40,460
+the developers will not have experience with the platform and will not know how to avoid common pitfalls,
+các nhà phát triển sẽ không có kinh nghiệm với nền tảng này và sẽ không biết cách tránh những cạm bẫy phổ biến,
+
+
+00:00:40,460 --> 00:00:46,070
+implement best practices and take advantage of some hidden gems found in every development platform.
+thực hiện các biện pháp thực hành tốt nhất và tận dụng một số lợi ích ẩn giấu có trong mọi nền tảng phát triển.
+
+
+00:00:46,370 --> 00:00:50,900
+Now, it should be noted that not all platform migrations are created equal.
+Bây giờ, cần lưu ý rằng không phải tất cả các cuộc di chuyển nền tảng đều được tạo ra như nhau.
+
+
+00:00:51,050 --> 00:00:57,140
+For example, for backend developer to migrate from Dotnet to Java might require some effort, but at
+Ví dụ, đối với nhà phát triển backend, việc di chuyển từ Dotnet sang Java có thể cần một số nỗ lực, nhưng ở mức
+
+
+00:00:57,140 --> 00:00:59,480
+the end of the day, these are quite similar platforms.
+cuối cùng, đây là những nền tảng khá giống nhau.
+
+
+00:00:59,480 --> 00:01:04,090
+And if the developer did a good job with Dotnet, he will probably be a good Java developer.
+Và nếu nhà phát triển làm tốt với Dotnet, anh ta có thể sẽ là một nhà phát triển Java giỏi.
+
+
+00:01:04,110 --> 00:01:09,630
+On the other hand, a Windows desktop developer migrating to Python backend development will have a
+Mặt khác, một nhà phát triển máy tính để bàn Windows di chuyển sang phát triển phần cuối Python sẽ có
+
+
+00:01:09,630 --> 00:01:12,040
+really hard time becoming a good Python developer.
+thật sự rất khó để trở thành một nhà phát triển Python giỏi.
+
+
+00:01:12,060 --> 00:01:17,400
+Not only desktop development is conceptually very different from web development and requires a different
+Không chỉ phát triển máy tính để bàn về mặt khái niệm rất khác so với phát triển web và yêu cầu 18 khác
+
+
+00:01:17,400 --> 00:01:18,060
+mindset.
+tư duy.
+
+
+00:01:18,090 --> 00:01:21,000
+The platforms themselves are completely different.
+Bản thân các nền tảng hoàn toàn khác nhau.
+
+
+00:01:21,030 --> 00:01:26,160
+They move from object oriented statically typed language such as dotnet to the dynamic.
+Họ chuyển từ ngôn ngữ hướng đối tượng có kiểu tĩnh như dotnet sang ngôn ngữ động.
+
+
+00:01:26,160 --> 00:01:27,990
+Python might not be easy.
+Python có thể không dễ.
+
+
+00:01:28,140 --> 00:01:33,840
+So to summarize, when evaluating various technology stacks, always check what the current development
+Tóm lại, khi đánh giá các ngăn xếp công nghệ khác nhau, hãy luôn kiểm tra xem sự phát triển hiện tại là gì
+
+
+00:01:33,840 --> 00:01:39,000
+team's skills are and try to understand the effect it will have on the project's schedule and quality.
+kỹ năng của nhóm là gì và cố gắng hiểu tác động của nó đến tiến độ và chất lượng của dự án.
+
+

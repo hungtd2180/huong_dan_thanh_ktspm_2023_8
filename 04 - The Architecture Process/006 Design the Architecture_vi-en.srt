@@ -1,0 +1,50 @@
+00:00:00,350 --> 00:00:02,450
+This is the heart of your work.
+Đây là trọng tâm công việc của bạn.
+
+
+00:00:02,660 --> 00:00:07,040
+You already have the requirements, the non-functional requirements, the components and the technology
+Bạn đã có các yêu cầu, các yêu cầu phi chức năng, các thành phần và công nghệ
+
+
+00:00:07,040 --> 00:00:07,590
+stack.
+chồng.
+
+
+00:00:07,610 --> 00:00:13,010
+All that's left is to design the architecture that will glue all those together and will result in a
+Tất cả những gì còn lại là thiết kế kiến trúc sẽ gắn kết tất cả những thứ đó lại với nhau và sẽ tạo ra kết quả là
+
+
+00:00:13,010 --> 00:00:17,090
+system that is fast, secure, reliable and easy to maintain.
+hệ thống nhanh chóng, an toàn, đáng tin cậy và dễ bảo trì.
+
+
+00:00:17,360 --> 00:00:22,700
+We will learn about the qualities of a well-designed system such as loose coupling, stateless scaling,
+Chúng ta sẽ tìm hiểu về các phẩm chất của một hệ thống được thiết kế tốt như liên kết lỏng lẻo, khả năng mở rộng không trạng thái,
+
+
+00:00:22,700 --> 00:00:28,460
+caching, messaging and lots more and see how those qualities are used as the building blocks of the
+bộ nhớ đệm, nhắn tin và nhiều hơn nữa và xem những phẩm chất đó được sử dụng như thế nào như các khối xây dựng của
+
+
+00:00:28,460 --> 00:00:29,360
+architecture.
+kiến trúc.
+
+
+00:00:29,510 --> 00:00:34,450
+When you are done, you will have a complete architecture in place, but it won't be formalized yet.
+Khi bạn hoàn thành, bạn sẽ có một kiến trúc hoàn chỉnh, nhưng nó vẫn chưa được chính thức hóa.
+
+
+00:00:34,460 --> 00:00:36,890
+Which brings us to the next step.
+Điều này đưa chúng ta tới bước tiếp theo.
+
+

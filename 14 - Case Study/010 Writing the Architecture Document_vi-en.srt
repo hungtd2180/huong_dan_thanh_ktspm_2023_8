@@ -1,0 +1,105 @@
+00:00:00,770 --> 00:00:03,800
+Well, we now have a full system architecture in place.
+Vâng, bây giờ chúng ta đã có một kiến trúc hệ thống đầy đủ.
+
+
+00:00:03,800 --> 00:00:05,030
+That's great.
+Thật tuyệt vời.
+
+
+00:00:05,060 --> 00:00:09,320
+The next logical step is to put it in writing and create an architecture document.
+Bước hợp lý tiếp theo là viết ra và tạo một tài liệu kiến trúc.
+
+
+00:00:09,320 --> 00:00:14,620
+So let's go through the various parts of the document and make sure we know what should go in each section
+Vì vậy, chúng ta hãy xem xét các phần khác nhau của tài liệu và đảm bảo rằng chúng ta biết những gì cần có trong mỗi phần
+
+
+00:00:14,630 --> 00:00:15,570
+first.
+đầu tiên.
+
+
+00:00:15,590 --> 00:00:16,550
+Background.
+Bối cảnh.
+
+
+00:00:16,760 --> 00:00:18,780
+Well, we already have the background here.
+Vâng, chúng ta đã có thông tin cơ bản ở đây.
+
+
+00:00:18,800 --> 00:00:23,390
+This section describes the IO2 system, its motivation and main functionality.
+Phần này mô tả hệ thống IO2, động lực và chức năng chính của nó.
+
+
+00:00:23,630 --> 00:00:29,690
+Then the requirements we have well defined requirements, functional and non-functional, and we just
+Sau đó, chúng tôi đã xác định rõ các yêu cầu, chức năng và phi chức năng, và chúng tôi chỉ cần
+
+
+00:00:29,690 --> 00:00:31,700
+need to write them down in this section.
+cần phải viết chúng xuống phần này.
+
+
+00:00:31,730 --> 00:00:37,280
+Overall architecture is our next section and here we will outline the various services and the messaging
+Kiến trúc tổng thể là phần tiếp theo của chúng tôi và ở đây chúng tôi sẽ phác thảo các dịch vụ khác nhau và tin nhắn
+
+
+00:00:37,280 --> 00:00:38,000
+between them.
+giữa chúng.
+
+
+00:00:38,000 --> 00:00:39,920
+We have already covered this.
+Chúng tôi đã đề cập đến điều này rồi.
+
+
+00:00:40,400 --> 00:00:45,680
+Then we are going to drill down to each service and describe what is the role of the service, what
+Sau đó, chúng ta sẽ đi sâu vào từng dịch vụ và mô tả vai trò của dịch vụ đó là gì,
+
+
+00:00:45,680 --> 00:00:48,560
+is its technology stack and what is its inner architecture.
+công nghệ của nó là gì và kiến trúc bên trong của nó là gì.
+
+
+00:00:48,680 --> 00:00:54,890
+We have went through all this in the previous lectures and just the executive summary, as you probably
+Chúng tôi đã trình bày tất cả những điều này trong các bài giảng trước và chỉ tóm tắt nội dung, như bạn có thể thấy
+
+
+00:00:54,890 --> 00:00:59,900
+remember, the executive summary is the last section we will write, even though it appears at the beginning
+hãy nhớ rằng, phần tóm tắt là phần cuối cùng chúng ta sẽ viết, mặc dù nó xuất hiện ở phần đầu
+
+
+00:01:00,000 --> 00:01:00,810
+of the document.
+của tài liệu.
+
+
+00:01:00,840 --> 00:01:05,010
+Of course, we already have all the knowledge required for the executive summary.
+Tất nhiên, chúng ta đã có tất cả các kiến thức cần thiết cho bản tóm tắt.
+
+
+00:01:05,610 --> 00:01:06,390
+Okay, great.
+Được rồi, tuyệt vời.
+
+
+00:01:06,390 --> 00:01:10,230
+It looks like we have everything needed for writing the document.
+Có vẻ như chúng ta đã có mọi thứ cần thiết để viết tài liệu.
+
+

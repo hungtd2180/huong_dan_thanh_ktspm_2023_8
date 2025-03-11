@@ -1,0 +1,170 @@
+00:00:00,260 --> 00:00:05,620
+The biggest mindset change you have to make in order to be a good architect is to understand the business
+Sự thay đổi tư duy lớn nhất bạn phải thực hiện để trở thành một kiến trúc sư giỏi là hiểu được doanh nghiệp
+
+
+00:00:05,630 --> 00:00:08,210
+your client or employer is involved in.
+khách hàng hoặc chủ lao động của bạn có liên quan đến.
+
+
+00:00:08,540 --> 00:00:10,370
+Now, this might sound trivial.
+Bây giờ, điều này có vẻ tầm thường.
+
+
+00:00:10,370 --> 00:00:14,420
+Supposedly everyone in the organization knows what the company is doing, right?
+Người ta cho rằng mọi người trong tổ chức đều biết công ty đang làm gì, đúng không?
+
+
+00:00:14,690 --> 00:00:17,690
+Well, that's usually only partly true.
+Vâng, điều đó thường chỉ đúng một phần.
+
+
+00:00:17,720 --> 00:00:23,270
+I'm sure every Microsoft employee knows that Microsoft develops software such as Windows and Office
+Tôi chắc chắn rằng mọi nhân viên của Microsoft đều biết rằng Microsoft phát triển phần mềm như Windows và Office
+
+
+00:00:23,270 --> 00:00:26,510
+and that it has one of the largest public clouds in the world.
+và nó có một trong những đám mây công cộng lớn nhất thế giới.
+
+
+00:00:26,540 --> 00:00:32,960
+I'm also sure that every Amazon employee knows that Amazon sells a huge selection of items from books
+Tôi cũng chắc chắn rằng mọi nhân viên của Amazon đều biết rằng Amazon bán rất nhiều mặt hàng từ sách
+
+
+00:00:32,960 --> 00:00:33,980
+to fresh food.
+đến thực phẩm tươi sống.
+
+
+00:00:34,430 --> 00:00:36,410
+But that is not enough.
+Nhưng thế vẫn chưa đủ.
+
+
+00:00:36,410 --> 00:00:37,790
+And let me tell you a story.
+Và để tôi kể cho bạn một câu chuyện.
+
+
+00:00:38,090 --> 00:00:41,660
+A couple of years ago, I was approached by a company in the Iot field.
+Một vài năm trước, tôi đã được một công ty trong lĩnh vực IoT tiếp cận.
+
+
+00:00:41,660 --> 00:00:45,260
+It was a medium sized company with about 600 employees worldwide.
+Đó là một công ty vừa với khoảng 600 nhân viên trên toàn thế giới.
+
+
+00:00:45,440 --> 00:00:50,650
+I was familiar with this company and I knew vaguely what they were doing, but I knew it wasn't enough.
+Tôi quen thuộc với công ty này và tôi biết mơ hồ về những gì họ đang làm, nhưng tôi biết thế vẫn chưa đủ.
+
+
+00:00:50,660 --> 00:00:53,150
+So I grabbed my PC and began reading.
+Vì vậy, tôi lấy máy tính của mình và bắt đầu đọc.
+
+
+00:00:53,420 --> 00:00:58,340
+The day after we had the meeting, to their surprise, I was able to tell them about their founders,
+Ngày hôm sau khi chúng tôi họp, họ ngạc nhiên khi tôi có thể kể cho họ nghe về những người sáng lập của họ,
+
+
+00:00:58,340 --> 00:01:01,500
+their line of products, their revenue and profit.
+dòng sản phẩm, doanh thu và lợi nhuận của họ.
+
+
+00:01:01,500 --> 00:01:04,780
+And bear in mind, the company was not publicly traded at that time.
+Và hãy nhớ rằng, công ty này chưa được giao dịch công khai vào thời điểm đó.
+
+
+00:01:05,220 --> 00:01:06,690
+Competitors and so on.
+Đối thủ cạnh tranh và vân vân.
+
+
+00:01:06,780 --> 00:01:10,890
+This blew them out of the water and we agreed to work together on this very day.
+Điều này đã làm họ ngạc nhiên và chúng tôi đã đồng ý hợp tác vào chính ngày hôm đó.
+
+
+00:01:11,010 --> 00:01:16,170
+But I'm not telling you this story to teach you marketing tactics, although it's a very effective one.
+Nhưng tôi không kể cho bạn câu chuyện này để dạy bạn các chiến thuật tiếp thị, mặc dù nó là một chiến thuật rất hiệu quả.
+
+
+00:01:17,060 --> 00:01:22,130
+The real important lesson here is that in order to be of a real value to the organization, you have
+Bài học thực sự quan trọng ở đây là để có giá trị thực sự cho tổ chức, bạn phải có
+
+
+00:01:22,130 --> 00:01:25,130
+to have a deep understanding of the organization's business.
+có hiểu biết sâu sắc về hoạt động kinh doanh của tổ chức.
+
+
+00:01:25,160 --> 00:01:28,310
+You have to know what keeps the CEO awake at night.
+Bạn phải biết điều gì khiến CEO mất ngủ vào ban đêm.
+
+
+00:01:28,340 --> 00:01:32,000
+You have to understand what its weaknesses and strengths are.
+Bạn phải hiểu điểm yếu và điểm mạnh của nó.
+
+
+00:01:32,030 --> 00:01:35,930
+Who are they competing with and what is their growth strategy?
+Họ đang cạnh tranh với ai và chiến lược tăng trưởng của họ là gì?
+
+
+00:01:36,320 --> 00:01:40,580
+Only after you understand all this, you can start talking architecture and technology.
+Chỉ sau khi bạn hiểu tất cả những điều này, bạn mới có thể bắt đầu nói về kiến trúc và công nghệ.
+
+
+00:01:40,760 --> 00:01:45,050
+One of the most common mistakes made by architects is that they are looking at the systems they are
+Một trong những sai lầm phổ biến nhất mà các kiến trúc sư mắc phải là họ đang xem xét các hệ thống mà họ đang
+
+
+00:01:45,050 --> 00:01:49,340
+working on as a stand alone system, isolated from the rest of their organization.
+hoạt động như một hệ thống độc lập, tách biệt với phần còn lại của tổ chức.
+
+
+00:01:49,340 --> 00:01:51,080
+But it can't work that way.
+Nhưng nó không thể hoạt động theo cách đó.
+
+
+00:01:51,110 --> 00:01:56,450
+Every organization is a living organism with a lot of moving parts, and the architect must understand
+Mỗi tổ chức là một sinh vật sống với nhiều bộ phận chuyển động và kiến trúc sư phải hiểu
+
+
+00:01:56,450 --> 00:01:59,600
+how the system integrates into this living organism.
+hệ thống tích hợp vào cơ thể sống này như thế nào.
+
+
+00:01:59,600 --> 00:02:02,330
+And what role does this part play?
+Và vai trò của phần này là gì?
+
+
+00:02:02,420 --> 00:02:08,630
+So to recap, remember, always understand the business before you begin working on the architecture.
+Tóm lại, hãy nhớ luôn hiểu rõ về doanh nghiệp trước khi bắt đầu xây dựng kiến trúc.
+
+

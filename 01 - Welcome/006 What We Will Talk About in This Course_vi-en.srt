@@ -1,0 +1,400 @@
+00:00:00,260 --> 00:00:03,080
+So what are we going to talk about in this course?
+Vậy chúng ta sẽ nói về điều gì trong khóa học này?
+
+
+00:00:03,350 --> 00:00:06,540
+Well, we are going to cover a lot of materials.
+Vâng, chúng ta sẽ đề cập đến rất nhiều tài liệu.
+
+
+00:00:06,560 --> 00:00:10,250
+First is the welcome section, which we are in right now.
+Đầu tiên là phần chào mừng, mà chúng ta đang ở ngay bây giờ.
+
+
+00:00:10,760 --> 00:00:13,910
+Then we'll talk about the definition of a software architect.
+Sau đó chúng ta sẽ nói về định nghĩa của một kiến trúc sư phần mềm.
+
+
+00:00:13,910 --> 00:00:16,880
+As you will see, there are several types of architect.
+Như bạn sẽ thấy, có một số loại kiến trúc sư.
+
+
+00:00:16,910 --> 00:00:23,030
+We will describe some of them and then focus on the types that really interest us, the software architect.
+Chúng tôi sẽ mô tả một số trong số chúng và sau đó tập trung vào các loại mà chúng tôi thực sự quan tâm, kiến trúc sư phần mềm.
+
+
+00:00:24,080 --> 00:00:29,360
+Then we will discuss what is perhaps the biggest change a software architect should do in order to bring
+Sau đó, chúng ta sẽ thảo luận về những gì có lẽ là thay đổi lớn nhất mà một kiến trúc sư phần mềm nên thực hiện để mang lại
+
+
+00:00:29,360 --> 00:00:31,400
+the maximum benefit to their organization.
+lợi ích tối đa cho tổ chức của họ.
+
+
+00:00:31,430 --> 00:00:34,940
+Adopt a business mindset instead of a technological one.
+Áp dụng tư duy kinh doanh thay vì tư duy công nghệ.
+
+
+00:00:35,060 --> 00:00:39,770
+We will talk about the meaning of this mindset and why it's so important for the architect.
+Chúng ta sẽ nói về ý nghĩa của tư duy này và tại sao nó lại quan trọng đối với kiến trúc sư.
+
+
+00:00:40,460 --> 00:00:44,140
+The fourth section in this course outlines the architectural process.
+Phần thứ tư trong khóa học này phác thảo quá trình kiến trúc.
+
+
+00:00:44,150 --> 00:00:49,910
+What are the actual steps the architect should take in order to build a robust yet practical architecture
+Các bước thực tế mà kiến trúc sư cần thực hiện để xây dựng một kiến trúc vững chắc nhưng vẫn thiết thực là gì?
+
+
+00:00:49,910 --> 00:00:52,010
+for the system she is working on?
+cho hệ thống mà cô ấy đang làm việc?
+
+
+00:00:52,760 --> 00:00:58,430
+The next sections deep dive into this process and detail the specifics of each step.
+Các phần tiếp theo sẽ đi sâu vào quá trình này và trình bày chi tiết các thông số cụ thể của từng bước.
+
+
+00:00:59,180 --> 00:01:04,620
+The working with System Requirements section talks about the importance of fully understanding the system
+Phần làm việc với Yêu cầu hệ thống nói về tầm quan trọng của việc hiểu đầy đủ hệ thống
+
+
+00:01:04,620 --> 00:01:09,270
+requirements and introduces us to the concept of non-functional requirements.
+yêu cầu và giới thiệu cho chúng ta khái niệm về yêu cầu phi chức năng.
+
+
+00:01:09,480 --> 00:01:14,430
+After we have discussed the requirements, we will turn our attention to the application itself.
+Sau khi chúng ta thảo luận về các yêu cầu, chúng ta sẽ chuyển sự chú ý của mình sang chính ứng dụng.
+
+
+00:01:16,270 --> 00:01:20,080
+The first thing an architect should do is define the type of the application.
+Điều đầu tiên mà một kiến trúc sư nên làm là xác định loại ứng dụng.
+
+
+00:01:20,080 --> 00:01:25,240
+And in this section we will explore the various types of mainstream application types and what are the
+Và trong phần này chúng ta sẽ khám phá các loại ứng dụng chính thống khác nhau và 20 loại đó là gì
+
+
+00:01:25,240 --> 00:01:27,160
+main attributes of each type.
+các thuộc tính chính của mỗi loại.
+
+
+00:01:27,730 --> 00:01:32,320
+After we have decided on the application type, it's time to select the technology stack.
+Sau khi chúng ta đã quyết định loại ứng dụng, đã đến lúc lựa chọn ngăn xếp công nghệ.
+
+
+00:01:32,350 --> 00:01:37,720
+In this section, we will discuss the various considerations for selecting technology stack and explore
+Trong phần này, chúng ta sẽ thảo luận về những cân nhắc khác nhau khi lựa chọn ngăn xếp công nghệ và khám phá
+
+
+00:01:37,720 --> 00:01:42,220
+various implementation options for front end, Back end and data store.
+nhiều tùy chọn triển khai khác nhau cho front end, back end và kho dữ liệu.
+
+
+00:01:42,550 --> 00:01:47,110
+Having selected the technology stack, it's time to start talking about the architecture.
+Sau khi đã chọn được công nghệ, đã đến lúc bắt đầu nói về kiến trúc.
+
+
+00:01:47,140 --> 00:01:48,280
+But wait.
+Nhưng hãy đợi đã.
+
+
+00:01:48,310 --> 00:01:53,890
+Before discussing architecture, we need to meet a set of capabilities that will help us design an architecture
+Trước khi thảo luận về kiến trúc, chúng ta cần đáp ứng một tập hợp các khả năng sẽ giúp chúng ta thiết kế một kiến trúc
+
+
+00:01:53,890 --> 00:01:56,740
+that fulfills the non-functional requirements.
+đáp ứng các yêu cầu không chức năng.
+
+
+00:01:56,740 --> 00:02:02,650
+And in order to fully understand the non-functional requirements, we will meet the style highlights.
+Và để hiểu đầy đủ các yêu cầu phi chức năng, chúng ta sẽ đáp ứng các điểm nổi bật về phong cách.
+
+
+00:02:02,680 --> 00:02:08,050
+No, they are not a family of weirdos, but a set of non-functional requirements every architect should
+Không, họ không phải là một gia đình lập dị, mà là một tập hợp các yêu cầu phi chức năng mà mọi kiến trúc sư nên có.
+
+
+00:02:08,050 --> 00:02:12,520
+know about and make sure her architecture is well suited for them.
+biết về và đảm bảo kiến trúc của cô ấy phù hợp với họ.
+
+
+00:02:13,840 --> 00:02:17,590
+And now it's time to start looking at the components of the applications.
+Và bây giờ là lúc bắt đầu xem xét các thành phần của ứng dụng.
+
+
+00:02:17,620 --> 00:02:22,780
+Components are the building blocks of almost every application, and they must be designed correctly
+Các thành phần là khối xây dựng của hầu hết mọi ứng dụng và chúng phải được thiết kế chính xác
+
+
+00:02:22,780 --> 00:02:26,890
+in order to ensure the application is fast, efficient and easy to maintain.
+để đảm bảo ứng dụng nhanh chóng, hiệu quả và dễ bảo trì.
+
+
+00:02:27,130 --> 00:02:31,240
+In this section, we will deep dive into the attributes of a well-designed component.
+Trong phần này, chúng ta sẽ đi sâu vào các thuộc tính của một thành phần được thiết kế tốt.
+
+
+00:02:31,270 --> 00:02:37,120
+Note This is going to be a little bit low level, but it's a must for every architect to be able to
+Lưu ý: Đây sẽ là một cấp độ hơi thấp, nhưng nó là điều bắt buộc đối với mọi kiến trúc sư để có thể
+
+
+00:02:37,120 --> 00:02:39,310
+look at the code without fainting.
+nhìn vào mã mà không ngất xỉu.
+
+
+00:02:40,740 --> 00:02:43,560
+The next section is an introduction to design patterns.
+Phần tiếp theo là phần giới thiệu về các mẫu thiết kế.
+
+
+00:02:43,560 --> 00:02:48,450
+You probably heard of design patterns already, but even if not, don't worry, we will discuss the
+Có thể bạn đã nghe nói về các mẫu thiết kế rồi, nhưng ngay cả khi chưa, đừng lo lắng, chúng ta sẽ thảo luận về
+
+
+00:02:48,450 --> 00:02:51,540
+idea behind the design patterns and delve into some of them.
+ý tưởng đằng sau các mẫu thiết kế và đi sâu vào một số trong số chúng.
+
+
+00:02:53,080 --> 00:02:58,420
+Having talked about the micro level of the system, it's time to take a step back and look at the macro
+Sau khi nói về cấp độ vi mô của hệ thống, đã đến lúc lùi lại một bước và xem xét cấp độ vĩ mô
+
+
+00:02:58,420 --> 00:03:00,700
+level as the system as a whole.
+mức độ như toàn bộ hệ thống.
+
+
+00:03:00,730 --> 00:03:06,340
+In order for a system to be reliable, fast, secure and easy to maintain, it's important to take into
+Để một hệ thống trở nên đáng tin cậy, nhanh chóng, an toàn và dễ bảo trì, điều quan trọng là phải tính đến
+
+
+00:03:06,340 --> 00:03:09,490
+consideration the various attributes of a well-designed system.
+xem xét các thuộc tính khác nhau của một hệ thống được thiết kế tốt.
+
+
+00:03:09,520 --> 00:03:14,050
+We will discuss those attributes and understand how they affect the architecture.
+Chúng ta sẽ thảo luận về những thuộc tính đó và hiểu cách chúng ảnh hưởng đến kiến trúc.
+
+
+00:03:14,140 --> 00:03:20,410
+Every seasoned architect knows that architectural decisions are rarely made on a pure technical basis.
+Mọi kiến trúc sư dày dạn kinh nghiệm đều biết rằng các quyết định về kiến trúc hiếm khi được đưa ra dựa trên cơ sở kỹ thuật thuần túy.
+
+
+00:03:20,440 --> 00:03:24,820
+There are always other considerations and constraints that must be taken into account.
+Luôn luôn có những cân nhắc và hạn chế khác cần phải được tính đến.
+
+
+00:03:25,030 --> 00:03:29,980
+In the next section, we will explore the most common constraints and see how they might affect the
+Trong phần tiếp theo, chúng ta sẽ khám phá những hạn chế phổ biến nhất và xem chúng có thể ảnh hưởng đến 48 như thế nào
+
+
+00:03:29,980 --> 00:03:30,910
+architecture.
+kiến trúc.
+
+
+00:03:30,910 --> 00:03:33,340
+And then drum, please.
+Và sau đó hãy đánh trống nhé.
+
+
+00:03:33,370 --> 00:03:38,860
+We arrive to what is perhaps the most important section in this course, the architecture document.
+Chúng ta đến với phần có lẽ là quan trọng nhất trong khóa học này, tài liệu kiến trúc.
+
+
+00:03:39,460 --> 00:03:42,610
+This document is a culmination of the architectural process.
+Tài liệu này là đỉnh cao của quá trình kiến trúc.
+
+
+00:03:42,640 --> 00:03:47,890
+It is the product of the requirements technology, stack components, architecture systems, architecture,
+Nó là sản phẩm của công nghệ yêu cầu, thành phần ngăn xếp, hệ thống kiến trúc, kiến trúc,
+
+
+00:03:47,890 --> 00:03:53,150
+external considerations, coffee saturated meetings and long silent writing sessions.
+những cân nhắc bên ngoài, những cuộc họp ngập tràn cà phê và những buổi viết dài im lặng.
+
+
+00:03:53,780 --> 00:03:58,880
+The document describes the architecture designed for the system and contains everything the developers
+Tài liệu mô tả kiến trúc được thiết kế cho hệ thống và chứa mọi thứ mà các nhà phát triển
+
+
+00:03:58,880 --> 00:04:02,570
+and team leaders need to know in order to start developing the system.
+và các trưởng nhóm cần biết để bắt đầu phát triển hệ thống.
+
+
+00:04:02,780 --> 00:04:08,240
+In this section, we will go through the documents, goal, audience and structure and discuss the content
+Trong phần này, chúng ta sẽ xem xét các tài liệu, mục tiêu, đối tượng và cấu trúc và thảo luận về nội dung
+
+
+00:04:08,240 --> 00:04:09,950
+of each section in the document.
+của từng phần trong tài liệu.
+
+
+00:04:09,980 --> 00:04:14,570
+After we have talked about the document, it's time to put everything we talked about to test.
+Sau khi chúng ta đã thảo luận về tài liệu, đã đến lúc kiểm tra mọi thứ chúng ta đã thảo luận.
+
+
+00:04:15,680 --> 00:04:20,690
+In the case study section, we will discuss a system we need to design for a fictional Iot company.
+Trong phần nghiên cứu tình huống, chúng ta sẽ thảo luận về một hệ thống mà chúng ta cần thiết kế cho một công ty IoT hư cấu.
+
+
+00:04:20,720 --> 00:04:25,310
+We will go together through all the steps we talked about, understand the requirements, decide on
+Chúng ta sẽ cùng nhau thực hiện tất cả các bước mà chúng ta đã nói đến, hiểu các yêu cầu, quyết định
+
+
+00:04:25,310 --> 00:04:30,770
+the technology stack map and design the various components, and talk about the architecture document
+bản đồ ngăn xếp công nghệ và thiết kế các thành phần khác nhau và thảo luận về tài liệu kiến trúc
+
+
+00:04:30,770 --> 00:04:31,640
+structure.
+cấu trúc.
+
+
+00:04:31,820 --> 00:04:37,070
+At the end of this section, you will find a very special bonus, an architecture document complete
+Ở cuối phần này, bạn sẽ tìm thấy một phần thưởng rất đặc biệt, một tài liệu kiến trúc hoàn chỉnh
+
+
+00:04:37,070 --> 00:04:41,450
+with all the sections discussed in this course ready for you to download and use.
+với tất cả các phần được thảo luận trong khóa học này đã sẵn sàng để bạn tải xuống và sử dụng.
+
+
+00:04:41,480 --> 00:04:46,460
+You can use it as a template for your future documents or as a reference for your own document.
+Bạn có thể sử dụng nó như một mẫu cho các tài liệu trong tương lai của bạn hoặc làm tài liệu tham khảo cho tài liệu của riêng bạn.
+
+
+00:04:46,460 --> 00:04:48,500
+But anyway, it's yours to use.
+Nhưng dù sao thì nó cũng là của bạn để sử dụng.
+
+
+00:04:48,530 --> 00:04:49,490
+Enjoy it.
+Hãy tận hưởng nó.
+
+
+00:04:51,370 --> 00:04:56,740
+The software architecture is a moving, vibrant world, and there are always new trends and advances.
+Kiến trúc phần mềm là một thế giới năng động, luôn chuyển động và luôn có những xu hướng và tiến bộ mới.
+
+
+00:04:56,770 --> 00:05:04,000
+The next section explores some advanced architectural concepts, such as microservices and event sourcing.
+Phần tiếp theo sẽ khám phá một số khái niệm kiến trúc nâng cao, chẳng hạn như dịch vụ vi mô và nguồn sự kiện.
+
+
+00:05:04,030 --> 00:05:06,400
+Don't worry if you don't know what these mean.
+Đừng lo lắng nếu bạn không biết những điều này có nghĩa là gì.
+
+
+00:05:06,400 --> 00:05:07,480
+I'll explain it all.
+Tôi sẽ giải thích tất cả.
+
+
+00:05:09,370 --> 00:05:13,570
+And the last, but not the least of this course section deals with soft skills.
+Và phần cuối cùng nhưng không kém phần quan trọng của khóa học này là về các kỹ năng mềm.
+
+
+00:05:13,960 --> 00:05:16,360
+A good architect must practice her soft skills.
+Một kiến trúc sư giỏi phải rèn luyện các kỹ năng mềm của mình.
+
+
+00:05:16,360 --> 00:05:20,230
+You need to know how to speak to people, how to listen, what to do with criticism.
+Bạn cần biết cách nói chuyện với mọi người, cách lắng nghe và cách xử lý những lời chỉ trích.
+
+
+00:05:20,230 --> 00:05:21,910
+And you will get a lot of this.
+Và bạn sẽ nhận được rất nhiều điều này.
+
+
+00:05:21,910 --> 00:05:24,760
+How to deal with organizational politics and more.
+Cách giải quyết các vấn đề chính trị trong tổ chức và nhiều vấn đề khác.
+
+
+00:05:24,790 --> 00:05:30,370
+The Soft Skills section deals with those topics, and I encourage you to pay close attention to it.
+Phần Kỹ năng mềm sẽ đề cập đến những chủ đề đó và tôi khuyến khích bạn chú ý kỹ đến phần này.
+
+
+00:05:30,400 --> 00:05:33,850
+This might be exactly what will make you a great architect.
+Đây có thể chính xác là điều sẽ giúp bạn trở thành một kiến trúc sư vĩ đại.
+
+
+00:05:34,430 --> 00:05:38,790
+And after all this, we will conclude and reflect on what we have learned together.
+Và sau tất cả những điều này, chúng ta sẽ kết luận và suy ngẫm về những gì chúng ta đã cùng nhau học được.
+
+
+00:05:38,810 --> 00:05:44,630
+So brace yourself for the fascinating world of software architecture, and let's go.
+Vậy hãy chuẩn bị tinh thần cho thế giới hấp dẫn của kiến trúc phần mềm và bắt đầu thôi.
+
+

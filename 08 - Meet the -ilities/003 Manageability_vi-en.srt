@@ -1,0 +1,105 @@
+00:00:00,320 --> 00:00:04,700
+As you can probably guess, manageability is the ability to manage the application.
+Như bạn có thể đoán, khả năng quản lý là khả năng quản lý ứng dụng.
+
+
+00:00:04,730 --> 00:00:06,260
+Now, what does it mean?
+Bây giờ, nó có nghĩa là gì?
+
+
+00:00:06,290 --> 00:00:11,780
+Simply put, it's the ability to know what's going on with the application at any given time and to
+Nói một cách đơn giản, đó là khả năng biết được những gì đang diễn ra với ứng dụng tại bất kỳ thời điểm nào và
+
+
+00:00:11,780 --> 00:00:14,060
+take actions that will improve its work.
+thực hiện các hành động để cải thiện công việc của mình.
+
+
+00:00:14,090 --> 00:00:20,270
+For example, a manageable application will constantly report its status to monitoring agents and let
+Ví dụ, một ứng dụng có thể quản lý được sẽ liên tục báo cáo trạng thái của nó cho các tác nhân giám sát và cho phép
+
+
+00:00:20,270 --> 00:00:25,820
+them know when errors occur, when there is an exceptionally high load, when the ram is becoming dangerously
+họ biết khi nào lỗi xảy ra, khi nào có tải trọng đặc biệt cao, khi nào ram đang trở nên nguy hiểm
+
+
+00:00:25,820 --> 00:00:27,020
+high and so on.
+cao và vân vân.
+
+
+00:00:27,290 --> 00:00:32,780
+The monitoring agents report this back to a management console and then a decision can be made either
+Các tác nhân giám sát báo cáo lại điều này cho bảng điều khiển quản lý và sau đó có thể đưa ra quyết định
+
+
+00:00:32,780 --> 00:00:38,090
+automatically or by a human operator to take some action, such as retrying the process that caused
+tự động hoặc do người vận hành thực hiện một số hành động, chẳng hạn như thử lại quy trình đã gây ra
+
+
+00:00:38,090 --> 00:00:43,010
+the error or adding resources to cope with the load and with the situation.
+lỗi hoặc thêm tài nguyên để đối phó với tải và tình hình.
+
+
+00:00:43,130 --> 00:00:49,790
+The best way to differentiate a manageable system from one that is not is by finding out who is the
+Cách tốt nhất để phân biệt một hệ thống có thể quản lý được với một hệ thống không thể quản lý được là tìm ra ai là
+
+
+00:00:49,790 --> 00:00:51,460
+one that reports problems.
+một báo cáo về vấn đề.
+
+
+00:00:51,470 --> 00:00:54,860
+If it's the end user, then the system is not manageable.
+Nếu là người dùng cuối thì hệ thống không thể quản lý được.
+
+
+00:00:54,860 --> 00:01:01,770
+And as a side effect, we have made your users a team which is bad on the other hand, if the system
+Và như một tác dụng phụ, chúng tôi đã biến người dùng của bạn thành một nhóm, điều này không tốt nếu hệ thống
+
+
+00:01:01,770 --> 00:01:05,190
+itself report problems, the experience is much better.
+bản thân báo cáo vấn đề, trải nghiệm tốt hơn nhiều.
+
+
+00:01:05,190 --> 00:01:07,790
+The system will find out a problem is going to occur.
+Hệ thống sẽ tìm ra vấn đề sắp xảy ra.
+
+
+00:01:07,800 --> 00:01:13,920
+For example, a mass of request is received in a very short time and the response time degradates substantially.
+Ví dụ, một khối lượng lớn yêu cầu được nhận trong thời gian rất ngắn và thời gian phản hồi giảm đi đáng kể.
+
+
+00:01:13,950 --> 00:01:19,500
+As a result, the system alerts the monitoring agent about it and the operator decides to add more VMs
+Kết quả là, hệ thống cảnh báo tác nhân giám sát về điều đó và người vận hành quyết định thêm nhiều VM hơn
+
+
+00:01:19,500 --> 00:01:20,700
+to support that load.
+để hỗ trợ tải đó.
+
+
+00:01:20,730 --> 00:01:26,490
+The end result is that the users don't even know there is a problem and the system is just humming along
+Kết quả cuối cùng là người dùng thậm chí không biết có vấn đề và hệ thống vẫn hoạt động bình thường
+
+
+00:01:26,520 --> 00:01:27,180
+happily.
+vui vẻ.
+
+

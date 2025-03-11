@@ -1,0 +1,50 @@
+00:00:00,200 --> 00:00:05,780
+The next step in the architectural process is to understand the non-functional requirements of the system.
+Bước tiếp theo trong quy trình kiến trúc là hiểu các yêu cầu phi chức năng của hệ thống.
+
+
+00:00:06,260 --> 00:00:11,210
+Non-functional requirements are a special kind of requirements that define some technical and service
+Yêu cầu phi chức năng là một loại yêu cầu đặc biệt xác định một số yêu cầu kỹ thuật và dịch vụ
+
+
+00:00:11,210 --> 00:00:13,040
+level attributes of the system.
+các thuộc tính cấp độ của hệ thống.
+
+
+00:00:13,490 --> 00:00:19,160
+For example, the most common non-functional requirements are about concurrent number of users, heavy
+Ví dụ, các yêu cầu không chức năng phổ biến nhất là về số lượng người dùng đồng thời, nặng
+
+
+00:00:19,160 --> 00:00:22,490
+loads, volumes of data and performance.
+tải, khối lượng dữ liệu và hiệu suất.
+
+
+00:00:22,910 --> 00:00:28,790
+As we will see in a later section, the client and the system analyst are usually not aware of the non-functional
+Như chúng ta sẽ thấy trong phần sau, khách hàng và nhà phân tích hệ thống thường không nhận thức được 7 không chức năng
+
+
+00:00:28,790 --> 00:00:33,650
+requirements and it's the architect's job to help them formulate those requirements.
+yêu cầu và nhiệm vụ của kiến trúc sư là giúp họ xây dựng các yêu cầu đó.
+
+
+00:00:34,190 --> 00:00:40,370
+For us, the architects, the non-functional requirements are much more important than the regular requirements.
+Đối với chúng tôi, những kiến trúc sư, các yêu cầu phi chức năng quan trọng hơn nhiều so với các yêu cầu thông thường.
+
+
+00:00:40,490 --> 00:00:46,760
+I never begin to work on a system before knowing exactly what its non-functional requirements are because
+Tôi không bao giờ bắt đầu làm việc trên một hệ thống trước khi biết chính xác các yêu cầu không chức năng của nó là gì vì
+
+
+00:00:46,760 --> 00:00:50,870
+so many architectural elements can be affected by those requirements.
+rất nhiều yếu tố kiến trúc có thể bị ảnh hưởng bởi những yêu cầu đó.
+
+

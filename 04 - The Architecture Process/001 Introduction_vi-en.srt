@@ -1,0 +1,90 @@
+00:00:00,260 --> 00:00:02,610
+Welcome to the Architectural Process section.
+Chào mừng đến với phần Quy trình kiến trúc.
+
+
+00:00:02,630 --> 00:00:07,490
+In this section, we will discuss the process of the architect's work in order to make the architecture
+Trong phần này, chúng ta sẽ thảo luận về quá trình làm việc của kiến trúc sư để tạo nên kiến trúc
+
+
+00:00:07,490 --> 00:00:11,240
+as useful as possible and to provide the maximum value to the client.
+hữu ích nhất có thể và mang lại giá trị tối đa cho khách hàng.
+
+
+00:00:11,270 --> 00:00:16,100
+The architect should follow a well defined roadmap that at the end will lead to a practical and well
+Kiến trúc sư nên tuân theo một lộ trình được xác định rõ ràng, cuối cùng sẽ dẫn đến một giải pháp thực tế và tốt.
+
+
+00:00:16,100 --> 00:00:21,860
+thought of architecture which will ensure the system is fast, secure, reliable and easy to maintain.
+nghĩ đến kiến trúc đảm bảo hệ thống nhanh, an toàn, đáng tin cậy và dễ bảo trì.
+
+
+00:00:22,100 --> 00:00:24,640
+In this section we will talk about this process.
+Trong phần này chúng ta sẽ nói về quá trình này.
+
+
+00:00:24,650 --> 00:00:28,940
+I will give a brief overview of each step in the process and describe its importance.
+Tôi sẽ cung cấp một bản tóm tắt ngắn gọn về từng bước trong quy trình và mô tả tầm quan trọng của nó.
+
+
+00:00:28,940 --> 00:00:30,050
+In later sections.
+Trong các phần sau.
+
+
+00:00:30,050 --> 00:00:33,830
+We will deep dive into each step and talk about what exactly should be done.
+Chúng tôi sẽ đi sâu vào từng bước và thảo luận về những gì chính xác cần phải làm.
+
+
+00:00:34,070 --> 00:00:36,920
+So here are the steps in the architectural process.
+Sau đây là các bước trong quy trình kiến trúc.
+
+
+00:00:37,560 --> 00:00:39,660
+Understand the system's requirements.
+Hiểu các yêu cầu của hệ thống.
+
+
+00:00:39,870 --> 00:00:42,600
+Understand the non-functional requirements.
+Hiểu các yêu cầu không chức năng.
+
+
+00:00:42,630 --> 00:00:44,460
+Map the components.
+Bản đồ các thành phần.
+
+
+00:00:44,550 --> 00:00:46,620
+Select the technology stack.
+Chọn ngăn xếp công nghệ.
+
+
+00:00:46,650 --> 00:00:48,630
+Design the architecture.
+Thiết kế kiến trúc.
+
+
+00:00:48,660 --> 00:00:50,890
+Write the architecture document.
+Viết tài liệu kiến trúc.
+
+
+00:00:50,970 --> 00:00:52,950
+Support the development team.
+Hỗ trợ nhóm phát triển.
+
+
+00:00:53,190 --> 00:00:55,170
+Let's talk about these steps.
+Chúng ta hãy nói về các bước này.
+
+

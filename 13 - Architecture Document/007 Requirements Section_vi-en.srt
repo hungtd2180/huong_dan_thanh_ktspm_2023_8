@@ -1,0 +1,285 @@
+00:00:00,170 --> 00:00:04,280
+The next section in the architectural document is the requirements section.
+Phần tiếp theo trong tài liệu kiến trúc là phần yêu cầu.
+
+
+00:00:04,310 --> 00:00:08,810
+This is also a short section, usually no more than one page, usually less.
+Đây cũng là một phần ngắn, thường không quá một trang, thường là ít hơn.
+
+
+00:00:08,810 --> 00:00:12,240
+And its target audience is all the team and management members.
+Và đối tượng mục tiêu của nó là toàn bộ nhóm và các thành viên quản lý.
+
+
+00:00:12,260 --> 00:00:16,450
+In this section we are going to describe the various requirements from the system.
+Trong phần này chúng tôi sẽ mô tả các yêu cầu khác nhau từ hệ thống.
+
+
+00:00:16,460 --> 00:00:21,510
+Now, as you probably remember from previous sections, there are two types of requirements.
+Bây giờ, như bạn có thể nhớ từ các phần trước, có hai loại yêu cầu.
+
+
+00:00:21,530 --> 00:00:27,620
+Functional requirements that describe what the system should do and non-functional requirements that
+Các yêu cầu chức năng mô tả những gì hệ thống nên làm và các yêu cầu phi chức năng mô tả những gì hệ thống nên làm
+
+
+00:00:27,620 --> 00:00:30,230
+describe what should the system deal with.
+mô tả hệ thống cần xử lý những gì.
+
+
+00:00:30,410 --> 00:00:31,770
+Just a quick reminder.
+Chỉ là một lời nhắc nhở nhanh thôi.
+
+
+00:00:31,790 --> 00:00:37,420
+Non-functional requirements specifies the required performance, expected load and data volume, SLA
+Các yêu cầu không chức năng chỉ rõ hiệu suất cần thiết, tải dự kiến và khối lượng dữ liệu, SLA
+
+
+00:00:37,430 --> 00:00:38,330
+and more.
+và nhiều hơn nữa.
+
+
+00:00:38,360 --> 00:00:44,150
+Note that as opposed to functional requirements, these requirements do not describe what the system
+Lưu ý rằng trái ngược với các yêu cầu chức năng, các yêu cầu này không mô tả hệ thống
+
+
+00:00:44,150 --> 00:00:49,940
+should do, but rather what is the environment the system is expected to work in and with what it is
+nên làm, mà đúng hơn là hệ thống được mong đợi sẽ hoạt động trong môi trường nào và với những gì
+
+
+00:00:49,940 --> 00:00:51,050
+expected to deal.
+dự kiến sẽ giải quyết.
+
+
+00:00:51,140 --> 00:00:56,780
+The requirements section in the architectural document describes briefly both types of requirements.
+Phần yêu cầu trong tài liệu kiến trúc mô tả ngắn gọn cả hai loại yêu cầu.
+
+
+00:00:56,810 --> 00:01:01,920
+Note that this section should be brief and the requirements should be listed in a bulleted list.
+Lưu ý rằng phần này phải ngắn gọn và các yêu cầu phải được liệt kê trong danh sách có dấu đầu dòng.
+
+
+00:01:01,950 --> 00:01:05,069
+No more than three lines per requirement.
+Không quá ba dòng cho mỗi yêu cầu.
+
+
+00:01:06,030 --> 00:01:10,280
+Now you might be asking yourself and me, why do we need this section?
+Bây giờ bạn có thể tự hỏi mình và tôi, tại sao chúng ta cần phần này?
+
+
+00:01:10,290 --> 00:01:15,570
+After all, similar to the background section, the team is well aware of the requirement and should
+Rốt cuộc, tương tự như phần nền tảng, nhóm nghiên cứu nhận thức rõ về yêu cầu và nên
+
+
+00:01:15,660 --> 00:01:16,900
+be reminded of them.
+được nhắc nhở về họ.
+
+
+00:01:16,920 --> 00:01:20,670
+Well, that's a very good question and let's try to answer it.
+Vâng, đó là một câu hỏi rất hay và chúng ta hãy thử trả lời nó.
+
+
+00:01:21,600 --> 00:01:26,520
+There are two important reasons for including the requirements in the architecture document.
+Có hai lý do quan trọng để đưa các yêu cầu vào tài liệu kiến trúc.
+
+
+00:01:26,640 --> 00:01:32,670
+First, similar to the background section, this section is included in the document to allow the readers
+Đầu tiên, tương tự như phần nền, phần này được đưa vào tài liệu để cho phép người đọc
+
+
+00:01:32,670 --> 00:01:37,860
+to comment on the requirements and to make sure everyone is well aware of what the system should do
+để bình luận về các yêu cầu và đảm bảo mọi người đều biết rõ hệ thống nên làm gì
+
+
+00:01:37,860 --> 00:01:40,710
+and under what conditions it's supposed to work.
+và trong điều kiện nào nó được cho là hoạt động.
+
+
+00:01:40,740 --> 00:01:45,480
+This is a great opportunity for you to validate your understanding of the system and make sure that
+Đây là cơ hội tuyệt vời để bạn xác nhận sự hiểu biết của mình về hệ thống và đảm bảo rằng
+
+
+00:01:45,480 --> 00:01:49,170
+whatever you design solves an actual problem for the customer.
+bất cứ thứ gì bạn thiết kế đều giải quyết được vấn đề thực tế cho khách hàng.
+
+
+00:01:49,320 --> 00:01:54,270
+Second, remember that the architecture is designed against a well defined requirement.
+Thứ hai, hãy nhớ rằng kiến trúc được thiết kế theo một yêu cầu được xác định rõ ràng.
+
+
+00:01:54,300 --> 00:01:59,400
+A lot of the architectural characteristics such as redundancy, messaging, data storage and more,
+Rất nhiều đặc điểm kiến trúc như dự phòng, nhắn tin, lưu trữ dữ liệu và nhiều hơn nữa,
+
+
+00:01:59,400 --> 00:02:02,110
+are designed in light of a specific requirement.
+được thiết kế theo yêu cầu cụ thể.
+
+
+00:02:02,130 --> 00:02:07,350
+For example, if there is a non-functional requirement that a message should never be lost no matter
+Ví dụ, nếu có một yêu cầu không chức năng là một tin nhắn không bao giờ được phép bị mất bất kể
+
+
+00:02:07,350 --> 00:02:11,550
+what, then perhaps you will go for a queue based messaging mechanism.
+cái gì, vậy thì có lẽ bạn sẽ sử dụng cơ chế nhắn tin dựa trên hàng đợi.
+
+
+00:02:11,670 --> 00:02:17,280
+If the requirements change and suddenly there is some tolerance towards message losses, the architecture
+Nếu các yêu cầu thay đổi và đột nhiên có một số dung sai đối với việc mất tin nhắn, kiến trúc
+
+
+00:02:17,280 --> 00:02:20,970
+might change and we will recommend a rest API based messaging instead.
+có thể thay đổi và chúng tôi sẽ đề xuất một tin nhắn dựa trên API nghỉ ngơi thay thế.
+
+
+00:02:21,150 --> 00:02:27,120
+For this reason, it is extremely important to lay out the exact requirements, especially the non-functional
+Vì lý do này, việc nêu rõ các yêu cầu chính xác, đặc biệt là các yêu cầu không chức năng 35 là vô cùng quan trọng.
+
+
+00:02:27,120 --> 00:02:28,740
+ones in the architecture document.
+những cái trong tài liệu kiến trúc.
+
+
+00:02:28,770 --> 00:02:34,470
+This way you make it clear what are the requirements that dictated the architecture and makes sure everyone
+Bằng cách này, bạn làm rõ những yêu cầu nào quyết định kiến trúc và đảm bảo rằng mọi người đều
+
+
+00:02:34,470 --> 00:02:35,370
+knows that.
+biết rằng.
+
+
+00:02:35,790 --> 00:02:42,900
+Now note that this section is by no means a replacement for a design document created by a system analyst.
+Bây giờ hãy lưu ý rằng phần này không phải là sự thay thế cho tài liệu thiết kế do nhà phân tích hệ thống tạo ra.
+
+
+00:02:42,930 --> 00:02:48,690
+It gives a high level overview of the requirements and is mainly a talking point list, not a full blown
+Nó cung cấp cái nhìn tổng quan ở cấp độ cao về các yêu cầu và chủ yếu là danh sách các điểm cần thảo luận, không phải là danh sách 40 đầy đủ.
+
+
+00:02:48,690 --> 00:02:49,380
+document.
+tài liệu.
+
+
+00:02:49,410 --> 00:02:54,510
+Therefore, do not describe all the nuances and intricacies of each requirement.
+Do đó, không nên mô tả tất cả các sắc thái và sự phức tạp của từng yêu cầu.
+
+
+00:02:54,540 --> 00:02:56,790
+A short, concise description will be enough.
+Một mô tả ngắn gọn, súc tích sẽ đủ.
+
+
+00:02:57,060 --> 00:02:59,470
+So how is this section structured?
+Vậy phần này được cấu trúc như thế nào?
+
+
+00:02:59,490 --> 00:03:04,650
+Well, first are the functional requirements and provide a list of the main functional requirements,
+Vâng, trước tiên là các yêu cầu chức năng và cung cấp danh sách các yêu cầu chức năng chính,
+
+
+00:03:04,650 --> 00:03:06,930
+usually no more than five requirements.
+thường không quá năm yêu cầu.
+
+
+00:03:06,960 --> 00:03:11,700
+Remember, use a bulleted list with no more than three lines for each requirement.
+Hãy nhớ, sử dụng danh sách có dấu đầu dòng, không quá ba dòng cho mỗi yêu cầu.
+
+
+00:03:11,730 --> 00:03:16,140
+For example, here is a partial requirements list that can appear in a document.
+Ví dụ, đây là danh sách yêu cầu một phần có thể xuất hiện trong tài liệu.
+
+
+00:03:20,300 --> 00:03:22,460
+Next comes the non-functional requirements.
+Tiếp theo là các yêu cầu không chức năng.
+
+
+00:03:22,460 --> 00:03:24,560
+In contrast to the functional requirements.
+Ngược lại với các yêu cầu chức năng.
+
+
+00:03:24,560 --> 00:03:28,790
+It's extremely important to be extremely accurate and specific in this list.
+Điều cực kỳ quan trọng là phải cực kỳ chính xác và cụ thể trong danh sách này.
+
+
+00:03:28,820 --> 00:03:34,370
+The reason is that while functional requirements are well documented in other design documents, non-functional
+Lý do là trong khi các yêu cầu chức năng được ghi chép đầy đủ trong các tài liệu thiết kế khác thì các yêu cầu phi chức năng
+
+
+00:03:34,370 --> 00:03:39,680
+requirements are usually not included in any other document other than the architectural document.
+các yêu cầu thường không được đưa vào bất kỳ tài liệu nào khác ngoài tài liệu kiến trúc.
+
+
+00:03:39,710 --> 00:03:45,230
+For this reason, make sure the non-functional requirements list, while short and concise, contains
+Vì lý do này, hãy đảm bảo danh sách các yêu cầu phi chức năng, mặc dù ngắn gọn và súc tích, nhưng phải chứa
+
+
+00:03:45,230 --> 00:03:49,250
+all the necessary details for the readers to fully grasp the requirements.
+tất cả các chi tiết cần thiết để người đọc nắm bắt đầy đủ các yêu cầu.
+
+
+00:03:49,280 --> 00:03:52,550
+Here is a sample list of a non-functional requirements.
+Sau đây là danh sách mẫu các yêu cầu không chức năng.
+
+
+00:03:56,730 --> 00:03:59,370
+So we have talked about the requirements section.
+Vì vậy, chúng ta đã nói về phần yêu cầu.
+
+
+00:03:59,370 --> 00:04:01,110
+Let's move on to the next one.
+Chúng ta hãy chuyển sang phần tiếp theo.
+
+

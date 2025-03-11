@@ -1,0 +1,115 @@
+00:00:00,340 --> 00:00:05,380
+So this is the architectural process I use with almost all of my clients and I recommend you to do the
+Vì vậy, đây là quy trình kiến trúc mà tôi sử dụng với hầu hết khách hàng của mình và tôi khuyên bạn nên thực hiện
+
+
+00:00:05,380 --> 00:00:05,950
+same.
+giống nhau.
+
+
+00:00:06,130 --> 00:00:10,080
+Be aware that there almost always be some variations on the process.
+Hãy lưu ý rằng hầu như luôn có một số thay đổi trong quá trình này.
+
+
+00:00:10,090 --> 00:00:16,300
+For example, one subject you should be aware of is who else participates in every step of the process.
+Ví dụ, một chủ đề bạn nên biết là ai khác tham gia vào từng bước của quy trình.
+
+
+00:00:17,230 --> 00:00:19,900
+Let's look at the non-functional requirements step.
+Hãy cùng xem xét bước yêu cầu phi chức năng.
+
+
+00:00:19,930 --> 00:00:25,120
+Obviously you, the architect, cannot decide what are the non-functional requirements without talking
+Rõ ràng là bạn, kiến trúc sư, không thể quyết định những yêu cầu phi chức năng là gì nếu không thảo luận
+
+
+00:00:25,150 --> 00:00:29,530
+to the client and the system analyst and the architectural design phase.
+cho khách hàng và nhà phân tích hệ thống và giai đoạn thiết kế kiến trúc.
+
+
+00:00:29,560 --> 00:00:33,850
+Are you supposed to do it all by yourself or should you involve the developers?
+Bạn có nên tự mình làm mọi việc hay nên nhờ đến các nhà phát triển?
+
+
+00:00:33,880 --> 00:00:36,730
+The answer is, as always, it depends.
+Câu trả lời là, như thường lệ, nó phụ thuộc.
+
+
+00:00:37,060 --> 00:00:42,390
+If the developers are available for taking part in the architecture, then by all means work with them.
+Nếu các nhà phát triển có thể tham gia vào kiến trúc thì hãy làm việc với họ.
+
+
+00:00:42,400 --> 00:00:47,170
+It's extremely important to let them be part of the process because you will earn two benefits.
+Việc để họ tham gia vào quá trình này là vô cùng quan trọng vì bạn sẽ nhận được hai lợi ích.
+
+
+00:00:47,320 --> 00:00:52,630
+First, if there are some scenarios you are not aware of but the developers know about, it will be
+Đầu tiên, nếu có một số tình huống bạn không biết nhưng các nhà phát triển biết thì sẽ là
+
+
+00:00:52,630 --> 00:00:57,070
+better to talk about them as early as possible and not when the architecture is done.
+tốt hơn là nên nói về chúng càng sớm càng tốt chứ không phải khi kiến trúc đã hoàn thành.
+
+
+00:00:57,130 --> 00:01:03,110
+Second, since the architecture was built together with the development team, you neutralize any future
+Thứ hai, vì kiến trúc được xây dựng cùng với nhóm phát triển, bạn vô hiệu hóa bất kỳ 15 tương lai nào
+
+
+00:01:03,110 --> 00:01:03,950
+disagreement.
+bất đồng quan điểm.
+
+
+00:01:03,980 --> 00:01:09,530
+Moreover, this way the developers become ambassadors of you and the architecture, and they will convince
+Hơn nữa, theo cách này, các nhà phát triển trở thành đại sứ của bạn và kiến trúc, và họ sẽ thuyết phục
+
+
+00:01:09,530 --> 00:01:14,360
+the other project members that the architecture is a good one and should be used.
+các thành viên khác của dự án cho rằng kiến trúc này tốt và nên được sử dụng.
+
+
+00:01:14,630 --> 00:01:20,180
+This will make your job much easier and will free your time to work on the really important things instead
+Điều này sẽ làm cho công việc của bạn dễ dàng hơn nhiều và sẽ giải phóng thời gian của bạn để làm những việc thực sự quan trọng thay vì
+
+
+00:01:20,180 --> 00:01:21,800
+of organizational politics.
+của chính trị tổ chức.
+
+
+00:01:21,980 --> 00:01:27,080
+In the next sections, we will deep dive into each of the steps we have talked about and we'll understand
+Trong các phần tiếp theo, chúng ta sẽ đi sâu vào từng bước mà chúng ta đã nói đến và chúng ta sẽ hiểu
+
+
+00:01:27,080 --> 00:01:32,960
+the ins and outs of the tasks you, the architect, has to execute in order to design a good and practical
+những chi tiết trong nhiệm vụ mà bạn, kiến trúc sư, phải thực hiện để thiết kế một công trình tốt và thiết thực
+
+
+00:01:32,960 --> 00:01:33,770
+architecture.
+kiến trúc.
+
+
+00:01:33,800 --> 00:01:34,760
+Let's go.
+Chúng ta đi thôi.
+
+

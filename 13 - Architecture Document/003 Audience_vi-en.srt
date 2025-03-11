@@ -1,0 +1,230 @@
+00:00:00,290 --> 00:00:02,200
+Let's talk about the architectural documents.
+Chúng ta hãy nói về các tài liệu kiến trúc.
+
+
+00:00:02,210 --> 00:00:04,850
+Audience Who are we writing this document for?
+Đối tượng Chúng tôi viết tài liệu này cho ai?
+
+
+00:00:04,880 --> 00:00:07,910
+Who is the intended audience for our document?
+Đối tượng mục tiêu của tài liệu của chúng tôi là ai?
+
+
+00:00:08,029 --> 00:00:10,400
+Well, the answer might surprise you a little.
+Vâng, câu trả lời có thể làm bạn ngạc nhiên một chút.
+
+
+00:00:10,430 --> 00:00:13,730
+While you may think the document is targeted only for the developers.
+Trong khi bạn có thể nghĩ rằng tài liệu này chỉ dành cho các nhà phát triển.
+
+
+00:00:13,730 --> 00:00:19,580
+It's real audience is almost everyone involved in the system, including the project manager, the CTO,
+Đối tượng thực sự của nó là hầu hết mọi người tham gia vào hệ thống, bao gồm cả người quản lý dự án, giám đốc công nghệ,
+
+
+00:00:19,610 --> 00:00:23,750
+if there is any, the QA leader, and of course, the developers.
+nếu có, người đứng đầu QA và tất nhiên là các nhà phát triển.
+
+
+00:00:24,380 --> 00:00:28,580
+The only difference is what does any team member gain from the document?
+Sự khác biệt duy nhất là thành viên nhóm nào sẽ đạt được lợi ích gì từ tài liệu này?
+
+
+00:00:28,610 --> 00:00:32,180
+Let's go through the various roles of the teams and explain.
+Chúng ta hãy cùng xem xét các vai trò khác nhau của các đội và giải thích.
+
+
+00:00:32,450 --> 00:00:34,510
+So let's begin with the development team.
+Vậy chúng ta hãy bắt đầu với nhóm phát triển.
+
+
+00:00:34,520 --> 00:00:40,040
+We already discussed the use of the document and explained the document out, the basic concepts of
+Chúng tôi đã thảo luận về việc sử dụng tài liệu và giải thích tài liệu, các khái niệm cơ bản của
+
+
+00:00:40,040 --> 00:00:45,680
+the system, the technology stack, the components and the services and the way they communicate with
+hệ thống, công nghệ, các thành phần và dịch vụ và cách chúng giao tiếp với
+
+
+00:00:45,680 --> 00:00:46,460
+each other.
+lẫn nhau.
+
+
+00:00:46,730 --> 00:00:51,020
+So it's clear why the development team is an audience for our document.
+Vì vậy, rõ ràng là nhóm phát triển là đối tượng cho tài liệu của chúng tôi.
+
+
+00:00:51,260 --> 00:00:54,020
+Next, let's talk about management.
+Tiếp theo, chúng ta hãy nói về quản lý.
+
+
+00:00:54,050 --> 00:00:59,990
+In management, I target mainly the project manager, the CTO, and in smaller organizations, even
+Trong quản lý, tôi chủ yếu nhắm tới người quản lý dự án, CTO và trong các tổ chức nhỏ hơn, thậm chí là
+
+
+00:01:00,090 --> 00:01:01,050
+the CEO.
+Tổng giám đốc điều hành.
+
+
+00:01:01,350 --> 00:01:04,500
+So what does management has to do with the architecture document?
+Vậy quản lý có liên quan gì đến tài liệu kiến trúc?
+
+
+00:01:04,530 --> 00:01:09,300
+Simply put, the management will use the document to ensure the team is in good hands.
+Nói một cách đơn giản, ban quản lý sẽ sử dụng tài liệu này để đảm bảo nhóm được quản lý tốt.
+
+
+00:01:09,330 --> 00:01:13,560
+When the project manager will see the requirements are fully detailed in the architectural document,
+Khi người quản lý dự án thấy các yêu cầu được trình bày chi tiết đầy đủ trong tài liệu kiến trúc,
+
+
+00:01:13,560 --> 00:01:19,170
+she will know you fully grasp the essence of the system and as a result that she can trust you.
+cô ấy sẽ biết bạn nắm bắt được bản chất của hệ thống và do đó cô ấy có thể tin tưởng bạn.
+
+
+00:01:19,290 --> 00:01:24,900
+When the CTO will go through the executive summary and will see you are using best practices and modern
+Khi CTO xem qua bản tóm tắt điều hành và thấy bạn đang sử dụng các phương pháp hay nhất và hiện đại
+
+
+00:01:24,900 --> 00:01:26,160
+technologies and patterns.
+công nghệ và mẫu mã.
+
+
+00:01:26,160 --> 00:01:31,350
+Even if you won't understand every word in it, you will still feel confident in working with you.
+Ngay cả khi bạn không hiểu hết mọi từ trong đó, bạn vẫn sẽ cảm thấy tự tin khi làm việc với bạn.
+
+
+00:01:31,470 --> 00:01:33,900
+Even the CEO, when he will see the system.
+Ngay cả CEO, khi ông ấy nhìn thấy hệ thống.
+
+
+00:01:33,900 --> 00:01:37,410
+Design is geared towards business goals and not architectural goals.
+Thiết kế hướng tới mục tiêu kinh doanh chứ không phải mục tiêu kiến trúc.
+
+
+00:01:37,410 --> 00:01:40,440
+He will know the right choice was made in working with you.
+Anh ấy sẽ biết rằng đã có sự lựa chọn đúng đắn khi làm việc với bạn.
+
+
+00:01:41,010 --> 00:01:45,720
+Now, usually management will not go through the whole document, but only its first sections.
+Hiện nay, thông thường ban quản lý sẽ không xem xét toàn bộ tài liệu mà chỉ xem xét những phần đầu tiên.
+
+
+00:01:45,720 --> 00:01:46,860
+But that enough.
+Nhưng thế là đủ rồi.
+
+
+00:01:47,010 --> 00:01:51,870
+They don't need to be fluent in all the technical and architectural details and frankly, they don't
+Họ không cần phải thông thạo tất cả các chi tiết kỹ thuật và kiến trúc và thành thật mà nói, họ không
+
+
+00:01:51,870 --> 00:01:52,860
+have time for this.
+có thời gian cho việc này.
+
+
+00:01:53,010 --> 00:01:58,860
+For this reason, the sections targeted mainly for management will appear first in the document, as
+Vì lý do này, các phần chủ yếu nhắm vào quản lý sẽ xuất hiện đầu tiên trong tài liệu, như
+
+
+00:01:58,860 --> 00:02:00,600
+you will see later.
+bạn sẽ thấy sau.
+
+
+00:02:01,170 --> 00:02:02,850
+And what about QA?
+Còn QA thì sao?
+
+
+00:02:03,390 --> 00:02:06,600
+Well, the lead should also read this document.
+Vâng, người dẫn đầu cũng nên đọc tài liệu này.
+
+
+00:02:06,630 --> 00:02:12,360
+The reason for that is that by reading it, the QA lead can begin preparations for the testing infrastructure
+Lý do là bằng cách đọc nó, người đứng đầu QA có thể bắt đầu chuẩn bị cho cơ sở hạ tầng thử nghiệm
+
+
+00:02:12,540 --> 00:02:17,240
+when performing integration tests and load tests, they should be relevant infrastructure in place.
+khi thực hiện các thử nghiệm tích hợp và thử nghiệm tải, chúng phải có cơ sở hạ tầng phù hợp.
+
+
+00:02:17,250 --> 00:02:22,320
+There are servers that should be installed and prepared testing tools that should be configured and
+Có các máy chủ cần được cài đặt và chuẩn bị các công cụ kiểm tra cần được cấu hình và
+
+
+00:02:22,320 --> 00:02:24,330
+sometimes there is some coding involved.
+đôi khi có một số mã hóa liên quan.
+
+
+00:02:24,690 --> 00:02:29,670
+The architecture document will give the QA lead the essential information she needs to start preparing
+Tài liệu kiến trúc sẽ cung cấp cho người đứng đầu QA những thông tin cần thiết để bắt đầu chuẩn bị
+
+
+00:02:29,670 --> 00:02:35,220
+this infrastructure by learning about technologies used in the system and the number and type of services
+cơ sở hạ tầng này bằng cách tìm hiểu về các công nghệ được sử dụng trong hệ thống và số lượng và loại dịch vụ
+
+
+00:02:35,250 --> 00:02:39,780
+and matching infrastructure can be built, thus shortening the project schedule.
+và cơ sở hạ tầng phù hợp có thể được xây dựng, do đó rút ngắn thời gian thực hiện dự án.
+
+
+00:02:39,960 --> 00:02:44,760
+So as you can see, almost all the team members have something to gain from the architecture document,
+Vì vậy, như bạn có thể thấy, hầu như tất cả các thành viên trong nhóm đều có thể đạt được điều gì đó từ tài liệu kiến trúc,
+
+
+00:02:44,760 --> 00:02:49,770
+and we as architects must try our best to make it available for anyone interested.
+và chúng tôi với tư cách là kiến trúc sư phải cố gắng hết sức để cung cấp nó cho bất kỳ ai quan tâm.
+
+
+00:02:49,800 --> 00:02:54,660
+We will begin shortly to talk about the document structure and then I'll make it clear what section
+Chúng ta sẽ bắt đầu nói về cấu trúc tài liệu ngay sau đây và sau đó tôi sẽ làm rõ phần
+
+
+00:02:54,660 --> 00:02:56,670
+is relevant for which audience.
+có liên quan đến đối tượng nào.
+
+

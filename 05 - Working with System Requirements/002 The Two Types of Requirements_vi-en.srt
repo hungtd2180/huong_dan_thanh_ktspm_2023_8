@@ -1,0 +1,230 @@
+00:00:01,290 --> 00:00:06,810
+When talking about systems requirements, we usually think along the lines of what the system should
+Khi nói về các yêu cầu của hệ thống, chúng ta thường nghĩ theo hướng hệ thống nên
+
+
+00:00:06,810 --> 00:00:07,200
+do.
+làm.
+
+
+00:00:07,230 --> 00:00:10,390
+We expect the requirements to deal with the following questions.
+Chúng tôi mong đợi các yêu cầu sẽ giải quyết được những câu hỏi sau.
+
+
+00:00:10,410 --> 00:00:12,840
+What are the business flows of the system?
+Các luồng kinh doanh của hệ thống là gì?
+
+
+00:00:12,930 --> 00:00:18,540
+For example, log in, storing photos, receiving and crunching, telemetry data and more.
+Ví dụ, đăng nhập, lưu trữ ảnh, nhận và xử lý dữ liệu, dữ liệu đo từ xa và nhiều hơn nữa.
+
+
+00:00:19,320 --> 00:00:21,660
+What business services should the system have?
+Hệ thống cần có những dịch vụ kinh doanh nào?
+
+
+00:00:21,660 --> 00:00:25,650
+For example, logging service data access service Telemetry.
+Ví dụ, dịch vụ ghi nhật ký dịch vụ truy cập dữ liệu Telemetry.
+
+
+00:00:25,650 --> 00:00:27,690
+Receiver Telemetry control.
+Điều khiển từ xa của máy thu.
+
+
+00:00:28,340 --> 00:00:30,950
+What does the user interface of the system looks like?
+Giao diện người dùng của hệ thống trông như thế nào?
+
+
+00:00:30,980 --> 00:00:34,280
+The look and feel, general guidance, responsiveness and more.
+Giao diện, hướng dẫn chung, khả năng phản hồi và nhiều hơn nữa.
+
+
+00:00:35,180 --> 00:00:38,370
+These requirements are called functional requirements.
+Những yêu cầu này được gọi là yêu cầu chức năng.
+
+
+00:00:38,390 --> 00:00:44,390
+You can identify those requirements from miles if they answer the question what the system should do.
+Bạn có thể xác định những yêu cầu đó từ dặm nếu chúng trả lời được câu hỏi hệ thống nên làm gì.
+
+
+00:00:44,420 --> 00:00:46,250
+They are functional requirements.
+Chúng là những yêu cầu chức năng.
+
+
+00:00:46,640 --> 00:00:51,650
+Functional requirements are, of course extremely important and no system should be designed and built
+Tất nhiên, các yêu cầu chức năng cực kỳ quan trọng và không nên thiết kế và xây dựng bất kỳ hệ thống nào
+
+
+00:00:51,650 --> 00:00:52,560
+without them.
+không có chúng.
+
+
+00:00:52,580 --> 00:00:58,340
+I had the pleasure of working on a system without concrete functional requirements, and I swore I would
+Tôi đã có niềm vui được làm việc trên một hệ thống không có yêu cầu chức năng cụ thể và tôi đã thề rằng tôi sẽ
+
+
+00:00:58,340 --> 00:00:59,600
+never do that again.
+không bao giờ làm điều đó nữa.
+
+
+00:00:59,930 --> 00:01:05,690
+However, for the architect, these requirements are important, but not as important as the other kind
+Tuy nhiên, đối với kiến trúc sư, những yêu cầu này là quan trọng, nhưng không quan trọng bằng loại kia
+
+
+00:01:05,690 --> 00:01:06,680
+of requirements.
+của các yêu cầu.
+
+
+00:01:07,230 --> 00:01:12,660
+These requirements are known as non-functional requirements and these requirements answer roughly this
+Những yêu cầu này được gọi là yêu cầu phi chức năng và những yêu cầu này trả lời một cách sơ bộ câu hỏi 21 này
+
+
+00:01:12,660 --> 00:01:15,720
+question What should the system deal with?
+Câu hỏi Hệ thống nên xử lý những gì?
+
+
+00:01:16,080 --> 00:01:20,970
+Non-functional requirements Describe the various aspects of the system's operation and are not tied
+Yêu cầu không chức năng Mô tả các khía cạnh khác nhau của hoạt động hệ thống và không bị ràng buộc
+
+
+00:01:20,970 --> 00:01:23,250
+to a specific behavior or logic.
+đến một hành vi hoặc logic cụ thể.
+
+
+00:01:23,280 --> 00:01:31,950
+The most common non-functional requirements are performance load data, volume, concurrent users and
+Các yêu cầu không chức năng phổ biến nhất là dữ liệu tải hiệu suất, khối lượng, người dùng đồng thời và
+
+
+00:01:31,950 --> 00:01:32,420
+SLA.
+Thỏa thuận cấp phép
+
+
+00:01:33,750 --> 00:01:38,400
+For those of you not familiar with all these terms, don't worry, we will cover them later in this
+Đối với những bạn chưa quen với tất cả các thuật ngữ này, đừng lo lắng, chúng tôi sẽ đề cập đến chúng sau trong phần 27 này.
+
+
+00:01:38,400 --> 00:01:39,090
+section.
+phần
+
+
+00:01:39,480 --> 00:01:44,040
+Non-functional requirements are the requirements that really interest you as an architect.
+Các yêu cầu phi chức năng là những yêu cầu thực sự khiến bạn quan tâm với tư cách là một kiến trúc sư.
+
+
+00:01:44,190 --> 00:01:48,960
+I once had a client that asked me to design an architecture for a system he was planning.
+Tôi đã từng có một khách hàng yêu cầu tôi thiết kế kiến trúc cho một hệ thống mà anh ấy đang lập kế hoạch.
+
+
+00:01:48,990 --> 00:01:51,880
+On first sight, the system looked quite simple.
+Thoạt nhìn, hệ thống này có vẻ khá đơn giản.
+
+
+00:01:51,900 --> 00:01:57,840
+Simple rest services that receive data make some calculations, and store the results in a database.
+Các dịch vụ nghỉ ngơi đơn giản nhận dữ liệu thực hiện một số tính toán và lưu trữ kết quả trong cơ sở dữ liệu.
+
+
+00:01:57,870 --> 00:01:58,840
+Piece of cake.
+Dễ như ăn bánh.
+
+
+00:01:58,860 --> 00:02:00,660
+Or so I thought.
+Hoặc tôi nghĩ vậy.
+
+
+00:02:00,870 --> 00:02:06,570
+Towards the end of our requirements meeting, I asked the client what would be the maximum size of the
+Gần cuối cuộc họp về yêu cầu của chúng tôi, tôi đã hỏi khách hàng rằng kích thước tối đa của 35 là bao nhiêu
+
+
+00:02:06,570 --> 00:02:08,009
+data received by the service.
+dữ liệu nhận được bởi dịch vụ.
+
+
+00:02:08,430 --> 00:02:15,360
+He looked at me with an I have no idea face made some phone calls, paid a little, came back to the
+Anh ấy nhìn tôi với vẻ mặt không biết gì, gọi điện thoại vài lần, trả tiền một ít, rồi quay lại phòng
+
+
+00:02:15,360 --> 00:02:18,510
+table and said, Well, 600MB.
+bảng và nói, Vâng, 600MB.
+
+
+00:02:18,540 --> 00:02:19,170
+Boom.
+Bùm.
+
+
+00:02:20,250 --> 00:02:25,500
+No architect in his right mind will expect a rest service to deal with such a huge request.
+Không có kiến trúc sư nào tỉnh táo lại mong đợi một dịch vụ nghỉ ngơi có thể giải quyết được một yêu cầu lớn như vậy.
+
+
+00:02:25,530 --> 00:02:30,360
+We had to return to the drawing board and ended up with a completely different architecture.
+Chúng tôi phải quay lại bảng vẽ và kết thúc với một kiến trúc hoàn toàn khác.
+
+
+00:02:30,780 --> 00:02:36,690
+The rest services have gone and instead we had agents listening to a NoSQL database and waiting for
+Các dịch vụ còn lại đã biến mất và thay vào đó chúng tôi có các tác nhân lắng nghe cơ sở dữ liệu NoSQL và chờ
+
+
+00:02:36,690 --> 00:02:38,100
+the data to be stored there.
+dữ liệu được lưu trữ ở đó.
+
+
+00:02:38,400 --> 00:02:43,830
+And that's just one example of an architecture that gets turned upside down because of non-functional
+Và đó chỉ là một ví dụ về một kiến trúc bị đảo lộn vì không có chức năng
+
+
+00:02:43,830 --> 00:02:44,700
+requirements.
+yêu cầu.
+
+
+00:02:44,970 --> 00:02:49,830
+So now that we understand the difference between the two kinds of requirements, let's take a closer
+Bây giờ chúng ta đã hiểu được sự khác biệt giữa hai loại yêu cầu, hãy cùng xem xét kỹ hơn
+
+
+00:02:49,830 --> 00:02:50,580
+look at them.
+hãy nhìn chúng.
+
+

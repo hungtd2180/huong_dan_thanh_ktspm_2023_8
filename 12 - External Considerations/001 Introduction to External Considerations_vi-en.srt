@@ -1,0 +1,35 @@
+00:00:00,680 --> 00:00:05,840
+In previous sections, we discussed the architectural concept of software components and systems and
+Trong các phần trước, chúng ta đã thảo luận về khái niệm kiến trúc của các thành phần và hệ thống phần mềm và
+
+
+00:00:05,840 --> 00:00:09,110
+focused on professional considerations scalability, redundancy.
+tập trung vào các cân nhắc chuyên môn về khả năng mở rộng, dự phòng.
+
+
+00:00:09,110 --> 00:00:09,890
+ET cetera.
+ET v.v.
+
+
+00:00:09,920 --> 00:00:15,580
+However, as architects, we often employ additional considerations when making architectural decisions
+Tuy nhiên, với tư cách là kiến trúc sư, chúng tôi thường cân nhắc thêm khi đưa ra quyết định về kiến trúc
+
+
+00:00:15,590 --> 00:00:20,420
+considerations that have nothing to do with best practices, architecture or software.
+những cân nhắc không liên quan gì đến các phương pháp hay nhất, kiến trúc hoặc phần mềm.
+
+
+00:00:20,720 --> 00:00:26,000
+In this section, we will discuss these considerations and see how they can affect the technology stack
+Trong phần này, chúng ta sẽ thảo luận về những cân nhắc này và xem chúng có thể ảnh hưởng đến công nghệ như thế nào
+
+
+00:00:26,000 --> 00:00:28,130
+and architectural patterns we will use.
+và các mẫu kiến trúc chúng ta sẽ sử dụng.
+
+

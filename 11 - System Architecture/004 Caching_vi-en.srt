@@ -1,0 +1,655 @@
+00:00:01,190 --> 00:00:06,860
+Caching is one of the most used architectural patterns in software, but is not always used correctly.
+Lưu trữ đệm là một trong những mô hình kiến trúc được sử dụng nhiều nhất trong phần mềm, nhưng không phải lúc nào cũng được sử dụng đúng cách.
+
+
+00:00:07,010 --> 00:00:09,980
+Let's explain the basic concept of caching first.
+Trước tiên chúng ta hãy giải thích khái niệm cơ bản về bộ nhớ đệm.
+
+
+00:00:10,010 --> 00:00:15,710
+Using cache, we bring data closer to its consumer so that its retrieval will be faster.
+Khi sử dụng bộ nhớ đệm, chúng ta đưa dữ liệu đến gần người dùng hơn để việc truy xuất dữ liệu sẽ nhanh hơn.
+
+
+00:00:16,010 --> 00:00:17,780
+Let's look at some examples.
+Chúng ta hãy xem một số ví dụ.
+
+
+00:00:18,110 --> 00:00:20,630
+All the modern web browsers have cache.
+Tất cả các trình duyệt web hiện đại đều có bộ nhớ đệm.
+
+
+00:00:20,660 --> 00:00:26,330
+The role of the cache in web browser is simple when browsing a specific web page, instead of asking
+Vai trò của bộ nhớ đệm trong trình duyệt web rất đơn giản khi duyệt một trang web cụ thể, thay vì yêu cầu
+
+
+00:00:26,330 --> 00:00:32,119
+a remote server to serve the page, it is retrieved from the browser's memory, thus displaying the
+một máy chủ từ xa để phục vụ trang, nó được lấy từ bộ nhớ của trình duyệt, do đó hiển thị
+
+
+00:00:32,119 --> 00:00:33,530
+page much faster.
+trang nhanh hơn nhiều.
+
+
+00:00:33,740 --> 00:00:39,560
+The developers can disable the cache to ensure the page displayed is always up to date and contains
+Các nhà phát triển có thể vô hiệu hóa bộ nhớ đệm để đảm bảo trang hiển thị luôn được cập nhật và chứa
+
+
+00:00:39,560 --> 00:00:40,730
+the relevant data.
+dữ liệu có liên quan.
+
+
+00:00:41,090 --> 00:00:45,140
+Let's look at another example more relevant for us the architects.
+Hãy xem một ví dụ khác có liên quan hơn đến chúng ta, những kiến trúc sư.
+
+
+00:00:45,350 --> 00:00:47,840
+A service needs data from the data store.
+Một dịch vụ cần dữ liệu từ kho dữ liệu.
+
+
+00:00:47,870 --> 00:00:51,830
+Let's assume the data store is a relational database like SQL Server.
+Giả sử kho dữ liệu là một cơ sở dữ liệu quan hệ như SQL Server.
+
+
+00:00:52,160 --> 00:00:59,000
+Naturally, the service has code in its data access layer to access the database and issue SQL statements
+Tất nhiên, dịch vụ có mã trong lớp truy cập dữ liệu của nó để truy cập cơ sở dữ liệu và đưa ra các câu lệnh SQL
+
+
+00:00:59,000 --> 00:01:00,390
+to retrieve the data.
+để lấy lại dữ liệu.
+
+
+00:01:00,660 --> 00:01:02,870
+The retrieval operation can take some time.
+Hoạt động truy xuất có thể mất một thời gian.
+
+
+00:01:02,880 --> 00:01:07,020
+The database has to compile the SQL statement, retrieve the data.
+Cơ sở dữ liệu phải biên dịch câu lệnh SQL, truy xuất dữ liệu.
+
+
+00:01:07,050 --> 00:01:10,710
+Then the code will need to serialize the data to objects.
+Sau đó, mã sẽ cần phải tuần tự hóa dữ liệu thành các đối tượng.
+
+
+00:01:10,740 --> 00:01:12,270
+The code can work with.
+Mã có thể hoạt động với.
+
+
+00:01:12,300 --> 00:01:14,340
+All this might take time.
+Tất cả những điều này có thể mất thời gian.
+
+
+00:01:14,460 --> 00:01:20,460
+Add to that the fact that the database might be physically located far from the code, and we do have
+Thêm vào đó là thực tế là cơ sở dữ liệu có thể được đặt ở xa mã và chúng ta có
+
+
+00:01:20,460 --> 00:01:22,050
+an inefficient process.
+một quá trình không hiệu quả.
+
+
+00:01:22,380 --> 00:01:25,170
+To avoid this delay, we can use cache.
+Để tránh sự chậm trễ này, chúng ta có thể sử dụng bộ nhớ đệm.
+
+
+00:01:25,530 --> 00:01:31,200
+The cache is another layer usually sits between the data store and the business logic layer that stores
+Bộ nhớ đệm là một lớp khác thường nằm giữa kho dữ liệu và lớp logic nghiệp vụ lưu trữ
+
+
+00:01:31,200 --> 00:01:34,620
+data in a way that makes it very easy and fast to retrieve.
+dữ liệu theo cách giúp việc truy xuất trở nên dễ dàng và nhanh chóng.
+
+
+00:01:34,770 --> 00:01:39,810
+Cache engines usually store data in memory, thus making the retrieval extremely fast.
+Các công cụ lưu trữ đệm thường lưu trữ dữ liệu trong bộ nhớ, do đó làm cho việc truy xuất dữ liệu cực kỳ nhanh chóng.
+
+
+00:01:39,840 --> 00:01:46,440
+Some engines, such as Redis, save the data to disk periodically, but still retrieving the data is
+Một số công cụ, chẳng hạn như Redis, lưu dữ liệu vào đĩa theo định kỳ, nhưng việc truy xuất dữ liệu vẫn mất
+
+
+00:01:46,440 --> 00:01:48,240
+done against a memory storage.
+thực hiện chống lại bộ nhớ lưu trữ.
+
+
+00:01:48,690 --> 00:01:52,830
+Cache engines offer some trade offs when compared to more traditional databases.
+Các công cụ lưu trữ đệm cung cấp một số sự đánh đổi khi so sánh với các cơ sở dữ liệu truyền thống hơn.
+
+
+00:01:52,860 --> 00:01:55,650
+The following table summarizes this tradeoff.
+Bảng sau đây tóm tắt sự đánh đổi này.
+
+
+00:01:55,680 --> 00:02:00,010
+As you can see, cache trades reliability for performance.
+Như bạn có thể thấy, bộ nhớ đệm đánh đổi độ tin cậy để lấy hiệu suất.
+
+
+00:02:00,030 --> 00:02:04,890
+Data stored in memory is more volatile and will be lost in case of a server crash.
+Dữ liệu được lưu trữ trong bộ nhớ dễ bị mất hơn và sẽ bị mất trong trường hợp máy chủ gặp sự cố.
+
+
+00:02:04,920 --> 00:02:11,100
+On the other hand, it is more performant compared to traditional databases because databases usually
+Mặt khác, nó có hiệu suất cao hơn so với cơ sở dữ liệu truyền thống vì cơ sở dữ liệu thường
+
+
+00:02:11,100 --> 00:02:12,630
+store the data in disk.
+lưu trữ dữ liệu trong đĩa.
+
+
+00:02:12,660 --> 00:02:19,560
+We almost always will refer to them as the single source of truth, meaning the real original data is
+Chúng tôi hầu như luôn coi chúng là nguồn duy nhất của sự thật, nghĩa là dữ liệu gốc thực sự là
+
+
+00:02:19,560 --> 00:02:20,520
+stored in the database.
+được lưu trữ trong cơ sở dữ liệu.
+
+
+00:02:20,520 --> 00:02:25,230
+And if the data is missing from the cache, we will fall back to the database to retrieve it.
+Và nếu dữ liệu bị thiếu trong bộ nhớ đệm, chúng tôi sẽ quay lại cơ sở dữ liệu để lấy lại dữ liệu đó.
+
+
+00:02:25,440 --> 00:02:31,440
+Now, as architects, we must be able to determine whether when and how to use cache in our system.
+Bây giờ, với tư cách là kiến trúc sư, chúng ta phải có khả năng xác định khi nào và làm thế nào để sử dụng bộ nhớ đệm trong hệ thống của mình.
+
+
+00:02:31,440 --> 00:02:36,360
+And for that, let's first define the type of data that we would want to cache.
+Và để làm được điều đó, trước tiên chúng ta hãy xác định loại dữ liệu mà chúng ta muốn lưu vào bộ nhớ đệm.
+
+
+00:02:36,600 --> 00:02:38,790
+The rule of thumb goes like this.
+Nguyên tắc chung là như thế này.
+
+
+00:02:38,820 --> 00:02:43,890
+Cache should hold data that is frequently accessed and rarely modified.
+Bộ nhớ đệm nên lưu trữ dữ liệu được truy cập thường xuyên và ít khi được sửa đổi.
+
+
+00:02:44,010 --> 00:02:46,530
+The reasoning behind this rule is simple.
+Lý do đằng sau quy tắc này rất đơn giản.
+
+
+00:02:46,860 --> 00:02:52,290
+If data is frequently accessed, we would like to make it fast and easy to retrieve so that the user
+Nếu dữ liệu được truy cập thường xuyên, chúng tôi muốn làm cho nó nhanh chóng và dễ dàng để truy xuất để người dùng
+
+
+00:02:52,290 --> 00:02:56,250
+experience will be optimized and there will be minimal load on the system.
+trải nghiệm sẽ được tối ưu hóa và sẽ có tải tối thiểu trên hệ thống.
+
+
+00:02:56,250 --> 00:02:59,610
+By placing the data in the cache, we get just that.
+Bằng cách đặt dữ liệu vào bộ nhớ đệm, chúng ta có được điều đó.
+
+
+00:02:59,640 --> 00:03:05,700
+The retrieval process is very lightweight since the data is in memory and no i o operation required.
+Quá trình truy xuất rất nhẹ vì dữ liệu nằm trong bộ nhớ và không cần thao tác io.
+
+
+00:03:05,700 --> 00:03:10,470
+And as a result it's also very fast making the user experience optimized.
+Và kết quả là nó cũng rất nhanh, giúp tối ưu hóa trải nghiệm của người dùng.
+
+
+00:03:10,800 --> 00:03:14,370
+On the other hand, the data should rarely be modified.
+Mặt khác, dữ liệu hiếm khi được sửa đổi.
+
+
+00:03:14,400 --> 00:03:16,110
+The reason for that is this.
+Lý do cho điều đó là thế này.
+
+
+00:03:16,140 --> 00:03:22,170
+One of the greatest challenges with cache is keeping it in sync with the data store, which is our single
+Một trong những thách thức lớn nhất với bộ nhớ đệm là giữ cho nó đồng bộ với kho dữ liệu, đó là 51 duy nhất của chúng tôi
+
+
+00:03:22,170 --> 00:03:23,130
+source of truth.
+nguồn gốc của sự thật.
+
+
+00:03:23,160 --> 00:03:28,860
+If the data store and the cache are not synchronized and contain different data, it can lead to data
+Nếu kho dữ liệu và bộ nhớ đệm không được đồng bộ hóa và chứa dữ liệu khác nhau, điều này có thể dẫn đến dữ liệu
+
+
+00:03:28,860 --> 00:03:31,080
+corruption and bad user experience.
+tham nhũng và trải nghiệm người dùng kém.
+
+
+00:03:31,200 --> 00:03:33,570
+Again, let's look at an example.
+Một lần nữa, chúng ta hãy xem một ví dụ.
+
+
+00:03:33,690 --> 00:03:39,360
+Our application gets stock quotes data and displays it to the user to make things quick.
+Ứng dụng của chúng tôi lấy dữ liệu báo giá cổ phiếu và hiển thị cho người dùng để mọi việc trở nên nhanh chóng.
+
+
+00:03:39,390 --> 00:03:41,320
+The data is stored in the cache.
+Dữ liệu được lưu trữ trong bộ nhớ đệm.
+
+
+00:03:41,340 --> 00:03:45,030
+Now, naturally, stokes data changes quite frequently.
+Bây giờ, tất nhiên, dữ liệu của Stokes thay đổi khá thường xuyên.
+
+
+00:03:45,060 --> 00:03:47,430
+Let's assume the data changes each second.
+Giả sử dữ liệu thay đổi mỗi giây.
+
+
+00:03:47,460 --> 00:03:52,380
+Most of the users work with the stock quotes data right in front of them so they can see the numbers
+Hầu hết người dùng làm việc với dữ liệu báo giá cổ phiếu ngay trước mắt họ để họ có thể nhìn thấy các con số
+
+
+00:03:52,380 --> 00:03:53,580
+change in real time.
+thay đổi theo thời gian thực.
+
+
+00:03:53,700 --> 00:03:57,360
+This complies to the frequent access part of our rule.
+Điều này tuân thủ phần truy cập thường xuyên trong quy tắc của chúng tôi.
+
+
+00:03:57,390 --> 00:04:01,890
+Now what happens when the data is changed, which happens each second, Remember?
+Bây giờ điều gì xảy ra khi dữ liệu thay đổi, điều này xảy ra mỗi giây, bạn còn nhớ không?
+
+
+00:04:02,070 --> 00:04:06,900
+Let's assume the system complies with the architectural pattern we discussed previously, which means
+Giả sử hệ thống tuân thủ theo mô hình kiến trúc mà chúng ta đã thảo luận trước đó, nghĩa là
+
+
+00:04:06,900 --> 00:04:10,070
+we have three servers with load balancer in front of them.
+chúng tôi có ba máy chủ với bộ cân bằng tải ở phía trước.
+
+
+00:04:10,110 --> 00:04:13,260
+Note that every server has its own cache.
+Lưu ý rằng mỗi máy chủ đều có bộ nhớ đệm riêng.
+
+
+00:04:13,680 --> 00:04:20,250
+Let's assume the servers expose API to update the stock quote and new call to the API arrives and the
+Giả sử các máy chủ đưa API ra để cập nhật giá cổ phiếu và có lệnh gọi API mới đến và
+
+
+00:04:20,250 --> 00:04:23,580
+load balancer decides to route it to server number one.
+bộ cân bằng tải quyết định định tuyến nó đến máy chủ số một.
+
+
+00:04:23,670 --> 00:04:29,460
+It gets the data, updates the central database and also updates its own cache.
+Nó lấy dữ liệu, cập nhật cơ sở dữ liệu trung tâm và cũng cập nhật bộ nhớ đệm của riêng nó.
+
+
+00:04:29,460 --> 00:04:31,230
+And here is a problem.
+Và đây là một vấn đề.
+
+
+00:04:31,840 --> 00:04:34,990
+Zarkesh on the other servers contains stale data.
+Zarkesh trên các máy chủ khác chứa dữ liệu cũ.
+
+
+00:04:35,020 --> 00:04:37,510
+That is a data that is not relevant.
+Đó là dữ liệu không liên quan.
+
+
+00:04:37,540 --> 00:04:41,350
+The other caches were not updated as a result of the API call.
+Các bộ nhớ đệm khác không được cập nhật do lệnh gọi API.
+
+
+00:04:41,350 --> 00:04:45,730
+So now two servers hold data that is not up to date and not relevant.
+Vì vậy, hiện tại có hai máy chủ lưu trữ dữ liệu không được cập nhật và không liên quan.
+
+
+00:04:45,730 --> 00:04:50,770
+And when the user will ask for the stock quotes and the load balancer will route the request to one
+Và khi người dùng yêu cầu báo giá cổ phiếu và bộ cân bằng tải sẽ định tuyến yêu cầu đến một
+
+
+00:04:50,770 --> 00:04:55,440
+of these servers, the user will be presented with a wrong data, which is bad.
+trong số các máy chủ này, người dùng sẽ được cung cấp dữ liệu sai, điều này thật tệ.
+
+
+00:04:55,480 --> 00:04:56,860
+So what can be done?
+Vậy có thể làm gì?
+
+
+00:04:57,790 --> 00:04:59,580
+To understand the various solutions?
+Để hiểu các giải pháp khác nhau?
+
+
+00:04:59,590 --> 00:05:01,910
+Let's categorize the various types of cache.
+Chúng ta hãy phân loại các loại bộ nhớ đệm khác nhau.
+
+
+00:05:01,930 --> 00:05:09,730
+In general, we can say there are two types of cache in memory, in process cache and distributed cache
+Nhìn chung, chúng ta có thể nói có hai loại bộ nhớ đệm trong bộ nhớ, bộ nhớ đệm trong tiến trình và bộ nhớ đệm phân tán
+
+
+00:05:10,720 --> 00:05:11,530
+in memory.
+trong trí nhớ.
+
+
+00:05:11,530 --> 00:05:15,370
+In process is a cache implementation that is part of the services code.
+Đang trong quá trình thực hiện bộ nhớ đệm là một phần của mã dịch vụ.
+
+
+00:05:15,400 --> 00:05:20,490
+It uses the service memory and is executed as part of the services process.
+Nó sử dụng bộ nhớ dịch vụ và được thực thi như một phần của quy trình dịch vụ.
+
+
+00:05:20,500 --> 00:05:25,780
+Almost all the development languages have libraries for in-memory, in-process cache and actually for
+Hầu như tất cả các ngôn ngữ phát triển đều có thư viện cho bộ nhớ đệm trong bộ nhớ, bộ nhớ đệm trong quá trình và thực sự cho
+
+
+00:05:25,780 --> 00:05:31,390
+simple implementations, you can use static concurrent collection and call it a day as you can probably
+triển khai đơn giản, bạn có thể sử dụng bộ sưu tập đồng thời tĩnh và gọi nó là một ngày như bạn có thể
+
+
+00:05:31,490 --> 00:05:37,220
+guess, in memory cache excels in performance, since accessing it is as simple as calling a class in
+đoán, trong bộ nhớ cache có hiệu suất vượt trội, vì việc truy cập nó đơn giản như gọi một lớp trong
+
+
+00:05:37,220 --> 00:05:39,870
+the code which gets data from the process memory.
+mã lấy dữ liệu từ bộ nhớ tiến trình.
+
+
+00:05:39,890 --> 00:05:45,950
+On the other hand, it is limited in size since it can hold data as big as a process memory which is
+Mặt khác, nó bị giới hạn về kích thước vì nó có thể chứa dữ liệu lớn như bộ nhớ xử lý là
+
+
+00:05:45,950 --> 00:05:47,660
+usually a few gigabytes.
+thường là một vài gigabyte.
+
+
+00:05:47,900 --> 00:05:50,690
+Distributed cache is a completely different beast.
+Bộ nhớ đệm phân tán là một thứ hoàn toàn khác.
+
+
+00:05:50,720 --> 00:05:56,930
+It's a separate product that holds the cache data in a separate process and provides easy interface
+Đây là một sản phẩm riêng biệt lưu trữ dữ liệu bộ nhớ đệm trong một quy trình riêng biệt và cung cấp giao diện dễ dàng
+
+
+00:05:56,930 --> 00:05:58,340
+for accessing the data.
+để truy cập dữ liệu.
+
+
+00:05:58,670 --> 00:06:02,930
+The best part of the distributed cache is that it's well distributed.
+Phần tốt nhất của bộ nhớ đệm phân tán là nó được phân phối tốt.
+
+
+00:06:02,960 --> 00:06:08,540
+That means that the cache storage is distributed across servers and that gives the distributed cache
+Điều đó có nghĩa là bộ nhớ đệm được phân phối trên các máy chủ và điều đó cung cấp bộ nhớ đệm phân tán
+
+
+00:06:08,540 --> 00:06:10,840
+the ability to store very large data.
+khả năng lưu trữ dữ liệu rất lớn.
+
+
+00:06:10,850 --> 00:06:16,460
+In fact, the cache size is limited only by the combined memory size of all the servers.
+Trên thực tế, kích thước bộ nhớ đệm chỉ bị giới hạn bởi kích thước bộ nhớ kết hợp của tất cả các máy chủ.
+
+
+00:06:16,460 --> 00:06:22,490
+The distributed cache is installed on distributed cache engines are usually installed as services on
+Bộ nhớ đệm phân tán được cài đặt trên các công cụ bộ nhớ đệm phân tán thường được cài đặt dưới dạng dịch vụ trên
+
+
+00:06:22,490 --> 00:06:26,270
+the servers they are on and each service is called Node.
+các máy chủ mà chúng đang ở và mỗi dịch vụ được gọi là Node.
+
+
+00:06:26,300 --> 00:06:31,670
+What's nice with distributed cache engines is that the nodes are synchronized internally and it's the
+Điều tuyệt vời với các công cụ bộ nhớ đệm phân tán là các nút được đồng bộ hóa nội bộ và đó là
+
+
+00:06:31,670 --> 00:06:36,630
+responsibility of the cache mechanism to make sure all the nodes are familiar with new data.
+trách nhiệm của cơ chế bộ nhớ đệm để đảm bảo tất cả các nút đều quen thuộc với dữ liệu mới.
+
+
+00:06:36,650 --> 00:06:42,080
+So in this case, when a specific server updates the cache, it's immediately distributed to the other
+Vì vậy, trong trường hợp này, khi một máy chủ cụ thể cập nhật bộ nhớ đệm, nó sẽ được phân phối ngay lập tức đến 101 máy chủ khác
+
+
+00:06:42,080 --> 00:06:46,370
+nodes, allowing all other servers to be in sync and have the same data.
+các nút, cho phép tất cả các máy chủ khác được đồng bộ hóa và có cùng dữ liệu.
+
+
+00:06:47,060 --> 00:06:50,030
+So what is the downside of distributed cache?
+Vậy nhược điểm của bộ nhớ đệm phân tán là gì?
+
+
+00:06:50,060 --> 00:06:52,370
+The answer is performance.
+Câu trả lời là hiệu suất.
+
+
+00:06:52,400 --> 00:06:57,980
+While with in-memory in-process cache, the performance is blazing fast because the cache executes in
+Trong khi với bộ nhớ đệm trong quá trình xử lý, hiệu suất cực nhanh vì bộ nhớ đệm thực thi trong
+
+
+00:06:57,980 --> 00:07:01,760
+the same process and uses the same code with distributed cache.
+cùng một quy trình và sử dụng cùng một mã với bộ nhớ đệm phân tán.
+
+
+00:07:01,760 --> 00:07:03,190
+We don't have this advantage.
+Chúng ta không có lợi thế này.
+
+
+00:07:03,200 --> 00:07:08,990
+The cache runs on a different process and sometimes it even runs on different servers, which adds network
+Bộ nhớ đệm chạy trên một quy trình khác và đôi khi nó thậm chí chạy trên các máy chủ khác nhau, điều này bổ sung thêm mạng
+
+
+00:07:08,990 --> 00:07:10,560
+hops to the retrieval process.
+nhảy đến quá trình truy xuất.
+
+
+00:07:10,580 --> 00:07:16,670
+In addition, most of the distributed cache engines allow storing only primitive types, strings, numbers,
+Ngoài ra, hầu hết các công cụ bộ nhớ đệm phân tán chỉ cho phép lưu trữ các kiểu dữ liệu nguyên thủy, chuỗi, số,
+
+
+00:07:16,670 --> 00:07:20,600
+etcetera, while the in-memory in-process cache can store anything.
+v.v., trong khi bộ nhớ đệm trong quá trình xử lý có thể lưu trữ bất cứ thứ gì.
+
+
+00:07:20,630 --> 00:07:26,330
+This gives us another performance gain since there is no need to serialize and deserialize the data.
+Điều này mang lại cho chúng ta thêm một hiệu suất nữa vì không cần phải tuần tự hóa và hủy tuần tự hóa dữ liệu.
+
+
+00:07:26,720 --> 00:07:29,540
+And now let's go back to our rule cache.
+Và bây giờ chúng ta hãy quay lại bộ nhớ cache quy tắc của chúng ta.
+
+
+00:07:29,540 --> 00:07:33,350
+Should hold data that is frequently accessed and rarely modified.
+Nên lưu trữ dữ liệu được truy cập thường xuyên và ít khi sửa đổi.
+
+
+00:07:33,350 --> 00:07:37,580
+And we left in the middle of the rarely modified discussion.
+Và chúng tôi rời đi giữa cuộc thảo luận hiếm khi được sửa đổi.
+
+
+00:07:37,580 --> 00:07:43,940
+If the data is frequently modified, as is the case with stock quotes and we are using in-memory in-process
+Nếu dữ liệu thường xuyên được sửa đổi, như trường hợp báo giá cổ phiếu và chúng tôi đang sử dụng bộ nhớ trong quá trình
+
+
+00:07:43,940 --> 00:07:49,370
+cache, we will have to develop some mechanism to sync between the data in the database and each and
+bộ nhớ đệm, chúng ta sẽ phải phát triển một số cơ chế để đồng bộ giữa dữ liệu trong cơ sở dữ liệu và mỗi bộ nhớ đệm
+
+
+00:07:49,370 --> 00:07:50,740
+every in-memory cache.
+mỗi bộ nhớ đệm trong bộ nhớ.
+
+
+00:07:50,750 --> 00:07:54,380
+This mechanism will hammer the database constantly and we will lose.
+Cơ chế này sẽ liên tục tấn công cơ sở dữ liệu và chúng ta sẽ thua.
+
+
+00:07:54,380 --> 00:07:58,370
+One of the advantages of cache, reduce the load from the system.
+Một trong những lợi thế của bộ nhớ đệm là giảm tải cho hệ thống.
+
+
+00:07:58,550 --> 00:08:03,650
+On the other hand, if we will be using distributed cache, we will probably be fine.
+Mặt khác, nếu chúng ta sử dụng bộ nhớ đệm phân tán, có lẽ sẽ ổn.
+
+
+00:08:03,680 --> 00:08:09,470
+The updated data will immediately sync between all the nodes and the servers will access the fresh data.
+Dữ liệu cập nhật sẽ được đồng bộ ngay lập tức giữa tất cả các nút và máy chủ sẽ truy cập dữ liệu mới.
+
+
+00:08:09,920 --> 00:08:13,820
+So we explored in-memory in process cache versus distributed cache.
+Vì vậy, chúng tôi đã khám phá bộ nhớ đệm trong bộ nhớ trong quy trình so với bộ nhớ đệm phân tán.
+
+
+00:08:13,850 --> 00:08:19,070
+Let's summarize it all in the following table, which will help you decide what kind of cache you need
+Chúng ta hãy tóm tắt tất cả trong bảng sau, bảng này sẽ giúp bạn quyết định loại bộ nhớ đệm nào bạn cần
+
+
+00:08:19,070 --> 00:08:19,700
+to use.
+sử dụng.
+
+
+00:08:19,850 --> 00:08:27,320
+So use distributed cache if you need distribution among servers, failover capabilities and large cache
+Vì vậy, hãy sử dụng bộ nhớ đệm phân tán nếu bạn cần phân phối giữa các máy chủ, khả năng chuyển đổi dự phòng và bộ nhớ đệm lớn
+
+
+00:08:27,320 --> 00:08:33,530
+storage and use in-memory in-process cache if you need best performance possible.
+lưu trữ và sử dụng bộ nhớ đệm trong quá trình xử lý nếu bạn cần hiệu suất tốt nhất có thể.
+
+
+00:08:33,530 --> 00:08:35,630
+And store complex objects.
+Và lưu trữ các đối tượng phức tạp.
+
+
+00:08:35,720 --> 00:08:41,419
+In addition, using distributed cache requires some training and setup, whereas in memory, in-process
+Ngoài ra, việc sử dụng bộ nhớ đệm phân tán đòi hỏi một số đào tạo và thiết lập, trong khi trong bộ nhớ, trong quá trình
+
+
+00:08:41,419 --> 00:08:43,700
+cache is as simple as using a class.
+bộ nhớ đệm đơn giản như sử dụng một lớp.
+
+
+00:08:44,059 --> 00:08:46,760
+So that concludes our discussion about cache.
+Như vậy là chúng ta đã kết thúc cuộc thảo luận về bộ nhớ đệm.
+
+
+00:08:46,760 --> 00:08:52,040
+I hope you learned from it and I hope it will help you design your caching strategy in the future.
+Tôi hy vọng bạn đã học được điều này và hy vọng nó sẽ giúp bạn thiết kế chiến lược lưu trữ đệm của mình trong tương lai.
+
+

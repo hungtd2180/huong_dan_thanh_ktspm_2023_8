@@ -1,0 +1,45 @@
+00:00:00,470 --> 00:00:02,530
+We have reached the end of this section.
+Chúng ta đã đến cuối phần này.
+
+
+00:00:02,540 --> 00:00:08,390
+In this section, we discussed some advanced architectural patterns, namely microservices event sourcing
+Trong phần này, chúng tôi đã thảo luận về một số mô hình kiến trúc nâng cao, cụ thể là microservices event sourcing
+
+
+00:00:08,390 --> 00:00:08,810
+and.
+và.
+
+
+00:00:10,040 --> 00:00:14,630
+I hope you liked these patterns and understood what their goals are and when to use them.
+Tôi hy vọng bạn thích những mẫu này và hiểu được mục đích của chúng cũng như thời điểm sử dụng chúng.
+
+
+00:00:14,660 --> 00:00:17,780
+Remember, only use these patterns when relevant.
+Hãy nhớ, chỉ sử dụng các mẫu này khi có liên quan.
+
+
+00:00:17,810 --> 00:00:23,090
+These patterns add complexity to the architecture, and this is a trade off that is not always justified.
+Những mẫu này làm tăng thêm tính phức tạp cho kiến trúc và đây là sự đánh đổi không phải lúc nào cũng hợp lý.
+
+
+00:00:23,120 --> 00:00:28,100
+Remember to take a look at the resources of the lectures in this section where you can find references
+Hãy nhớ xem qua các nguồn tài liệu của bài giảng trong phần này, nơi bạn có thể tìm thấy tài liệu tham khảo
+
+
+00:00:28,100 --> 00:00:30,610
+for more reading materials about these patterns.
+để biết thêm tài liệu đọc về các mẫu này.
+
+
+00:00:30,620 --> 00:00:33,560
+And now let's move on to the next section.
+Và bây giờ chúng ta hãy chuyển sang phần tiếp theo.
+
+

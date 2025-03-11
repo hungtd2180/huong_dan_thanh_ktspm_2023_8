@@ -1,0 +1,325 @@
+00:00:00,300 --> 00:00:06,750
+One very important soft skill that every architect and actually every professional must have is not
+Một kỹ năng mềm rất quan trọng mà mọi kiến trúc sư và thực tế là mọi chuyên gia phải có là không
+
+
+00:00:06,780 --> 00:00:08,700
+trying to be right all the time.
+luôn cố gắng đúng.
+
+
+00:00:08,790 --> 00:00:09,880
+What does it mean?
+Nó có nghĩa là gì?
+
+
+00:00:09,900 --> 00:00:12,270
+Well, imagine the following scenario.
+Vâng, hãy tưởng tượng tình huống sau đây.
+
+
+00:00:12,300 --> 00:00:16,260
+You're in a meeting presenting the architecture you have designed for the system.
+Bạn đang trong một cuộc họp trình bày về kiến trúc bạn đã thiết kế cho hệ thống.
+
+
+00:00:16,260 --> 00:00:22,200
+Suddenly, one of the attendees raises his hand and he has a question which goes something along these
+Đột nhiên, một trong những người tham dự giơ tay và anh ấy có một câu hỏi liên quan đến 7 câu hỏi này
+
+
+00:00:22,200 --> 00:00:22,810
+lines.
+dòng.
+
+
+00:00:22,830 --> 00:00:25,620
+I think the stateless pattern is useless here.
+Tôi nghĩ mô hình không trạng thái là vô dụng ở đây.
+
+
+00:00:25,620 --> 00:00:29,750
+It will hurt the performance and will make the code much more complex.
+Nó sẽ làm giảm hiệu suất và làm cho mã phức tạp hơn nhiều.
+
+
+00:00:29,760 --> 00:00:31,980
+We should go for stateful here.
+Chúng ta nên sử dụng trạng thái ở đây.
+
+
+00:00:32,009 --> 00:00:34,170
+Now you know he is not right.
+Bây giờ bạn biết anh ấy không đúng.
+
+
+00:00:34,170 --> 00:00:40,380
+You know that stateless is the best way to go here since the system is going to face a heavy load and
+Bạn biết rằng không có trạng thái là cách tốt nhất để thực hiện ở đây vì hệ thống sẽ phải đối mặt với tải trọng lớn và
+
+
+00:00:40,380 --> 00:00:42,600
+since the uptime requirement is quite high.
+vì yêu cầu thời gian hoạt động khá cao.
+
+
+00:00:42,630 --> 00:00:46,590
+Stateless is a natural choice here, But how should you respond?
+Không quốc tịch là một lựa chọn tự nhiên ở đây, nhưng bạn nên phản ứng thế nào?
+
+
+00:00:46,710 --> 00:00:50,450
+The first instinct is to say something like, well, you're wrong.
+Bản năng đầu tiên là nói điều gì đó như, ừ, bạn sai rồi.
+
+
+00:00:50,460 --> 00:00:53,170
+Stateless is the best way because this and that.
+Vô quốc tịch là cách tốt nhất vì thế này thế kia.
+
+
+00:00:53,190 --> 00:00:55,590
+After all, you are right here, aren't you?
+Rốt cuộc, anh đang ở đây, đúng không?
+
+
+00:00:55,620 --> 00:00:57,840
+But let's think about it a little more.
+Nhưng chúng ta hãy suy nghĩ thêm một chút.
+
+
+00:00:57,870 --> 00:01:00,970
+There is one important thing we should never forget.
+Có một điều quan trọng mà chúng ta không bao giờ được quên.
+
+
+00:01:01,000 --> 00:01:02,950
+What is the goal of this meeting?
+Mục đích của cuộc họp này là gì?
+
+
+00:01:02,950 --> 00:01:04,430
+What do we want to achieve?
+Chúng ta muốn đạt được điều gì?
+
+
+00:01:04,450 --> 00:01:07,030
+Well, in this case, the answer is easy.
+Vâng, trong trường hợp này, câu trả lời thật dễ dàng.
+
+
+00:01:07,060 --> 00:01:09,760
+We want to get approval for the architecture.
+Chúng tôi muốn nhận được sự chấp thuận cho kiến trúc.
+
+
+00:01:09,790 --> 00:01:11,320
+Okay, Now let's see.
+Được rồi, bây giờ chúng ta hãy xem.
+
+
+00:01:11,350 --> 00:01:14,110
+Who is the guy that asked the question?
+Người đặt câu hỏi là ai?
+
+
+00:01:14,620 --> 00:01:15,880
+He is the CTO.
+Ông là giám đốc công nghệ.
+
+
+00:01:15,910 --> 00:01:19,020
+He is the one that his approval you need the most.
+Anh ấy là người mà bạn cần sự chấp thuận nhất.
+
+
+00:01:19,030 --> 00:01:25,480
+So now the question you need to ask yourself is this what kind of response will help me get the approval?
+Vậy bây giờ câu hỏi bạn cần tự hỏi mình là loại phản hồi nào sẽ giúp tôi nhận được sự chấp thuận?
+
+
+00:01:25,510 --> 00:01:28,660
+Do I need to show him that I'm right and smarter than him?
+Tôi có cần phải chứng minh cho anh ấy thấy rằng tôi đúng và thông minh hơn anh ấy không?
+
+
+00:01:28,660 --> 00:01:30,560
+Will that help me achieve my goal?
+Liệu điều đó có giúp tôi đạt được mục tiêu của mình không?
+
+
+00:01:30,580 --> 00:01:33,030
+Or perhaps I should take a different approach.
+Hoặc có lẽ tôi nên áp dụng một cách tiếp cận khác.
+
+
+00:01:33,040 --> 00:01:36,430
+Let's see if you will tell the CTO that he is wrong.
+Hãy xem liệu bạn có nói với CTO rằng ông ấy sai không.
+
+
+00:01:36,430 --> 00:01:39,370
+You are risking creating an antagonism towards you.
+Bạn đang có nguy cơ tạo ra sự thù địch với bạn.
+
+
+00:01:39,400 --> 00:01:40,800
+You don't want that.
+Bạn không muốn điều đó.
+
+
+00:01:40,810 --> 00:01:45,520
+If you will do that, you will probably be right, but hurt your chances of achieving the goal of the
+Nếu bạn làm như vậy, có lẽ bạn sẽ đúng, nhưng sẽ làm giảm cơ hội đạt được mục tiêu
+
+
+00:01:45,520 --> 00:01:46,090
+meeting.
+cuộc họp.
+
+
+00:01:46,090 --> 00:01:50,410
+So what you really need to do here is being smart instead of right.
+Vì vậy, điều bạn thực sự cần làm ở đây là phải thông minh thay vì đúng đắn.
+
+
+00:01:50,590 --> 00:01:56,020
+And being smart means doing the thing that will help you achieve your goal instead of doing the thing
+Và thông minh có nghĩa là làm những việc giúp bạn đạt được mục tiêu thay vì làm những việc
+
+
+00:01:56,020 --> 00:01:57,580
+that will make you feel right.
+điều đó sẽ làm bạn cảm thấy đúng.
+
+
+00:01:57,580 --> 00:01:59,430
+And what is a smart response?
+Và phản ứng thông minh là gì?
+
+
+00:01:59,440 --> 00:02:02,140
+Well, I would suggest something like that.
+Vâng, tôi sẽ đề xuất một cái gì đó như thế.
+
+
+00:02:02,170 --> 00:02:03,870
+Yep, that's a great point.
+Vâng, đó là một điểm tuyệt vời.
+
+
+00:02:03,880 --> 00:02:09,100
+We actually had a lot of thinking about this specific issue and we believe this is the better option.
+Chúng tôi thực sự đã suy nghĩ rất nhiều về vấn đề cụ thể này và chúng tôi tin rằng đây là lựa chọn tốt hơn.
+
+
+00:02:09,100 --> 00:02:11,910
+Let's have an offline chat and discuss it in length.
+Chúng ta hãy trò chuyện ngoại tuyến và thảo luận sâu hơn nhé.
+
+
+00:02:11,920 --> 00:02:14,130
+Now, look what you did here.
+Bây giờ, hãy xem bạn đã làm gì ở đây.
+
+
+00:02:14,140 --> 00:02:20,410
+First, you gave the CTO a lot of respect by telling him that this is a great point and that the decision
+Đầu tiên, bạn đã dành cho CTO rất nhiều sự tôn trọng bằng cách nói với ông ấy rằng đây là một quan điểm tuyệt vời và quyết định
+
+
+00:02:20,410 --> 00:02:21,370
+was not easy.
+không dễ dàng.
+
+
+00:02:21,400 --> 00:02:26,590
+You did not dismiss his question as nonsense and did not tell him he was wrong.
+Bạn không bác bỏ câu hỏi của anh ấy là vô nghĩa và không nói anh ấy sai.
+
+
+00:02:26,620 --> 00:02:30,130
+Second, you offered a private meeting to discuss the issue.
+Thứ hai, bạn đã đề nghị một cuộc họp riêng để thảo luận vấn đề này.
+
+
+00:02:30,130 --> 00:02:33,220
+Again, you show a lot of respect by offering that.
+Một lần nữa, bạn thể hiện sự tôn trọng rất lớn khi đưa ra lời đề nghị đó.
+
+
+00:02:33,220 --> 00:02:38,860
+Third and most important, you avoided a long, boring, tiresome technical discussion in the middle
+Thứ ba và quan trọng nhất, bạn đã tránh được một cuộc thảo luận kỹ thuật dài dòng, nhàm chán, mệt mỏi ở giữa
+
+
+00:02:38,860 --> 00:02:41,640
+of the meeting by suggesting you take this offline.
+của cuộc họp bằng cách đề xuất bạn đưa cuộc họp này ra ngoại tuyến.
+
+
+00:02:41,650 --> 00:02:44,110
+You don't need to deep dive into it right now.
+Bạn không cần phải đi sâu vào vấn đề này ngay bây giờ.
+
+
+00:02:44,110 --> 00:02:45,460
+In the middle of the meeting.
+Giữa cuộc họp.
+
+
+00:02:45,700 --> 00:02:51,340
+By the way, my experience shows that most of the managers will be happy that you offered them the meeting,
+Nhân tiện, kinh nghiệm của tôi cho thấy hầu hết các nhà quản lý sẽ vui mừng khi bạn mời họ họp,
+
+
+00:02:51,340 --> 00:02:53,020
+but it won'trillioneally take place.
+nhưng nó sẽ không xảy ra hàng nghìn tỷ lần.
+
+
+00:02:53,020 --> 00:02:54,700
+They are too busy for that.
+Họ quá bận rộn cho việc đó.
+
+
+00:02:54,700 --> 00:02:56,650
+And now look what you've got.
+Và bây giờ hãy xem bạn có gì.
+
+
+00:02:56,650 --> 00:03:03,040
+Instead of a CTO who is mightily offended by you telling him he was wrong and by you explaining in length
+Thay vì một CTO vô cùng khó chịu khi bạn nói với anh ta rằng anh ta sai và khi bạn giải thích dài dòng
+
+
+00:03:03,040 --> 00:03:08,980
+why he was wrong, You now have a CTO that feels you respect him and his viewpoint and does not feel
+tại sao anh ấy sai, Bây giờ bạn có một CTO cảm thấy bạn tôn trọng anh ấy và quan điểm của anh ấy và không cảm thấy
+
+
+00:03:08,980 --> 00:03:10,000
+dismissed by you.
+bị bạn sa thải.
+
+
+00:03:10,030 --> 00:03:13,210
+Which CTO is more probable to approve your architecture?
+CTO nào có nhiều khả năng chấp thuận kiến trúc của bạn hơn?
+
+
+00:03:13,240 --> 00:03:15,190
+You guessed it the second one.
+Bạn đoán đúng rồi đấy, câu thứ hai.
+
+
+00:03:15,190 --> 00:03:20,260
+And all this just because you did the smart thing and not the one that made you feel right.
+Và tất cả những điều này chỉ vì bạn đã làm điều thông minh chứ không phải điều khiến bạn cảm thấy đúng.
+
+
+00:03:20,260 --> 00:03:23,980
+So always keep in mind, be smart, not right.
+Vì vậy, hãy luôn ghi nhớ, hãy thông minh, chứ đừng đúng đắn.
+
+

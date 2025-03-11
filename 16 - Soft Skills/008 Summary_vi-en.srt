@@ -1,0 +1,45 @@
+00:00:00,440 --> 00:00:04,610
+In this section, we discussed soft skills every architect must have.
+Trong phần này, chúng tôi thảo luận về các kỹ năng mềm mà mọi kiến trúc sư phải có.
+
+
+00:00:04,640 --> 00:00:10,160
+This is not an exclusive list, and there are some skills you might want to explore, but these are
+Đây không phải là danh sách độc quyền và có một số kỹ năng bạn có thể muốn khám phá, nhưng đây là
+
+
+00:00:10,160 --> 00:00:11,660
+the most important ones.
+những cái quan trọng nhất.
+
+
+00:00:11,870 --> 00:00:16,720
+Always remember at the end of the day, you are not working with computers and bits and bytes.
+Hãy luôn nhớ rằng vào cuối ngày, bạn không làm việc với máy tính và bit và byte.
+
+
+00:00:16,730 --> 00:00:22,550
+You are working with people and you must be able to work with people because it doesn't matter how good
+Bạn đang làm việc với mọi người và bạn phải có khả năng làm việc với mọi người vì không quan trọng họ giỏi đến mức nào.
+
+
+00:00:22,550 --> 00:00:24,410
+you are with computers and PowerPoint.
+bạn đang sử dụng máy tính và PowerPoint.
+
+
+00:00:24,410 --> 00:00:27,490
+If you suck with people, you don't stand a chance.
+Nếu bạn tệ với mọi người, bạn sẽ không có cơ hội nào.
+
+
+00:00:27,500 --> 00:00:33,590
+So embrace these skills, practice them and I'm sure you will see how they improve your work and make
+Vì vậy, hãy nắm bắt những kỹ năng này, thực hành chúng và tôi chắc chắn bạn sẽ thấy chúng cải thiện công việc của bạn như thế nào và tạo ra
+
+
+00:00:33,590 --> 00:00:35,840
+you a better, more successful architect.
+bạn là một kiến trúc sư giỏi hơn và thành công hơn.
+
+

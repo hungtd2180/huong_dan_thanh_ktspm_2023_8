@@ -1,0 +1,125 @@
+00:00:00,290 --> 00:00:04,280
+Modularity is one of the more important quality attributes out there.
+Tính mô-đun là một trong những thuộc tính chất lượng quan trọng nhất hiện nay.
+
+
+00:00:04,310 --> 00:00:07,760
+Making your application modular will really help you along the road.
+Việc biến ứng dụng của bạn thành dạng mô-đun thực sự sẽ giúp ích cho bạn trong quá trình này.
+
+
+00:00:07,790 --> 00:00:13,280
+It will minimize the effort needed to maintain the application and make it much more flexible for changes.
+Nó sẽ giảm thiểu công sức cần thiết để duy trì ứng dụng và làm cho ứng dụng linh hoạt hơn nhiều khi thay đổi.
+
+
+00:00:13,400 --> 00:00:16,100
+So what exactly is a modular system?
+Vậy hệ thống mô-đun chính xác là gì?
+
+
+00:00:16,219 --> 00:00:22,130
+Simply speaking, a modular system is a system that is built from small, well-defined building blocks
+Nói một cách đơn giản, hệ thống mô-đun là hệ thống được xây dựng từ các khối xây dựng nhỏ, được xác định rõ ràng
+
+
+00:00:22,130 --> 00:00:25,700
+that can be changed or replaced without affecting the whole system.
+có thể thay đổi hoặc thay thế mà không ảnh hưởng đến toàn bộ hệ thống.
+
+
+00:00:25,790 --> 00:00:31,610
+For example, let's look at a system that gets data from an API of another system and saves this data
+Ví dụ, hãy xem một hệ thống lấy dữ liệu từ API của một hệ thống khác và lưu dữ liệu này
+
+
+00:00:31,610 --> 00:00:32,630
+in the database.
+trong cơ sở dữ liệu.
+
+
+00:00:32,720 --> 00:00:38,360
+In a non modular system, both the functionalities of the system getting the data and saving it in the
+Trong một hệ thống không theo mô-đun, cả hai chức năng của hệ thống lấy dữ liệu và lưu trữ dữ liệu trong
+
+
+00:00:38,360 --> 00:00:41,060
+database are performed in a single component.
+cơ sở dữ liệu được thực hiện trong một thành phần duy nhất.
+
+
+00:00:41,090 --> 00:00:44,630
+This is an easier choice, but also the worst one.
+Đây là lựa chọn dễ dàng hơn nhưng cũng là lựa chọn tệ nhất.
+
+
+00:00:44,660 --> 00:00:49,670
+Let's assume the external system is replaced by a new system as a result of this replacement.
+Giả sử hệ thống bên ngoài được thay thế bằng một hệ thống mới sau sự thay thế này.
+
+
+00:00:49,670 --> 00:00:56,390
+The API is now different and the application code that accesses it should be rewritten in a non modular
+API hiện đã khác và mã ứng dụng truy cập vào nó phải được viết lại theo dạng không mô-đun
+
+
+00:00:56,390 --> 00:00:56,760
+system.
+hệ thống.
+
+
+00:00:56,780 --> 00:01:02,340
+This change affects the whole application since the application is composed of only a single component.
+Thay đổi này ảnh hưởng đến toàn bộ ứng dụng vì ứng dụng chỉ bao gồm một thành phần duy nhất.
+
+
+00:01:02,370 --> 00:01:05,900
+We now need to test all of it and deploy it all over again.
+Bây giờ chúng ta cần phải kiểm tra tất cả và triển khai lại tất cả.
+
+
+00:01:05,910 --> 00:01:11,250
+We have to think of this small change as if it means we are deploying the system for the first time.
+Chúng ta phải nghĩ về sự thay đổi nhỏ này như thể nó có nghĩa là chúng ta đang triển khai hệ thống lần đầu tiên.
+
+
+00:01:11,250 --> 00:01:12,390
+We don't have a choice.
+Chúng ta không có sự lựa chọn.
+
+
+00:01:12,390 --> 00:01:14,310
+All of the application is affected.
+Tất cả các ứng dụng đều bị ảnh hưởng.
+
+
+00:01:14,340 --> 00:01:20,490
+On the other hand, if the application is modular, the code that accesses the API is encapsulated in
+Mặt khác, nếu ứng dụng là mô-đun, mã truy cập API được đóng gói trong
+
+
+00:01:20,490 --> 00:01:22,200
+a small independent component.
+một thành phần độc lập nhỏ.
+
+
+00:01:22,350 --> 00:01:27,570
+If the API on the other system is changed, only this specific component should be changed, leaving
+Nếu API trên hệ thống khác bị thay đổi, chỉ thành phần cụ thể này mới được thay đổi, để lại
+
+
+00:01:27,570 --> 00:01:29,250
+the rest of the system intact.
+phần còn lại của hệ thống còn nguyên vẹn.
+
+
+00:01:29,850 --> 00:01:35,490
+As you can see, this results in a much more flexible and maintainable system that allows for short
+Như bạn có thể thấy, điều này tạo ra một hệ thống linh hoạt và dễ bảo trì hơn nhiều, cho phép 25 phút
+
+
+00:01:35,490 --> 00:01:39,900
+deployment cycles and saves a lot of time when adding or updating components.
+chu kỳ triển khai và tiết kiệm rất nhiều thời gian khi thêm hoặc cập nhật các thành phần.
+
+

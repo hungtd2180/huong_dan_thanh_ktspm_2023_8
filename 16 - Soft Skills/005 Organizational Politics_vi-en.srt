@@ -1,0 +1,160 @@
+00:00:00,170 --> 00:00:02,380
+So here are the bad news.
+Vậy đây là tin xấu.
+
+
+00:00:02,390 --> 00:00:05,400
+You have to be familiar with the organizational politics.
+Bạn phải quen thuộc với chính trị tổ chức.
+
+
+00:00:05,420 --> 00:00:10,310
+Yes, we all want to deal only with architectural patterns, technology stacks and so on.
+Đúng vậy, tất cả chúng ta đều chỉ muốn giải quyết các mô hình kiến trúc, công nghệ, v.v.
+
+
+00:00:10,310 --> 00:00:16,100
+But many times in order to be a real successful architect and in order to leave a mark, you will have
+Nhưng nhiều khi để trở thành một kiến trúc sư thực sự thành công và để lại dấu ấn, bạn sẽ phải có
+
+
+00:00:16,100 --> 00:00:20,450
+to be well aware of the organizational politics instead of lengthy explanations.
+để hiểu rõ về chính trị tổ chức thay vì những lời giải thích dài dòng.
+
+
+00:00:20,450 --> 00:00:22,820
+Let's go straight to an actual example.
+Chúng ta hãy đi thẳng vào một ví dụ thực tế.
+
+
+00:00:23,120 --> 00:00:29,330
+In one of the clients I worked for, there was a CIO who just couldn't stand the idea of microservices.
+Trong một trong những khách hàng tôi từng làm việc, có một CIO không thể chịu nổi ý tưởng về dịch vụ vi mô.
+
+
+00:00:29,330 --> 00:00:35,810
+He was genuinely terrified by this concept and claimed it's a new, untested and immature pattern that
+Ông thực sự sợ hãi khái niệm này và tuyên bố rằng đó là một mô hình mới, chưa được kiểm chứng và chưa trưởng thành.
+
+
+00:00:35,810 --> 00:00:40,790
+will disappear over time and we will all go back to the good old three tier applications in the near
+sẽ biến mất theo thời gian và tất cả chúng ta sẽ quay lại với các ứng dụng ba tầng cũ tốt trong gần 10 năm nữa
+
+
+00:00:40,790 --> 00:00:41,510
+future.
+tương lai.
+
+
+00:00:41,600 --> 00:00:47,870
+I obviously couldn't disagree more, but no matter what I told him which case study, I've let him read
+Rõ ràng là tôi không thể không đồng ý hơn, nhưng bất kể tôi nói với anh ấy về nghiên cứu trường hợp nào, tôi đã để anh ấy đọc
+
+
+00:00:47,870 --> 00:00:49,610
+which articles I presented him.
+những bài viết tôi đã trình bày cho anh ấy.
+
+
+00:00:49,610 --> 00:00:51,710
+He wouldn't move and stayed fixed.
+Anh ấy không di chuyển và đứng im.
+
+
+00:00:51,710 --> 00:00:55,610
+In his opinion, which is no microservices is our organization.
+Theo ý kiến của ông, đó không phải là dịch vụ siêu nhỏ trong tổ chức của chúng tôi.
+
+
+00:00:55,610 --> 00:01:01,310
+So I had some casual discussions with some other managers in the organization and found something interesting.
+Vì vậy, tôi đã có một số cuộc thảo luận thông thường với một số nhà quản lý khác trong tổ chức và phát hiện ra một điều thú vị.
+
+
+00:01:01,320 --> 00:01:07,500
+The CIO was going to be replaced in about two months by another manager who is currently a project manager.
+CIO sẽ được thay thế trong khoảng hai tháng nữa bởi một người quản lý khác hiện đang là quản lý dự án.
+
+
+00:01:07,500 --> 00:01:09,840
+So what did I do with this information?
+Vậy tôi đã làm gì với thông tin này?
+
+
+00:01:09,840 --> 00:01:10,920
+Quite simple.
+Khá đơn giản.
+
+
+00:01:10,950 --> 00:01:13,530
+I became friends with this project manager.
+Tôi đã kết bạn với người quản lý dự án này.
+
+
+00:01:13,530 --> 00:01:18,000
+We had some very friendly discussions, found some common grounds between us.
+Chúng tôi đã có một số cuộc thảo luận rất thân thiện, tìm thấy một số điểm chung giữa chúng tôi.
+
+
+00:01:18,030 --> 00:01:22,740
+It turned out we went to high schools in the same city and overall had a good time.
+Hóa ra chúng tôi học chung trường trung học ở cùng thành phố và nhìn chung đã có khoảng thời gian vui vẻ.
+
+
+00:01:22,740 --> 00:01:27,840
+After a while our discussions became more professional and we began discussing his future job.
+Sau một thời gian, cuộc thảo luận của chúng tôi trở nên chuyên nghiệp hơn và chúng tôi bắt đầu thảo luận về công việc tương lai của anh ấy.
+
+
+00:01:27,840 --> 00:01:33,900
+I then let him know about the microservices pattern and assured him it's a good, effective and tested
+Sau đó, tôi cho anh ấy biết về mô hình dịch vụ vi mô và đảm bảo với anh ấy rằng đó là một mô hình tốt, hiệu quả và đã được thử nghiệm
+
+
+00:01:33,900 --> 00:01:34,590
+pattern.
+mẫu.
+
+
+00:01:34,590 --> 00:01:40,590
+It didn't take more than three such discussions and he became a fan of the microservices pattern.
+Chỉ cần ba cuộc thảo luận như vậy là anh ấy đã trở thành người hâm mộ mô hình dịch vụ vi mô.
+
+
+00:01:40,590 --> 00:01:45,360
+And what do you think was the first decision he made right after sitting in the CEO's chair?
+Và bạn nghĩ quyết định đầu tiên mà ông ấy đưa ra ngay sau khi ngồi vào ghế CEO là gì?
+
+
+00:01:45,390 --> 00:01:50,790
+Of course, approving the microservices pattern for the specific project I've worked on.
+Tất nhiên là chấp thuận mô hình dịch vụ vi mô cho dự án cụ thể mà tôi đã làm việc.
+
+
+00:01:50,790 --> 00:01:57,810
+So as you can see, being aware of organizational politics can be quite helpful, but you have to,
+Vì vậy, như bạn có thể thấy, việc nhận thức được chính trị tổ chức có thể khá hữu ích, nhưng bạn phải,
+
+
+00:01:57,810 --> 00:02:01,020
+at all costs, not be part of the politics.
+bằng mọi giá, đừng tham gia vào chính trị.
+
+
+00:02:01,020 --> 00:02:02,490
+You should know what's going on.
+Bạn nên biết chuyện gì đang xảy ra.
+
+
+00:02:02,520 --> 00:02:08,400
+You should be familiar with the relevant people, but never ever engage yourself in political moves.
+Bạn nên quen biết với những người có liên quan, nhưng đừng bao giờ tham gia vào các hoạt động chính trị.
+
+
+00:02:08,400 --> 00:02:14,400
+It may give you some short term leverage, but in the long term it will hurt you and hurt you badly.
+Nó có thể mang lại cho bạn một số lợi thế trong ngắn hạn, nhưng về lâu dài nó sẽ gây tổn hại cho bạn, thậm chí là tổn hại rất nặng nề.
+
+

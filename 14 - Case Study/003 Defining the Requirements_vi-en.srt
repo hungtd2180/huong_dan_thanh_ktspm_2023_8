@@ -1,0 +1,740 @@
+00:00:00,580 --> 00:00:05,860
+So as you probably guessed, the first thing you should do as an architect is to define the requirements.
+Vì vậy, như bạn có thể đoán, điều đầu tiên bạn nên làm với tư cách là một kiến trúc sư là xác định các yêu cầu.
+
+
+00:00:05,890 --> 00:00:11,080
+These requirements are very important for your work, and they dictate what the architecture will look
+Những yêu cầu này rất quan trọng đối với công việc của bạn và chúng quyết định kiến trúc sẽ trông như thế nào
+
+
+00:00:11,080 --> 00:00:11,620
+like.
+giống như.
+
+
+00:00:11,710 --> 00:00:13,600
+Okay, so let's do that.
+Được rồi, chúng ta hãy làm điều đó.
+
+
+00:00:13,630 --> 00:00:16,700
+You probably remember there are two types of requirements.
+Bạn có thể nhớ rằng có hai loại yêu cầu.
+
+
+00:00:16,720 --> 00:00:20,320
+Functional requirements and non-functional requirements.
+Yêu cầu chức năng và yêu cầu phi chức năng.
+
+
+00:00:20,680 --> 00:00:26,290
+The functional requirements state what the system should do while the non-functional requirements define
+Các yêu cầu chức năng nêu rõ hệ thống nên làm gì trong khi các yêu cầu phi chức năng xác định
+
+
+00:00:26,290 --> 00:00:28,270
+what the system should deal with.
+hệ thống cần xử lý những gì.
+
+
+00:00:28,450 --> 00:00:30,880
+Now, the functional requirements are well defined.
+Bây giờ, các yêu cầu chức năng đã được xác định rõ ràng.
+
+
+00:00:30,880 --> 00:00:36,100
+In this case, it looks like the system analysts did a good job and it's quite clear what the system
+Trong trường hợp này, có vẻ như các nhà phân tích hệ thống đã làm tốt công việc của mình và khá rõ ràng về hệ thống
+
+
+00:00:36,100 --> 00:00:36,800
+should do.
+nên làm.
+
+
+00:00:36,850 --> 00:00:40,510
+Let's summarize the functional requirements in a short bulleted list.
+Chúng ta hãy tóm tắt các yêu cầu chức năng trong một danh sách ngắn có dấu đầu dòng.
+
+
+00:00:40,540 --> 00:00:49,630
+One Receive status updates from Iot devices to store these updates for future use, and three, allow
+Một Nhận cập nhật trạng thái từ các thiết bị IoT để lưu trữ các cập nhật này để sử dụng trong tương lai và ba, cho phép
+
+
+00:00:49,630 --> 00:00:53,710
+end users to query the updates and present them with relevant information.
+người dùng cuối truy vấn các bản cập nhật và cung cấp cho họ thông tin có liên quan.
+
+
+00:00:54,490 --> 00:00:56,020
+So far, so good.
+Cho đến nay, mọi thứ vẫn tốt.
+
+
+00:00:56,050 --> 00:01:00,140
+Now let's go to the more interesting part the non-functional requirements.
+Bây giờ chúng ta hãy chuyển sang phần thú vị hơn, các yêu cầu phi chức năng.
+
+
+00:01:00,770 --> 00:01:06,260
+Now, before we continue, I would like you to take a moment and think what are the relevant, non-functional
+Bây giờ, trước khi chúng ta tiếp tục, tôi muốn bạn dành một chút thời gian và suy nghĩ xem những điều nào có liên quan, không có chức năng
+
+
+00:01:06,260 --> 00:01:07,680
+requirements for this system?
+yêu cầu cho hệ thống này?
+
+
+00:01:07,700 --> 00:01:11,930
+What we must know as architects that can influence the architecture.
+Những điều chúng ta cần biết với tư cách là kiến trúc sư có thể ảnh hưởng đến kiến trúc.
+
+
+00:01:12,140 --> 00:01:14,750
+So I'll give you a few seconds to think about it.
+Vì vậy, tôi sẽ cho bạn vài giây để suy nghĩ về điều đó.
+
+
+00:01:14,780 --> 00:01:19,850
+I'll even put some relaxing music for you, and I want you to write down the questions you need to ask
+Tôi thậm chí sẽ bật một số bản nhạc thư giãn cho bạn và tôi muốn bạn viết ra những câu hỏi bạn cần hỏi
+
+
+00:01:19,850 --> 00:01:23,060
+the customer in order to figure out the non-functional requirements.
+khách hàng để tìm ra các yêu cầu không chức năng.
+
+
+00:01:23,180 --> 00:01:27,100
+Feel free to pause the lecture and take as much time as you need.
+Bạn có thể thoải mái tạm dừng bài giảng và dành nhiều thời gian tùy ý.
+
+
+00:01:27,110 --> 00:01:30,320
+Write down the questions and then hit resume.
+Viết ra các câu hỏi và sau đó nhấn tiếp tục.
+
+
+00:01:42,160 --> 00:01:43,080
+Okay, great.
+Được rồi, tuyệt vời.
+
+
+00:01:43,090 --> 00:01:44,140
+Welcome back.
+Chào mừng trở lại.
+
+
+00:01:44,290 --> 00:01:47,130
+So what are the questions we need to ask the customer?
+Vậy chúng ta cần hỏi khách hàng những câu hỏi gì?
+
+
+00:01:47,140 --> 00:01:53,440
+Well, here they are, first and foremost, since the system is going to receive messages from an Iot
+Vâng, đây là chúng, trước hết và quan trọng nhất, vì hệ thống sẽ nhận được tin nhắn từ Iot
+
+
+00:01:53,440 --> 00:01:57,760
+devices, we should expect there will be a lot of messages.
+thiết bị, chúng ta nên mong đợi sẽ có rất nhiều tin nhắn.
+
+
+00:01:57,910 --> 00:02:03,460
+Now, the number of messages has great effect on the system design, and it will help us know these
+Bây giờ, số lượng tin nhắn có tác động lớn đến thiết kế hệ thống và nó sẽ giúp chúng ta biết
+
+
+00:02:03,460 --> 00:02:05,440
+crucial non-functional factors.
+các yếu tố không chức năng quan trọng.
+
+
+00:02:06,490 --> 00:02:07,280
+The load.
+Tải trọng.
+
+
+00:02:07,300 --> 00:02:09,729
+How many concurrent messages we should expect?
+Chúng ta có thể mong đợi bao nhiêu tin nhắn đồng thời?
+
+
+00:02:09,940 --> 00:02:11,220
+Data volume.
+Khối lượng dữ liệu.
+
+
+00:02:11,230 --> 00:02:14,680
+How many messages should be stored in the system's data store.
+Có bao nhiêu tin nhắn nên được lưu trữ trong kho dữ liệu của hệ thống.
+
+
+00:02:15,070 --> 00:02:18,910
+These factors are translated into two questions we need to ask.
+Những yếu tố này được chuyển thành hai câu hỏi mà chúng ta cần phải hỏi.
+
+
+00:02:18,970 --> 00:02:23,950
+First, how many concurrent messages should the system expect in peak time?
+Đầu tiên, hệ thống nên mong đợi có bao nhiêu tin nhắn đồng thời trong thời gian cao điểm?
+
+
+00:02:24,040 --> 00:02:28,950
+And second, what is the total number of expected messages per month?
+Và thứ hai, tổng số tin nhắn dự kiến mỗi tháng là bao nhiêu?
+
+
+00:02:29,020 --> 00:02:35,290
+In addition to make our calculations more accurate, we should also ask what is the average size of
+Ngoài việc làm cho các phép tính của chúng ta chính xác hơn, chúng ta cũng nên hỏi kích thước trung bình của 40 là bao nhiêu
+
+
+00:02:35,290 --> 00:02:36,050
+a message?
+một tin nhắn?
+
+
+00:02:36,070 --> 00:02:40,690
+Now we can assume the client will need some time to figure out the answer to these questions.
+Bây giờ chúng ta có thể cho rằng khách hàng sẽ cần một khoảng thời gian để tìm ra câu trả lời cho những câu hỏi này.
+
+
+00:02:40,690 --> 00:02:47,710
+So let's skip a few days forward and then we will get a response, which is this Max Concurrent messages,
+Vậy hãy bỏ qua một vài ngày và sau đó chúng ta sẽ nhận được phản hồi, đó là Max Concurrent messages,
+
+
+00:02:47,740 --> 00:02:52,750
+500 total number of messages per month, 15 million.
+Tổng số tin nhắn là 500 tin nhắn mỗi tháng, 15 triệu.
+
+
+00:02:53,500 --> 00:02:56,560
+Average message size 300 bytes.
+Kích thước tin nhắn trung bình 300 byte.
+
+
+00:02:57,040 --> 00:02:58,120
+Okay, great.
+Được rồi, tuyệt vời.
+
+
+00:02:58,150 --> 00:03:00,220
+Now we have something to work with.
+Bây giờ chúng ta có thứ gì đó để làm việc.
+
+
+00:03:00,490 --> 00:03:02,830
+Let's open a calculator and do some math.
+Chúng ta hãy mở máy tính và tính toán nhé.
+
+
+00:03:03,730 --> 00:03:11,320
+15 million messages per month with average size of 300 bytes per message gives us roughly 4500MB per
+15 triệu tin nhắn mỗi tháng với kích thước trung bình là 300 byte cho mỗi tin nhắn cung cấp cho chúng tôi khoảng 4500MB cho mỗi
+
+
+00:03:11,320 --> 00:03:11,890
+month.
+tháng.
+
+
+00:03:11,920 --> 00:03:18,070
+Let's multiply this by 12 to get the yearly number and we are looking at 54GB per year.
+Hãy nhân con số này với 12 để có được con số hàng năm và chúng ta sẽ thấy 54GB mỗi năm.
+
+
+00:03:18,100 --> 00:03:25,240
+This is good since 54GB in today's storage is not a lot and almost every database can handle it easily.
+Điều này rất tốt vì dung lượng lưu trữ 54GB hiện nay không phải là nhiều và hầu như mọi cơ sở dữ liệu đều có thể xử lý dễ dàng.
+
+
+00:03:25,600 --> 00:03:32,140
+And by that we calculating the data volume non-functional requirements, which is 54GB annually.
+Và bằng cách đó chúng tôi tính toán khối lượng dữ liệu không đáp ứng yêu cầu chức năng, là 54GB mỗi năm.
+
+
+00:03:32,260 --> 00:03:39,550
+Now note that I assume the retention policy here is infinite, meaning data is never archived or deleted
+Bây giờ lưu ý rằng tôi cho rằng chính sách lưu giữ ở đây là vô hạn, nghĩa là dữ liệu không bao giờ được lưu trữ hoặc xóa
+
+
+00:03:39,550 --> 00:03:41,260
+in data intensive application.
+trong ứng dụng dữ liệu chuyên sâu.
+
+
+00:03:41,260 --> 00:03:44,560
+This is usually not the case and the data can expire.
+Thông thường thì không như vậy và dữ liệu có thể hết hạn.
+
+
+00:03:44,590 --> 00:03:46,990
+In our application this is not the case.
+Trong ứng dụng của chúng tôi thì không phải như vậy.
+
+
+00:03:47,170 --> 00:03:51,370
+So the data volume non-functional requirement looks like a non-issue.
+Vì vậy, yêu cầu không hoạt động về khối lượng dữ liệu có vẻ như không phải là vấn đề.
+
+
+00:03:51,670 --> 00:03:56,980
+The load, however, is a completely different story with 500 concurrent messages.
+Tuy nhiên, tải trọng lại là một câu chuyện hoàn toàn khác với 500 tin nhắn đồng thời.
+
+
+00:03:56,980 --> 00:03:58,900
+This is a quite busy system.
+Đây là một hệ thống khá bận rộn.
+
+
+00:03:58,900 --> 00:04:01,660
+We will have to find a way to cope with this number.
+Chúng ta sẽ phải tìm cách ứng phó với con số này.
+
+
+00:04:01,660 --> 00:04:05,450
+Since a regular web application will have a hard time under this load.
+Vì một ứng dụng web thông thường sẽ gặp khó khăn khi chịu tải này.
+
+
+00:04:05,480 --> 00:04:11,270
+Of course we can always scale out and add dozens of servers, but that's not always possible.
+Tất nhiên chúng ta luôn có thể mở rộng quy mô và thêm hàng chục máy chủ, nhưng điều đó không phải lúc nào cũng khả thi.
+
+
+00:04:11,270 --> 00:04:17,000
+We will prefer to design the system such that the software itself will be able to work properly under
+Chúng tôi sẽ ưu tiên thiết kế hệ thống sao cho phần mềm có thể hoạt động bình thường trong
+
+
+00:04:17,000 --> 00:04:17,870
+such a load.
+một gánh nặng như vậy.
+
+
+00:04:18,980 --> 00:04:24,080
+So the load non-functional requirement is set and it is 500 concurrent messages.
+Vì vậy, yêu cầu tải không chức năng được đặt và đó là 500 tin nhắn đồng thời.
+
+
+00:04:24,530 --> 00:04:25,640
+As we will see later.
+Như chúng ta sẽ thấy sau.
+
+
+00:04:25,640 --> 00:04:29,480
+The number is slightly higher, but we will leave it this way for now.
+Con số này cao hơn một chút, nhưng chúng ta sẽ tạm thời giữ nguyên như vậy.
+
+
+00:04:29,720 --> 00:04:35,810
+Okay, next next thing we need to know is how tolerant is the system for message loss?
+Được rồi, điều tiếp theo chúng ta cần biết là hệ thống có khả năng chịu đựng được tình trạng mất tin nhắn không?
+
+
+00:04:35,840 --> 00:04:41,720
+In other words, if not every message is received and some are lost due to network problems or other
+Nói cách khác, nếu không phải mọi tin nhắn đều được nhận và một số bị mất do sự cố mạng hoặc 70 lý do khác
+
+
+00:04:41,720 --> 00:04:43,700
+errors, is that a problem?
+lỗi, đó có phải là vấn đề không?
+
+
+00:04:44,030 --> 00:04:47,030
+Now, the first instinct is always to answer.
+Bây giờ, bản năng đầu tiên luôn là trả lời.
+
+
+00:04:47,030 --> 00:04:50,360
+Sure, we cannot lose any message, but let's think about it.
+Chắc chắn là chúng ta không thể mất bất kỳ tin nhắn nào, nhưng hãy cùng suy nghĩ về điều đó.
+
+
+00:04:50,360 --> 00:04:52,610
+This system receives status updates.
+Hệ thống này nhận được cập nhật trạng thái.
+
+
+00:04:52,640 --> 00:04:55,460
+Each device sends update every few seconds.
+Mỗi thiết bị gửi bản cập nhật sau mỗi vài giây.
+
+
+00:04:55,460 --> 00:04:57,950
+What really happens when a message is lost?
+Điều gì thực sự xảy ra khi một tin nhắn bị mất?
+
+
+00:04:57,980 --> 00:04:59,330
+Not much, actually.
+Thực ra thì không nhiều lắm.
+
+
+00:04:59,360 --> 00:05:04,610
+A few seconds later, another message will arrive with new update, which will anyway make the previous
+Vài giây sau, một tin nhắn khác sẽ đến với bản cập nhật mới, dù sao thì nó cũng sẽ làm cho 78 trước đó
+
+
+00:05:04,610 --> 00:05:05,690
+message obsolete.
+tin nhắn lỗi thời.
+
+
+00:05:05,690 --> 00:05:10,160
+So when thinking about it, the system is quite tolerant for messages loss.
+Vì vậy, khi nghĩ về nó, hệ thống khá khoan dung với việc mất tin nhắn.
+
+
+00:05:10,190 --> 00:05:11,330
+No harm is done.
+Không có hại gì cả.
+
+
+00:05:11,330 --> 00:05:15,140
+If a message is lost and chances are the user will not even feel that.
+Nếu một tin nhắn bị mất và rất có thể người dùng sẽ không cảm thấy điều đó.
+
+
+00:05:15,170 --> 00:05:20,600
+Now, of course, we are not talking here on a system wide catastrophe that drops all messages, but
+Bây giờ, tất nhiên, chúng ta không nói ở đây về một thảm họa toàn hệ thống làm mất tất cả các tin nhắn, nhưng
+
+
+00:05:20,600 --> 00:05:26,360
+on a rare cases that might result a single loss for every 1000 successfully received messages.
+trong một số trường hợp hiếm hoi có thể dẫn đến mất mát duy nhất cho mỗi 1000 tin nhắn nhận được thành công.
+
+
+00:05:26,720 --> 00:05:31,400
+So the message loss non-functional requirement can be defined as 99%.
+Vì vậy, yêu cầu không chức năng mất tin nhắn có thể được xác định là 99%.
+
+
+00:05:31,430 --> 00:05:38,380
+Note that in this kind of non-functional requirement, there is a huge difference between 100% and 99%.
+Lưu ý rằng trong loại yêu cầu không chức năng này, có một sự khác biệt rất lớn giữa 100% và 99%.
+
+
+00:05:38,390 --> 00:05:43,880
+It may look like a small difference, only a single digit, but it actually makes all the difference,
+Có thể trông giống như một sự khác biệt nhỏ, chỉ là một chữ số, nhưng thực ra nó tạo nên tất cả sự khác biệt,
+
+
+00:05:43,880 --> 00:05:45,170
+as we will see later.
+như chúng ta sẽ thấy sau.
+
+
+00:05:45,650 --> 00:05:46,310
+Okay.
+Được rồi.
+
+
+00:05:46,310 --> 00:05:54,470
+Next, the next question we need to ask is how many users will the system have and how many concurrent
+Tiếp theo, câu hỏi tiếp theo chúng ta cần hỏi là hệ thống sẽ có bao nhiêu người dùng và bao nhiêu người dùng đồng thời
+
+
+00:05:54,470 --> 00:05:56,000
+users should we expect?
+người dùng chúng ta nên mong đợi?
+
+
+00:05:56,030 --> 00:06:01,190
+These questions are similar to the first questions asked about the messages, and they serve the same
+Những câu hỏi này tương tự như những câu hỏi đầu tiên được hỏi về các thông điệp và chúng phục vụ cùng một mục đích
+
+
+00:06:01,190 --> 00:06:01,700
+purpose.
+mục đích.
+
+
+00:06:01,700 --> 00:06:05,330
+They help us assess the expected load and data volume of the system.
+Chúng giúp chúng tôi đánh giá tải trọng dự kiến và khối lượng dữ liệu của hệ thống.
+
+
+00:06:05,330 --> 00:06:10,970
+However, we can expect the numbers to be much lower than the number of the messages, since there are
+Tuy nhiên, chúng ta có thể mong đợi số lượng sẽ thấp hơn nhiều so với số lượng tin nhắn, vì có
+
+
+00:06:10,970 --> 00:06:16,970
+much more devices than users and the users do not query the system every few seconds, and the numbers
+nhiều thiết bị hơn nhiều so với người dùng và người dùng không truy vấn hệ thống sau mỗi vài giây và số lượng
+
+
+00:06:16,970 --> 00:06:19,400
+we get from the client reflect just that.
+chúng tôi nhận được từ khách hàng phản ánh chính xác điều đó.
+
+
+00:06:19,490 --> 00:06:25,700
+The client expects the system to have a total of 2 million users three years from now with no more than
+Khách hàng mong đợi hệ thống sẽ có tổng cộng 2 triệu người dùng sau ba năm nữa với không quá
+
+
+00:06:25,700 --> 00:06:27,320
+40 concurrent users.
+40 người dùng đồng thời.
+
+
+00:06:27,350 --> 00:06:31,130
+Now it's important to understand what concurrent users mean.
+Bây giờ điều quan trọng là phải hiểu người dùng đồng thời có nghĩa là gì.
+
+
+00:06:31,310 --> 00:06:37,580
+It does not mean how many users are currently using the system, but rather how many users are actively
+Nó không có nghĩa là có bao nhiêu người dùng hiện đang sử dụng hệ thống, mà là có bao nhiêu người dùng đang tích cực sử dụng hệ thống.
+
+
+00:06:37,580 --> 00:06:38,990
+accessing the server.
+truy cập vào máy chủ.
+
+
+00:06:39,170 --> 00:06:41,060
+This distinction is important.
+Sự phân biệt này rất quan trọng.
+
+
+00:06:41,060 --> 00:06:47,000
+When a user looks at the dashboard, he uses the system but does not access the server.
+Khi người dùng nhìn vào bảng điều khiển, họ sử dụng hệ thống nhưng không truy cập vào máy chủ.
+
+
+00:06:47,030 --> 00:06:53,270
+The dashboard is already on the user's screen so the server does nothing when calculating load.
+Bảng điều khiển đã có trên màn hình của người dùng nên máy chủ không làm gì khi tính toán tải.
+
+
+00:06:53,270 --> 00:06:59,780
+We are interested only in the actual work the server is doing, so we define concurrent users as a number
+Chúng tôi chỉ quan tâm đến công việc thực tế mà máy chủ đang thực hiện, vì vậy chúng tôi định nghĩa người dùng đồng thời là số
+
+
+00:06:59,780 --> 00:07:03,410
+of users that actually access the server on the same time.
+của những người dùng thực sự truy cập vào máy chủ cùng một lúc.
+
+
+00:07:04,280 --> 00:07:10,310
+And since most users won't just sit by their PC or phone and hammer the server in their free time,
+Và vì hầu hết người dùng sẽ không chỉ ngồi bên máy tính hoặc điện thoại và làm việc với máy chủ trong thời gian rảnh rỗi,
+
+
+00:07:10,310 --> 00:07:14,000
+we can comfortably assume quite a low number of concurrent users.
+chúng ta có thể thoải mái cho rằng số lượng người dùng đồng thời khá thấp.
+
+
+00:07:14,000 --> 00:07:20,330
+And that's the reason the concurrent user number is only 40, and that makes the load non-functional
+Và đó là lý do tại sao số lượng người dùng đồng thời chỉ là 40 và điều đó làm cho tải không hoạt động
+
+
+00:07:20,330 --> 00:07:22,670
+requirement to be 540.
+yêu cầu là 540.
+
+
+00:07:22,700 --> 00:07:26,810
+That's a 500 concurrent messages plus the 40 user's actions.
+Đó là 500 tin nhắn đồng thời cộng với 40 hành động của người dùng.
+
+
+00:07:27,260 --> 00:07:32,330
+The last question we need to ask is what is the SLA required for this system?
+Câu hỏi cuối cùng chúng ta cần hỏi là SLA cần thiết cho hệ thống này là gì?
+
+
+00:07:32,330 --> 00:07:37,390
+Or in other words, what is the maximum downtime allowed for this system?
+Hay nói cách khác, thời gian ngừng hoạt động tối đa được phép cho hệ thống này là bao nhiêu?
+
+
+00:07:37,400 --> 00:07:43,060
+Now, instinctively most clients will say that they expect 100% uptime.
+Bây giờ, theo bản năng, hầu hết khách hàng sẽ nói rằng họ mong đợi thời gian hoạt động 100%.
+
+
+00:07:43,070 --> 00:07:45,440
+Problem is, this is not possible.
+Vấn đề là điều này không thể thực hiện được.
+
+
+00:07:45,440 --> 00:07:52,670
+Even the largest, most sophisticated data centers in the world do not commit to 100% uptime crashes
+Ngay cả những trung tâm dữ liệu lớn nhất và tinh vi nhất trên thế giới cũng không cam kết thời gian hoạt động 100% khi xảy ra sự cố
+
+
+00:07:52,670 --> 00:07:55,730
+are part of the software world and we should accept that.
+là một phần của thế giới phần mềm và chúng ta nên chấp nhận điều đó.
+
+
+00:07:55,730 --> 00:07:58,250
+So we need to have a more realistic figure.
+Vì vậy chúng ta cần phải có một con số thực tế hơn.
+
+
+00:07:58,430 --> 00:08:03,230
+Now, it's also important to note that an SLA is comprised from not only software.
+Bây giờ, điều quan trọng cần lưu ý là SLA không chỉ bao gồm phần mềm.
+
+
+00:08:03,570 --> 00:08:09,270
+There are a lot of factors that affect it, such as hardware, network, database servers, virtualization
+Có rất nhiều yếu tố ảnh hưởng đến nó, chẳng hạn như phần cứng, mạng, máy chủ cơ sở dữ liệu, ảo hóa
+
+
+00:08:09,270 --> 00:08:10,470
+engines and more.
+động cơ và nhiều hơn nữa.
+
+
+00:08:10,500 --> 00:08:15,930
+Usually you, the architect, will have no control over these factors and you have to clarify this to
+Thông thường, bạn, kiến trúc sư, sẽ không kiểm soát được những yếu tố này và bạn phải làm rõ điều này với
+
+
+00:08:15,930 --> 00:08:16,560
+the customer.
+khách hàng.
+
+
+00:08:16,590 --> 00:08:20,550
+I remember one client of mine that always talked about the high SLA, he demanded.
+Tôi nhớ một khách hàng của tôi luôn nói về SLA cao, anh ấy yêu cầu.
+
+
+00:08:20,580 --> 00:08:26,460
+I then asked for a meeting with a database team to find out what is the SLA, the commit to to my.
+Sau đó, tôi đã yêu cầu một cuộc họp với nhóm cơ sở dữ liệu để tìm hiểu SLA là gì, cam kết với tôi.
+
+
+00:08:26,460 --> 00:08:27,550
+And his surprise.
+Và sự ngạc nhiên của anh ấy.
+
+
+00:08:27,570 --> 00:08:33,090
+Not only the team could not commit to any SLA, they didn't even know what an SLA is.
+Nhóm không những không thể cam kết bất kỳ SLA nào mà họ thậm chí còn không biết SLA là gì.
+
+
+00:08:33,120 --> 00:08:36,510
+Remember this when discussing SLA figures with a client.
+Hãy nhớ điều này khi thảo luận về số liệu SLA với khách hàng.
+
+
+00:08:36,659 --> 00:08:44,190
+What I usually do is define three levels of SLA, silver, gold and platinum and ask the client which
+Những gì tôi thường làm là xác định ba cấp độ SLA, bạc, vàng và bạch kim và hỏi khách hàng cấp độ nào
+
+
+00:08:44,190 --> 00:08:50,340
+level he requires for the software platinum level, which is what most of the clients choose, dictates
+mức độ anh ta yêu cầu cho phần mềm mức bạch kim, đó là mức mà hầu hết khách hàng lựa chọn, quy định
+
+
+00:08:50,340 --> 00:08:56,560
+that the system should be fully stateless, easily scaled out, and utilize extensive logging and monitoring.
+rằng hệ thống phải hoàn toàn không có trạng thái, dễ dàng mở rộng quy mô và sử dụng chức năng ghi nhật ký và giám sát mở rộng.
+
+
+00:08:56,580 --> 00:09:02,340
+There is no point in discussing specific uptime numbers such as 97% versus 99%.
+Không có ích gì khi thảo luận về các con số thời gian hoạt động cụ thể như 97% so với 99%.
+
+
+00:09:02,370 --> 00:09:06,340
+There are so many other factors that make this number meaningless.
+Có rất nhiều yếu tố khác khiến con số này trở nên vô nghĩa.
+
+
+00:09:06,790 --> 00:09:11,260
+I highly recommend adopting the three Levels method and using it with your client.
+Tôi thực sự khuyên bạn nên áp dụng phương pháp Ba cấp độ và sử dụng nó với khách hàng của bạn.
+
+
+00:09:11,260 --> 00:09:16,300
+It is up to you to decide what is included in each level and what is the impact on the development time
+Bạn phải quyết định những gì được bao gồm trong mỗi cấp độ và tác động của chúng đến thời gian phát triển
+
+
+00:09:16,300 --> 00:09:16,960
+and cost.
+và chi phí.
+
+
+00:09:16,960 --> 00:09:19,750
+But make sure you have this definition in place.
+Nhưng hãy đảm bảo rằng bạn đã có định nghĩa này.
+
+
+00:09:19,960 --> 00:09:26,770
+So in our case, since the system shows live status updates, the client defined it as a platinum system,
+Vì vậy, trong trường hợp của chúng tôi, vì hệ thống hiển thị các cập nhật trạng thái trực tiếp, nên khách hàng đã xác định nó là hệ thống bạch kim,
+
+
+00:09:26,770 --> 00:09:31,360
+which means it should have all the characteristics of a reliable and redundant system.
+có nghĩa là nó phải có tất cả các đặc điểm của một hệ thống đáng tin cậy và dự phòng.
+
+
+00:09:31,900 --> 00:09:37,170
+So to conclude, here are the non-functional requirements defined for this system.
+Vì vậy, để kết luận, đây là các yêu cầu không chức năng được xác định cho hệ thống này.
+
+
+00:09:37,180 --> 00:09:42,190
+We walked through the exact flow of figuring them out and they are now fully documented.
+Chúng tôi đã thực hiện đúng quy trình để tìm ra chúng và hiện chúng đã được ghi chép đầy đủ.
+
+
+00:09:42,220 --> 00:09:46,450
+I want to emphasize again the importance of accurate, non-functional requirements.
+Tôi muốn nhấn mạnh lại tầm quan trọng của các yêu cầu chính xác, không mang tính chức năng.
+
+
+00:09:46,480 --> 00:09:48,330
+As we will see later in this section.
+Như chúng ta sẽ thấy sau trong phần này.
+
+
+00:09:48,340 --> 00:09:53,680
+These requirements have great influence on the architecture and should be thoroughly discussed and documented.
+Những yêu cầu này có ảnh hưởng lớn đến kiến trúc và cần được thảo luận và ghi chép lại một cách kỹ lưỡng.
+
+
+00:09:53,710 --> 00:09:59,110
+Modifying non-functional requirements after the project has begun is always a bad idea.
+Việc sửa đổi các yêu cầu không chức năng sau khi dự án đã bắt đầu luôn là một ý tưởng tồi.
+
+
+00:09:59,620 --> 00:10:00,550
+Okay, great.
+Được rồi, tuyệt vời.
+
+
+00:10:00,550 --> 00:10:02,700
+So we have the requirements of the project.
+Vì vậy, chúng ta có các yêu cầu của dự án.
+
+
+00:10:02,710 --> 00:10:04,360
+Let's move on.
+Chúng ta hãy tiếp tục.
+
+

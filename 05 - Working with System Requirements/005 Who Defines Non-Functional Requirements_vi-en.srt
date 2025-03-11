@@ -1,0 +1,110 @@
+00:00:00,320 --> 00:00:05,360
+One of the biggest problems with the non-functional requirements is that it's not clear who should define
+Một trong những vấn đề lớn nhất với các yêu cầu không chức năng là không rõ ai nên xác định
+
+
+00:00:05,360 --> 00:00:05,870
+them.
+họ.
+
+
+00:00:06,050 --> 00:00:11,120
+Usually we expect the client to gether with a system analyst to define the functional requirements.
+Thông thường chúng tôi mong đợi khách hàng hợp tác với nhà phân tích hệ thống để xác định các yêu cầu chức năng.
+
+
+00:00:11,120 --> 00:00:15,080
+After all, they know what the system should do more than anyone else.
+Rốt cuộc, họ biết hệ thống nên làm gì hơn bất kỳ ai khác.
+
+
+00:00:15,350 --> 00:00:18,230
+But non-functional requirements are a different story.
+Nhưng các yêu cầu không chức năng lại là một câu chuyện khác.
+
+
+00:00:18,260 --> 00:00:23,030
+Most of the time the client has no idea about non-functional requirements and what the consequences
+Hầu hết thời gian khách hàng không biết về các yêu cầu không chức năng và hậu quả của chúng
+
+
+00:00:23,030 --> 00:00:24,770
+of those requirements are.
+trong số những yêu cầu đó là.
+
+
+00:00:24,920 --> 00:00:31,610
+In my experience, when asked what is the SLA for the system, assuming he knows what an SLA is, the
+Theo kinh nghiệm của tôi, khi được hỏi SLA cho hệ thống là gì, giả sử anh ta biết SLA là gì, thì
+
+
+00:00:31,610 --> 00:00:38,360
+client will usually say always when asked What is the required response time for the API?
+khách hàng thường sẽ nói luôn khi được hỏi Thời gian phản hồi cần thiết cho API là bao lâu?
+
+
+00:00:38,390 --> 00:00:41,570
+The answer will be somewhere around ten milliseconds.
+Câu trả lời sẽ nằm trong khoảng mười mili giây.
+
+
+00:00:42,850 --> 00:00:47,440
+So we, the architects, have two roles in the non-functional requirements discussion.
+Vì vậy, chúng tôi, những kiến trúc sư, có hai vai trò trong cuộc thảo luận về các yêu cầu phi chức năng.
+
+
+00:00:48,310 --> 00:00:50,080
+The first is to frame the boundaries.
+Đầu tiên là xác định ranh giới.
+
+
+00:00:50,080 --> 00:00:56,680
+We must explain the client that 100% uptime is not realistic and probably not really needed.
+Chúng tôi phải giải thích với khách hàng rằng thời gian hoạt động 100% là không thực tế và có lẽ không thực sự cần thiết.
+
+
+00:00:56,710 --> 00:01:02,080
+We must explain to him that his current network will not enable completing an API call in less than
+Chúng tôi phải giải thích với anh ấy rằng mạng hiện tại của anh ấy sẽ không cho phép hoàn thành lệnh gọi API trong vòng chưa đầy 15 phút.
+
+
+00:01:02,080 --> 00:01:03,610
+100 milliseconds.
+100 mili giây.
+
+
+00:01:03,850 --> 00:01:07,360
+And after we have done all this, we can talk about possible values.
+Và sau khi chúng ta đã thực hiện tất cả những điều này, chúng ta có thể nói về các giá trị có thể có.
+
+
+00:01:07,570 --> 00:01:13,450
+And this discussion must be backed by real numbers, for example, when talking about concurrent users.
+Và cuộc thảo luận này phải được hỗ trợ bởi các con số thực tế, ví dụ, khi nói về người dùng đồng thời.
+
+
+00:01:13,480 --> 00:01:16,230
+Try to calculate the real number of concurrent users.
+Hãy thử tính toán số lượng người dùng đồng thời thực tế.
+
+
+00:01:16,240 --> 00:01:18,190
+Don't pull numbers out of a hat.
+Đừng rút số ra khỏi mũ.
+
+
+00:01:18,220 --> 00:01:21,660
+Also try to set realistic goals for the performance requirement.
+Ngoài ra, hãy cố gắng đặt ra các mục tiêu thực tế cho yêu cầu về hiệu suất.
+
+
+00:01:21,670 --> 00:01:27,430
+Remember, if the system is going to be used by end users, you don't need to fight for every millisecond.
+Hãy nhớ rằng, nếu hệ thống được người dùng cuối sử dụng, bạn không cần phải tranh giành từng mili giây.
+
+
+00:01:27,460 --> 00:01:29,260
+The users won't notice that.
+Người dùng sẽ không nhận thấy điều đó.
+
+

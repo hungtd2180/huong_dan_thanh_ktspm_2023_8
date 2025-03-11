@@ -1,0 +1,85 @@
+00:00:00,260 --> 00:00:05,600
+In this section, we discuss the technology stack selection process and divided it to back end, front
+Trong phần này, chúng tôi thảo luận về quy trình lựa chọn ngăn xếp công nghệ và chia nó thành phần cuối, phần đầu và phần cuối.
+
+
+00:00:05,600 --> 00:00:06,950
+end and data store.
+kết thúc và lưu trữ dữ liệu.
+
+
+00:00:07,310 --> 00:00:12,380
+I didn't try to declare a winner on each category, but rather to demonstrate what are the principles
+Tôi không cố gắng tuyên bố người chiến thắng ở mỗi hạng mục mà chỉ muốn chứng minh các nguyên tắc
+
+
+00:00:12,380 --> 00:00:17,810
+that affect the selection and what are the parameters we should evaluate when making this selection?
+điều đó ảnh hưởng đến việc lựa chọn và những thông số nào chúng ta nên đánh giá khi thực hiện lựa chọn này?
+
+
+00:00:18,080 --> 00:00:23,510
+I would like to emphasize again how important is a rational, educated selection and what is the impact
+Tôi muốn nhấn mạnh lại một lần nữa tầm quan trọng của việc lựa chọn hợp lý, có giáo dục và tác động của nó là gì
+
+
+00:00:23,510 --> 00:00:26,240
+of selecting the wrong technology for the wrong reasons?
+của việc lựa chọn công nghệ sai vì những lý do sai?
+
+
+00:00:26,270 --> 00:00:29,230
+There are a lot of emotions in this discussion.
+Có rất nhiều cảm xúc trong cuộc thảo luận này.
+
+
+00:00:29,240 --> 00:00:34,640
+You will tackle dev teams that won't be ready to hear about anything which is not dotnet even if it's
+Bạn sẽ giải quyết các nhóm phát triển không sẵn sàng lắng nghe bất cứ điều gì không phải là dotnet ngay cả khi đó là
+
+
+00:00:34,640 --> 00:00:36,790
+clearly not the right choice for the system.
+rõ ràng không phải là lựa chọn đúng đắn cho hệ thống.
+
+
+00:00:36,800 --> 00:00:41,990
+You will participate in heated discussions between Angular supporters and React supporters and you will
+Bạn sẽ tham gia vào các cuộc thảo luận sôi nổi giữa những người ủng hộ Angular và những người ủng hộ React và bạn sẽ
+
+
+00:00:41,990 --> 00:00:47,740
+definitely be part of a meeting discussing NoSQL versus SQL from all the wrong reasons.
+chắc chắn sẽ tham gia một cuộc họp thảo luận về NoSQL so với SQL vì tất cả những lý do sai lầm.
+
+
+00:00:47,750 --> 00:00:51,230
+My best advice is stay out of the line of fire.
+Lời khuyên tốt nhất của tôi là hãy tránh xa đường đạn.
+
+
+00:00:51,260 --> 00:00:55,520
+Bring to the table the rational voice backed by concrete numbers and factors.
+Đưa ra tiếng nói lý trí được hỗ trợ bởi các con số và yếu tố cụ thể.
+
+
+00:00:55,550 --> 00:00:58,720
+Never get involved emotionally in such discussion.
+Đừng bao giờ tham gia vào những cuộc thảo luận như vậy một cách cảm tính.
+
+
+00:00:58,730 --> 00:01:02,600
+It will harm your architecture and more important, your reputation.
+Nó sẽ gây hại cho kiến trúc của bạn và quan trọng hơn là danh tiếng của bạn.
+
+
+00:01:02,610 --> 00:01:07,440
+Believe me, after the system will be implemented successfully using the technologies you recommended,
+Hãy tin tôi, sau khi hệ thống được triển khai thành công bằng các công nghệ mà bạn đề xuất,
+
+
+00:01:07,440 --> 00:01:11,910
+no matter how angry they were at the beginning, they will be thanking you at the end.
+dù lúc đầu họ có tức giận thế nào thì cuối cùng họ cũng sẽ cảm ơn bạn.
+
+

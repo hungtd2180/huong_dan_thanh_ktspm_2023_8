@@ -1,0 +1,470 @@
+00:00:00,290 --> 00:00:04,610
+So we left the previous lecture with four services which look like this.
+Vì vậy, chúng tôi đã kết thúc bài giảng trước với bốn dịch vụ trông giống như thế này.
+
+
+00:00:04,880 --> 00:00:09,650
+And now we need to decide what kind of messaging is the right one between each of them.
+Và bây giờ chúng ta cần quyết định loại tin nhắn nào là phù hợp nhất giữa mỗi người.
+
+
+00:00:10,010 --> 00:00:12,080
+Let's begin with the receiver.
+Chúng ta hãy bắt đầu với người nhận.
+
+
+00:00:12,920 --> 00:00:17,380
+The receiver, as its name implies, receives the messages from the Iot devices.
+Bộ thu, đúng như tên gọi của nó, sẽ nhận các tin nhắn từ các thiết bị IoT.
+
+
+00:00:17,390 --> 00:00:23,410
+In this case, the messaging method is actually dictated by the way the various devices send their messages
+Trong trường hợp này, phương thức nhắn tin thực sự được quyết định bởi cách các thiết bị khác nhau gửi tin nhắn của họ
+
+
+00:00:23,420 --> 00:00:25,250
+to find out how they do it.
+để tìm hiểu họ làm điều đó như thế nào.
+
+
+00:00:25,280 --> 00:00:28,310
+We will go back to the client after a few phone calls.
+Chúng tôi sẽ liên lạc lại với khách hàng sau một vài cuộc gọi điện thoại.
+
+
+00:00:28,310 --> 00:00:30,560
+She comes back to us with the answer.
+Cô ấy quay lại với chúng tôi cùng với câu trả lời.
+
+
+00:00:30,590 --> 00:00:35,510
+The devices communicate via Http, using the post verb to send the update.
+Các thiết bị giao tiếp qua Http, sử dụng động từ post để gửi bản cập nhật.
+
+
+00:00:35,630 --> 00:00:37,040
+Well, that's great.
+Vâng, thật tuyệt vời.
+
+
+00:00:37,070 --> 00:00:43,400
+It means our receiver just became a standard run of the mill web API application with rest API as its
+Điều này có nghĩa là bộ thu của chúng tôi vừa trở thành một ứng dụng API web tiêu chuẩn với API còn lại là
+
+
+00:00:43,400 --> 00:00:44,210
+interface.
+giao diện.
+
+
+00:00:44,420 --> 00:00:45,170
+Great.
+Tuyệt vời.
+
+
+00:00:45,200 --> 00:00:47,180
+Let's move on to the handler.
+Chúng ta hãy chuyển sang trình xử lý.
+
+
+00:00:48,050 --> 00:00:51,300
+Now here things begin to get a little bit complicated.
+Bây giờ mọi thứ bắt đầu trở nên phức tạp hơn một chút.
+
+
+00:00:51,320 --> 00:00:57,260
+As you probably remember, the handlers role is to validate and parse the messages received by the receiver.
+Như bạn có thể nhớ, vai trò của trình xử lý là xác thực và phân tích cú pháp các thông điệp mà người nhận nhận được.
+
+
+00:00:57,290 --> 00:01:03,000
+It's only reason for existence is to offload the tasks from the receiver, which should focus on receiving
+Lý do tồn tại duy nhất của nó là để chuyển giao các nhiệm vụ từ người nhận, người này nên tập trung vào việc nhận
+
+
+00:01:03,000 --> 00:01:05,099
+the messages and releasing the requests.
+các thông điệp và giải phóng các yêu cầu.
+
+
+00:01:05,310 --> 00:01:10,380
+After the handler handles the message, it should store it in the data store for later use.
+Sau khi trình xử lý xử lý tin nhắn, nó sẽ lưu trữ tin nhắn đó trong kho dữ liệu để sử dụng sau.
+
+
+00:01:10,410 --> 00:01:14,460
+Now what is the best messaging method between the receiver and the handler?
+Bây giờ phương pháp nhắn tin tốt nhất giữa người nhận và người xử lý là gì?
+
+
+00:01:14,730 --> 00:01:18,030
+Well, it looks like the best mechanism here is Q.
+Vâng, có vẻ như cơ chế tốt nhất ở đây là Câu hỏi
+
+
+00:01:18,300 --> 00:01:23,970
+We obviously want the messages to be processed in the order they were received, which is a classic
+Rõ ràng là chúng tôi muốn các tin nhắn được xử lý theo thứ tự chúng được nhận, đó là một quy tắc cổ điển
+
+
+00:01:23,970 --> 00:01:28,980
+feature of Q and we like the reliability and scaling such a mechanism offers.
+tính năng của Q và chúng tôi thích độ tin cậy và khả năng mở rộng mà cơ chế như vậy mang lại.
+
+
+00:01:30,000 --> 00:01:35,580
+If we would use rest API between the receiver and the handler, the receiver will have a lot of work
+Nếu chúng ta sử dụng API nghỉ ngơi giữa bộ thu và trình xử lý, bộ thu sẽ có rất nhiều công việc
+
+
+00:01:35,580 --> 00:01:41,460
+to do since it will wait for each request to the handler until it is done and we'll have to handle errors
+phải làm vì nó sẽ đợi mỗi yêu cầu đến trình xử lý cho đến khi nó hoàn tất và chúng ta sẽ phải xử lý lỗi
+
+
+00:01:41,460 --> 00:01:42,200
+and glitches.
+và trục trặc.
+
+
+00:01:42,210 --> 00:01:45,930
+This will hurt the performance which is so important for the receiver.
+Điều này sẽ làm giảm hiệu suất, một yếu tố rất quan trọng đối với người nhận.
+
+
+00:01:46,320 --> 00:01:49,720
+Using Q we basically have a fire and forget mechanism.
+Khi sử dụng Q, về cơ bản chúng ta có cơ chế bắn và quên.
+
+
+00:01:49,740 --> 00:01:53,190
+The receiver puts the message in the queue and forgets about it.
+Người nhận đặt tin nhắn vào hàng đợi và quên nó đi.
+
+
+00:01:53,220 --> 00:01:55,830
+This is exactly what we want in this case.
+Đây chính xác là điều chúng ta muốn trong trường hợp này.
+
+
+00:01:56,340 --> 00:01:56,970
+Great.
+Tuyệt vời.
+
+
+00:01:56,970 --> 00:02:01,110
+So we have a rest API for the receiver and Q for the handler.
+Vì vậy, chúng ta có API nghỉ ngơi cho bộ thu và Q cho bộ xử lý.
+
+
+00:02:01,230 --> 00:02:02,370
+What about info?
+Còn thông tin thì sao?
+
+
+00:02:03,130 --> 00:02:04,630
+Well, that's an easy one.
+Vâng, đó là một câu hỏi dễ.
+
+
+00:02:04,660 --> 00:02:07,390
+Let's see who is going to access info.
+Hãy xem ai sẽ truy cập thông tin.
+
+
+00:02:07,600 --> 00:02:10,340
+The answer is of course, end users.
+Câu trả lời tất nhiên là người dùng cuối.
+
+
+00:02:10,360 --> 00:02:11,900
+How are they going to do that?
+Họ sẽ làm điều đó bằng cách nào?
+
+
+00:02:11,920 --> 00:02:15,070
+Well, obviously via a web browser.
+Vâng, rõ ràng là thông qua trình duyệt web.
+
+
+00:02:15,100 --> 00:02:17,260
+How web browsers access servers.
+Trình duyệt web truy cập máy chủ như thế nào.
+
+
+00:02:17,260 --> 00:02:24,460
+Of course, using the Http protocol and the de facto standard for accessing Http servers today is via
+Tất nhiên, sử dụng giao thức Http và tiêu chuẩn thực tế để truy cập vào máy chủ Http ngày nay là thông qua
+
+
+00:02:24,460 --> 00:02:25,270
+rest API.
+API còn lại.
+
+
+00:02:25,870 --> 00:02:30,010
+So the info will implement rest API similar to the receivers.
+Vì vậy, thông tin sẽ triển khai API nghỉ ngơi tương tự như các bộ thu.
+
+
+00:02:30,160 --> 00:02:33,580
+Last but not least, the logging service.
+Cuối cùng nhưng không kém phần quan trọng, dịch vụ ghi nhật ký.
+
+
+00:02:34,120 --> 00:02:40,540
+Remember, we need the logs produced by other services to be sent to the logging service for aggregation.
+Hãy nhớ rằng chúng ta cần các bản ghi được tạo ra bởi các dịch vụ khác được gửi đến dịch vụ ghi nhật ký để tổng hợp.
+
+
+00:02:40,570 --> 00:02:41,860
+How can we do that?
+Chúng ta có thể làm điều đó như thế nào?
+
+
+00:02:42,160 --> 00:02:46,540
+Well, instinctively we might think the logging service should expose rest API.
+Vâng, theo bản năng, chúng ta có thể nghĩ rằng dịch vụ ghi nhật ký nên công khai API còn lại.
+
+
+00:02:46,570 --> 00:02:50,600
+So the other services can simply access it sending its log records.
+Vì vậy, các dịch vụ khác có thể dễ dàng truy cập bằng cách gửi bản ghi nhật ký của nó.
+
+
+00:02:50,620 --> 00:02:52,360
+But that's not a good idea.
+Nhưng đó không phải là một ý kiến hay.
+
+
+00:02:52,390 --> 00:02:58,060
+Logs tend to be quite massive and we can expect the various services to produce a huge number of log
+Các bản ghi có xu hướng khá lớn và chúng ta có thể mong đợi các dịch vụ khác nhau tạo ra một số lượng lớn các bản ghi
+
+
+00:02:58,060 --> 00:02:59,200
+records every hour.
+ghi lại mỗi giờ.
+
+
+00:02:59,230 --> 00:03:03,810
+Now, if for every such records the services will issue a rest API call.
+Bây giờ, nếu đối với mọi bản ghi như vậy, các dịch vụ sẽ phát hành lệnh gọi API còn lại.
+
+
+00:03:03,830 --> 00:03:06,380
+This will hurt the performance badly.
+Điều này sẽ làm giảm hiệu suất rất nhiều.
+
+
+00:03:06,410 --> 00:03:11,750
+We need a solution that will enable us to send large amounts of records to the logging service without
+Chúng tôi cần một giải pháp cho phép chúng tôi gửi một lượng lớn hồ sơ đến dịch vụ ghi nhật ký mà không cần
+
+
+00:03:11,750 --> 00:03:13,220
+impacting the performance.
+tác động đến hiệu suất.
+
+
+00:03:13,520 --> 00:03:17,000
+Now, one of the common solutions to this problem is using files.
+Bây giờ, một trong những giải pháp phổ biến cho vấn đề này là sử dụng tệp.
+
+
+00:03:17,030 --> 00:03:22,670
+In this solution, the various services write the log records to a file and the logging service pulls
+Trong giải pháp này, các dịch vụ khác nhau ghi các bản ghi nhật ký vào một tệp và dịch vụ ghi nhật ký kéo
+
+
+00:03:22,670 --> 00:03:25,040
+these files and aggregates the contents.
+các tập tin này và tổng hợp nội dung.
+
+
+00:03:25,280 --> 00:03:29,260
+So this is a very popular solution, but it has two major problems.
+Vì vậy, đây là một giải pháp rất phổ biến, nhưng nó có hai vấn đề chính.
+
+
+00:03:29,270 --> 00:03:32,720
+One, it won't work in the cloud environment.
+Một là nó sẽ không hoạt động trong môi trường đám mây.
+
+
+00:03:32,990 --> 00:03:37,670
+This course is not about cloud applications, but it's still important to be aware of what's possible
+Khóa học này không nói về các ứng dụng đám mây, nhưng vẫn quan trọng là phải biết những gì có thể
+
+
+00:03:37,670 --> 00:03:39,250
+and not possible in the cloud.
+và không thể thực hiện được trên đám mây.
+
+
+00:03:39,260 --> 00:03:42,980
+And writing to files in a cloud application is a big no no.
+Và việc ghi vào các tập tin trong ứng dụng đám mây là điều tối kỵ.
+
+
+00:03:43,190 --> 00:03:48,800
+The second problem is that files have the tendency to get locked, to be scanned and removed by antivirus
+Vấn đề thứ hai là các tập tin có xu hướng bị khóa, bị quét và xóa bởi phần mềm diệt vi-rút
+
+
+00:03:48,800 --> 00:03:52,640
+software or just simply be deleted by careless system admins.
+phần mềm hoặc chỉ đơn giản là bị xóa bởi người quản trị hệ thống bất cẩn.
+
+
+00:03:52,670 --> 00:03:57,710
+In short, file is a highly uncontrolled resource which should better be avoided.
+Tóm lại, tệp là một nguồn tài nguyên không được kiểm soát chặt chẽ và tốt hơn hết là nên tránh.
+
+
+00:03:57,740 --> 00:03:59,570
+Okay, so what's left?
+Được rồi, vậy còn lại gì?
+
+
+00:03:59,720 --> 00:04:01,910
+There are actually two options left.
+Thực ra còn lại hai lựa chọn.
+
+
+00:04:01,940 --> 00:04:07,340
+First, write the logs to a database and let the logging service queries the database and handle the
+Đầu tiên, hãy ghi nhật ký vào cơ sở dữ liệu và để dịch vụ ghi nhật ký truy vấn cơ sở dữ liệu và xử lý
+
+
+00:04:07,340 --> 00:04:08,270
+log records.
+nhật ký ghi chép.
+
+
+00:04:08,510 --> 00:04:15,020
+Second option Use the various services will add the records to the queue and the logging service will
+Tùy chọn thứ hai Sử dụng các dịch vụ khác nhau sẽ thêm các bản ghi vào hàng đợi và dịch vụ ghi nhật ký sẽ
+
+
+00:04:15,020 --> 00:04:17,120
+pull the records from the queue and handle them.
+kéo các bản ghi từ hàng đợi và xử lý chúng.
+
+
+00:04:17,329 --> 00:04:18,540
+Which one is better?
+Cái nào tốt hơn?
+
+
+00:04:18,560 --> 00:04:22,010
+Well, in this case my recommendation will be to use a queue.
+Vâng, trong trường hợp này, lời khuyên của tôi là sử dụng hàng đợi.
+
+
+00:04:22,040 --> 00:04:26,780
+The reason is that using database in this case is actually forcing it to behave like a queue.
+Lý do là việc sử dụng cơ sở dữ liệu trong trường hợp này thực sự buộc nó phải hoạt động giống như một hàng đợi.
+
+
+00:04:26,810 --> 00:04:32,210
+The database is only a temporary storage for the records, and every record that will be retrieved will
+Cơ sở dữ liệu chỉ là nơi lưu trữ tạm thời các bản ghi và mọi bản ghi sẽ được truy xuất sẽ
+
+
+00:04:32,210 --> 00:04:33,800
+have to be deleted immediately.
+phải xóa ngay lập tức.
+
+
+00:04:33,830 --> 00:04:35,060
+Just like with queue.
+Giống như hàng đợi.
+
+
+00:04:35,360 --> 00:04:40,910
+So instead of reinventing the wheel, let's just use the queue mechanism and get the most effective
+Vì vậy, thay vì phát minh lại bánh xe, chúng ta hãy sử dụng cơ chế xếp hàng và có được 79 hiệu quả nhất
+
+
+00:04:40,910 --> 00:04:41,600
+messaging.
+nhắn tin.
+
+
+00:04:42,350 --> 00:04:44,060
+So here we are.
+Vậy là chúng ta đã ở đây.
+
+
+00:04:44,210 --> 00:04:49,250
+We have defined the various messaging mechanisms of the system and we now have a full picture of the
+Chúng tôi đã xác định các cơ chế nhắn tin khác nhau của hệ thống và hiện chúng tôi có bức tranh đầy đủ về
+
+
+00:04:49,250 --> 00:04:50,330
+system's architecture.
+kiến trúc hệ thống.
+
+
+00:04:50,360 --> 00:04:54,020
+We map the components and reached the conclusion that we need four of them.
+Chúng tôi lập bản đồ các thành phần và đi đến kết luận rằng chúng tôi cần bốn thành phần.
+
+
+00:04:54,050 --> 00:04:57,350
+We decided what are the messaging methods between these services?
+Chúng tôi đã quyết định phương thức nhắn tin giữa các dịch vụ này là gì?
+
+
+00:04:57,350 --> 00:05:01,670
+And we now understand what are the decision factors for each of the messaging mechanisms.
+Và bây giờ chúng ta hiểu được các yếu tố quyết định cho từng cơ chế nhắn tin.
+
+
+00:05:01,820 --> 00:05:04,720
+We can now move on to the components drill down.
+Bây giờ chúng ta có thể chuyển sang phân tích chi tiết các thành phần.
+
+
+00:05:04,730 --> 00:05:07,460
+But before we do that, a word of warning.
+Nhưng trước khi làm điều đó, chúng tôi xin cảnh báo một điều.
+
+
+00:05:07,700 --> 00:05:13,640
+Note that before recommending a client to use queue, you have to make sure the client it knows how
+Lưu ý rằng trước khi đề xuất một khách hàng sử dụng hàng đợi, bạn phải đảm bảo rằng khách hàng đó biết cách
+
+
+00:05:13,640 --> 00:05:16,270
+to set up, use and maintain the Q engine.
+để thiết lập, sử dụng và bảo trì động cơ Q.
+
+
+00:05:16,280 --> 00:05:21,980
+If the it has no idea how to use it, then it might be a good idea to go for a less elegant solution,
+Nếu nó không biết cách sử dụng nó, thì có lẽ nên sử dụng một giải pháp ít thanh lịch hơn,
+
+
+00:05:21,980 --> 00:05:24,590
+but one that has more chance to succeed.
+nhưng một cái có nhiều cơ hội thành công hơn.
+
+
+00:05:25,040 --> 00:05:26,410
+Okay, we are done.
+Được rồi, chúng ta xong rồi.
+
+
+00:05:26,420 --> 00:05:28,590
+Let's drill down into the first service.
+Chúng ta hãy đi sâu vào dịch vụ đầu tiên.
+
+
+00:05:28,610 --> 00:05:29,990
+The logging service.
+Dịch vụ ghi nhật ký.
+
+

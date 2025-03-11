@@ -1,0 +1,1105 @@
+00:00:00,330 --> 00:00:02,400
+Let's talk about messaging.
+Chúng ta hãy nói về tin nhắn.
+
+
+00:00:02,430 --> 00:00:08,730
+The term messaging refers to the means of communication between the various services in the system.
+Thuật ngữ nhắn tin đề cập đến phương tiện truyền thông giữa các dịch vụ khác nhau trong hệ thống.
+
+
+00:00:08,910 --> 00:00:14,700
+In previous sections, we talked about the spider web, the situation where all services are communicating
+Trong các phần trước, chúng ta đã nói về mạng nhện, tình huống mà tất cả các dịch vụ đang giao tiếp
+
+
+00:00:14,700 --> 00:00:21,180
+directly with each other, which results in a huge mess of tangled URLs that will crash and burn when
+trực tiếp với nhau, dẫn đến một mớ hỗn độn các URL rối rắm sẽ bị sập và cháy khi
+
+
+00:00:21,180 --> 00:00:22,470
+a URL changes.
+URL thay đổi.
+
+
+00:00:22,500 --> 00:00:26,520
+This scenario is relevant when the services communicate via rest API.
+Kịch bản này có liên quan khi các dịch vụ giao tiếp qua REST API.
+
+
+00:00:27,090 --> 00:00:33,030
+However, there are more ways for services to communicate with each other and it's important to be aware
+Tuy nhiên, có nhiều cách hơn để các dịch vụ giao tiếp với nhau và điều quan trọng là phải nhận thức được
+
+
+00:00:33,030 --> 00:00:38,310
+of these ways and to be able to make an educated decision about which messaging platform to choose.
+những cách này và có thể đưa ra quyết định sáng suốt về việc lựa chọn nền tảng nhắn tin nào.
+
+
+00:00:38,340 --> 00:00:41,280
+Note that the messaging selection is not exclusive.
+Lưu ý rằng lựa chọn tin nhắn không phải là độc quyền.
+
+
+00:00:41,310 --> 00:00:46,560
+We can often find systems with various messaging methods, each used for different purposes.
+Chúng ta thường có thể tìm thấy các hệ thống có nhiều phương thức nhắn tin khác nhau, mỗi phương thức được sử dụng cho các mục đích khác nhau.
+
+
+00:00:46,590 --> 00:00:50,390
+There is nothing wrong with that, and I actually encourage you to do that.
+Không có gì sai với điều đó và tôi thực sự khuyến khích bạn làm như vậy.
+
+
+00:00:50,400 --> 00:00:56,670
+Just make sure to always use the right messaging method for the right task before exploring the various
+Chỉ cần đảm bảo luôn sử dụng đúng phương pháp nhắn tin cho đúng nhiệm vụ trước khi khám phá 13 phương pháp khác nhau
+
+
+00:00:56,670 --> 00:00:57,220
+methods.
+phương pháp.
+
+
+00:00:57,240 --> 00:00:59,130
+Let's first set the criteria.
+Đầu tiên chúng ta hãy đặt ra tiêu chí.
+
+
+00:00:59,130 --> 00:01:02,590
+We will examine them with to make the comparison more useful.
+Chúng tôi sẽ xem xét chúng để việc so sánh hữu ích hơn.
+
+
+00:01:02,770 --> 00:01:05,379
+The first criterion is of course, performance.
+Tiêu chí đầu tiên tất nhiên là hiệu suất.
+
+
+00:01:05,379 --> 00:01:08,650
+We will always prefer a faster method of messaging.
+Chúng tôi sẽ luôn ưu tiên phương pháp nhắn tin nhanh hơn.
+
+
+00:01:08,680 --> 00:01:11,080
+Next is message size.
+Tiếp theo là kích thước tin nhắn.
+
+
+00:01:11,320 --> 00:01:17,320
+Indeed, most systems do not require large messages between services, but sometimes it is useful.
+Trên thực tế, hầu hết các hệ thống không yêu cầu các tin nhắn lớn giữa các dịch vụ, nhưng đôi khi nó lại hữu ích.
+
+
+00:01:17,620 --> 00:01:20,020
+Next criterion is the execution model.
+Tiêu chí tiếp theo là mô hình thực hiện.
+
+
+00:01:20,050 --> 00:01:25,780
+Some messaging platform requires a request response model which has its limitations, and some enable
+Một số nền tảng nhắn tin yêu cầu mô hình phản hồi yêu cầu có những hạn chế của nó và một số cho phép
+
+
+00:01:25,780 --> 00:01:27,670
+long running processes to execute.
+các tiến trình chạy dài để thực thi.
+
+
+00:01:28,150 --> 00:01:31,480
+Another important criterion is the feedback and reliability.
+Một tiêu chí quan trọng khác là phản hồi và độ tin cậy.
+
+
+00:01:31,480 --> 00:01:37,330
+And by feedback I mean the ability to determine whether the messaging has failed and if it is the ability
+Và bằng phản hồi tôi muốn nói đến khả năng xác định liệu tin nhắn có thất bại hay không và liệu đó có phải là khả năng
+
+
+00:01:37,330 --> 00:01:39,340
+to perform some corrective action.
+để thực hiện một số hành động khắc phục.
+
+
+00:01:39,370 --> 00:01:44,470
+Not all messaging methods report the status, and this is definitely an important consideration.
+Không phải tất cả các phương thức nhắn tin đều báo cáo trạng thái và đây chắc chắn là một cân nhắc quan trọng.
+
+
+00:01:44,740 --> 00:01:47,710
+Feedback is also closely related to reliability.
+Phản hồi cũng liên quan chặt chẽ đến độ tin cậy.
+
+
+00:01:47,740 --> 00:01:53,320
+A reliable method will ensure the message will be received even if there was a problem during the process.
+Một phương pháp đáng tin cậy sẽ đảm bảo tin nhắn sẽ được nhận ngay cả khi có vấn đề xảy ra trong quá trình này.
+
+
+00:01:53,350 --> 00:01:58,540
+This is very important for mission critical systems, where the data in the message has to be received
+Điều này rất quan trọng đối với các hệ thống quan trọng, trong đó dữ liệu trong tin nhắn phải được nhận
+
+
+00:01:58,540 --> 00:01:59,710
+no matter what.
+dù thế nào đi nữa.
+
+
+00:02:00,130 --> 00:02:03,480
+The last criterion is the complexity of implementation.
+Tiêu chí cuối cùng là tính phức tạp của việc thực hiện.
+
+
+00:02:03,490 --> 00:02:08,979
+If a messaging platform requires a lot of development effort, that is something we would like to know
+Nếu một nền tảng nhắn tin đòi hỏi nhiều nỗ lực phát triển, đó là điều chúng tôi muốn biết
+
+
+00:02:08,979 --> 00:02:09,820
+beforehand.
+trước đó.
+
+
+00:02:10,449 --> 00:02:15,400
+So let's begin our list with the most common messaging method Rest API.
+Vì vậy, chúng ta hãy bắt đầu danh sách của mình với phương thức nhắn tin phổ biến nhất là Rest API.
+
+
+00:02:16,060 --> 00:02:22,510
+Rest API is a de facto standard for Http based messaging method between services with rest API.
+Rest API là một tiêu chuẩn thực tế cho phương thức nhắn tin dựa trên Http giữa các dịch vụ với Rest API.
+
+
+00:02:22,540 --> 00:02:29,710
+The service exposes an API that uses the Http protocol standard, including Http verbs that indicates
+Dịch vụ này cung cấp API sử dụng tiêu chuẩn giao thức Http, bao gồm các động từ Http chỉ ra
+
+
+00:02:29,710 --> 00:02:31,090
+the type of action to be made.
+loại hành động cần thực hiện.
+
+
+00:02:31,090 --> 00:02:38,710
+For example, get will mean retrieve entity and post means create new entity and so on.
+Ví dụ, get có nghĩa là lấy thực thể và post có nghĩa là tạo thực thể mới, v.v.
+
+
+00:02:40,700 --> 00:02:41,810
+Performance wise.
+Về hiệu suất.
+
+
+00:02:41,810 --> 00:02:44,330
+Rest API is usually very fast.
+Rest API thường rất nhanh.
+
+
+00:02:44,360 --> 00:02:49,910
+Most web servers have excellent performance when dealing with regular Http requests, which is exactly
+Hầu hết các máy chủ web đều có hiệu suất tuyệt vời khi xử lý các yêu cầu Http thông thường, chính xác là
+
+
+00:02:49,910 --> 00:02:55,490
+what rest API is, and since it enables direct connection between the services with no intermediate
+API nghỉ ngơi là gì và vì nó cho phép kết nối trực tiếp giữa các dịch vụ mà không cần trung gian
+
+
+00:02:55,490 --> 00:02:59,720
+mechanism between them, it's one of the fastest messaging platforms out there.
+cơ chế giữa chúng, đó là một trong những nền tảng nhắn tin nhanh nhất hiện nay.
+
+
+00:03:00,320 --> 00:03:05,780
+Regarding message size, rest API adheres to the same limitation as the Http protocol.
+Về kích thước tin nhắn, REST API tuân thủ cùng một giới hạn như giao thức Http.
+
+
+00:03:05,810 --> 00:03:12,290
+Get operations are usually limited to eight kilobytes, while post or put operations are usually limited
+Các hoạt động lấy dữ liệu thường bị giới hạn ở tám kilobyte, trong khi các hoạt động đăng hoặc đặt dữ liệu thường bị giới hạn ở
+
+
+00:03:12,290 --> 00:03:16,720
+to a few dozen megabytes, although it varies between web servers and platform.
+đến vài chục megabyte, mặc dù nó thay đổi tùy theo máy chủ web và nền tảng.
+
+
+00:03:16,730 --> 00:03:22,640
+The execution model of rest API is request response, which means it's great for quick short actions
+Mô hình thực thi của REST API là yêu cầu phản hồi, nghĩa là nó rất phù hợp cho các hành động ngắn nhanh
+
+
+00:03:22,640 --> 00:03:25,340
+but not suitable for long processes.
+nhưng không phù hợp cho các quá trình dài.
+
+
+00:03:25,670 --> 00:03:27,500
+And what about the feedback?
+Và phản hồi thì sao?
+
+
+00:03:27,590 --> 00:03:30,020
+This is where rest API really shines.
+Đây là nơi API nghỉ ngơi thực sự tỏa sáng.
+
+
+00:03:30,020 --> 00:03:35,300
+Since it's a synchronous method, the caller gets immediate feedback on the action via Http response
+Vì đây là phương pháp đồng bộ nên người gọi sẽ nhận được phản hồi ngay lập tức về hành động thông qua phản hồi Http
+
+
+00:03:35,300 --> 00:03:35,720
+code.
+mã số
+
+
+00:03:35,750 --> 00:03:39,360
+If there is a problem with the execution, it will get a 500.
+Nếu có vấn đề trong quá trình thực hiện, nó sẽ nhận được 500.
+
+
+00:03:39,390 --> 00:03:43,230
+If there was a problem with the message it sent, it will get 400.
+Nếu có vấn đề với tin nhắn đã gửi, nó sẽ nhận được 400.
+
+
+00:03:43,230 --> 00:03:47,100
+And of course, if everything went just fine, it will get 200.
+Và tất nhiên, nếu mọi thứ diễn ra tốt đẹp, nó sẽ đạt 200.
+
+
+00:03:47,130 --> 00:03:51,560
+There are lots more response codes, but these are the most common.
+Có rất nhiều mã phản hồi khác, nhưng đây là những mã phổ biến nhất.
+
+
+00:03:51,570 --> 00:03:56,940
+By getting immediate feedback, the caller can implement an error policy to be executed when there is
+Bằng cách nhận được phản hồi ngay lập tức, người gọi có thể triển khai chính sách lỗi để thực hiện khi có
+
+
+00:03:56,940 --> 00:04:00,030
+a problem such as retry logging and more.
+một vấn đề như thử lại việc ghi nhật ký và nhiều hơn nữa.
+
+
+00:04:00,690 --> 00:04:06,780
+So while rest API is not a reliable method in the sense that a message will arrive even if there is
+Vì vậy, trong khi API còn lại không phải là một phương pháp đáng tin cậy theo nghĩa là một thông báo sẽ đến ngay cả khi có
+
+
+00:04:06,780 --> 00:04:09,610
+a problem, the excellent feedback compensates for that.
+một vấn đề, phản hồi tuyệt vời sẽ bù đắp cho điều đó.
+
+
+00:04:09,630 --> 00:04:12,960
+However, we still don't get a fully reliable system.
+Tuy nhiên, chúng ta vẫn chưa có được một hệ thống hoàn toàn đáng tin cậy.
+
+
+00:04:14,460 --> 00:04:17,790
+The complexity of Rest API is virtually non-existent.
+Độ phức tạp của Rest API hầu như không tồn tại.
+
+
+00:04:18,000 --> 00:04:23,160
+All the modern development languages have specialized libraries which will help you create Rest API
+Tất cả các ngôn ngữ phát triển hiện đại đều có các thư viện chuyên biệt sẽ giúp bạn tạo Rest API
+
+
+00:04:23,160 --> 00:04:29,400
+and implement other technical parts such as serializing the Json converted to objects and more.
+và triển khai các phần kỹ thuật khác như tuần tự hóa Json được chuyển đổi thành đối tượng, v.v.
+
+
+00:04:29,430 --> 00:04:32,620
+For example, in Dotnet we have ASP.Net web API.
+Ví dụ, trong Dotnet chúng ta có ASP.Net web API.
+
+
+00:04:32,730 --> 00:04:37,200
+In Java we have spring in Python, Flask and so on.
+Trong Java, chúng ta có spring trong Python, Flask, v.v.
+
+
+00:04:37,230 --> 00:04:39,000
+The bottom line is very simple.
+Tóm lại là rất đơn giản.
+
+
+00:04:39,030 --> 00:04:41,820
+Developing rest API is extremely easy.
+Việc phát triển REST API cực kỳ dễ dàng.
+
+
+00:04:42,690 --> 00:04:48,690
+Rest API is extremely useful for traditional web based systems with either user interface that can talk
+Rest API cực kỳ hữu ích cho các hệ thống dựa trên web truyền thống với giao diện người dùng có thể nói chuyện
+
+
+00:04:48,690 --> 00:04:49,650
+rest and Json.
+nghỉ ngơi và Json.
+
+
+00:04:49,650 --> 00:04:55,470
+And almost every client technology can do that nowadays or other services that calls its API.
+Và hầu như mọi công nghệ máy khách hiện nay đều có thể làm được điều đó hoặc các dịch vụ khác gọi API của nó.
+
+
+00:04:55,710 --> 00:05:00,690
+If you are designing such a system, rest API should be the first place to look for messaging method.
+Nếu bạn đang thiết kế một hệ thống như vậy, REST API nên là nơi đầu tiên bạn cần tìm phương thức nhắn tin.
+
+
+00:05:02,540 --> 00:05:06,890
+Our next messaging method is http push notifications or pubsub.
+Phương pháp nhắn tin tiếp theo của chúng tôi là thông báo đẩy http hoặc pubsub.
+
+
+00:05:08,060 --> 00:05:13,280
+Push notification basically means that a client subscribes to an event, and when this event occurs,
+Thông báo đẩy về cơ bản có nghĩa là một khách hàng đăng ký một sự kiện và khi sự kiện này xảy ra,
+
+
+00:05:13,280 --> 00:05:16,100
+it gets a notification from the server about it.
+nó nhận được thông báo từ máy chủ về nó.
+
+
+00:05:16,490 --> 00:05:20,590
+Now, there are many tools that implement this method with various kinds of technologies.
+Hiện nay, có rất nhiều công cụ thực hiện phương pháp này với nhiều loại công nghệ khác nhau.
+
+
+00:05:20,600 --> 00:05:24,230
+Many of them implement Rest API that we discussed earlier.
+Nhiều người trong số họ triển khai Rest API mà chúng ta đã thảo luận trước đó.
+
+
+00:05:24,320 --> 00:05:29,780
+I want to focus this discussion on special kinds of push notifications, those that enable real time
+Tôi muốn tập trung thảo luận này vào các loại thông báo đẩy đặc biệt, những thông báo cho phép thời gian thực
+
+
+00:05:29,780 --> 00:05:31,850
+communication for web applications.
+giao tiếp cho các ứng dụng web.
+
+
+00:05:32,060 --> 00:05:37,970
+This kind of push notification is implemented by libraries such as SignalR or Socket.io.
+Loại thông báo đẩy này được triển khai bởi các thư viện như SignalR hoặc Socket.io.
+
+
+00:05:38,240 --> 00:05:44,690
+These libraries use advanced web techniques such as WebSockets to keep an Http client always connected
+Các thư viện này sử dụng các kỹ thuật web tiên tiến như WebSockets để giữ cho máy khách Http luôn được kết nối
+
+
+00:05:44,690 --> 00:05:51,230
+to the browser, thus enabling bidirectional real time communication as opposed to the more traditional
+đến trình duyệt, do đó cho phép giao tiếp thời gian thực hai chiều trái ngược với 83 truyền thống hơn
+
+
+00:05:51,230 --> 00:05:55,610
+request response model where only the client initiates the communication.
+mô hình phản hồi yêu cầu trong đó chỉ có khách hàng khởi tạo giao tiếp.
+
+
+00:05:55,940 --> 00:06:01,730
+This method is extremely useful in applications such as chat, where a lot of clients should be notified
+Phương pháp này cực kỳ hữu ích trong các ứng dụng như trò chuyện, nơi mà rất nhiều khách hàng cần được thông báo
+
+
+00:06:01,730 --> 00:06:04,610
+about events such as user typing a message.
+về các sự kiện như người dùng nhập tin nhắn.
+
+
+00:06:04,640 --> 00:06:08,010
+So how this method stacks against our criteria.
+Vậy phương pháp này so sánh với tiêu chí của chúng tôi như thế nào.
+
+
+00:06:08,790 --> 00:06:11,460
+Performance wise, this method is amazing.
+Về mặt hiệu suất, phương pháp này thật tuyệt vời.
+
+
+00:06:11,460 --> 00:06:16,680
+Using these libraries messages are sent and received blazingly fast and with huge scale.
+Sử dụng các thư viện này, tin nhắn được gửi và nhận cực nhanh và trên quy mô lớn.
+
+
+00:06:16,710 --> 00:06:23,420
+One machine can send more than 10,000 messages per second and usually even more regarding message size.
+Một máy có thể gửi hơn 10.000 tin nhắn mỗi giây và thường thậm chí còn nhiều hơn về kích thước tin nhắn.
+
+
+00:06:23,430 --> 00:06:26,160
+This method is quite limited, although not always.
+Phương pháp này khá hạn chế, mặc dù không phải lúc nào cũng vậy.
+
+
+00:06:26,160 --> 00:06:27,450
+There is a formal limitation.
+Có một giới hạn chính thức.
+
+
+00:06:27,450 --> 00:06:32,550
+Usually message size will not exceed a few kilobytes in order to achieve the desired performance and
+Thông thường kích thước tin nhắn sẽ không vượt quá vài kilobyte để đạt được hiệu suất mong muốn và
+
+
+00:06:32,550 --> 00:06:33,210
+scale.
+thang đo.
+
+
+00:06:33,930 --> 00:06:37,650
+The execution model of Http push notifications is quite unique.
+Mô hình thực hiện của thông báo đẩy Http khá độc đáo.
+
+
+00:06:37,680 --> 00:06:43,320
+The usual implementation is that a client method is subscribed to a server event and when it is raised
+Việc triển khai thông thường là phương thức máy khách được đăng ký với sự kiện máy chủ và khi nó được đưa ra
+
+
+00:06:43,320 --> 00:06:45,000
+this method is executed.
+phương pháp này được thực hiện.
+
+
+00:06:45,030 --> 00:06:50,550
+The subscription is maintained usually with open websocket connection or some implementation of long
+Đăng ký thường được duy trì với kết nối websocket mở hoặc một số triển khai dài
+
+
+00:06:50,550 --> 00:06:51,190
+polling.
+thăm dò.
+
+
+00:06:51,210 --> 00:06:55,170
+When an event is raised, a method is executed on the client.
+Khi một sự kiện được đưa ra, một phương thức được thực thi trên máy khách.
+
+
+00:06:55,260 --> 00:07:00,780
+The server itself does not wait for the method to complete but is already done when the method is executed.
+Bản thân máy chủ không chờ phương thức hoàn tất mà đã hoàn tất khi phương thức được thực thi.
+
+
+00:07:00,780 --> 00:07:04,350
+So there are no issues such as timeout or busy threads.
+Vì vậy không có vấn đề gì như hết thời gian chờ hoặc luồng bận.
+
+
+00:07:04,710 --> 00:07:08,550
+The feedback and reliability are the biggest drawbacks of this method.
+Phản hồi và độ tin cậy là những nhược điểm lớn nhất của phương pháp này.
+
+
+00:07:08,550 --> 00:07:14,820
+These libraries work in a fire and forget mode, and when the message is sent to the subscribers, they
+Các thư viện này hoạt động theo chế độ gửi và quên, và khi tin nhắn được gửi đến người đăng ký, chúng
+
+
+00:07:14,820 --> 00:07:17,430
+have no idea whether it was received or not.
+không biết liệu nó đã được nhận hay chưa.
+
+
+00:07:17,670 --> 00:07:23,520
+This means that if for some reason the message was not received, whether because of network problems
+Điều này có nghĩa là nếu vì lý do nào đó mà tin nhắn không được nhận, có thể là do sự cố mạng
+
+
+00:07:23,520 --> 00:07:27,030
+or a bug in the client, the server will never know about it.
+hoặc lỗi trong máy khách, máy chủ sẽ không bao giờ biết về nó.
+
+
+00:07:27,060 --> 00:07:33,240
+This makes those libraries not useful for applications that require high reliability, which is most
+Điều này làm cho các thư viện đó không hữu ích cho các ứng dụng đòi hỏi độ tin cậy cao, đó là hầu hết
+
+
+00:07:33,240 --> 00:07:34,820
+of the server side applications.
+của các ứng dụng phía máy chủ.
+
+
+00:07:34,830 --> 00:07:40,140
+This is the reason these libraries are used mainly for client server applications, where reliability
+Đây là lý do tại sao các thư viện này chủ yếu được sử dụng cho các ứng dụng máy khách máy chủ, nơi độ tin cậy
+
+
+00:07:40,140 --> 00:07:42,000
+has a much less important role.
+có vai trò ít quan trọng hơn nhiều.
+
+
+00:07:42,000 --> 00:07:47,490
+For example, in a chat app, if a single message is not delivered, it's not a disaster.
+Ví dụ, trong một ứng dụng trò chuyện, nếu một tin nhắn không được gửi đi thì đó không phải là thảm họa.
+
+
+00:07:47,490 --> 00:07:53,190
+But if a request to perform some action on a service is not received, the consequences can be much
+Nhưng nếu không nhận được yêu cầu thực hiện một số hành động trên một dịch vụ, hậu quả có thể rất lớn
+
+
+00:07:53,190 --> 00:07:53,850
+worse.
+tệ hơn.
+
+
+00:07:54,180 --> 00:08:00,810
+Now there are methods to make Http push notifications more reliable, but they require a complex development
+Hiện nay có những phương pháp giúp thông báo đẩy Http đáng tin cậy hơn, nhưng chúng đòi hỏi quá trình phát triển phức tạp
+
+
+00:08:00,810 --> 00:08:03,810
+which will make the whole thing a lot less attractive.
+điều đó sẽ làm cho mọi thứ trở nên kém hấp dẫn hơn rất nhiều.
+
+
+00:08:03,840 --> 00:08:07,770
+Regarding complexity, it is extremely easy to implement these methods.
+Về độ phức tạp, việc triển khai các phương pháp này cực kỳ dễ dàng.
+
+
+00:08:07,800 --> 00:08:11,850
+The various libraries are very easy to use and the client method is very simple.
+Các thư viện khác nhau rất dễ sử dụng và phương pháp của máy khách rất đơn giản.
+
+
+00:08:11,850 --> 00:08:17,850
+It usually takes no more than 2 or 3 lines of code to implement the server side and another two lines
+Thông thường, chỉ cần không quá 2 hoặc 3 dòng mã để triển khai phía máy chủ và thêm hai dòng nữa
+
+
+00:08:17,850 --> 00:08:18,870
+for the client.
+cho khách hàng.
+
+
+00:08:19,080 --> 00:08:21,480
+So where should we use this method?
+Vậy chúng ta nên sử dụng phương pháp này ở đâu?
+
+
+00:08:22,110 --> 00:08:27,570
+As we said before, it's most useful in scenarios where a lot of clients should be notified fast and
+Như chúng tôi đã nói trước đây, nó hữu ích nhất trong các tình huống mà nhiều khách hàng cần được thông báo nhanh chóng và
+
+
+00:08:27,570 --> 00:08:30,210
+we can make a compromise on the reliability.
+chúng ta có thể thỏa hiệp về độ tin cậy.
+
+
+00:08:30,240 --> 00:08:36,360
+Such an apps are chat applications or monitoring apps that get constant notification, and if one notification
+Các ứng dụng như vậy là các ứng dụng trò chuyện hoặc ứng dụng giám sát nhận được thông báo liên tục và nếu một thông báo
+
+
+00:08:36,360 --> 00:08:37,860
+is lost, we can live with it.
+đã mất, chúng ta có thể sống chung với nó.
+
+
+00:08:38,700 --> 00:08:45,300
+The next messaging method is queue with the queue as a messaging platform, the flow is quite different
+Phương pháp nhắn tin tiếp theo là xếp hàng với hàng đợi như một nền tảng nhắn tin, luồng khá khác biệt
+
+
+00:08:45,300 --> 00:08:46,440
+from the previous method.
+từ phương pháp trước.
+
+
+00:08:46,440 --> 00:08:52,950
+We discussed with Queue a service that wants to pass a message to another service places the message
+Chúng tôi đã thảo luận với Queue một dịch vụ muốn chuyển một thông điệp đến một dịch vụ khác đặt thông điệp
+
+
+00:08:52,950 --> 00:08:56,760
+in a queue engine such as Rabbitmq or MQ series.
+trong một công cụ xếp hàng như Rabbitmq hoặc MQ series.
+
+
+00:08:56,940 --> 00:09:03,390
+The other service calls the queue periodically or gets a notification from the queue and then gets the
+Dịch vụ khác gọi hàng đợi theo định kỳ hoặc nhận thông báo từ hàng đợi và sau đó nhận được
+
+
+00:09:03,390 --> 00:09:04,650
+message from the queue.
+tin nhắn từ hàng đợi.
+
+
+00:09:05,190 --> 00:09:11,700
+The main advantage of queue is that we can be sure that message will be handled once and only once after
+Ưu điểm chính của hàng đợi là chúng ta có thể chắc chắn rằng tin nhắn sẽ được xử lý một lần và chỉ một lần sau
+
+
+00:09:11,700 --> 00:09:13,320
+the service grabs the message.
+dịch vụ lấy tin nhắn.
+
+
+00:09:13,320 --> 00:09:15,480
+No other service will get this message.
+Không có dịch vụ nào khác nhận được tin nhắn này.
+
+
+00:09:15,990 --> 00:09:21,360
+In addition, a queue can ensure the messages are processed in the order they were received, which
+Ngoài ra, hàng đợi có thể đảm bảo các tin nhắn được xử lý theo thứ tự chúng được nhận, điều này
+
+
+00:09:21,360 --> 00:09:23,640
+is not always the case with the rest API.
+không phải lúc nào cũng như vậy với API còn lại.
+
+
+00:09:23,910 --> 00:09:26,070
+So let's analyze this method.
+Vậy chúng ta hãy phân tích phương pháp này.
+
+
+00:09:27,030 --> 00:09:28,230
+Regarding performance.
+Về hiệu suất.
+
+
+00:09:28,230 --> 00:09:34,230
+This is one of the weakest points of the method as opposed to rest API and push notification which implements
+Đây là một trong những điểm yếu nhất của phương pháp này so với REST API và thông báo đẩy triển khai
+
+
+00:09:34,230 --> 00:09:36,140
+direct connection between the two services.
+kết nối trực tiếp giữa hai dịch vụ.
+
+
+00:09:36,150 --> 00:09:41,810
+Here we have an additional stop the queue itself that adds some latency to the messaging process.
+Ở đây chúng ta có một điểm dừng bổ sung trong hàng đợi, điều này làm tăng thêm độ trễ cho quá trình nhắn tin.
+
+
+00:09:41,820 --> 00:09:47,250
+In addition, if the services use polling to check for new messages in the queue, there is usually
+Ngoài ra, nếu các dịch vụ sử dụng thăm dò để kiểm tra tin nhắn mới trong hàng đợi, thường có
+
+
+00:09:47,250 --> 00:09:50,820
+a timer that schedules the polling, which adds another delay.
+một bộ đếm thời gian lên lịch thăm dò, điều này sẽ thêm một sự chậm trễ nữa.
+
+
+00:09:50,820 --> 00:09:56,940
+If the queue uses message persistence, which means the message is written to the database before transmitting.
+Nếu hàng đợi sử dụng tính năng lưu trữ tin nhắn, nghĩa là tin nhắn được ghi vào cơ sở dữ liệu trước khi truyền.
+
+
+00:09:56,970 --> 00:10:00,450
+To improve reliability, then the performance is even worse.
+Để cải thiện độ tin cậy, thì hiệu suất thậm chí còn tệ hơn.
+
+
+00:10:01,020 --> 00:10:04,290
+Regarding message size, it varies between queue engines.
+Về kích thước tin nhắn, nó thay đổi tùy theo công cụ xếp hàng.
+
+
+00:10:04,530 --> 00:10:10,320
+For example, Rabbitmq limits the message size to two gigabytes, although it is highly recommended
+Ví dụ, Rabbitmq giới hạn kích thước tin nhắn ở mức hai gigabyte, mặc dù điều này được khuyến nghị rất nhiều
+
+
+00:10:10,320 --> 00:10:12,120
+to use much smaller messages.
+để sử dụng những tin nhắn nhỏ hơn nhiều.
+
+
+00:10:12,150 --> 00:10:15,720
+IBM WebSphere MQ limits the size to 100MB.
+IBM WebSphere MQ giới hạn kích thước ở mức 100MB.
+
+
+00:10:15,720 --> 00:10:21,180
+However, the best practice is to always use smaller messages, and if the content of the message is
+Tuy nhiên, cách tốt nhất là luôn sử dụng các tin nhắn nhỏ hơn và nếu nội dung của tin nhắn là
+
+
+00:10:21,180 --> 00:10:28,000
+huge, for example a video file then store it in external data store and have the message itself hold
+lớn, ví dụ như một tập tin video sau đó lưu trữ nó trong kho dữ liệu ngoài và giữ bản thân thông điệp
+
+
+00:10:28,000 --> 00:10:29,560
+a reference to its location.
+một tham chiếu đến vị trí của nó.
+
+
+00:10:30,780 --> 00:10:36,420
+The execution model for Q, as we already discussed, is pulling the service, expecting the message
+Mô hình thực hiện cho Q, như chúng ta đã thảo luận, đang kéo dịch vụ, mong đợi thông báo
+
+
+00:10:36,420 --> 00:10:39,990
+should periodically poll the queue and check for a new message.
+nên định kỳ thăm dò hàng đợi và kiểm tra tin nhắn mới.
+
+
+00:10:39,990 --> 00:10:42,960
+And when one is found, retrieve and handle it.
+Và khi tìm thấy một cái, hãy lấy lại và xử lý nó.
+
+
+00:10:43,230 --> 00:10:45,630
+And what about feedback and reliability?
+Và phản hồi và độ tin cậy thì sao?
+
+
+00:10:45,660 --> 00:10:48,640
+Well, here the situation is a bit more complicated.
+Vâng, tình hình ở đây phức tạp hơn một chút.
+
+
+00:10:48,660 --> 00:10:54,690
+The message sender, the one that puts the message in the queue, will have no idea if the target actually
+Người gửi tin nhắn, người đưa tin nhắn vào hàng đợi, sẽ không biết liệu mục tiêu có thực sự
+
+
+00:10:54,690 --> 00:10:55,350
+got it.
+hiểu rồi.
+
+
+00:10:55,380 --> 00:10:59,700
+All it knows is whether the queue received the message and is ready to pass it on.
+Tất cả những gì nó biết là liệu hàng đợi có nhận được tin nhắn và sẵn sàng chuyển tiếp hay không.
+
+
+00:10:59,880 --> 00:11:05,130
+On the other hand, the queue usually has comprehensive management and monitoring tools to make sure
+Mặt khác, hàng đợi thường có các công cụ quản lý và giám sát toàn diện để đảm bảo
+
+
+00:11:05,130 --> 00:11:10,770
+messages are not lost on the way to the other side and has its means to make sure there are no problems
+tin nhắn không bị mất trên đường đến bên kia và có phương tiện để đảm bảo không có vấn đề gì
+
+
+00:11:10,770 --> 00:11:11,610
+along the way.
+trên đường đi.
+
+
+00:11:11,640 --> 00:11:14,730
+So the feedback to the sender is not very critical.
+Vì vậy, phản hồi cho người gửi không thực sự quan trọng.
+
+
+00:11:14,800 --> 00:11:20,940
+Aside of the actual handoff to the queue, the bottom line is that the queue is one of the most reliable
+Bên cạnh việc chuyển giao thực tế cho hàng đợi, điểm mấu chốt là hàng đợi là một trong những 165 đáng tin cậy nhất
+
+
+00:11:20,940 --> 00:11:21,930
+forms of messaging.
+các hình thức nhắn tin.
+
+
+00:11:21,930 --> 00:11:27,120
+And if this is your top priority at the expense of performance, you should definitely consider using
+Và nếu đây là ưu tiên hàng đầu của bạn với cái giá phải trả là hiệu suất, bạn chắc chắn nên cân nhắc sử dụng
+
+
+00:11:27,120 --> 00:11:27,600
+it.
+nó.
+
+
+00:11:27,720 --> 00:11:29,670
+And what about complexity?
+Và độ phức tạp thì sao?
+
+
+00:11:30,790 --> 00:11:34,210
+Well, this is also one of the weak points of Q.
+Vâng, đây cũng là một trong những điểm yếu của Q.
+
+
+00:11:34,240 --> 00:11:39,340
+In order to use it, we should include in our architecture a Q engine and learn how to use it.
+Để sử dụng nó, chúng ta nên đưa vào kiến trúc của mình một công cụ Q và học cách sử dụng nó.
+
+
+00:11:39,370 --> 00:11:43,450
+We will need to dedicate time for training and setup and complex.
+Chúng ta sẽ cần dành thời gian cho việc đào tạo, thiết lập và phức tạp.
+
+
+00:11:43,450 --> 00:11:45,780
+Q Engines can be quite difficult to maintain.
+Động cơ Q có thể khá khó bảo trì.
+
+
+00:11:45,790 --> 00:11:48,790
+It's much more complicated than a simple rest API.
+Nó phức tạp hơn nhiều so với một API nghỉ ngơi đơn giản.
+
+
+00:11:49,000 --> 00:11:51,340
+So when should we use Q's?
+Vậy khi nào chúng ta nên sử dụng Q?
+
+
+00:11:51,820 --> 00:11:58,060
+The typical use case for Q's is a system with a lot of messages flowing around where the order and reliability
+Trường hợp sử dụng điển hình cho Q là một hệ thống có nhiều thông điệp truyền đi xung quanh nơi mà thứ tự và độ tin cậy
+
+
+00:11:58,060 --> 00:12:01,270
+is top priority and the performance are secondary to them.
+là ưu tiên hàng đầu và hiệu suất là thứ yếu.
+
+
+00:12:01,420 --> 00:12:05,500
+One common example is a system that processes a huge amount of data.
+Một ví dụ phổ biến là hệ thống xử lý một lượng dữ liệu khổng lồ.
+
+
+00:12:05,530 --> 00:12:11,370
+The data is pushed to queue and wait to its turn and then it gets processed and stored in the data store.
+Dữ liệu được đẩy vào hàng đợi và chờ đến lượt, sau đó được xử lý và lưu trữ trong kho dữ liệu.
+
+
+00:12:11,380 --> 00:12:16,840
+In such a system, the performance is usually not a top priority because there is no user or service
+Trong một hệ thống như vậy, hiệu suất thường không phải là ưu tiên hàng đầu vì không có người dùng hoặc dịch vụ
+
+
+00:12:16,840 --> 00:12:19,870
+that waits on the other side for the processed data.
+chờ đợi ở phía bên kia để có dữ liệu đã xử lý.
+
+
+00:12:19,900 --> 00:12:23,740
+It is stored for future use, which is not known at the moment.
+Nó được lưu trữ để sử dụng trong tương lai, nhưng hiện tại vẫn chưa biết.
+
+
+00:12:23,950 --> 00:12:29,940
+Such a system is a classic example of queue based messaging, since it takes advantage of the queues
+Hệ thống như vậy là một ví dụ điển hình về nhắn tin dựa trên hàng đợi, vì nó tận dụng lợi thế của hàng đợi
+
+
+00:12:29,950 --> 00:12:35,540
+strength, order and reliability while not affected from its main weakness performance.
+sức mạnh, trật tự và độ tin cậy trong khi không bị ảnh hưởng bởi điểm yếu chính của nó là hiệu suất.
+
+
+00:12:36,800 --> 00:12:41,840
+The last messaging method we will discuss is file based and database based messaging.
+Phương pháp nhắn tin cuối cùng mà chúng ta sẽ thảo luận là nhắn tin dựa trên tệp và dựa trên cơ sở dữ liệu.
+
+
+00:12:41,870 --> 00:12:47,240
+This cumbersome term is actually quite similar to the method with one important difference.
+Thuật ngữ rườm rà này thực ra khá giống với phương pháp này với một điểm khác biệt quan trọng.
+
+
+00:12:47,390 --> 00:12:52,550
+While in the queue method, the message was put in the queue and the queue engine made sure the message
+Trong khi ở phương pháp hàng đợi, tin nhắn được đưa vào hàng đợi và công cụ hàng đợi đảm bảo tin nhắn
+
+
+00:12:52,550 --> 00:12:55,130
+will be processed once and only once.
+sẽ được xử lý một lần và chỉ một lần.
+
+
+00:12:55,160 --> 00:13:03,080
+In this method the message is placed either as a file in a designated folder or as a record in a database.
+Trong phương pháp này, tin nhắn được đặt dưới dạng tệp trong thư mục được chỉ định hoặc dưới dạng bản ghi trong cơ sở dữ liệu.
+
+
+00:13:04,100 --> 00:13:09,950
+Once stored, Azure Services periodically pulls the file system of the database and look for new messages.
+Sau khi lưu trữ, Azure Services sẽ định kỳ kéo hệ thống tệp của cơ sở dữ liệu và tìm kiếm các thông báo mới.
+
+
+00:13:09,980 --> 00:13:16,220
+When found, the message is retrieved either by reading the file or by retrieving the data and processed.
+Khi tìm thấy, tin nhắn sẽ được lấy lại bằng cách đọc tệp hoặc bằng cách lấy dữ liệu và xử lý.
+
+
+00:13:17,150 --> 00:13:22,790
+I won't go through all the criteria of this method since it's quite similar to the queues criteria except
+Tôi sẽ không đi qua tất cả các tiêu chí của phương pháp này vì nó khá giống với tiêu chí hàng đợi ngoại trừ
+
+
+00:13:22,790 --> 00:13:26,290
+the message size, which is not limited in this method as you can see.
+kích thước tin nhắn, không bị giới hạn trong phương pháp này như bạn có thể thấy.
+
+
+00:13:26,300 --> 00:13:30,140
+But I want to highlight the main difference between this method and the queue.
+Nhưng tôi muốn làm nổi bật sự khác biệt chính giữa phương pháp này và hàng đợi.
+
+
+00:13:30,410 --> 00:13:31,550
+Why with queue?
+Tại sao lại xếp hàng?
+
+
+00:13:31,580 --> 00:13:37,500
+There is a guarantee the message will be handled once and only once in this method there is no such
+Có sự đảm bảo rằng tin nhắn sẽ được xử lý một lần và chỉ một lần trong phương pháp này không có 196 như vậy
+
+
+00:13:37,530 --> 00:13:38,250
+guarantee.
+bảo đảm.
+
+
+00:13:38,370 --> 00:13:44,640
+Now imagine the following scenario In our application we have a service that constantly pulls the file
+Bây giờ hãy tưởng tượng tình huống sau Trong ứng dụng của chúng tôi, chúng tôi có một dịch vụ liên tục kéo tệp
+
+
+00:13:44,640 --> 00:13:47,370
+system for new files containing telemetry data.
+hệ thống cho các tập tin mới chứa dữ liệu đo từ xa.
+
+
+00:13:47,670 --> 00:13:52,230
+Since we want the system to be redundant, we have three instances of this service.
+Vì chúng tôi muốn hệ thống có tính dự phòng, chúng tôi có ba trường hợp của dịch vụ này.
+
+
+00:13:52,230 --> 00:13:54,000
+All pull the same folder.
+Tất cả kéo cùng một thư mục.
+
+
+00:13:54,090 --> 00:13:58,140
+Now assume a new file is added to the folder immediately.
+Bây giờ giả sử một tập tin mới được thêm vào thư mục ngay lập tức.
+
+
+00:13:58,170 --> 00:13:59,100
+Three services.
+Ba dịch vụ.
+
+
+00:13:59,100 --> 00:14:02,430
+Try to open it for read and process its contents.
+Hãy thử mở nó ra để đọc và xử lý nội dung của nó.
+
+
+00:14:02,460 --> 00:14:04,590
+This poses two problems.
+Điều này đặt ra hai vấn đề.
+
+
+00:14:04,710 --> 00:14:11,580
+One the file may be locked by the first service accessing it and the other services will get an exception.
+Một tệp có thể bị khóa bởi dịch vụ đầu tiên truy cập vào nó và các dịch vụ khác sẽ nhận được ngoại lệ.
+
+
+00:14:11,580 --> 00:14:17,610
+This can actually prove itself as a good thing architecture wise, since this way the data won't be
+Điều này thực sự có thể chứng minh là một điều tốt về mặt kiến trúc, vì theo cách này, dữ liệu sẽ không bị
+
+
+00:14:17,610 --> 00:14:19,110
+processed more than once.
+được xử lý nhiều lần.
+
+
+00:14:19,110 --> 00:14:21,780
+And this brings us to the second problem.
+Và điều này đưa chúng ta đến vấn đề thứ hai.
+
+
+00:14:21,930 --> 00:14:27,090
+If the file is accessible, we have three services processing its content and storing the data.
+Nếu tệp có thể truy cập được, chúng tôi có ba dịch vụ xử lý nội dung của tệp và lưu trữ dữ liệu.
+
+
+00:14:27,120 --> 00:14:32,970
+Now, this might be tolerable in some scenarios, but in many others it can corrupt data.
+Hiện tại, điều này có thể chấp nhận được trong một số trường hợp, nhưng trong nhiều trường hợp khác, nó có thể làm hỏng dữ liệu.
+
+
+00:14:33,000 --> 00:14:38,730
+Imagine a file containing money transfer records if the record will be processed more than once.
+Hãy tưởng tượng một tập tin chứa các bản ghi chuyển tiền nếu bản ghi đó sẽ được xử lý nhiều lần.
+
+
+00:14:38,730 --> 00:14:41,700
+It can spell a disaster on the account owner.
+Nó có thể gây ra thảm họa cho chủ tài khoản.
+
+
+00:14:41,730 --> 00:14:47,160
+Now, these problems can be solved using complex mechanisms and flags, but it's best to avoid it if
+Bây giờ, những vấn đề này có thể được giải quyết bằng cách sử dụng các cơ chế và cờ phức tạp, nhưng tốt nhất là nên tránh nó nếu
+
+
+00:14:47,160 --> 00:14:47,790
+possible.
+có thể.
+
+
+00:14:47,790 --> 00:14:51,570
+Whenever a polling mechanism is required, it's best to use queues.
+Bất cứ khi nào cần cơ chế thăm dò, tốt nhất là sử dụng hàng đợi.
+
+
+00:14:52,230 --> 00:14:56,370
+So that concludes our discussion about messaging methods.
+Như vậy là chúng ta đã kết thúc cuộc thảo luận về phương pháp nhắn tin.
+
+
+00:14:56,370 --> 00:15:01,170
+In this table, I summarized all the aspects of the various methods we discussed to make your choice
+Trong bảng này, tôi đã tóm tắt tất cả các khía cạnh của các phương pháp khác nhau mà chúng ta đã thảo luận để bạn có thể lựa chọn
+
+
+00:15:01,170 --> 00:15:02,010
+easier.
+dễ dàng hơn.
+
+
+00:15:02,040 --> 00:15:06,210
+Remember, always make sure you are using the right messaging method.
+Hãy nhớ, hãy luôn đảm bảo rằng bạn đang sử dụng đúng phương thức nhắn tin.
+
+
+00:15:06,240 --> 00:15:09,720
+There is nothing wrong in using more than one method in your system.
+Không có gì sai khi sử dụng nhiều hơn một phương pháp trong hệ thống của bạn.
+
+
+00:15:09,720 --> 00:15:12,540
+Just make sure to always use the right one.
+Chỉ cần đảm bảo luôn sử dụng đúng cách.
+
+

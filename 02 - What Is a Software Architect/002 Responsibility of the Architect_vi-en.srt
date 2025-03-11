@@ -1,0 +1,195 @@
+00:00:00,290 --> 00:00:03,680
+So let's talk about the responsibility of the software architect.
+Vậy chúng ta hãy nói về trách nhiệm của kiến trúc sư phần mềm.
+
+
+00:00:03,710 --> 00:00:09,510
+One of the questions I often asked is, what is the difference between a senior developer and an architect?
+Một trong những câu hỏi tôi thường hỏi là, sự khác biệt giữa một nhà phát triển cao cấp và một kiến trúc sư là gì?
+
+
+00:00:09,530 --> 00:00:15,110
+After all, in a lot of companies, mainly small ones, there is not a function of an architect, just
+Rốt cuộc, trong rất nhiều công ty, chủ yếu là các công ty nhỏ, không có chức năng của một kiến trúc sư, chỉ có
+
+
+00:00:15,110 --> 00:00:16,010
+a team leader.
+một trưởng nhóm.
+
+
+00:00:16,040 --> 00:00:18,050
+Why do we need an architect at all?
+Tại sao chúng ta lại cần một kiến trúc sư?
+
+
+00:00:18,350 --> 00:00:23,660
+The short answer is this developer knows what can be done.
+Câu trả lời ngắn gọn là nhà phát triển này biết những gì có thể làm được.
+
+
+00:00:24,080 --> 00:00:26,540
+Architect knows what should be done.
+Kiến trúc sư biết những gì cần phải làm.
+
+
+00:00:26,990 --> 00:00:29,340
+A senior developer knows the technology very well.
+Một nhà phát triển cao cấp hiểu biết rất rõ về công nghệ.
+
+
+00:00:29,360 --> 00:00:35,450
+He knows what is the best way to implement loops, how to perform operations efficiently, what libraries
+Anh ấy biết cách tốt nhất để triển khai vòng lặp, cách thực hiện các hoạt động hiệu quả, thư viện nào là
+
+
+00:00:35,450 --> 00:00:37,790
+to use to access the database and so on.
+sử dụng để truy cập cơ sở dữ liệu, v.v.
+
+
+00:00:38,000 --> 00:00:42,740
+A software architect is also quite familiar with the technology and platform, although not as much
+Một kiến trúc sư phần mềm cũng khá quen thuộc với công nghệ và nền tảng, mặc dù không nhiều bằng
+
+
+00:00:42,740 --> 00:00:43,690
+as a developer.
+với tư cách là một nhà phát triển.
+
+
+00:00:43,700 --> 00:00:49,600
+But his main goal is to make sure the software design implements the requirements of the system.
+Nhưng mục tiêu chính của ông là đảm bảo thiết kế phần mềm thực hiện được các yêu cầu của hệ thống.
+
+
+00:00:49,610 --> 00:00:52,910
+He is less interested in the implementation details of the system.
+Ông ít quan tâm đến các chi tiết thực hiện của hệ thống.
+
+
+00:00:52,940 --> 00:00:54,830
+This is a developer's job.
+Đây là công việc của một nhà phát triển.
+
+
+00:00:55,940 --> 00:01:01,410
+The architect looks at the macro level and fuses the technology with the requirements.
+Kiến trúc sư nhìn vào cấp độ vĩ mô và kết hợp công nghệ với các yêu cầu.
+
+
+00:01:01,970 --> 00:01:07,420
+We will talk a lot about requirements later in this course, but let's lay the foundations for the requirements
+Chúng ta sẽ nói nhiều về các yêu cầu sau trong khóa học này, nhưng hãy đặt nền tảng cho các yêu cầu
+
+
+00:01:07,420 --> 00:01:08,920
+of almost any system.
+của hầu hết mọi hệ thống.
+
+
+00:01:08,920 --> 00:01:15,790
+And these are fast, secure, reliable, easy to maintain.
+Và chúng nhanh chóng, an toàn, đáng tin cậy và dễ bảo trì.
+
+
+00:01:16,770 --> 00:01:19,080
+In almost every system I've been involved.
+Trong hầu hết mọi hệ thống tôi đã tham gia.
+
+
+00:01:19,090 --> 00:01:21,570
+This list was the holy grail of the architecture.
+Danh sách này chính là chén thánh của kiến trúc.
+
+
+00:01:21,600 --> 00:01:27,390
+This is what the architecture was made for, to make the system fast, secure, reliable and easy to
+Đây là mục đích của kiến trúc này, để làm cho hệ thống nhanh chóng, an toàn, đáng tin cậy và dễ dàng
+
+
+00:01:27,390 --> 00:01:28,050
+maintain.
+duy trì.
+
+
+00:01:28,080 --> 00:01:32,250
+Of course, every system has its own definition of those items fast.
+Tất nhiên, mỗi hệ thống đều có định nghĩa riêng về những mục đó một cách nhanh chóng.
+
+
+00:01:32,250 --> 00:01:33,510
+In a real time application.
+Trong một ứng dụng thời gian thực.
+
+
+00:01:33,510 --> 00:01:39,600
+Working with satellites telemetry is not the same fast of a traditional information system geared towards
+Làm việc với dữ liệu từ xa của vệ tinh không giống như tốc độ của hệ thống thông tin truyền thống hướng tới
+
+
+00:01:39,600 --> 00:01:40,530
+end users.
+người dùng cuối.
+
+
+00:01:40,560 --> 00:01:48,090
+Likewise, reliability of a mission critical application which must have an uptime of 99.99% is not
+Tương tự như vậy, độ tin cậy của một ứng dụng quan trọng đối với nhiệm vụ phải có thời gian hoạt động là 99,99% không phải là
+
+
+00:01:48,090 --> 00:01:53,550
+the same as reliability of a chat application or a support system, which should be available only during
+giống như độ tin cậy của ứng dụng trò chuyện hoặc hệ thống hỗ trợ, chỉ khả dụng trong
+
+
+00:01:53,550 --> 00:01:54,930
+normal working hours.
+giờ làm việc bình thường.
+
+
+00:01:54,960 --> 00:01:59,550
+But still, this list is usually the defining list of every architecture.
+Nhưng dù sao thì danh sách này thường là danh sách xác định của mọi kiến trúc.
+
+
+00:01:59,910 --> 00:02:04,950
+Now, it's important to note that this list has nothing to do with technology, architectural patterns
+Bây giờ, điều quan trọng cần lưu ý là danh sách này không liên quan gì đến công nghệ, mẫu kiến trúc
+
+
+00:02:04,950 --> 00:02:07,140
+or platforms you don't see here.
+hoặc các nền tảng bạn không thấy ở đây.
+
+
+00:02:07,140 --> 00:02:13,410
+Use a microservices based architecture or use Java or don't use relational database.
+Sử dụng kiến trúc dựa trên dịch vụ vi mô hoặc sử dụng Java hoặc không sử dụng cơ sở dữ liệu quan hệ.
+
+
+00:02:13,440 --> 00:02:19,020
+That's because a good architect knows that technology patterns and all the other buzzwords are just
+Đó là bởi vì một kiến trúc sư giỏi biết rằng các mô hình công nghệ và tất cả các từ thông dụng khác chỉ là
+
+
+00:02:19,030 --> 00:02:20,530
+means to the end result.
+có nghĩa là đến kết quả cuối cùng.
+
+
+00:02:20,560 --> 00:02:24,160
+The technology should serve the requirements and not the other way around.
+Công nghệ phải phục vụ nhu cầu chứ không phải ngược lại.
+
+
+00:02:24,460 --> 00:02:31,330
+So to summarize, a software architect is someone who designs the system to be fast, secure, reliable
+Tóm lại, một kiến trúc sư phần mềm là người thiết kế hệ thống sao cho nhanh, an toàn, đáng tin cậy
+
+
+00:02:31,330 --> 00:02:37,360
+and easy to maintain and selects the optimal technology platforms and patterns to achieve these goals.
+và dễ bảo trì cũng như lựa chọn nền tảng và mô hình công nghệ tối ưu để đạt được các mục tiêu này.
+
+

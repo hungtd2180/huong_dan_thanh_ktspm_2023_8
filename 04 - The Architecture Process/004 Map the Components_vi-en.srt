@@ -1,0 +1,50 @@
+00:00:00,290 --> 00:00:05,120
+The next phase of the architecture process is mapping the various components of the system.
+Giai đoạn tiếp theo của quá trình kiến trúc là lập bản đồ các thành phần khác nhau của hệ thống.
+
+
+00:00:05,510 --> 00:00:08,000
+The components are the moving parts of the system.
+Các thành phần là các bộ phận chuyển động của hệ thống.
+
+
+00:00:08,000 --> 00:00:13,100
+They represent the various tasks of the system functional as well as non-functional.
+Chúng đại diện cho các nhiệm vụ khác nhau của hệ thống, cả chức năng và phi chức năng.
+
+
+00:00:14,030 --> 00:00:16,280
+The component map serves two goals.
+Bản đồ thành phần phục vụ hai mục tiêu.
+
+
+00:00:16,309 --> 00:00:19,590
+It helps you understand the system and its various parts.
+Nó giúp bạn hiểu hệ thống và các bộ phận khác nhau của nó.
+
+
+00:00:19,610 --> 00:00:25,190
+It's a great way to communicate to the client your understanding of the system, thus making sure you
+Đây là cách tuyệt vời để truyền đạt cho khách hàng hiểu biết của bạn về hệ thống, do đó đảm bảo rằng bạn
+
+
+00:00:25,190 --> 00:00:26,570
+are not missing anything.
+không thiếu thứ gì cả.
+
+
+00:00:26,870 --> 00:00:30,610
+Note that the component map is completely non-technical.
+Lưu ý rằng bản đồ thành phần hoàn toàn không mang tính kỹ thuật.
+
+
+00:00:30,620 --> 00:00:34,690
+You are yet to decide on the platform, the development tool, the database type.
+Bạn vẫn chưa quyết định về nền tảng, công cụ phát triển, loại cơ sở dữ liệu.
+
+
+00:00:34,700 --> 00:00:38,570
+This is just a map that displays the various capabilities of the system.
+Đây chỉ là bản đồ hiển thị các khả năng khác nhau của hệ thống.
+
+

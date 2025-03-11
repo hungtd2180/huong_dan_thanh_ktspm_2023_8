@@ -1,0 +1,65 @@
+00:00:00,290 --> 00:00:04,670
+In this section, we talked about system architecture and the main aspects of it.
+Trong phần này, chúng ta đã nói về kiến trúc hệ thống và các khía cạnh chính của nó.
+
+
+00:00:04,700 --> 00:00:09,650
+Using the concepts we have learned in this section, wisely, you will be able to design system architecture
+Sử dụng các khái niệm chúng ta đã học trong phần này một cách khôn ngoan, bạn sẽ có thể thiết kế kiến trúc hệ thống
+
+
+00:00:09,650 --> 00:00:14,660
+that ensures your system is fast, secure, reliable and easy to maintain.
+đảm bảo hệ thống của bạn nhanh chóng, an toàn, đáng tin cậy và dễ bảo trì.
+
+
+00:00:14,870 --> 00:00:19,550
+Note that it's extremely important to make the right choices as early as possible.
+Lưu ý rằng việc đưa ra những lựa chọn đúng đắn càng sớm càng tốt là vô cùng quan trọng.
+
+
+00:00:19,580 --> 00:00:23,620
+Many concepts we have discussed in this section are difficult to change once made.
+Nhiều khái niệm chúng ta đã thảo luận trong phần này rất khó thay đổi sau khi đã hình thành.
+
+
+00:00:23,630 --> 00:00:29,930
+For example, moving from rest API based messaging to queue based messaging will result in a rewrite
+Ví dụ, việc chuyển từ nhắn tin dựa trên API nghỉ ngơi sang nhắn tin dựa trên hàng đợi sẽ dẫn đến việc viết lại
+
+
+00:00:29,960 --> 00:00:32,330
+of at least some of the components of the system.
+của ít nhất một số thành phần của hệ thống.
+
+
+00:00:32,330 --> 00:00:36,680
+So always try to make sure your decisions are as informed as possible.
+Vì vậy, hãy luôn cố gắng đảm bảo rằng quyết định của bạn được sáng suốt nhất có thể.
+
+
+00:00:36,680 --> 00:00:39,350
+Also, note these concepts are not exclusive.
+Ngoài ra, lưu ý rằng những khái niệm này không mang tính loại trừ.
+
+
+00:00:39,380 --> 00:00:44,360
+Of course there are more decisions that must be factored in and of course there are a lot more of work
+Tất nhiên còn nhiều quyết định khác phải được đưa vào xem xét và tất nhiên còn nhiều công việc hơn nữa
+
+
+00:00:44,360 --> 00:00:48,920
+to do than to choose the right logging and monitoring and to select the right messaging method.
+để làm hơn là chọn đúng cách ghi nhật ký và giám sát và chọn đúng phương pháp nhắn tin.
+
+
+00:00:49,010 --> 00:00:54,320
+But the concepts discussed here are usually the most important ones and you will find yourself using
+Nhưng các khái niệm được thảo luận ở đây thường là những khái niệm quan trọng nhất và bạn sẽ thấy mình sử dụng
+
+
+00:00:54,320 --> 00:00:56,690
+them in almost every system you will design.
+chúng trong hầu hết mọi hệ thống bạn thiết kế.
+
+

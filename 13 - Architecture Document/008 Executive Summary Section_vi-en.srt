@@ -1,0 +1,270 @@
+00:00:00,590 --> 00:00:03,560
+The next section in the document is executive summary.
+Phần tiếp theo trong tài liệu là tóm tắt nội dung.
+
+
+00:00:03,590 --> 00:00:07,130
+Its length is usually a few pages, usually no more than three.
+Độ dài của nó thường là một vài trang, thường không quá ba trang.
+
+
+00:00:07,130 --> 00:00:13,370
+And its audience, as you can guess, is mainly management, meaning the CEO, CTO and project manager.
+Và đối tượng của nó, như bạn có thể đoán, chủ yếu là ban quản lý, nghĩa là CEO, CTO và quản lý dự án.
+
+
+00:00:13,730 --> 00:00:19,310
+The executive summary presents the architecture designed for the system in a very high level that allows
+Tóm tắt trình bày kiến trúc được thiết kế cho hệ thống ở cấp độ rất cao cho phép
+
+
+00:00:19,340 --> 00:00:22,520
+non-technical people to understand what is basically going on.
+những người không có chuyên môn hiểu được những gì cơ bản đang diễn ra.
+
+
+00:00:22,610 --> 00:00:25,250
+Now why do we need executive summary?
+Bây giờ tại sao chúng ta cần tóm tắt điều hành?
+
+
+00:00:25,280 --> 00:00:30,650
+After all, the document itself describes the architecture in great length and contains all the details
+Rốt cuộc, bản thân tài liệu mô tả kiến trúc rất chi tiết và chứa tất cả các chi tiết
+
+
+00:00:30,650 --> 00:00:31,220
+about it.
+về nó.
+
+
+00:00:31,250 --> 00:00:36,290
+Why do we need a dedicated section that reiterates an already existing information?
+Tại sao chúng ta cần một phần chuyên biệt để nhắc lại thông tin đã có?
+
+
+00:00:36,470 --> 00:00:38,040
+Well, here is the answer.
+Vâng, đây là câu trả lời.
+
+
+00:00:38,060 --> 00:00:42,920
+Remember that one of the main goals of the architectural document is to make the management confident
+Hãy nhớ rằng một trong những mục tiêu chính của tài liệu kiến trúc là làm cho ban quản lý tự tin
+
+
+00:00:42,920 --> 00:00:47,360
+in your work and make them feel they made the right choice working with you.
+trong công việc của bạn và khiến họ cảm thấy họ đã đưa ra lựa chọn đúng đắn khi làm việc với bạn.
+
+
+00:00:47,390 --> 00:00:52,820
+Of course, if the CEO will read all the architectural document, he will be very impressed and will
+Tất nhiên, nếu CEO đọc hết tất cả các tài liệu kiến trúc, ông ấy sẽ rất ấn tượng và sẽ
+
+
+00:00:52,820 --> 00:00:54,320
+definitely like your work.
+chắc chắn thích công việc của bạn.
+
+
+00:00:54,350 --> 00:00:56,960
+Same goes for the CTO and project manager.
+Tương tự như vậy đối với CTO và quản lý dự án.
+
+
+00:00:57,320 --> 00:00:59,880
+Problem is, they won't do it.
+Vấn đề là họ sẽ không làm điều đó.
+
+
+00:00:59,940 --> 00:01:03,360
+The managers are usually very busy non-technical persons.
+Các nhà quản lý thường là những người rất bận rộn không có chuyên môn kỹ thuật.
+
+
+00:01:03,360 --> 00:01:09,660
+They will have no idea what are the intricate differences between Rest API and Signal R, and they couldn't
+Họ sẽ không biết sự khác biệt phức tạp giữa Rest API và Signal R là gì và họ không thể
+
+
+00:01:09,660 --> 00:01:12,400
+care less about stateless or dependency injection.
+ít quan tâm đến trạng thái không trạng thái hoặc tiêm phụ thuộc.
+
+
+00:01:12,420 --> 00:01:16,590
+They are business oriented people and they want to know the system is in good hands.
+Họ là những người hướng đến kinh doanh và họ muốn biết hệ thống được quản lý tốt.
+
+
+00:01:16,590 --> 00:01:17,550
+Yours.
+Của bạn.
+
+
+00:01:17,730 --> 00:01:23,370
+So if you will expect them to actually read the document, which is a very long and technical one,
+Vì vậy, nếu bạn mong đợi họ thực sự đọc tài liệu này, một tài liệu rất dài và mang tính kỹ thuật,
+
+
+00:01:23,370 --> 00:01:27,630
+they will simply stop at the middle and will have no idea what they just read.
+họ sẽ chỉ dừng lại ở giữa và không biết mình vừa đọc gì.
+
+
+00:01:27,660 --> 00:01:32,490
+They won't feel better about working with you and they definitely won't be more confident about it.
+Họ sẽ không cảm thấy tốt hơn khi làm việc với bạn và chắc chắn họ sẽ không tự tin hơn về điều đó.
+
+
+00:01:32,490 --> 00:01:35,340
+And this is where the executive summary fits in.
+Và đây chính là nơi tóm tắt nội dung phù hợp.
+
+
+00:01:35,490 --> 00:01:41,280
+The goal of the executive summary is to provide a very high level view of the architecture using simple
+Mục tiêu của bản tóm tắt điều hành là cung cấp góc nhìn ở cấp độ rất cao về kiến trúc bằng cách sử dụng 27 đơn giản
+
+
+00:01:41,280 --> 00:01:46,950
+words and not too many technical terms, thus boosting the management confidence in working with you.
+từ ngữ và không quá nhiều thuật ngữ kỹ thuật, do đó tăng cường sự tự tin của ban quản lý khi làm việc với bạn.
+
+
+00:01:47,100 --> 00:01:52,410
+It should convey the broad idea and concepts of the architecture, but should refrain from using too
+Nó phải truyền tải được ý tưởng và khái niệm rộng lớn về kiến trúc, nhưng không nên sử dụng quá
+
+
+00:01:52,410 --> 00:01:54,030
+low level technical details.
+chi tiết kỹ thuật cấp thấp.
+
+
+00:01:54,060 --> 00:01:56,970
+Try to get into the mind of your target audience here.
+Cố gắng hiểu được tâm trí của đối tượng mục tiêu ở đây.
+
+
+00:01:56,970 --> 00:02:02,940
+This is someone who has a lot on his shoulders, has no time for reading long technical documents and
+Đây là người có nhiều việc phải làm, không có thời gian để đọc các tài liệu kỹ thuật dài và
+
+
+00:02:02,940 --> 00:02:06,690
+should be satisfied quite quickly with the solution presented.
+nên nhanh chóng hài lòng với giải pháp được đưa ra.
+
+
+00:02:06,720 --> 00:02:10,449
+You should write the executive summary specifically for this person.
+Bạn nên viết tóm tắt cụ thể cho người này.
+
+
+00:02:10,470 --> 00:02:13,510
+Now a few tips for the executive summary.
+Bây giờ là một vài mẹo cho bản tóm tắt.
+
+
+00:02:13,530 --> 00:02:16,370
+First, use charts and diagrams.
+Đầu tiên, sử dụng biểu đồ và sơ đồ.
+
+
+00:02:16,380 --> 00:02:20,390
+They make a big impression and are really useful in creating confidence.
+Chúng tạo ra ấn tượng lớn và thực sự hữu ích trong việc tạo sự tự tin.
+
+
+00:02:20,400 --> 00:02:24,920
+Usually you will already have a diagram depicting the high level architecture of the system.
+Thông thường bạn sẽ có sơ đồ mô tả kiến trúc cấp cao của hệ thống.
+
+
+00:02:24,930 --> 00:02:27,240
+Use it also in the executive summary.
+Cũng sử dụng nó trong phần tóm tắt.
+
+
+00:02:27,510 --> 00:02:33,360
+Second, the actual writing of the executive summary should take place after writing the architecture
+Thứ hai, việc viết tóm tắt thực tế nên được thực hiện sau khi viết xong kiến trúc
+
+
+00:02:33,360 --> 00:02:34,410
+related sections.
+các phần liên quan.
+
+
+00:02:34,410 --> 00:02:40,470
+Remember, the executive summary summarizes the architecture and it cannot summarize something that
+Hãy nhớ rằng, phần tóm tắt nội dung tóm tắt kiến trúc và nó không thể tóm tắt điều gì đó
+
+
+00:02:40,470 --> 00:02:41,700
+wasn't created yet.
+chưa được tạo ra.
+
+
+00:02:41,730 --> 00:02:43,610
+Now, don't get confused here.
+Bây giờ, đừng nhầm lẫn ở đây.
+
+
+00:02:43,620 --> 00:02:49,650
+The executive summary appears before the architecture sections, but is written after them.
+Tóm tắt điều hành xuất hiện trước các phần kiến trúc, nhưng được viết sau chúng.
+
+
+00:02:49,830 --> 00:02:54,150
+Third, use well known technical terms and use them separately.
+Thứ ba, sử dụng các thuật ngữ kỹ thuật phổ biến và sử dụng chúng một cách riêng biệt.
+
+
+00:02:54,360 --> 00:02:57,420
+You can mention microservices cloud or scalability.
+Bạn có thể đề cập đến đám mây vi dịch vụ hoặc khả năng mở rộng.
+
+
+00:02:57,450 --> 00:03:02,130
+Do not mention low level terms such as dependency injection or signal.
+Không đề cập đến các thuật ngữ cấp thấp như tiêm phụ thuộc hoặc tín hiệu.
+
+
+00:03:02,550 --> 00:03:05,130
+Fourth, do not repeat yourself.
+Thứ tư, đừng lặp lại chính mình.
+
+
+00:03:05,160 --> 00:03:08,730
+The document already describes the background and the requirements.
+Tài liệu đã mô tả bối cảnh và các yêu cầu.
+
+
+00:03:08,730 --> 00:03:11,220
+Do not write them again in the executive summary.
+Đừng viết lại chúng trong phần tóm tắt.
+
+
+00:03:11,250 --> 00:03:15,210
+This will just exhaust the reader and will make him appreciate you less.
+Điều này sẽ chỉ làm người đọc mệt mỏi và làm họ không đánh giá cao bạn nữa.
+
+
+00:03:15,240 --> 00:03:19,470
+Remember, readers of the executive summary have limited time and patience.
+Hãy nhớ rằng, người đọc bản tóm tắt có thời gian và sự kiên nhẫn hạn chế.
+
+
+00:03:19,470 --> 00:03:20,970
+Do not challenge them.
+Đừng thách thức họ.
+
+
+00:03:21,720 --> 00:03:27,120
+Okay, so now that we are done with the executive summary, let's continue to the next section.
+Được rồi, bây giờ chúng ta đã hoàn thành phần tóm tắt, hãy tiếp tục phần tiếp theo.
+
+

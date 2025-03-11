@@ -1,0 +1,155 @@
+00:00:00,260 --> 00:00:05,060
+One of the most important aspects of a well written component is its exception handling.
+Một trong những khía cạnh quan trọng nhất của một thành phần được viết tốt là khả năng xử lý ngoại lệ của nó.
+
+
+00:00:05,090 --> 00:00:09,950
+We have already covered exception handling as a part of the layered pattern, but there are some best
+Chúng tôi đã đề cập đến việc xử lý ngoại lệ như một phần của mô hình phân lớp, nhưng có một số 3 cách tốt nhất
+
+
+00:00:09,950 --> 00:00:13,790
+practices to employ when handling exceptions that weren't mentioned before.
+các biện pháp thực hành cần áp dụng khi xử lý các trường hợp ngoại lệ chưa được đề cập trước đó.
+
+
+00:00:13,940 --> 00:00:18,320
+First, only catch exception if you have something to do with it.
+Đầu tiên, chỉ bắt ngoại lệ nếu bạn có liên quan đến nó.
+
+
+00:00:18,470 --> 00:00:24,260
+I often see code that catches exceptions and then simply writes the exception to a log and does nothing
+Tôi thường thấy mã bắt được ngoại lệ và sau đó chỉ cần ghi ngoại lệ vào nhật ký và không làm gì cả
+
+
+00:00:24,260 --> 00:00:25,040
+else with it.
+khác với nó.
+
+
+00:00:25,070 --> 00:00:30,320
+This is usually not a good way to handle exceptions as this behavior can be achieved using a central
+Đây thường không phải là cách tốt để xử lý các trường hợp ngoại lệ vì hành vi này có thể đạt được bằng cách sử dụng trung tâm
+
+
+00:00:30,320 --> 00:00:36,980
+exception handling mechanism such as filters in ASP.Net and does not require to have a try catch in
+cơ chế xử lý ngoại lệ như bộ lọc trong ASP.Net và không yêu cầu phải có lệnh try catch trong
+
+
+00:00:36,980 --> 00:00:38,270
+every piece of code.
+mỗi đoạn mã.
+
+
+00:00:38,390 --> 00:00:44,510
+If there is a specific action to be taken, if an exception is thrown, such as rolling back a transaction
+Nếu có một hành động cụ thể cần thực hiện, nếu một ngoại lệ được đưa ra, chẳng hạn như khôi phục giao dịch
+
+
+00:00:44,510 --> 00:00:50,990
+or implementing some kind of victory algorithm or wrapping the exception in a different one, then it's
+hoặc thực hiện một số loại thuật toán chiến thắng hoặc gói ngoại lệ trong một thuật toán khác, thì nó là
+
+
+00:00:50,990 --> 00:00:51,980
+a good idea to catch it.
+một ý tưởng tốt để bắt nó.
+
+
+00:00:51,980 --> 00:00:54,860
+But other than that, it's better to avoid it.
+Nhưng ngoài ra, tốt hơn hết là nên tránh nó.
+
+
+00:00:55,280 --> 00:01:02,340
+Second, always catch a specific exception when catching an exception, you should be aware of what
+Thứ hai, luôn luôn bắt một ngoại lệ cụ thể khi bắt một ngoại lệ, bạn nên biết những gì
+
+
+00:01:02,340 --> 00:01:06,510
+kind of exception to look for, for example, when working with databases.
+loại ngoại lệ cần tìm kiếm, ví dụ, khi làm việc với cơ sở dữ liệu.
+
+
+00:01:06,540 --> 00:01:12,930
+Try to catch an exception and handle it correctly when you don't specify a specific exception to catch.
+Cố gắng bắt ngoại lệ và xử lý đúng khi bạn không chỉ định ngoại lệ cụ thể để bắt.
+
+
+00:01:12,960 --> 00:01:17,160
+You don't really know what you will get and may handle the exception in the wrong way.
+Bạn thực sự không biết mình sẽ nhận được gì và có thể xử lý ngoại lệ theo cách sai.
+
+
+00:01:17,190 --> 00:01:22,860
+For example, if you work with a database and don't specify the exception type and simply assume that
+Ví dụ, nếu bạn làm việc với cơ sở dữ liệu và không chỉ định loại ngoại lệ và chỉ đơn giản cho rằng
+
+
+00:01:22,860 --> 00:01:28,500
+the exception is database related, you might encounter a different exception, say division by zero
+ngoại lệ liên quan đến cơ sở dữ liệu, bạn có thể gặp phải một ngoại lệ khác, chẳng hạn như chia cho số không
+
+
+00:01:28,500 --> 00:01:29,220
+exception.
+ngoại lệ.
+
+
+00:01:29,220 --> 00:01:34,620
+That has nothing to do with a database action and rolling back the transaction might not be a good idea.
+Điều đó không liên quan gì đến hành động cơ sở dữ liệu và việc khôi phục giao dịch có thể không phải là ý tưởng hay.
+
+
+00:01:35,070 --> 00:01:40,290
+Third use try catch on the smallest code fragment possible.
+Lần thứ ba sử dụng try catch trên đoạn mã nhỏ nhất có thể.
+
+
+00:01:41,010 --> 00:01:47,880
+More than once a saw methods that began with try and ended with catch and the developer thinking this
+Nhiều lần thấy các phương pháp bắt đầu bằng try và kết thúc bằng catch và nhà phát triển nghĩ rằng
+
+
+00:01:47,880 --> 00:01:49,500
+is the right way to handle exceptions.
+là cách đúng đắn để xử lý các trường hợp ngoại lệ.
+
+
+00:01:49,500 --> 00:01:51,060
+Well, this is wrong.
+Vâng, điều này là sai.
+
+
+00:01:51,090 --> 00:01:55,850
+Always use the try catch mechanism on the smallest code fragment possible.
+Luôn sử dụng cơ chế try catch trên đoạn mã nhỏ nhất có thể.
+
+
+00:01:55,860 --> 00:02:02,440
+If you have a line of code that accesses the database, surround it and only it with try catch.
+Nếu bạn có dòng mã truy cập cơ sở dữ liệu, hãy bao quanh nó và chỉ nó bằng lệnh try catch.
+
+
+00:02:02,460 --> 00:02:08,020
+If you have a line that divides a number with another one, try to catch a divide by zero exception.
+Nếu bạn có một dòng chia một số cho một số khác, hãy cố gắng phát hiện ngoại lệ chia cho số không.
+
+
+00:02:08,039 --> 00:02:13,440
+Always look at specific lines of code and examine what exceptions might be thrown from them and catch
+Luôn xem xét các dòng mã cụ thể và kiểm tra những ngoại lệ nào có thể được đưa ra từ chúng và bắt
+
+
+00:02:13,440 --> 00:02:14,340
+those exceptions.
+những ngoại lệ đó.
+
+
+00:02:14,370 --> 00:02:18,660
+Never surround large chunks of code with general unneeded exception handling.
+Không bao giờ bao quanh các đoạn mã lớn bằng cách xử lý ngoại lệ chung không cần thiết.
+
+

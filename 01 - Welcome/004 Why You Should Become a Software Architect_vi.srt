@@ -1,0 +1,111 @@
+00:00:00,620 --> 00:00:02,
+Trước khi thảo luận về cách thực hiện.
+
+00:00:02,120 --> 00:00:03,
+Chúng ta hãy nói về lý do tại sao.
+
+00:00:03,700 --> 00:00:05,
+Tại sao trở thành kiến trúc sư phần mềm lại là một ý tưởng hay?
+
+00:00:05,960 --> 00:00:07,
+Nó có gì hấp dẫn thế?
+
+00:00:07,760 --> 00:00:08,
+Câu hỏi hay đấy.
+
+00:00:09,140 --> 00:00:12,
+Có ba lý do chính đáng để trở thành một kiến trúc sư phần mềm.
+
+00:00:12,680 --> 00:00:17,
+Thứ nhất, đây thực sự là một công việc rất, rất thú vị.
+
+00:00:17,270 --> 00:00:24,
+Là một kiến trúc sư phần mềm, thói quen hàng ngày của bạn có thể bao gồm việc nói chuyện với CXO, các CEO, CFO, CIO và
+
+00:00:24,320 --> 00:00:29,
+thảo luận thêm về công nghệ với người quản lý phát triển và tiến hành một số nghiên cứu về các mẫu mới
+
+00:00:29,840 --> 00:00:30,
+và nền tảng.
+
+00:00:31,130 --> 00:00:37,
+Thực sự không có vai trò nào khác trong ngành công nghiệp phần mềm, đa dạng, rộng lớn và trải rộng như vậy
+
+00:00:37,070 --> 00:00:40,
+toàn bộ tổ chức đóng vai trò là kiến trúc sư.
+
+00:00:40,520 --> 00:00:46,
+Như chúng ta sẽ thấy sau trong khóa học này, công việc của một kiến trúc sư giỏi liên quan đến kinh doanh, công nghệ, phương pháp luận,
+
+00:00:46,520 --> 00:00:48,
+kỹ năng mềm và nhiều hơn nữa.
+
+00:00:48,110 --> 00:00:52,
+Tôi có thể đảm bảo với bạn rằng với tư cách là một kiến trúc sư, bạn sẽ không bao giờ cảm thấy nhàm chán.
+
+00:00:53,960 --> 00:00:58,
+Lý do thứ hai: Con đường sự nghiệp và khả năng hiển thị.
+
+00:00:58,070 --> 00:01:04,
+Là một kiến trúc sư, bạn giao tiếp với mọi cấp độ của tổ chức, điều này sẽ giúp bạn trở nên khá nổi bật
+
+00:01:04,530 --> 00:01:07,
+cho ban quản lý và sẽ mở đường cho những thăng tiến trong tương lai.
+
+00:01:07,860 --> 00:01:13,
+Một người bạn của tôi đã làm lập trình viên trong năm năm và cảm thấy đã đến lúc phải chuyển sang nghề khác.
+
+00:01:13,410 --> 00:01:18,
+Anh ấy không chắc chắn nên tìm loại công việc nào và hiểu rõ anh ấy cũng như khả năng của anh ấy, tôi đã giới thiệu anh ấy
+
+00:01:18,690 --> 00:01:20,
+tìm kiếm vị trí kiến trúc sư cơ sở.
+
+00:01:21,960 --> 00:01:27,
+Sau một vài tuần, anh ấy đã tìm được việc làm và ngạc nhiên trước lượng thông tin liên lạc mà anh ấy có được với
+
+00:01:27,030 --> 00:01:29,
+CEO và CIO của công ty.
+
+00:01:29,490 --> 00:01:33,
+Ngày nay, anh là kiến trúc sư cao cấp của một trong những công ty lớn nhất hành tinh.
+
+00:01:33,780 --> 00:01:38,
+Vâng, việc trở thành một kiến trúc sư phần mềm chắc chắn có thể thúc đẩy sự nghiệp của bạn tiến triển.
+
+00:01:38,910 --> 00:01:41,
+Lý do thứ ba là tiền.
+
+00:01:42,120 --> 00:01:45,
+Mọi người đều muốn điều đó, nhưng ít người sẵn sàng nói về nó.
+
+00:01:45,810 --> 00:01:48,
+Nhưng hãy xem xét những con số này.
+
+00:01:48,480 --> 00:01:53,
+Như bạn có thể thấy, mức lương trung bình của một kiến trúc sư gần gấp đôi mức lương của một nhà phát triển.
+
+00:01:53,460 --> 00:01:57,
+Tôi sẽ im lặng trong vài giây trong khi bạn tính toán.
+
+00:02:01,410 --> 00:02:04,
+Nhưng thành thật mà nói, bạn không nên chỉ quan tâm đến tiền.
+
+00:02:04,080 --> 00:02:06,
+Một kiến trúc sư giỏi là người yêu thích công việc mình làm.
+
+00:02:06,870 --> 00:02:12,
+Bạn nên yêu thích thử thách và tận hưởng các cuộc thảo luận, nắm bắt nghiên cứu và chỉ sau đó mới suy nghĩ
+
+00:02:12,150 --> 00:02:13,
+về tiền bạc.
+
+00:02:14,320 --> 00:02:18,
+Tóm lại, đây là ba lý do để trở thành một kiến trúc sư.
+
+00:02:18,070 --> 00:02:20,
+Và tin tôi đi, những lý do này là có thật.
+
+00:02:20,890 --> 00:02:26,
+Nếu bạn đang tìm kiếm một công việc thú vị, đầy hứa hẹn và có thu nhập cao, hãy trở thành một kiến trúc sư phần mềm.
+

@@ -1,0 +1,695 @@
+00:00:00,230 --> 00:00:05,240
+We have already explained what non-functional requirements are, but let's go over it again just in
+Chúng tôi đã giải thích các yêu cầu phi chức năng là gì, nhưng chúng ta hãy xem lại nó một lần nữa chỉ trong
+
+
+00:00:05,240 --> 00:00:05,900
+case.
+trường hợp
+
+
+00:00:05,930 --> 00:00:09,320
+So while functional requirements define what the system should do.
+Vì vậy, trong khi các yêu cầu chức năng xác định hệ thống nên làm gì.
+
+
+00:00:09,350 --> 00:00:13,250
+Non-functional requirements describe what the system should deal with.
+Các yêu cầu phi chức năng mô tả những gì hệ thống cần xử lý.
+
+
+00:00:13,370 --> 00:00:16,760
+Systems can deal with many challenges during their operation.
+Hệ thống có thể giải quyết được nhiều thách thức trong quá trình hoạt động.
+
+
+00:00:16,790 --> 00:00:19,610
+They can experience large number of concurrent users.
+Họ có thể trải nghiệm số lượng lớn người dùng cùng lúc.
+
+
+00:00:19,610 --> 00:00:24,710
+They can experience servers crash, they can suffer extremely high load of requests and so on.
+Họ có thể gặp phải tình trạng máy chủ bị sập, họ có thể phải chịu lượng yêu cầu cực lớn, v.v.
+
+
+00:00:24,860 --> 00:00:30,080
+Non-functional requirements basically describe what is the expected environment for the system with
+Các yêu cầu phi chức năng về cơ bản mô tả môi trường mong đợi cho hệ thống với
+
+
+00:00:30,080 --> 00:00:31,940
+emphasis on edge cases.
+nhấn mạnh vào các trường hợp ngoại lệ.
+
+
+00:00:32,570 --> 00:00:37,100
+If you will take a look at the Wikipedia page for non-functional requirements, you will see a long
+Nếu bạn xem trang Wikipedia về các yêu cầu không chức năng, bạn sẽ thấy một đoạn dài
+
+
+00:00:37,100 --> 00:00:38,590
+list of those requirements.
+danh sách các yêu cầu đó.
+
+
+00:00:38,600 --> 00:00:43,820
+In real life, however, there are five non-functional requirements that we will usually deal with.
+Tuy nhiên, trong thực tế, có năm yêu cầu không mang tính chức năng mà chúng ta thường phải giải quyết.
+
+
+00:00:43,880 --> 00:00:52,070
+Those five are performance load data, volume, concurrent users and SLA.
+Năm yếu tố đó là dữ liệu tải hiệu suất, khối lượng, người dùng đồng thời và SLA.
+
+
+00:00:53,300 --> 00:00:55,250
+Let's discuss each of them.
+Chúng ta hãy thảo luận từng cái một.
+
+
+00:00:55,670 --> 00:00:56,930
+Performance.
+Hiệu suất.
+
+
+00:00:57,230 --> 00:01:00,150
+Well, that sounds like a simple requirement, right?
+Vâng, nghe có vẻ như là một yêu cầu đơn giản, phải không?
+
+
+00:01:00,180 --> 00:01:02,730
+What is the required performance for this system?
+Hiệu suất cần thiết cho hệ thống này là gì?
+
+
+00:01:02,760 --> 00:01:03,600
+Fast.
+Nhanh.
+
+
+00:01:03,630 --> 00:01:04,680
+Easy peasy.
+Dễ như ăn kẹo.
+
+
+00:01:04,890 --> 00:01:06,990
+Well, not so fast.
+Vâng, không nhanh như vậy đâu.
+
+
+00:01:07,200 --> 00:01:12,420
+See what I did here when talking about performance, there are two things we should keep in mind.
+Xem những gì tôi đã làm ở đây khi nói về hiệu suất, có hai điều chúng ta nên ghi nhớ.
+
+
+00:01:12,810 --> 00:01:19,290
+One, always talk in numbers, and two, latency and throughput.
+Một là luôn nói về con số, và hai là độ trễ và thông lượng.
+
+
+00:01:19,530 --> 00:01:21,300
+Let's talk about the first one.
+Chúng ta hãy nói về cái đầu tiên.
+
+
+00:01:22,410 --> 00:01:28,080
+When the client asks for a fast system, your next question should be what is fast?
+Khi khách hàng yêu cầu một hệ thống nhanh, câu hỏi tiếp theo của bạn nên là nhanh như thế nào?
+
+
+00:01:28,290 --> 00:01:31,390
+Fast can mean a lot of things in a lot of systems.
+Nhanh có thể có nhiều ý nghĩa trong nhiều hệ thống.
+
+
+00:01:31,410 --> 00:01:38,340
+I've worked on systems where fast meant 30 milliseconds and on systems where fast meant five seconds.
+Tôi đã làm việc trên các hệ thống mà nhanh có nghĩa là 30 mili giây và trên các hệ thống mà nhanh có nghĩa là năm giây.
+
+
+00:01:38,520 --> 00:01:43,380
+The problem is that your client probably wasn't thinking on the exact number and you will have to help
+Vấn đề là khách hàng của bạn có thể không nghĩ đến con số chính xác và bạn sẽ phải giúp
+
+
+00:01:43,380 --> 00:01:44,190
+him with that.
+anh ấy với điều đó.
+
+
+00:01:44,820 --> 00:01:50,400
+The rule of thumb is that when there is an end user at the end of the flow, we usually need the task
+Nguyên tắc chung là khi có người dùng cuối ở cuối luồng, chúng ta thường cần nhiệm vụ
+
+
+00:01:50,400 --> 00:01:52,620
+to be complete in less than a second.
+để hoàn thành trong vòng chưa đầy một giây.
+
+
+00:01:52,980 --> 00:01:58,950
+When working in a B2B environment, that's a business to business, we are usually looking at faster
+Khi làm việc trong môi trường B2B, tức là doanh nghiệp với doanh nghiệp, chúng ta thường hướng đến tốc độ nhanh hơn
+
+
+00:01:58,950 --> 00:02:02,610
+systems that can measure even 100 milliseconds per task.
+hệ thống có thể đo được thậm chí 100 mili giây cho mỗi nhiệm vụ.
+
+
+00:02:02,640 --> 00:02:09,060
+The reason for that is that we human beings are less sensitive to subsecond delays and for us, a data
+Lý do cho điều đó là con người chúng ta ít nhạy cảm hơn với độ trễ dưới một giây và đối với chúng ta, dữ liệu
+
+
+00:02:09,060 --> 00:02:13,740
+that is displayed in one second or 700 milliseconds looks almost the same.
+được hiển thị trong một giây hoặc 700 mili giây trông gần như giống nhau.
+
+
+00:02:13,890 --> 00:02:20,010
+While for a software running on a machine with CPU cycles of a few milliseconds, this will be a very
+Trong khi đối với một phần mềm chạy trên máy có chu kỳ CPU là vài mili giây, thì đây sẽ là một
+
+
+00:02:20,010 --> 00:02:20,790
+long time.
+lâu lắm rồi.
+
+
+00:02:21,740 --> 00:02:27,470
+But again, the most important thing is to work out this number together with the client or system analyst.
+Nhưng một lần nữa, điều quan trọng nhất là phải tính toán con số này cùng với khách hàng hoặc nhà phân tích hệ thống.
+
+
+00:02:28,640 --> 00:02:31,280
+The second concept is about latency and throughput.
+Khái niệm thứ hai là về độ trễ và thông lượng.
+
+
+00:02:31,310 --> 00:02:35,990
+Those two words define the way we look at performance and give us two points of view on it.
+Hai từ đó định nghĩa cách chúng ta nhìn nhận hiệu suất và cung cấp cho chúng ta hai góc nhìn về nó.
+
+
+00:02:36,020 --> 00:02:37,490
+Let's begin with latency.
+Chúng ta hãy bắt đầu với độ trễ.
+
+
+00:02:38,300 --> 00:02:44,120
+Latency answers the question How much time does it take to perform a single task in the application?
+Độ trễ trả lời câu hỏi Cần bao nhiêu thời gian để thực hiện một tác vụ duy nhất trong ứng dụng?
+
+
+00:02:44,210 --> 00:02:49,130
+For example, how much time will it take for the API to save the user data in the database?
+Ví dụ, phải mất bao lâu để API lưu dữ liệu người dùng vào cơ sở dữ liệu?
+
+
+00:02:49,160 --> 00:02:53,750
+Or how much time will it take to read a single file from the file system?
+Hoặc sẽ mất bao lâu để đọc một tập tin duy nhất từ hệ thống tập tin?
+
+
+00:02:54,320 --> 00:02:58,700
+You can see that the latency deals with the time it takes to perform a single task.
+Bạn có thể thấy rằng độ trễ liên quan đến thời gian cần thiết để thực hiện một tác vụ duy nhất.
+
+
+00:02:59,090 --> 00:03:03,440
+Throughput, on the other hand, answers a completely different question.
+Ngược lại, thông lượng trả lời một câu hỏi hoàn toàn khác.
+
+
+00:03:03,680 --> 00:03:07,520
+How many tasks can be performed in a given time unit?
+Có bao nhiêu nhiệm vụ có thể được thực hiện trong một đơn vị thời gian nhất định?
+
+
+00:03:07,670 --> 00:03:14,600
+For example, how many users can be saved in the database in a minute, or how many files can be read
+Ví dụ, có bao nhiêu người dùng có thể được lưu trong cơ sở dữ liệu trong một phút hoặc có bao nhiêu tệp có thể được đọc
+
+
+00:03:14,600 --> 00:03:15,560
+in a second?
+trong một giây?
+
+
+00:03:15,920 --> 00:03:21,110
+Now let's look at some numbers so we can understand better the difference between latency and throughput.
+Bây giờ chúng ta hãy xem xét một số con số để có thể hiểu rõ hơn sự khác biệt giữa độ trễ và thông lượng.
+
+
+00:03:21,140 --> 00:03:25,250
+Let's say the latency of saving user data is one second.
+Giả sử độ trễ lưu dữ liệu người dùng là một giây.
+
+
+00:03:25,370 --> 00:03:29,310
+This is quite slow, but let's stay with it for the sake of the discussion.
+Điều này khá chậm, nhưng chúng ta hãy tiếp tục vì mục đích thảo luận.
+
+
+00:03:29,790 --> 00:03:32,040
+Now, what would be the throughput?
+Bây giờ, thông lượng sẽ là bao nhiêu?
+
+
+00:03:32,070 --> 00:03:34,740
+Can we know how many users can be saved in one minute?
+Chúng ta có thể biết được có bao nhiêu người dùng có thể được cứu trong một phút không?
+
+
+00:03:34,770 --> 00:03:36,960
+The answer is a resounding no.
+Câu trả lời chắc chắn là số
+
+
+00:03:36,990 --> 00:03:42,120
+If the application is well designed, deployed on a strong hardware and knows its way around the threads,
+Nếu ứng dụng được thiết kế tốt, triển khai trên phần cứng mạnh và biết cách xử lý các luồng,
+
+
+00:03:42,150 --> 00:03:46,110
+it might have a throughput of 1000 users saved in one minute.
+nó có thể có lưu lượng 1000 người dùng trong một phút.
+
+
+00:03:46,230 --> 00:03:51,510
+On the other hand, if the code is buggy and there are a lot of memory leaks and no concurrency at all,
+Mặt khác, nếu mã lỗi và có nhiều rò rỉ bộ nhớ và không có sự đồng thời nào cả,
+
+
+00:03:51,510 --> 00:03:56,760
+we won't be able to reach a throughput of 60, which is the latency multiplied by 60, the number of
+chúng ta sẽ không thể đạt được thông lượng là 60, tức là độ trễ nhân với 60, tức là số
+
+
+00:03:56,760 --> 00:03:57,960
+seconds in a minute.
+giây trong một phút.
+
+
+00:03:58,350 --> 00:04:00,870
+So this is the difference between latency and throughput.
+Vậy đây là sự khác biệt giữa độ trễ và thông lượng.
+
+
+00:04:00,870 --> 00:04:05,100
+And when discussing performance, both of them must be mentioned and set.
+Và khi thảo luận về hiệu suất, cả hai đều phải được đề cập và thiết lập.
+
+
+00:04:05,640 --> 00:04:07,530
+Now let's talk about load.
+Bây giờ chúng ta hãy nói về tải.
+
+
+00:04:07,560 --> 00:04:13,170
+The load non-functional requirement defines what is the load or quantity of the application will have
+Yêu cầu không chức năng tải xác định tải hoặc số lượng ứng dụng sẽ có
+
+
+00:04:13,170 --> 00:04:15,030
+to withstand without crashing.
+để chịu đựng mà không bị va chạm.
+
+
+00:04:15,240 --> 00:04:18,990
+The exact definition of load depends on the exact type of the application.
+Định nghĩa chính xác của tải phụ thuộc vào loại ứng dụng cụ thể.
+
+
+00:04:18,990 --> 00:04:24,720
+For example, for a web API based application, the load will usually be defined as how many concurrent
+Ví dụ, đối với ứng dụng dựa trên API web, tải thường được xác định là có bao nhiêu 67 đồng thời
+
+
+00:04:24,720 --> 00:04:28,230
+requests are going to be received by the system without crashing.
+các yêu cầu sẽ được hệ thống tiếp nhận mà không bị sập.
+
+
+00:04:28,260 --> 00:04:32,820
+Note that this requirement looks similar to throughput, which defines how many requests can be handled
+Lưu ý rằng yêu cầu này trông giống với thông lượng, xác định số lượng yêu cầu có thể được xử lý
+
+
+00:04:32,820 --> 00:04:34,230
+in a specific time unit.
+trong một đơn vị thời gian cụ thể.
+
+
+00:04:34,260 --> 00:04:39,660
+The difference between the two is that while throughput defines the time unit, the load defines the
+Sự khác biệt giữa hai loại này là trong khi thông lượng xác định đơn vị thời gian thì tải xác định
+
+
+00:04:39,660 --> 00:04:45,120
+availability of the system, meaning the system should be able to handle the load without crashing down.
+tính khả dụng của hệ thống, nghĩa là hệ thống phải có khả năng xử lý tải mà không bị sập.
+
+
+00:04:45,210 --> 00:04:51,990
+For example, the performance requirement can dictate throughput of 100 requests per second, but the
+Ví dụ, yêu cầu về hiệu suất có thể quyết định thông lượng là 100 yêu cầu mỗi giây, nhưng
+
+
+00:04:51,990 --> 00:04:57,480
+system should be able to handle 500 concurrent requests without crashing, even if those requests will
+hệ thống phải có khả năng xử lý 500 yêu cầu đồng thời mà không bị sập, ngay cả khi những yêu cầu đó sẽ
+
+
+00:04:57,480 --> 00:04:59,080
+take more than a second to complete.
+mất hơn một giây để hoàn thành.
+
+
+00:04:59,100 --> 00:05:04,110
+This definition is important since the worst thing that can happen to a system is to crash under heavy
+Định nghĩa này rất quan trọng vì điều tồi tệ nhất có thể xảy ra với một hệ thống là bị sập dưới tác động nặng nề
+
+
+00:05:04,110 --> 00:05:04,590
+load.
+tải.
+
+
+00:05:04,620 --> 00:05:09,510
+Users can tolerate a slowdown when there is a load, but they won't like it if the system will crash
+Người dùng có thể chịu được sự chậm lại khi có tải, nhưng họ sẽ không thích nếu hệ thống bị sập
+
+
+00:05:09,510 --> 00:05:10,170
+and burn.
+và đốt cháy.
+
+
+00:05:10,170 --> 00:05:14,040
+So the best practice here is to always look at peak numbers.
+Vì vậy, cách thực hành tốt nhất ở đây là luôn xem xét các con số đỉnh.
+
+
+00:05:14,370 --> 00:05:20,070
+For example, for an e-commerce website, the regular load might be up to 200 concurrent requests.
+Ví dụ, đối với một trang web thương mại điện tử, tải thông thường có thể lên tới 200 yêu cầu đồng thời.
+
+
+00:05:20,070 --> 00:05:24,580
+But on Black Friday, we are looking at more than 2000 concurrent requests.
+Nhưng vào Thứ Sáu Đen, chúng tôi đang xem xét hơn 2000 yêu cầu đồng thời.
+
+
+00:05:24,600 --> 00:05:29,370
+In that case, we should plan for the extreme case because this is when it's more important for our
+Trong trường hợp đó, chúng ta nên lập kế hoạch cho trường hợp cực đoan vì đây là lúc quan trọng hơn đối với 83 của chúng ta
+
+
+00:05:29,370 --> 00:05:31,680
+system to be alive and functioning.
+hệ thống để tồn tại và hoạt động.
+
+
+00:05:33,700 --> 00:05:35,650
+Next is data volume.
+Tiếp theo là khối lượng dữ liệu.
+
+
+00:05:35,860 --> 00:05:42,160
+This requirement defines how much data in gigabytes or terabytes our system will accumulate over time.
+Yêu cầu này xác định lượng dữ liệu tính bằng gigabyte hoặc terabyte mà hệ thống của chúng tôi sẽ tích lũy theo thời gian.
+
+
+00:05:42,340 --> 00:05:45,110
+This requirement is important for a few reasons.
+Yêu cầu này quan trọng vì một số lý do.
+
+
+00:05:45,130 --> 00:05:50,050
+It will dictate what kind of database you are going to use, since not all databases can handle large
+Nó sẽ quyết định loại cơ sở dữ liệu bạn sẽ sử dụng, vì không phải tất cả các cơ sở dữ liệu đều có thể xử lý 88 lớn
+
+
+00:05:50,050 --> 00:05:51,640
+quantities of data equally.
+lượng dữ liệu bằng nhau.
+
+
+00:05:51,850 --> 00:05:58,390
+It will also determine what type of queries we are going to write because a query in a table of a 100,000
+Nó cũng sẽ xác định loại truy vấn nào chúng ta sẽ viết vì một truy vấn trong bảng có 100.000
+
+
+00:05:58,390 --> 00:06:03,540
+rows will be completely different from a query in a table of 100 million rows.
+các hàng sẽ hoàn toàn khác so với truy vấn trong bảng có 100 triệu hàng.
+
+
+00:06:03,550 --> 00:06:05,760
+And of course it will help us plan ahead.
+Và tất nhiên nó sẽ giúp chúng ta lập kế hoạch trước.
+
+
+00:06:05,770 --> 00:06:10,300
+The storage we need to allocate the data volume usually has two aspects.
+Dung lượng lưu trữ mà chúng ta cần phân bổ cho khối lượng dữ liệu thường có hai khía cạnh.
+
+
+00:06:10,390 --> 00:06:16,990
+One, how much data is required on day one and two, what is the forecasted data growth?
+Một, cần bao nhiêu dữ liệu vào ngày một và ngày hai, dự báo tăng trưởng dữ liệu là bao nhiêu?
+
+
+00:06:17,970 --> 00:06:24,690
+For example, a system might need 500MB on its first day and is expected to grow by two terabytes annually.
+Ví dụ, một hệ thống có thể cần 500MB vào ngày đầu tiên và dự kiến sẽ tăng thêm hai terabyte mỗi năm.
+
+
+00:06:24,900 --> 00:06:29,760
+Of course, the growth period can be different and can be weekly, monthly, quarterly and so on.
+Tất nhiên, thời gian tăng trưởng có thể khác nhau và có thể là hàng tuần, hàng tháng, hàng quý, v.v.
+
+
+00:06:30,960 --> 00:06:33,060
+Next is concurrent users.
+Tiếp theo là người dùng đồng thời.
+
+
+00:06:34,150 --> 00:06:38,500
+This requirement defines how many users will be using the system simultaneously.
+Yêu cầu này xác định có bao nhiêu người dùng sẽ sử dụng hệ thống cùng một lúc.
+
+
+00:06:39,100 --> 00:06:43,720
+This requirement is quite similar to the load requirement, which also defines how many requests should
+Yêu cầu này khá giống với yêu cầu tải, yêu cầu này cũng xác định số lượng yêu cầu cần
+
+
+00:06:43,720 --> 00:06:47,500
+be handled by the system simultaneously, but with one week difference.
+được hệ thống xử lý đồng thời, nhưng cách nhau một tuần.
+
+
+00:06:47,890 --> 00:06:53,650
+The concurrent users requirement describes how many users will be using the system, not how many users
+Yêu cầu về số lượng người dùng đồng thời mô tả có bao nhiêu người dùng sẽ sử dụng hệ thống, chứ không phải có bao nhiêu người dùng
+
+
+00:06:53,650 --> 00:06:55,300
+will be performing requests.
+sẽ thực hiện các yêu cầu.
+
+
+00:06:55,330 --> 00:07:01,180
+This distinction is important when a user is using a system, there are a lot of dead times when no
+Sự phân biệt này rất quan trọng khi người dùng sử dụng hệ thống, có rất nhiều thời điểm chết khi không có
+
+
+00:07:01,180 --> 00:07:02,520
+action is actually taken.
+hành động thực sự được thực hiện.
+
+
+00:07:02,530 --> 00:07:06,490
+For example, a user is asking the system to display all the data.
+Ví dụ, người dùng yêu cầu hệ thống hiển thị tất cả dữ liệu.
+
+
+00:07:06,520 --> 00:07:10,870
+The system executes an API that goes to the database and retrieves the data.
+Hệ thống thực thi API để truy cập cơ sở dữ liệu và lấy dữ liệu.
+
+
+00:07:10,900 --> 00:07:12,310
+This is an actual action.
+Đây là một hành động thực tế.
+
+
+00:07:12,400 --> 00:07:14,650
+Now the user is looking at the data.
+Bây giờ người dùng đang xem dữ liệu.
+
+
+00:07:14,650 --> 00:07:16,720
+During this time the system is doing nothing.
+Trong thời gian này hệ thống không làm gì cả.
+
+
+00:07:16,750 --> 00:07:18,100
+The API is not working.
+API không hoạt động.
+
+
+00:07:18,100 --> 00:07:21,010
+The database just sits there and the network is silent.
+Cơ sở dữ liệu chỉ nằm ở đó và mạng thì im lặng.
+
+
+00:07:21,220 --> 00:07:26,920
+So as you can guess, systems that can hold 500 concurrent requests will be able to withstand a much
+Vì vậy, như bạn có thể đoán, các hệ thống có thể xử lý 500 yêu cầu đồng thời sẽ có thể chịu được
+
+
+00:07:26,920 --> 00:07:28,720
+higher number of concurrent users.
+số lượng người dùng đồng thời cao hơn.
+
+
+00:07:29,110 --> 00:07:33,980
+The rule of thumb says that concurrent users are ten times the number of concurrent requests.
+Nguyên tắc chung là số lượng người dùng đồng thời gấp mười lần số lượng yêu cầu đồng thời.
+
+
+00:07:33,980 --> 00:07:40,280
+So if the system should work with 500 concurrent requests, it can support 5000 concurrent users.
+Vì vậy, nếu hệ thống phải hoạt động với 500 yêu cầu đồng thời, nó có thể hỗ trợ 5000 người dùng đồng thời.
+
+
+00:07:40,280 --> 00:07:44,600
+But this number actually depends on the type of system and the usage pattern.
+Nhưng con số này thực sự phụ thuộc vào loại hệ thống và mô hình sử dụng.
+
+
+00:07:44,880 --> 00:07:45,350
+SLA.
+SLA.
+
+
+00:07:46,230 --> 00:07:49,080
+The last functional requirement we will discuss is the SLA.
+Yêu cầu chức năng cuối cùng chúng ta sẽ thảo luận là SLA.
+
+
+00:07:49,440 --> 00:07:55,650
+SLA, which stands for Service Level Agreement, describes what is the required uptime for this system
+SLA, viết tắt của Thỏa thuận mức dịch vụ, mô tả thời gian hoạt động cần thiết cho hệ thống này
+
+
+00:07:55,650 --> 00:07:56,650
+in percentage.
+theo phần trăm.
+
+
+00:07:56,670 --> 00:08:00,250
+This term is widely used by almost all public cloud providers.
+Thuật ngữ này được sử dụng rộng rãi bởi hầu hết các nhà cung cấp đám mây công cộng.
+
+
+00:08:00,270 --> 00:08:03,170
+One of the biggest competitions between them is on the SLA.
+Một trong những cuộc cạnh tranh lớn nhất giữa họ là về SLA.
+
+
+00:08:03,180 --> 00:08:05,010
+For example, Azure Cosmos.
+Ví dụ: Azure Cosmos.
+
+
+00:08:05,010 --> 00:08:08,700
+DB takes pride with its 99.99% SLA.
+DB tự hào với SLA 99,99% của mình.
+
+
+00:08:08,940 --> 00:08:12,780
+This is translated to less than an hour of downtime in a year.
+Điều này được dịch thành thời gian ngừng hoạt động ít hơn một giờ trong một năm.
+
+
+00:08:12,810 --> 00:08:14,280
+Take a look at the numbers.
+Hãy xem xét các con số.
+
+
+00:08:19,300 --> 00:08:22,330
+The SLA has great influence on the design of the system.
+SLA có ảnh hưởng lớn đến thiết kế của hệ thống.
+
+
+00:08:22,330 --> 00:08:27,760
+For example, a system that cannot be brought down must have a sophisticated update mechanism that won't
+Ví dụ, một hệ thống không thể bị hạ gục phải có một cơ chế cập nhật tinh vi mà sẽ không
+
+
+00:08:27,760 --> 00:08:30,130
+require turning off the system while it's updating.
+yêu cầu tắt hệ thống trong khi đang cập nhật.
+
+
+00:08:30,160 --> 00:08:33,370
+This is possible, of course, but it has to be designed this way.
+Tất nhiên là có thể, nhưng nó phải được thiết kế theo cách này.
+
+
+00:08:34,179 --> 00:08:37,900
+One important thing to note about SLA is client expectations.
+Một điều quan trọng cần lưu ý về SLA là kỳ vọng của khách hàng.
+
+
+00:08:38,289 --> 00:08:43,210
+If you will ask the client what is required for the system, he will usually give you an answer along
+Nếu bạn hỏi khách hàng những gì cần thiết cho hệ thống, họ thường sẽ trả lời bạn bằng
+
+
+00:08:43,210 --> 00:08:49,690
+the lines of 100% of the famous five nines, which is 99.999%.
+các dòng của 100% năm chín nổi tiếng, tức là 99,999%.
+
+
+00:08:49,930 --> 00:08:52,970
+When this happens, I usually tell him no problem.
+Khi điều này xảy ra, tôi thường nói với anh ấy rằng không có vấn đề gì.
+
+
+00:08:52,990 --> 00:08:57,760
+For this we will need to build at least three data centers in different continents with independent
+Để làm được điều này, chúng ta sẽ cần xây dựng ít nhất ba trung tâm dữ liệu ở các châu lục khác nhau với
+
+
+00:08:57,760 --> 00:09:01,300
+and dual power stations and automatic failover between them.
+và các nhà máy điện kép và tự động chuyển đổi dự phòng giữa chúng.
+
+
+00:09:01,300 --> 00:09:02,260
+What do you say?
+Bạn nói gì?
+
+
+00:09:02,860 --> 00:09:07,360
+This generally brings him down to earth and we discuss more realistic goals.
+Điều này thường đưa anh ấy trở lại thực tế và chúng tôi thảo luận về những mục tiêu thực tế hơn.
+
+
+00:09:07,450 --> 00:09:11,890
+So these were the most common non-functional requirements you will need to have for the system.
+Vì vậy, đây là những yêu cầu phi chức năng phổ biến nhất mà bạn cần có cho hệ thống.
+
+
+00:09:11,890 --> 00:09:17,170
+And again, never start working on the architecture before you have set those requirements.
+Và một lần nữa, đừng bao giờ bắt đầu làm việc trên kiến trúc trước khi bạn đã thiết lập những yêu cầu đó.
+
+

@@ -1,0 +1,130 @@
+00:00:00,350 --> 00:00:05,330
+One of the biggest temptations when designing the architecture is to recommend various tools for the
+Một trong những cám dỗ lớn nhất khi thiết kế kiến trúc là đề xuất các công cụ khác nhau cho
+
+
+00:00:05,330 --> 00:00:07,040
+various architectural aspects.
+nhiều khía cạnh kiến trúc khác nhau.
+
+
+00:00:07,160 --> 00:00:14,390
+Tools like engines, business flow managers, NoSQL databases and more are quite common recommendations
+Các công cụ như công cụ tìm kiếm, trình quản lý luồng kinh doanh, cơ sở dữ liệu NoSQL và nhiều công cụ khác là những khuyến nghị khá phổ biến
+
+
+00:00:14,390 --> 00:00:15,950
+for modern day architecture.
+cho kiến trúc hiện đại ngày nay.
+
+
+00:00:16,070 --> 00:00:20,860
+Problem is, those tools need someone who is familiar with them and can maintain them.
+Vấn đề là những công cụ đó cần có người quen thuộc với chúng và có thể bảo trì chúng.
+
+
+00:00:20,870 --> 00:00:26,840
+Now, if the organization's IT department possesses the skillset to maintain a shiny new NoSQL database.
+Bây giờ, nếu bộ phận CNTT của tổ chức có đủ kỹ năng để duy trì cơ sở dữ liệu NoSQL mới sáng bóng.
+
+
+00:00:26,870 --> 00:00:29,690
+All is good, but what happens when it's not?
+Mọi thứ đều tốt, nhưng điều gì xảy ra nếu không tốt?
+
+
+00:00:29,840 --> 00:00:35,150
+What often happens is that the development team becomes the support team for these products and the
+Điều thường xảy ra là nhóm phát triển trở thành nhóm hỗ trợ cho các sản phẩm này và
+
+
+00:00:35,150 --> 00:00:38,840
+developers become experts in installing and maintaining them.
+các nhà phát triển trở thành chuyên gia trong việc cài đặt và bảo trì chúng.
+
+
+00:00:38,840 --> 00:00:41,240
+And that's not a good thing.
+Và đó không phải là điều tốt.
+
+
+00:00:41,510 --> 00:00:43,670
+Developers should develop.
+Các nhà phát triển nên phát triển.
+
+
+00:00:43,830 --> 00:00:45,740
+That's the best use of their time.
+Đó là cách sử dụng thời gian tốt nhất của họ.
+
+
+00:00:45,740 --> 00:00:51,110
+This is what they are paid for, to develop, not to be dba's, not to configure MQ series, not to
+Đây là lý do họ được trả tiền để phát triển, không phải để trở thành dba, không phải để cấu hình loạt MQ, không phải để
+
+
+00:00:51,110 --> 00:00:56,630
+dig through support articles of MongoDB and the architecture you design must factor this in.
+đào sâu vào các bài viết hỗ trợ của MongoDB và kiến trúc bạn thiết kế phải tính đến yếu tố này.
+
+
+00:00:56,660 --> 00:01:01,620
+You must make sure that when recommending a new product to be included in the system, there will be
+Bạn phải đảm bảo rằng khi đề xuất một sản phẩm mới để đưa vào hệ thống, sẽ có
+
+
+00:01:01,620 --> 00:01:04,470
+someone other than the development team to take care of it.
+một người nào đó ngoài nhóm phát triển sẽ xử lý việc này.
+
+
+00:01:04,500 --> 00:01:10,200
+If that's not the case, then make a very careful analysis of the effort needed to maintain the product
+Nếu không phải như vậy, hãy phân tích thật cẩn thận về nỗ lực cần thiết để duy trì sản phẩm
+
+
+00:01:10,200 --> 00:01:13,320
+and check with the developers whether they can handle it.
+và kiểm tra với các nhà phát triển xem họ có thể xử lý được không.
+
+
+00:01:13,770 --> 00:01:19,410
+Note that if the product is a new, shining one, the developers will often be very excited about it
+Lưu ý rằng nếu sản phẩm là sản phẩm mới, sáng giá, các nhà phát triển thường sẽ rất hào hứng về nó
+
+
+00:01:19,410 --> 00:01:21,510
+and will ensure you they can handle it.
+và sẽ đảm bảo rằng họ có thể xử lý được.
+
+
+00:01:21,540 --> 00:01:23,010
+Don't take it for granted.
+Đừng coi đó là điều hiển nhiên.
+
+
+00:01:23,010 --> 00:01:27,960
+Excitement fades over time and when this will happen, the developers will be left with a boring and
+Sự phấn khích sẽ giảm dần theo thời gian và khi điều này xảy ra, các nhà phát triển sẽ phải chịu đựng sự nhàm chán và
+
+
+00:01:27,960 --> 00:01:31,650
+mundane task of maintaining a product instead of writing code.
+nhiệm vụ tầm thường là duy trì sản phẩm thay vì viết mã.
+
+
+00:01:31,740 --> 00:01:37,140
+So the bottom line is this Whenever possible, do not include products in the architecture that have
+Vì vậy, điểm mấu chốt là bất cứ khi nào có thể, đừng bao gồm các sản phẩm trong kiến trúc có
+
+
+00:01:37,140 --> 00:01:39,110
+no one assigned for taking care of them.
+không có ai được giao nhiệm vụ chăm sóc họ.
+
+
+00:01:39,120 --> 00:01:42,630
+Always prefer products that department knows and support.
+Luôn ưu tiên những sản phẩm mà bộ phận đó biết đến và hỗ trợ.
+
+

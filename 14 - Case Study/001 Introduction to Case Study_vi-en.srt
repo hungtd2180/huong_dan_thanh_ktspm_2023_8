@@ -1,0 +1,125 @@
+00:00:00,290 --> 00:00:02,420
+Welcome to the case study section.
+Chào mừng đến với phần nghiên cứu tình huống.
+
+
+00:00:02,420 --> 00:00:07,939
+In this section, we are going to use all the knowledge gained throughout this course by designing architecture
+Trong phần này, chúng ta sẽ sử dụng tất cả các kiến thức thu được trong suốt khóa học này bằng cách thiết kế kiến trúc
+
+
+00:00:07,939 --> 00:00:09,740
+of a real world application.
+của một ứng dụng thực tế.
+
+
+00:00:09,920 --> 00:00:14,960
+This will be a great opportunity for you to test your knowledge of all the topics we discussed and see
+Đây sẽ là cơ hội tuyệt vời để bạn kiểm tra kiến thức của mình về tất cả các chủ đề chúng ta đã thảo luận và xem
+
+
+00:00:14,960 --> 00:00:17,120
+their usage in the real world.
+việc sử dụng chúng trong thế giới thực.
+
+
+00:00:17,270 --> 00:00:22,370
+The system we are going to design is quite similar to one of the systems I've been working on in recent
+Hệ thống mà chúng ta sẽ thiết kế khá giống với một trong những hệ thống mà tôi đã làm việc trong 7 năm gần đây.
+
+
+00:00:22,400 --> 00:00:22,920
+years.
+năm.
+
+
+00:00:22,940 --> 00:00:28,940
+This is not a toy system specifically designed to make your life easier, but a real world application
+Đây không phải là một hệ thống đồ chơi được thiết kế đặc biệt để giúp cuộc sống của bạn dễ dàng hơn, mà là một ứng dụng thực tế
+
+
+00:00:28,940 --> 00:00:34,910
+used by real customers serving real data and cost millions to design, develop and deploy.
+được sử dụng bởi khách hàng thực sự phục vụ dữ liệu thực và tốn hàng triệu đô la để thiết kế, phát triển và triển khai.
+
+
+00:00:35,270 --> 00:00:40,100
+I've changed some details in the system description to keep customers data safe, but other than that,
+Tôi đã thay đổi một số chi tiết trong mô tả hệ thống để giữ an toàn cho dữ liệu của khách hàng, nhưng ngoài ra,
+
+
+00:00:40,130 --> 00:00:41,630
+that's the real deal.
+đó là sự thật.
+
+
+00:00:42,530 --> 00:00:47,570
+In this section I'll introduce you to the application and then we will go through all the stages in
+Trong phần này tôi sẽ giới thiệu cho bạn về ứng dụng và sau đó chúng ta sẽ xem xét tất cả các giai đoạn trong
+
+
+00:00:47,570 --> 00:00:48,860
+the architecture process.
+quá trình kiến trúc.
+
+
+00:00:48,890 --> 00:00:55,100
+We will talk about requirements, map the components of the architecture, select the technology stack,
+Chúng tôi sẽ nói về các yêu cầu, lập bản đồ các thành phần của kiến trúc, lựa chọn ngăn xếp công nghệ,
+
+
+00:00:55,100 --> 00:01:02,100
+and then design the architecture of the various components and then get yourself prepared for a real
+và sau đó thiết kế kiến trúc của các thành phần khác nhau và sau đó chuẩn bị cho một 16 thực sự
+
+
+00:01:02,100 --> 00:01:02,820
+treat.
+điều trị.
+
+
+00:01:02,970 --> 00:01:07,950
+At the end of this section, you will have the opportunity to download a complete architecture document
+Vào cuối phần này, bạn sẽ có cơ hội tải xuống toàn bộ tài liệu kiến trúc
+
+
+00:01:07,950 --> 00:01:10,500
+containing the architecture of this application.
+chứa kiến trúc của ứng dụng này.
+
+
+00:01:10,650 --> 00:01:16,140
+This is a real world architecture document, quite similar to the ones I prepare for my clients.
+Đây là một tài liệu kiến trúc thế giới thực, khá giống với những tài liệu tôi chuẩn bị cho khách hàng của mình.
+
+
+00:01:16,140 --> 00:01:21,690
+You are invited to read it and even better, use it as a template for the systems you are working on.
+Bạn được mời đọc nó và thậm chí tốt hơn, sử dụng nó như một mẫu cho các hệ thống bạn đang làm việc.
+
+
+00:01:21,720 --> 00:01:26,730
+Be sure to listen closely to the usage guidelines of the document, and as long as you follow them,
+Hãy chắc chắn lắng nghe kỹ các hướng dẫn sử dụng của tài liệu và miễn là bạn làm theo chúng,
+
+
+00:01:26,730 --> 00:01:28,080
+it's yours to use.
+nó là của bạn để sử dụng.
+
+
+00:01:28,110 --> 00:01:33,480
+This will make your life as an architect much easier and will boost your transition from developer to
+Điều này sẽ giúp cuộc sống của bạn với tư cách là một kiến trúc sư dễ dàng hơn nhiều và sẽ thúc đẩy quá trình chuyển đổi của bạn từ nhà phát triển sang
+
+
+00:01:33,480 --> 00:01:34,340
+an architect.
+một kiến trúc sư.
+
+
+00:01:34,350 --> 00:01:35,940
+So let's go.
+Vậy chúng ta đi thôi.
+
+

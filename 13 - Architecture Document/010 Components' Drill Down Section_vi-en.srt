@@ -1,0 +1,455 @@
+00:00:00,860 --> 00:00:06,500
+The last and the most important section in the architectural document is a component drilldown section.
+Phần cuối cùng và quan trọng nhất trong tài liệu kiến trúc là phần phân tích chi tiết thành phần.
+
+
+00:00:06,590 --> 00:00:12,380
+This section describes the components that take part in the whole architecture as described in the architecture
+Phần này mô tả các thành phần tham gia vào toàn bộ kiến trúc như được mô tả trong kiến trúc
+
+
+00:00:12,380 --> 00:00:13,370
+overview section.
+phần tổng quan.
+
+
+00:00:13,400 --> 00:00:16,170
+This is the longest section by far.
+Đây là phần dài nhất cho đến nay.
+
+
+00:00:16,190 --> 00:00:21,500
+There is no actual limit to the length of this section, and I've created documents in which this section
+Không có giới hạn thực tế nào về độ dài của phần này và tôi đã tạo các tài liệu trong đó phần này
+
+
+00:00:21,500 --> 00:00:24,240
+alone was more than 100 pages.
+riêng nó đã hơn 100 trang.
+
+
+00:00:24,260 --> 00:00:26,810
+It's not that this is the recommended length.
+Không phải đây là độ dài được khuyến nghị.
+
+
+00:00:26,840 --> 00:00:28,520
+Ten pages can also be enough.
+Mười trang cũng đủ rồi.
+
+
+00:00:28,550 --> 00:00:34,040
+It's just a function of the number of components and the level of drilldown that needs to be reached.
+Nó chỉ là một chức năng của số lượng thành phần và mức độ chi tiết cần đạt được.
+
+
+00:00:34,220 --> 00:00:36,770
+The audience of this section is a development team.
+Đối tượng của phần này là nhóm phát triển.
+
+
+00:00:36,770 --> 00:00:41,810
+If the QA lead also wants to take a look, she is welcome to do so, but it's not necessary.
+Nếu người đứng đầu QA cũng muốn xem xét thì cô ấy có thể làm vậy, nhưng điều đó không bắt buộc.
+
+
+00:00:41,930 --> 00:00:47,930
+In some rare situations, some management folks would also like to take a look, but chances are that
+Trong một số trường hợp hiếm hoi, một số người quản lý cũng muốn xem xét, nhưng khả năng là
+
+
+00:00:47,930 --> 00:00:52,640
+after a few pages they will understand they have more important things to do and will leave it.
+sau một vài trang họ sẽ hiểu rằng họ có những việc quan trọng hơn phải làm và sẽ bỏ qua.
+
+
+00:00:52,940 --> 00:00:55,760
+So what are the contents of this section?
+Vậy nội dung của phần này là gì?
+
+
+00:00:55,850 --> 00:01:01,170
+Well, this section goes through the various components depicted in the architecture overview and describes
+Vâng, phần này sẽ trình bày các thành phần khác nhau được mô tả trong phần tổng quan về kiến trúc và mô tả
+
+
+00:01:01,170 --> 00:01:03,780
+them in length for each component.
+chúng theo chiều dài của từng thành phần.
+
+
+00:01:03,810 --> 00:01:06,840
+There should be four subsections in the document.
+Tài liệu này nên có bốn tiểu mục.
+
+
+00:01:07,500 --> 00:01:10,600
+First, the role of the component in the architecture.
+Đầu tiên, vai trò của thành phần trong kiến trúc.
+
+
+00:01:10,620 --> 00:01:15,390
+This is basically a short recap of the description found in the architecture overview section.
+Về cơ bản, đây là bản tóm tắt ngắn gọn về mô tả có trong phần tổng quan về kiến trúc.
+
+
+00:01:15,600 --> 00:01:17,880
+Second, the technology stack.
+Thứ hai, công nghệ.
+
+
+00:01:17,910 --> 00:01:24,300
+This subsection should describe in detail what technologies will be used in developing the component.
+Phần phụ này sẽ mô tả chi tiết những công nghệ nào sẽ được sử dụng để phát triển thành phần.
+
+
+00:01:24,720 --> 00:01:30,120
+This subsection should first lay out the various parts in the component that the technology should be
+Phần phụ này trước tiên phải trình bày các bộ phận khác nhau trong thành phần mà công nghệ phải có
+
+
+00:01:30,120 --> 00:01:30,630
+selected.
+đã chọn.
+
+
+00:01:30,630 --> 00:01:34,530
+For example, data store back end and front end.
+Ví dụ, lưu trữ dữ liệu ở phần cuối và phần đầu.
+
+
+00:01:34,680 --> 00:01:38,940
+And then for each one of them, the selected technology should be described.
+Và sau đó đối với mỗi công nghệ được chọn, cần phải mô tả công nghệ đó.
+
+
+00:01:38,970 --> 00:01:40,740
+Now, let's be honest here.
+Bây giờ, chúng ta hãy thành thật ở đây.
+
+
+00:01:40,770 --> 00:01:45,250
+Technology stack selection is one of the most heated topics in the software world.
+Lựa chọn công nghệ là một trong những chủ đề nóng nhất trong thế giới phần mềm.
+
+
+00:01:45,270 --> 00:01:50,910
+We already discussed the problems you should expect when trying to decide on the stack that will be
+Chúng tôi đã thảo luận về các vấn đề bạn có thể gặp phải khi cố gắng quyết định ngăn xếp sẽ là
+
+
+00:01:50,910 --> 00:01:52,030
+used in the system.
+được sử dụng trong hệ thống.
+
+
+00:01:52,050 --> 00:01:58,770
+For this reason, it is extremely important that the technology stack subsection will be extremely detailed
+Vì lý do này, điều cực kỳ quan trọng là tiểu mục công nghệ sẽ cực kỳ chi tiết
+
+
+00:01:58,770 --> 00:02:02,940
+and even more important, include the rationale behind the selection.
+và thậm chí quan trọng hơn, bao gồm cả lý do đằng sau sự lựa chọn.
+
+
+00:02:03,510 --> 00:02:09,060
+For example, when discussing the data store, if the decision is to go with NoSQL database such as
+Ví dụ, khi thảo luận về kho dữ liệu, nếu quyết định là sử dụng cơ sở dữ liệu NoSQL như
+
+
+00:02:09,060 --> 00:02:12,630
+Mongo, it should be clear why this decision was made.
+Mongo, lý do tại sao quyết định này được đưa ra hẳn phải rõ ràng.
+
+
+00:02:12,660 --> 00:02:18,420
+Reasons such as expected data structure, developers, experience, performance and ease of development
+Các lý do như cấu trúc dữ liệu mong đợi, nhà phát triển, kinh nghiệm, hiệu suất và sự dễ dàng phát triển
+
+
+00:02:18,420 --> 00:02:22,560
+are all legitimate reasons, and they must appear in this section.
+đều là những lý do chính đáng và phải xuất hiện trong phần này.
+
+
+00:02:22,590 --> 00:02:28,650
+In addition, it's even better to explicitly compare MongoDB to other relational databases such as SQL
+Ngoài ra, thậm chí còn tốt hơn khi so sánh rõ ràng MongoDB với các cơ sở dữ liệu quan hệ khác như SQL
+
+
+00:02:28,650 --> 00:02:34,740
+Server and explain in detail what are the pros and cons of each alternative and why the decision was
+Máy chủ và giải thích chi tiết ưu và nhược điểm của từng phương án thay thế và tại sao quyết định là
+
+
+00:02:34,740 --> 00:02:35,280
+made.
+đã thực hiện.
+
+
+00:02:35,520 --> 00:02:40,230
+Now note that you don't have to go into this level of detail for every component.
+Bây giờ hãy lưu ý rằng bạn không cần phải đi sâu vào mức độ chi tiết này cho từng thành phần.
+
+
+00:02:40,230 --> 00:02:44,670
+If you made this process for the first component and the decision is valid for the same reasons.
+Nếu bạn thực hiện quy trình này cho thành phần đầu tiên và quyết định có giá trị vì những lý do tương tự.
+
+
+00:02:44,670 --> 00:02:49,740
+Also, for other components, you can refer the readers to the selection process described in the first
+Ngoài ra, đối với các thành phần khác, bạn có thể giới thiệu cho người đọc quy trình lựa chọn được mô tả trong 42 đầu tiên
+
+
+00:02:49,740 --> 00:02:54,060
+component, and there is no need to copy paste the same section over and over.
+thành phần, và không cần phải sao chép và dán cùng một phần nhiều lần.
+
+
+00:02:55,380 --> 00:02:58,080
+The next subsection is a components architecture.
+Phần tiếp theo là kiến trúc thành phần.
+
+
+00:02:58,110 --> 00:03:01,380
+This section describes the inner architecture of the component.
+Phần này mô tả kiến trúc bên trong của thành phần.
+
+
+00:03:01,380 --> 00:03:06,930
+It complements the architecture overview that describes the bigger picture by going into each and every
+Nó bổ sung cho tổng quan về kiến trúc mô tả bức tranh lớn hơn bằng cách đi sâu vào từng phần
+
+
+00:03:06,930 --> 00:03:10,290
+component and detailing what exactly it should do and how.
+thành phần và nêu chi tiết chính xác những gì nó phải làm và làm như thế nào.
+
+
+00:03:10,560 --> 00:03:15,990
+Remember all the architectural patterns we discussed earlier, the anti-pattern, the dependency injection,
+Hãy nhớ lại tất cả các mẫu kiến trúc mà chúng ta đã thảo luận trước đó, mẫu phản, tiêm phụ thuộc,
+
+
+00:03:15,990 --> 00:03:17,490
+stateless and all the rest?
+không quốc tịch và những thứ còn lại?
+
+
+00:03:17,520 --> 00:03:19,740
+This is where you are going to use it.
+Đây là nơi bạn sẽ sử dụng nó.
+
+
+00:03:20,040 --> 00:03:23,640
+Start with describing the API of the component if there is any.
+Bắt đầu bằng cách mô tả API của thành phần nếu có.
+
+
+00:03:23,670 --> 00:03:27,000
+Don't be afraid of detailing the actual methods of the API.
+Đừng ngại trình bày chi tiết các phương pháp thực tế của API.
+
+
+00:03:27,000 --> 00:03:30,360
+It will make the development much easier and faster.
+Nó sẽ làm cho quá trình phát triển dễ dàng và nhanh hơn nhiều.
+
+
+00:03:30,780 --> 00:03:37,410
+I usually include a table that describes all that is needed to know about the API, its role URL response
+Tôi thường bao gồm một bảng mô tả tất cả những gì cần biết về API, vai trò của nó URL phản hồi
+
+
+00:03:37,410 --> 00:03:38,850
+codes and comments.
+mã và bình luận.
+
+
+00:03:38,940 --> 00:03:44,400
+It proves to be a great technique when working with the developers as they already know how the component
+Nó chứng tỏ là một kỹ thuật tuyệt vời khi làm việc với các nhà phát triển vì họ đã biết thành phần
+
+
+00:03:44,400 --> 00:03:48,450
+exposes itself and sets the context for the rest of the architecture.
+phơi bày chính nó và thiết lập bối cảnh cho phần còn lại của kiến trúc.
+
+
+00:03:48,930 --> 00:03:52,950
+Describe in detail the role of every layer up to the method level.
+Mô tả chi tiết vai trò của từng lớp lên đến cấp độ phương pháp.
+
+
+00:03:52,980 --> 00:03:57,810
+This will help the developers fully understand the role of the layers and what should and shouldn't
+Điều này sẽ giúp các nhà phát triển hiểu đầy đủ vai trò của các lớp và những gì nên và không nên
+
+
+00:03:57,810 --> 00:03:58,710
+be in it.
+ở trong đó.
+
+
+00:03:59,190 --> 00:04:04,020
+If there are important considerations that should be taken into account, mention them here.
+Nếu có những cân nhắc quan trọng cần được lưu ý, hãy đề cập đến chúng ở đây.
+
+
+00:04:04,020 --> 00:04:09,390
+For example, if the business layer or BLE should take advantage of a dependency injection mechanism
+Ví dụ, nếu lớp kinh doanh hoặc BLE nên tận dụng cơ chế tiêm phụ thuộc
+
+
+00:04:09,390 --> 00:04:10,570
+in its constructor.
+trong trình xây dựng của nó.
+
+
+00:04:10,590 --> 00:04:12,030
+Mention it here.
+Đề cập đến nó ở đây.
+
+
+00:04:12,300 --> 00:04:14,010
+The bottom line here is simple.
+Điểm mấu chốt ở đây rất đơn giản.
+
+
+00:04:14,040 --> 00:04:18,720
+Be as detailed as possible and use as much visualizations as possible.
+Hãy trình bày càng chi tiết càng tốt và sử dụng càng nhiều hình ảnh trực quan càng tốt.
+
+
+00:04:18,720 --> 00:04:23,310
+And that will make yours and the developer's life much easier later.
+Và điều đó sẽ giúp cuộc sống của bạn và nhà phát triển dễ dàng hơn nhiều sau này.
+
+
+00:04:24,000 --> 00:04:27,330
+The last subsection is development instructions.
+Phần phụ cuối cùng là hướng dẫn phát triển.
+
+
+00:04:27,870 --> 00:04:34,560
+This is usually a small subsection, no more than half page containing bulleted list of concrete development
+Đây thường là một tiểu mục nhỏ, không quá nửa trang chứa danh sách các phát triển cụ thể được đánh dấu đầu dòng
+
+
+00:04:34,560 --> 00:04:35,550
+instructions.
+hướng dẫn.
+
+
+00:04:35,670 --> 00:04:41,040
+These instructions should point out specific guidelines that are not part of the architecture but still
+Những hướng dẫn này sẽ chỉ ra những hướng dẫn cụ thể không phải là một phần của kiến trúc nhưng vẫn
+
+
+00:04:41,040 --> 00:04:42,240
+relevant for the developers.
+có liên quan đến các nhà phát triển.
+
+
+00:04:42,240 --> 00:04:48,960
+For example, usage of specific library for specific tasks or making sure the API is documented in a
+Ví dụ, sử dụng thư viện cụ thể cho các tác vụ cụ thể hoặc đảm bảo API được ghi lại trong
+
+
+00:04:48,960 --> 00:04:52,500
+format that makes it usable by tools such as swagger.
+định dạng giúp nó có thể sử dụng được bằng các công cụ như swagger.
+
+
+00:04:52,530 --> 00:04:57,000
+It's important to keep this list short, concise and very practical.
+Điều quan trọng là phải giữ cho danh sách này ngắn gọn, súc tích và thực tế.
+
+
+00:04:57,030 --> 00:04:59,650
+Avoid discussing patterns and theories here.
+Tránh thảo luận về các mô hình và lý thuyết ở đây.
+
+
+00:04:59,670 --> 00:04:59,940
+This.
+Cái này.
+
+
+00:05:00,280 --> 00:05:00,420
+Do.
+Làm.
+
+
+00:05:00,520 --> 00:05:02,590
+Don't list nothing else.
+Không liệt kê bất cứ thứ gì khác.
+
+
+00:05:02,770 --> 00:05:08,080
+Again, as with all the sections discussed here, you will find a complete fully functional architecture
+Một lần nữa, giống như tất cả các phần được thảo luận ở đây, bạn sẽ tìm thấy một kiến trúc hoàn chỉnh có đầy đủ chức năng
+
+
+00:05:08,080 --> 00:05:13,810
+document at the end of the of the next section where we will discuss a real world case study and build
+tài liệu ở cuối phần tiếp theo, nơi chúng ta sẽ thảo luận về một nghiên cứu trường hợp thực tế và xây dựng
+
+
+00:05:13,810 --> 00:05:15,050
+its architecture together.
+kiến trúc của nó cùng nhau.
+
+
+00:05:15,070 --> 00:05:19,210
+You will see this section and be able to see exactly what it looks like.
+Bạn sẽ thấy phần này và có thể thấy chính xác nó trông như thế nào.
+
+
+00:05:20,020 --> 00:05:23,710
+So with that, we conclude the architecture document section.
+Như vậy là chúng ta đã kết thúc phần tài liệu kiến trúc.
+
+
+00:05:23,950 --> 00:05:28,960
+This document is a center of the architectural work, although not the only thing you will do.
+Tài liệu này là trung tâm của công trình kiến trúc, mặc dù không phải là điều duy nhất bạn sẽ làm.
+
+
+00:05:28,990 --> 00:05:30,550
+It's extremely important.
+Nó cực kỳ quan trọng.
+
+
+00:05:30,550 --> 00:05:34,960
+This document will include all the insights produced while working on the architecture.
+Tài liệu này sẽ bao gồm tất cả các hiểu biết thu được trong quá trình làm việc trên kiến trúc.
+
+
+00:05:34,990 --> 00:05:40,180
+This will help you in the future for justifying decisions that we made earlier in the process.
+Điều này sẽ giúp bạn trong tương lai để biện minh cho các quyết định mà chúng ta đã đưa ra trước đó trong quá trình này.
+
+
+00:05:40,660 --> 00:05:43,800
+Always try to get into your audience mind.
+Luôn cố gắng đi vào tâm trí khán giả của bạn.
+
+
+00:05:43,810 --> 00:05:47,440
+Write the executive summary for the management and target the components.
+Viết bản tóm tắt cho ban quản lý và mục tiêu các thành phần.
+
+
+00:05:47,440 --> 00:05:49,060
+Drill down to the developers.
+Khoan sâu vào các nhà phát triển.
+
+
+00:05:49,090 --> 00:05:54,790
+This way the document will be what it should be, the cornerstone and foundation of the system.
+Bằng cách này, tài liệu sẽ thực sự trở thành nền tảng và nền tảng quan trọng của hệ thống.
+
+

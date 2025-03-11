@@ -1,0 +1,100 @@
+00:00:00,170 --> 00:00:03,190
+Desktop applications are the poor boys of the app world.
+Ứng dụng máy tính để bàn là những chàng trai nghèo của thế giới ứng dụng.
+
+
+00:00:03,200 --> 00:00:06,360
+In a world where web APIs and clouds are all the rage.
+Trong một thế giới mà API web và đám mây đang thịnh hành.
+
+
+00:00:06,380 --> 00:00:10,010
+Almost nobody talks about desktop apps and for good reason.
+Hầu như không ai nói về ứng dụng máy tính để bàn và có lý do chính đáng.
+
+
+00:00:10,430 --> 00:00:13,580
+Desktop apps are applications that run mainly on the PC.
+Ứng dụng máy tính để bàn là ứng dụng chạy chủ yếu trên PC.
+
+
+00:00:13,820 --> 00:00:19,610
+It's important to differentiate it from rich client apps that access Web API and are only a thin visual
+Điều quan trọng là phải phân biệt nó với các ứng dụng khách hàng phong phú truy cập API Web và chỉ là một hình ảnh mỏng
+
+
+00:00:19,610 --> 00:00:21,080
+layer above the data.
+lớp trên dữ liệu.
+
+
+00:00:21,110 --> 00:00:26,330
+I'm talking here about an application that has all its resources, including logic and data on the local
+Tôi đang nói về một ứng dụng có tất cả các tài nguyên của nó, bao gồm logic và dữ liệu trên máy cục bộ
+
+
+00:00:26,330 --> 00:00:26,660
+PC.
+Máy tính
+
+
+00:00:27,560 --> 00:00:33,110
+This application might be using the internet for some arbitrary tasks, such as validating license or
+Ứng dụng này có thể sử dụng internet cho một số tác vụ tùy ý, chẳng hạn như xác thực giấy phép hoặc
+
+
+00:00:33,110 --> 00:00:37,430
+sending activity logs, but it will still be fully functional when offline.
+gửi nhật ký hoạt động, nhưng nó vẫn hoạt động đầy đủ khi ngoại tuyến.
+
+
+00:00:37,820 --> 00:00:42,200
+Another aspect of desktop application is its UI or user interface.
+Một khía cạnh khác của ứng dụng máy tính để bàn là giao diện người dùng hoặc UI của nó.
+
+
+00:00:42,290 --> 00:00:47,240
+Desktop apps are targeted for end users and they will usually have a great user interface.
+Ứng dụng dành cho máy tính để bàn hướng đến người dùng cuối và thường có giao diện người dùng tuyệt vời.
+
+
+00:00:47,910 --> 00:00:52,980
+One good example of such an application is Microsoft Word, which works with or without an active Internet
+Một ví dụ tốt về ứng dụng như vậy là Microsoft Word, có thể hoạt động với hoặc không có Internet đang hoạt động
+
+
+00:00:52,980 --> 00:00:53,440
+connection.
+kết nối.
+
+
+00:00:53,460 --> 00:00:59,070
+Of course, you will lose some capabilities when offline, such as cloud connectivity, but it is still
+Tất nhiên, bạn sẽ mất một số khả năng khi ngoại tuyến, chẳng hạn như kết nối đám mây, nhưng nó vẫn là
+
+
+00:00:59,070 --> 00:01:05,370
+fully functional this way due to massive use of cloud computing and the ubiquity of internet connectivity.
+hoạt động đầy đủ theo cách này nhờ sử dụng rộng rãi điện toán đám mây và kết nối internet phổ biến.
+
+
+00:01:05,400 --> 00:01:07,830
+Desktop apps popularity is dwindling.
+Sự phổ biến của ứng dụng máy tính để bàn đang giảm dần.
+
+
+00:01:08,370 --> 00:01:15,930
+You will use desktop apps mainly for user centric actions such as word processing or calculations and
+Bạn sẽ sử dụng các ứng dụng máy tính để bàn chủ yếu cho các hành động tập trung vào người dùng như xử lý văn bản hoặc tính toán và
+
+
+00:01:15,930 --> 00:01:17,090
+heavy gaming.
+chơi game nặng.
+
+
+00:01:17,100 --> 00:01:22,500
+But again, you can spend a lifetime as an architect without designing desktop apps even once.
+Nhưng một lần nữa, bạn có thể dành cả đời làm kiến trúc sư mà không cần thiết kế ứng dụng máy tính để bàn dù chỉ một lần.
+
+

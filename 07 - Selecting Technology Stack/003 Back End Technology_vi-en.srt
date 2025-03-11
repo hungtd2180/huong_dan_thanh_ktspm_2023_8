@@ -1,0 +1,475 @@
+00:00:00,350 --> 00:00:03,770
+So let's discuss our candidates for backend and service technology.
+Vậy chúng ta hãy thảo luận về các ứng viên cho công nghệ dịch vụ và phần phụ trợ.
+
+
+00:00:03,800 --> 00:00:09,110
+Now, to be clear, when talking about backend, we mean the server side of web apps and web API.
+Bây giờ, để rõ ràng hơn, khi nói về phần phụ trợ, chúng ta muốn nói đến phía máy chủ của ứng dụng web và API web.
+
+
+00:00:09,440 --> 00:00:14,360
+So our discussion here is about web apps, web API, console and services.
+Vì vậy, cuộc thảo luận của chúng ta ở đây là về ứng dụng web, API web, bảng điều khiển và dịch vụ.
+
+
+00:00:14,540 --> 00:00:17,330
+I'll call all of them backend for the sake of simplicity.
+Tôi sẽ gọi tất cả chúng là backend để đơn giản hơn.
+
+
+00:00:18,110 --> 00:00:23,750
+Now, just to set expectations, I'm not going to give you a definite recommendation about the platform
+Bây giờ, chỉ để đặt kỳ vọng, tôi sẽ không đưa ra cho bạn một khuyến nghị chắc chắn về nền tảng
+
+
+00:00:23,750 --> 00:00:25,190
+you should use for your backend.
+bạn nên sử dụng cho phần cuối của bạn.
+
+
+00:00:25,220 --> 00:00:31,100
+That won't be smart since there are so many factors to be taken into account that without intimate knowledge
+Điều đó sẽ không thông minh vì có rất nhiều yếu tố cần phải tính đến nếu không có kiến thức sâu sắc
+
+
+00:00:31,100 --> 00:00:33,950
+of the requirements, such a decision cannot be made.
+của các yêu cầu, một quyết định như vậy không thể được đưa ra.
+
+
+00:00:34,190 --> 00:00:39,590
+What I am going to do is to lay out the main contenders and talk about pros and cons of each one of
+Những gì tôi sẽ làm là trình bày các ứng cử viên chính và nói về ưu và nhược điểm của từng ứng cử viên trong số 10 ứng cử viên.
+
+
+00:00:39,590 --> 00:00:40,040
+them.
+họ.
+
+
+00:00:40,070 --> 00:00:43,550
+This will make your life much easier when selecting the platform.
+Điều này sẽ giúp bạn dễ dàng hơn nhiều khi lựa chọn nền tảng.
+
+
+00:00:44,210 --> 00:00:47,630
+Note Also, I'm not going to talk about every technology exists.
+Lưu ý: Tôi sẽ không nói về mọi công nghệ hiện có.
+
+
+00:00:47,660 --> 00:00:50,300
+This will make the lecture too long and too boring.
+Điều này sẽ làm cho bài giảng quá dài và quá nhàm chán.
+
+
+00:00:50,330 --> 00:00:53,300
+I'm going to discuss the most popular platforms.
+Tôi sẽ thảo luận về các nền tảng phổ biến nhất.
+
+
+00:00:53,720 --> 00:00:58,490
+So here are our main candidates for backend applications in alphabetical order.
+Sau đây là các ứng viên chính của chúng tôi cho các ứng dụng phụ trợ theo thứ tự bảng chữ cái.
+
+
+00:00:58,580 --> 00:00:59,240
+Dotnet.
+Dotnet.
+
+
+00:00:59,240 --> 00:01:04,410
+Classic Dotnet, Core Java, NodeJS, PHP and Python.
+Classic Dotnet, Core Java, NodeJS, PHP và Python.
+
+
+00:01:05,519 --> 00:01:10,080
+So let's begin with Dotnet Classic or as we will call it here, simply Dotnet.
+Vậy chúng ta hãy bắt đầu với Dotnet Classic hay như chúng tôi sẽ gọi ở đây, đơn giản là Dotnet.
+
+
+00:01:10,560 --> 00:01:15,090
+Dotnet was founded by Microsoft in 2001 as a response for Java.
+Dotnet được Microsoft thành lập vào năm 2001 như một phản ứng đối với Java.
+
+
+00:01:15,120 --> 00:01:21,540
+It's a general purpose object oriented, statically typed platform with frameworks for desktop applications
+Đây là một nền tảng hướng đối tượng mục đích chung, được gõ tĩnh với các khuôn khổ cho các ứng dụng máy tính để bàn
+
+
+00:01:21,540 --> 00:01:29,070
+called Winforms and later on WPF and for web apps and web API called ASP.Net Development in Dotnet is
+được gọi là Winforms và sau đó là WPF và cho các ứng dụng web và API web được gọi là ASP.Net Phát triển trong Dotnet là
+
+
+00:01:29,070 --> 00:01:30,390
+done using Visual Studio.
+thực hiện bằng Visual Studio.
+
+
+00:01:30,390 --> 00:01:33,840
+In my humble opinion, one of the best development tools on the planet.
+Theo ý kiến khiêm tốn của tôi, đây là một trong những công cụ phát triển tốt nhất trên hành tinh.
+
+
+00:01:35,280 --> 00:01:40,240
+Dotnet is not cross platform, so it's relevant only for Windows based applications.
+Dotnet không phải là nền tảng chéo, vì vậy nó chỉ phù hợp với các ứng dụng chạy trên Windows.
+
+
+00:01:40,260 --> 00:01:44,820
+Its performance are okay, but there are faster platforms such as NodeJS.
+Hiệu suất của nó ổn, nhưng có những nền tảng nhanh hơn như NodeJS.
+
+
+00:01:45,210 --> 00:01:50,320
+Dotnet is a very mature platform with huge third party components and large community.
+Dotnet là một nền tảng rất trưởng thành với các thành phần của bên thứ ba lớn và cộng đồng lớn.
+
+
+00:01:50,340 --> 00:01:55,950
+However, its roadmap is not clear since it looks like Microsoft is pushing Dotnet developers towards
+Tuy nhiên, lộ trình của nó không rõ ràng vì có vẻ như Microsoft đang thúc đẩy các nhà phát triển Dotnet hướng tới
+
+
+00:01:55,950 --> 00:01:56,970
+Dotnet core.
+Lõi Dotnet.
+
+
+00:01:57,480 --> 00:02:02,790
+Today, Dotnet is the default choice for Windows based application, mainly because of its great IDE
+Ngày nay, Dotnet là lựa chọn mặc định cho ứng dụng chạy trên Windows, chủ yếu là vì IDE 30 tuyệt vời của nó
+
+
+00:02:02,820 --> 00:02:04,830
+clear syntax and large community.
+cú pháp rõ ràng và cộng đồng lớn.
+
+
+00:02:05,940 --> 00:02:07,950
+Next is Dotnet core.
+Tiếp theo là Dotnet core.
+
+
+00:02:08,850 --> 00:02:15,000
+You can call it Next Generation Dotnet and it aims to fill the gaps in Dotnet mainly cross platform
+Bạn có thể gọi nó là Dotnet thế hệ tiếp theo và nó nhằm mục đích lấp đầy những khoảng trống trong Dotnet chủ yếu là đa nền tảng
+
+
+00:02:15,000 --> 00:02:17,410
+support and performance.
+hỗ trợ và hiệu suất.
+
+
+00:02:17,460 --> 00:02:23,430
+In my own experience, Dotnet core is a flexible and fast platform, but as of this recording, not
+Theo kinh nghiệm của riêng tôi, Dotnet core là một nền tảng linh hoạt và nhanh chóng, nhưng tính đến thời điểm ghi âm này, chưa phải là
+
+
+00:02:23,430 --> 00:02:24,420
+fully baked yet.
+đã chín hoàn toàn.
+
+
+00:02:24,450 --> 00:02:30,360
+There are some glaring omissions, such as webhook support, partial odata support, PowerShell support
+Có một số thiếu sót rõ ràng, chẳng hạn như hỗ trợ webhook, hỗ trợ odata một phần, hỗ trợ PowerShell
+
+
+00:02:30,360 --> 00:02:31,470
+and more.
+và nhiều hơn nữa.
+
+
+00:02:31,530 --> 00:02:37,980
+Dotnet Core apps can be developed using Visual Studio but also with VS code and other popular ides.
+Các ứng dụng Dotnet Core có thể được phát triển bằng Visual Studio nhưng cũng có thể sử dụng VS code và các IDE phổ biến khác.
+
+
+00:02:38,970 --> 00:02:45,150
+Dotnet core community is not that large, but is very vocal and is growing rapidly in the last Stack
+Cộng đồng Dotnet core không lớn lắm nhưng rất năng nổ và đang phát triển nhanh chóng trong Stack 40 gần đây
+
+
+00:02:45,150 --> 00:02:46,410
+Overflow Developers survey.
+Khảo sát của các nhà phát triển Overflow.
+
+
+00:02:46,410 --> 00:02:51,510
+It's called Second among server side frameworks right after NodeJS in the long run.
+Về lâu dài, nó được gọi là thứ hai trong số các khuôn khổ phía máy chủ ngay sau NodeJS.
+
+
+00:02:51,540 --> 00:02:53,070
+Dotnet core would be a great choice.
+Dotnet core sẽ là một lựa chọn tuyệt vời.
+
+
+00:02:53,070 --> 00:02:58,530
+Right now you should be aware about its gaps, but also about its amazing performance and capabilities.
+Ngay bây giờ bạn nên biết về những khoảng trống của nó, cũng như về hiệu suất và khả năng tuyệt vời của nó.
+
+
+00:02:59,640 --> 00:03:01,170
+The third one is Java.
+Thứ ba là Java.
+
+
+00:03:01,500 --> 00:03:05,280
+Java has been around for a long time and it looks like it's here to stay.
+Java đã tồn tại trong một thời gian dài và có vẻ như nó sẽ còn tồn tại lâu dài.
+
+
+00:03:05,550 --> 00:03:11,850
+Created in 1995 by Sun Microsystems, currently owned by Oracle, Java is one of the most popular platforms
+Được tạo ra vào năm 1995 bởi Sun Microsystems, hiện thuộc sở hữu của Oracle, Java là một trong những nền tảng phổ biến nhất
+
+
+00:03:11,850 --> 00:03:13,630
+in use today, like Dotnet.
+đang được sử dụng ngày nay, như Dotnet.
+
+
+00:03:13,650 --> 00:03:17,760
+It's a general purpose object oriented, statically typed language.
+Đây là ngôn ngữ hướng đối tượng mục đích chung, được gõ tĩnh.
+
+
+00:03:17,910 --> 00:03:23,850
+Its early forays into client side in the form of Java applets and later Java was not a huge success,
+Những bước đột phá ban đầu của nó vào phía máy khách dưới dạng các ứng dụng Java và sau đó là Java không thành công lắm,
+
+
+00:03:23,850 --> 00:03:25,440
+but the Android ecosystem with it.
+nhưng hệ sinh thái Android cũng vậy.
+
+
+00:03:25,440 --> 00:03:28,950
+Apps written natively in Java gave it a huge boost.
+Các ứng dụng được viết bằng Java gốc đã mang lại sự thúc đẩy to lớn.
+
+
+00:03:28,980 --> 00:03:31,170
+The server side Java is called Java.
+Phía máy chủ Java được gọi là Java.
+
+
+00:03:31,200 --> 00:03:36,690
+EE recently changed to Jakarta Enterprise edition and provides everything you can expect from a server
+EE gần đây đã chuyển sang phiên bản Jakarta Enterprise và cung cấp mọi thứ bạn có thể mong đợi từ một máy chủ
+
+
+00:03:36,690 --> 00:03:40,350
+side platform, including web apps, web API database access and lots more.
+nền tảng phụ, bao gồm các ứng dụng web, quyền truy cập cơ sở dữ liệu API web và nhiều hơn nữa.
+
+
+00:03:40,350 --> 00:03:43,020
+And all this in a cross platform environment.
+Và tất cả những điều này đều diễn ra trong môi trường đa nền tảng.
+
+
+00:03:44,280 --> 00:03:49,620
+Java has a huge community, sometimes suffering from too much self-criticism, but still provides great
+Java có một cộng đồng lớn, đôi khi phải chịu đựng quá nhiều sự tự chỉ trích, nhưng vẫn cung cấp 57 tuyệt vời
+
+
+00:03:49,620 --> 00:03:50,580
+support for everything.
+hỗ trợ cho mọi thứ.
+
+
+00:03:50,580 --> 00:03:51,120
+Java.
+Java.
+
+
+00:03:51,450 --> 00:03:56,730
+In the last years it looks like the interest in Java on the back end has waned and new kids in the block
+Trong những năm gần đây, có vẻ như sự quan tâm đến Java ở phía sau đã giảm sút và những đứa trẻ mới trong khối
+
+
+00:03:56,910 --> 00:03:58,080
+get all the attention.
+nhận được tất cả sự chú ý.
+
+
+00:03:58,080 --> 00:04:01,320
+But Java is still a great platform for web apps and web API.
+Nhưng Java vẫn là một nền tảng tuyệt vời cho các ứng dụng web và API web.
+
+
+00:04:03,110 --> 00:04:06,900
+Node.js is one of the youngest platform here, second only to Dotnet core.
+Node.js là một trong những nền tảng trẻ nhất ở đây, chỉ đứng sau Dotnet core.
+
+
+00:04:07,050 --> 00:04:13,020
+It was founded on 2009 by Ryan Dahl and is optimized for highly concurrent web apps.
+Nó được thành lập vào năm 2009 bởi Ryan Dahl và được tối ưu hóa cho các ứng dụng web có tính đồng thời cao.
+
+
+00:04:13,050 --> 00:04:18,720
+Its syntax is based on JavaScript, which makes it dynamically typed and it quickly gained adoption
+Cú pháp của nó dựa trên JavaScript, khiến nó được gõ động và nhanh chóng được áp dụng
+
+
+00:04:18,720 --> 00:04:21,390
+because of its familiar syntax and great performance.
+vì cú pháp quen thuộc và hiệu suất tuyệt vời của nó.
+
+
+00:04:21,870 --> 00:04:27,240
+It's probably one of the fastest frameworks out there fighting with Dotnet core on the first place.
+Có lẽ đây là một trong những framework nhanh nhất hiện nay đang cạnh tranh với Dotnet core ngay từ đầu.
+
+
+00:04:27,450 --> 00:04:32,610
+As mentioned, NodeJS is not targeted for long running processes, so don't try to build services with
+Như đã đề cập, NodeJS không nhắm mục tiêu vào các quy trình chạy dài, vì vậy đừng cố gắng xây dựng các dịch vụ với
+
+
+00:04:32,610 --> 00:04:32,970
+it.
+nó.
+
+
+00:04:32,970 --> 00:04:38,160
+But for web apps that require a lot of short concurrent IO operations, it should be on the top of the
+Nhưng đối với các ứng dụng web yêu cầu nhiều hoạt động IO đồng thời ngắn, nó phải nằm ở đầu
+
+
+00:04:38,160 --> 00:04:38,730
+list.
+danh sách.
+
+
+00:04:40,290 --> 00:04:46,200
+PHP was founded in 1994 by Rasmus Lerdorf, which makes it even more mature than Java.
+PHP được thành lập vào năm 1994 bởi Rasmus Lerdorf, điều này khiến nó thậm chí còn trưởng thành hơn Java.
+
+
+00:04:46,200 --> 00:04:50,340
+But in contrast to Java, which is object oriented statically typed language.
+Nhưng trái ngược với Java, là ngôn ngữ hướng đối tượng có kiểu tĩnh.
+
+
+00:04:50,700 --> 00:04:51,600
+PHP very.
+PHP rất.
+
+
+00:04:51,840 --> 00:04:53,910
+How can I call it messy?
+Làm sao tôi có thể gọi nó là lộn xộn?
+
+
+00:04:54,600 --> 00:04:57,270
+It's very easy to learn, but that comes at a cost.
+Rất dễ học, nhưng phải trả giá.
+
+
+00:04:57,270 --> 00:04:59,640
+It sometimes looks like it was rushed out of.
+Đôi khi trông giống như nó đã được vội vã đưa ra.
+
+
+00:04:59,670 --> 00:05:01,830
+The gate and was not polished enough.
+Cổng không được đánh bóng đủ.
+
+
+00:05:02,460 --> 00:05:07,830
+However, it's one of the most popular languages out there and has a vibrant community.
+Tuy nhiên, đây là một trong những ngôn ngữ phổ biến nhất hiện nay và có một cộng đồng sôi động.
+
+
+00:05:08,970 --> 00:05:14,280
+PHP is laser focused on web apps and web APIs, so if you are planning a long running component, better
+PHP tập trung vào các ứng dụng web và API web, vì vậy nếu bạn đang lập kế hoạch cho một thành phần chạy lâu dài, tốt hơn là
+
+
+00:05:14,280 --> 00:05:15,300
+look somewhere else.
+nhìn đi nơi khác.
+
+
+00:05:16,560 --> 00:05:18,510
+Last but not least is Python.
+Cuối cùng nhưng không kém phần quan trọng là Python.
+
+
+00:05:18,660 --> 00:05:24,810
+Founded on 1989 by Guido van Rossum and quickly became one of the most popular scripting language,
+Được thành lập vào năm 1989 bởi Guido van Rossum và nhanh chóng trở thành một trong những ngôn ngữ kịch bản phổ biến nhất,
+
+
+00:05:24,810 --> 00:05:29,310
+Python quickly gained momentum as the language that can perform almost any task.
+Python nhanh chóng trở thành ngôn ngữ có thể thực hiện hầu hết mọi tác vụ.
+
+
+00:05:29,640 --> 00:05:33,990
+You can find it inside applications written in other platforms, in machine learning systems and of
+Bạn có thể tìm thấy nó bên trong các ứng dụng được viết trên các nền tảng khác, trong các hệ thống học máy và
+
+
+00:05:33,990 --> 00:05:36,000
+course as a web app or web API.
+khóa học như một ứng dụng web hoặc API web.
+
+
+00:05:36,360 --> 00:05:39,870
+One of the strongest selling point of Python is its learning curve.
+Một trong những điểm bán hàng mạnh nhất của Python là đường cong học tập của nó.
+
+
+00:05:39,900 --> 00:05:43,740
+It is one of the easiest language to learn and is also very tolerant.
+Đây là một trong những ngôn ngữ dễ học nhất và cũng rất dễ hiểu.
+
+
+00:05:43,770 --> 00:05:47,460
+Python also has a large community which is known for its helpful members.
+Python cũng có một cộng đồng lớn được biết đến với các thành viên hữu ích.
+
+
+00:05:48,210 --> 00:05:53,010
+You can consider Python for almost any type of application, including web app, web API console or
+Bạn có thể cân nhắc Python cho hầu hết mọi loại ứng dụng, bao gồm ứng dụng web, bảng điều khiển API web hoặc
+
+
+00:05:53,010 --> 00:05:53,700
+service.
+dịch vụ.
+
+
+00:05:54,960 --> 00:05:58,230
+So this was a short review of the leading backend platforms.
+Vì vậy, đây là một đánh giá ngắn gọn về các nền tảng phụ trợ hàng đầu.
+
+
+00:05:58,260 --> 00:06:01,000
+Let's summarize it with the following table.
+Chúng ta hãy tóm tắt lại bằng bảng sau.
+
+
+00:06:01,300 --> 00:06:04,270
+In this table you can see the main attributes of every platform.
+Trong bảng này bạn có thể thấy các thuộc tính chính của từng nền tảng.
+
+
+00:06:04,270 --> 00:06:06,670
+I recommend you to use this table as a reference.
+Tôi khuyên bạn nên sử dụng bảng này làm tài liệu tham khảo.
+
+
+00:06:06,670 --> 00:06:11,290
+When time has come to select the technology platform for the backend service or console.
+Khi đến lúc phải lựa chọn nền tảng công nghệ cho dịch vụ hoặc bảng điều khiển phía sau.
+
+

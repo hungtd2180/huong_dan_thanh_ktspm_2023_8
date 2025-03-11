@@ -1,0 +1,130 @@
+00:00:00,410 --> 00:00:03,110
+Welcome to the Technology stack section.
+Chào mừng đến với phần Công nghệ.
+
+
+00:00:03,260 --> 00:00:08,180
+In this section, we will discuss one of the most important and loaded tasks of the architect, and
+Trong phần này, chúng ta sẽ thảo luận về một trong những nhiệm vụ quan trọng và nặng nề nhất của kiến trúc sư, và
+
+
+00:00:08,180 --> 00:00:11,310
+that is selecting the technology stack of the system.
+đó là lựa chọn công nghệ của hệ thống.
+
+
+00:00:11,330 --> 00:00:16,400
+The selected technology stack will determine what languages, platforms and tools will be used during
+Công nghệ được chọn sẽ xác định ngôn ngữ, nền tảng và công cụ nào sẽ được sử dụng trong
+
+
+00:00:16,400 --> 00:00:20,630
+system development and what are the skills required from the development team.
+phát triển hệ thống và những kỹ năng cần thiết từ nhóm phát triển là gì.
+
+
+00:00:20,900 --> 00:00:23,510
+This decision is important for two reasons.
+Quyết định này quan trọng vì hai lý do.
+
+
+00:00:23,510 --> 00:00:25,840
+One, it's irreversible.
+Một là không thể đảo ngược được.
+
+
+00:00:25,850 --> 00:00:30,560
+Once you've decided to use a specific platform and work has begun on this platform, you can't reverse
+Khi bạn đã quyết định sử dụng một nền tảng cụ thể và công việc đã bắt đầu trên nền tảng này, bạn không thể đảo ngược
+
+
+00:00:30,560 --> 00:00:30,710
+it.
+nó.
+
+
+00:00:30,710 --> 00:00:36,730
+It's not possible to decide three months into development that actually we prefer another platform.
+Không thể quyết định sau ba tháng phát triển rằng chúng tôi thực sự thích nền tảng khác.
+
+
+00:00:36,740 --> 00:00:42,380
+Such a decision will result in a complete rewrite of the system and a substantial delay in schedule.
+Quyết định như vậy sẽ dẫn đến việc phải viết lại toàn bộ hệ thống và làm chậm tiến độ đáng kể.
+
+
+00:00:42,920 --> 00:00:48,140
+There are some architectural patterns that allow some kind of flexibility in the technology stack selection,
+Có một số mẫu kiến trúc cho phép có một số loại tính linh hoạt trong việc lựa chọn ngăn xếp công nghệ,
+
+
+00:00:48,140 --> 00:00:49,730
+notably microservices.
+đáng chú ý là các dịch vụ vi mô.
+
+
+00:00:49,730 --> 00:00:53,690
+But even there, it's not a good idea to switch platforms between each service.
+Nhưng ngay cả ở đó, việc chuyển đổi nền tảng giữa các dịch vụ cũng không phải là ý tưởng hay.
+
+
+00:00:54,470 --> 00:01:00,540
+Reason number two Decisions like that are often loaded with emotions and are made on a non rational
+Lý do thứ hai Những quyết định như vậy thường chứa đầy cảm xúc và được đưa ra một cách không lý trí.
+
+
+00:01:00,540 --> 00:01:01,290
+basis.
+cơ sở.
+
+
+00:01:01,290 --> 00:01:05,519
+You will encounter situations where the development team would like to do a specific platform because
+Bạn sẽ gặp phải những tình huống mà nhóm phát triển muốn thực hiện một nền tảng cụ thể vì
+
+
+00:01:05,519 --> 00:01:09,600
+it's new, sexy and the team across the corridor already uses it.
+nó mới, hấp dẫn và nhóm bên kia hành lang đã sử dụng nó.
+
+
+00:01:09,630 --> 00:01:13,950
+It won't matter that this technology is inferior for the specific task in hand.
+Sẽ không thành vấn đề nếu công nghệ này kém hơn so với nhiệm vụ cụ thể trong tay.
+
+
+00:01:13,980 --> 00:01:15,600
+They will still want it.
+Họ vẫn muốn nó.
+
+
+00:01:15,690 --> 00:01:22,200
+So this decision has to be made with clear mind, must be heavily documented, and be a group effort.
+Vì vậy, quyết định này phải được đưa ra với sự sáng suốt, phải được ghi chép đầy đủ và là nỗ lực của cả nhóm.
+
+
+00:01:22,200 --> 00:01:24,450
+And not only yours, the architect.
+Và không chỉ riêng bạn, kiến trúc sư.
+
+
+00:01:24,600 --> 00:01:29,520
+In this section we will discuss technology, stack alternatives for the front end, back end and data
+Trong phần này chúng ta sẽ thảo luận về công nghệ, các giải pháp thay thế cho front-end, back-end và dữ liệu
+
+
+00:01:29,520 --> 00:01:30,090
+store.
+cửa hàng.
+
+
+00:01:30,240 --> 00:01:34,800
+For each alternative, we will give a little background and discuss its pros and cons.
+Đối với mỗi phương án thay thế, chúng tôi sẽ cung cấp một chút thông tin cơ bản và thảo luận về ưu và nhược điểm của nó.
+
+
+00:01:34,830 --> 00:01:39,420
+I hope this section will help you make an informed decision about the technology stack in your system.
+Tôi hy vọng phần này sẽ giúp bạn đưa ra quyết định sáng suốt về công nghệ trong hệ thống của mình.
+
+

@@ -1,0 +1,360 @@
+00:00:00,240 --> 00:00:04,950
+Dependency injection complements the interface pattern we discussed in the previous lecture.
+Tiêm phụ thuộc bổ sung cho mô hình giao diện mà chúng ta đã thảo luận trong bài giảng trước.
+
+
+00:00:05,220 --> 00:00:10,740
+As a reminder, we talked about interfaces as a better mechanism for communicating between classes in
+Để nhắc lại, chúng ta đã nói về giao diện như một cơ chế tốt hơn để giao tiếp giữa các lớp trong
+
+
+00:00:10,740 --> 00:00:13,590
+order to make the code more modular and flexible.
+để làm cho mã có tính mô-đun và linh hoạt hơn.
+
+
+00:00:13,710 --> 00:00:19,890
+We finished the lecture with an open ended topic how to inject a concrete implementation into the interface
+Chúng tôi kết thúc bài giảng với chủ đề mở về cách đưa một triển khai cụ thể vào giao diện
+
+
+00:00:19,890 --> 00:00:22,230
+so it can be used by the calling code.
+vì vậy nó có thể được sử dụng bởi mã gọi.
+
+
+00:00:22,260 --> 00:00:27,270
+And the answer to that question is the topic of this lecture dependency injection.
+Và câu trả lời cho câu hỏi đó chính là chủ đề của bài giảng này về dependency injection.
+
+
+00:00:28,320 --> 00:00:35,070
+Dependency injection is defined in Wikipedia as a technique whereby one object supplies the dependencies
+Tiêm phụ thuộc được định nghĩa trong Wikipedia là một kỹ thuật trong đó một đối tượng cung cấp các phụ thuộc
+
+
+00:00:35,070 --> 00:00:36,420
+of another object.
+của một vật thể khác.
+
+
+00:00:36,450 --> 00:00:42,510
+Now, this might sound a bit complicated and well, academic, but in reality it's quite simple.
+Bây giờ, điều này có vẻ hơi phức tạp và mang tính học thuật, nhưng thực tế thì nó khá đơn giản.
+
+
+00:00:42,780 --> 00:00:46,260
+Let's look again at the example we discussed in the previous lecture.
+Chúng ta hãy xem lại ví dụ mà chúng ta đã thảo luận trong bài giảng trước.
+
+
+00:00:46,290 --> 00:00:49,910
+We had a main class that calls the calculator class.
+Chúng tôi có một lớp chính gọi là lớp máy tính.
+
+
+00:00:49,920 --> 00:00:54,630
+In this example, the calculator is a dependency of the main class.
+Trong ví dụ này, máy tính là một phần phụ thuộc của lớp chính.
+
+
+00:00:54,630 --> 00:00:56,520
+The main class depends on it.
+Lớp chính phụ thuộc vào nó.
+
+
+00:00:56,550 --> 00:01:02,410
+In order to be able to function correctly using the dependency injection technique, we are able to
+Để có thể hoạt động chính xác khi sử dụng kỹ thuật tiêm phụ thuộc, chúng ta có thể
+
+
+00:01:02,410 --> 00:01:08,620
+inject a concrete implementation or a class to the interface representing the dependency without the
+chèn một triển khai cụ thể hoặc một lớp vào giao diện biểu diễn sự phụ thuộc mà không có
+
+
+00:01:08,620 --> 00:01:11,710
+main class knowing which concrete implementation is used.
+lớp chính biết triển khai cụ thể nào được sử dụng.
+
+
+00:01:11,830 --> 00:01:17,680
+If you will look closely at the code, we can see the dependency injection happening at the Getinstance
+Nếu bạn xem xét kỹ mã, chúng ta có thể thấy việc tiêm phụ thuộc xảy ra tại Getinstance
+
+
+00:01:17,680 --> 00:01:18,340
+line.
+dòng.
+
+
+00:01:18,550 --> 00:01:24,540
+In this line, the Getinstance returns a class that implements the eye calculator interface.
+Trong dòng này, Getinstance trả về một lớp thực hiện giao diện máy tính mắt.
+
+
+00:01:24,550 --> 00:01:27,700
+Note that the main class has no idea what class it is.
+Lưu ý rằng lớp chính không biết nó là lớp gì.
+
+
+00:01:27,730 --> 00:01:31,500
+It can be the class we saw previously or a completely different one.
+Có thể là lớp chúng ta đã học trước đó hoặc là một lớp hoàn toàn khác.
+
+
+00:01:31,510 --> 00:01:35,620
+The only thing known is that this class implements the required interface.
+Điều duy nhất được biết là lớp này triển khai giao diện cần thiết.
+
+
+00:01:35,650 --> 00:01:41,040
+This way we created a middleman between the main class and the calculator class.
+Bằng cách này, chúng tôi đã tạo ra một trung gian giữa lớp chính và lớp máy tính.
+
+
+00:01:41,050 --> 00:01:47,500
+Or in other words, we eliminated the strong coupling between the two, making our code much more modular
+Hay nói cách khác, chúng tôi đã loại bỏ sự kết hợp chặt chẽ giữa hai yếu tố này, khiến mã của chúng tôi có tính mô-đun hơn nhiều
+
+
+00:01:47,500 --> 00:01:48,580
+and flexible.
+và linh hoạt.
+
+
+00:01:49,500 --> 00:01:55,260
+Now, the real question is, of course, what is happening with this mysterious Getinstance method?
+Bây giờ, câu hỏi thực sự là, điều gì đang xảy ra với phương thức Getinstance bí ẩn này?
+
+
+00:01:55,290 --> 00:01:57,700
+Well, the answer is actually quite simple.
+Vâng, câu trả lời thực ra khá đơn giản.
+
+
+00:01:57,720 --> 00:02:04,410
+This method, often referred as factory method, simply executes some logic and decides which class
+Phương pháp này, thường được gọi là phương pháp nhà máy, chỉ thực hiện một số logic và quyết định lớp nào
+
+
+00:02:04,410 --> 00:02:05,570
+should be injected.
+nên tiêm.
+
+
+00:02:05,580 --> 00:02:10,229
+An object is then instantiated from the class and returned as an interface.
+Sau đó, một đối tượng được khởi tạo từ lớp và trả về dưới dạng một giao diện.
+
+
+00:02:10,259 --> 00:02:13,650
+Let's look at some possible implementations of this method.
+Hãy cùng xem xét một số cách triển khai có thể có của phương pháp này.
+
+
+00:02:14,280 --> 00:02:16,190
+The first implementation is the simplest.
+Việc triển khai đầu tiên là đơn giản nhất.
+
+
+00:02:16,200 --> 00:02:19,380
+It simply returns an instance of the calculator class.
+Nó chỉ trả về một thể hiện của lớp máy tính.
+
+
+00:02:19,410 --> 00:02:21,450
+This implementation has no logic at all.
+Việc triển khai này không có logic gì cả.
+
+
+00:02:21,450 --> 00:02:25,620
+It always returns the same class, although seems a bit odd.
+Nó luôn trả về cùng một lớp, mặc dù có vẻ hơi lạ.
+
+
+00:02:25,650 --> 00:02:31,140
+This implementation still carries value since even with only a single class, the use of a dependency
+Việc triển khai này vẫn có giá trị vì ngay cả khi chỉ có một lớp duy nhất, việc sử dụng một phụ thuộc
+
+
+00:02:31,140 --> 00:02:37,950
+injection helps us to create a modular code that is not tied with strong coupling and allows us to switch
+injection giúp chúng ta tạo ra một mã mô-đun không bị ràng buộc bởi sự kết hợp chặt chẽ và cho phép chúng ta chuyển đổi
+
+
+00:02:37,950 --> 00:02:41,640
+to another implementation without the calling code being aware of that.
+đến một triển khai khác mà không có mã gọi nào nhận thức được điều đó.
+
+
+00:02:42,450 --> 00:02:45,390
+Now let's look at another implementation.
+Bây giờ chúng ta hãy xem một cách triển khai khác.
+
+
+00:02:45,420 --> 00:02:50,820
+This implementation is more sophisticated in that the calling code specifies a parameter that helps
+Việc triển khai này phức tạp hơn ở chỗ mã gọi chỉ định một tham số giúp
+
+
+00:02:50,820 --> 00:02:53,140
+the method decide which instance to return.
+phương pháp quyết định trường hợp nào sẽ trả về.
+
+
+00:02:53,160 --> 00:02:58,020
+In this case, the calling code specifies which type of calculator should be used.
+Trong trường hợp này, mã gọi sẽ chỉ định loại máy tính nào sẽ được sử dụng.
+
+
+00:02:58,140 --> 00:03:04,230
+As you can see, the method examines the calculator type received, instantiates the correct class and
+Như bạn có thể thấy, phương pháp này kiểm tra loại máy tính đã nhận, khởi tạo lớp chính xác và
+
+
+00:03:04,230 --> 00:03:05,310
+returns it.
+trả lại nó.
+
+
+00:03:05,370 --> 00:03:09,570
+Note again that the calling code has no idea which implementation it got.
+Xin lưu ý một lần nữa rằng mã gọi không biết nó nhận được triển khai nào.
+
+
+00:03:09,600 --> 00:03:11,880
+It always works with the interface.
+Nó luôn hoạt động với giao diện.
+
+
+00:03:12,540 --> 00:03:18,400
+A very common variation of this example is to define the parameter in a configuration file.
+Một biến thể rất phổ biến của ví dụ này là xác định tham số trong tệp cấu hình.
+
+
+00:03:18,420 --> 00:03:24,660
+This way the factory gets no parameter at all but reads the parameter from a configuration file.
+Theo cách này, nhà máy không nhận được bất kỳ tham số nào mà chỉ đọc tham số từ tệp cấu hình.
+
+
+00:03:24,690 --> 00:03:29,850
+This is a very common pattern in data access layer implementations where the database type to be used
+Đây là một mô hình rất phổ biến trong việc triển khai lớp truy cập dữ liệu, trong đó loại cơ sở dữ liệu được sử dụng là
+
+
+00:03:29,850 --> 00:03:36,450
+is stored in the configuration file and the factory method reads it from there and decides which data
+được lưu trữ trong tệp cấu hình và phương pháp nhà máy đọc nó từ đó và quyết định dữ liệu nào
+
+
+00:03:36,450 --> 00:03:38,250
+access layer implementation to return.
+lớp truy cập thực hiện để trả về.
+
+
+00:03:39,550 --> 00:03:44,260
+Up until now, we saw examples of dependency injection using a factory method, but there are actually
+Cho đến nay, chúng ta đã thấy các ví dụ về tiêm phụ thuộc sử dụng phương pháp nhà máy, nhưng thực tế có
+
+
+00:03:44,260 --> 00:03:45,400
+other types of it.
+các loại khác của nó.
+
+
+00:03:46,080 --> 00:03:50,050
+One of the most common types of injection is a constructor injection.
+Một trong những loại tiêm phổ biến nhất là tiêm xây dựng.
+
+
+00:03:50,070 --> 00:03:56,400
+Using constructor injection, the class receives instantiated interfaces in its constructor and uses
+Sử dụng phương pháp tiêm hàm tạo, lớp nhận được các giao diện được khởi tạo trong hàm tạo của nó và sử dụng
+
+
+00:03:56,400 --> 00:03:57,990
+it in the class's methods.
+nó trong các phương pháp của lớp.
+
+
+00:03:58,080 --> 00:04:01,560
+Here is an example of such an injection, this time in Dotnet core.
+Đây là một ví dụ về việc tiêm như vậy, lần này là trong lõi Dotnet.
+
+
+00:04:01,950 --> 00:04:08,400
+As you can see, the class's constructor receives an Ilogger interface as a parameter and can use it
+Như bạn có thể thấy, hàm tạo của lớp nhận được giao diện Ilogger làm tham số và có thể sử dụng nó
+
+
+00:04:08,400 --> 00:04:09,150
+immediately.
+ngay lập tức.
+
+
+00:04:09,180 --> 00:04:13,950
+The framework in this case instantiated it for the class and no further action is needed.
+Trong trường hợp này, khung đã khởi tạo nó cho lớp và không cần thực hiện thêm hành động nào nữa.
+
+
+00:04:14,250 --> 00:04:19,589
+The main advantage of the constructor injection pattern over the traditional pattern is testability.
+Ưu điểm chính của mô hình tiêm hàm tạo so với mô hình truyền thống là khả năng kiểm tra.
+
+
+00:04:19,740 --> 00:04:23,910
+A class that gets injected in its constructor is much more easy to test.
+Một lớp được đưa vào hàm tạo của nó sẽ dễ kiểm tra hơn nhiều.
+
+
+00:04:23,940 --> 00:04:29,190
+The test method can instantiate the class with mock objects and simply run the test.
+Phương pháp thử nghiệm có thể khởi tạo lớp với các đối tượng giả và chỉ cần chạy thử nghiệm.
+
+
+00:04:29,220 --> 00:04:31,350
+This example demonstrates that.
+Ví dụ này chứng minh điều đó.
+
+
+00:04:32,070 --> 00:04:38,160
+Note that the test method instantiates the class with a mock logger which does nothing and the tested
+Lưu ý rằng phương pháp kiểm tra khởi tạo lớp với một trình ghi nhật ký giả không làm gì cả và 66 đã được kiểm tra
+
+
+00:04:38,160 --> 00:04:41,140
+class has no idea about it from its point of view.
+lớp học không có ý tưởng gì về nó theo quan điểm của nó.
+
+
+00:04:41,160 --> 00:04:43,950
+This is a normal logger with full functionality.
+Đây là một trình ghi dữ liệu bình thường với đầy đủ chức năng.
+
+
+00:04:45,430 --> 00:04:48,940
+So this concludes our discussion on interfaces and dependency injection.
+Vậy là chúng ta đã kết thúc cuộc thảo luận về giao diện và tiêm phụ thuộc.
+
+
+00:04:48,940 --> 00:04:55,570
+It's not trivial, but once implemented properly, the result is a modular, flexible and easy to maintain
+Nó không phải là chuyện nhỏ, nhưng một khi được triển khai đúng cách, kết quả sẽ là một mô-đun, linh hoạt và dễ bảo trì
+
+
+00:04:55,570 --> 00:04:56,650
+and modify code.
+và sửa đổi mã.
+
+
+00:04:56,680 --> 00:04:57,760
+Give it a try.
+Hãy thử xem.
+
+
+00:04:57,790 --> 00:05:03,040
+You may get a bit frustrated at the beginning, but in the end you will see the light, believe me.
+Có thể lúc đầu bạn sẽ thấy hơi nản lòng, nhưng tin tôi đi, cuối cùng bạn sẽ thấy được ánh sáng thôi.
+
+

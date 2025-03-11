@@ -1,0 +1,755 @@
+00:00:00,360 --> 00:00:06,630
+Before discussing front end technology, let's have a little reminder about what front is so front end
+Trước khi thảo luận về công nghệ front-end, chúng ta hãy cùng nhắc lại một chút về front-end là gì, front-end 2 là gì?
+
+
+00:00:06,630 --> 00:00:10,530
+is a part of the software that is viewed by an actual user with his own eyes.
+là một phần của phần mềm được người dùng thực tế tận mắt nhìn thấy.
+
+
+00:00:10,920 --> 00:00:15,540
+This is where we will display bottomless text, dropdown list, colors, messages and more.
+Đây là nơi chúng ta sẽ hiển thị văn bản không đáy, danh sách thả xuống, màu sắc, thông báo và nhiều nội dung khác.
+
+
+00:00:16,050 --> 00:00:20,790
+So, naturally, when selecting a floating technology, we would like to select something with robust
+Vì vậy, tất nhiên, khi lựa chọn công nghệ nổi, chúng tôi muốn lựa chọn thứ gì đó có
+
+
+00:00:20,790 --> 00:00:23,820
+visual capabilities, but something that will not make us work too hard.
+khả năng thị giác, nhưng điều đó sẽ không khiến chúng ta phải làm việc quá sức.
+
+
+00:00:24,600 --> 00:00:29,430
+But first, let's look back at application types we discussed and see which one of them actually has
+Nhưng trước tiên, hãy cùng xem lại các loại ứng dụng mà chúng ta đã thảo luận và xem loại nào trong số chúng thực sự có
+
+
+00:00:29,430 --> 00:00:30,120
+a front end.
+một đầu phía trước.
+
+
+00:00:30,570 --> 00:00:37,920
+So Web apps definitely with defined Web apps as applications that run in the browser and display it
+Vì vậy, các ứng dụng Web chắc chắn được định nghĩa là các ứng dụng Web chạy trên trình duyệt và hiển thị nó
+
+
+00:00:38,170 --> 00:00:38,790
+to the user.
+cho người dùng.
+
+
+00:00:38,940 --> 00:00:40,710
+We definitely have a front end here.
+Chúng tôi chắc chắn có một mặt trước ở đây.
+
+
+00:00:41,430 --> 00:00:45,570
+Web API, not so much client of Web API.
+Web API, không hẳn là máy khách của Web API.
+
+
+00:00:45,720 --> 00:00:51,150
+Other applications such as mobile apps, which by themselves might have front end, but the Web API
+Các ứng dụng khác như ứng dụng di động, bản thân chúng có thể có giao diện người dùng, nhưng Web API
+
+
+00:00:51,150 --> 00:00:54,700
+application itself does not mobile apps.
+ứng dụng bản thân nó không phải là ứng dụng di động.
+
+
+00:00:55,350 --> 00:01:00,570
+Yep, that's the whole point, is that it console will.
+Vâng, đó chính là toàn bộ vấn đề, đó là điều khiển sẽ.
+
+
+00:01:00,630 --> 00:01:01,560
+That is complicated.
+Điều đó thật phức tạp.
+
+
+00:01:01,860 --> 00:01:06,720
+Technically there is a user interface to a console application, but it's not built separately from
+Về mặt kỹ thuật, có một giao diện người dùng cho ứng dụng bảng điều khiển, nhưng nó không được xây dựng riêng biệt với
+
+
+00:01:06,720 --> 00:01:07,760
+the console app itself.
+ứng dụng console.
+
+
+00:01:08,130 --> 00:01:13,410
+And let's face it, there isn't going to be heavy investment in any console application user interface.
+Và thực tế là sẽ không có khoản đầu tư lớn nào vào bất kỳ giao diện người dùng ứng dụng bảng điều khiển nào.
+
+
+00:01:13,860 --> 00:01:19,680
+So for the sake of all of our discussion, there is no front end to console service.
+Vì vậy, vì lợi ích của tất cả các cuộc thảo luận của chúng ta, không có giao diện đầu cuối cho dịch vụ điều khiển.
+
+
+00:01:20,220 --> 00:01:24,450
+Not the whole point of service is that it does not have user interface.
+Không phải toàn bộ mục đích của dịch vụ này là không có giao diện người dùng.
+
+
+00:01:24,450 --> 00:01:30,300
+So no front end for Ubaidi desktop, of course, there is also desktop apps.
+Vì vậy, không có giao diện cho máy tính để bàn Ubaidi, tất nhiên, cũng có các ứng dụng máy tính để bàn.
+
+
+00:01:30,300 --> 00:01:31,170
+Varies greatly.
+Thay đổi rất nhiều.
+
+
+00:01:31,170 --> 00:01:35,480
+Is the common denominator of all of them is that the user can see them and interact with them.
+Điểm chung của tất cả chúng là người dùng có thể nhìn thấy và tương tác với chúng.
+
+
+00:01:35,850 --> 00:01:38,040
+So there is a front end to the desktop app.
+Vì vậy, có một giao diện cho ứng dụng máy tính để bàn.
+
+
+00:01:38,820 --> 00:01:44,800
+OK, so let's go over the values front and types and see how to select the technology first.
+Được rồi, chúng ta hãy xem xét các giá trị và loại trước và xem cách chọn công nghệ trước.
+
+
+00:01:44,880 --> 00:01:51,270
+Web apps, web apps by definition have Web based front end, which means we are going to use a combination
+Ứng dụng web, theo định nghĩa, ứng dụng web có giao diện người dùng dựa trên Web, nghĩa là chúng ta sẽ sử dụng kết hợp
+
+
+00:01:51,270 --> 00:01:59,280
+of JavaScript and services is the real question here is which JavaScript framework are we going to use?
+của JavaScript và các dịch vụ là câu hỏi thực sự ở đây là chúng ta sẽ sử dụng khuôn khổ JavaScript nào?
+
+
+00:01:59,820 --> 00:02:04,410
+The most popular frameworks at the time of this recording are angular and react.
+Các khuôn khổ phổ biến nhất tại thời điểm ghi âm này là Angular và React.
+
+
+00:02:05,160 --> 00:02:10,590
+There are other great candidates such as refugees, but I really want to focus on the most popular ones
+Có những ứng cử viên tuyệt vời khác như người tị nạn, nhưng tôi thực sự muốn tập trung vào những ứng cử viên phổ biến nhất
+
+
+00:02:10,590 --> 00:02:11,940
+with the largest communities.
+với cộng đồng lớn nhất.
+
+
+00:02:12,900 --> 00:02:16,560
+So first, let's compare Angiulo and popularity.
+Vậy trước tiên, chúng ta hãy so sánh Angiulo và mức độ phổ biến.
+
+
+00:02:16,950 --> 00:02:20,120
+As you can see on Google Trends, they are quite similar in popularity.
+Như bạn có thể thấy trên Google Trends, mức độ phổ biến của chúng khá giống nhau.
+
+
+00:02:22,350 --> 00:02:27,120
+Looking at stack overflow dot com, we can see there are more questions regarding ungulates and those
+Khi xem stack overflow dot com, chúng ta có thể thấy có nhiều câu hỏi hơn liên quan đến động vật móng guốc và
+
+
+00:02:27,120 --> 00:02:28,050
+regarding the act.
+liên quan đến hành động.
+
+
+00:02:28,530 --> 00:02:35,940
+But since Angulo is older, it was founded on 2010 as opposed to 2013, the numbers are actually quite
+Nhưng vì Angulo cũ hơn, được thành lập vào năm 2010 thay vì năm 2013, nên con số thực tế là khá
+
+
+00:02:35,940 --> 00:02:36,320
+close.
+đóng.
+
+
+00:02:37,480 --> 00:02:38,880
+Let's compare the capabilities.
+Hãy so sánh các khả năng.
+
+
+00:02:39,730 --> 00:02:45,690
+Angular is a full blown framework with a full set of capabilities A14 framework will need, such as
+Angular là một khuôn khổ đầy đủ với một bộ đầy đủ các khả năng mà khuôn khổ A14 sẽ cần, chẳng hạn như
+
+
+00:02:45,690 --> 00:02:50,370
+data binding state management, routing services and lots more learning.
+quản lý trạng thái liên kết dữ liệu, dịch vụ định tuyến và nhiều nội dung học tập khác.
+
+
+00:02:50,370 --> 00:02:50,670
+And will.
+Và sẽ.
+
+
+00:02:50,670 --> 00:02:55,590
+I can take time and it won't come easy even to developers with a lot of experience in Web development.
+Tôi có thể mất thời gian và điều đó sẽ không dễ dàng ngay cả với những nhà phát triển có nhiều kinh nghiệm trong phát triển Web.
+
+
+00:02:56,400 --> 00:03:00,030
+React, on the other hand, is more libraries than a full feature framework.
+Ngược lại, React có nhiều thư viện hơn là một khuôn khổ đầy đủ tính năng.
+
+
+00:03:00,420 --> 00:03:03,900
+It focuses on the user interface side and is great at it.
+Nó tập trung vào giao diện người dùng và rất tuyệt vời ở khía cạnh này.
+
+
+00:03:04,290 --> 00:03:07,920
+If other capabilities are needed than separate libraries should be used.
+Nếu cần các khả năng khác thì nên sử dụng các thư viện riêng biệt.
+
+
+00:03:08,490 --> 00:03:14,010
+On the other side, react learning curve is much shorter and Web developers can get up to speed with
+Mặt khác, đường cong học tập của React ngắn hơn nhiều và các nhà phát triển Web có thể bắt kịp tốc độ với
+
+
+00:03:14,010 --> 00:03:18,510
+it in a matter of days, while angular training can take a few weeks, if not more so.
+trong vài ngày, trong khi luyện tập góc cạnh có thể mất vài tuần, nếu không muốn nói là lâu hơn.
+
+
+00:03:18,510 --> 00:03:24,210
+If you are looking for a one stop solution for all your web front needs and you have the time for training,
+Nếu bạn đang tìm kiếm một giải pháp trọn gói cho mọi nhu cầu về trang web của mình và bạn có thời gian để đào tạo,
+
+
+00:03:24,210 --> 00:03:25,260
+opt for angular.
+chọn góc cạnh.
+
+
+00:03:25,320 --> 00:03:27,090
+Otherwise go for react.
+Nếu không thì hãy phản ứng.
+
+
+00:03:28,530 --> 00:03:31,470
+OK, let's talk about mobile apps.
+Được rồi, chúng ta hãy nói về ứng dụng di động.
+
+
+00:03:31,830 --> 00:03:36,240
+When designing mobile app, the first thing we need to do is to decide the development approach we are
+Khi thiết kế ứng dụng di động, điều đầu tiên chúng ta cần làm là quyết định phương pháp phát triển mà chúng ta sẽ sử dụng
+
+
+00:03:36,240 --> 00:03:36,840
+going to use.
+sẽ sử dụng.
+
+
+00:03:37,260 --> 00:03:43,920
+There are three main approaches for mobile app development, native hybrid and cross platform.
+Có ba cách tiếp cận chính để phát triển ứng dụng di động, lai gốc và đa nền tảng.
+
+
+00:03:44,490 --> 00:03:49,230
+Basically, those approaches represent a trade off between development time versus capabilities and
+Về cơ bản, những cách tiếp cận đó thể hiện sự đánh đổi giữa thời gian phát triển so với khả năng và
+
+
+00:03:49,230 --> 00:03:51,780
+your selection should be based on these factors.
+lựa chọn của bạn nên dựa trên những yếu tố này.
+
+
+00:03:52,560 --> 00:03:54,240
+Let's discuss these approaches.
+Chúng ta hãy thảo luận về những cách tiếp cận này.
+
+
+00:03:55,560 --> 00:03:56,820
+Native apps as an answer.
+Ứng dụng gốc như một câu trả lời.
+
+
+00:03:56,820 --> 00:04:00,510
+Just use the native development platform for each mobile platform.
+Chỉ cần sử dụng nền tảng phát triển gốc cho mỗi nền tảng di động.
+
+
+00:04:00,510 --> 00:04:06,240
+For example, native iPhone development can be done using objectivity or the swift language with the
+Ví dụ, phát triển iPhone gốc có thể được thực hiện bằng cách sử dụng Objectivity hoặc ngôn ngữ Swift với
+
+
+00:04:06,630 --> 00:04:09,330
+development tool and using the iOS SDK.
+công cụ phát triển và sử dụng iOS SDK.
+
+
+00:04:09,750 --> 00:04:14,700
+Android apps, on the other hand, are developed mainly with Java using Android studio and the Android
+Mặt khác, các ứng dụng Android được phát triển chủ yếu bằng Java sử dụng Android studio và Android
+
+
+00:04:14,700 --> 00:04:15,270
+SDK.
+Bộ phát triển phần mềm.
+
+
+00:04:15,900 --> 00:04:17,790
+As you can see, AOS is native.
+Như bạn có thể thấy, AOS là bản gốc.
+
+
+00:04:18,480 --> 00:04:23,730
+Environment is completely different from the Android one and you will have to have developers that expertise
+Môi trường hoàn toàn khác với Android và bạn sẽ phải có các nhà phát triển có chuyên môn
+
+
+00:04:23,730 --> 00:04:25,530
+in each one of those environments.
+trong mỗi môi trường đó.
+
+
+00:04:25,890 --> 00:04:31,700
+On the other hand, native of a full access to all the field capabilities, including camera, accelerometer,
+Mặt khác, bản địa có quyền truy cập đầy đủ vào tất cả các khả năng của lĩnh vực này, bao gồm máy ảnh, máy đo gia tốc,
+
+
+00:04:31,710 --> 00:04:37,320
+Bluetooth, filesystem, text and more, you are not limited in any aspect and you can take advantage
+Bluetooth, hệ thống tập tin, văn bản và nhiều hơn nữa, bạn không bị giới hạn ở bất kỳ khía cạnh nào và bạn có thể tận dụng
+
+
+00:04:37,320 --> 00:04:38,730
+of any feature you would like.
+của bất kỳ tính năng nào bạn muốn.
+
+
+00:04:39,120 --> 00:04:43,860
+In addition, native apps are very responsive and will offer the best user experience.
+Ngoài ra, các ứng dụng gốc rất nhạy và sẽ mang lại trải nghiệm tốt nhất cho người dùng.
+
+
+00:04:44,430 --> 00:04:51,660
+Hybrid apps of the complete opposite of native apps happy to provide native rubber, usually with tools
+Ứng dụng lai hoàn toàn trái ngược với ứng dụng gốc vui vẻ cung cấp cao su gốc, thường có công cụ
+
+
+00:04:51,660 --> 00:04:52,590
+such as a phone app.
+chẳng hạn như ứng dụng điện thoại.
+
+
+00:04:52,830 --> 00:04:59,520
+And in it you will find a regular webpage complete with JavaScript and see if you can think of it as
+Và trong đó bạn sẽ tìm thấy một trang web thông thường hoàn chỉnh với JavaScript và xem liệu bạn có thể nghĩ về nó như
+
+
+00:04:59,520 --> 00:04:59,840
+Iglauer.
+Iglauer.
+
+
+00:04:59,920 --> 00:05:05,020
+Fight Browsr with limited phone capabilities, but it's still a webpage and requires Internet connectivity,
+Fight Browsr với khả năng hạn chế của điện thoại, nhưng nó vẫn là một trang web và yêu cầu kết nối Internet,
+
+
+00:05:06,070 --> 00:05:11,820
+accessing phone capabilities such as accelerometer or COMILLA can be a challenge without having to endure
+việc truy cập các chức năng của điện thoại như máy đo gia tốc hoặc COMILLA có thể là một thách thức mà không cần phải chịu đựng
+
+
+00:05:11,860 --> 00:05:12,960
+a lot of limitations.
+rất nhiều hạn chế.
+
+
+00:05:12,970 --> 00:05:19,150
+In addition, happy to provide inferior user experience compared to native apps in the graphics, performance
+Ngoài ra, vui mừng khi cung cấp trải nghiệm người dùng kém hơn so với các ứng dụng gốc về đồ họa, hiệu suất
+
+
+00:05:19,150 --> 00:05:19,840
+is limited.
+có giới hạn.
+
+
+00:05:20,470 --> 00:05:24,670
+In recent years, a new standard emerged called Progressive Web Apps, or Pittaway.
+Trong những năm gần đây, một tiêu chuẩn mới đã xuất hiện có tên là Progressive Web Apps hay Pittaway.
+
+
+00:05:25,150 --> 00:05:30,550
+This standard allows up to behave much more like native apps with offline capabilities, improve the
+Tiêu chuẩn này cho phép hoạt động giống các ứng dụng gốc hơn với khả năng ngoại tuyến, cải thiện
+
+
+00:05:30,550 --> 00:05:31,750
+hardware access and more.
+truy cập phần cứng và nhiều hơn nữa.
+
+
+00:05:32,170 --> 00:05:36,150
+The standard look quite promising and you should definitely keep an eye on it.
+Tiêu chuẩn này có vẻ khá hứa hẹn và bạn chắc chắn nên chú ý đến nó.
+
+
+00:05:36,550 --> 00:05:38,170
+But it's still not mature enough.
+Nhưng nó vẫn chưa đủ trưởng thành.
+
+
+00:05:38,500 --> 00:05:44,950
+Apple added support for Pittaway in iPhone only in U.S. relation with industry, and even in this version,
+Apple chỉ thêm hỗ trợ cho Pittaway trong iPhone ở Hoa Kỳ liên quan đến ngành công nghiệp và ngay cả trong phiên bản này,
+
+
+00:05:44,950 --> 00:05:47,730
+it's still limited and not on par with Android support.
+nó vẫn còn hạn chế và không ngang bằng với hỗ trợ của Android.
+
+
+00:05:48,070 --> 00:05:49,840
+So it's definitely worth looking into.
+Vì vậy, chắc chắn là đáng để xem xét.
+
+
+00:05:50,050 --> 00:05:51,790
+But perhaps too early to actually use.
+Nhưng có lẽ còn quá sớm để thực sự sử dụng.
+
+
+00:05:51,910 --> 00:05:57,760
+The biggest advantage of hybrid lies in the development team is from the native wrapper, which do require
+Ưu điểm lớn nhất của hybrid nằm ở chỗ nhóm phát triển đến từ wrapper gốc, yêu cầu
+
+
+00:05:57,760 --> 00:05:58,570
+a bit of learning.
+một chút học hỏi.
+
+
+00:05:58,570 --> 00:06:00,730
+Everything else is the regular web development.
+Mọi thứ khác đều là phát triển web thông thường.
+
+
+00:06:01,290 --> 00:06:05,500
+If your team knows how to develop web apps, they will know how to develop hybrid apps.
+Nếu nhóm của bạn biết cách phát triển ứng dụng web, họ sẽ biết cách phát triển ứng dụng lai.
+
+
+00:06:05,650 --> 00:06:11,740
+It's that easy in the middle between the native and hybrid apps we find across cross platform apps.
+Thật dễ dàng khi ở giữa các ứng dụng gốc và ứng dụng lai mà chúng ta tìm thấy trên các ứng dụng đa nền tảng.
+
+
+00:06:12,220 --> 00:06:14,230
+The cost platform approach works like this.
+Phương pháp tiếp cận nền tảng chi phí hoạt động như thế này.
+
+
+00:06:15,730 --> 00:06:20,980
+The development is done in a specialized environment not linked directly to any of the mobile platforms,
+Sự phát triển được thực hiện trong một môi trường chuyên biệt không liên kết trực tiếp với bất kỳ nền tảng di động nào,
+
+
+00:06:21,370 --> 00:06:22,960
+the leading growth platform environments.
+môi trường nền tảng tăng trưởng hàng đầu.
+
+
+00:06:22,960 --> 00:06:28,570
+Today, al-Samarie and React Native in summary, and you will develop in C Sharp using visual studio
+Hôm nay, al-Samarie và React Native tóm tắt lại, và bạn sẽ phát triển bằng C Sharp sử dụng visual studio
+
+
+00:06:28,570 --> 00:06:29,680
+while in real native.
+trong khi ở bản xứ thực sự.
+
+
+00:06:29,680 --> 00:06:34,450
+The development is done with JavaScript using one of the many ideas supporting REAC native.
+Quá trình phát triển được thực hiện bằng JavaScript sử dụng một trong nhiều ý tưởng hỗ trợ REAC gốc.
+
+
+00:06:35,050 --> 00:06:39,970
+After the development is done, you compare the application and the result is the native up for the
+Sau khi quá trình phát triển hoàn tất, bạn so sánh ứng dụng và kết quả là bản gốc cho
+
+
+00:06:39,970 --> 00:06:40,960
+selected platform.
+nền tảng được chọn.
+
+
+00:06:41,200 --> 00:06:46,690
+You will be able to compensate for iOS and for Android and get native apps for both of them without
+Bạn sẽ có thể bù đắp cho iOS và Android và nhận được các ứng dụng gốc cho cả hai mà không cần
+
+
+00:06:46,690 --> 00:06:48,910
+writing a single line of Java or objectives.
+viết một dòng Java hoặc mục tiêu.
+
+
+00:06:50,320 --> 00:06:52,210
+So pros of using this approach are clear.
+Vì vậy, ưu điểm của việc sử dụng phương pháp này là rõ ràng.
+
+
+00:06:52,210 --> 00:06:55,770
+We write the code once and it was on both platforms as native apps.
+Chúng tôi viết mã một lần và nó có trên cả hai nền tảng dưới dạng ứng dụng gốc.
+
+
+00:06:55,990 --> 00:06:56,840
+What are the cons?
+Nhược điểm là gì?
+
+
+00:06:57,040 --> 00:06:57,920
+There are a few.
+Có một vài.
+
+
+00:06:58,700 --> 00:07:03,640
+First, there is usually a government supporting latent capabilities of the native operating system
+Đầu tiên, thường có một chính phủ hỗ trợ các khả năng tiềm ẩn của hệ điều hành gốc
+
+
+00:07:03,640 --> 00:07:07,450
+and the cross platform tools always play catch up with the various mobile platforms.
+và các công cụ đa nền tảng luôn bắt kịp với các nền tảng di động khác nhau.
+
+
+00:07:07,960 --> 00:07:11,750
+In addition, cross platform apps do not work well with heavy graphics.
+Ngoài ra, các ứng dụng đa nền tảng không hoạt động tốt với đồ họa nặng.
+
+
+00:07:11,770 --> 00:07:14,770
+So if that is your plan, you will have to go to native apps.
+Vì vậy, nếu đó là kế hoạch của bạn, bạn sẽ phải chuyển sang ứng dụng gốc.
+
+
+00:07:15,700 --> 00:07:20,920
+Last but not least for some scenarios, you will still have to resort to native programming, especially
+Cuối cùng nhưng không kém phần quan trọng đối với một số tình huống, bạn vẫn phải dùng đến lập trình gốc, đặc biệt là
+
+
+00:07:20,920 --> 00:07:22,490
+when accessing specific sensors.
+khi truy cập vào các cảm biến cụ thể.
+
+
+00:07:22,840 --> 00:07:25,440
+So in this case, this is not your cost platform.
+Vì vậy, trong trường hợp này, đây không phải là nền tảng chi phí của bạn.
+
+
+00:07:26,140 --> 00:07:30,790
+So let us summarize in this table, you can see the differences between the three approaches.
+Vì vậy, chúng ta hãy tóm tắt trong bảng này, bạn có thể thấy sự khác biệt giữa ba cách tiếp cận.
+
+
+00:07:31,150 --> 00:07:34,890
+Use this table as a reference when selecting technologies for mobile apps.
+Sử dụng bảng này làm tài liệu tham khảo khi lựa chọn công nghệ cho ứng dụng di động.
+
+
+00:07:35,110 --> 00:07:37,390
+I hope it will help you the way it helped me.
+Tôi hy vọng nó sẽ giúp bạn như nó đã giúp tôi.
+
+
+00:07:38,890 --> 00:07:43,080
+And now for the third and left front end up, which is a desktop.
+Và bây giờ là phần thứ ba và phần đầu bên trái hướng lên trên, đó là mặt bàn.
+
+
+00:07:43,360 --> 00:07:48,940
+Now, let's face it, if you are developing a desktop application which will run on a PC, most chances
+Bây giờ, hãy đối mặt với nó, nếu bạn đang phát triển một ứng dụng máy tính để bàn có thể chạy trên PC, nhiều khả năng là
+
+
+00:07:48,940 --> 00:07:50,560
+are you are targeting Windows.
+bạn đang nhắm mục tiêu đến Windows.
+
+
+00:07:50,770 --> 00:07:55,050
+So I limit the discussion to Windows based desktops on Windows.
+Vì vậy, tôi giới hạn cuộc thảo luận vào máy tính để bàn chạy Windows trên Windows.
+
+
+00:07:55,060 --> 00:08:04,600
+We have three options for desktop development windfarms F and you will Frome's is all this technology
+Chúng tôi có ba lựa chọn cho các trang trại gió phát triển máy tính để bàn F và bạn sẽ Frome là tất cả công nghệ này
+
+
+00:08:04,600 --> 00:08:07,600
+introduced in 2001 together with dot net introduction.
+được giới thiệu vào năm 2001 cùng với sự ra đời của dot net.
+
+
+00:08:07,930 --> 00:08:13,390
+It's similar in concept to older platforms such as the basics and is quite limited in its graphical
+Nó có khái niệm tương tự như các nền tảng cũ hơn như Basics và khá hạn chế về mặt đồ họa
+
+
+00:08:13,420 --> 00:08:14,170
+capabilities.
+khả năng.
+
+
+00:08:14,530 --> 00:08:18,010
+For example, try to implement rounded corners to a button.
+Ví dụ, hãy thử áp dụng các góc bo tròn cho một nút.
+
+
+00:08:18,010 --> 00:08:20,590
+It's possible, but oh boy, it's so hard.
+Có thể, nhưng trời ơi, khó quá.
+
+
+00:08:21,280 --> 00:08:25,630
+On the other hand, developing in Wohlforth is quite easy and the a learning curve is short.
+Mặt khác, phát triển ở Wohlforth khá dễ dàng và đường cong học tập ngắn.
+
+
+00:08:26,710 --> 00:08:32,169
+We have introduced in 2006 improved the situation dramatically.
+Chúng tôi đã giới thiệu vào năm 2006 đã cải thiện tình hình đáng kể.
+
+
+00:08:32,350 --> 00:08:36,909
+It offers full control on the visuals and give complete freedom to visual designers.
+Nó cung cấp khả năng kiểm soát hoàn toàn hình ảnh và mang lại sự tự do hoàn toàn cho các nhà thiết kế hình ảnh.
+
+
+00:08:36,909 --> 00:08:43,960
+You literally can do whatever you want, but it's always about it's much more complicated than windfalls.
+Bạn thực sự có thể làm bất cứ điều gì bạn muốn, nhưng điều quan trọng là nó phức tạp hơn nhiều so với việc bất ngờ gặp may.
+
+
+00:08:44,410 --> 00:08:47,290
+In order to use WP, if you will have to learn new language.
+Để sử dụng WP, bạn sẽ phải học ngôn ngữ mới.
+
+
+00:08:47,290 --> 00:08:52,270
+Zemel, which similar to the email, functions as a markup language to the user interface.
+Zemel, tương tự như email, hoạt động như một ngôn ngữ đánh dấu cho giao diện người dùng.
+
+
+00:08:52,690 --> 00:08:56,620
+Zemel is a very rich markup language and it's very easy to get lost in it.
+Zemel là một ngôn ngữ đánh dấu rất phong phú và rất dễ bị lạc lối trong đó.
+
+
+00:08:57,010 --> 00:09:03,820
+It's even safe to say that an inexperienced developer can cause more harm than inexperienced, willful
+Thậm chí có thể nói một cách an toàn rằng một nhà phát triển thiếu kinh nghiệm có thể gây ra nhiều tác hại hơn là một nhà phát triển cố ý, thiếu kinh nghiệm
+
+
+00:09:03,820 --> 00:09:04,420
+developer.
+nhà phát triển.
+
+
+00:09:06,100 --> 00:09:10,180
+Our last contender is GWP or Universal Windows Platform.
+Đối thủ cuối cùng của chúng tôi là GWP hoặc Universal Windows Platform.
+
+
+00:09:10,720 --> 00:09:17,110
+You WPEC effort done by Microsoft to unify all its screens like PC, Xbox, Windows Phone Service and
+Nỗ lực WPEC của Microsoft nhằm thống nhất tất cả các màn hình như PC, Xbox, Windows Phone Service và
+
+
+00:09:17,110 --> 00:09:19,690
+more to support a single UI platform.
+nhiều hơn để hỗ trợ một nền tảng UI duy nhất.
+
+
+00:09:20,120 --> 00:09:26,200
+The result of this effort is youwe which is quite similar to what was important differences.
+Kết quả của nỗ lực này là bạn, điều này khá giống với những khác biệt quan trọng.
+
+
+00:09:26,800 --> 00:09:32,980
+First, it runs in a sandbox, meaning it does not have full access to all the operating system capabilities
+Đầu tiên, nó chạy trong hộp cát, nghĩa là nó không có quyền truy cập đầy đủ vào tất cả các khả năng của hệ điều hành
+
+
+00:09:33,250 --> 00:09:35,040
+similar to hybrid apps in mobile.
+tương tự như các ứng dụng lai trên thiết bị di động.
+
+
+00:09:35,680 --> 00:09:39,460
+Second, as mentioned above, it runs on all windows with screen.
+Thứ hai, như đã đề cập ở trên, nó chạy trên tất cả các cửa sổ có màn hình.
+
+
+00:09:39,790 --> 00:09:43,780
+So if you want to develop an app for Windows and Xbox, that's the way to go.
+Vì vậy, nếu bạn muốn phát triển một ứng dụng cho Windows và Xbox, thì đó là cách để thực hiện.
+
+
+00:09:44,800 --> 00:09:46,410
+Third, it's much less mature.
+Thứ ba, nó kém trưởng thành hơn nhiều.
+
+
+00:09:46,540 --> 00:09:51,460
+And so that summarizes the desktop alternatives.
+Và đó là tóm tắt các lựa chọn thay thế cho máy tính để bàn.
+
+
+00:09:51,460 --> 00:09:52,300
+In this table.
+Trong bảng này.
+
+
+00:09:52,300 --> 00:09:56,800
+You can see the summary of the three alternatives you talked about with the main differences between
+Bạn có thể xem tóm tắt về ba phương án thay thế mà bạn đã nói đến với những điểm khác biệt chính giữa
+
+
+00:09:56,800 --> 00:09:57,010
+them.
+họ.
+
+
+00:09:57,310 --> 00:09:58,750
+As usual, you invited.
+Như thường lệ, bạn đã mời.
+
+
+00:09:58,850 --> 00:10:01,300
+We use this table as a reference for your future system.
+Chúng tôi sử dụng bảng này làm tài liệu tham khảo cho hệ thống tương lai của bạn.
+
+
+00:10:01,410 --> 00:10:05,030
+We walk on and now let's elect data technology.
+Chúng ta hãy tiếp tục và bây giờ hãy bầu chọn công nghệ dữ liệu.
+
+

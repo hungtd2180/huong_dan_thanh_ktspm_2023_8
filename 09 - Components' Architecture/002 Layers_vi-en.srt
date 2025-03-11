@@ -1,0 +1,540 @@
+00:00:00,200 --> 00:00:06,980
+Those of you remember the first Shrek movie, probably remember the layers in Shrek tries to explain
+Những ai còn nhớ bộ phim Shrek đầu tiên, có lẽ còn nhớ những lớp trong Shrek cố gắng giải thích
+
+
+00:00:06,980 --> 00:00:12,980
+to Donkey that ogres like every other living creature have layers and they are not one dimensional evil
+với Donkey rằng bọn yêu tinh giống như mọi sinh vật sống khác đều có nhiều lớp và chúng không phải là ác quỷ một chiều
+
+
+00:00:12,980 --> 00:00:13,760
+creatures.
+sinh vật.
+
+
+00:00:13,790 --> 00:00:19,010
+This is one of the funniest scenes in the movie, and it makes me laugh every time I watch it and I
+Đây là một trong những cảnh hài hước nhất trong phim và nó khiến tôi cười mỗi khi xem và tôi
+
+
+00:00:19,010 --> 00:00:20,030
+watch it a lot.
+xem nó nhiều lắm.
+
+
+00:00:20,120 --> 00:00:25,790
+And it also holds true for software architecture because a good software component, just like evil
+Và nó cũng đúng với kiến trúc phần mềm vì một thành phần phần mềm tốt, giống như evil
+
+
+00:00:25,820 --> 00:00:28,310
+ogres, will always have layers.
+yêu tinh, sẽ luôn có nhiều lớp.
+
+
+00:00:28,340 --> 00:00:32,450
+The role of the layer, though, is quite different in software than in monsters.
+Tuy nhiên, vai trò của lớp này khá khác biệt trong phần mềm so với trong quái vật.
+
+
+00:00:32,479 --> 00:00:37,460
+The layers in software component represent the horizontal functionality of the code in the layers.
+Các lớp trong thành phần phần mềm biểu diễn chức năng ngang của mã trong các lớp.
+
+
+00:00:37,490 --> 00:00:39,050
+Now what does it mean?
+Bây giờ nó có nghĩa là gì?
+
+
+00:00:39,260 --> 00:00:43,310
+Traditionally, software components perform three basic actions.
+Theo truyền thống, các thành phần phần mềm thực hiện ba hành động cơ bản.
+
+
+00:00:43,880 --> 00:00:48,350
+One, expose the software functionality through some kind of interface.
+Một là, hiển thị chức năng của phần mềm thông qua một số loại giao diện.
+
+
+00:00:48,350 --> 00:00:51,740
+This is usually done via API or user interface.
+Điều này thường được thực hiện thông qua API hoặc giao diện người dùng.
+
+
+00:00:51,740 --> 00:00:58,400
+Depends on the type of the application to execute logic on the data that is received from the user.
+Phụ thuộc vào loại ứng dụng để thực thi logic trên dữ liệu nhận được từ người dùng.
+
+
+00:00:58,400 --> 00:01:01,380
+Again via API or user interface.
+Một lần nữa thông qua API hoặc giao diện người dùng.
+
+
+00:01:01,410 --> 00:01:06,750
+This logic often includes validation processing, additional calculations, enrichment and more.
+Logic này thường bao gồm xử lý xác thực, tính toán bổ sung, làm giàu và nhiều hơn nữa.
+
+
+00:01:07,560 --> 00:01:12,640
+And three Save the data into the data store and retrieve data from the data store.
+Và ba Lưu dữ liệu vào kho dữ liệu và lấy dữ liệu từ kho dữ liệu.
+
+
+00:01:12,660 --> 00:01:19,440
+Now these three actions are usually represented as layers when every layer has its own name in software
+Bây giờ ba hành động này thường được biểu diễn dưới dạng các lớp khi mỗi lớp có tên riêng trong phần mềm
+
+
+00:01:19,440 --> 00:01:20,470
+components architecture.
+kiến trúc thành phần.
+
+
+00:01:20,490 --> 00:01:24,180
+These layers are called user interface or UI.
+Các lớp này được gọi là giao diện người dùng hoặc UI.
+
+
+00:01:24,210 --> 00:01:31,770
+If the component has user interface or service interface or see if the component exposes API business
+Nếu thành phần có giao diện người dùng hoặc giao diện dịch vụ hoặc xem thành phần có hiển thị API business 22 không
+
+
+00:01:31,770 --> 00:01:36,870
+logic or BLE and data access layer or dull.
+logic hoặc BLE và lớp truy cập dữ liệu hoặc buồn tẻ.
+
+
+00:01:37,350 --> 00:01:41,810
+Each layer consists of various classes that handles the layers designated task.
+Mỗi lớp bao gồm nhiều lớp khác nhau xử lý các nhiệm vụ được chỉ định của lớp.
+
+
+00:01:41,820 --> 00:01:47,430
+For example, the dull layer will have classes that handle opening connection to the data store, querying
+Ví dụ, lớp mờ sẽ có các lớp xử lý việc mở kết nối tới kho dữ liệu, truy vấn
+
+
+00:01:47,430 --> 00:01:51,510
+data saving data handling transactions and more.
+lưu dữ liệu xử lý dữ liệu giao dịch và nhiều hơn nữa.
+
+
+00:01:51,540 --> 00:01:57,840
+The layer will have classes that performs validation, enrichment and computations.
+Lớp này sẽ có các lớp thực hiện xác thực, làm giàu và tính toán.
+
+
+00:01:58,590 --> 00:02:06,570
+The C layer will have classes that exposes API, translate Json documents to concrete objects, handle
+Lớp C sẽ có các lớp hiển thị API, dịch các tài liệu Json thành các đối tượng cụ thể, xử lý
+
+
+00:02:06,570 --> 00:02:09,090
+authentication and authorization and more.
+xác thực và ủy quyền và nhiều hơn nữa.
+
+
+00:02:09,120 --> 00:02:12,870
+Now you might be asking what is the purpose of the layer?
+Bây giờ bạn có thể hỏi mục đích của lớp này là gì?
+
+
+00:02:13,110 --> 00:02:16,350
+Why would I want to separate the code to these layers?
+Tại sao tôi muốn tách mã thành các lớp này?
+
+
+00:02:16,380 --> 00:02:18,810
+Well, there are some very good reasons for that.
+Vâng, có một số lý do rất chính đáng cho điều đó.
+
+
+00:02:18,840 --> 00:02:22,860
+First, it forces you to write code that is well formed and focused.
+Đầu tiên, nó buộc bạn phải viết mã có cấu trúc tốt và tập trung.
+
+
+00:02:22,890 --> 00:02:28,410
+It's generally a bad idea to write a method that performs multiple tasks, and we will discuss it later
+Nói chung, viết một phương thức thực hiện nhiều tác vụ là một ý tưởng tồi và chúng ta sẽ thảo luận về nó sau
+
+
+00:02:28,410 --> 00:02:29,280
+in this section.
+trong phần này.
+
+
+00:02:29,280 --> 00:02:34,800
+And by splitting the code to well defined layers, the code will deal only with its layers goal.
+Và bằng cách chia mã thành các lớp được xác định rõ ràng, mã sẽ chỉ xử lý mục tiêu của các lớp đó.
+
+
+00:02:34,860 --> 00:02:38,250
+Second layer component is a modular component.
+Thành phần lớp thứ hai là thành phần mô-đun.
+
+
+00:02:38,280 --> 00:02:43,470
+As you might recall, we discussed modularity as one of the most important quality attribute of a software,
+Như bạn có thể nhớ lại, chúng ta đã thảo luận về tính mô-đun như một trong những thuộc tính chất lượng quan trọng nhất của phần mềm,
+
+
+00:02:43,500 --> 00:02:47,880
+and by implementing layers our component becomes just this modular.
+và bằng cách triển khai các lớp, thành phần của chúng ta trở thành mô-đun này.
+
+
+00:02:48,060 --> 00:02:50,760
+Assuming the communication between the layer is done correctly.
+Giả sử việc giao tiếp giữa các lớp được thực hiện chính xác.
+
+
+00:02:50,760 --> 00:02:52,410
+And we will touch on this in a minute.
+Và chúng ta sẽ đề cập đến điều này trong một phút nữa.
+
+
+00:02:52,440 --> 00:02:54,990
+It's extremely easy to substitute layers.
+Việc thay thế các lớp cực kỳ dễ dàng.
+
+
+00:02:54,990 --> 00:03:01,260
+For example, if the current implementation works against SQL Server and you want to switch to MongoDB
+Ví dụ, nếu triển khai hiện tại hoạt động với SQL Server và bạn muốn chuyển sang MongoDB
+
+
+00:03:01,370 --> 00:03:06,470
+in a well layered component, you will only need to replace the dull layer and no other layers will
+trong một thành phần được phân lớp tốt, bạn sẽ chỉ cần thay thế lớp xỉn màu và không có lớp nào khác sẽ thay thế
+
+
+00:03:06,470 --> 00:03:09,550
+be affected, which makes your code really modular.
+bị ảnh hưởng, điều này làm cho mã của bạn thực sự có tính mô-đun.
+
+
+00:03:09,560 --> 00:03:14,660
+In order to develop a good layered architecture, there are some concepts that must be followed.
+Để phát triển một kiến trúc phân lớp tốt, có một số khái niệm phải tuân theo.
+
+
+00:03:14,660 --> 00:03:22,190
+One code flow, which means a layer can call only a layer that is directly beneath it in the code.
+Một luồng mã, nghĩa là một lớp chỉ có thể gọi một lớp nằm ngay bên dưới nó trong mã.
+
+
+00:03:22,190 --> 00:03:28,790
+What this means is that, for example, the code in the C layer can call only a code in the B layer,
+Điều này có nghĩa là, ví dụ, mã trong lớp C chỉ có thể gọi một mã trong lớp B,
+
+
+00:03:28,820 --> 00:03:31,370
+never a code in the dull layer.
+không bao giờ có một mã trong lớp buồn tẻ.
+
+
+00:03:31,550 --> 00:03:35,780
+In addition, a code can never call a code in a layer above it.
+Ngoài ra, một mã không bao giờ có thể gọi một mã ở lớp phía trên nó.
+
+
+00:03:35,780 --> 00:03:41,000
+For example, the dull code will never call a code in the blue layer.
+Ví dụ, mã nhàm chán sẽ không bao giờ gọi mã trong lớp màu xanh.
+
+
+00:03:41,030 --> 00:03:45,230
+The idea here is to keep the separation between the layers as strict as possible.
+Ý tưởng ở đây là giữ khoảng cách giữa các lớp càng chặt chẽ càng tốt.
+
+
+00:03:45,230 --> 00:03:50,750
+If you will enable skipping layers, that will mean that the C layer, for example, knows about the
+Nếu bạn cho phép bỏ qua các lớp, điều đó có nghĩa là lớp C, ví dụ, biết về
+
+
+00:03:50,750 --> 00:03:51,680
+dull layer.
+lớp xỉn màu.
+
+
+00:03:51,680 --> 00:03:58,220
+And that means that if you will change the dull layer, it will necessarily affect the C layer, making
+Và điều đó có nghĩa là nếu bạn thay đổi lớp xỉn màu, nó chắc chắn sẽ ảnh hưởng đến lớp C, tạo ra
+
+
+00:03:58,220 --> 00:04:00,320
+the whole component much less modular.
+toàn bộ thành phần ít mô-đun hơn nhiều.
+
+
+00:04:01,570 --> 00:04:04,180
+Second loose coupling.
+Khớp nối lỏng lẻo thứ hai.
+
+
+00:04:04,360 --> 00:04:08,950
+We will talk about this concept much more in the next lecture, but suffice to say that we need this
+Chúng ta sẽ nói nhiều hơn về khái niệm này trong bài giảng tiếp theo, nhưng đủ để nói rằng chúng ta cần
+
+
+00:04:08,950 --> 00:04:14,090
+layer to communicate with each other in a way that will have the minimum impact when there is a change.
+lớp để giao tiếp với nhau theo cách có tác động tối thiểu khi có sự thay đổi.
+
+
+00:04:14,110 --> 00:04:17,290
+Let's see an example for this which will explain this concept.
+Chúng ta hãy xem một ví dụ để giải thích khái niệm này.
+
+
+00:04:17,890 --> 00:04:21,820
+Let's say this is a code in the layer that calls to the doll.
+Giả sử đây là một mã trong lớp gọi đến búp bê.
+
+
+00:04:22,660 --> 00:04:26,770
+The specific code is written in Dotnet, but it holds true for any other language too.
+Mã cụ thể được viết bằng Dotnet, nhưng nó cũng đúng với bất kỳ ngôn ngữ nào khác.
+
+
+00:04:26,980 --> 00:04:32,410
+As you can see, the code references directly the doll classes using the new keyword.
+Như bạn có thể thấy, mã tham chiếu trực tiếp đến các lớp búp bê bằng cách sử dụng từ khóa new.
+
+
+00:04:32,650 --> 00:04:38,080
+Although easy to implement, having a direct reference between layers will render them strongly coupled.
+Mặc dù dễ thực hiện, việc có một tham chiếu trực tiếp giữa các lớp sẽ khiến chúng được kết nối chặt chẽ.
+
+
+00:04:38,110 --> 00:04:43,270
+What this means is that if you will try to switch to other doll, we will have to touch all the code
+Điều này có nghĩa là nếu bạn muốn chuyển sang búp bê khác, chúng ta sẽ phải chạm vào tất cả mã
+
+
+00:04:43,270 --> 00:04:45,240
+that references it from XBL.
+tham chiếu nó từ XBL.
+
+
+00:04:45,280 --> 00:04:46,720
+And that's bad.
+Và điều đó thật tệ.
+
+
+00:04:47,290 --> 00:04:53,050
+The correct way of referencing layers is via dependency injection when the calling layer references
+Cách tham chiếu đúng các lớp là thông qua tiêm phụ thuộc khi lớp gọi tham chiếu
+
+
+00:04:53,050 --> 00:04:58,760
+only an interface representing the desired functionality but not the concrete class itself.
+chỉ là một giao diện đại diện cho chức năng mong muốn nhưng không phải là lớp cụ thể.
+
+
+00:04:58,780 --> 00:05:04,970
+Later, when we switch to other implementation, the code will not be affected since it wasn't referencing
+Sau đó, khi chúng ta chuyển sang triển khai khác, mã sẽ không bị ảnh hưởng vì nó không tham chiếu đến
+
+
+00:05:04,970 --> 00:05:06,770
+the doll in the first place.
+con búp bê ở nơi đầu tiên.
+
+
+00:05:07,100 --> 00:05:12,230
+This concept is called dependency injection and we will discuss it later in this section.
+Khái niệm này được gọi là tiêm phụ thuộc và chúng ta sẽ thảo luận về nó sau trong phần này.
+
+
+00:05:13,880 --> 00:05:16,910
+The third concept is exception handling between layers.
+Khái niệm thứ ba là xử lý ngoại lệ giữa các lớp.
+
+
+00:05:16,940 --> 00:05:22,490
+Now, while the first two concepts are quite known, this one is more obscure and not all architects
+Bây giờ, trong khi hai khái niệm đầu tiên khá nổi tiếng, khái niệm này còn mơ hồ hơn và không phải tất cả các kiến trúc sư đều biết
+
+
+00:05:22,490 --> 00:05:23,660
+are familiar with it.
+quen thuộc với nó.
+
+
+00:05:23,690 --> 00:05:29,660
+The exception handling concept states that each layer must hide its inner exceptions and not let the
+Khái niệm xử lý ngoại lệ nêu rằng mỗi lớp phải ẩn các ngoại lệ bên trong của nó và không để
+
+
+00:05:29,660 --> 00:05:35,470
+layers above it to know about it, but rather let them add generic non specific error message.
+các lớp trên nó để biết về nó, nhưng thay vào đó hãy để họ thêm thông báo lỗi chung không cụ thể.
+
+
+00:05:35,480 --> 00:05:39,530
+For example, let's say our doll works with MySQL database.
+Ví dụ, giả sử búp bê của chúng ta hoạt động với cơ sở dữ liệu MySQL.
+
+
+00:05:39,530 --> 00:05:45,230
+Now database exceptions tend to be very specific, which is good since it helps us pinpoint the problems
+Hiện nay các ngoại lệ cơ sở dữ liệu có xu hướng rất cụ thể, điều này rất tốt vì nó giúp chúng ta xác định chính xác các vấn đề
+
+
+00:05:45,230 --> 00:05:46,220
+and fix them.
+và sửa chúng.
+
+
+00:05:46,730 --> 00:05:52,790
+The problem is that this exception is thrown as a MySQL exception class and it contains data about the
+Vấn đề là ngoại lệ này được đưa ra như một lớp ngoại lệ MySQL và nó chứa dữ liệu về
+
+
+00:05:52,790 --> 00:05:54,530
+inner workings of the database.
+hoạt động bên trong của cơ sở dữ liệu.
+
+
+00:05:54,560 --> 00:05:59,930
+One of the most important concepts of the layer architecture is that each layer is encapsulated and
+Một trong những khái niệm quan trọng nhất của kiến trúc lớp là mỗi lớp được đóng gói và
+
+
+00:05:59,930 --> 00:06:02,990
+does not expose info about its inner workings.
+không tiết lộ thông tin về hoạt động bên trong của nó.
+
+
+00:06:03,110 --> 00:06:09,290
+If the doll will throw this exception, that means the bee will know the doll is using MySQL, while
+Nếu con búp bê ném ra ngoại lệ này, điều đó có nghĩa là con ong sẽ biết con búp bê đang sử dụng MySQL, trong khi
+
+
+00:06:09,290 --> 00:06:11,630
+it should be completely oblivious to its inner working.
+nó phải hoàn toàn không biết gì về hoạt động bên trong của nó.
+
+
+00:06:11,630 --> 00:06:18,470
+So the correct pattern here is for the doll to analyze the exception, write it to a log and create
+Vì vậy, mô hình đúng ở đây là búp bê sẽ phân tích ngoại lệ, ghi nó vào nhật ký và tạo
+
+
+00:06:18,470 --> 00:06:24,590
+another exception called, for example, data exception with a generic error message that there was
+một ngoại lệ khác được gọi là, ví dụ, ngoại lệ dữ liệu với thông báo lỗi chung là có
+
+
+00:06:24,590 --> 00:06:26,510
+a problem accessing the data store.
+một vấn đề truy cập vào kho dữ liệu.
+
+
+00:06:26,840 --> 00:06:32,540
+This way the only thing the bell knows is that the doll has some problems with the data actions, which
+Theo cách này, điều duy nhất mà chiếc chuông biết là con búp bê có một số vấn đề với các hành động dữ liệu, trong đó
+
+
+00:06:32,540 --> 00:06:35,360
+is fine because that all it has to know about the doll.
+cũng ổn vì đó là tất cả những gì nó cần biết về con búp bê.
+
+
+00:06:36,170 --> 00:06:39,920
+So these were the three concepts that make a good layered component.
+Vì vậy, đây là ba khái niệm tạo nên một thành phần phân lớp tốt.
+
+
+00:06:40,430 --> 00:06:43,280
+Now, there is an additional point I would like to cover.
+Bây giờ, có một điểm bổ sung mà tôi muốn đề cập đến.
+
+
+00:06:44,870 --> 00:06:50,900
+You might have heard about a concept called an entered application or a three tiered application and
+Bạn có thể đã nghe về một khái niệm được gọi là ứng dụng đã nhập hoặc ứng dụng ba tầng và
+
+
+00:06:50,900 --> 00:06:55,190
+wondered what it is and what is the difference between tier and layer?
+tự hỏi nó là gì và sự khác biệt giữa tier và layer là gì?
+
+
+00:06:55,400 --> 00:07:00,410
+Well, it looks like those terms, tier and layer are often interchangeable, but they shouldn't, and
+Vâng, có vẻ như những thuật ngữ đó, tier và layer thường có thể hoán đổi cho nhau, nhưng chúng không nên như vậy, và
+
+
+00:07:00,410 --> 00:07:02,690
+there is actually a big difference between them.
+thực sự có một sự khác biệt lớn giữa chúng.
+
+
+00:07:03,050 --> 00:07:06,930
+A layer is what we talked about, a piece of code that is part of a component.
+Một lớp là thứ chúng ta đã nói đến, một đoạn mã là một phần của một thành phần.
+
+
+00:07:06,950 --> 00:07:11,770
+A component, let us all remind ourselves, is a code collection that runs in a single process.
+Một thành phần, chúng ta hãy tự nhắc nhở mình, là một tập hợp mã chạy trong một tiến trình duy nhất.
+
+
+00:07:11,780 --> 00:07:16,280
+There is no networking involved when the various classes in the component communicate with each other
+Không có mạng lưới liên quan khi các lớp khác nhau trong thành phần giao tiếp với nhau
+
+
+00:07:16,280 --> 00:07:19,850
+and they all share the same computing resource tier.
+và tất cả chúng đều chia sẻ cùng một tầng tài nguyên điện toán.
+
+
+00:07:19,880 --> 00:07:22,540
+On the other hand, is a distributed piece of code.
+Mặt khác, là một đoạn mã phân tán.
+
+
+00:07:22,550 --> 00:07:28,760
+It's deployed independently and communicates with other tools via network protocols such as Http.
+Nó được triển khai độc lập và giao tiếp với các công cụ khác thông qua các giao thức mạng như Http.
+
+
+00:07:29,120 --> 00:07:34,070
+So when talking about a three tier application, what we actually mean is that the application has three
+Vì vậy, khi nói về một ứng dụng ba lớp, điều chúng tôi thực sự muốn nói là ứng dụng có ba
+
+
+00:07:34,070 --> 00:07:40,010
+independent components deployed across the network that communicate using the network, which is completely
+các thành phần độc lập được triển khai trên toàn mạng giao tiếp bằng mạng, hoàn toàn
+
+
+00:07:40,010 --> 00:07:42,890
+different from layers which are part of the same process.
+khác với các lớp là một phần của cùng một quá trình.
+
+
+00:07:43,730 --> 00:07:46,770
+Okay, so that concludes our discussion around layers.
+Được rồi, như vậy là chúng ta đã kết thúc cuộc thảo luận về các lớp.
+
+
+00:07:46,790 --> 00:07:51,890
+Keep in mind that layers are almost always a good idea and it should be your default pattern for implementing
+Hãy nhớ rằng các lớp hầu như luôn là một ý tưởng hay và nó nên là mẫu mặc định của bạn để triển khai
+
+
+00:07:51,890 --> 00:07:52,760
+components.
+thành phần.
+
+

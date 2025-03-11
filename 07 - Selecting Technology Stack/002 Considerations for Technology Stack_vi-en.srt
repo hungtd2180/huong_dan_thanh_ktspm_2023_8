@@ -1,0 +1,265 @@
+00:00:00,140 --> 00:00:04,970
+When selecting the technology stack, there are some considerations that must be taken into account
+Khi lựa chọn ngăn xếp công nghệ, có một số cân nhắc cần phải được tính đến
+
+
+00:00:04,970 --> 00:00:08,660
+in order to ensure the best platform will be used in these systems.
+để đảm bảo nền tảng tốt nhất sẽ được sử dụng trong các hệ thống này.
+
+
+00:00:08,690 --> 00:00:10,610
+Let's look at these considerations.
+Hãy cùng xem xét những cân nhắc này.
+
+
+00:00:10,820 --> 00:00:13,910
+One can perform the required tasks.
+Người ta có thể thực hiện các nhiệm vụ cần thiết.
+
+
+00:00:14,120 --> 00:00:16,910
+Well, this might sound trivial, but it's still important.
+Vâng, điều này có vẻ tầm thường, nhưng nó vẫn quan trọng.
+
+
+00:00:16,910 --> 00:00:18,620
+When looking at a specific platform.
+Khi nhìn vào một nền tảng cụ thể.
+
+
+00:00:18,620 --> 00:00:23,060
+We must ensure this platform can actually perform what is required from it.
+Chúng ta phải đảm bảo nền tảng này thực sự có thể thực hiện được những gì được yêu cầu.
+
+
+00:00:23,090 --> 00:00:28,430
+For example, if one of the requirements is to support cross platform deployment, it's important to
+Ví dụ, nếu một trong các yêu cầu là hỗ trợ triển khai đa nền tảng, điều quan trọng là phải
+
+
+00:00:28,430 --> 00:00:31,820
+make sure the technology we are looking at is actually cross platform.
+đảm bảo công nghệ chúng ta đang xem xét thực sự là đa nền tảng.
+
+
+00:00:31,910 --> 00:00:37,700
+Or another example, if the requirements state that the system's user interface must be web based,
+Hoặc một ví dụ khác, nếu các yêu cầu nêu rõ rằng giao diện người dùng của hệ thống phải dựa trên web,
+
+
+00:00:37,730 --> 00:00:41,150
+there is no point in exploring rich clients platforms.
+không có lý do gì để khám phá các nền tảng khách hàng giàu có.
+
+
+00:00:42,020 --> 00:00:43,580
+Second Community.
+Cộng đồng thứ hai.
+
+
+00:00:44,030 --> 00:00:48,920
+You always want to make sure there is a large active community which discusses the platform and can
+Bạn luôn muốn đảm bảo có một cộng đồng lớn năng động thảo luận về nền tảng và có thể
+
+
+00:00:48,920 --> 00:00:50,450
+provide support when needed.
+cung cấp hỗ trợ khi cần thiết.
+
+
+00:00:50,630 --> 00:00:55,760
+This way you know you won't be left alone in the dark when encountering problems and questions, and
+Bằng cách này, bạn biết rằng bạn sẽ không bị bỏ lại một mình trong bóng tối khi gặp phải các vấn đề và câu hỏi, và
+
+
+00:00:55,760 --> 00:00:57,680
+you can seek help in this community.
+bạn có thể tìm kiếm sự giúp đỡ trong cộng đồng này.
+
+
+00:00:58,220 --> 00:01:00,870
+The best place to look for this community is in.
+Nơi tốt nhất để tìm kiếm cộng đồng này là ở.
+
+
+00:01:01,620 --> 00:01:02,190
+Com.
+Cộng đồng
+
+
+00:01:02,220 --> 00:01:06,060
+If you are still not familiar with this amazing site, then time is now.
+Nếu bạn vẫn chưa quen với trang web tuyệt vời này thì bây giờ là lúc rồi.
+
+
+00:01:06,090 --> 00:01:12,300
+This is the largest developer oriented Q and A site which provides answers to almost any question regarding
+Đây là trang web Hỏi &amp; Đáp dành cho nhà phát triển lớn nhất cung cấp câu trả lời cho hầu hết mọi câu hỏi liên quan đến
+
+
+00:01:12,300 --> 00:01:14,200
+development in every platform.
+phát triển trên mọi nền tảng.
+
+
+00:01:14,220 --> 00:01:19,200
+The most brilliant developers are helping others here, and whatever your problem is, it's probably
+Các nhà phát triển xuất sắc nhất đang giúp đỡ những người khác ở đây, và bất kể vấn đề của bạn là gì, thì có lẽ là
+
+
+00:01:19,200 --> 00:01:21,810
+already has been asked and answered here.
+đã được hỏi và trả lời ở đây.
+
+
+00:01:22,140 --> 00:01:29,860
+So go to Stack Overflow, click tags at the sidebar and look at the technology you are interested in.
+Vì vậy, hãy vào Stack Overflow, nhấp vào thẻ ở thanh bên và xem công nghệ mà bạn quan tâm.
+
+
+00:01:29,880 --> 00:01:32,760
+You will see a number near its name.
+Bạn sẽ thấy một con số gần tên của nó.
+
+
+00:01:32,910 --> 00:01:36,570
+This number designates the number of questions on this technology.
+Con số này chỉ định số lượng câu hỏi về công nghệ này.
+
+
+00:01:36,600 --> 00:01:39,630
+The larger the number, the more active the community.
+Số lượng càng lớn, cộng đồng càng năng động.
+
+
+00:01:40,200 --> 00:01:46,440
+It's always a good idea to actually click the name of the tag and go to the platform's page.
+Luôn là một ý tưởng hay khi nhấp vào tên thẻ và đi tới trang nền tảng.
+
+
+00:01:46,470 --> 00:01:49,740
+There you can see when the last questions were asked.
+Ở đó bạn có thể thấy thời điểm những câu hỏi cuối cùng được hỏi.
+
+
+00:01:49,770 --> 00:01:53,970
+This will give you some idea about how active the community is, not just how big it is.
+Điều này sẽ giúp bạn biết được cộng đồng này hoạt động tích cực như thế nào, chứ không chỉ là quy mô của cộng đồng.
+
+
+00:01:54,000 --> 00:01:59,250
+So if you see the last question was asked four days ago, it seems like the community is not very active.
+Vì vậy, nếu bạn thấy câu hỏi cuối cùng được hỏi cách đây bốn ngày, có vẻ như cộng đồng không mấy tích cực.
+
+
+00:01:59,520 --> 00:02:04,260
+This is a very simple and powerful way to find out the community size of the technology you are looking
+Đây là một cách rất đơn giản và hiệu quả để tìm ra quy mô cộng đồng của công nghệ mà bạn đang tìm kiếm
+
+
+00:02:04,260 --> 00:02:04,740
+at.
+lúc
+
+
+00:02:05,670 --> 00:02:09,690
+Third, popularity also seems a bit superficial.
+Thứ ba, sự nổi tiếng cũng có vẻ hơi hời hợt.
+
+
+00:02:09,720 --> 00:02:12,150
+The popularity factor is quite important.
+Yếu tố phổ biến khá quan trọng.
+
+
+00:02:12,180 --> 00:02:17,370
+Unpopular platforms will usually lead to a small community, which will lead to a lack of support.
+Các nền tảng không phổ biến thường sẽ tạo ra một cộng đồng nhỏ, điều này sẽ dẫn đến việc thiếu sự hỗ trợ.
+
+
+00:02:17,490 --> 00:02:22,350
+The best way to test the popularity of everything on the internet is by using Google Trends.
+Cách tốt nhất để kiểm tra mức độ phổ biến của mọi thứ trên internet là sử dụng Google Trends.
+
+
+00:02:22,500 --> 00:02:27,120
+So go to Google Trends and type the name of the platform you are interested in.
+Vì vậy, hãy vào Google Trends và nhập tên nền tảng mà bạn quan tâm.
+
+
+00:02:27,150 --> 00:02:31,260
+In this example, let's look at Angular and press Enter.
+Trong ví dụ này, chúng ta hãy xem Angular và nhấn Enter.
+
+
+00:02:33,060 --> 00:02:36,150
+I always like to set the search for the past two years.
+Tôi luôn muốn thiết lập tìm kiếm trong hai năm qua.
+
+
+00:02:36,180 --> 00:02:39,480
+The default one year is often not enough to give perspective.
+Một năm mặc định thường không đủ để đưa ra quan điểm.
+
+
+00:02:40,380 --> 00:02:45,750
+Here we see that the popularity of Angular is quite flat, so there is no decrease in its popularity,
+Ở đây chúng ta thấy rằng mức độ phổ biến của Angular khá ổn định, vì vậy không có sự giảm sút nào về mức độ phổ biến của nó,
+
+
+00:02:45,750 --> 00:02:47,370
+but no increase either.
+nhưng cũng không tăng thêm.
+
+
+00:02:47,460 --> 00:02:50,700
+Now let's add React, its nemesis to the chart.
+Bây giờ chúng ta hãy thêm React, kẻ thù của nó vào biểu đồ.
+
+
+00:02:51,180 --> 00:02:56,310
+We see that React is on an upward trend and currently it's on par with Angular.
+Chúng ta thấy rằng React đang có xu hướng tăng và hiện tại nó ngang bằng với Angular.
+
+
+00:02:56,520 --> 00:02:59,400
+And now let's add a jQuery.
+Và bây giờ chúng ta hãy thêm jQuery.
+
+
+00:02:59,520 --> 00:03:05,340
+Here we see a reverse trend popularity of jQuery is decreasing, and that indicates that perhaps it's
+Ở đây chúng ta thấy xu hướng ngược lại là mức độ phổ biến của jQuery đang giảm và điều đó chỉ ra rằng có lẽ nó là
+
+
+00:03:05,340 --> 00:03:09,090
+not a good idea to base your web UI on it in a modern application.
+không phải là một ý tưởng hay khi dựa giao diện người dùng web của bạn vào nó trong một ứng dụng hiện đại.
+
+
+00:03:10,380 --> 00:03:15,240
+So these are the three factors that must be taken into account when selecting technology stack.
+Vì vậy, đây là ba yếu tố cần phải được tính đến khi lựa chọn công nghệ.
+
+
+00:03:15,270 --> 00:03:20,100
+There are more factors that relate to the development team and organization and we will discuss them
+Có nhiều yếu tố liên quan đến nhóm phát triển và tổ chức và chúng ta sẽ thảo luận về chúng
+
+
+00:03:20,100 --> 00:03:20,550
+later.
+sau đó.
+
+
+00:03:20,550 --> 00:03:24,090
+But these are the factors that reflect the platform's impact and potential.
+Nhưng đây là những yếu tố phản ánh tác động và tiềm năng của nền tảng.
+
+
+00:03:24,330 --> 00:03:28,500
+And now let's go on and discuss the backend and service technology stack.
+Và bây giờ chúng ta hãy tiếp tục thảo luận về công nghệ dịch vụ và nền tảng.
+
+

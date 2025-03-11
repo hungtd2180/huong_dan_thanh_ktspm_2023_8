@@ -1,0 +1,195 @@
+00:00:00,380 --> 00:00:06,140
+Scalability is the ability of the application to support adding computing resources in order to support
+Khả năng mở rộng là khả năng của ứng dụng hỗ trợ thêm tài nguyên điện toán để hỗ trợ
+
+
+00:00:06,140 --> 00:00:10,410
+additional load without any interruption to the application's activity.
+tải bổ sung mà không làm gián đoạn hoạt động của ứng dụng.
+
+
+00:00:10,430 --> 00:00:16,160
+In other, more simple words, let's say an e-commerce application is deployed on a virtual machine.
+Nói cách khác đơn giản hơn, hãy nói rằng một ứng dụng thương mại điện tử được triển khai trên một máy ảo.
+
+
+00:00:16,160 --> 00:00:19,910
+Everything works fine and the application is humming along happily.
+Mọi thứ đều hoạt động tốt và ứng dụng đang chạy rất tốt.
+
+
+00:00:19,910 --> 00:00:22,370
+And then Black Friday arrives.
+Và rồi Thứ Sáu Đen Tối đã đến.
+
+
+00:00:22,400 --> 00:00:27,920
+A huge blow is expected and the CIO believes the current virtual machine won't be able to support the
+Một cú đánh lớn đang được mong đợi và CIO tin rằng máy ảo hiện tại sẽ không thể hỗ trợ
+
+
+00:00:27,920 --> 00:00:28,940
+expected load.
+tải trọng dự kiến.
+
+
+00:00:29,420 --> 00:00:33,590
+In systems that do not support scalability, the following will occur.
+Trong các hệ thống không hỗ trợ khả năng mở rộng, những điều sau đây sẽ xảy ra.
+
+
+00:00:34,040 --> 00:00:39,650
+The application's code will be examined for code pieces that will not support the expected load.
+Mã của ứng dụng sẽ được kiểm tra để tìm các đoạn mã không hỗ trợ tải dự kiến.
+
+
+00:00:39,800 --> 00:00:45,830
+Probably some code fragments will have to be rewritten and the VM will be reinforced.
+Có lẽ một số đoạn mã sẽ phải được viết lại và VM sẽ được củng cố.
+
+
+00:00:45,830 --> 00:00:48,230
+More CPU and more memory.
+Nhiều CPU và nhiều bộ nhớ hơn.
+
+
+00:00:48,350 --> 00:00:54,110
+As you can guess, this is a long, cumbersome process that is never fast enough to respond to actual
+Như bạn có thể đoán, đây là một quá trình dài, phức tạp và không bao giờ đủ nhanh để phản hồi 13 thực tế.
+
+
+00:00:54,110 --> 00:00:54,920
+challenges.
+thách thức.
+
+
+00:00:55,070 --> 00:01:01,830
+On the other hand, in systems that do support scalability, the process is much simpler and faster.
+Mặt khác, trong các hệ thống hỗ trợ khả năng mở rộng, quá trình này đơn giản và nhanh hơn nhiều.
+
+
+00:01:02,340 --> 00:01:09,630
+Add another virtual machine, notify the load balancer about the new virtual machine and that's it.
+Thêm một máy ảo khác, thông báo cho bộ cân bằng tải về máy ảo mới và thế là xong.
+
+
+00:01:10,260 --> 00:01:13,260
+As you can see, no changes were made to the code.
+Như bạn có thể thấy, không có thay đổi nào được thực hiện đối với mã.
+
+
+00:01:13,440 --> 00:01:17,520
+It's important to notice the difference between the two types of scalability.
+Điều quan trọng là phải lưu ý sự khác biệt giữa hai loại khả năng mở rộng.
+
+
+00:01:17,850 --> 00:01:23,150
+In the first case, we took an existing VM and added CPU power and memory to it.
+Trong trường hợp đầu tiên, chúng tôi đã sử dụng một VM hiện có và thêm sức mạnh CPU và bộ nhớ vào đó.
+
+
+00:01:23,160 --> 00:01:25,470
+This is called scale up.
+Đây được gọi là mở rộng quy mô.
+
+
+00:01:25,980 --> 00:01:31,680
+In the second case, we simply added new VMs and did not touch any existing one.
+Trong trường hợp thứ hai, chúng tôi chỉ thêm các VM mới và không động đến bất kỳ VM hiện có nào.
+
+
+00:01:31,680 --> 00:01:33,600
+This is called scale out.
+Điều này được gọi là mở rộng quy mô.
+
+
+00:01:33,630 --> 00:01:34,410
+Now.
+Bây giờ.
+
+
+00:01:34,410 --> 00:01:37,170
+We will always prefer scale out over scale up.
+Chúng tôi sẽ luôn thích mở rộng quy mô hơn là mở rộng quy mô.
+
+
+00:01:37,170 --> 00:01:38,250
+And why is that?
+Và tại sao vậy?
+
+
+00:01:38,280 --> 00:01:40,740
+Because of two very important reasons.
+Bởi vì hai lý do rất quan trọng.
+
+
+00:01:40,890 --> 00:01:42,840
+One redundancy.
+Một sự dư thừa.
+
+
+00:01:42,870 --> 00:01:47,700
+The more VMs we have, the more we are protected against the VMs crash situation.
+Chúng ta càng có nhiều VM, chúng ta càng được bảo vệ trước tình trạng VM bị sập.
+
+
+00:01:47,790 --> 00:01:52,980
+If you will have a single, very powerful VM, the application will still won't work if this single
+Nếu bạn có một VM duy nhất, rất mạnh, ứng dụng vẫn sẽ không hoạt động nếu VM duy nhất này
+
+
+00:01:52,980 --> 00:01:54,420
+server will crash.
+máy chủ sẽ bị sập.
+
+
+00:01:54,550 --> 00:02:01,050
+Two There is a limit to the CPU and memory we can add to a server if the application consumes a large
+Hai Có giới hạn về CPU và bộ nhớ mà chúng ta có thể thêm vào máy chủ nếu ứng dụng sử dụng nhiều
+
+
+00:02:01,050 --> 00:02:04,580
+amount of memory, we will hit this limit somewhere along the road.
+lượng bộ nhớ, chúng ta sẽ đạt đến giới hạn này ở đâu đó trên đường đi.
+
+
+00:02:04,590 --> 00:02:09,720
+On the other hand, there is virtually no limit to the number of VMs we can add to the load balancer,
+Mặt khác, hầu như không có giới hạn nào về số lượng VM mà chúng ta có thể thêm vào bộ cân bằng tải,
+
+
+00:02:09,750 --> 00:02:13,080
+thus making the application grow infinitely.
+do đó làm cho ứng dụng phát triển vô hạn.
+
+
+00:02:13,860 --> 00:02:15,750
+So the bottom line here is clear.
+Vì vậy, kết quả cuối cùng ở đây là rõ ràng.
+
+
+00:02:15,780 --> 00:02:18,690
+Always opt for scaling out your application.
+Luôn lựa chọn mở rộng ứng dụng của bạn.
+
+
+00:02:18,990 --> 00:02:24,450
+Note that the scale out scenario includes load balancer, which is not part of the scale up scenario.
+Lưu ý rằng kịch bản mở rộng bao gồm bộ cân bằng tải, không phải là một phần của kịch bản mở rộng.
+
+
+00:02:24,480 --> 00:02:29,230
+Scale Out always uses load balancer to distribute the load between the VMs.
+Scale Out luôn sử dụng bộ cân bằng tải để phân phối tải giữa các VM.
+
+
+00:02:29,250 --> 00:02:34,530
+One of the key architectural patterns for supporting scale out scenario is stateless, and we will discuss
+Một trong những mô hình kiến trúc chính để hỗ trợ kịch bản mở rộng quy mô là không có trạng thái và chúng ta sẽ thảo luận về
+
+
+00:02:34,530 --> 00:02:35,940
+it later in this course.
+sẽ được đề cập ở phần sau của khóa học này.
+
+

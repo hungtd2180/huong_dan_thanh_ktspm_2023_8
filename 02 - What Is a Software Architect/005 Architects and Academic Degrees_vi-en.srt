@@ -1,0 +1,50 @@
+00:00:00,320 --> 00:00:02,820
+Let's talk about architects and academic degrees.
+Chúng ta hãy nói về kiến trúc sư và bằng cấp học thuật.
+
+
+00:00:02,840 --> 00:00:07,070
+I'm often asked, what should I learn in university in order to be an architect?
+Tôi thường được hỏi, tôi nên học gì ở trường đại học để trở thành một kiến trúc sư?
+
+
+00:00:07,100 --> 00:00:09,110
+Well, the answer is quite short.
+Vâng, câu trả lời khá ngắn gọn.
+
+
+00:00:09,170 --> 00:00:14,170
+I'm not aware of any academic institution that has a degree geared towards software architecture.
+Tôi không biết có bất kỳ học viện nào có bằng cấp chuyên về kiến trúc phần mềm.
+
+
+00:00:14,240 --> 00:00:19,490
+Of course, the usual computer science degree is always helpful, though not always mandatory, but
+Tất nhiên, bằng cấp khoa học máy tính thông thường luôn hữu ích, mặc dù không phải lúc nào cũng bắt buộc, nhưng
+
+
+00:00:19,490 --> 00:00:23,360
+there is no specific degree that has to be taken in order to be an architect.
+không có bằng cấp cụ thể nào phải đạt được để trở thành một kiến trúc sư.
+
+
+00:00:23,600 --> 00:00:29,420
+There are some courses and certifications that deal with architecture such as TOGAF, but they are geared
+Có một số khóa học và chứng chỉ liên quan đến kiến trúc như TOGAF, nhưng chúng hướng đến
+
+
+00:00:29,420 --> 00:00:33,020
+more towards enterprise architecture rather than software architecture.
+thiên về kiến trúc doanh nghiệp hơn là kiến trúc phần mềm.
+
+
+00:00:33,320 --> 00:00:38,570
+So the bottom line is you don't have to have any specific formal education in order to be an architect.
+Vì vậy, điểm mấu chốt là bạn không cần phải có bất kỳ nền giáo dục chính thức cụ thể nào để trở thành một kiến trúc sư.
+
+
+00:00:38,570 --> 00:00:40,910
+It's mainly a matter of experience.
+Vấn đề chủ yếu là kinh nghiệm.
+
+

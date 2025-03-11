@@ -1,0 +1,515 @@
+00:00:00,290 --> 00:00:03,830
+The last service in our system is the info service.
+Dịch vụ cuối cùng trong hệ thống của chúng tôi là dịch vụ thông tin.
+
+
+00:00:03,950 --> 00:00:07,550
+As a refresher, let's remember what the service is supposed to do.
+Để ôn lại, chúng ta hãy cùng nhớ lại mục đích của dịch vụ này.
+
+
+00:00:07,790 --> 00:00:13,700
+The service allows end users to query the data stored in the data store and displays the data in various
+Dịch vụ này cho phép người dùng cuối truy vấn dữ liệu được lưu trữ trong kho dữ liệu và hiển thị dữ liệu theo nhiều dạng khác nhau.
+
+
+00:00:13,700 --> 00:00:14,390
+forms.
+hình thức.
+
+
+00:00:14,540 --> 00:00:18,200
+Note that the service is responsible only for the data retrieval.
+Lưu ý rằng dịch vụ chỉ chịu trách nhiệm truy xuất dữ liệu.
+
+
+00:00:18,200 --> 00:00:23,960
+It does not display the data that is the responsibility of the client, whatever client it is.
+Nó không hiển thị dữ liệu thuộc trách nhiệm của khách hàng, bất kể đó là khách hàng nào.
+
+
+00:00:23,990 --> 00:00:27,320
+So first, let's decide on the application type here.
+Vì vậy, trước tiên, chúng ta hãy quyết định loại ứng dụng ở đây.
+
+
+00:00:27,350 --> 00:00:29,310
+Well, that's actually an easy one.
+Vâng, thực ra thì đó là một câu hỏi dễ.
+
+
+00:00:29,330 --> 00:00:34,410
+We have a service that should be accessed by various clients in order to perform some queries.
+Chúng tôi có một dịch vụ mà nhiều khách hàng có thể truy cập để thực hiện một số truy vấn.
+
+
+00:00:34,490 --> 00:00:37,130
+That's a textbook for web API service.
+Đó là một cuốn sách giáo khoa về dịch vụ API web.
+
+
+00:00:37,130 --> 00:00:43,550
+Since Web API is accessible for almost any type of client and it waits for a client request before sending
+Vì Web API có thể truy cập được đối với hầu hết mọi loại máy khách và nó chờ yêu cầu của máy khách trước khi gửi
+
+
+00:00:43,550 --> 00:00:44,350
+the response.
+phản ứng.
+
+
+00:00:44,360 --> 00:00:45,680
+So that's settled.
+Vậy là xong.
+
+
+00:00:45,710 --> 00:00:47,580
+Now to the technology stack.
+Bây giờ đến phần công nghệ.
+
+
+00:00:47,600 --> 00:00:49,880
+Here too, the decision is quite easy.
+Ở đây, quyết định cũng khá dễ dàng.
+
+
+00:00:49,910 --> 00:00:55,760
+We already decided to use Dotnet core for the receiver service, which is also a web API and there is
+Chúng tôi đã quyết định sử dụng Dotnet core cho dịch vụ thu, đây cũng là một API web và có
+
+
+00:00:55,760 --> 00:00:59,030
+no real reason to pick other technology for the info service.
+không có lý do thực sự nào để chọn công nghệ khác cho dịch vụ thông tin.
+
+
+00:00:59,030 --> 00:01:02,490
+So we are going to use Dotnet core for this one too.
+Vì vậy, chúng ta sẽ sử dụng Dotnet core cho mục đích này.
+
+
+00:01:02,940 --> 00:01:04,680
+Now to the architecture.
+Bây giờ đến phần kiến trúc.
+
+
+00:01:04,920 --> 00:01:08,700
+Looking at the classic layered architecture, it looks like a perfect fit.
+Nhìn vào kiến trúc nhiều lớp cổ điển, nó trông giống như một sự phù hợp hoàn hảo.
+
+
+00:01:08,730 --> 00:01:11,100
+We need a service interface, obviously.
+Rõ ràng là chúng ta cần một giao diện dịch vụ.
+
+
+00:01:11,130 --> 00:01:14,610
+We definitely need a business logic layer to validate the request.
+Chúng ta chắc chắn cần một lớp logic kinh doanh để xác thực yêu cầu.
+
+
+00:01:14,610 --> 00:01:19,170
+And of course, we need a data access layer to access the database and retrieve the data.
+Và tất nhiên, chúng ta cần một lớp truy cập dữ liệu để truy cập cơ sở dữ liệu và lấy dữ liệu.
+
+
+00:01:19,200 --> 00:01:21,180
+And let's not forget the logging.
+Và chúng ta đừng quên việc ghi nhật ký.
+
+
+00:01:21,480 --> 00:01:23,280
+So is that all?
+Vậy là hết rồi sao?
+
+
+00:01:23,370 --> 00:01:25,140
+Well, not exactly.
+Vâng, không hẳn vậy.
+
+
+00:01:25,140 --> 00:01:30,300
+One of the important steps in the architecture phase is to define the exact methods of the API.
+Một trong những bước quan trọng trong giai đoạn kiến trúc là xác định các phương thức chính xác của API.
+
+
+00:01:30,330 --> 00:01:36,000
+Now, we didn't do it in the receiver service since the methods were dictated by the devices.
+Bây giờ, chúng tôi không thực hiện điều đó trong dịch vụ thu vì các phương pháp được thiết bị quyết định.
+
+
+00:01:36,000 --> 00:01:41,100
+But here we are in a different situation and we can decide what actions we want to expose as part of
+Nhưng ở đây chúng ta đang ở trong một tình huống khác và chúng ta có thể quyết định những hành động nào chúng ta muốn phơi bày như một phần của
+
+
+00:01:41,100 --> 00:01:41,880
+the API.
+API.
+
+
+00:01:42,090 --> 00:01:48,030
+So after discussing it with the client, it looks like what really interests the end users are two types
+Vì vậy, sau khi thảo luận với khách hàng, có vẻ như điều thực sự khiến người dùng cuối quan tâm là hai loại
+
+
+00:01:48,030 --> 00:01:53,280
+of information current status of devices and past events.
+của thông tin trạng thái hiện tại của các thiết bị và các sự kiện trong quá khứ.
+
+
+00:01:54,090 --> 00:02:01,170
+Also, end users want to see the status of a specific device as well as a high level view of all the
+Ngoài ra, người dùng cuối muốn xem trạng thái của một thiết bị cụ thể cũng như chế độ xem cấp cao của tất cả
+
+
+00:02:01,170 --> 00:02:03,300
+devices in a specific smart home.
+thiết bị trong một ngôi nhà thông minh cụ thể.
+
+
+00:02:03,570 --> 00:02:07,290
+So that means our API should have the following functionality.
+Vì vậy, điều đó có nghĩa là API của chúng ta phải có chức năng sau.
+
+
+00:02:07,320 --> 00:02:08,160
+One.
+Một.
+
+
+00:02:08,190 --> 00:02:13,290
+Get all the updates for a specific houses devices for a given time range.
+Nhận tất cả các bản cập nhật cho các thiết bị nhà cụ thể trong một khoảng thời gian nhất định.
+
+
+00:02:13,860 --> 00:02:18,150
+Get the updates for a specific device for a given time range.
+Nhận bản cập nhật cho một thiết bị cụ thể trong một khoảng thời gian nhất định.
+
+
+00:02:18,870 --> 00:02:26,430
+Get the current status of all the devices in a specific house and get the current status of a specific
+Nhận trạng thái hiện tại của tất cả các thiết bị trong một ngôi nhà cụ thể và nhận trạng thái hiện tại của một ngôi nhà cụ thể
+
+
+00:02:26,430 --> 00:02:27,180
+device.
+thiết bị.
+
+
+00:02:27,570 --> 00:02:31,950
+Now how would we translate this functionality to rest API actions?
+Bây giờ chúng ta sẽ dịch chức năng này sang các hành động API còn lại như thế nào?
+
+
+00:02:32,370 --> 00:02:37,860
+Since this is not a full blown API design course, I won't go through all the factors and considerations
+Vì đây không phải là khóa học thiết kế API đầy đủ nên tôi sẽ không đề cập đến tất cả các yếu tố và cân nhắc
+
+
+00:02:37,860 --> 00:02:44,580
+of designing the API, but suffice to say that what really matters are usually two main factors the
+của việc thiết kế API, nhưng đủ để nói rằng những gì thực sự quan trọng thường là hai yếu tố chính
+
+
+00:02:44,580 --> 00:02:48,030
+API path and the return code and contents.
+Đường dẫn API và mã trả về cùng nội dung.
+
+
+00:02:48,060 --> 00:02:52,020
+Don't worry if you don't know exactly what it means, we will build it together.
+Đừng lo lắng nếu bạn không biết chính xác nó có nghĩa là gì, chúng ta sẽ cùng nhau xây dựng nó.
+
+
+00:02:52,920 --> 00:02:58,980
+As you probably remember, Rest API defines the entity or entities to be retrieved with a path that
+Như bạn có thể nhớ, Rest API định nghĩa thực thể hoặc các thực thể cần được truy xuất bằng đường dẫn
+
+
+00:02:58,980 --> 00:03:02,750
+is part of the URL and using the get http verb.
+là một phần của URL và sử dụng động từ get http.
+
+
+00:03:02,760 --> 00:03:08,970
+So for example, if I want to retrieve device number 17, I can use something like this.
+Vì vậy, ví dụ, nếu tôi muốn lấy thiết bị số 17, tôi có thể sử dụng thứ gì đó như thế này.
+
+
+00:03:10,680 --> 00:03:17,310
+And in return get a Json content with the response code 200, which signals that everything is okay
+Và đổi lại nhận được nội dung Json có mã phản hồi là 200, báo hiệu rằng mọi thứ đều ổn
+
+
+00:03:17,310 --> 00:03:19,020
+and the query has been performed.
+và truy vấn đã được thực hiện.
+
+
+00:03:19,050 --> 00:03:23,490
+Now how would we design the API to comply with the required functionality?
+Bây giờ chúng ta sẽ thiết kế API như thế nào để tuân thủ các chức năng cần thiết?
+
+
+00:03:23,520 --> 00:03:26,130
+Let's look again at what we want to retrieve.
+Chúng ta hãy xem lại những gì chúng ta muốn lấy lại.
+
+
+00:03:26,310 --> 00:03:31,590
+We want to get all the updates for a specific houses devices for a given time range.
+Chúng tôi muốn nhận tất cả các bản cập nhật cho các thiết bị nhà cụ thể trong một khoảng thời gian nhất định.
+
+
+00:03:32,010 --> 00:03:34,830
+Let's build the important entities here.
+Hãy xây dựng các thực thể quan trọng ở đây.
+
+
+00:03:35,100 --> 00:03:42,150
+We want to get all the updates for a specific house's devices for a given time range.
+Chúng tôi muốn nhận tất cả các bản cập nhật cho các thiết bị của một ngôi nhà cụ thể trong một khoảng thời gian nhất định.
+
+
+00:03:42,330 --> 00:03:48,040
+Now in Rest API, when we have nested entities, we always start from the outermost one.
+Bây giờ trong Rest API, khi chúng ta có các thực thể lồng nhau, chúng ta luôn bắt đầu từ thực thể ngoài cùng.
+
+
+00:03:48,060 --> 00:03:55,140
+In this case this would be the house since it contains the devices which in turn contain the statuses.
+Trong trường hợp này, đây sẽ là ngôi nhà vì nó chứa các thiết bị, các thiết bị này lại chứa các trạng thái.
+
+
+00:03:55,350 --> 00:03:59,520
+So it looks like this will be the right API for this requirement.
+Vì vậy, có vẻ như đây sẽ là API phù hợp cho yêu cầu này.
+
+
+00:04:00,750 --> 00:04:02,760
+Let's look at this URL.
+Chúng ta hãy xem URL này.
+
+
+00:04:03,240 --> 00:04:06,780
+We first look for a house with an ID of house ID.
+Đầu tiên chúng ta tìm một ngôi nhà có ID là ID nhà.
+
+
+00:04:06,930 --> 00:04:10,750
+The client will place here the ID of the house it wants the update for.
+Khách hàng sẽ đặt ID của ngôi nhà mà họ muốn cập nhật ở đây.
+
+
+00:04:11,260 --> 00:04:18,279
+Then we tell the API that for this house we want the devices and for the devices we want the updates
+Sau đó, chúng tôi nói với API rằng đối với ngôi nhà này, chúng tôi muốn các thiết bị và đối với các thiết bị, chúng tôi muốn các bản cập nhật
+
+
+00:04:18,279 --> 00:04:22,390
+and not, for example, the serial number or firmware version.
+và không phải, ví dụ, số sê-ri hoặc phiên bản phần mềm.
+
+
+00:04:22,630 --> 00:04:24,580
+And what about the time range?
+Và phạm vi thời gian thì sao?
+
+
+00:04:24,610 --> 00:04:27,370
+This is set using query string parameters.
+Điều này được thiết lập bằng cách sử dụng các tham số chuỗi truy vấn.
+
+
+00:04:27,670 --> 00:04:30,910
+Now why are the date parameters not part of the URL?
+Bây giờ tại sao các tham số ngày không phải là một phần của URL?
+
+
+00:04:30,940 --> 00:04:34,750
+Why are we passing them as a separate parameters and not like this?
+Tại sao chúng ta truyền chúng như các tham số riêng biệt chứ không phải như thế này?
+
+
+00:04:35,620 --> 00:04:37,570
+The answer is quite simple.
+Câu trả lời khá đơn giản.
+
+
+00:04:37,720 --> 00:04:40,810
+The URL contains references to actual entities.
+URL chứa các tham chiếu đến các thực thể thực tế.
+
+
+00:04:40,840 --> 00:04:43,030
+There is a house with a specified ID.
+Có một ngôi nhà có ID được chỉ định.
+
+
+00:04:43,330 --> 00:04:48,940
+There are devices inside this house and these devices have updates.
+Có những thiết bị bên trong ngôi nhà này và những thiết bị này có bản cập nhật.
+
+
+00:04:49,270 --> 00:04:53,950
+These are all actual entities that have IDs, properties and functionality.
+Đây đều là những thực thể thực tế có ID, thuộc tính và chức năng.
+
+
+00:04:53,980 --> 00:04:57,010
+The time range, on the other hand, is just a parameter.
+Mặt khác, phạm vi thời gian chỉ là một tham số.
+
+
+00:04:57,010 --> 00:04:58,360
+It's not entity.
+Nó không phải là thực thể.
+
+
+00:04:58,390 --> 00:05:03,190
+The from and to are merely values that help us retrieve the correct updates.
+From và to chỉ là những giá trị giúp chúng ta lấy lại các bản cập nhật chính xác.
+
+
+00:05:03,190 --> 00:05:05,770
+And because of that they are not part of the URL.
+Và vì thế chúng không phải là một phần của URL.
+
+
+00:05:05,800 --> 00:05:10,060
+They are not entities but only parameters and therefore are passed as such.
+Chúng không phải là các thực thể mà chỉ là các tham số và do đó được truyền như vậy.
+
+
+00:05:10,450 --> 00:05:15,420
+Okay, so we have the API path, but what should it return?
+Được rồi, vậy là chúng ta có đường dẫn API, nhưng nó sẽ trả về cái gì?
+
+
+00:05:15,450 --> 00:05:20,550
+Well, as we said before, it's extremely important to clearly define what would be the response code
+Vâng, như chúng tôi đã nói trước đó, việc xác định rõ ràng mã phản hồi 80 sẽ là gì là cực kỳ quan trọng
+
+
+00:05:20,550 --> 00:05:22,320
+for every situation in the API.
+cho mọi tình huống trong API.
+
+
+00:05:22,560 --> 00:05:28,920
+So for example, when there are actual updates to be returned, the response code should be 200, which
+Vì vậy, ví dụ, khi có các bản cập nhật thực tế cần được trả về, mã phản hồi phải là 200, trong đó
+
+
+00:05:28,920 --> 00:05:29,910
+is okay.
+được rồi.
+
+
+00:05:30,180 --> 00:05:32,940
+But what should be returned when the house was not found?
+Nhưng phải trả lại cái gì khi không tìm thấy ngôi nhà?
+
+
+00:05:32,970 --> 00:05:38,430
+What should happen if the client made a mistake and instead of asking for House number 101, it asked
+Sẽ thế nào nếu khách hàng mắc lỗi và thay vì yêu cầu số nhà 101, họ lại yêu cầu số 85?
+
+
+00:05:38,430 --> 00:05:41,430
+for 102 and there is no such a house.
+cho 102 và không có ngôi nhà nào như vậy.
+
+
+00:05:41,760 --> 00:05:46,950
+Well, in this case the API should return 404, which is not found.
+Vâng, trong trường hợp này API sẽ trả về 404, lỗi này không được tìm thấy.
+
+
+00:05:47,100 --> 00:05:51,750
+When the client will get this response code, it will know something was wrong with the data it sent
+Khi máy khách nhận được mã phản hồi này, nó sẽ biết có điều gì đó không ổn với dữ liệu nó đã gửi
+
+
+00:05:51,750 --> 00:05:54,780
+and perhaps try again, this time with the correct ID.
+và có lẽ thử lại lần nữa, lần này với ID chính xác.
+
+
+00:05:55,260 --> 00:06:01,260
+So as you can see, response codes play a significant role in the API design and you should thoroughly
+Vì vậy, như bạn có thể thấy, mã phản hồi đóng vai trò quan trọng trong thiết kế API và bạn nên xem xét kỹ lưỡng
+
+
+00:06:01,260 --> 00:06:02,190
+think about them.
+nghĩ về họ.
+
+
+00:06:02,190 --> 00:06:07,620
+Some junior architects do not understand the importance of response codes and always return 200.
+Một số kiến trúc sư mới vào nghề không hiểu được tầm quan trọng của mã phản hồi và luôn trả về 200.
+
+
+00:06:07,620 --> 00:06:11,920
+Okay from the API regardless of the actual outcome of the request.
+Được từ API bất kể kết quả thực tế của yêu cầu.
+
+
+00:06:11,950 --> 00:06:15,790
+Be aware of that and always return the correct response code.
+Hãy lưu ý điều đó và luôn trả về mã phản hồi chính xác.
+
+
+00:06:16,300 --> 00:06:17,440
+Okay, great.
+Được rồi, tuyệt vời.
+
+
+00:06:17,440 --> 00:06:20,740
+So we know how the first API method should look like.
+Vì vậy, chúng ta biết phương thức API đầu tiên trông như thế nào.
+
+
+00:06:20,860 --> 00:06:22,060
+In this table.
+Trong bảng này.
+
+
+00:06:22,060 --> 00:06:26,860
+You can see all the methods we discussed complete with their path and response code options.
+Bạn có thể thấy tất cả các phương pháp chúng tôi đã thảo luận hoàn chỉnh với các tùy chọn đường dẫn và mã phản hồi của chúng.
+
+
+00:06:26,890 --> 00:06:31,330
+Take a good look at it and make sure you fully understand why they are designed like this.
+Hãy nhìn kỹ và đảm bảo rằng bạn hiểu rõ tại sao chúng được thiết kế như thế này.
+
+
+00:06:31,360 --> 00:06:36,190
+Now this table is extremely important in the architecture of the service and should be part of the architecture
+Bây giờ bảng này cực kỳ quan trọng trong kiến trúc của dịch vụ và phải là một phần của kiến trúc
+
+
+00:06:36,190 --> 00:06:36,790
+document.
+tài liệu.
+
+
+00:06:36,820 --> 00:06:42,520
+Be sure to include it there as it will guide the developers about the actual implementation of the service.
+Hãy chắc chắn đưa nó vào đó vì nó sẽ hướng dẫn các nhà phát triển về việc triển khai dịch vụ thực tế.
+
+
+00:06:43,120 --> 00:06:43,900
+Okay, great.
+Được rồi, tuyệt vời.
+
+
+00:06:43,930 --> 00:06:47,770
+We now have the architecture of this service in place and we can go on.
+Bây giờ chúng ta đã có kiến trúc của dịch vụ này và có thể tiếp tục.
+
+

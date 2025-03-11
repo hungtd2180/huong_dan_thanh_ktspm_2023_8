@@ -1,0 +1,465 @@
+00:00:00,950 --> 00:00:03,330
+Microservices are all the rage right now.
+Các dịch vụ vi mô đang rất thịnh hành hiện nay.
+
+
+00:00:03,350 --> 00:00:08,870
+You can't have an architecture discussion without this term coming up sooner or later, usually sooner.
+Bạn không thể có một cuộc thảo luận về kiến trúc mà không đề cập đến thuật ngữ này sớm hay muộn, thường là sớm hơn.
+
+
+00:00:08,900 --> 00:00:11,240
+But what is actually microservices?
+Nhưng thực chất microservices là gì?
+
+
+00:00:11,270 --> 00:00:17,870
+Well, put simply, a microservices based architecture is an architecture in which the various functionalities
+Vâng, nói một cách đơn giản, kiến trúc dựa trên dịch vụ vi mô là kiến trúc trong đó các chức năng khác nhau
+
+
+00:00:17,870 --> 00:00:23,780
+are implemented as separate, loosely coupled services that interact with each other using standard
+được triển khai như các dịch vụ riêng biệt, kết hợp lỏng lẻo tương tác với nhau bằng cách sử dụng tiêu chuẩn
+
+
+00:00:23,780 --> 00:00:24,980
+lightweight protocol.
+giao thức nhẹ.
+
+
+00:00:25,130 --> 00:00:30,230
+To understand the motivation for microservices, let's go back to the pre microservices days.
+Để hiểu được động lực của dịch vụ vi mô, chúng ta hãy quay trở lại thời kỳ trước khi có dịch vụ vi mô.
+
+
+00:00:30,440 --> 00:00:36,980
+In these ancient times, applications were built as a monolith, meaning all the functionalities were
+Vào thời xa xưa này, các ứng dụng được xây dựng như một khối thống nhất, nghĩa là tất cả các chức năng đều có
+
+
+00:00:36,980 --> 00:00:41,120
+run in a single process, usually built using the three layers architecture.
+chạy trong một quy trình duy nhất, thường được xây dựng bằng kiến trúc ba lớp.
+
+
+00:00:41,210 --> 00:00:47,360
+For example, look at the following diagram depicting a typical HR system built as a monolith.
+Ví dụ, hãy xem sơ đồ sau đây mô tả một hệ thống HR điển hình được xây dựng như một khối thống nhất.
+
+
+00:00:47,630 --> 00:00:51,890
+As you can see, all the various modules are always part of the same layer.
+Như bạn có thể thấy, tất cả các mô-đun khác nhau luôn là một phần của cùng một lớp.
+
+
+00:00:51,920 --> 00:00:56,870
+The Employees API and Salary API are both part of the same service interface.
+API Nhân viên và API Lương đều là một phần của cùng một giao diện dịch vụ.
+
+
+00:00:56,900 --> 00:01:02,820
+Similarly, the vacation business logic and salary business logic are in the same business logic layer
+Tương tự như vậy, logic kinh doanh kỳ nghỉ và logic kinh doanh lương nằm trong cùng một lớp logic kinh doanh
+
+
+00:01:02,820 --> 00:01:03,930
+and so on.
+và vân vân.
+
+
+00:01:04,260 --> 00:01:10,740
+Monolith systems were and still are extremely popular and are a great way of building small to medium
+Hệ thống khối đơn đã và vẫn cực kỳ phổ biến và là một cách tuyệt vời để xây dựng các công trình từ nhỏ đến trung bình
+
+
+00:01:10,740 --> 00:01:11,730
+applications.
+ứng dụng.
+
+
+00:01:11,730 --> 00:01:15,790
+But there are some inherent problems with monolith systems.
+Nhưng có một số vấn đề cố hữu với hệ thống khối đơn.
+
+
+00:01:15,810 --> 00:01:21,960
+One because the application is executed in a single process, then if there is an exception in a single
+Một là vì ứng dụng được thực thi trong một tiến trình duy nhất, do đó nếu có ngoại lệ trong một tiến trình duy nhất
+
+
+00:01:21,960 --> 00:01:24,990
+component, the whole process comes crashing down.
+thành phần, toàn bộ quá trình sụp đổ.
+
+
+00:01:24,990 --> 00:01:29,220
+Every bug, every edge case can render the application unusable.
+Mọi lỗi, mọi trường hợp ngoại lệ đều có thể khiến ứng dụng không sử dụng được.
+
+
+00:01:29,790 --> 00:01:34,530
+Two Every time we need to update the application, we need to update the whole code.
+Hai Mỗi lần chúng ta cần cập nhật ứng dụng, chúng ta cần cập nhật toàn bộ mã.
+
+
+00:01:34,530 --> 00:01:41,010
+We cannot replace just a single component because again, we run in a single process with a single executable.
+Chúng ta không thể thay thế chỉ một thành phần duy nhất vì một lần nữa, chúng ta chạy trong một tiến trình duy nhất với một tệp thực thi duy nhất.
+
+
+00:01:41,370 --> 00:01:44,700
+Three We are limited to one development platform.
+Ba Chúng tôi bị giới hạn ở một nền tảng phát triển.
+
+
+00:01:44,700 --> 00:01:51,000
+We cannot combine, say, Java and PHP in the same process, and that might pose a problem, especially
+Chúng ta không thể kết hợp Java và PHP trong cùng một quy trình và điều đó có thể gây ra vấn đề, đặc biệt là
+
+
+00:01:51,000 --> 00:01:56,340
+in our organization, that have diverse development teams which expertise in different technologies.
+trong tổ chức của chúng tôi, có nhiều nhóm phát triển chuyên môn về các công nghệ khác nhau.
+
+
+00:01:56,580 --> 00:02:00,260
+And last, our compute resources are not optimized.
+Và cuối cùng, tài nguyên tính toán của chúng ta chưa được tối ưu hóa.
+
+
+00:02:00,270 --> 00:02:06,150
+If our application performs some heavy duty calculations that require a lot of resources but also performs
+Nếu ứng dụng của chúng tôi thực hiện một số tính toán nặng đòi hỏi nhiều tài nguyên nhưng cũng thực hiện
+
+
+00:02:06,150 --> 00:02:11,340
+some lightweight querying, we cannot assign computing resources to the specific code that requires
+một số truy vấn nhẹ, chúng tôi không thể chỉ định tài nguyên tính toán cho mã cụ thể yêu cầu
+
+
+00:02:11,340 --> 00:02:11,670
+it.
+nó.
+
+
+00:02:11,700 --> 00:02:14,820
+We have to assign those resources to the whole application.
+Chúng ta phải phân bổ những tài nguyên đó cho toàn bộ ứng dụng.
+
+
+00:02:14,910 --> 00:02:17,860
+So what can be done with all these problems?
+Vậy thì có thể làm gì với tất cả những vấn đề này?
+
+
+00:02:17,940 --> 00:02:20,640
+Well, enter microservices.
+Vâng, hãy nhập vào các dịch vụ siêu nhỏ.
+
+
+00:02:20,850 --> 00:02:24,420
+The microservices architecture claims to solve all these issues.
+Kiến trúc vi dịch vụ tuyên bố có thể giải quyết tất cả những vấn đề này.
+
+
+00:02:24,450 --> 00:02:29,550
+Remember, with microservices, the application is actually a collection of small, lightweight and
+Hãy nhớ rằng, với các dịch vụ siêu nhỏ, ứng dụng thực chất là một tập hợp các dịch vụ nhỏ, nhẹ và
+
+
+00:02:29,550 --> 00:02:30,960
+loosely coupled services.
+dịch vụ liên kết lỏng lẻo.
+
+
+00:02:30,960 --> 00:02:33,960
+Each performs one and only one task.
+Mỗi người thực hiện một và chỉ một nhiệm vụ.
+
+
+00:02:34,140 --> 00:02:39,870
+So let's see how this architecture solves the problems described first.
+Vậy chúng ta hãy xem kiến trúc này giải quyết các vấn đề được mô tả đầu tiên như thế nào.
+
+
+00:02:39,900 --> 00:02:45,390
+Since each service runs in its own process and exception in a single service will not bring down the
+Vì mỗi dịch vụ chạy trong quy trình riêng của nó và ngoại lệ trong một dịch vụ duy nhất sẽ không làm giảm
+
+
+00:02:45,390 --> 00:02:50,760
+whole application, only the specific service will be impacted and the rest of the services will continue
+toàn bộ ứng dụng, chỉ có dịch vụ cụ thể sẽ bị ảnh hưởng và các dịch vụ còn lại sẽ tiếp tục
+
+
+00:02:50,760 --> 00:02:52,030
+working as usual.
+làm việc như thường lệ.
+
+
+00:02:52,050 --> 00:02:53,610
+And what about updates?
+Còn cập nhật thì sao?
+
+
+00:02:53,640 --> 00:02:58,550
+Here again, we benefit from the fact that each service runs in its own process.
+Một lần nữa, chúng ta được hưởng lợi từ thực tế là mỗi dịch vụ chạy theo quy trình riêng của nó.
+
+
+00:02:58,560 --> 00:03:03,450
+We can update each service separately and do not need to update all of them at once.
+Chúng tôi có thể cập nhật từng dịch vụ riêng biệt và không cần phải cập nhật tất cả cùng một lúc.
+
+
+00:03:03,480 --> 00:03:09,420
+A side effect of that is that updates can occur much more frequently since their impact is limited and
+Một tác dụng phụ của việc đó là các bản cập nhật có thể xảy ra thường xuyên hơn nhiều vì tác động của chúng bị hạn chế và
+
+
+00:03:09,420 --> 00:03:14,220
+the testing required for each update is much less than that required for a whole application.
+việc kiểm tra cần thiết cho mỗi bản cập nhật ít hơn nhiều so với việc kiểm tra cần thiết cho toàn bộ ứng dụng.
+
+
+00:03:14,520 --> 00:03:20,430
+The third problem also gets solved here We can mix and match the development platforms since the services
+Vấn đề thứ ba cũng được giải quyết ở đây Chúng ta có thể kết hợp và kết hợp các nền tảng phát triển vì các dịch vụ
+
+
+00:03:20,430 --> 00:03:24,570
+communicate between them using platform agnostic protocols such as rest.
+giao tiếp giữa chúng bằng các giao thức không phụ thuộc vào nền tảng như rest.
+
+
+00:03:24,600 --> 00:03:29,910
+Because of that, each service can be developed using different development platform, thus optimizing
+Nhờ đó, mỗi dịch vụ có thể được phát triển bằng cách sử dụng các nền tảng phát triển khác nhau, do đó tối ưu hóa
+
+
+00:03:29,910 --> 00:03:31,900
+the overall execution of the application.
+việc thực hiện tổng thể của ứng dụng.
+
+
+00:03:31,950 --> 00:03:38,540
+And last, since each service runs in its own process, we can assign resources to each service separately.
+Và cuối cùng, vì mỗi dịch vụ chạy theo quy trình riêng nên chúng ta có thể phân bổ tài nguyên cho từng dịch vụ riêng biệt.
+
+
+00:03:38,550 --> 00:03:44,640
+We can decide, for example, that one service will be developed on four virtual machines with 16 cores
+Ví dụ, chúng ta có thể quyết định rằng một dịch vụ sẽ được phát triển trên bốn máy ảo có 16 lõi
+
+
+00:03:44,640 --> 00:03:49,440
+each, while another one will be deployed on only two VMs with eight cores.
+mỗi cái, trong khi cái còn lại sẽ được triển khai trên chỉ hai VM với tám lõi.
+
+
+00:03:49,890 --> 00:03:55,740
+Now let's go back to the air application and see how it will look like if designed using the microservices
+Bây giờ chúng ta hãy quay lại ứng dụng air và xem nó sẽ trông như thế nào nếu được thiết kế bằng microservices
+
+
+00:03:55,740 --> 00:03:56,190
+pattern.
+mẫu.
+
+
+00:03:56,520 --> 00:04:02,100
+As you can see, instead of a large, complex single process, we have many small lightweight services.
+Như bạn có thể thấy, thay vì một quy trình đơn lẻ phức tạp, lớn, chúng ta có nhiều dịch vụ nhỏ nhẹ.
+
+
+00:04:02,100 --> 00:04:04,410
+Each focuses on a single task.
+Mỗi người tập trung vào một nhiệm vụ duy nhất.
+
+
+00:04:04,440 --> 00:04:08,750
+Now, this diagram might look familiar to you, and that's not a coincidence.
+Bây giờ, sơ đồ này có thể trông quen thuộc với bạn và đó không phải là sự trùng hợp ngẫu nhiên.
+
+
+00:04:08,760 --> 00:04:14,820
+In our case study, we designed the IO2 application to implement the microservices pattern, and we
+Trong nghiên cứu tình huống của chúng tôi, chúng tôi đã thiết kế ứng dụng IO2 để triển khai mô hình dịch vụ vi mô và chúng tôi
+
+
+00:04:14,820 --> 00:04:17,360
+ended up with four such services.
+kết thúc với bốn dịch vụ như vậy.
+
+
+00:04:17,370 --> 00:04:21,000
+Each performs a single task and communicates using rest.
+Mỗi bên thực hiện một nhiệm vụ riêng và giao tiếp bằng cách sử dụng rest.
+
+
+00:04:21,000 --> 00:04:27,060
+So microservices is a great pattern and should be considered seriously for almost every web application.
+Vì vậy, dịch vụ vi mô là một mô hình tuyệt vời và nên được xem xét nghiêm túc cho hầu hết mọi ứng dụng web.
+
+
+00:04:27,060 --> 00:04:32,670
+But not all is rosy in the microservices world, and there are some drawbacks that should be taken into
+Nhưng không phải mọi thứ đều tốt đẹp trong thế giới dịch vụ vi mô và có một số nhược điểm cần được lưu ý trong
+
+
+00:04:32,670 --> 00:04:33,390
+account.
+tài khoản.
+
+
+00:04:33,480 --> 00:04:39,090
+One microservices based system can have a lot of services, like hundreds of them.
+Một hệ thống dựa trên dịch vụ vi mô có thể có rất nhiều dịch vụ, thậm chí lên tới hàng trăm dịch vụ.
+
+
+00:04:39,090 --> 00:04:44,280
+For example, Netflix, one of the leaders in the microservices world, after migrating its popular
+Ví dụ, Netflix, một trong những công ty dẫn đầu trong thế giới dịch vụ vi mô, sau khi di chuyển
+
+
+00:04:44,280 --> 00:04:50,400
+website from monolith to microservices, architecture has more than 700 microservices.
+trang web từ khối đơn đến dịch vụ vi mô, kiến trúc có hơn 700 dịch vụ vi mô.
+
+
+00:04:50,610 --> 00:04:55,140
+When you have such a large amount of microservices, they should be monitored all the time.
+Khi bạn có một lượng lớn các dịch vụ siêu nhỏ như vậy, chúng cần được giám sát liên tục.
+
+
+00:04:55,140 --> 00:04:59,910
+It's unrealistic to expect that when you have 700 services, everything will work.
+Thật không thực tế khi mong đợi rằng khi bạn có 700 dịch vụ, mọi thứ sẽ hoạt động.
+
+
+00:04:59,940 --> 00:05:00,840
+Find all the time.
+Tìm tất cả thời gian.
+
+
+00:05:01,080 --> 00:05:06,900
+So if you intend to work on a microservices architecture, always include a monitoring solution.
+Vì vậy, nếu bạn có ý định làm việc trên kiến trúc vi dịch vụ, hãy luôn bao gồm giải pháp giám sát.
+
+
+00:05:06,930 --> 00:05:12,420
+Netflix, for example, developed a tool called Eureka that does exactly that.
+Ví dụ, Netflix đã phát triển một công cụ có tên là Eureka thực hiện chính xác điều đó.
+
+
+00:05:12,450 --> 00:05:18,600
+It's an open source tool and you can use it to or you can use any other tool, but make sure the monitoring
+Đây là một công cụ mã nguồn mở và bạn có thể sử dụng nó hoặc bất kỳ công cụ nào khác, nhưng hãy đảm bảo giám sát
+
+
+00:05:18,600 --> 00:05:20,610
+is an integral part of the solution.
+là một phần không thể thiếu của giải pháp.
+
+
+00:05:20,910 --> 00:05:23,530
+The second problem is the architecture itself.
+Vấn đề thứ hai là bản thân kiến trúc.
+
+
+00:05:23,550 --> 00:05:26,310
+Designing distributed system is a complex feat.
+Thiết kế hệ thống phân tán là một kỳ công phức tạp.
+
+
+00:05:26,340 --> 00:05:31,830
+Monolithic systems are much simpler to design and implement, and you have to be laser focused on each
+Hệ thống đơn khối đơn giản hơn nhiều trong việc thiết kế và triển khai, và bạn phải tập trung cao độ vào từng
+
+
+00:05:31,830 --> 00:05:36,180
+service's functionality to make sure it integrates well in the overall architecture.
+chức năng của dịch vụ để đảm bảo nó tích hợp tốt vào kiến trúc tổng thể.
+
+
+00:05:36,270 --> 00:05:41,700
+For example, in one of the applications I've designed a couple of years ago, the development team
+Ví dụ, trong một trong những ứng dụng tôi đã thiết kế cách đây vài năm, nhóm phát triển
+
+
+00:05:41,700 --> 00:05:47,100
+wasn't familiar with the microservices pattern, so we worked together towards the design of the first
+không quen thuộc với mô hình dịch vụ vi mô, vì vậy chúng tôi đã cùng nhau làm việc để thiết kế 80 đầu tiên
+
+
+00:05:47,100 --> 00:05:47,670
+service.
+dịch vụ.
+
+
+00:05:47,700 --> 00:05:54,240
+The end result was a beautiful service that did exactly what we needed it to do, but it took more than
+Kết quả cuối cùng là một dịch vụ tuyệt vời thực hiện chính xác những gì chúng tôi cần, nhưng phải mất hơn
+
+
+00:05:54,240 --> 00:06:00,640
+three months to design, and the service itself contained only 500 lines of code, which is a ridiculous
+ba tháng để thiết kế và bản thân dịch vụ chỉ chứa 500 dòng mã, một con số vô lý là
+
+
+00:06:00,640 --> 00:06:02,890
+number for a dev team in three months.
+số lượng cho một nhóm phát triển trong ba tháng.
+
+
+00:06:03,070 --> 00:06:08,380
+So prepare yourself for a lot of thinking about the design of a microservices based application.
+Vì vậy, hãy chuẩn bị tinh thần suy nghĩ nhiều về thiết kế ứng dụng dựa trên dịch vụ vi mô.
+
+
+00:06:09,010 --> 00:06:11,800
+The third and last drawback is testing.
+Nhược điểm thứ ba và cuối cùng là thử nghiệm.
+
+
+00:06:11,830 --> 00:06:16,790
+Testing a microservices based application is more difficult than testing a monolith with monolith.
+Kiểm thử một ứng dụng dựa trên dịch vụ vi mô khó hơn kiểm thử một khối đơn lẻ với khối đơn lẻ.
+
+
+00:06:16,810 --> 00:06:19,870
+You just call the API and set the expected result.
+Bạn chỉ cần gọi API và thiết lập kết quả mong đợi.
+
+
+00:06:19,900 --> 00:06:26,260
+With microservices, some services often depend on other services, so you have to first test the dependent
+Với các dịch vụ siêu nhỏ, một số dịch vụ thường phụ thuộc vào các dịch vụ khác, vì vậy trước tiên bạn phải kiểm tra dịch vụ phụ thuộc
+
+
+00:06:26,260 --> 00:06:29,140
+services before testing the services using them.
+dịch vụ trước khi thử nghiệm các dịch vụ sử dụng chúng.
+
+
+00:06:29,650 --> 00:06:32,880
+So that was a glimpse on the microservices architecture.
+Đó là cái nhìn thoáng qua về kiến trúc dịch vụ vi mô.
+
+
+00:06:32,890 --> 00:06:37,450
+It's a very popular architectural pattern and it should be in any architect's handbook.
+Đây là một mẫu kiến trúc rất phổ biến và nên có trong bất kỳ sổ tay kiến trúc nào.
+
+
+00:06:37,480 --> 00:06:42,790
+In the resources for this lecture, you can find references to some more materials about the microservices
+Trong các tài nguyên cho bài giảng này, bạn có thể tìm thấy tài liệu tham khảo về một số tài liệu khác về microservices
+
+
+00:06:42,790 --> 00:06:45,070
+pattern and you are welcome to use them.
+mẫu và bạn có thể thoải mái sử dụng chúng.
+
+

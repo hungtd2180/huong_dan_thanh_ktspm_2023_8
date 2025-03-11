@@ -1,0 +1,45 @@
+00:00:00,260 --> 00:00:04,400
+A lot of architects believe their job is done once the document is delivered.
+Nhiều kiến trúc sư tin rằng công việc của họ đã hoàn thành khi tài liệu được chuyển giao.
+
+
+00:00:04,460 --> 00:00:06,020
+This is a big mistake.
+Đây là một sai lầm lớn.
+
+
+00:00:06,050 --> 00:00:11,690
+Huge software architecture is a living, breathing creature and it changes all the time.
+Kiến trúc phần mềm lớn là một sinh vật sống, thở và nó thay đổi liên tục.
+
+
+00:00:11,690 --> 00:00:15,830
+You have to be there for the developers to help them to make sure they are developing according to the
+Bạn phải có mặt để giúp các nhà phát triển đảm bảo rằng họ đang phát triển theo đúng
+
+
+00:00:15,830 --> 00:00:20,900
+architecture and to be part of the dilemmas that are going to be raised and are going to be a lot of
+kiến trúc và là một phần của những tình huống khó xử sẽ được nêu ra và sẽ có rất nhiều
+
+
+00:00:20,900 --> 00:00:26,000
+dilemmas, arguments and talks, and the architecture will be changed and not only once.
+những tình huống khó xử, tranh luận và đàm phán, và kiến trúc sẽ được thay đổi và không chỉ một lần.
+
+
+00:00:26,000 --> 00:00:27,530
+So you have to support the team.
+Vì vậy, bạn phải ủng hộ đội.
+
+
+00:00:27,530 --> 00:00:32,390
+If you don't want the documents to become a glorified paperweight and remember, you are not done until
+Nếu bạn không muốn các tài liệu trở thành vật chặn giấy được tôn vinh và hãy nhớ rằng, bạn không xong trước 9 giờ
+
+
+00:00:32,390 --> 00:00:36,770
+the system is in production and even then you probably will have a lot to do.
+hệ thống đang trong quá trình sản xuất và thậm chí khi đó bạn có thể vẫn còn nhiều việc phải làm.
+
+

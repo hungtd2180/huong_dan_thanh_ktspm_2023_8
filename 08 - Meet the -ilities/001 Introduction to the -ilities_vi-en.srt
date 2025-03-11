@@ -1,0 +1,170 @@
+00:00:00,170 --> 00:00:02,480
+Welcome to the highlights section.
+Chào mừng đến với phần nổi bật.
+
+
+00:00:02,600 --> 00:00:07,490
+Right now you are probably scratching your head and trying to figure out if there is anything wrong
+Ngay bây giờ bạn có thể đang gãi đầu và cố gắng tìm hiểu xem có điều gì sai không
+
+
+00:00:07,490 --> 00:00:08,420
+with your video player.
+với trình phát video của bạn.
+
+
+00:00:08,450 --> 00:00:10,220
+Don't worry, there isn't.
+Đừng lo lắng, không có đâu.
+
+
+00:00:10,730 --> 00:00:15,290
+The highlights are a group of quality attributes that define the application's capabilities.
+Điểm nổi bật là một nhóm các thuộc tính chất lượng xác định khả năng của ứng dụng.
+
+
+00:00:15,320 --> 00:00:19,610
+Almost all those quality attributes have a name that ends with ility.
+Hầu như tất cả các thuộc tính chất lượng đó đều có tên kết thúc bằng ility.
+
+
+00:00:19,670 --> 00:00:22,190
+Hence the Ilities in the title.
+Do đó có chữ Ilities trong tiêu đề.
+
+
+00:00:22,610 --> 00:00:28,430
+Quality attribute is an attribute of the system that describes a specific capability that is not related
+Thuộc tính chất lượng là một thuộc tính của hệ thống mô tả một khả năng cụ thể không liên quan đến
+
+
+00:00:28,430 --> 00:00:30,710
+to a specific functional requirement.
+theo yêu cầu chức năng cụ thể.
+
+
+00:00:30,740 --> 00:00:35,030
+If that sounds similar to non-functional requirements, it's not a coincidence.
+Nếu điều đó nghe giống với các yêu cầu không có chức năng thì đó không phải là sự trùng hợp ngẫu nhiên.
+
+
+00:00:35,120 --> 00:00:40,250
+Quality attributes are closely tied to non-functional requirements and they describe what technical
+Thuộc tính chất lượng gắn chặt với các yêu cầu phi chức năng và chúng mô tả những gì kỹ thuật
+
+
+00:00:40,250 --> 00:00:44,390
+capability should be used in order to fulfill the non-functional requirement.
+khả năng nên được sử dụng để đáp ứng yêu cầu phi chức năng.
+
+
+00:00:44,420 --> 00:00:48,680
+For example, let's say we have the following non-functional requirement.
+Ví dụ, giả sử chúng ta có yêu cầu phi chức năng sau đây.
+
+
+00:00:48,770 --> 00:00:54,020
+The system must work under a heavy load but should not waste money on unused resources.
+Hệ thống phải hoạt động dưới tải nặng nhưng không được lãng phí tiền vào các tài nguyên không sử dụng.
+
+
+00:00:54,440 --> 00:01:00,180
+This is one of the most common non-functional requirements, even if not defined with this exact wording.
+Đây là một trong những yêu cầu phi chức năng phổ biến nhất, ngay cả khi không được định nghĩa bằng chính từ ngữ này.
+
+
+00:01:00,420 --> 00:01:05,489
+In order to make it work, we will have to implement the scalability quality attribute.
+Để làm cho nó hoạt động, chúng ta sẽ phải triển khai thuộc tính chất lượng khả năng mở rộng.
+
+
+00:01:05,519 --> 00:01:06,420
+Now, don't worry.
+Bây giờ, đừng lo lắng.
+
+
+00:01:06,420 --> 00:01:09,850
+If you are not familiar with scalability, we will discuss it in a minute.
+Nếu bạn không quen với khả năng mở rộng, chúng ta sẽ thảo luận về nó sau một phút.
+
+
+00:01:09,870 --> 00:01:13,980
+Suffice to say that the system must have the scalability quality attribute.
+Chỉ cần nói rằng hệ thống phải có thuộc tính chất lượng khả năng mở rộng.
+
+
+00:01:14,070 --> 00:01:19,530
+Once the quality attributes are set, the architecture must take them into account and make sure they
+Sau khi các thuộc tính chất lượng được thiết lập, kiến trúc phải tính đến chúng và đảm bảo chúng
+
+
+00:01:19,530 --> 00:01:20,610
+are implemented.
+được thực hiện.
+
+
+00:01:20,640 --> 00:01:27,360
+So the relationship between non-functional requirements, quality attributes and architecture is this.
+Vì vậy, mối quan hệ giữa các yêu cầu phi chức năng, thuộc tính chất lượng và kiến trúc là như sau.
+
+
+00:01:27,600 --> 00:01:31,470
+Non-functional requirements define what the system should deal with.
+Các yêu cầu phi chức năng xác định hệ thống cần xử lý những gì.
+
+
+00:01:32,130 --> 00:01:39,390
+Quality attributes Map those requirements to technical capabilities and the architecture describes how
+Thuộc tính chất lượng Ánh xạ các yêu cầu đó với khả năng kỹ thuật và kiến trúc mô tả cách
+
+
+00:01:39,390 --> 00:01:42,330
+those capabilities will be designed and implemented.
+những khả năng đó sẽ được thiết kế và triển khai.
+
+
+00:01:42,510 --> 00:01:44,580
+There are a lot of quality attributes.
+Có rất nhiều thuộc tính chất lượng.
+
+
+00:01:44,580 --> 00:01:50,100
+In fact, if you will take a look at the Wikipedia page for quality attributes, you will find dozens
+Trên thực tế, nếu bạn xem trang Wikipedia về các thuộc tính chất lượng, bạn sẽ tìm thấy hàng chục
+
+
+00:01:50,100 --> 00:01:50,820
+of them.
+của họ.
+
+
+00:01:50,910 --> 00:01:56,520
+In this section, we will discuss the most important and common quality attributes and explain what
+Trong phần này, chúng tôi sẽ thảo luận về các thuộc tính chất lượng quan trọng và phổ biến nhất và giải thích
+
+
+00:01:56,520 --> 00:01:59,010
+is their meaning and how they will affect the system.
+là ý nghĩa của chúng và cách chúng sẽ ảnh hưởng đến hệ thống.
+
+
+00:01:59,010 --> 00:01:59,880
+Architecture.
+Kiến trúc.
+
+
+00:02:00,300 --> 00:02:10,289
+The ilities we are going to discuss are scalability, manageability, modularity, extensibility and
+Các khả năng chúng ta sẽ thảo luận là khả năng mở rộng, khả năng quản lý, khả năng mô-đun, khả năng mở rộng và
+
+
+00:02:10,289 --> 00:02:11,500
+testability.
+khả năng kiểm tra.
+
+
+00:02:11,520 --> 00:02:14,370
+So let's go and discuss scalability first.
+Vậy trước tiên chúng ta hãy thảo luận về khả năng mở rộng.
+
+

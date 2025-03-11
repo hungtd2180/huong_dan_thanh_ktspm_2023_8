@@ -1,0 +1,240 @@
+00:00:00,580 --> 00:00:05,380
+Hello and welcome to the Complete Guide to Becoming a software Architect Course.
+Xin chào và chào mừng bạn đến với Khóa học Hướng dẫn đầy đủ để trở thành Kiến trúc sư phần mềm.
+
+
+00:00:05,530 --> 00:00:08,920
+A few years ago, I had a meeting with a potential client.
+Một vài năm trước, tôi đã có một cuộc họp với một khách hàng tiềm năng.
+
+
+00:00:08,950 --> 00:00:15,250
+The meeting took place in his office at the 34th floor in one of the skyscrapers in the city.
+Cuộc họp diễn ra tại văn phòng của ông ở tầng 34 của một trong những tòa nhà chọc trời trong thành phố.
+
+
+00:00:15,280 --> 00:00:17,230
+He began the meeting by asking me.
+Anh ấy bắt đầu cuộc họp bằng cách hỏi tôi.
+
+
+00:00:17,260 --> 00:00:20,470
+Tell me, Mami, why do I need a software architect?
+Mẹ ơi, tại sao con lại cần một kiến trúc sư phần mềm?
+
+
+00:00:20,470 --> 00:00:24,340
+I have a talented group of developers and a great IT department.
+Tôi có một nhóm các nhà phát triển tài năng và một bộ phận CNTT tuyệt vời.
+
+
+00:00:24,370 --> 00:00:27,280
+Isn't that enough for building great software?
+Như vậy chưa đủ để xây dựng một phần mềm tuyệt vời sao?
+
+
+00:00:27,670 --> 00:00:30,160
+I thought for a second and then told him.
+Tôi suy nghĩ một giây rồi nói với anh ấy.
+
+
+00:00:30,160 --> 00:00:35,980
+What would you do if I told you this building we are sitting in had no architect involved in its design
+Bạn sẽ làm gì nếu tôi nói với bạn rằng tòa nhà chúng ta đang ngồi không có kiến trúc sư nào tham gia thiết kế
+
+
+00:00:35,980 --> 00:00:37,360
+and construction process.
+và quá trình xây dựng.
+
+
+00:00:37,390 --> 00:00:42,850
+The workers came in every morning, put the cement tucked in the steel beams and went home.
+Mỗi sáng, công nhân đến, đổ xi măng vào dầm thép rồi về nhà.
+
+
+00:00:43,150 --> 00:00:49,000
+He looked at me for a few seconds, then jumped from his chair, got in the nearest elevator and ran
+Anh ấy nhìn tôi trong vài giây, sau đó nhảy khỏi ghế, vào thang máy gần nhất và chạy
+
+
+00:00:49,000 --> 00:00:49,960
+for his life.
+cho cuộc sống của mình.
+
+
+00:00:50,170 --> 00:00:51,040
+Well, okay.
+Được thôi.
+
+
+00:00:51,040 --> 00:00:53,350
+He didn't really do that, but he did tell me.
+Anh ấy thực sự không làm điều đó, nhưng anh ấy đã nói với tôi.
+
+
+00:00:53,350 --> 00:00:55,510
+Okay, mami, now I get it.
+Được rồi, mami, bây giờ con hiểu rồi.
+
+
+00:00:55,510 --> 00:00:56,740
+And what about you?
+Còn bạn thì sao?
+
+
+00:00:56,770 --> 00:00:58,690
+Do you want to be a software architect?
+Bạn có muốn trở thành một kiến trúc sư phần mềm không?
+
+
+00:00:58,720 --> 00:01:02,210
+Do you want to know what it means to be a software architect?
+Bạn có muốn biết nghề kiến trúc sư phần mềm có nghĩa là gì không?
+
+
+00:01:02,240 --> 00:01:05,730
+Do you have no idea about software architecture whatsoever?
+Bạn không có chút hiểu biết nào về kiến trúc phần mềm sao?
+
+
+00:01:05,750 --> 00:01:09,000
+Or maybe you just want to be a much better developer.
+Hoặc có thể bạn chỉ muốn trở thành một nhà phát triển giỏi hơn.
+
+
+00:01:09,020 --> 00:01:10,970
+You have come to the right place.
+Bạn đã đến đúng nơi.
+
+
+00:01:11,150 --> 00:01:17,450
+Software architect is one of the most interesting, rewarding and challenging jobs in the software industry.
+Kiến trúc sư phần mềm là một trong những công việc thú vị, bổ ích và đầy thử thách nhất trong ngành công nghiệp phần mềm.
+
+
+00:01:17,450 --> 00:01:23,180
+And in this course, I will teach you everything you need to know in order to become one a great one.
+Và trong khóa học này, tôi sẽ dạy bạn mọi thứ bạn cần biết để trở thành một người tuyệt vời.
+
+
+00:01:23,300 --> 00:01:28,970
+This is a practical, experience based, comprehensive course that will guide you step by step towards
+Đây là khóa học thực tế, dựa trên kinh nghiệm và toàn diện sẽ hướng dẫn bạn từng bước hướng tới
+
+
+00:01:28,970 --> 00:01:31,370
+becoming an exceptional software architect.
+trở thành một kiến trúc sư phần mềm xuất sắc.
+
+
+00:01:31,400 --> 00:01:37,910
+Throughout this course, we will discuss not only high level principles, but also real world examples,
+Trong suốt khóa học này, chúng ta sẽ thảo luận không chỉ các nguyên tắc cấp cao mà còn cả các ví dụ thực tế,
+
+
+00:01:37,910 --> 00:01:41,720
+down to earth techniques, and the soft skills required for this job.
+các kỹ thuật thực tế và các kỹ năng mềm cần thiết cho công việc này.
+
+
+00:01:41,930 --> 00:01:43,990
+This is a really packed course.
+Đây thực sự là một khóa học đầy đủ.
+
+
+00:01:44,000 --> 00:01:46,070
+It contains a lot of materials.
+Nó chứa rất nhiều vật liệu.
+
+
+00:01:46,070 --> 00:01:50,180
+All stemmed from my experience of 15 years as an architect.
+Tất cả đều bắt nguồn từ kinh nghiệm 15 năm làm kiến trúc sư của tôi.
+
+
+00:01:50,210 --> 00:01:56,120
+If you feel a specific lecture is not clear enough, do not hesitate to contact me via the Q&A button.
+Nếu bạn cảm thấy bài giảng cụ thể nào đó không đủ rõ ràng, đừng ngần ngại liên hệ với tôi qua nút Hỏi &amp; Đáp.
+
+
+00:01:56,120 --> 00:02:00,290
+I promise to answer any question, but that's not all.
+Tôi hứa sẽ trả lời bất kỳ câu hỏi nào, nhưng không chỉ có vậy.
+
+
+00:02:00,320 --> 00:02:05,390
+Towards the end of this course, you will be able to download a real practical software architectural
+Vào cuối khóa học này, bạn sẽ có thể tải xuống một phần mềm kiến trúc thực tế
+
+
+00:02:05,390 --> 00:02:08,990
+document, which is the heart of every software architect's work.
+tài liệu, là cốt lõi của công việc của mọi kiến trúc sư phần mềm.
+
+
+00:02:09,020 --> 00:02:14,130
+You are more than invited to read it, learn from it, and even use it in your own projects.
+Bạn hoàn toàn được mời đọc nó, học hỏi từ nó và thậm chí sử dụng nó trong các dự án của riêng bạn.
+
+
+00:02:14,150 --> 00:02:16,790
+Just fill in the blanks and you are good to go.
+Chỉ cần điền vào chỗ trống là xong.
+
+
+00:02:17,060 --> 00:02:19,430
+Now, for those of you who don't know me.
+Bây giờ, đối với những ai chưa biết tôi.
+
+
+00:02:19,460 --> 00:02:20,480
+Nice to meet you.
+Rất vui được gặp bạn.
+
+
+00:02:20,510 --> 00:02:25,940
+My name is Mami Lavie and I'm a software architect with 15 years of experience.
+Tên tôi là Mami Lavie và tôi là một kiến trúc sư phần mềm với 15 năm kinh nghiệm.
+
+
+00:02:26,060 --> 00:02:31,700
+I've worked with large enterprises, big multinational companies, start ups, and lots more.
+Tôi đã làm việc với các doanh nghiệp lớn, các công ty đa quốc gia lớn, các công ty khởi nghiệp và nhiều nơi khác nữa.
+
+
+00:02:31,730 --> 00:02:38,240
+My technology stack is quite diverse and includes, among others, Dotnet, Java, Python, SQL Server,
+Bộ công nghệ của tôi khá đa dạng và bao gồm, trong số những thứ khác, Dotnet, Java, Python, SQL Server,
+
+
+00:02:38,240 --> 00:02:44,270
+Oracle, MongoDB, React, Angular, Azure, a little bit of AWS and lots more.
+Oracle, MongoDB, React, Angular, Azure, một chút AWS và nhiều hơn nữa.
+
+
+00:02:44,630 --> 00:02:48,660
+I've had my fair share of successes as well as some painful failures.
+Tôi đã có được nhiều thành công cũng như một số thất bại đau đớn.
+
+
+00:02:48,680 --> 00:02:54,590
+I always strive to learn from my and others experience and during the years I've developed a simple
+Tôi luôn cố gắng học hỏi từ kinh nghiệm của tôi và của những người khác và trong nhiều năm qua tôi đã phát triển một 46 đơn giản
+
+
+00:02:54,590 --> 00:02:58,660
+and practical architecture process which I've been using in a lot of projects.
+và quy trình kiến trúc thực tế mà tôi đã sử dụng trong rất nhiều dự án.
+
+
+00:02:58,670 --> 00:02:59,870
+But enough about me.
+Nhưng đủ về tôi rồi.
+
+
+00:02:59,870 --> 00:03:01,280
+Let's talk about you.
+Chúng ta hãy nói về bạn.
+
+

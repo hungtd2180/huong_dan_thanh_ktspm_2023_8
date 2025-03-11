@@ -1,0 +1,230 @@
+00:00:00,260 --> 00:00:05,570
+One of the most heated arguments in the architects community is whether an architect should code like
+Một trong những cuộc tranh luận gay gắt nhất trong cộng đồng kiến trúc sư là liệu một kiến trúc sư có nên viết mã như
+
+
+00:00:05,570 --> 00:00:09,170
+really code with an IDE, debugging, logging, etcetera.
+thực sự mã hóa bằng IDE, gỡ lỗi, ghi nhật ký, v.v.
+
+
+00:00:09,980 --> 00:00:14,570
+Of course, the question is not whether an architect should participate in the development effort and
+Tất nhiên, câu hỏi không phải là liệu một kiến trúc sư có nên tham gia vào nỗ lực phát triển hay không và
+
+
+00:00:14,570 --> 00:00:16,129
+be one of the development team.
+là một trong những thành viên của nhóm phát triển.
+
+
+00:00:16,160 --> 00:00:17,750
+Of course he shouldn't do that.
+Tất nhiên là anh ấy không nên làm thế.
+
+
+00:00:17,960 --> 00:00:22,880
+The question is whether an architect should have coding skills that will allow him to test new technologies,
+Câu hỏi đặt ra là liệu một kiến trúc sư có nên có kỹ năng lập trình để có thể thử nghiệm các công nghệ mới hay không,
+
+
+00:00:22,880 --> 00:00:26,600
+create POCs or demonstrate some concepts in code.
+tạo POC hoặc trình bày một số khái niệm trong mã.
+
+
+00:00:26,630 --> 00:00:32,240
+Those who claim an architect should not be coding say that he has more important things to do than punching
+Những người cho rằng kiến trúc sư không nên viết mã cho rằng anh ta có nhiều việc quan trọng hơn là bấm số 9.
+
+
+00:00:32,240 --> 00:00:35,130
+the keyboard and producing a few lines of code.
+bàn phím và tạo ra một vài dòng mã.
+
+
+00:00:35,150 --> 00:00:38,960
+He will better be producing patterns, requirements and documents, they say.
+Họ nói rằng ông ấy sẽ đưa ra các mẫu, yêu cầu và tài liệu tốt hơn.
+
+
+00:00:38,960 --> 00:00:43,850
+And they have a point, but and I'm sorry to say that they are wrong.
+Và họ có lý, nhưng tôi rất tiếc phải nói rằng họ đã sai.
+
+
+00:00:43,940 --> 00:00:48,350
+A good architect must have coding skills and here are the three reasons for that.
+Một kiến trúc sư giỏi phải có kỹ năng lập trình và sau đây là ba lý do cho điều đó.
+
+
+00:00:49,990 --> 00:00:51,860
+Architectural trustworthiness.
+Độ tin cậy về kiến trúc.
+
+
+00:00:52,220 --> 00:00:56,960
+As an architect, you are going to design an architecture which utilizes certain platforms and patterns.
+Là một kiến trúc sư, bạn sẽ thiết kế một kiến trúc sử dụng các nền tảng và mẫu nhất định.
+
+
+00:00:56,960 --> 00:01:02,610
+You have to make sure the architecture is feasible and the best way to do it is to try and implement
+Bạn phải đảm bảo kiến trúc khả thi và cách tốt nhất để thực hiện là thử và triển khai
+
+
+00:01:02,610 --> 00:01:03,540
+it yourself.
+chính bạn.
+
+
+00:01:03,570 --> 00:01:04,950
+Yes, that's not a mistake.
+Vâng, đó không phải là một sai lầm.
+
+
+00:01:04,980 --> 00:01:09,720
+You have to be able to implement certain parts of the architecture in order to test them before expecting
+Bạn phải có khả năng triển khai một số phần nhất định của kiến trúc để kiểm tra chúng trước khi mong đợi
+
+
+00:01:09,720 --> 00:01:12,760
+the developers to implement the unimplementable.
+các nhà phát triển để thực hiện những điều không thể thực hiện được.
+
+
+00:01:12,780 --> 00:01:14,310
+Yes, that's a word.
+Vâng, đó là một từ.
+
+
+00:01:14,340 --> 00:01:18,600
+For example, are you going to recommend using a certain dependency injection package?
+Ví dụ, bạn có đề xuất sử dụng một gói tiêm phụ thuộc nào đó không?
+
+
+00:01:18,720 --> 00:01:23,430
+Test it in a small application and make sure it's actually do what you expect it to do?
+Hãy thử nghiệm nó trong một ứng dụng nhỏ và đảm bảo rằng nó thực sự làm được những gì bạn mong đợi?
+
+
+00:01:23,730 --> 00:01:28,710
+Are you contemplating whether to use a NoSQL database or stick with a traditional RDBMS?
+Bạn có đang cân nhắc xem có nên sử dụng cơ sở dữ liệu NoSQL hay tiếp tục sử dụng RDBMS truyền thống không?
+
+
+00:01:28,740 --> 00:01:29,640
+No problem.
+Không vấn đề gì.
+
+
+00:01:29,640 --> 00:01:32,700
+Install both on your machine and test them out.
+Cài đặt cả hai trên máy của bạn và thử nghiệm chúng.
+
+
+00:01:32,730 --> 00:01:36,180
+This is the only way to make the architecture trustworthy.
+Đây là cách duy nhất để làm cho kiến trúc trở nên đáng tin cậy.
+
+
+00:01:36,210 --> 00:01:41,190
+By testing it beforehand, you ensure your design can be implemented effectively and easily.
+Bằng cách thử nghiệm trước, bạn đảm bảo thiết kế của mình có thể được triển khai hiệu quả và dễ dàng.
+
+
+00:01:42,570 --> 00:01:44,080
+Support the developers.
+Hỗ trợ các nhà phát triển.
+
+
+00:01:44,100 --> 00:01:48,900
+One of the hardest tasks of the architect is to make sure the architecture is actually implemented.
+Một trong những nhiệm vụ khó khăn nhất của kiến trúc sư là đảm bảo kiến trúc thực sự được triển khai.
+
+
+00:01:48,930 --> 00:01:53,010
+The best way to do that is to provide an ongoing support to the developers.
+Cách tốt nhất để thực hiện điều đó là cung cấp hỗ trợ liên tục cho các nhà phát triển.
+
+
+00:01:53,040 --> 00:01:57,930
+The architect must be able to help developers when they get stuck while implementing the architecture
+Kiến trúc sư phải có khả năng giúp đỡ các nhà phát triển khi họ gặp khó khăn trong khi triển khai kiến trúc
+
+
+00:01:57,930 --> 00:02:02,960
+and examine the developer's work to detect deviations from the intended implementation.
+và kiểm tra công việc của nhà phát triển để phát hiện những sai lệch so với mục đích triển khai dự kiến.
+
+
+00:02:02,990 --> 00:02:07,880
+If the architect does not possess coding skills, he won't be able to review the code and locate those
+Nếu kiến trúc sư không có kỹ năng lập trình, anh ta sẽ không thể xem xét mã và xác định vị trí 34 đó
+
+
+00:02:07,880 --> 00:02:08,750
+deviations.
+độ lệch.
+
+
+00:02:09,410 --> 00:02:10,610
+Gain respect.
+Nhận được sự tôn trọng.
+
+
+00:02:10,699 --> 00:02:15,230
+One of the key factors to succeed as an architect is to gain the respect of the developers.
+Một trong những yếu tố quan trọng để thành công với tư cách là một kiến trúc sư là giành được sự tôn trọng của các nhà phát triển.
+
+
+00:02:15,260 --> 00:02:21,050
+If the architect is perceived as someone who has no idea what the developers are actually doing, they
+Nếu kiến trúc sư được coi là người không biết các nhà phát triển thực sự đang làm gì, họ
+
+
+00:02:21,050 --> 00:02:26,180
+will think of him as a snob, arrogant and detached and will immediately lose respect for him.
+sẽ nghĩ anh ta là một kẻ hợm mình, kiêu ngạo và xa cách và sẽ ngay lập tức mất đi sự tôn trọng đối với anh ta.
+
+
+00:02:26,210 --> 00:02:31,160
+If, on the other hand, they will see you sitting with them, helping them solve problems and listening
+Mặt khác, nếu họ thấy bạn ngồi cùng họ, giúp họ giải quyết vấn đề và lắng nghe
+
+
+00:02:31,190 --> 00:02:36,470
+to them, they will appreciate you as a down to earth, practical and and all around nice guy and will
+với họ, họ sẽ đánh giá cao bạn là một chàng trai thực tế, thực tế và tốt bụng và sẽ
+
+
+00:02:36,470 --> 00:02:41,390
+be more than happy to listen to you in the future when discussing architectural topics and tasks.
+rất vui khi được lắng nghe bạn trong tương lai khi thảo luận về các chủ đề và nhiệm vụ kiến trúc.
+
+
+00:02:41,810 --> 00:02:44,720
+But you can't really help developers if you can't code, aren't you?
+Nhưng bạn không thể thực sự giúp các nhà phát triển nếu bạn không thể viết mã, phải không?
+
+
+00:02:45,350 --> 00:02:47,990
+So to summarize, keep coding.
+Tóm lại, hãy tiếp tục viết mã.
+
+
+00:02:48,020 --> 00:02:52,940
+After all, it won't only help you create a trustworthy architecture, provide an ongoing support,
+Rốt cuộc, nó không chỉ giúp bạn tạo ra một kiến trúc đáng tin cậy, cung cấp hỗ trợ liên tục,
+
+
+00:02:52,940 --> 00:02:54,500
+and gain the respect of the developers.
+và giành được sự tôn trọng của các nhà phát triển.
+
+
+00:02:54,500 --> 00:02:55,640
+It also fun.
+Cũng vui đấy.
+
+

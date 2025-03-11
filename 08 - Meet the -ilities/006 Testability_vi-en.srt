@@ -1,0 +1,210 @@
+00:00:00,530 --> 00:00:05,330
+Testability is the attribute that defines how easy it to test the application.
+Khả năng kiểm thử là thuộc tính xác định mức độ dễ dàng khi kiểm thử ứng dụng.
+
+
+00:00:05,360 --> 00:00:10,010
+Now, when talking about testing, it's important to make the distinction between the various types
+Bây giờ, khi nói về thử nghiệm, điều quan trọng là phải phân biệt giữa các loại khác nhau
+
+
+00:00:10,010 --> 00:00:10,910
+of testing.
+của thử nghiệm.
+
+
+00:00:11,270 --> 00:00:14,340
+The most familiar kind of testing is a manual testing.
+Loại thử nghiệm quen thuộc nhất là thử nghiệm thủ công.
+
+
+00:00:14,360 --> 00:00:19,520
+In this kind, as you can expect, the actual tester is sitting in front of the screen and tests various
+Trong loại này, như bạn có thể mong đợi, người kiểm tra thực tế đang ngồi trước màn hình và kiểm tra nhiều loại
+
+
+00:00:19,520 --> 00:00:23,300
+functions of the system using the user interface it provides.
+chức năng của hệ thống sử dụng giao diện người dùng mà nó cung cấp.
+
+
+00:00:23,330 --> 00:00:25,910
+This type has nothing to do with testability.
+Kiểu này không liên quan gì đến khả năng kiểm tra.
+
+
+00:00:26,000 --> 00:00:31,790
+Other types of testing involve code that executes the application's code and not an actual person that
+Các loại thử nghiệm khác liên quan đến mã thực thi mã của ứng dụng chứ không phải một người thực sự.
+
+
+00:00:31,790 --> 00:00:33,260
+executes the system functions.
+thực hiện các chức năng của hệ thống.
+
+
+00:00:33,290 --> 00:00:37,160
+This happens with unit testing and integration testing.
+Điều này xảy ra với thử nghiệm đơn vị và thử nghiệm tích hợp.
+
+
+00:00:38,680 --> 00:00:39,730
+With unit testing.
+Với thử nghiệm đơn vị.
+
+
+00:00:39,730 --> 00:00:42,850
+A programmer writes code that tests the application code.
+Một lập trình viên viết mã để kiểm tra mã ứng dụng.
+
+
+00:00:42,880 --> 00:00:47,590
+This code executes specific methods with specific parameters and checks.
+Mã này thực thi các phương thức cụ thể với các tham số và kiểm tra cụ thể.
+
+
+00:00:47,590 --> 00:00:50,410
+Whether the result returned from the method is expected.
+Liệu kết quả trả về từ phương pháp có được mong đợi hay không.
+
+
+00:00:50,410 --> 00:00:50,920
+One.
+Một.
+
+
+00:00:50,950 --> 00:00:58,240
+For example, let's say we have a method called Add that accepts two parameters an integer named X and
+Ví dụ, giả sử chúng ta có một phương thức có tên là Add chấp nhận hai tham số là một số nguyên có tên là X và
+
+
+00:00:58,240 --> 00:00:59,740
+an integer named Y.
+một số nguyên có tên là Y.
+
+
+00:00:59,860 --> 00:01:03,790
+This method should add y to X and return the result.
+Phương pháp này sẽ thêm y vào X và trả về kết quả.
+
+
+00:01:03,960 --> 00:01:06,760
+A typical unit test will call this method and pass it.
+Một bài kiểm tra đơn vị điển hình sẽ gọi phương thức này và thông qua nó.
+
+
+00:01:06,760 --> 00:01:09,580
+Two numbers say five and nine.
+Hai số đó là năm và chín.
+
+
+00:01:09,610 --> 00:01:13,390
+In this case, the unit test will expect to get back the number 14.
+Trong trường hợp này, bài kiểm tra đơn vị sẽ mong đợi nhận lại số 14.
+
+
+00:01:13,750 --> 00:01:16,380
+If that's the case, the test is marked as passed.
+Nếu đúng như vậy, bài kiểm tra được đánh dấu là đã vượt qua.
+
+
+00:01:16,390 --> 00:01:19,030
+If not, it's marked as failed.
+Nếu không, nó được đánh dấu là không thành công.
+
+
+00:01:20,140 --> 00:01:23,110
+An integration test is similar, but on larger scale.
+Một bài kiểm tra tích hợp cũng tương tự, nhưng ở quy mô lớn hơn.
+
+
+00:01:23,110 --> 00:01:28,030
+With integration tests, we don't test a specific method, but a whole module or flow.
+Với các thử nghiệm tích hợp, chúng tôi không thử nghiệm một phương pháp cụ thể mà là toàn bộ mô-đun hoặc luồng.
+
+
+00:01:28,060 --> 00:01:33,610
+We execute a method that should trigger a chain of actions that will result in a specific outcome.
+Chúng tôi thực hiện một phương pháp sẽ kích hoạt một chuỗi hành động dẫn đến một kết quả cụ thể.
+
+
+00:01:33,610 --> 00:01:36,160
+For example, a new record in the database.
+Ví dụ, một bản ghi mới trong cơ sở dữ liệu.
+
+
+00:01:36,310 --> 00:01:42,950
+And now back to the testability, i.e. a testable system is a system that is easy to test.
+Và bây giờ quay lại với khả năng kiểm tra, nghĩa là một hệ thống có thể kiểm tra được là một hệ thống dễ kiểm tra.
+
+
+00:01:42,950 --> 00:01:50,410
+Using unit test and integration tests and easy to test system can be identified by two characteristics.
+Sử dụng thử nghiệm đơn vị và thử nghiệm tích hợp và hệ thống dễ kiểm tra có thể được xác định bằng hai đặc điểm.
+
+
+00:01:50,420 --> 00:01:55,250
+One its method and models are not dependent on other methods or models.
+Một phương pháp và mô hình của nó không phụ thuộc vào các phương pháp hoặc mô hình khác.
+
+
+00:01:55,250 --> 00:02:00,380
+And two, every method is responsible for one and only one action.
+Và thứ hai, mỗi phương pháp chỉ chịu trách nhiệm cho một và chỉ một hành động.
+
+
+00:02:00,800 --> 00:02:06,410
+By making methods independent from each other, we make it extremely easy to test each method in isolation,
+Bằng cách tạo ra các phương pháp độc lập với nhau, chúng tôi giúp bạn dễ dàng kiểm tra từng phương pháp một cách riêng biệt,
+
+
+00:02:06,410 --> 00:02:12,320
+which is exactly what we are trying to achieve using unit tests and by ensuring each method is responsible
+đó chính xác là những gì chúng tôi đang cố gắng đạt được bằng cách sử dụng các bài kiểm tra đơn vị và đảm bảo mỗi phương pháp chịu trách nhiệm
+
+
+00:02:12,320 --> 00:02:14,960
+for only one action, it's very easy to test.
+chỉ với một hành động, rất dễ để kiểm tra.
+
+
+00:02:15,080 --> 00:02:16,760
+To test the specific action.
+Để kiểm tra hành động cụ thể.
+
+
+00:02:16,760 --> 00:02:22,280
+For example, if the above mentioned Add method will check whether the given numbers are positive,
+Ví dụ, nếu phương thức Add được đề cập ở trên sẽ kiểm tra xem các số đã cho có phải là số dương hay không,
+
+
+00:02:22,310 --> 00:02:26,170
+we will have a problem isolating the Add action and testing it specifically.
+chúng ta sẽ gặp vấn đề khi cô lập hành động Thêm và kiểm tra nó một cách cụ thể.
+
+
+00:02:26,180 --> 00:02:30,250
+In this case, the correct path is to make the check in a separate method.
+Trong trường hợp này, cách đúng đắn là thực hiện kiểm tra theo phương pháp riêng biệt.
+
+
+00:02:30,260 --> 00:02:34,130
+Let's call it check for positive and test it separately.
+Chúng ta hãy gọi nó là kiểm tra dương tính và thử nghiệm riêng biệt.
+
+
+00:02:34,160 --> 00:02:38,600
+The most common techniques to achieve these two characteristics is with dependency injection.
+Kỹ thuật phổ biến nhất để đạt được hai đặc điểm này là sử dụng kỹ thuật tiêm phụ thuộc.
+
+
+00:02:38,630 --> 00:02:42,170
+Often called die and the single responsibility concept.
+Thường được gọi là chết và khái niệm trách nhiệm duy nhất.
+
+
+00:02:42,200 --> 00:02:44,660
+We will discuss these two later in this course.
+Chúng ta sẽ thảo luận về hai điều này sau trong khóa học này.
+
+
